@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5632cf0b-da3c-45ed-93e7-659bd75788ed">
+  <producedTypes>
+    <selectionType typeId="56734abe-16f1-4a68-857f-a215d79233fd" valueTypeId="407eab16-74df-44e0-9ab0-68217fd22869"/>
+    <listType typeId="bc3a2f14-74c7-4725-9011-3d93f2c41bcc" valueTypeId="74494ea1-eb42-4b2e-a922-bd99f08ac0aa"/>
+    <managerType typeId="de1508d9-7356-4eb6-9a6c-def6e6b1fc84" valueTypeId="2de74e9b-5776-4365-8bef-8bf1906928a5"/>
+    <recordSetType typeId="be55d343-8e1a-44cb-be5f-e7edc028ff32" valueTypeId="6475c268-21c5-4333-b5bd-968028180a50"/>
+    <recordKeyType typeId="223700cc-30a2-44a0-9b29-81e7bd722c89" valueTypeId="4c06f785-cfca-483f-b19d-ce9a88877be3"/>
+    <recordType typeId="7d011825-c4ce-4864-96c4-1a3bd5355f2b" valueTypeId="0f89c7d2-b71d-44d9-9a7b-a18aeff66f44"/>
+  </producedTypes>
+  <name>НалоговыеЛготы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Налоговые лготы</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>საგადასახადო შეღავათები</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2b6ffb64-5e0e-45f5-8ba3-45f5495268ee">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="1454d443-48c5-4e0e-a1ea-6dbdea0bcbed">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="aac78b0b-8c34-477e-a594-53c6ad23fb59">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9e092a08-e65e-419a-a23e-97c2342c71c1">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b2bbe280-b3b7-4e98-bbd3-58df1212dd18">
+    <name>ТипЛгот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип лгот</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შეღავათის ტიპი</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипЛгот</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Начисление или удержание</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დარიცხვა ან დაკავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Начисление или удержание</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Начисление</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

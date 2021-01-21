@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e440598-2254-4fd3-bdb9-9ed6f5ff806a">
+  <producedTypes>
+    <selectionType typeId="c309cb9a-7626-468d-8a79-23ce51fcd0d7" valueTypeId="f95a3c37-3c35-4b66-a7d1-554f01293a0b"/>
+    <listType typeId="d3ee78b1-936a-48ba-9661-e4395922ab7f" valueTypeId="33c366c7-b0a8-4d3e-9a75-7e3de554aa49"/>
+    <managerType typeId="e3c7fd50-8c68-456c-b058-2b8fa2f99c69" valueTypeId="bfd545e5-df60-470f-9668-8f6e3222d5ed"/>
+    <recordSetType typeId="7a087b85-047d-4d9a-a225-bbb51fb8b288" valueTypeId="33611b02-aa31-434c-a03a-91b15f8ac85c"/>
+    <recordKeyType typeId="a5fc127a-4df0-4ab5-acd0-4cef5a5a4a85" valueTypeId="ecc28a45-c347-4d33-b038-827903287d10"/>
+    <recordType typeId="a7421156-7207-4e91-b0eb-ce1fe07b7850" valueTypeId="61f5cada-9c84-4de9-8b16-21c227a92a97"/>
+    <recordManagerType typeId="c9109f22-a340-4f4b-a985-6f2a7f22369c" valueTypeId="fcc9b010-db49-4532-b79f-4b9bd26bc8b6"/>
+  </producedTypes>
+  <name>СоответствиеЗвонковОблачномуПровайдеру</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствие звонков облачному провайдеру</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Соответствие звонков облачному провайдеру</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Compliance calls cloud providers</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="685434f8-c759-4c89-bc5c-c0e3ef97901a">
+    <name>ИдентификаторЗаписиРазговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор записи разговора</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Идентификатор записи разговора</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>call record identifier</value>
+    </synonym>
+    <comment>recording_id</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>128</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="bebed40c-d159-4474-a910-7bb5e528fe03">
+    <name>ТелефонныйЗвонок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Телефонный звонок</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სატელეფონო ზარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Phone call</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Событие</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="00e414c1-0952-48de-85c2-e73f238a135c">
+    <name>ИдентификаторГруппыВызовов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор группы вызовов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Идентификатор группы вызовов</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Call identifier group</value>
+    </synonym>
+    <comment>entry_id</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>128</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

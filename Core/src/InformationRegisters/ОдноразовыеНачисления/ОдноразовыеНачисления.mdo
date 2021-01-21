@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8ff5cf61-cb7b-4c24-9d04-f727aa8525b6">
+  <producedTypes>
+    <selectionType typeId="decfb845-31b0-4e7a-a785-5245dcaddf4f" valueTypeId="c4017e33-ea90-4abe-a84d-cf3d775f6feb"/>
+    <listType typeId="5d1acf35-8a5e-4cb5-9847-dcd24f66fd4d" valueTypeId="d2e17fa6-e782-4039-9f46-e6b537e66a06"/>
+    <managerType typeId="25c2913a-bb3a-4dfd-9ad6-830d21dd1987" valueTypeId="f979a807-ce5d-42fb-a1c5-ae2941e0cb18"/>
+    <recordSetType typeId="b0572eaa-55ec-4b83-a369-efc31f1322cf" valueTypeId="d8ef81ec-e3b4-4941-ba61-0414a6ba503e"/>
+    <recordKeyType typeId="ee742a32-6ab9-4023-8702-323ef1bc6b9d" valueTypeId="70b97589-6a6f-403e-b981-1fe69c787aa9"/>
+    <recordType typeId="3ae3c477-ffa4-4dd9-9750-bcc973e42ab4" valueTypeId="bb6fbd1e-5f9d-4335-95f0-996e4c443a64"/>
+    <recordManagerType typeId="e86f4b39-1ff1-46b1-8e31-86e7da3e07ff" valueTypeId="9c2166b3-68f9-4a94-9049-5b029a7a8d55"/>
+  </producedTypes>
+  <name>ОдноразовыеНачисления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Одноразовые начисления</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ერთჯერადი დარიცხვა</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>one-time payroll</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4a2aceb9-cd5b-4e04-839c-f4e688e0c49a">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f9a5b632-0ad4-4d35-8049-10f74a9d4b10">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რეგისტრაციის პერიოდი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The registration period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1404b458-705d-4f77-bad7-f38a6fd28612">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="67ed5c1e-2fa2-4e07-a385-01720d8415c5">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b1ffcdfb-682c-452a-b29b-d8504be6fbed">
+    <name>ВидНачисленияУдержания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид начисления (удержания)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დარიცხვის (დაკავების) ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>View charges (withholding)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="877866f3-4b62-4c3a-87d4-b088f19fd914">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ვალუტა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Currency</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

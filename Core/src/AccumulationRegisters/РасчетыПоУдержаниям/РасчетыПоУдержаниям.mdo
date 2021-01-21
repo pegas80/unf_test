@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f5db008-ee1a-424c-98a0-f68a22e48459">
+  <producedTypes>
+    <selectionType typeId="242d341d-57a7-42ae-aa54-12244c8ffbe7" valueTypeId="6e3a40f9-945f-4289-b1f5-fa36632fb5eb"/>
+    <listType typeId="c4ec8f5a-6fed-4086-a70a-bf8443800954" valueTypeId="41d361db-1bc3-4024-aade-7fb938466e94"/>
+    <managerType typeId="63d1c550-4373-4aef-899d-9f492ee5bd20" valueTypeId="9adfd424-e087-443d-b10c-d01065964421"/>
+    <recordSetType typeId="c51be4c1-9b53-4d2e-85c6-83bb608be2f0" valueTypeId="dde5873e-fef5-4975-ae1c-465f92a6bf3f"/>
+    <recordKeyType typeId="a450750f-d8b9-4773-a025-b5fa538d34fb" valueTypeId="d427d74b-fb80-42d9-93af-1c6cd9b278ed"/>
+    <recordType typeId="40fde8aa-c726-496f-8162-ded589c81f8c" valueTypeId="9899aeba-37f7-4227-af27-0af3110fde5c"/>
+  </producedTypes>
+  <name>РасчетыПоУдержаниям</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчеты по удержаниям</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ანგარიშსწორებები დაკავებების მიხედვით</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Calculations by withholding</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="9668b583-b1d5-496c-a187-0dc8b7dcd75c">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (без налогов)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა (გადასახადების გარეშე)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Amount (excluding taxes)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="9e2c39a5-6074-4a39-862d-c76c97fb845d">
+    <name>СуммаНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლო თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The amount of personal income tax</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="cf77d388-4f28-471d-ab2e-a819067de1ad">
+    <name>СуммаПФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საპენსიო თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма ПФ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="a10d42e7-2b23-44b1-8e52-98e360696830">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5ea0d2ed-5aff-4376-8b54-34198c665490">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="77eb26c8-e5eb-479a-b4fb-f44f565d07cc">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რეგისტრაციის პერიოდი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The registration period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e538fd77-b05b-49cb-a036-8bf22ae9fbcf">
+    <name>ВидУдержания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>View hold</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a12c8f3b-3fa1-4e51-afe7-0ab3fa05b1fc">
+    <name>ВидУдержанияНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Вид удержания НДФЛ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>удержание</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დაკავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>retention</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="39883e87-ed3c-41c7-b1a3-2589ec92de56">
+    <name>ВидУдержанияПФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საპენსიოს დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>View PF deduction</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>удержание</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დაკავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>retention</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,4249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Помощник анализа ведения учета</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>აღრიცხვის წარმოების ანალიზის დამხმარე</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Assistant accounting analysis</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>Настройки</name>
+    <id>68</id>
+    <items xsi:type="form:FormGroup">
+      <name>БезКонтекста</name>
+      <id>127</id>
+      <items xsi:type="form:Button">
+        <name>ПериодМинус</name>
+        <id>134</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ПериодМинусРасширеннаяПодсказка</name>
+          <id>135</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.ПериодМинус</commandName>
+        <representation>Picture</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ПредставлениеПериода</name>
+        <id>69</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ПредставлениеПериода</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <extendedTooltip>
+          <name>ПредставлениеПериодаExtendedTooltip</name>
+          <id>102</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПредставлениеПериодаКонтекстноеМеню</name>
+          <id>70</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <horizontalAlign>Center</horizontalAlign>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ПериодПлюс</name>
+        <id>136</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ПериодПлюсРасширеннаяПодсказка</name>
+          <id>137</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.ПериодПлюс</commandName>
+        <representation>Picture</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Организация</name>
+        <id>71</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Организация</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ОрганизацияExtendedTooltip</name>
+          <id>103</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ОрганизацияКонтекстноеМеню</name>
+          <id>72</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <autoMarkIncomplete>true</autoMarkIncomplete>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Без контекста</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Без контекста</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>without context</value>
+      </title>
+      <extendedTooltip>
+        <name>БезКонтекстаРасширеннаяПодсказка</name>
+        <id>128</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>СКонтекстом</name>
+      <id>129</id>
+      <items xsi:type="form:Decoration">
+        <name>НадписьПериодОрганизация</name>
+        <id>131</id>
+        <title>
+          <key>ru</key>
+          <value>Надпись период организация</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Надпись период организация</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>The inscription period, the organization</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>НадписьПериодОрганизацияРасширеннаяПодсказка</name>
+          <id>133</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НадписьПериодОрганизацияКонтекстноеМеню</name>
+          <id>132</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxHeight>true</autoMaxHeight>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>14.0</height>
+          <bold>false</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>С контекстом</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>С контекстом</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>With context</value>
+      </title>
+      <extendedTooltip>
+        <name>СКонтекстомРасширеннаяПодсказка</name>
+        <id>130</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>НастройкиExtendedTooltip</name>
+      <id>101</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Таблицы</name>
+    <id>3</id>
+    <items xsi:type="form:FormGroup">
+      <name>Разделы</name>
+      <id>78</id>
+      <items xsi:type="form:Table">
+        <name>ДеревоРазделов</name>
+        <id>53</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ДеревоРазделов</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовУровень</name>
+          <id>56</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.Уровень</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ДеревоРазделовУровеньExtendedTooltip</name>
+            <id>107</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовУровеньКонтекстноеМеню</name>
+            <id>57</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовРазделУчета</name>
+          <id>58</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.РазделУчета</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ДеревоРазделовРазделУчетаExtendedTooltip</name>
+            <id>108</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовРазделУчетаКонтекстноеМеню</name>
+            <id>59</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <autoCellHeight>true</autoCellHeight>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовАнализВыполнен</name>
+          <id>60</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.АнализВыполнен</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ДеревоРазделовАнализВыполненExtendedTooltip</name>
+            <id>109</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовАнализВыполненКонтекстноеМеню</name>
+            <id>61</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовРазделУчетаПредствление</name>
+          <id>62</id>
+          <title>
+            <key>ru</key>
+            <value>Раздел учета</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>აღრიცხვის ნაწილი</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>accounting section</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.РазделУчетаПредствление</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ДеревоРазделовРазделУчетаПредствлениеExtendedTooltip</name>
+            <id>110</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовРазделУчетаПредствлениеКонтекстноеМеню</name>
+            <id>63</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <autoCellHeight>true</autoCellHeight>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <verticalStretch>false</verticalStretch>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовНомерРаздела</name>
+          <id>66</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.НомерРаздела</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ДеревоРазделовНомерРазделаExtendedTooltip</name>
+            <id>111</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовНомерРазделаКонтекстноеМеню</name>
+            <id>67</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДеревоРазделовНомерСтрокиДерева</name>
+          <id>76</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДеревоРазделов.НомерСтрокиДерева</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ДеревоРазделовНомерСтрокиДереваExtendedTooltip</name>
+            <id>112</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовНомерСтрокиДереваКонтекстноеМеню</name>
+            <id>77</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <commandBarLocation>None</commandBarLocation>
+        <autoCommandBar>
+          <name>ДеревоРазделовКоманднаяПанель</name>
+          <id>55</id>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>OnActivateRow</event>
+          <name>ДеревоРазделовПриАктивизацииСтроки</name>
+        </handlers>
+        <searchStringAddition>
+          <name>ДеревоРазделовСтрокаПоиска</name>
+          <id>138</id>
+          <extendedTooltip>
+            <name>ДеревоРазделовСтрокаПоискаРасширеннаяПодсказка</name>
+            <id>140</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовСтрокаПоискаКонтекстноеМеню</name>
+            <id>139</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>ДеревоРазделов</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <name>ДеревоРазделовСостояниеПросмотра</name>
+          <id>141</id>
+          <extendedTooltip>
+            <name>ДеревоРазделовСостояниеПросмотраРасширеннаяПодсказка</name>
+            <id>143</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовСостояниеПросмотраКонтекстноеМеню</name>
+            <id>142</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>ДеревоРазделов</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <name>ДеревоРазделовУправлениеПоиском</name>
+          <id>144</id>
+          <extendedTooltip>
+            <name>ДеревоРазделовУправлениеПоискомРасширеннаяПодсказка</name>
+            <id>146</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДеревоРазделовУправлениеПоискомКонтекстноеМеню</name>
+            <id>145</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>ДеревоРазделов</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>ДеревоРазделовExtendedTooltip</name>
+          <id>106</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ДеревоРазделовКонтекстноеМеню</name>
+          <id>54</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <representation>Tree</representation>
+        <width>50</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <autoInsertNewRow>true</autoInsertNewRow>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <initialTreeView>ExpandAllLevels</initialTreeView>
+        <verticalStretch>true</verticalStretch>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>ДеревоРазделов.ИндексКартинки</segments>
+        </rowPictureDataPath>
+        <rowsPicture xsi:type="core:PictureRef">
+          <picture>CommonPicture.РезультатыКонтроляУчета</picture>
+        </rowsPicture>
+        <searchStringLocation>None</searchStringLocation>
+        <viewStatusLocation>None</viewStatusLocation>
+        <searchControlLocation>None</searchControlLocation>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>Легенда</name>
+        <id>79</id>
+        <title>
+          <key>ru</key>
+          <value>Состояния разделов после выполнения анализа:</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>განყოფილებების მდგომარეობა ანალიზის შესრულების შემდეგ:</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>sections of the state after the analysis:</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ЛегендаExtendedTooltip</name>
+          <id>113</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ЛегендаКонтекстноеМеню</name>
+          <id>80</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <textColor xsi:type="core:ColorRef">
+          <color>Style.FieldSelectionBackColor</color>
+        </textColor>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаОшибокНет</name>
+        <id>81</id>
+        <items xsi:type="form:Decoration">
+          <name>КартинкаОшибокНет</name>
+          <id>82</id>
+          <title>
+            <key>ru</key>
+            <value>Картинка ошибок нет</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Картинка ошибок нет</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Picture no errors</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КартинкаОшибокНетExtendedTooltip</name>
+            <id>115</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КартинкаОшибокНетКонтекстноеМеню</name>
+            <id>83</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ОшибокНеОбнаружено16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>НадписьОшибНет</name>
+          <id>84</id>
+          <title>
+            <key>ru</key>
+            <value> - ошибок не обнаружено</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value> - შეცდომები ნაპოვნი არ არის</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НадписьОшибНетExtendedTooltip</name>
+            <id>116</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НадписьОшибНетКонтекстноеМеню</name>
+            <id>85</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа ошибок нет</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Группа ошибок нет</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Error group no</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаОшибокНетExtendedTooltip</name>
+          <id>114</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаОбнаруженыОшибки</name>
+        <id>86</id>
+        <items xsi:type="form:Decoration">
+          <name>КартикаОбнаруженыОшибки</name>
+          <id>87</id>
+          <title>
+            <key>ru</key>
+            <value>Картика обнаружены ошибки</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Картика обнаружены ошибки</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Kartika has errors</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КартикаОбнаруженыОшибкиExtendedTooltip</name>
+            <id>118</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КартикаОбнаруженыОшибкиКонтекстноеМеню</name>
+            <id>88</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ОбнаруженыОшибки16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>НадписьОбнаруженыОшибки</name>
+          <id>89</id>
+          <title>
+            <key>ru</key>
+            <value> - обнаружены ошибки</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value> - ნაპონვია შეცდომები</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НадписьОбнаруженыОшибкиExtendedTooltip</name>
+            <id>119</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НадписьОбнаруженыОшибкиКонтекстноеМеню</name>
+            <id>90</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа обнаружены ошибки</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Группа обнаружены ошибки</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Group discovered an error</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа обнаружены ошибки</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>Группа обнаружены ошибки</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Group discovered an error</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ГруппаОбнаруженыОшибкиExtendedTooltip</name>
+          <id>117</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаЧастичноИсправлены</name>
+        <id>91</id>
+        <items xsi:type="form:Decoration">
+          <name>КартинкаЧастичноИсправлены</name>
+          <id>92</id>
+          <title>
+            <key>ru</key>
+            <value>Картинка частично исправлены</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Картинка частично исправлены</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Picture partially corrected</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КартинкаЧастичноИсправленыExtendedTooltip</name>
+            <id>121</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КартинкаЧастичноИсправленыКонтекстноеМеню</name>
+            <id>93</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ЧастичноИсправлено16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>НадписьЧастичноИсправлены</name>
+          <id>94</id>
+          <title>
+            <key>ru</key>
+            <value> - обнаруженные ошибки частично исправлены</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value> - ნაპოვნი შეცდომები ნაწოლობრივ გასწორებულია</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НадписьЧастичноИсправленыExtendedTooltip</name>
+            <id>122</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НадписьЧастичноИсправленыКонтекстноеМеню</name>
+            <id>95</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ГруппаЧастичноИсправленыExtendedTooltip</name>
+          <id>120</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаПолностьюИсправлены</name>
+        <id>96</id>
+        <items xsi:type="form:Decoration">
+          <name>КартинкаПолностьюИсправлены</name>
+          <id>97</id>
+          <title>
+            <key>ru</key>
+            <value>Картинка полностью исправлены</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Картинка полностью исправлены</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>The picture is completely fixed</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КартинкаПолностьюИсправленыExtendedTooltip</name>
+            <id>124</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КартинкаПолностьюИсправленыКонтекстноеМеню</name>
+            <id>98</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ПолностьюИсправлено16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>НадписьПолностьюИсправлены</name>
+          <id>99</id>
+          <title>
+            <key>ru</key>
+            <value> - ошибки полностью исправлены</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value> - შეცდომები ბოლომდე გასწორებულია</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>НадписьПолностьюИсправленыExtendedTooltip</name>
+            <id>125</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НадписьПолностьюИсправленыКонтекстноеМеню</name>
+            <id>100</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа полностью исправлены</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Группа полностью исправлены</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Group fully corrected</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаПолностьюИсправленыExtendedTooltip</name>
+          <id>123</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Разделы</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ნაწილები</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Sections</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Разделы</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნაწილები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Sections</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>РазделыExtendedTooltip</name>
+        <id>105</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ДокументРезультат</name>
+      <id>64</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ДокументРезультат</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <extendedTooltip>
+        <name>ДокументРезультатExtendedTooltip</name>
+        <id>126</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДокументРезультатКонтекстноеМеню</name>
+        <id>65</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SpreadsheetDocumentField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:SpreadSheetDocFieldExtInfo">
+        <handlers>
+          <event>Selection</event>
+          <name>ДокументРезультатВыбор</name>
+        </handlers>
+        <handlers>
+          <event>DetailProcessing</event>
+          <name>ДокументРезультатОбработкаРасшифровки</name>
+        </handlers>
+        <width>50</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>10</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <pointerType>Special</pointerType>
+        <verticalScrollBar>ScrollAlways</verticalScrollBar>
+        <horizontalScrollBar>ScrollAlways</horizontalScrollBar>
+        <protection>true</protection>
+        <drawingSelectionShowMode>Auto</drawingSelectionShowMode>
+        <showGroups>true</showGroups>
+        <enableStartDrag>true</enableStartDrag>
+        <enableDrag>true</enableDrag>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTip>
+      <key>ru</key>
+      <value>Таблицы</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Таблицы</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>tables</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ТаблицыExtendedTooltip</name>
+      <id>104</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ОбработкаВыбора</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.КонтрольПравильностиУчета</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>МассивТиповДокументыОплаты</name>
+    <title>
+      <key>ru</key>
+      <value>Массив типов документы оплаты</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Массив типов документы оплаты</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>An array of types of payment documents</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ДеревоРазделов</name>
+    <title>
+      <key>ru</key>
+      <value>Дерево разделов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Дерево разделов</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Wood partition</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Уровень</name>
+      <title>
+        <key>ru</key>
+        <value>Уровень</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დონე</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Level</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>РазделУчета</name>
+      <title>
+        <key>ru</key>
+        <value>Раздел учета</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>აღრიცხვის ნაწილი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>accounting section</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>АнализВыполнен</name>
+      <title>
+        <key>ru</key>
+        <value>Анализ выполнен</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Анализ выполнен</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>The analysis is performed</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>РазделУчетаПредствление</name>
+      <title>
+        <key>ru</key>
+        <value>Раздел учета предствление</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Раздел учета предствление</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Section account the views that</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>РазделРодительВыведен</name>
+      <title>
+        <key>ru</key>
+        <value>Раздел родитель выведен</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Раздел родитель выведен</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Section parent withdrawn</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>НомерРаздела</name>
+      <title>
+        <key>ru</key>
+        <value>Номер раздела</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Номер раздела</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>partition number</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДатаВыполнения</name>
+      <title>
+        <key>ru</key>
+        <value>Дата исправления</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>შესწორების თარიღი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>fix date</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИндексКартинки</name>
+      <title>
+        <key>ru</key>
+        <value>Индекс картинки</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სურათის ინდექსი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>index pictures</value>
+      </title>
+      <id>8</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>НомерСтрокиДерева</name>
+      <title>
+        <key>ru</key>
+        <value>Номер строки дерева</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Номер строки дерева</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>tree line number</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СсылкаНаСправку</name>
+      <title>
+        <key>ru</key>
+        <value>Ссылка на справку</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Ссылка на справку</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Link to help</value>
+      </title>
+      <id>10</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ДокументРезультат</name>
+    <title>
+      <key>ru</key>
+      <value>Документ результат</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Документ результат</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>document</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>SpreadsheetDocument</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:SpreadsheetDocumentExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>НомерТекущегоРаздела</name>
+    <title>
+      <key>ru</key>
+      <value>Номер текущего раздела</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Номер текущего раздела</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Current title</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВсегоРазделовДоступно</name>
+    <title>
+      <key>ru</key>
+      <value>Всего разделов доступно</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Всего разделов доступно</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Total Sections available</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТекущийРазделУчета</name>
+    <title>
+      <key>ru</key>
+      <value>Текущий раздел учета</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Текущий раздел учета</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Current accounting section</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТекущийРазделУчетаПредствление</name>
+    <title>
+      <key>ru</key>
+      <value>Текущий раздел учета предствление</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Текущий раздел учета предствление</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Current section account the views that</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РасчетыСПоставщикамиЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с поставщиками заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Расчеты с поставщиками заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Calculations was filled with vendors</value>
+    </title>
+    <id>21</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>КурсовыеРазницыДокументыПерепроведены</name>
+    <title>
+      <key>ru</key>
+      <value>Курсовые разницы документы перепроведены</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Курсовые разницы документы перепроведены</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Exchange differences documents pereprovedeny</value>
+    </title>
+    <id>22</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>КурсовыеРазницыЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Курсовые разницы заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Курсовые разницы заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Exchange rate differences was filled</value>
+    </title>
+    <id>23</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НоменклатураБезСпецификаций</name>
+    <title>
+      <key>ru</key>
+      <value>Номенклатура без спецификаций</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Номенклатура без спецификаций</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Nomenclature without specifications</value>
+    </title>
+    <id>24</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Номенклатура</name>
+      <title>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Номенклатура</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Спецификация</name>
+      <title>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სპეციფიკაცია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Specification</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.Спецификации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КоличествоСпецификаций</name>
+      <title>
+        <key>ru</key>
+        <value>Количество спецификаций</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Количество спецификаций</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Number of specifications</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>НоменклатураБезСпецификацийЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Номенклатура без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Номенклатура без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Nomenclature without specification was filled</value>
+    </title>
+    <id>25</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОтчетыПереработчиковСпецификации</name>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков спецификации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Отчеты переработчиков спецификации</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Reports processors specifications</value>
+    </title>
+    <id>26</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ДокументСсылка</name>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტი ბმული</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>reference document</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.ОтчетПереработчика</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Спецификация</name>
+      <title>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სპეციფიკაცია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Specification</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.Спецификации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ОтчетыПерерБезСпецификацийЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Отчеты перер без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Отчеты перер без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Reports Break without a specification filled with</value>
+    </title>
+    <id>27</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НекорректныеКурсовыеРазницыДС</name>
+    <title>
+      <key>ru</key>
+      <value>ДС некорректные курсовые разницы</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ДС некорректные курсовые разницы</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>DS incorrect translation differences</value>
+    </title>
+    <id>29</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>БанковскийСчетКасса</name>
+      <title>
+        <key>ru</key>
+        <value>Банковский счет касса</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>საბანკო ანგარიში სალარო</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Bank account box office</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.БанковскиеСчета</types>
+        <types>CatalogRef.Кассы</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Регистратор</name>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>რეგისტრატორი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>recorder</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>НекорректныеКурсовыеРазницыПокупатели</name>
+    <title>
+      <key>ru</key>
+      <value>Некорректные курсовые разницы покупатели</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Некорректные курсовые разницы покупатели</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Incorrect translation differences buyers</value>
+    </title>
+    <id>30</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Контрагент</name>
+      <title>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Counterparty</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.Контрагенты</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Регистратор</name>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>რეგისტრატორი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>recorder</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>НекорректныеКурсовыеРазницыПоставщики</name>
+    <title>
+      <key>ru</key>
+      <value>Некорректные курсовые разницы поставщики</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Некорректные курсовые разницы поставщики</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Incorrect translation differences suppliers</value>
+    </title>
+    <id>31</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Контрагент</name>
+      <title>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Counterparty</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.Контрагенты</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Регистратор</name>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>რეგისტრატორი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>recorder</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>КонецПериода</name>
+    <title>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>პერიოდის დასასრული</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>End of period</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>КонецПериода</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>НачалоПериода</name>
+    <title>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>პერიოდის დასაწყისი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Beginning of period</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>НачалоПериода</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>Организация</name>
+    <title>
+      <key>ru</key>
+      <value>Организация</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Organization</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>CatalogRef.Организации</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПредставлениеПериода</name>
+    <title>
+      <key>ru</key>
+      <value>Представление периода</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>პერიოდის წარდგენა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Представление периода</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОтчетыПереработчиковНесоответствия</name>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков несоответствия</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Отчеты переработчиков несоответствия</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Reports disparity processors</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ДокументСсылка</name>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტი ბმული</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>reference document</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.ОтчетПереработчика</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ТаблицаРасхождений</name>
+      <title>
+        <key>ru</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Table differences</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>ValueTable</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>ОтчетыПереработчиковНесоответствия.ТаблицаРасхождений</segments>
+      </tablePath>
+      <columns>
+        <name>Номенклатура</name>
+        <title>
+          <key>ru</key>
+          <value>Номенклатура</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ნომენკლატურა</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Nomenclature</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>CatalogRef.Номенклатура</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>Характеристика</name>
+        <title>
+          <key>ru</key>
+          <value>Характеристика</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>მახასიათებელი</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Characteristic</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>КоличествоПоФакту</name>
+        <title>
+          <key>ru</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Number on the fact</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>КоличествоПоСпецификации</name>
+        <title>
+          <key>ru</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Quantity specification</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>ОтчетыПереработчиковНесоответствияЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Отчеты переработчиков несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Reports processors filled with inconsistencies</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВестиУчетПоКомпании</name>
+    <title>
+      <key>ru</key>
+      <value>Вести учет по компании</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Вести учет по компании</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Keep a record of the company</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДокПроизводствоСпецификации</name>
+    <title>
+      <key>ru</key>
+      <value>Док производство спецификации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Док производство спецификации</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Dock product specification</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ДокументСсылка</name>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტი ბმული</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>reference document</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.СборкаЗапасов</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ДокПроизводствоСпецификацииЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Док производство спецификации заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Док производство спецификации заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Doc filled with product specification</value>
+    </title>
+    <id>32</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДокПроизводствоНесоответствия</name>
+    <title>
+      <key>ru</key>
+      <value>Док производство несоответствия</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Док производство несоответствия</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Doc manufacturing inconsistencies</value>
+    </title>
+    <id>33</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ДокументСсылка</name>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტი ბმული</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>reference document</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.СборкаЗапасов</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ТаблицаРасхождений</name>
+      <title>
+        <key>ru</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Table differences</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>ValueTable</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>ДокПроизводствоНесоответствия.ТаблицаРасхождений</segments>
+      </tablePath>
+      <columns>
+        <name>Номенклатура</name>
+        <title>
+          <key>ru</key>
+          <value>Номенклатура</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ნომენკლატურა</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Nomenclature</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>CatalogRef.Номенклатура</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>Характеристика</name>
+        <title>
+          <key>ru</key>
+          <value>Характеристика</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>მახასიათებელი</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Characteristic</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>КоличествоПоФакту</name>
+        <title>
+          <key>ru</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Number on the fact</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>КоличествоПоСпецификации</name>
+        <title>
+          <key>ru</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Quantity specification</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>ДокПроизводствоНесоответствияЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Док производство несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Док производство несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Dock production filled with inconsistencies</value>
+    </title>
+    <id>34</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НомерТекущейСтрокиДерева</name>
+    <title>
+      <key>ru</key>
+      <value>Номер текущей строки дерева</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Номер текущей строки дерева</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Number of the current line of the tree</value>
+    </title>
+    <id>35</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>АнализЗакупочныхЦен</name>
+    <title>
+      <key>ru</key>
+      <value>Анализ закупочных цен</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Анализ закупочных цен</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Analysis of procurement prices</value>
+    </title>
+    <id>36</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Номенклатура</name>
+      <title>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.Номенклатура</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Характеристика</name>
+      <title>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Characteristic</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДатаЗакупки</name>
+      <title>
+        <key>ru</key>
+        <value>Дата закупки</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>შესყიდვის თარიღი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Date of purchase</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЕстьОтклонение</name>
+      <title>
+        <key>ru</key>
+        <value>Есть отклонение</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Есть отклонение</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>there deviation</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЗакупочнаяЦена</name>
+      <title>
+        <key>ru</key>
+        <value>Закупочная цена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Закупочная цена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Purchase price</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДокументЗакупки</name>
+      <title>
+        <key>ru</key>
+        <value>Документ закупки</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Документ закупки</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Purchasing document</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>DocumentRef.ПриходнаяНакладная</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>АнализЗакупочныхЦенЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Анализ закупочных цен заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Анализ закупочных цен заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Analysis of purchase prices was filled</value>
+    </title>
+    <id>37</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТекущаяСсылкаНаСправку</name>
+    <title>
+      <key>ru</key>
+      <value>Текущая ссылка на справку</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Текущая ссылка на справку</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Current link to the FAQ</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТекущаяДатаПоследногоИсправления</name>
+    <title>
+      <key>ru</key>
+      <value>Текущая дата последного исправления</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Текущая дата последного исправления</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>The current date is the latest fixes</value>
+    </title>
+    <id>38</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РасчетыСПоставщиками</name>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с поставщиками</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ანგარიშსწორებები მომწოდებლებთან</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Accounts payable</value>
+    </title>
+    <id>41</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Контрагент</name>
+      <title>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Counterparty</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Контрагенты</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЕстьОборотыЗаПериод</name>
+      <title>
+        <key>ru</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>There is a momentum in the period</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>БылиИсправления</name>
+      <title>
+        <key>ru</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>There were patches</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>РасчетыСПокупателями</name>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с покупателями</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ანგარიშსწორებები მყიდველებთან</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Receivables from customers</value>
+    </title>
+    <id>20</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Контрагент</name>
+      <title>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Counterparty</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Контрагенты</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОбработкаВыполнена</name>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Processing performed</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЕстьОборотыЗаПериод</name>
+      <title>
+        <key>ru</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>There is a momentum in the period</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>БылиИсправления</name>
+      <title>
+        <key>ru</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>There were patches</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>РасчетыСПокупателямиЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с покупателями заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Расчеты с покупателями заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Receivables from customers was filled</value>
+    </title>
+    <id>42</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДеревоДокументовДоговораОрганизации</name>
+    <title>
+      <key>ru</key>
+      <value>Дерево документов договора организации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Дерево документов договора организации</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Wood contract documents</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ОсновнойДокумент</name>
+      <title>
+        <key>ru</key>
+        <value>Основной документ</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Основной документ</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>main document</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПодчиненныйДокумент</name>
+      <title>
+        <key>ru</key>
+        <value>Подчиненный документ</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Подчиненный документ</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>slave document</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ТекстСообщения</name>
+      <title>
+        <key>ru</key>
+        <value>Текст сообщения</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>შეტყობინების ტექსტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Message text</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОрганизацияВШапке</name>
+      <title>
+        <key>ru</key>
+        <value>Организация в шапке</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Организация в шапке</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Organization in the cap</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>CatalogRef.Организации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Договор</name>
+      <title>
+        <key>ru</key>
+        <value>Договор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ხელშეკრულება</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Agreement</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ОрганизацияВДоговоре</name>
+      <title>
+        <key>ru</key>
+        <value>Организация в договоре</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Организация в договоре</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Organization in the contract</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>CatalogRef.Организации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ДеревоДокументовДоговораОрганизацииЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Дерево документов договора организации заполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Дерево документов договора организации заполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>A tree filled with the contract documents of the organization</value>
+    </title>
+    <id>19</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СтатьиДДС</name>
+    <title>
+      <key>ru</key>
+      <value>Статьи ДДС</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Статьи ДДС</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>article DDS</value>
+    </title>
+    <id>39</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Статья</name>
+      <title>
+        <key>ru</key>
+        <value>Статья</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მუხლი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Article</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Регистратор</name>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>რეგისტრატორი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>recorder</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СуммаПриход</name>
+      <title>
+        <key>ru</key>
+        <value>Сумма приход</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>თანხა შემოსვლა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>The sum of the parish</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СуммаРасход</name>
+      <title>
+        <key>ru</key>
+        <value>Сумма расход</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>თანხა ხარჯი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>sum of expenses</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Валюта</name>
+      <title>
+        <key>ru</key>
+        <value>Валюта</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ვალუტა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Currency</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>CatalogRef.Валюты</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ГруппаСтатей</name>
+      <title>
+        <key>ru</key>
+        <value>Группа статей</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Группа статей</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Group articles</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>СтатьиДДСЗаполнялось</name>
+    <title>
+      <key>ru</key>
+      <value>Статьи ДДСЗаполнялось</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Статьи ДДСЗаполнялось</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>article DDSZapolnyalos</value>
+    </title>
+    <id>40</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ПериодМинус</name>
+    <title>
+      <key>ru</key>
+      <value>Период минус</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Период минус</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>period minus</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Предыдущий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Предыдущий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Previous month</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.MoveLeft</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПериодМинус</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПериодПлюс</name>
+    <title>
+      <key>ru</key>
+      <value>Период плюс</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Период плюс</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>period plus</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Следующий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Следующий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Next month</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.MoveRight</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПериодПлюс</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>КонтекстЗакрытияМесяца</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

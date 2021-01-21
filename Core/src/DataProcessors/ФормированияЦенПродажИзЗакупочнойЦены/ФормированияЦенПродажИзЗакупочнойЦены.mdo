@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6312e17b-848e-4fee-83c9-37da6ce6508c">
+  <producedTypes>
+    <objectType typeId="7994f91e-8a13-41db-8db7-890c3b420c76" valueTypeId="cc522755-56b7-4513-8800-1ffd848187a4"/>
+    <managerType typeId="89a13218-d62a-420f-9887-2b05cfb5d48b" valueTypeId="685ab136-3a9b-4166-9a86-5e7a79d42630"/>
+  </producedTypes>
+  <name>ФормированияЦенПродажИзЗакупочнойЦены</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формирования цен продаж из закупочной цены</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>გასაყიდი ფასების ფორმირება შესყიდვის ფასების მიხედვით</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>The formation of the sales price of the purchase price</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ФормированияЦенПродажИзЗакупочнойЦены.Form.Форма</defaultForm>
+  <attributes uuid="a9178911-347a-4c60-9888-1fc7c24c3781">
+    <name>ВидЦенКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цен контрагента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტის ფასების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>View counterparty prices</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыЦенКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7387b806-922f-4a49-b72a-29923e41b56d">
+    <name>ВидЦенПродажи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цен продажи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გასაყიდი ფასების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>View sale price</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипВидаЦен</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыВидовЦен.EnumValue.Статический</value>
+      </value>
+    </choiceParameters>
+  </attributes>
+  <tabularSections uuid="ad2be1c1-6e34-4fb2-b370-3aea08f47501">
+    <producedTypes>
+      <objectType typeId="1156d9a3-332c-406c-b8ba-0b841afe37d4" valueTypeId="7931b6ec-faab-4e63-b02c-5498b55333cc"/>
+      <rowType typeId="02475a09-797f-4e67-8a15-5bd670432276" valueTypeId="3ce4afad-37e1-46af-ab6a-6d6af77b31eb"/>
+    </producedTypes>
+    <name>Таблица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Table</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="cdbbf5ed-de74-4a41-ae2f-1723fae82215">
+      <name>Флаг</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ალამი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Flag</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1e9afe87-6172-428d-8306-f74c0997ba75">
+      <name>ДатаПоследнейЦеныЗакупки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата последней закупки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ბოლო შესყიდვის თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Date of last purchase</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="97b7fdb0-58dc-4db0-b039-5ee551ddb924">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ТипНоменклатуры</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНоменклатуры.EnumValue.Запас</value>
+        </value>
+      </choiceParameters>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.Номенклатура.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="1fbc5770-d98a-4006-80cc-d3bc69172964">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Номенклатура</name>
+        <field>DataProcessor.ФормированияЦенПродажИзЗакупочнойЦены.TabularSection.Таблица.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.ХарактеристикиНоменклатуры.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="f0c37ef2-e767-4dff-87b6-703a32b1e628">
+      <name>ЦенаЗакупкиПред</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена закупки (пред)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შესყიდვის ფასი (ძველი)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Purchase price (pre)</value>
+      </synonym>
+      <comment>Цена</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:NumberValue">
+        <value>1</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="2eb7d62b-e265-453e-8777-31948cbd1027">
+      <name>ЦенаЗакупки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена закупки (тек)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შესყიდვის ფასი (მიმდინარე)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Purchase price (tech)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:NumberValue">
+        <value>1</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="e19c46e6-3e18-46c3-ad31-36e9ea077aa3">
+      <name>РазностьЦеныЗакупки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Разность цены закупки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შესყიდვის ფასების სხვაობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The difference between the purchase price</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:NumberValue">
+        <value>1</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="45a83a81-d541-4099-9a57-b86db720354e">
+      <name>РазностьЦеныЗакупкиПроцент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Разность цены закупки %</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შესყიდვის ფასების სხვაობა %</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The difference between the purchase price%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:NumberValue">
+        <value>1</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="3754a3a8-87dd-4002-aa95-46393c99f3f1">
+      <name>ЦенаПродажиТекущая</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена продажи (текущая)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გასაყისი ფასი (მიმდინარე)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Selling price (current)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:NumberValue">
+        <value>1</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="52ef7561-20a1-46c6-b244-ed72f68710a9">
+      <name>ДатаПоследнейУстановленнойЦеныПродажи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата последней установленной цены продажи</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ბოლო გასაყიდი ფასის დადგენის თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Date of the last sale price of the set</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e2fffc62-ecb2-42d2-9756-ff971184a346">
+      <name>ЦенаПродажиНовая</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена продажи (новая)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გასაყიდი ფასი (ახალი)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Selling price (new)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c403fa5a-06ce-4d2f-b658-9430831a4016">
+      <name>Надбавка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Надбавка сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ახალი ფასნამატის თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The surcharge amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dca9abc2-207a-4fa7-ae05-0f1adc4552e3">
+      <name>НадбавкаПроцент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Надбавка %</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ახალი ფასნამატის %</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Weighting%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="ee480450-35ba-41db-81a3-55326d20101f">
+    <name>Форма</name>
+    <synonym>
+      <key>ka</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b1a846a8-724b-4688-b0e0-17cba6ec0cbf">
+    <name>ФормаНадбавки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма надбавки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფასნამატის ფორმა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>allowance form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="7f624050-eb4e-40f6-b385-87b981783ddf">
+    <name>ФормированияЦенПродажИзЗакупочнойЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формирования цен продаж из закупочной цены</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გასაყიდი ფასების ფორმირება შესყიდვის ფასების მიხედვით</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The formation of the sales price of the purchase price</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0cd0e305-bcac-4589-a744-fd248b1457c3">
+  <producedTypes>
+    <selectionType typeId="deb3104b-b71a-4bac-a7ee-6f02b8eb7b1f" valueTypeId="fce88149-728c-43fe-a958-ccb2f3fe14ba"/>
+    <listType typeId="7a1e9914-6a65-47c7-b1b2-e3ad113bfe86" valueTypeId="c8599898-17dd-4408-84ff-c639dca8d65b"/>
+    <managerType typeId="18869cf6-285a-4cdc-bf05-5ca843f17d20" valueTypeId="a420022b-1416-4340-a4c8-85b750a4e985"/>
+    <recordSetType typeId="2234643a-8eeb-47a9-a5e5-1a7d24bc54ef" valueTypeId="912e666e-efa9-4b1c-bd13-fd1b35d3da07"/>
+    <recordKeyType typeId="93bd2f4b-9f0e-4851-ad7f-4131eb46fbd7" valueTypeId="5b66e9ae-056a-4127-b549-e7a26d95e546"/>
+    <recordType typeId="968fcced-76d8-4d1a-9a20-022a4b19c5f1" valueTypeId="9e94238c-9b0e-45e4-81be-76d5ae62d726"/>
+  </producedTypes>
+  <name>ГарантийноеОбслуживание</name>
+  <synonym>
+    <key>ru</key>
+    <value>Гарантийное обслуживание</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Гарантийное обслуживание</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Гарантийное обслуживание</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="31d53329-49db-4cda-9de2-e7b50b56665e">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5938a323-6b50-4cb8-9e22-d9c54ae619a0">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="9daab9b1-a894-478d-a413-b3883dac0225">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6bb85506-b4ae-4d8d-a272-dc3003ab8264">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="0594fa4c-9811-4374-928a-3210e9bddf50">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="89106826-22b0-4f7a-adbd-6fd08599abed">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ხელშეკრულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Agreement</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="dbe69d68-b68b-4cce-a31d-53ddf2719739">
+    <name>ЗаказПокупателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მყიდველის შეკვეთა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9d78f623-57bc-4a52-82a3-631b4c0bac12">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნომენკლატურა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Nomenclature</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="05a7d655-9992-42e7-a881-144fc9fea350">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მახასიათებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a901a622-be8f-403d-af80-03f4a81222fd">
+    <name>ЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ед.</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ერთეული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Unit</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>0:a28e04ee-8fae-48f0-b7c4-e031134c920f</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

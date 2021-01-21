@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ნომენკლატურა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Nomenclature</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მახასიათებელი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Characteristic</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаЗакупкиКон</dataPath>
+			<field>ЦенаЗакупкиКон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена закупки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესასყიდი ფასი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>the purchase price</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПродажиКон</dataPath>
+			<field>ЦенаПродажиКон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена продажи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გასაყიდი ფასი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Selling price</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Маржа</dataPath>
+			<field>Маржа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маржа %</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მარჟა %</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>margin%</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазностьЦен</dataPath>
+			<field>РазностьЦен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разность цен</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>თანხობრივი ცვლილება</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>price difference</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Номенклатуры.Ссылка КАК Номенклатура
+ПОМЕСТИТЬ ЗапасыПред
+ИЗ
+	Справочник.Номенклатура КАК Номенклатуры
+ГДЕ
+	Номенклатуры.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Запас)
+	И НЕ Номенклатуры.ЭтоГруппа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫРАЗИТЬ(ХарактеристикиНоменклатуры.Владелец КАК Справочник.Номенклатура) КАК Номенклатура,
+	ХарактеристикиНоменклатуры.Ссылка КАК Характеристика
+ПОМЕСТИТЬ Запасы
+ИЗ
+	Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+ГДЕ
+	ХарактеристикиНоменклатуры.Владелец ССЫЛКА Справочник.Номенклатура
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗапасыПред.Номенклатура,
+	ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+ИЗ
+	ЗапасыПред КАК ЗапасыПред
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЦеныНоменклатурыСрезПоследних.Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Характеристика,
+	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Цена) КАК ЦенаПродажи
+ПОМЕСТИТЬ ЦеныПродажи
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+			,
+			Актуальность
+				И ВидЦен = &amp;ВидЦенПродажи) КАК ЦеныНоменклатурыСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	ЦеныНоменклатурыСрезПоследних.Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЦеныНоменклатурыКонтрагентовСрезПоследних.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатурыКонтрагентовСрезПоследних.Характеристика,
+	ЦеныНоменклатурыКонтрагентовСрезПоследних.Период,
+	ЦеныНоменклатурыКонтрагентовСрезПоследних.Цена КАК ЦенаЗакупки
+ПОМЕСТИТЬ ЦеныЗакупкиПред
+ИЗ
+	РегистрСведений.ЦеныНоменклатурыКонтрагентов.СрезПоследних(, Актуальность) КАК ЦеныНоменклатурыКонтрагентовСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЦеныЗакупкиПред.Номенклатура,
+	ЦеныЗакупкиПред.Характеристика,
+	МАКСИМУМ(ЦеныЗакупкиПред.Период) КАК Период
+ПОМЕСТИТЬ МаксПериодыЗакупок
+ИЗ
+	ЦеныЗакупкиПред КАК ЦеныЗакупкиПред
+
+СГРУППИРОВАТЬ ПО
+	ЦеныЗакупкиПред.Номенклатура,
+	ЦеныЗакупкиПред.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЦеныЗакупкиПред.Номенклатура КАК Номенклатура,
+	ЦеныЗакупкиПред.Характеристика,
+	МАКСИМУМ(ЦеныЗакупкиПред.ЦенаЗакупки) КАК ЦенаЗакупки
+ПОМЕСТИТЬ ЦеныЗакупки
+ИЗ
+	ЦеныЗакупкиПред КАК ЦеныЗакупкиПред
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ МаксПериодыЗакупок КАК МаксПериодыЗакупок
+		ПО ЦеныЗакупкиПред.Номенклатура = МаксПериодыЗакупок.Номенклатура
+			И ЦеныЗакупкиПред.Характеристика = МаксПериодыЗакупок.Характеристика
+			И ЦеныЗакупкиПред.Период = МаксПериодыЗакупок.Период
+
+СГРУППИРОВАТЬ ПО
+	ЦеныЗакупкиПред.Номенклатура,
+	ЦеныЗакупкиПред.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Запасы.Номенклатура,
+	Запасы.Характеристика,
+	ЕСТЬNULL(ЦеныЗакупки.ЦенаЗакупки, 0) КАК ЦенаЗакупкиКон,
+	ЕСТЬNULL(ЦеныПродажи.ЦенаПродажи, 0) КАК ЦенаПродажиКон,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЦеныЗакупки.ЦенаЗакупки, 0) = 0
+				ИЛИ ЕСТЬNULL(ЦеныПродажи.ЦенаПродажи, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫРАЗИТЬ(ЕСТЬNULL(ЦеныПродажи.ЦенаПродажи, 0) / ЕСТЬNULL(ЦеныЗакупки.ЦенаЗакупки, 0) * 100 - 100 КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Маржа,
+	ЕСТЬNULL(ЦеныПродажи.ЦенаПродажи, 0) - ЕСТЬNULL(ЦеныЗакупки.ЦенаЗакупки, 0) КАК РазностьЦен
+ИЗ
+	Запасы КАК Запасы
+		ЛЕВОЕ СОЕДИНЕНИЕ ЦеныПродажи КАК ЦеныПродажи
+		ПО Запасы.Номенклатура = ЦеныПродажи.Номенклатура
+			И Запасы.Характеристика = ЦеныПродажи.Характеристика
+		ЛЕВОЕ СОЕДИНЕНИЕ ЦеныЗакупки КАК ЦеныЗакупки
+		ПО Запасы.Номенклатура = ЦеныЗакупки.Номенклатура
+			И Запасы.Характеристика = ЦеныЗакупки.Характеристика</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидЦенПродажи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цен продажи</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>გასაყიდი ფასის ტიპი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>View sale price</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>АнализЦен</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>АнализЦен</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ფასთა ანალიზი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>AnalizTsen</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаЗакупкиКон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПродажиКон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Маржа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазностьЦен</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>339a0107-114b-477b-9b1c-95973ca9d610</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>82579af9-1a55-4495-92d3-702ed8121c3a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Характеристика</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>6fbd9241-aee9-4b9a-bfa0-9873623e7719</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>044d5349-e63c-4c14-9bcb-b67230cd3de0</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенПродажи</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>53c158ab-cf3b-45f0-8fc6-675a5651c9f3</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>c252e6ef-7cb4-4071-9dd6-944e7a3d41c1</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>47aab88e-b8c7-46bb-909b-7fd83f667d6e</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>a2fbbc9e-3961-4ac7-b19e-9899faceb8ab</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

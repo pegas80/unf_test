@@ -1,0 +1,1677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Настройка синхронизации данных</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>მონაცემთა სინქრონიზაციის გამართვა</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Setting Data Synchronization</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>ПравилаСинхронизацииДанных</name>
+    <id>165</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаАвтоматическаяСинхронизация</name>
+      <id>166</id>
+      <items xsi:type="form:FormField">
+        <name>АвтоматическаяСинхронизация</name>
+        <id>167</id>
+        <title>
+          <key>ru</key>
+          <value>Автоматическая синхронизация</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ავტომატური სინქრონიზაცია</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Automatic synchronization</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>РежимСинхронизации</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>АвтоматическаяСинхронизацияПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>АвтоматическаяСинхронизацияExtendedTooltip</name>
+          <id>212</id>
+          <title>
+            <key>ru</key>
+            <value>Программа автоматически отслеживает и регистрирует к отправке изменения справочников и документов в соответствии с заданными условиями синхронизации. </value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Программа автоматически отслеживает и регистрирует к отправке изменения справочников и документов в соответствии с заданными условиями синхронизации. </value>
+          </title>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>АвтоматическаяСинхронизацияКонтекстноеМеню</name>
+          <id>168</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <columnsCount>1</columnsCount>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Автоматическая синхронизация</value>
+            </presentation>
+            <presentation>
+              <key>ka</key>
+              <value>ავტომატური სინქრონიზაცია</value>
+            </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Automatic synchronization</value>
+            </presentation>
+            <value xsi:type="core:StringValue">
+              <value>АвтоматическаяСинхронизация</value>
+            </value>
+          </choiceList>
+          <font xsi:type="core:AutoFont">
+            <bold>true</bold>
+          </font>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаУсловияОтправкиДанных</name>
+        <id>171</id>
+        <items xsi:type="form:FormGroup">
+          <name>ПодгруппаУсловияОтправкиДанных</name>
+          <id>172</id>
+          <items xsi:type="form:FormField">
+            <name>ДатаНачалаВыгрузкиДокументов</name>
+            <id>175</id>
+            <title>
+              <key>ru</key>
+              <value>Отправлять документы начиная с даты</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>დოკუმენტების გაგზავნა შემდეგი თარიღიდან დაწყებული</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Send documents from the date of</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ДатаНачалаВыгрузкиДокументов</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ДатаНачалаВыгрузкиДокументовExtendedTooltip</name>
+              <id>217</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДатаНачалаВыгрузкиДокументовКонтекстноеМеню</name>
+              <id>176</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаОтборПоОрганизациям</name>
+            <id>178</id>
+            <items xsi:type="form:FormField">
+              <name>РежимСинхронизацииОрганизаций</name>
+              <id>179</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>РежимСинхронизацииОрганизаций</segments>
+              </dataPath>
+              <titleLocation>None</titleLocation>
+              <handlers>
+                <event>OnChange</event>
+                <name>РежимСинхронизацииОрганизацийПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>РежимСинхронизацииОрганизацийExtendedTooltip</name>
+                <id>220</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>РежимСинхронизацииОрганизацийКонтекстноеМеню</name>
+                <id>180</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>RadioButtonField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+                <columnsCount>1</columnsCount>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>По всем организациям</value>
+                  </presentation>
+                  <presentation>
+                    <key>ka</key>
+                    <value>ყველა ორგანიზაციით</value>
+                  </presentation>
+                  <presentation>
+                    <key>en</key>
+                    <value>For all organizations</value>
+                  </presentation>
+                  <value xsi:type="core:StringValue">
+                    <value>СинхронизироватьДанныеПоВсемОрганизациям</value>
+                  </value>
+                </choiceList>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>Только по выбранным организациям:</value>
+                  </presentation>
+                  <presentation>
+                    <key>ka</key>
+                    <value>მხოლოდ არჩეული ორგანიზაციებით:</value>
+                  </presentation>
+                  <presentation>
+                    <key>en</key>
+                    <value>Only selected organizations:</value>
+                  </presentation>
+                  <value xsi:type="core:StringValue">
+                    <value>СинхронизироватьДанныеТолькоПоВыбраннымОрганизациям</value>
+                  </value>
+                </choiceList>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаСписокВыбранныхОрганизаций</name>
+              <id>181</id>
+              <items xsi:type="form:Decoration">
+                <name>ОткрытьФормуОтбораПоОрганизациям</name>
+                <id>185</id>
+                <title>
+                  <key>ru</key>
+                  <value>Выбрать организации </value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>Выбрать организации </value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ОткрытьФормуОтбораПоОрганизациямExtendedTooltip</name>
+                  <id>224</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ОткрытьФормуОтбораПоОрганизациямКонтекстноеМеню</name>
+                  <id>186</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <groupVerticalAlign>Bottom</groupVerticalAlign>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <handlers>
+                    <event>Click</event>
+                    <name>ОткрытьФормуОтбораПоОрганизациям</name>
+                  </handlers>
+                  <hyperlink>true</hyperlink>
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </items>
+              <items xsi:type="form:Button">
+                <name>ОчиститьОтборПоОрганизациям</name>
+                <id>187</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ОчиститьОтборПоОрганизациямExtendedTooltip</name>
+                  <id>225</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.ОчиститьОтборПоОрганизациям</commandName>
+                <representation>Picture</representation>
+                <width>2</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <groupVerticalAlign>Bottom</groupVerticalAlign>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа список выбранных организаций</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ჯგუფი არჩეული ორგანიზაციების სია</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Group the list of selected companies</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа список выбранных организаций</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ჯგუფი არჩეული ორგანიზაციების სია</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Group the list of selected companies</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаСписокВыбранныхОрганизацийExtendedTooltip</name>
+                <id>221</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <behavior>Auto</behavior>
+                <showLeftMargin>true</showLeftMargin>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Группа отбор по организациям</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ჯგუფი ორგანიზაციების მიხედვით შერჩევა</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Group selection of organizations</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа отбор по организациям</value>
+            </toolTip>
+            <toolTip>
+              <key>ka</key>
+              <value>ჯგუფი ორგანიზაციების მიხედვით შერჩევა</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Group selection of organizations</value>
+            </toolTip>
+            <horizontalStretch>true</horizontalStretch>
+            <extendedTooltip>
+              <name>ГруппаОтборПоОрганизациямExtendedTooltip</name>
+              <id>219</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <verticalSpacing>Single</verticalSpacing>
+              <behavior>Auto</behavior>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаОтборПоВидамДокументов</name>
+            <id>189</id>
+            <items xsi:type="form:FormField">
+              <name>РежимСинхронизацииДокументов</name>
+              <id>190</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>РежимСинхронизацииДокументов</segments>
+              </dataPath>
+              <titleLocation>None</titleLocation>
+              <handlers>
+                <event>OnChange</event>
+                <name>РежимСинхронизацииДокументовПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>РежимСинхронизацииДокументовExtendedTooltip</name>
+                <id>228</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>РежимСинхронизацииДокументовКонтекстноеМеню</name>
+                <id>191</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>RadioButtonField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+                <columnsCount>1</columnsCount>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>Все документы</value>
+                  </presentation>
+                  <presentation>
+                    <key>ka</key>
+                    <value>ყველა დოკუმენტი</value>
+                  </presentation>
+                  <presentation>
+                    <key>en</key>
+                    <value>All documents</value>
+                  </presentation>
+                  <value xsi:type="core:StringValue">
+                    <value>СинхронизироватьДанныеПоВсемДокументам</value>
+                  </value>
+                </choiceList>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>Только выбранные виды документов:</value>
+                  </presentation>
+                  <presentation>
+                    <key>ka</key>
+                    <value>დოკუმენტის მხოლოდ არჩეული სახეობები:</value>
+                  </presentation>
+                  <presentation>
+                    <key>en</key>
+                    <value>Only selected types of documents:</value>
+                  </presentation>
+                  <value xsi:type="core:StringValue">
+                    <value>СинхронизироватьДанныеТолькоПоВыбраннымВидамДокументов</value>
+                  </value>
+                </choiceList>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаСписокВыбранныхВидовДокументов</name>
+              <id>192</id>
+              <items xsi:type="form:Decoration">
+                <name>ОткрытьФормуОтбораПоВидамДокументов</name>
+                <id>196</id>
+                <title>
+                  <key>ru</key>
+                  <value>Выбрать виды документов </value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>Выбрать виды документов </value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ОткрытьФормуОтбораПоВидамДокументовExtendedTooltip</name>
+                  <id>232</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ОткрытьФормуОтбораПоВидамДокументовКонтекстноеМеню</name>
+                  <id>197</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <groupVerticalAlign>Bottom</groupVerticalAlign>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <handlers>
+                    <event>Click</event>
+                    <name>ОткрытьФормуОтбораПоВидамДокументов</name>
+                  </handlers>
+                  <hyperlink>true</hyperlink>
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </items>
+              <items xsi:type="form:Button">
+                <name>ОчиститьОтборПоВидамДокументов</name>
+                <id>198</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ОчиститьОтборПоВидамДокументовExtendedTooltip</name>
+                  <id>233</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.ОчиститьОтборПоВидамДокументов</commandName>
+                <representation>Picture</representation>
+                <width>2</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <groupVerticalAlign>Bottom</groupVerticalAlign>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа список выбранных видов документов</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ჯგუფი დოკუმენტების არჩეული სახეობების სია</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Group the list of selected types of documents</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа список выбранных видов документов</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ჯგუფი დოკუმენტების არჩეული სახეობების სია</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Group the list of selected types of documents</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаСписокВыбранныхВидовДокументовExtendedTooltip</name>
+                <id>229</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <behavior>Auto</behavior>
+                <showLeftMargin>true</showLeftMargin>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Группа отбор по видам документов</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ჯგუფი შერჩევა დოკუმენტის სახეობების მიხედვით</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Group selection on the types of documents</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа отбор по видам документов</value>
+            </toolTip>
+            <toolTip>
+              <key>ka</key>
+              <value>ჯგუფი შერჩევა დოკუმენტის სახეობების მიხედვით</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Group selection on the types of documents</value>
+            </toolTip>
+            <horizontalStretch>true</horizontalStretch>
+            <extendedTooltip>
+              <name>ГруппаОтборПоВидамДокументовExtendedTooltip</name>
+              <id>227</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <verticalSpacing>Single</verticalSpacing>
+              <behavior>Auto</behavior>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Условия отправки данных</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>მონაცემთა გაგზავნის პირობები</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Terms of sending data</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Условия отправки данных</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>მონაცემთა გაგზავნის პირობები</value>
+          </toolTip>
+          <toolTip>
+            <key>en</key>
+            <value>Terms of sending data</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ПодгруппаУсловияОтправкиДанныхExtendedTooltip</name>
+            <id>215</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <behavior>Auto</behavior>
+            <representation>NormalSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Условия синхронизации данных</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>Условия синхронизации данных</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Condition data synchronization</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа условия отправки данных</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>ჯგუფი მონაცემთა გაგზავნის პირობები</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>the conditions of the group send the data</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ГруппаУсловияОтправкиДанныхExtendedTooltip</name>
+          <id>214</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Группа автоматическая синхронизация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯგუფი ავტომატური სინქრონიზაცია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Group automatic synchronization</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа автоматическая синхронизация</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ჯგუფი ავტომატური სინქრონიზაცია</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Group automatic synchronization</value>
+      </toolTip>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>ГруппаАвтоматическаяСинхронизацияExtendedTooltip</name>
+        <id>211</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <representation>StrongSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаРучнаяСинхронизация</name>
+      <id>199</id>
+      <items xsi:type="form:FormField">
+        <name>РучнаяСинхронизация</name>
+        <id>200</id>
+        <title>
+          <key>ru</key>
+          <value>Ручная синхронизация</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>მექანიკური სინქრონიზაცია</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>manual clock</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>РежимСинхронизации</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>РучнаяСинхронизацияПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>РучнаяСинхронизацияExtendedTooltip</name>
+          <id>235</id>
+          <title>
+            <key>ru</key>
+            <value>Программа автоматически региструет к отправке только изменения данных справочников. Отправка документов выполняется вручную, и пользователь самостоятельно определяет состав передаваемых документов. При этом контроль актуальности документов в информационной базе &quot;Бухгалтерия предприятия&quot; он также выполняет самостоятельно.</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>პროგრამა გასაგზავნად ავტომატურად ახდენს მხოლოდ ცნობარების მონაცემთა ცვლილების რეგისტრაციას. დოკუმენტების გაგზავნა წარმოებს ხელით, და მომხმარებელი დამოუკიდებლად განსაზღვრავს გადასაცემი დოკუმენტების შემადგენლობას. ამასთან, საინფორმაციო ბაზა &quot;საწარმოს ბუღალტერიაში&quot; დოკუმენტების აქტუალობის კონტროლს, იგი, ასევე დამოუკიდებლად ახორციელებს.</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>The program automatically registers to send only changes to data directories. Sending documents manually, and the user determines the composition of the transmitted documents. At the same time control the relevance of the documents in the database of &quot;Enterprise Accounting&quot;, he also performs its own.</value>
+          </title>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>РучнаяСинхронизацияКонтекстноеМеню</name>
+          <id>201</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <columnsCount>1</columnsCount>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Ручная синхронизация</value>
+            </presentation>
+            <presentation>
+              <key>ka</key>
+              <value>მექანიკური სინქრონიზაცია</value>
+            </presentation>
+            <presentation>
+              <key>en</key>
+              <value>manual clock</value>
+            </presentation>
+            <value xsi:type="core:StringValue">
+              <value>РучнаяСинхронизация</value>
+            </value>
+          </choiceList>
+          <font xsi:type="core:AutoFont">
+            <bold>true</bold>
+          </font>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаЗагрузкаДокументовИзБухгалтерии</name>
+        <id>204</id>
+        <items xsi:type="form:FormField">
+          <name>ЗагружатьДокументыИзБухгалтерииПредприятия</name>
+          <id>205</id>
+          <title>
+            <key>ru</key>
+            <value>Загружать денежные документы из информационной базы &quot;Бухгалтерия предприятия&quot;</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ფულადი დოკუმენტების ჩატვირთვა საინფორმაციო ბაზა &quot;საწარმოს ბუღალტერიიდან&quot;</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Download financial documents from the information base &quot;Accounting Enterprise&quot;</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ЗагружатьДокументыИзБухгалтерииПредприятия</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+          <extendedTooltip>
+            <name>ЗагружатьДокументыИзБухгалтерииПредприятияExtendedTooltip</name>
+            <id>238</id>
+            <title>
+              <key>ru</key>
+              <value>Опция определяет, будут ли документы по банку и кассе, созданные или измененные в приложении &quot;Бухгалтерия предприятия&quot;, участвовать в синхронизации.</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ოპცია განსაზღვრავს იმას, რომ დანართ &quot;საწარმოს ბუღალტერიაში&quot; შექმნილი ან შეცვლილი საბანკო და სალაროს დოკუმენტები მიიღებენ თუ არა სინქრონიზაციაში მონაწილეობას.</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>This option determines whether or not the documents at the bank and on hand, created or modified in the appendix &quot;Accounting Enterprise&quot;, to synchronize.</value>
+            </title>
+            <type>Label</type>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗагружатьДокументыИзБухгалтерииПредприятияКонтекстноеМеню</name>
+            <id>206</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа загрузка документов из бухгалтерии</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ჯგუფი დოკუმენტების ჩატვირთვა ბუღალტერიიდან</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Group loading documents from the accounting</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа загрузка документов из бухгалтерии</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>ჯგუფი დოკუმენტების ჩატვირთვა ბუღალტერიიდან</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Group loading documents from the accounting</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ГруппаЗагрузкаДокументовИзБухгалтерииExtendedTooltip</name>
+          <id>237</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Группа ручная синхронизация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯგუფი სინქრონიზაცია ხელის რეჟიმში</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Group manual synchronization</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа ручная синхронизация</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ჯგუფი სინქრონიზაცია ხელის რეჟიმში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Group manual synchronization</value>
+      </toolTip>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>ГруппаРучнаяСинхронизацияExtendedTooltip</name>
+        <id>234</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <representation>StrongSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Правила синхронизации данных</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მონაცემთა სინქრონიზაციის წესები:</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Terms synchronization</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Правила синхронизации данных</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მონაცემთა სინქრონიზაციის წესები:</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Terms synchronization</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ПравилаСинхронизацииДанныхExtendedTooltip</name>
+      <id>210</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <verticalSpacing>Double</verticalSpacing>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаЗаписатьИЗакрыть</name>
+      <id>164</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗаписатьИЗакрытьExtendedTooltip</name>
+        <id>209</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ЗаписатьИЗакрыть</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ОбработкаВыбора</name>
+  </handlers>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>ПередЗакрытием</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <handlers>
+    <event>bf0ac0e1-bcbb-4dfe-8fc4-0b1923b461a6</event>
+    <name>ПередЗаписьюНаСервере</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>РежимСинхронизацииОрганизаций</name>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации организаций</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ორგანიზაციის სინქრონიზაციის რეჟიმი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Sync mode organizations</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РежимСинхронизацииДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации документов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტების სინქრონიზაციის რეჟიმი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Sync mode documents</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Организации</name>
+    <title>
+      <key>ru</key>
+      <value>Организации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ორგანიზაციები</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>organizations</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Организация</name>
+      <title>
+        <key>ru</key>
+        <value>Организация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ორგანიზაცია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Organization</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Организации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ВидыДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Виды документов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტების ტიპები</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>types of documents</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ИмяОбъектаМетаданных</name>
+      <title>
+        <key>ru</key>
+        <value>Имя объекта метаданных</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მეტამონაცემთა ობიექტის სახელი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Name of the object metadata</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Представление</name>
+      <title>
+        <key>ru</key>
+        <value>Представление</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დასახელება</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Representation</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ЗагружатьДокументыИзБухгалтерииПредприятия</name>
+    <title>
+      <key>ru</key>
+      <value>Загружать документы из бухгалтерии предприятия</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტების ჩატვირთვა საწარმოს ბუღალტერიიდან</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Download documents from the company accounts</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИспользоватьОтборПоВидамДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Использовать отбор по видам документов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტის სახეობებით შერჩევის გამოყენება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Use a selection of types of documents</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДатаНачалаВыгрузкиДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Дата начала выгрузки документов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტების გადმოტვირთვის დაწყების თარიღი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Start date of discharge documents</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИспользоватьОтборПоОрганизациям</name>
+    <title>
+      <key>ru</key>
+      <value>Использовать отбор по организациям</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ორგანიზაციების მიხედვით გადარჩევის გამოყენება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Use a selection of organizations</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НастройкаОтборовНаУзле</name>
+    <title>
+      <key>ru</key>
+      <value>Настройка отборов на узле</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კვანძზე შერჩევის გასწორება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Setting selections on site</value>
+    </title>
+    <id>11</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РежимСинхронизации</name>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>სინქრონიზაციის რეჟიმი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>sync mode</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>РучнойОбмен</name>
+    <title>
+      <key>ru</key>
+      <value>Ручной обмен</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მექანიკური გაცვლა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>manual exchange</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВерсияКорреспондента</name>
+    <title>
+      <key>ru</key>
+      <value>Версия корреспондента</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კორესპონდენტის ვერსია</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>version correspondent</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ОчиститьОтборПоОрганизациям</name>
+    <title>
+      <key>ru</key>
+      <value>Очистить отбор по организациям</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ორგანიზაციების მიხედვით შერჩევის გასუფთავება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Clear the selection of organizations</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить отбор по организациям</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ორგანიზაციების მიხედვით შერჩევის გასუფთავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Clear the selection of organizations</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.InputFieldClear</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОчиститьОтборПоОрганизациям</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОчиститьОтборПоВидамДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Очистить отбор по видам документов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტების სახეობების მიხედვით შერჩევის გასუფთავება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Clear the selection of types of documents</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить отбор по видам документов</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დოკუმენტების სახეობების მიხედვით შერჩევის გასუფთავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Clear the selection of types of documents</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.InputFieldClear</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОчиститьОтборПоВидамДокументов</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗаписатьИЗакрыть</name>
+    <title>
+      <key>ru</key>
+      <value>Записать и закрыть</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჩაწერა და დახურვა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Record and Close</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Записать и закрыть</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ჩაწერა და დახურვა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Record and Close</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаписатьИЗакрыть</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>Настройки</name>
+    <valueType/>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

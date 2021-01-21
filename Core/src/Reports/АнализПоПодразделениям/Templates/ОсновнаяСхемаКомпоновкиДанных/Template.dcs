@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>რეგისტრატორი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>რეგისტრატორი</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборот</dataPath>
+			<field>СуммаОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма Поступления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესყიდვის თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>receipts</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ნომენკლატურა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Nomenclature</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структурная единица</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>სტრუქტურული ერთეული</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>structural unit</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>პერიოდი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>პერიოდი</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ორგანიზაცია</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Organization</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистраторСуммаДокумента</dataPath>
+			<field>РегистраторСуммаДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОплати</dataPath>
+			<field>СуммаОплати</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оплати</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გადახდის თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>payment amount</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОплатиРаспределено</dataPath>
+			<field>СуммаОплатиРаспределено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оплати распределено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გადახდის თანხა (განაწილებული)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Payment amount distributed</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВалОборот</dataPath>
+			<field>СуммаВалОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма Поступления вал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესყიდვის თანხა (ვალ.)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Amount Income shaft</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипРасчетов</dataPath>
+			<field>ТипРасчетов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДСОборот</dataPath>
+			<field>СуммаНДСОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესყიდვის დღგ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The amount of VAT</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаОплаты</dataPath>
+			<field>ВалютаОплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта оплаты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გადახდის ვალუტა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>payment Currency</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаПоступления</dataPath>
+			<field>ВалютаПоступления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта поступления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესყიდვის ვალუტა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>receipt of currency</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РасчетыСПоставщикамиОстаткиИОбороты.Период,
+	РасчетыСПоставщикамиОстаткиИОбороты.Регистратор,
+	РасчетыСПоставщикамиОстаткиИОбороты.Организация,
+	РасчетыСПоставщикамиОстаткиИОбороты.ТипРасчетов,
+	РасчетыСПоставщикамиОстаткиИОбороты.Контрагент,
+	РасчетыСПоставщикамиОстаткиИОбороты.Договор,
+	РасчетыСПоставщикамиОстаткиИОбороты.Документ,
+	РасчетыСПоставщикамиОстаткиИОбороты.Заказ,
+	ЕСТЬNULL(РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход, 0) КАК СуммаОборот,
+	ЕСТЬNULL(РасчетыСПоставщикамиОстаткиИОбороты.СуммаВалРасход, 0) КАК СуммаВалОборот,
+	РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.ВалютаДенежныхСредств КАК ВалютаОплаты
+ПОМЕСТИТЬ врОплаты
+ИЗ
+	РегистрНакопления.РасчетыСПоставщиками.ОстаткиИОбороты(, , Регистратор, , ) КАК РасчетыСПоставщикамиОстаткиИОбороты
+ГДЕ
+	(РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.РасходИзКассы
+			ИЛИ РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.РасходСоСчета)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АнализПоПодразделениямОстаткиИОбороты.Номенклатура,
+	АнализПоПодразделениямОстаткиИОбороты.СтруктурнаяЕдиница,
+	АнализПоПодразделениямОстаткиИОбороты.Организация,
+	АнализПоПодразделениямОстаткиИОбороты.Регистратор,
+	АнализПоПодразделениямОстаткиИОбороты.Период,
+	АнализПоПодразделениямОстаткиИОбороты.СуммаОборот,
+	АнализПоПодразделениямОстаткиИОбороты.Регистратор.СуммаДокумента,
+	АнализПоПодразделениямОстаткиИОбороты.СуммаНДСОборот,
+	АнализПоПодразделениямОстаткиИОбороты.Регистратор.ВалютаДокумента КАК ВалютаПоступления
+ПОМЕСТИТЬ врПоступления
+ИЗ
+	РегистрНакопления.АнализПоПодразделениям.ОстаткиИОбороты(, , Регистратор, , ) КАК АнализПоПодразделениямОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	врПоступления.Номенклатура,
+	врПоступления.СтруктурнаяЕдиница,
+	врПоступления.Организация,
+	врПоступления.Регистратор,
+	врПоступления.Период,
+	врПоступления.СуммаОборот,
+	врПоступления.РегистраторСуммаДокумента,
+	ЕСТЬNULL(врОплаты.СуммаОборот, 0) КАК СуммаОплати,
+	ЕСТЬNULL(врОплаты.СуммаВалОборот, 0) КАК СуммаВалОборот,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(врОплаты.СуммаОборот, 0) &lt;&gt; 0
+			ТОГДА ВЫРАЗИТЬ(врОплаты.СуммаОборот * врПоступления.СуммаОборот / врПоступления.РегистраторСуммаДокумента КАК ЧИСЛО(15, 2))
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаОплатиРаспределено,
+	врПоступления.СуммаНДСОборот,
+	врОплаты.ВалютаОплаты,
+	врПоступления.ВалютаПоступления
+ИЗ
+	врПоступления КАК врПоступления
+		ЛЕВОЕ СОЕДИНЕНИЕ врОплаты КАК врОплаты
+		ПО врПоступления.Регистратор = врОплаты.Документ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаОборот</dataPath>
+		<expression>Сумма(СуммаОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОплатиРаспределено</dataPath>
+		<expression>Сумма(СуммаОплатиРаспределено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДСОборот</dataPath>
+		<expression>Сумма(СуммаНДСОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВалютаОплаты</dataPath>
+		<expression>Максимум(ВалютаОплаты)</expression>
+		<group>ВалютаОплаты</group>
+		<group>ВалютаПоступления</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>Организация</group>
+		<group>Период</group>
+		<group>Регистратор</group>
+		<group>РегистраторСуммаДокумента</group>
+		<group>СтруктурнаяЕдиница</group>
+		<group>СтруктурнаяЕдиница Иерархия</group>
+		<group>СуммаВалОборот</group>
+		<group>СуммаНДСОборот</group>
+		<group>СуммаОборот</group>
+		<group>СуммаОплати</group>
+		<group>СуммаОплатиРаспределено</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВалютаПоступления</dataPath>
+		<expression>Максимум(ВалютаПоступления)</expression>
+		<group>ВалютаОплаты</group>
+		<group>ВалютаПоступления</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>Организация</group>
+		<group>Период</group>
+		<group>Регистратор</group>
+		<group>РегистраторСуммаДокумента</group>
+		<group>СтруктурнаяЕдиница</group>
+		<group>СтруктурнаяЕдиница Иерархия</group>
+		<group>СуммаВалОборот</group>
+		<group>СуммаНДСОборот</group>
+		<group>СуммаОборот</group>
+		<group>СуммаОплати</group>
+		<group>СуммаОплатиРаспределено</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Beginning of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>НачалоПериода(&amp;НачалоПериода, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>ВЫБОР КОГДА &amp;КонецПериода = Неопределено ИЛИ &amp;КонецПериода = NULL ИЛИ &amp;КонецПериода = ДатаВремя(1,1,1) ТОГДА ДатаВремя(3999,12,31)  ИНАЧЕ КонецПериода(&amp;КонецПериода, "День") КОНЕЦ</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>დანახარჯების ანალიზი ქვეგანყოფილებების ჭრილში</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>დანახარჯების ანალიზი ქვეგანყოფილებების ჭრილში</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВалютаПоступления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНДСОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВалютаОплаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОплатиРаспределено</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>b23e9963-b5dd-40c3-8371-24afa1bb00fc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>a91761ce-b602-44fc-a3dc-5a9a40d0be23</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтруктурнаяЕдиница</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

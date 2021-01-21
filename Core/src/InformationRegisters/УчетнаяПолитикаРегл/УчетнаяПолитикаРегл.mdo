@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9d403081-3325-4eff-9333-7893c4f8c84b">
+  <producedTypes>
+    <selectionType typeId="03a52ef2-1ca5-4b15-912e-04199f5bcd4c" valueTypeId="778a5c8e-fb11-4463-b82f-7985d2832f8d"/>
+    <listType typeId="885d2394-c749-41ee-83a4-d9950fd9ef01" valueTypeId="3ae4a7ec-0db7-495b-8a84-47514b0e6716"/>
+    <managerType typeId="1a00c1ab-d10c-453c-b55a-1eaa1cf24adf" valueTypeId="be0f4b57-ac1c-4253-977e-6699e93abc99"/>
+    <recordSetType typeId="14bf081c-f2d9-48e8-bdc2-b27450b7013f" valueTypeId="9a2f6fc2-cf1b-43ea-a241-2606cca7e440"/>
+    <recordKeyType typeId="0904335e-3d9c-4d1b-bc4a-69342957e9eb" valueTypeId="d0e26645-3a4f-45fc-8962-55c75b083fdf"/>
+    <recordType typeId="14123120-1b46-4095-8e2b-9636ffaae640" valueTypeId="25491a8e-1f3c-4414-97b0-dd2f3f27ecfc"/>
+    <recordManagerType typeId="e612346e-ece6-4611-b727-a2776956d9f2" valueTypeId="074832c9-9780-4001-a71a-ef3b3304afc7"/>
+  </producedTypes>
+  <name>УчетнаяПолитикаРегл</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учетная политика (бух. учет)</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>აღრიცხვის პოლიტიკა (ბუღალტრული აღრიცხვა)</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Accounting policies (pow. Accounting)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.УчетнаяПолитикаРегл.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.УчетнаяПолитикаРегл.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Year</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="ca863319-0333-4dd7-871d-9fd04004ab14">
+    <name>СчетНезавершенноеПроизводство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Незавершенное производство</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაუმთავრებელი წარმოება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Unfinished production</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ed799fab-e5b1-4324-ad05-5fffc74a788d">
+    <name>СчетПоложительнаяКурсоваяРазницаДеньги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положительная курсовая разница (денежные средства)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დადებითი საკურსო სხვაობა (ფულადი სახსრები)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Foreign exchange gain (cash)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7a95c825-24ff-4e2c-9855-e1935d8e59ee">
+    <name>СчетОтрицательнаяКурсоваяРазницаДеньги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отрицательная курсовая разница (денежные средства)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უარყოფითი საკურსო სხვაობა (ფულადი სახსრები)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Negative exchange differences (cash)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b429a580-bb6a-4390-a6ff-d013dbc30fb0">
+    <name>СчетПоложительнаяКурсоваяРазницаЗадолженность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положительная курсовая разница (задолженность)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დადებითი საკურსო სხვაობა (დავალიანება)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Foreign exchange gain (debt)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c0b88f4d-6753-401f-9b89-f78fc9735a70">
+    <name>СчетОтрицательнаяКурсоваяРазницаЗадолженность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отрицательная курсовая разница (задолженность)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უარყოფითი საკურსო სხვაობა (დავალიანება)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Foreign exchange loss (debt)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="bc33c158-2857-49a7-a51d-e6a2eb258889">
+    <name>РозничныйКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5ee8716a-7c43-42c7-92ce-eafb0b14f48a">
+    <name>ДоговорРозничногоКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ხელშეკრულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Agreement</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.УчетнаяПолитикаРегл.Resource.РозничныйКонтрагент</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9e0a8399-c119-43db-8c39-7a858cc9fb97">
+    <name>СтатьяДДСРозничныхПродаж</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья ДДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფულადი სახსრების მოძრაობის მუხლი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Article DDS</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="829ab3d0-08d2-4b63-a427-9a9c097a2a73">
+    <name>СчетПрочихДоходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет (прочие доходы)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიში (სხვა შემოსავალები)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense (Other income)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fbaa4886-e272-4e23-8527-f03daed193ed">
+    <name>СчетПрочихРасходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет (прочие расходы)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიში (სხვა ხარჯები)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense (other expenses)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e0678b8f-a027-4d84-ac8a-029aab120bf6">
+    <name>СчетПрибыльУбытки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фин. результат (прибыль/убытки)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფინანსური შედეგი (მოგება/ზარალი)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Fin. (profit / loss)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="14c044b0-fa5b-470e-ae7e-bcf7f136bd4c">
+    <name>СчетДеньгиВПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>Деньги в пути</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Деньги в пути</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Money in transit</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c00d1616-a808-40e0-9a3e-0add3bf0e8b4">
+    <name>СчетПоложительнаяКурсоваяРазницаКонвертация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положительная курсовая разница (конвертация)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დადებითი საკურსო სხვაობა (конвертация)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Foreign exchange gain (conversion)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2a77d18d-0f7d-4319-b5e9-5c7c07a6a577">
+    <name>СчетОтрицательнаяКурсоваяРазницаКонвертация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отрицательная курсовая разница (конвертация)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უარყოფითი საკურსო სხვაობა (конвертация)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Foreign exchange loss (conversion)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="48512ffa-52d2-4588-9c3d-2a999e778c96">
+    <name>СчетЗатратБезвозмезднойПродажи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Счет затрат безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>cost reimbursable sales account</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="19ee6aea-6667-41f1-97f6-746d1bfa8bce">
+    <name>СчетЗатратНДСБезвозмезднойПродажи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат НДС безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Счет затрат НДС безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT account free of sales costs</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e13b4e6c-730f-4d3d-bf2d-ee4449d6e45f">
+    <name>СчетУчетаНалогаНаПрибыль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета налога на прибыль</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Счет учета налога на прибыль</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>By taking into account income tax</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="92cf4b69-5c47-4785-99a0-486cc9314d8e">
+    <name>СчетУчетаНалогаНаПрибыльПодлежащийОплате</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета налога на прибыль подлежащий оплате</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Счет учета налога на прибыль подлежащий оплате</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>By taking into account the income tax payable</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="aebfb6e2-3072-4c2b-976c-04b88de632e4">
+    <name>СчетУчетаИмпортРегл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета импорт регл</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>იმპორტის დროს გამოიქვითოს</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>By taking into account the import of Regla</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b2b94b1a-7db8-4891-aa1b-5259328b66ef">
+    <name>СчетУчетаИмпортВозвратРегл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета импорт возврат регл</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Счет учета импорт возврат регл</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>By taking into account the import of the return of Regla</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="76603e07-43be-4a58-938c-20d97e8685ae">
+    <name>СчетТранзитногоСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет транзитного склада</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ტრანზიტული საწყობის ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Score transit warehouse</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f6ac90a2-4c68-4212-85ed-f11748a64712">
+    <name>ВидНадогаДляСчетовНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС для оплаты / зачета (Виды налога)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადასახდელი / ჩასათვლელი დღგ–ს სახეობა (გადასახადის ტიპები)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT to pay / offset (types of taxes)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c6e24c79-3226-4b66-a1aa-0772d494b5dd">
+    <name>СчетЗатратБезвозмезднойПродажиСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უსასყიდლო რეალიზაციის ხარჯის ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Счет затрат безвозмездной продажи</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fece9e84-d8fa-48b7-9671-888c021184ee">
+    <name>СчетЗатратНДСБезвозмезднойПродажиСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат НДС безвозмездной продажи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დღგ-ს უსასყიდლო რეალიზაციის ხარჯის ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT account free of sales costs</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f1022854-5d12-420f-99ff-e130875bd45c">
+    <name>СчетЗатратНДФЛСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უსასყიდლო რეალიზაციის საშემოსავლოს ხარჯი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Счет затрат НДФЛ</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="661adfd0-5318-47ac-9e44-44ac9ff7cfda">
+    <name>СчетЗатратПФСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უსასყიდლო რეალიზაციის საპენსიო ხარჯი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Счет затрат ПФ</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="91297585-960f-4bd1-bded-9efda203e4c7">
+    <name>СчетЗатратВозврат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат возврат</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უკან დაბრუნების შემოსავლის ანგ.</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9ed01e91-66ef-40b4-a846-4303295ab938">
+    <name>СчетУчетаСвободнаяпродажа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет дохода свободная продажа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უსასყიდლო რეალიზაციის შემოსავლის ანგარიში </value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Безвозмездной Продажи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1c423802-af38-4204-8314-249351e2074e">
+    <name>СчетУчетаСвободнаяпродажаСотрудник</name>
+    <synonym>
+      <key>ka</key>
+      <value>Счет учета свободнаяпродажа сотрудник</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Безвозмездной Продажи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2090b52f-80f4-4bb6-bf79-f09f23e8816f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9ae39e23-e921-4df5-ab9e-48359859c422">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bf2b5687-566f-4fd6-aa69-3278c069dd6f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form of the list</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="d69ad28d-46d3-49f9-8ca3-93b29e229600">
+    <name>УчетнаяПолитика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная политика</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>აღრიცხვის პოლიტიკა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>accounting policies</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.Организации</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

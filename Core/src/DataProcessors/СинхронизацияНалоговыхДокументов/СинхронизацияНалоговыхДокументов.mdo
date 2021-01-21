@@ -1,0 +1,2445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf4a7877-8396-454f-b9e0-61407d8446fc">
+  <producedTypes>
+    <objectType typeId="714b1823-fea8-4e53-b04f-893dab896f49" valueTypeId="9d286e7b-d3ae-499d-a296-357eef0038af"/>
+    <managerType typeId="ed95d6f2-025a-42fa-b721-cc6632f6d30e" valueTypeId="3ded97dc-49a1-45cf-9b9c-0277dc800cb9"/>
+  </producedTypes>
+  <name>СинхронизацияНалоговыхДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Синхронизация налоговых документов</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>საგადასახადო დოკუმენტების სინქრონიზაცია</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.СинхронизацияНалоговыхДокументов.Form.Форма</defaultForm>
+  <tabularSections uuid="8e967123-3a24-4436-92ed-193cb204f222">
+    <producedTypes>
+      <objectType typeId="7febefda-c733-40e1-8a42-193f046bacd4" valueTypeId="9ab95f09-e9d3-4045-83e7-fc87b5eaa85f"/>
+      <rowType typeId="abac7d96-67a9-439a-aa6e-45191deea2db" valueTypeId="a8cd99ba-6b23-4ab1-bb0e-1c0c92807fa3"/>
+    </producedTypes>
+    <name>ТоварныеНакладныеНаПортале</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товарные накладные на портале</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სასაქონლო ზედნადებები პორტალზე</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Invoices in the portal</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="9c30db70-9768-4903-9a44-90ca15bac0d0">
+      <name>ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზედნადების ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID Waybill</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6a2f1ac2-7a65-4b15-9aac-f24755fe7d5e">
+      <name>BEGIN_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაწყების თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>the date of the beginning</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="81ec5d27-830e-45e3-b43e-5ad05613c1ae">
+      <name>BUYER_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>Покупатель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მყიდველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Customer</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="17557702-682a-4931-846f-beca7ca81790">
+      <name>BUYER_TIN</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН покупателя</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მყიდველის ს/ნ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>TIN buyer</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="9019b2bd-ff2c-477e-bb29-19c04caf5013">
+      <name>CAR_NUMBER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер автомобиля</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ავტომობილის ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>license plate</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ec23c5bd-9808-4624-9e03-179aef42915b">
+      <name>INV_NUMBER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზედნადების ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Waybill number</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="aabc95ee-e8e7-4bcb-ba83-cb7195ecac49">
+      <name>INV_CATEGORY_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შინაარსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Status</value>
+      </synonym>
+      <type>
+        <types>EnumRef.РС_НазначенияНД</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d1dbda4d-5362-455a-a2a7-9e8e4d37c4cb">
+      <name>INV_TYPE_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ოპერაციის ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Type of</value>
+      </synonym>
+      <type>
+        <types>EnumRef.РС_ТипыНД</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="079376cf-9441-4f5c-bf44-4e3fb065446b">
+      <name>DRIVER_TIN</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН водителя</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მძღოლის ს.კ / პ.ნ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>INN driver</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="e9707a5c-7ff5-4c94-a93b-36164abd58bf">
+      <name>END_ADDRESS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адрес доставки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების დასრულების ადგილი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Delivery Address</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2d478b52-3c90-42ee-bc2b-dacf35ed965e">
+      <name>FULL_AMOUNT</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9228b916-325e-4924-b082-bd64b244988f">
+      <name>IS_CONFIRMED</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подтвержден</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დადასტურებულია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>confirmed</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1a777273-ec77-4aef-8248-771a0b8b2dd0">
+      <name>PAR_ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID ТТН Дистрибуции</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დისტრიბუციის ზედნადების ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID Distribution Waybill</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>11</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ca3d2fd3-d527-45f0-947a-32d784e921f6">
+      <name>RECIEVER_INFO</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получатель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მიმღები</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Получатель</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2fc18009-8de3-489f-9594-dc818aa0c128">
+      <name>RECEPTION_INFO</name>
+      <synonym>
+        <key>ru</key>
+        <value>Информация о получателе</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მყიდველი (მიმღები)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Information about the recipient</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="a3aadbea-04a9-4dc1-b1ce-b68cabb2c652">
+      <name>SELLER_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продавец</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამყიდველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Seller</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="14da2e28-999c-424d-9ac7-a65915ae81ff">
+      <name>SELLER_TIN</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН продавца</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამყიდველის ს/ნ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>INN Seller</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="02f75aff-7a78-47c6-a526-bc0fcf960ee5">
+      <name>START_ADDRESS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адрес отправки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გაგზავნის მისამართი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Shipping address</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="42e5e78f-9318-4534-a313-664f628023fb">
+      <name>STATUS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატუსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Status</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="002509ff-7193-4e8f-ae8b-6da45ef878f5">
+      <name>S_USER_ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код пользователя</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მომხმარებლის კოდი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>user code</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1bb360d0-033a-4a2f-979d-257ceb290ffb">
+      <name>TRANSPORT_COAST</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена транспортировки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების ფასი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The price of transportation</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="15666bb0-7442-4e8a-a779-d172cf3c4e24">
+      <name>TYPE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სასაქონლო ზედნადების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>type Waybill</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="311832f4-2fbd-4c4d-8877-309463070ff8">
+      <name>WAYBILL_COMMENT</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კომენტარი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Комментарий</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="fa3774cc-38da-4e09-8974-e40254325a11">
+      <name>WAYBILL_NUMBER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზედნადების ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Waybill number</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="e638f2ff-d2e3-4ebf-a680-a80a1d9f4ad5">
+      <name>ACTION</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატუსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Status</value>
+      </synonym>
+      <type>
+        <types>EnumRef.РС_СтатусыНД</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="436563b3-980f-4131-bc79-4515e4b942b0">
+      <name>BUYER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Покупатель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მყიდველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Customer</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2c32afa0-5546-4c37-8cb0-d0af5abcbb85">
+      <name>DELETE_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата удаления</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>წაშლის თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3f0d28d0-7bd8-4b73-bca0-63bbf83bbbaa">
+      <name>СтатусТН</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატუსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Status</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СтатусыВыписанныхТТН</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="02679a3d-0438-4af0-b5f4-f060f737830f">
+      <name>CREATE_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата создания</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შექმნის თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>date of creation</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1a18140c-6324-4c96-80cf-c6719ff8e1e6">
+      <name>OPERATION_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაწყების თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>the date of the beginning</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4a8dd092-3e06-4f60-b580-e149fd61d568">
+      <name>ТипыТТН</name>
+      <synonym>
+        <key>ru</key>
+        <value>Типы ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>types Waybill</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="34b004d0-c1e4-46aa-88c4-f401d0fa5227">
+      <name>ACTIVATE_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата активации</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გააქტიურების თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>activation Date</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2f38e923-8d9d-4490-9f8b-eadedde8abde">
+      <name>TRANS_START_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала транзацкии</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანს.დაწყების თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7b02d895-8ff0-4d22-9554-8f3533672503">
+      <name>Поставщик</name>
+      <synonym>
+        <key>ka</key>
+        <value>Поставщик</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3fc9008c-44ab-4131-b419-581cba2ca8c4">
+      <name>Покупатель</name>
+      <synonym>
+        <key>ka</key>
+        <value>Покупатель</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4b2d2872-2167-4491-83e3-55dee2bfc1c8">
+      <name>CONFIRM_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата утверждения</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დადასტურების თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7c8b4973-997c-402c-b5ed-815585b94e84">
+      <name>REFUSE_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата отклонения</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>უარყოფის თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dfb86411-2621-48c1-98b6-31a70bbd2c34">
+      <name>DELIVERY_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата поставки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მოწოდების თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>date of delivery</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="44996f4f-94a0-4653-9bf5-be322f34414e">
+      <name>REQUEST_CANCEL_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата запроса отмены</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გაუქმების მოთხოვნის თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0651efeb-55f6-48c1-96f1-314ce8d0e1b8">
+      <name>AGREE_CANCEL_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата утверждения отмены</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გაუქმების დადასტურების თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0aea5e2a-3736-48e1-8ffe-53d1ab485b07">
+      <name>CORRECT_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата коректировки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კორექტირების თარიღი</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="63efa211-ce57-40fc-a153-8f35195c8d32">
+      <name>QUANTITY</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რაოდენობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fbc2fe43-3e1c-45d6-aac4-1c0b77582af0">
+      <name>AMOUNT_FULL</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f476a0a7-177b-4d8c-adfe-d1d5d171ca01">
+      <name>AMOUNT_EXCISE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма акциза</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>აქციზის თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The amount of excise duty</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="db02ea1f-59f3-48c0-831f-2f141478e7d8">
+      <name>AMOUNT_VAT</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДС</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დღგ-ს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>VAT Amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1e87e2c6-6895-4b08-9af0-8494a844c566">
+      <name>TRANS_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип транспортировки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების ტიპი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="15f8c6fc-1e66-4253-86a1-cfa9ddd46c74">
+      <name>TRANS_COMPANY</name>
+      <synonym>
+        <key>ru</key>
+        <value>Транспортировщик</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გადამზიდავი კომპანია</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="8b7c4455-3a0c-426f-bef2-122acf4979a8">
+      <name>TRANS_DRIVER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Водитель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მძღოლი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Driver</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ed7c693a-5ad3-4f73-82bf-d3c6784d4846">
+      <name>TRANS_CAR_MODEL</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ა/მ მარკა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Model</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="4e8a0280-9d6c-464f-bddd-a985524a1ec3">
+      <name>TRANS_CAR_NO</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер автомобиля</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ავტომობილის ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>license plate</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="8a2f70e0-5382-4591-a46f-b781f958fde4">
+      <name>TRANS_TRAILER_NO</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер прицепа</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მისაბმელის ნომერი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="102462a1-9e58-4418-973a-b05f71b3e447">
+      <name>TRANS_COST</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма транспортировки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების ხარჯი</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8a6f639d-49e9-480c-b6e2-9fc6d49dfd28">
+      <name>TRANS_COST_PAYER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Платит транспортировку</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების ხარჯის გამწევი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="634fce32-1831-45a1-8527-aa2dea348f5e">
+      <name>INV_COMMENT</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заметка</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შენიშვნა</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="df8c1843-2a28-4e8e-bbad-dc7e3549e2de">
+      <name>CLOSE_DATE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата закрытия</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დახურვის თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>closing date</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3074ef01-3b74-46c3-8b26-39b11c216579">
+      <name>TRANS_START_ADDRESS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адрес отпровки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების დაწყების ადგილი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="a3b4dddc-8407-4676-9228-96363a36c6a8">
+      <name>TRANS_END_ADDRESS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адрес доставки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტრანსპორტირების დასრულების ადგილი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Delivery Address</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="10eed9d0-ee9b-44ca-85b6-0585e908567b">
+      <name>Флаг</name>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ალამი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Flag</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="14357df5-469d-43d9-863f-530ca8203cd4">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>77cb1448-7b83-44c4-bbf7-e724077c459b.00000000-0000-0000-0000-000000000000</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="7364944a-dd73-4757-9b28-8ba76cb2d1f0">
+      <name>ЕстьОшибки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Есть ошибки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>არის შეცდომები</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>There are mistakes</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8292353a-159d-4f2a-bd98-97e1b72d6e3e">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Document</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходнаяНакладная</types>
+        <types>DocumentRef.ПеремещениеЗапасов</types>
+        <types>DocumentRef.ПриходнаяНакладная</types>
+        <types>DocumentRef.ЗаказПокупателя</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1a36702c-a4a4-48dc-8e51-5caa93404b2c">
+      <name>Состояние</name>
+      <synonym>
+        <key>ru</key>
+        <value>Состояние</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მდგომარეობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>condition</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="89946629-cd32-41a4-a328-13ccecc94eb4">
+      <name>Полученный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полученный</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მიღებული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>obtained</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b57c8346-401a-42f1-b51b-5c39f873747f">
+      <name>КоличествоДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество документа</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Number of document</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="de6e4c8c-d4e4-423c-a44e-1e01fe0849ff">
+      <name>СуммаДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма документа</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The amount of the document</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4dde0cf9-6624-4ee0-9770-daca125d37c2">
+      <name>СуммаНДСДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДСДокумента</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>sum NDSDokumenta</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fa673b88-fbdc-49b6-9140-18129b496b3b">
+      <name>ЕстьТоварыВДокументе</name>
+      <synonym>
+        <key>ru</key>
+        <value>Есть товары в документе</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>There are products in the document</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="44167553-9df9-4565-bbff-dcdc62f8e42d">
+      <name>ЕстьУслугиВДокументе</name>
+      <synonym>
+        <key>ru</key>
+        <value>Есть услуги в документе</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>There are services in the document</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="38140b00-d739-4cfa-8a57-d003299db6f8">
+      <name>ДокументПревязан</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ превязан</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი მიბმულია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>document prevyazan</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="46ec7490-2497-4654-b32f-afe48cb25723">
+      <name>СтатусСинхронизации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус синхронизации</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სინქრონიზაციის სტატუსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>synchronization status</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="9362fe20-9c9b-4195-a24b-1919ec5769d6">
+      <name>РасшифровкаСтатуса</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расшифровка статуса</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატუსის გაშიფვრა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>deciphering status</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="a3298881-355b-4d08-a02b-a194041ffd2e">
+      <name>parentInvoiceID</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზედნადების ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Waybill number</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6e36432f-f372-4f3e-87e6-947613c4e0da">
+      <name>SELLER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продовец</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამყიდველი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="a711d194-b56b-49c3-905d-e9ebc3eef0b2">
+    <producedTypes>
+      <objectType typeId="5d3bb278-3405-4dcd-8683-3bfc32252a02" valueTypeId="c5cd6fcf-85b2-4682-ac51-769254580287"/>
+      <rowType typeId="c409eb93-fd10-438a-8ceb-c742114bd277" valueTypeId="b3cc8ab2-0e68-4830-ad47-9f6c5a758572"/>
+    </producedTypes>
+    <name>ТоварыНаПортале</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары на портале</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ელ საქონელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Electronical goods</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="650fcd47-cedb-4a98-8cba-94a363bc647a">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование номенклатурной позиции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის პოზიციის დასახელება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Наименование номенклатурной позиции</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5e22ff93-13a3-4c77-9d38-e15d6b033c4f">
+      <name>Упаковка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Упаковка</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სეფუთვა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Packaging</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Упаковка номенклатуры, если есть</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის შეფუთვა, თუ არსებობს</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Packaging Nomenclature, if there</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.СинхронизацияНалоговыхДокументов.TabularSection.ТоварыНаПортале.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b3139f6d-d705-4338-a495-15e6ea6bea70">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица хранения</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შენახვის ერთეული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>storage unit</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>В этой единице измерения ведется учет складских остатков товаров и указывается количество номенклатуры в одной упаковке.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ზომის ამ ერთეულში აღირიცხება საქონლის სასაწყობე ნაშთები და მიეთითება ერთ შეფუთვაში ნომენკლატურის რაოდენობა.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>In this unit of measurement records are kept in-stock balance of goods and indicate the number of nomenclature in a single package.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ПометкаУдаления</name>
+        <value xsi:type="core:BooleanValue"/>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5c73e9f7-6779-4651-8f3a-7db178f4bb54">
+      <name>PRICE</name>
+      <synonym>
+        <key>ka</key>
+        <value>ფასი</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Price</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9f04dc55-fc12-42df-aa23-f86620175474">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Характеристика изделия, для которого запланировано производство.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნაკეთობის მახასიათებელი, რომლისთვისაც დაგეგმილია წარმოება.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Product specification, which is scheduled for production.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Номенклатура</name>
+        <changeMode>DontChange</changeMode>
+        <field>0:9ffcd3d3-7566-4c25-9781-d002bffb7373/0:2f53a311-67a4-4c47-bcad-afef1a170bed</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fb32a463-420e-4ac9-92ff-ca9621c8a1f0">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Предоставляет расходный документ.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>წარადგენს გასავლის დოკუმენტს.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>It provides expense report.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>77cb1448-7b83-44c4-bbf7-e724077c459b.00000000-0000-0000-0000-000000000000</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="b34580b7-a23c-4a03-b123-08b30420973c">
+      <name>Полученный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полученный</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მიღებული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>obtained</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7bd67a1f-6cd8-455c-b279-43cdd06748e9">
+      <name>СуммаНДС</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДС</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დღგ-ს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>VAT Amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5e935ccc-b366-4586-aa7e-8ecbbc987feb">
+      <name>ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b12f5772-f309-4a6c-86a4-f14160b6211f">
+      <name>INVOICE_ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>INVOICE ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>INVOICE ID</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="03e1523f-0c6a-431d-a550-71e2bbbe9585">
+      <name>GOODS_NAME</name>
+      <synonym>
+        <key>ru</key>
+        <value>GOODS NAME</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>GOODS NAME</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="513b9f86-7c4a-42bc-a339-a75403eac555">
+      <name>BARCODE</name>
+      <synonym>
+        <key>ru</key>
+        <value>BARCODE</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>BARCODE</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="d2941ad4-0954-4582-a51e-9360984bc565">
+      <name>WAYBILL_NUMBER</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სასაქონლო ზედნადების ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Номер ТТН</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="d732b874-d51e-482b-aaf4-d33f5540db2c">
+      <name>UNIT_ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>UNIT ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>UNIT ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>UNIT ID</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0c5ed0fb-0c32-43d6-8740-59e6ee24f7a2">
+      <name>UNIT_TXT</name>
+      <synonym>
+        <key>ru</key>
+        <value>UNIT TXT</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>UNIT TXT</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>UNIT TXT</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="f754d251-4e9d-47f0-a5e9-e1f2a8bacf99">
+      <name>QUANTITY</name>
+      <synonym>
+        <key>ru</key>
+        <value>QUANTITY</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>QUANTITY</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма по строке документа.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>თანხა დოკუმენტის სტრიქონის მიხედვით.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The sum of row.</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d116bc59-5cd4-46dc-9c16-59edf2074493">
+      <name>QUANTITY_EXT</name>
+      <synonym>
+        <key>ru</key>
+        <value>QUANTITY EXT</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>QUANTITY EXT</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>QUANTITY EXT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="42149bd6-fd45-4ce8-a82c-2a65a59cd12c">
+      <name>UNIT_PRICE</name>
+      <synonym>
+        <key>ru</key>
+        <value>UNIT PRICE</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>UNIT PRICE</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4bd713f2-235d-468d-aba6-c763156edd20">
+      <name>AMOUNT</name>
+      <synonym>
+        <key>ru</key>
+        <value>AMOUNT</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>AMOUNT</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>AMOUNT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="03bb9c65-fc04-42e2-9c8e-9a70f642f904">
+      <name>VAT_AMOUNT</name>
+      <synonym>
+        <key>ru</key>
+        <value>VAT AMOUNT</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>VAT AMOUNT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ceb39266-dfb3-4f71-908e-db73eb17fc94">
+      <name>EXCISE_AMOUNT</name>
+      <synonym>
+        <key>ru</key>
+        <value>EXCISE AMOUNT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5764ed1d-0199-48ec-9d7e-c4cb94e8ed04">
+      <name>EXCISE_ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>EXCISE ID</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0aeddc88-dea6-4043-abca-1e396e9afba1">
+      <name>VAT_TYPE</name>
+      <synonym>
+        <key>ru</key>
+        <value>VAT TYPE</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>VAT TYPE</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>VAT TYPE</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e9537a8b-e4b3-4cf1-a127-83a4419824ae">
+      <name>EXCISE_UNIT_PRICE</name>
+      <synonym>
+        <key>ru</key>
+        <value>EXCISE UNIT PRICE</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>EXCISE UNIT PRICE</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="61698afa-9eff-4960-b41b-60863269079d">
+    <producedTypes>
+      <objectType typeId="a91345b8-9fda-4f79-bbc6-779ca22c56ec" valueTypeId="d0f71979-77ef-4b69-87e7-072718b0d13b"/>
+      <rowType typeId="e04b5b6f-fa1f-452f-b1d7-883fdce1253d" valueTypeId="df6db2fc-94f0-41d3-8db1-2c4cf71dd24e"/>
+    </producedTypes>
+    <name>СозданныеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Созданные документы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შექმნილი დოკუმენტები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>created documents</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="61a7d108-3268-46f3-9f0a-49fcb2214b34">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Document</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходнаяНакладная</types>
+        <types>DocumentRef.ПеремещениеЗапасов</types>
+        <types>DocumentRef.ПриходнаяНакладная</types>
+        <types>DocumentRef.ЗаказПокупателя</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="5469a642-30b5-4f37-810a-a34a21056ba3">
+    <producedTypes>
+      <objectType typeId="314b5995-5c9c-4239-9a15-d4a46163e27c" valueTypeId="8b346713-7ac8-4024-9b90-cfb092433d84"/>
+      <rowType typeId="9c5debe5-62fe-4a59-b0ed-5729a98f15b7" valueTypeId="86accfd8-dd18-44d6-966f-1d2e42774c88"/>
+    </producedTypes>
+    <name>ШапкаRS</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шапка RS</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>RS-ის ქუდი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>cap RS</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a28c8b29-a3bb-4264-b0bf-a09cc2c19805">
+      <name>ИмяПараметраRS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя параметра RS</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>RS-ის პარამეტრის დასახელება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Parameter Name RS</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>32</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="fb855cc1-8528-42d9-835a-f3ac5f95971a">
+      <name>ЗначениеПараметраRS</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение параметра RS</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>RS-ის პარამეტრის მნიშვნელობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The value of parameter RS</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="61f93bee-3573-44cc-b4f3-a6a39c91c1cd">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფორმა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

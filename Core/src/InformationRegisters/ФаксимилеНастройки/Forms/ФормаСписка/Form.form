@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Состав печатных форм с факсимиле</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>Состав печатных форм с факсимиле</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>The composition of the printing plates with facsimile</value>
+  </title>
+  <items xsi:type="form:Decoration">
+    <name>ДекорацияИнформация</name>
+    <id>23</id>
+    <title>
+      <key>ru</key>
+      <value>Декорация информация</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დეკორაცია ინფორმაცია</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>decoration information</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTipRepresentation>ShowRight</toolTipRepresentation>
+    <extendedTooltip>
+      <name>ДекорацияИнформацияРасширеннаяПодсказка</name>
+      <id>25</id>
+      <title>
+        <key>ru</key>
+        <value>Отмеченные макеты по умолчанию будут формироваться с факсимильной подписью и печатью. Так же признак печати документа с факсимиле регулируется непосредственно в документе, в настройках реквизитов печати.</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Отмеченные макеты по умолчанию будут формироваться с факсимильной подписью и печатью. Так же признак печати документа с факсимиле регулируется непосредственно в документе, в настройках реквизитов печати.</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Marked by default layouts will be formed with the facsimile signature and stamp. Just sign print a document from a facsimile regulated directly in the document, the settings print details.</value>
+      </title>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ДекорацияИнформацияКонтекстноеМеню</name>
+      <id>24</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <autoMaxWidth>true</autoMaxWidth>
+    <maxWidth>40</maxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <extInfo xsi:type="form:PictureDecorationExtInfo">
+      <picture xsi:type="core:PictureRef">
+        <picture>CommonPicture.Информация32</picture>
+      </picture>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Table">
+    <name>ДеревоМакетов</name>
+    <id>1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ДеревоМакетов</segments>
+    </dataPath>
+    <titleLocation>None</titleLocation>
+    <items xsi:type="form:FormField">
+      <name>ДеревоМакетовПодписыватьПоУмолчанию</name>
+      <id>14</id>
+      <title>
+        <key>ru</key>
+        <value>...</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>...</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>...</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ДеревоМакетов.ЗначениеПоУмолчанию</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ДеревоМакетовПодписыватьПоУмолчаниюПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ДеревоМакетовПодписыватьПоУмолчаниюРасширеннаяПодсказка</name>
+        <id>16</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовПодписыватьПоУмолчаниюКонтекстноеМеню</name>
+        <id>15</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ДеревоМакетовПредставлениеДокумента</name>
+      <id>17</id>
+      <title>
+        <key>ru</key>
+        <value>Документ / печатная форма</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Документ / печатная форма</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Document / printing forme</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ДеревоМакетов.ПредставлениеДокумента</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ДеревоМакетовПредставлениеДокументаРасширеннаяПодсказка</name>
+        <id>19</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовПредставлениеДокументаКонтекстноеМеню</name>
+        <id>18</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <readOnly>true</readOnly>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <maxWidth>25</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ДеревоМакетовПредставлениеПФ</name>
+      <id>20</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ДеревоМакетов.ПредставлениеПФ</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ДеревоМакетовПредставлениеПФРасширеннаяПодсказка</name>
+        <id>22</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовПредставлениеПФКонтекстноеМеню</name>
+        <id>21</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <readOnly>true</readOnly>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <maxWidth>25</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ДеревоМакетовОрганизация</name>
+      <id>44</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ДеревоМакетов.Организация</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ДеревоМакетовОрганизацияРасширеннаяПодсказка</name>
+        <id>46</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовОрганизацияКонтекстноеМеню</name>
+        <id>45</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <autoCommandBar>
+      <name>ДеревоМакетовКоманднаяПанель</name>
+      <id>3</id>
+      <horizontalAlign>Left</horizontalAlign>
+    </autoCommandBar>
+    <searchStringAddition>
+      <name>ДеревоМакетовСтрокаПоиска</name>
+      <id>5</id>
+      <extendedTooltip>
+        <name>ДеревоМакетовСтрокаПоискаРасширеннаяПодсказка</name>
+        <id>7</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовСтрокаПоискаКонтекстноеМеню</name>
+        <id>6</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <source>ДеревоМакетов</source>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchStringAddition>
+    <viewStatusAddition>
+      <name>ДеревоМакетовСостояниеПросмотра</name>
+      <id>8</id>
+      <extendedTooltip>
+        <name>ДеревоМакетовСостояниеПросмотраРасширеннаяПодсказка</name>
+        <id>10</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовСостояниеПросмотраКонтекстноеМеню</name>
+        <id>9</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>ViewStatusAddition</type>
+      <source>ДеревоМакетов</source>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </viewStatusAddition>
+    <searchControlAddition>
+      <name>ДеревоМакетовУправлениеПоиском</name>
+      <id>11</id>
+      <extendedTooltip>
+        <name>ДеревоМакетовУправлениеПоискомРасширеннаяПодсказка</name>
+        <id>13</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДеревоМакетовУправлениеПоискомКонтекстноеМеню</name>
+        <id>12</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SearchControlAddition</type>
+      <source>ДеревоМакетов</source>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchControlAddition>
+    <extendedTooltip>
+      <name>ДеревоМакетовРасширеннаяПодсказка</name>
+      <id>4</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ДеревоМакетовКонтекстноеМеню</name>
+      <id>2</id>
+      <items xsi:type="form:Button">
+        <name>ДеревоМакетовКонтекстноеМенюВывестиСписок</name>
+        <id>26</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ДеревоМакетовКонтекстноеМенюВывестиСписокРасширеннаяПодсказка</name>
+          <id>27</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.ДеревоМакетов.StandardCommand.OutputList</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ДеревоМакетовКонтекстноеМенюКопироватьВБуферОбмена</name>
+        <id>28</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ДеревоМакетовКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка</name>
+          <id>29</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Item.ДеревоМакетов.StandardCommand.CopyToClipboard</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ДеревоМакетовКонтекстноеМенюВид</name>
+        <id>30</id>
+        <items xsi:type="form:Button">
+          <name>ДеревоМакетовКонтекстноеМенюИерархическийСписок</name>
+          <id>36</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоМакетовКонтекстноеМенюИерархическийСписокРасширеннаяПодсказка</name>
+            <id>37</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ДеревоМакетов.StandardCommand.HierarchicalList</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ДеревоМакетовКонтекстноеМенюДерево</name>
+          <id>32</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоМакетовКонтекстноеМенюДеревоРасширеннаяПодсказка</name>
+            <id>33</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ДеревоМакетов.StandardCommand.Tree</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ДеревоМакетовКонтекстноеМенюСписок</name>
+          <id>34</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоМакетовКонтекстноеМенюСписокРасширеннаяПодсказка</name>
+            <id>35</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ДеревоМакетов.StandardCommand.List</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Вид</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ტიპი</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>View</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Дерево макетов контекстное меню вид</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>Дерево макетов контекстное меню вид</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Tree layout of the menu shortcut</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ДеревоМакетовКонтекстноеМенюВидРасширеннаяПодсказка</name>
+          <id>31</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Popup</type>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <representation>Auto</representation>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ДеревоМакетовКонтекстноеМенюГруппа1</name>
+        <id>38</id>
+        <items xsi:type="form:Button">
+          <name>ДеревоМакетовКонтекстноеМенюОтметитьВсе</name>
+          <id>42</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоМакетовКонтекстноеМенюОтметитьВсеРасширеннаяПодсказка</name>
+            <id>43</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.УстановитьФлажкиВоВсехСтроках</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ДеревоМакетовКонтекстноеМенюСнятьОтметкуСоВсех</name>
+          <id>40</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДеревоМакетовКонтекстноеМенюСнятьОтметкуСоВсехРасширеннаяПодсказка</name>
+            <id>41</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СнятьФлажкиВоВсехСтроках</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ДеревоМакетовКонтекстноеМенюГруппа1РасширеннаяПодсказка</name>
+          <id>39</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+      </items>
+    </contextMenu>
+    <representation>Tree</representation>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <autoMaxRowsCount>true</autoMaxRowsCount>
+    <header>true</header>
+    <headerHeight>1</headerHeight>
+    <footerHeight>1</footerHeight>
+    <verticalScrollBar>AutoUse</verticalScrollBar>
+    <horizontalLines>true</horizontalLines>
+    <verticalLines>true</verticalLines>
+    <searchOnInput>Auto</searchOnInput>
+    <initialListView>Auto</initialListView>
+    <horizontalStretch>true</horizontalStretch>
+    <verticalStretch>true</verticalStretch>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>ПриЗакрытии</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ДеревоМакетов</name>
+    <title>
+      <key>ru</key>
+      <value>Дерево макетов</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Дерево макетов</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>layouts tree</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ЗначениеПоУмолчанию</name>
+      <title>
+        <key>ru</key>
+        <value>Подписывать факсимиле по-умолчанию</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Подписывать факсимиле по-умолчанию</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Sign default facsimile</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПредставлениеДокумента</name>
+      <title>
+        <key>ru</key>
+        <value>Представление документа</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტის წარმოდგენა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Presentation of the document</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПредставлениеПФ</name>
+      <title>
+        <key>ru</key>
+        <value>Представление печатной формы</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Представление печатной формы</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Presentation of the printing forme</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Документ</name>
+      <title>
+        <key>ru</key>
+        <value>Документ</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Document</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИмяМакетаПФ</name>
+      <title>
+        <key>ru</key>
+        <value>Имя макета ПФ</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>Имя макета ПФ</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>PF Layout Name</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Организация</name>
+      <title>
+        <key>ru</key>
+        <value>Организация</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ორგანიზაცია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Organization</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>CatalogRef.Организации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <formCommands>
+    <name>УстановитьФлажкиВоВсехСтроках</name>
+    <title>
+      <key>ru</key>
+      <value>Установить флажки во всех строках</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Установить флажки во всех строках</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Check the boxes in all rows</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Установить флажки во всех строках</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Установить флажки во всех строках</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Check the boxes in all rows</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CheckAll</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УстановитьФлажкиВоВсехСтроках</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СнятьФлажкиВоВсехСтроках</name>
+    <title>
+      <key>ru</key>
+      <value>Снять флажки во всех строках</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Снять флажки во всех строках</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Uncheck all rows</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Снять флажки во всех строках</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Снять флажки во всех строках</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Uncheck all rows</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.UncheckAll</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СнятьФлажкиВоВсехСтроках</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>Организация</name>
+    <valueType>
+      <types>CatalogRef.Организации</types>
+    </valueType>
+    <keyParameter>true</keyParameter>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

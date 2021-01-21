@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаКатегорииНоменклатуры</name>
+    <id>102</id>
+    <items xsi:type="form:Decoration">
+      <name>ДекорацияЗаголовокКатегории</name>
+      <id>186</id>
+      <title>
+        <key>ru</key>
+        <value>Категории номенклатуры</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ნომენკლატურის კატეგორიები</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>category nomenclature</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ДекорацияЗаголовокКатегорииРасширеннаяПодсказка</name>
+        <id>188</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДекорацияЗаголовокКатегорииКонтекстноеМеню</name>
+        <id>187</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>1</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <verticalStretch>true</verticalStretch>
+      <font xsi:type="core:FontRef">
+        <font>Style.LargeTextFont</font>
+      </font>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Addition">
+      <title>
+        <key>ru</key>
+        <value>Строка поиска список</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ძებნის სტრიქონი სია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Search String list</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>СтрокаПоискаСписок</name>
+      <id>157</id>
+      <extendedTooltip>
+        <name>СтрокаПоискаСписокРасширеннаяПодсказка</name>
+        <id>159</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СтрокаПоискаСписокКонтекстноеМеню</name>
+        <id>158</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <source>Список</source>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСписок</name>
+      <id>235</id>
+      <items xsi:type="form:Table">
+        <name>Список</name>
+        <id>46</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Список</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <excludedCommands>CancelSearch</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>Find</excludedCommands>
+        <excludedCommands>FindByCurrentValue</excludedCommands>
+        <excludedCommands>ShowMultipleSelection</excludedCommands>
+        <items xsi:type="form:FormField">
+          <name>Наименование</name>
+          <id>59</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Список.Description</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НаименованиеРасширеннаяПодсказка</name>
+            <id>61</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НаименованиеКонтекстноеМеню</name>
+            <id>60</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <width>15</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЕдиницаИзмерения</name>
+          <id>137</id>
+          <title>
+            <key>ru</key>
+            <value>Ед. изм.</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>საზომი ერთეული</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Unit of Measurement</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Список.ЕдиницаИзмерения</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЕдиницаИзмеренияРасширеннаяПодсказка</name>
+            <id>139</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЕдиницаИзмеренияКонтекстноеМеню</name>
+            <id>138</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <width>11</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+          </extInfo>
+        </items>
+        <commandBarLocation>None</commandBarLocation>
+        <autoCommandBar>
+          <name>СписокКоманднаяПанель</name>
+          <id>48</id>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>DragCheck</event>
+          <name>СписокПроверкаПеретаскивания</name>
+        </handlers>
+        <handlers>
+          <event>BeforeAddRow</event>
+          <name>СписокПередНачаломДобавления</name>
+        </handlers>
+        <handlers>
+          <event>Drag</event>
+          <name>СписокПеретаскивание</name>
+        </handlers>
+        <handlers>
+          <event>BeforeRowChange</event>
+          <name>СписокПередНачаломИзменения</name>
+        </handlers>
+        <handlers>
+          <event>NewWriteProcessing</event>
+          <name>СписокОбработкаЗаписиНового</name>
+        </handlers>
+        <searchStringAddition>
+          <name>СписокСтрокаПоиска</name>
+          <id>50</id>
+          <extendedTooltip>
+            <name>СписокСтрокаПоискаРасширеннаяПодсказка</name>
+            <id>52</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СписокСтрокаПоискаКонтекстноеМеню</name>
+            <id>51</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>Список</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <name>СписокСостояниеПросмотра</name>
+          <id>53</id>
+          <extendedTooltip>
+            <name>СписокСостояниеПросмотраРасширеннаяПодсказка</name>
+            <id>55</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СписокСостояниеПросмотраКонтекстноеМеню</name>
+            <id>54</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>Список</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <name>СписокУправлениеПоиском</name>
+          <id>56</id>
+          <extendedTooltip>
+            <name>СписокУправлениеПоискомРасширеннаяПодсказка</name>
+            <id>58</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СписокУправлениеПоискомКонтекстноеМеню</name>
+            <id>57</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>Список</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>СписокРасширеннаяПодсказка</name>
+          <id>49</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СписокКонтекстноеМеню</name>
+          <id>47</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <representation>HierarchicalList</representation>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <selectionMode>MultiRow</selectionMode>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <useAlternationRowColor>true</useAlternationRowColor>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <enableStartDrag>true</enableStartDrag>
+        <enableDrag>true</enableDrag>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>Список.DefaultPicture</segments>
+        </rowPictureDataPath>
+        <searchStringLocation>None</searchStringLocation>
+        <viewStatusLocation>None</viewStatusLocation>
+        <searchControlLocation>None</searchControlLocation>
+        <extInfo xsi:type="form:DynamicListTableExtInfo">
+          <autoRefreshPeriod>60</autoRefreshPeriod>
+          <period>
+            <startDate>0001-01-01T00:00:00</startDate>
+            <endDate>0001-01-01T00:00:00</endDate>
+          </period>
+          <topLevelParent xsi:type="core:UndefinedValue"/>
+          <showRoot>true</showRoot>
+          <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаПодсказкаИспользования</name>
+        <id>208</id>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаПодсказкаИспользованияЛеваяКолонка</name>
+          <id>216</id>
+          <items xsi:type="form:Decoration">
+            <name>ДекорацияПодсказкаИспользованияСтрелкаВверх</name>
+            <id>202</id>
+            <title>
+              <key>ru</key>
+              <value>Декорация подсказка использования стрелка вверх</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>დეკორაცია გამოყენების მინიშნება ისარი ზემოთ</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Decoration tip using arrow</value>
+            </title>
+            <visible>true</visible>
+            <enabled>false</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ДекорацияПодсказкаИспользованияСтрелкаВверхРасширеннаяПодсказка</name>
+              <id>204</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДекорацияПодсказкаИспользованияСтрелкаВверхКонтекстноеМеню</name>
+              <id>203</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <verticalStretch>true</verticalStretch>
+            <extInfo xsi:type="form:PictureDecorationExtInfo">
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ПодборКатегорииПодсказка1</picture>
+              </picture>
+              <pictureSize>AutoSize</pictureSize>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Decoration">
+            <name>ДекорацияРазделитель8</name>
+            <id>259</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ДекорацияРазделитель8РасширеннаяПодсказка</name>
+              <id>261</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДекорацияРазделитель8КонтекстноеМеню</name>
+              <id>260</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <verticalStretch>true</verticalStretch>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа подсказка использования левая колонка</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი გამოყენების მინიშნება მარცხენა სვეტი</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Group Tip Using the left column</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа подсказка использования левая колонка</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>ჯგუფი გამოყენების მინიშნება მარცხენა სვეტი</value>
+          </toolTip>
+          <toolTip>
+            <key>en</key>
+            <value>Group Tip Using the left column</value>
+          </toolTip>
+          <horizontalStretch>true</horizontalStretch>
+          <groupVerticalAlign>Top</groupVerticalAlign>
+          <extendedTooltip>
+            <name>ГруппаПодсказкаИспользованияЛеваяКолонкаРасширеннаяПодсказка</name>
+            <id>217</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <horizontalAlign>Right</horizontalAlign>
+            <behavior>Auto</behavior>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияПодсказкаИспользованияТекст</name>
+          <id>199</id>
+          <title>
+            <key>ru</key>
+            <value>Перетащите 
+необходимую категорию 
+из Яндекс.Маркета
+или создайте свою.</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>საჭირო კატეგორია გადაათრიეთ იანდექს.მარკეტიდან ან შექმენით საკუთარი.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияПодсказкаИспользованияТекстРасширеннаяПодсказка</name>
+            <id>201</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияПодсказкаИспользованияТекстКонтекстноеМеню</name>
+            <id>200</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <maxWidth>25</maxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>true</horizontalStretch>
+          <verticalStretch>true</verticalStretch>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.BorderColor</color>
+          </textColor>
+          <font xsi:type="core:FontRef">
+            <font>Style.СтильПоясняющейНадписи</font>
+          </font>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Center</horizontalAlign>
+            <verticalAlign>Center</verticalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаПодсказкаИспользованияПраваяКолонка</name>
+          <id>267</id>
+          <items xsi:type="form:Decoration">
+            <name>ДекорацияПодсказкаИспользованияСтрелкаВправо</name>
+            <id>205</id>
+            <title>
+              <key>ru</key>
+              <value>Декорация подсказка использования стрелка вправо</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>დეკორაცია გამოყენების მინიშნება ისარი მარჯვნივ</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Decoration Tips Use the right arrow</value>
+            </title>
+            <visible>true</visible>
+            <enabled>false</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ДекорацияПодсказкаИспользованияСтрелкаВправоРасширеннаяПодсказка</name>
+              <id>207</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДекорацияПодсказкаИспользованияСтрелкаВправоКонтекстноеМеню</name>
+              <id>206</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <verticalStretch>true</verticalStretch>
+            <extInfo xsi:type="form:PictureDecorationExtInfo">
+              <picture xsi:type="core:PictureRef">
+                <picture>CommonPicture.ПодборКатегорииПодсказка2</picture>
+              </picture>
+              <pictureSize>AutoSize</pictureSize>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа подсказка использования правая колонка</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Группа подсказка использования правая колонка</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>tip group use the right column</value>
+          </title>
+          <horizontalStretch>true</horizontalStretch>
+          <extendedTooltip>
+            <name>ГруппаПодсказкаИспользованияПраваяКолонкаРасширеннаяПодсказка</name>
+            <id>268</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <horizontalAlign>Left</horizontalAlign>
+            <behavior>Auto</behavior>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Подсказка</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>მინიშნება</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>hint</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа подсказка использования</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>ჯგუფი გამოყენების მინიშნება</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Group prompt use</value>
+        </toolTip>
+        <horizontalStretch>true</horizontalStretch>
+        <extendedTooltip>
+          <name>ГруппаПодсказкаИспользованияРасширеннаяПодсказка</name>
+          <id>209</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <horizontalAlign>Center</horizontalAlign>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Список</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>List</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаСписокРасширеннаяПодсказка</name>
+        <id>236</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Категории номенклатуры</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ნომენკლატურის კატეგორიები</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>category nomenclature</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа категории номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Группа категории номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Nomenclature Group category</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаКатегорииНоменклатурыРасширеннаяПодсказка</name>
+      <id>103</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаПереносИзКлассификатора</name>
+    <id>195</id>
+    <items xsi:type="form:Decoration">
+      <name>ДекорацияРазделитель1</name>
+      <id>213</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ДекорацияРазделитель1РасширеннаяПодсказка</name>
+        <id>215</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДекорацияРазделитель1КонтекстноеМеню</name>
+        <id>214</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <verticalStretch>true</verticalStretch>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Decoration">
+      <name>ДекорацияРазделитель2</name>
+      <id>262</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ДекорацияРазделитель2РасширеннаяПодсказка</name>
+        <id>264</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДекорацияРазделитель2КонтекстноеМеню</name>
+        <id>263</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <verticalStretch>true</verticalStretch>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаПеренестиКатегориюИзКлассификатора</name>
+      <id>265</id>
+      <items xsi:type="form:Button">
+        <name>ПеренестиКатегориюИзКлассификатора</name>
+        <id>227</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ПеренестиКатегориюИзКлассификатораРасширеннаяПодсказка</name>
+          <id>228</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Hyperlink</type>
+        <commandName>Form.Command.ПеренестиКатегориюИзКлассификатора</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>2</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <picture xsi:type="core:PictureRef">
+          <picture>CommonPicture.ИзображениеПредыдущее</picture>
+        </picture>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Добавить из Яндекс.Маркета</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>დავამატოთ იანდექს.მარკეტიდან</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Add out of Yandex.Market</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа перенести категорию из классификатора</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Группа перенести категорию из классификатора</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Group transfer category of the classifier</value>
+      </toolTip>
+      <verticalStretch>true</verticalStretch>
+      <extendedTooltip>
+        <name>ГруппаПеренестиКатегориюИзКлассификатораРасширеннаяПодсказка</name>
+        <id>266</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>HorizontalIfPossible</group>
+        <verticalAlign>Center</verticalAlign>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа перенос из классификатора</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჯგუფი კლასიფიკატორიდან გადმოტანა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Group transfer from the classifier</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа перенос из классификатора</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ჯგუფი კლასიფიკატორიდან გადმოტანა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Group transfer from the classifier</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаПереносИзКлассификатораРасширеннаяПодсказка</name>
+      <id>196</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаКлассификатор</name>
+    <id>104</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаКлассификаторЗаголовок</name>
+      <id>176</id>
+      <items xsi:type="form:Decoration">
+        <name>ДекорацияЯндексЛоготип</name>
+        <id>171</id>
+        <title>
+          <key>ru</key>
+          <value>Яндекс</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>იანდექსი</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Yandex</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ДекорацияЯндексЛоготипРасширеннаяПодсказка</name>
+          <id>173</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ДекорацияЯндексЛоготипКонтекстноеМеню</name>
+          <id>172</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <maxWidth>7</maxWidth>
+        <height>1</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <handlers>
+            <event>Click</event>
+            <name>ДекорацияЯндексЛоготипНажатие</name>
+          </handlers>
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.ЯндексЛоготип</picture>
+          </picture>
+          <hyperlink>true</hyperlink>
+          <pictureSize>Proportionally</pictureSize>
+          <borderColor xsi:type="core:ColorRef">
+            <color>Style.BorderColor</color>
+          </borderColor>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>ДекорацияЯндексПодсказка</name>
+        <id>181</id>
+        <title>
+          <key>ru</key>
+          <value>Выбор категорий из Яндекс.Маркета</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>კატეგორიების არჩევა იანდექს.მარკეტიდან</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Selecting categories from of Yandex.Market</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ДекорацияЯндексПодсказкаРасширеннаяПодсказка</name>
+          <id>183</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ДекорацияЯндексПодсказкаКонтекстноеМеню</name>
+          <id>182</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <width>28</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>1</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <textColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </textColor>
+        <font xsi:type="core:FontRef">
+          <font>Style.СтильПоясняющейНадписи</font>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Center</horizontalAlign>
+          <verticalAlign>Center</verticalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Заголовок</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სათაური</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>header</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаКлассификаторЗаголовокРасширеннаяПодсказка</name>
+        <id>177</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Addition">
+      <title>
+        <key>ru</key>
+        <value>Строка поиска</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ძებნის სტრიქონი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Search line</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>СтрокаПоискаКлассификатор</name>
+      <id>106</id>
+      <extendedTooltip>
+        <name>СтрокаПоискаКлассификаторРасширеннаяПодсказка</name>
+        <id>108</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СтрокаПоискаКлассификаторКонтекстноеМеню</name>
+        <id>107</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <source>Классификатор</source>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <horizontalStretch>true</horizontalStretch>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Table">
+      <name>Классификатор</name>
+      <id>80</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Классификатор</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <excludedCommands>CancelSearch</excludedCommands>
+      <excludedCommands>Change</excludedCommands>
+      <excludedCommands>Choose</excludedCommands>
+      <excludedCommands>Copy</excludedCommands>
+      <excludedCommands>CopyToClipboard</excludedCommands>
+      <excludedCommands>Create</excludedCommands>
+      <excludedCommands>CreateFolder</excludedCommands>
+      <excludedCommands>Delete</excludedCommands>
+      <excludedCommands>DynamicListStandardSettings</excludedCommands>
+      <excludedCommands>Find</excludedCommands>
+      <excludedCommands>FindByCurrentValue</excludedCommands>
+      <excludedCommands>ListSettings</excludedCommands>
+      <excludedCommands>LoadDynamicListSettings</excludedCommands>
+      <excludedCommands>MoveItem</excludedCommands>
+      <excludedCommands>OutputList</excludedCommands>
+      <excludedCommands>Refresh</excludedCommands>
+      <excludedCommands>SaveDynamicListSettings</excludedCommands>
+      <excludedCommands>SearchHistory</excludedCommands>
+      <excludedCommands>SetDeletionMark</excludedCommands>
+      <items xsi:type="form:FormField">
+        <name>КлассификаторНаименование</name>
+        <id>93</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Классификатор.Description</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>КлассификаторНаименованиеРасширеннаяПодсказка</name>
+          <id>95</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторНаименованиеКонтекстноеМеню</name>
+          <id>94</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <width>15</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>КлассификаторПуть</name>
+        <id>134</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Классификатор.Путь</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>КлассификаторПутьРасширеннаяПодсказка</name>
+          <id>136</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторПутьКонтекстноеМеню</name>
+          <id>135</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <width>15</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>КлассификаторЭтоГруппа</name>
+        <id>168</id>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Классификатор.IsFolder</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>КлассификаторЭтоГруппаРасширеннаяПодсказка</name>
+          <id>170</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторЭтоГруппаКонтекстноеМеню</name>
+          <id>169</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <commandBarLocation>None</commandBarLocation>
+      <autoCommandBar>
+        <name>КлассификаторКоманднаяПанель</name>
+        <id>82</id>
+        <horizontalAlign>Left</horizontalAlign>
+        <autoFill>true</autoFill>
+      </autoCommandBar>
+      <searchStringAddition>
+        <name>КлассификаторСтрокаПоиска</name>
+        <id>84</id>
+        <extendedTooltip>
+          <name>КлассификаторСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>86</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторСтрокаПоискаКонтекстноеМеню</name>
+          <id>85</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>Классификатор</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>КлассификаторСостояниеПросмотра</name>
+        <id>87</id>
+        <extendedTooltip>
+          <name>КлассификаторСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>89</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторСостояниеПросмотраКонтекстноеМеню</name>
+          <id>88</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>Классификатор</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>КлассификаторУправлениеПоиском</name>
+        <id>90</id>
+        <extendedTooltip>
+          <name>КлассификаторУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>92</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>КлассификаторУправлениеПоискомКонтекстноеМеню</name>
+          <id>91</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>Классификатор</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>КлассификаторРасширеннаяПодсказка</name>
+        <id>83</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>КлассификаторКонтекстноеМеню</name>
+        <id>81</id>
+        <items xsi:type="form:FormGroup">
+          <name>КлассификаторКонтекстноеМенюГруппа1</name>
+          <id>231</id>
+          <items xsi:type="form:Button">
+            <name>КлассификаторКонтекстноеМенюПеренестиКатегориюИзКлассификатора</name>
+            <id>229</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>КлассификаторКонтекстноеМенюПеренестиКатегориюИзКлассификатораРасширеннаяПодсказка</name>
+              <id>230</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ПеренестиКатегориюИзКлассификатора</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КлассификаторКонтекстноеМенюГруппа1РасширеннаяПодсказка</name>
+            <id>232</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+        </items>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <representation>HierarchicalList</representation>
+      <readOnly>true</readOnly>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <rowSelectionMode>Row</rowSelectionMode>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <rowPictureDataPath xsi:type="form:DataPath">
+        <segments>Классификатор.DefaultPicture</segments>
+      </rowPictureDataPath>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.ФонАктивногоВариантаВторой</color>
+      </backColor>
+      <borderColor xsi:type="core:ColorRef">
+        <color>Style.FormBackColor</color>
+      </borderColor>
+      <searchStringLocation>None</searchStringLocation>
+      <viewStatusLocation>None</viewStatusLocation>
+      <searchControlLocation>None</searchControlLocation>
+      <extInfo xsi:type="form:DynamicListTableExtInfo">
+        <autoRefreshPeriod>60</autoRefreshPeriod>
+        <period>
+          <startDate>0001-01-01T00:00:00</startDate>
+          <endDate>0001-01-01T00:00:00</endDate>
+        </period>
+        <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+        <topLevelParent xsi:type="core:UndefinedValue"/>
+        <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Классификатор Яндекс.Маркет</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კლასიფიკატორი იანდეასი. მარკეტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Qualifier of Yandex.Market</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Категории классификатора Яндекс.Маркет</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Категории классификатора Яндекс.Маркет</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Classifier categories of Yandex.Market</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаКлассификаторРасширеннаяПодсказка</name>
+      <id>105</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСоздать</name>
+      <id>128</id>
+      <items xsi:type="form:Button">
+        <name>ФормаСоздать</name>
+        <id>144</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ФормаСоздатьРасширеннаяПодсказка</name>
+          <id>145</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.StandardCommand.Create</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ФормаСоздатьГруппу</name>
+        <id>146</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ФормаСоздатьГруппуРасширеннаяПодсказка</name>
+          <id>147</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.StandardCommand.CreateFolder</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Создать</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>შექმნა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Create</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа создать</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ჯგუფი შექმნა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Group create</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ГруппаСоздатьРасширеннаяПодсказка</name>
+        <id>129</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Popup</type>
+      <extInfo xsi:type="form:PopupGroupExtInfo">
+        <representation>Auto</representation>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаСкопировать</name>
+      <id>233</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСкопироватьРасширеннаяПодсказка</name>
+        <id>234</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Copy</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Список</name>
+    <id>1</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <mainTable>Catalog.КатегорииНоменклатуры</mainTable>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>Классификатор</name>
+    <title>
+      <key>ru</key>
+      <value>Классификатор</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კლასიფიკატორი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>classifier</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	КлассификаторКатегорийНоменклатуры.Ссылка,
+	КлассификаторКатегорийНоменклатуры.ЭтоГруппа,
+	КлассификаторКатегорийНоменклатуры.Родитель,
+	КлассификаторКатегорийНоменклатуры.Наименование,
+	КлассификаторКатегорийНоменклатуры.Родитель.Наименование + ВЫБОР
+		КОГДА КлассификаторКатегорийНоменклатуры.Родитель = ЗНАЧЕНИЕ(Справочник.КлассификаторКатегорийНоменклатуры.ПустаяСсылка)
+				ИЛИ КлассификаторКатегорийНоменклатуры.Родитель.Родитель = ЗНАЧЕНИЕ(Справочник.КлассификаторКатегорийНоменклатуры.ПустаяСсылка)
+			ТОГДА &quot;&quot;
+		ИНАЧЕ &quot;, &quot;
+	КОНЕЦ + ЕСТЬNULL(КлассификаторКатегорийНоменклатуры.Родитель.Родитель.Наименование, &quot;&quot;) КАК Путь
+ИЗ
+	Справочник.КлассификаторКатегорийНоменклатуры КАК КлассификаторКатегорийНоменклатуры</queryText>
+      <mainTable>Catalog.КлассификаторКатегорийНоменклатуры</mainTable>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>РежимВыбора</name>
+    <title>
+      <key>ru</key>
+      <value>Режим выбора</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>არჩევის რეჟიმი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>selection mode</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ЭлементПеретаскивания</name>
+    <title>
+      <key>ru</key>
+      <value>Элемент перетаскивания</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>გადათრევის ელემენტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>dragging element</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>CatalogRef.КлассификаторКатегорийНоменклатуры</types>
+      <types>CatalogRef.КатегорииНоменклатуры</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПодсказкаНаФорме</name>
+    <title>
+      <key>ru</key>
+      <value>Подсказка на форме</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მინიშნება ფორმაზე</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Tip on the form</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ПеренестиКатегориюИзКлассификатора</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить из Яндекс.Маркета</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დავამატოთ იანდექს.მარკეტიდან</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Add out of Yandex.Market</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Перенести категорию из классификатора</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კატეგორიის გადატანა კლასიფიკატორიდან</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Transfer category of the classifier</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.СтрелкаВлевоБольшая</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПеренестиКатегориюИзКлассификатора</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:DynamicListFormExtInfo"/>
+</form:Form>

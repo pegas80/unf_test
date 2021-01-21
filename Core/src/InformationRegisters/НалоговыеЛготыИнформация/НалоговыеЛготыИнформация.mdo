@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="da53d4f6-4cab-47eb-81d7-e16fae9057da">
+  <producedTypes>
+    <selectionType typeId="84e661ab-0465-4bd0-9391-61cc8623a824" valueTypeId="0f24ded8-2ab8-4d99-bb06-ade9e67b5ffe"/>
+    <listType typeId="7577ff54-b028-4d10-b23e-7eec69f18c93" valueTypeId="753d6eb7-30b4-4ac4-95b3-e7eeaf30765b"/>
+    <managerType typeId="d65bad56-0da5-4999-89aa-d5d343e0637e" valueTypeId="26a4a8a5-a77b-4e4a-883a-ab870d11a048"/>
+    <recordSetType typeId="b33708fa-1c7f-47ea-a649-22010764c057" valueTypeId="7a07e99a-24be-4cf4-9603-1bac6cf31556"/>
+    <recordKeyType typeId="be48a9d7-894a-4064-ab87-d66f9736a9cf" valueTypeId="17150e5a-9909-490b-865a-df910c79c1d1"/>
+    <recordType typeId="eb5d1827-ee60-481e-8fa4-5251440b59c6" valueTypeId="569fc2fd-3ddb-45be-b02a-9e38b61f20d3"/>
+    <recordManagerType typeId="64d6218c-70da-4460-a9b8-f146233251df" valueTypeId="414b923c-91a2-43a3-b68e-af0a7af48748"/>
+  </producedTypes>
+  <name>НалоговыеЛготыИнформация</name>
+  <synonym>
+    <key>ru</key>
+    <value>Налоговые лготы информация</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>საგადასახადო შეღავათების დეტალები</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bd6cfa97-5a68-4cc3-a946-a48f62943ac6">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0476f4fc-31be-49ef-a147-369dc6a4da2a">
+    <name>ПроцентПодоходного</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент подоходного</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს პროცენტი</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="03d26a3c-ef57-4223-85e1-0d2507c242d8">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0d1a220c-0df5-4007-8e66-26e18c45c49d">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="371cc634-f25d-43cc-80f5-7ce498f8c806">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d35ee67b-44fc-4cb9-b33b-5fe2a2861f3e">
+  <name>ОбменУправлениеНебольшойФирмойОтчетностьПредпринимателяРегистрацияУдаления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными &quot;Управление нашей фирмой&quot; - &quot;Отчетность предпринимателя&quot;. Перед удалением.</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Обмен данными &quot;Управление нашей фирмой&quot; - &quot;Отчетность предпринимателя&quot;. Перед удалением.</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Communication &quot;Our Firm Management&quot; - &quot;Reporting a businessman.&quot; Before removal.</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.РасходСоСчета</types>
+    <types>DocumentObject.РасходИзКассы</types>
+    <types>CatalogObject.БанковскиеСчета</types>
+    <types>CatalogObject.Банки</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.ВидыКонтактнойИнформации</types>
+    <types>DocumentObject.ПоступлениеНаСчет</types>
+    <types>DocumentObject.ПоступлениеВКассу</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОП.ОбменУправлениеНебольшойФирмойОтчетностьПредпринимателяПередУдалением</handler>
+</mdclass:EventSubscription>

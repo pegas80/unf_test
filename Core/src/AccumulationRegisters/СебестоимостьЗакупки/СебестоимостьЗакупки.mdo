@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="51d29b83-d5d2-4efd-8dee-9432ebd904ea">
+  <producedTypes>
+    <selectionType typeId="29a4ff45-b4b6-4a03-9dd4-436cafc001eb" valueTypeId="41ebf352-5597-49a6-9d47-10a1ab29d37c"/>
+    <listType typeId="c9750ba9-01be-4efd-bb55-509dab12dcdf" valueTypeId="32bf2cef-c07a-42b9-8754-a714612b5409"/>
+    <managerType typeId="85b7a2c1-39d4-41d6-89df-d49bce2c97e4" valueTypeId="a49a5842-b68e-470d-8864-df0eeaf9dd7e"/>
+    <recordSetType typeId="b6ce3e40-1f60-4ca1-a01d-6a76af684f44" valueTypeId="d662d388-3131-49e0-b5c1-078f824d14d2"/>
+    <recordKeyType typeId="b84006bf-683e-47ce-ba29-01dd5eb58391" valueTypeId="8a4473e3-a297-46b9-99fc-6a5692f3d097"/>
+    <recordType typeId="aae0edba-faf5-443f-af5b-b81769dbd666" valueTypeId="edf302ae-52bd-4524-840c-4d8ff9b3222a"/>
+  </producedTypes>
+  <name>СебестоимостьЗакупки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Себестоимость закупки</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>შესყიდვების სრული თვითღირებულება</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>The cost price of purchase</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="451ed5e6-7f13-467c-a7d5-cf690e2e1588">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="bee28846-d392-4bb4-a290-ffb2111e89de">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="d1fb1235-8dec-4771-8ee8-d51e8d44c566">
+    <name>ДокументЗакупки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ закупки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შესყიდვის დოკუმენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Purchasing document</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1365cb0f-6fcb-439c-b1f5-b3dc1fec330c">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნომენკლატურა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Nomenclature</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b66325aa-d86c-4119-8159-dc9439235777">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="741d1019-cca6-4ba0-8fbe-ff4db59fbf30">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სტრუქტურული ერთეული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>structural unit</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6171a11a-2c7d-46af-84ce-95068a4b95a4">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მახასიათებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

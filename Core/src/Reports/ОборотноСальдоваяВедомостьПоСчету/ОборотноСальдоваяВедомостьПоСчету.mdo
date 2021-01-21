@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e58716f-e1e3-45b5-b2e8-3b435dd67504">
+  <producedTypes>
+    <objectType typeId="54a3113a-771a-4b1c-8592-c48e688ea39f" valueTypeId="1e47c6a1-43e3-4f00-9284-61ed499b5d4a"/>
+    <managerType typeId="c6822e34-ab70-4c56-9698-c25076a28a18" valueTypeId="19145263-2ecc-4543-be8c-015b78e3599d"/>
+  </producedTypes>
+  <name>ОборотноСальдоваяВедомостьПоСчету</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оборотно-сальдовая ведомость по счету</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ბრუნვითი უწყისი ანგარიშის მიხედვით</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Trial balance on the account</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОборотноСальдоваяВедомостьПоСчету.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОборотноСальдоваяВедомостьПоСчету.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="89eff1fe-b023-4cf7-b94a-4c6979eb36ac">
+    <name>ВключатьОбособленныеПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Включая обособленные подразделения</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყოფილი განყოფილებების ჩართვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Including separate subdivisions</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c3411a4c-c731-48e1-a099-fc0d8fa29328">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასასრული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>End of period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a161d75c-24fd-4d7c-8dc7-6961b3fa34ac">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასაწყისი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Beginning of period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="22e5bc04-f629-4602-b502-3b8b3bfbd4bc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="03b810f8-047c-4297-9f27-b3eccab62791">
+    <name>Периодичность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდულობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Periodicity</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>Use</quickChoice>
+    <createOnInput>DontUse</createOnInput>
+  </attributes>
+  <attributes uuid="b10d087d-2682-4143-a712-b47bfe19e97d">
+    <name>ПоСубсчетам</name>
+    <synonym>
+      <key>ru</key>
+      <value>По субсчетам</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სუბ-ანგარიშების მიხედვით</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>on sub-accounts</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b89c0e76-f975-4ffd-849d-fc83cee7c1f9">
+    <name>Счет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Score</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="6401f9a1-8f89-4223-a71a-cbb157e1fbfc">
+    <name>ПоказательНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>НУ (данные налогового учета)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>OU (data of tax accounting)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fcc9c8b7-6ced-44a3-a315-5c6ec0757c6d">
+    <name>ПоказательБУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>БУ (данные бухгалтерского учета)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ლარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>BU (accounting data)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f0ef826b-4cb7-4d90-a8d2-806cadcc7c6b">
+    <name>ПоказательВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მაჩვენებელი სავალუტო თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>currency amount</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="78c74eea-2978-440c-a0a2-c6d95fbe48d5">
+    <name>ПоказательВР</name>
+    <synonym>
+      <key>ru</key>
+      <value>ВР (данные по учету временных разниц)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>BP (data to record time differences)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a632b274-4457-45e4-8cc5-649e6b8fcb95">
+    <name>ПоказательПР</name>
+    <synonym>
+      <key>ru</key>
+      <value>ПР (данные по учету постоянных разниц)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>OL (the accounting of permanent differences)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="de247e1a-8ccf-43a3-a598-daf84ff760b9">
+    <name>ПоказательКоличество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობის მაჩვენებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>number</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3b4390b5-d00e-4bb6-9ec2-2534d6228319">
+    <name>ПоказательКонтроль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контроль (БУ - (НУ + ПР + ВР))</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტროლის მაჩვენებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Control (BU - (ou + PR + PL))</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cacc5835-aaa2-4955-aa5b-9747c2f217d1">
+    <name>РазвернутоеСальдо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Развернутое сальдо</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ჩაშლილი ბრუნვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>A detailed balance</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="86448123-d734-47bd-b83b-72a868246483">
+    <name>РазмещениеДополнительныхПолей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размещение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დამატებითი ველების განთავსება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>placement</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:StringValue">
+      <value>0</value>
+    </minValue>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c45fc848-d828-4190-9308-3297e1b37126">
+    <name>РежимРасшифровки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим расшифровки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გაშიფვრის რეჟიმი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>decryption mode</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="8f0bf585-75c7-4c3d-b63c-de5f5712e82c">
+    <producedTypes>
+      <objectType typeId="49ff3f5b-94dd-4a52-be0d-376b3d504c6e" valueTypeId="4b55a58f-5ba0-41d6-a489-84705c350d4c"/>
+      <rowType typeId="6a7f50ae-ac52-42af-aedd-74e7199bece3" valueTypeId="97f6bfbb-874d-453c-b9f2-ec39fbafd73b"/>
+    </producedTypes>
+    <name>Группировка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группировка</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაჯგუფება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>group</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="700ce74a-0200-4d47-881c-6c8c98f81b21">
+      <name>Использование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использование</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამოყენება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Using</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="87b74795-38dd-4c06-9f64-0301f1ed7804">
+      <name>Поле</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поле</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Field</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="0d7febd5-ffa9-4568-a113-3b32a40342b7">
+      <name>Представление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поле</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>წარმოდგენა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Field</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="1c5c3b64-dba2-43cc-8477-ef4bfc6377d0">
+      <name>ТипГруппировки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип группировки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაჯგუფების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>type grouping</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:StringValue">
+        <value>0</value>
+      </minValue>
+      <maxValue xsi:type="core:StringValue">
+        <value>2</value>
+      </maxValue>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="fd662d79-e7ef-41fa-a629-d0ed096e5a03">
+    <producedTypes>
+      <objectType typeId="85ceb515-461e-4e65-86bf-aa51c5276549" valueTypeId="7ad81242-bdfc-4965-8664-db483a46fae7"/>
+      <rowType typeId="f745481b-0bb1-4bfe-b779-882cc4f4be9e" valueTypeId="d7ec5bf4-9eb4-4d5a-b73d-35a74caf0388"/>
+    </producedTypes>
+    <name>ДополнительныеПоля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные поля</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დამატებითი ველები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Additional fields</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="f9850e89-529b-4c94-b740-8db9414203bf">
+      <name>Использование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использование</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამოყენება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Using</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d7e2029a-f355-481c-9e69-0dc9e6679235">
+      <name>Поле</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поле</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Field</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="c75bc86f-6211-4054-bf09-faf81b9984ea">
+      <name>Представление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поле</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>წარმოდგენა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Field</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="fc82dd46-fea7-492d-9110-893b9a9fa52c">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>report Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="e67358f0-3fa8-4db6-afd5-1fc87fbd29e5">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Basic data composition circuit</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="75d90a96-91d7-4c02-949b-0050bb4c7855">
+    <name>СхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Driving data composition</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

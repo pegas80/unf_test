@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1bca40b0-55f0-4e4e-bfbd-2e2680f3eb70">
+  <producedTypes>
+    <objectType typeId="61cf6093-5505-4b44-84c5-9d36ceb003da" valueTypeId="675e00b4-79ad-457f-ba7f-60162a399376"/>
+    <refType typeId="65d131fc-c63a-4418-86a6-c28c1e7010b1" valueTypeId="8fea8e84-2f2e-4161-b8b3-55bf010d142f"/>
+    <selectionType typeId="e33d0326-c780-4a05-8416-8cb9ffaf40f2" valueTypeId="1f89105e-cfbb-4ff6-bca7-6ca7caf74007"/>
+    <listType typeId="8a3aecbe-d948-4ab6-9125-66d969139c5e" valueTypeId="97c901d2-bc74-4413-9884-f7f5df64a087"/>
+    <managerType typeId="e4abd961-e3bd-4d1c-85c3-27b2c1692005" valueTypeId="a76aca47-9ca9-44ab-a712-95db1b6bd297"/>
+  </producedTypes>
+  <name>Конвертация</name>
+  <synonym>
+    <key>ru</key>
+    <value>Конвертация</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>კონვერტაცია</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Conversion</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Конвертация.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Конвертация.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Конвертация.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.Конвертация.Form.ФормаВыбора</defaultChoiceForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecords>InformationRegister.ОтчетПоКурсовымРазницам</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыСПодотчетниками</registerRecords>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
+  <registerRecords>AccumulationRegister.ДенежныеСредства</registerRecords>
+  <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="92665bd6-d220-4e5b-9bbd-03fce8efd861">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Собственная организация, от имени которой оформляется документ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>საკუთარი ორგანიზაცია, რომლის სახელით ფორმდება დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Собственная организация, от имени которой оформляется документ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Организации.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="004d3138-7c06-437c-9498-1019b84a0f95">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ოპერაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Operation</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОперацийКонвертация</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид операции документа: поставщику, покупателю, подотчетнику, налоги или в расходы</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დოკუმენტის ოპერაციის ტიპი: მომწოდებელს, მყიდველს, საქვეანგარიშო პირს, გადასახადები ან ხარჯებში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Type of transaction document: suppliers, buyers, podotchetniku, taxes or expenses</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыОперацийРасходСоСчета.EnumValue.Поставщику</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="49ded990-194d-48aa-8744-a74b2af5bc24">
+    <name>Отправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправитель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Отправитель</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Sender</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Кассы</types>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Банковский счет организации, для которой оформляется расход</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ორგანიზაციის საბანკო ანგარიში, რომლისთვისაც ფორმდება თანხის გაცემა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The bank account of the organization for which the expenditure is made</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.Конвертация.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.БанковскиеСчета.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bce5f251-1f69-4304-bdb0-150364869088">
+    <name>Получатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Получатель</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Recipient</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Кассы</types>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Банковский счет получателя платежа</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გადასახადის მიმღების საბანკო ანგარიში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Bank account payee</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.Конвертация.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.БанковскиеСчета.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3eafb8e7-bbe8-450b-a373-86cc50d91d3a">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კომენტარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный комментарий</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>თავისუფალი კომენტარი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Произвольный комментарий</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="181f262c-5a15-4aec-bdb2-b22a6470e3ca">
+    <name>ВалютаОтправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта отправитель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ვალუტა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Currency sender</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ff5e8119-de5f-4a3f-a2fa-db00442ad006">
+    <name>ВалютаПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта получатель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ვალუტა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Currency recipient</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="165654ac-57bf-45b7-8301-d9e110840f9a">
+    <name>КурсОтправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კურსი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Exchange Rate</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b1555458-2937-4bdd-83e3-2bcd9a3baf82">
+    <name>КурсПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კურსი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Exchange Rate</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a136b9e5-10fb-47c1-a196-e3b7db61a035">
+    <name>КратностьОтправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кратность отправитель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Кратность отправитель</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>multiplicity Poster</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="188894df-ca02-4c4a-97c1-d0ca64440c1e">
+    <name>КратностьПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кратность получатель</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Кратность получатель</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>multiplicity recipient</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="afa90e7a-2c90-4dfa-afc7-cb717fb376ab">
+    <name>СуммаКонвертации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма конвертации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონვერტაციის თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The amount of conversion</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="20186236-7f03-413b-aee3-9cd29145152b">
+    <name>СуммаПолучено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма получено</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მიღებული თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The sum obtained</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="713282ab-e91c-407d-ad2c-0f8864deea5b">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ავტორი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Author</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6f9f9304-a0f0-4b36-bdd5-c0016ee9df54">
+    <name>Статья</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Article</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="19429987-3644-46b9-b22e-09ea5f0b47e0">
+    <name>Подотчетник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8c374a3b-46df-4317-86cd-1e4e4b171d7f">
+    <name>УникальныйКлючВИнтернетБанке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уникальный ключ в интернет банке</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უნიკალური გასაღები ინტერნეტ ბანკში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Unique key in the Internet bank</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1d391d4d-423e-451e-803c-425080348e3e">
+    <name>КроссКурс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кросс курс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Кросс курс</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Cross course</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>5</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="05041b7a-dde6-4798-a58d-9c3742aa9a8d">
+    <name>КоммерческийКурс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коммерческий курс</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>commercial rate</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>5</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="8bcc4703-7b1f-4ad6-b975-95f3ce927149">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form of the document</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="73cf8ef6-dbcf-439a-bea9-6748041b89a7">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form of the list</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0e7e941f-a61b-419a-b975-36447d3ad0ac">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Shape selection</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>
