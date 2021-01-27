@@ -15,7 +15,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="fa8da642-afe1-467d-b297-91e8256e2e60"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="20f495c2-06f2-408c-8e47-820526d98e1e"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="64e053a2-692f-4df1-8c1d-2e1cfce66792"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="6c8752ad-2fb8-4584-9507-c62acac5a387"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="ab6fdac6-b750-433a-822e-ed112220bc7b"/>
   <configurationExtensionCompatibilityMode>8.3.25</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
@@ -92,7 +92,7 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
-  <compatibilityMode>8.3.8</compatibilityMode>
+  <compatibilityMode>8.3.9</compatibilityMode>
   <languages uuid="af1b61ff-d1b9-4053-ad85-8259b6626adc">
     <name>Русский</name>
     <synonym>
@@ -1610,6 +1610,7 @@
   <roles>Role.НастройкаКоличестваЛицензии</roles>
   <roles>Role.АдминистрированиеААГрупп</roles>
   <roles>Role.ГарантияВЗаказНаряде</roles>
+  <roles>Role.AzRyУдаление</roles>
   <commonTemplates>CommonTemplate.Драйвер1СДисплейПокупателя</commonTemplates>
   <commonTemplates>CommonTemplate.Драйвер1СПринтерЧеков</commonTemplates>
   <commonTemplates>CommonTemplate.Драйвер1СРарусФискальныеРегистраторыМебиус</commonTemplates>
@@ -2765,6 +2766,11 @@
   <commonModules>CommonModule.LT_КонвертацияXML_Фаилов_DMS</commonModules>
   <commonModules>CommonModule.ПодключаемоеОборудованиеDATECSФискальныеРегистраторыКлиент</commonModules>
   <commonModules>CommonModule.РозницаHTTP</commonModules>
+  <commonModules>CommonModule.AzRyDEV</commonModules>
+  <commonModules>CommonModule.AzRyУправлениеНебольшойФирмойСервер</commonModules>
+  <commonModules>CommonModule.AzRyРаботаСДокументамыКлиентСервер</commonModules>
+  <commonModules>CommonModule.AzRyРаботаСДокументамыМодульПроведения</commonModules>
+  <commonModules>CommonModule.AzRyFunctions</commonModules>
   <commonAttributes>CommonAttribute.ОбластьДанныхВспомогательныеДанные</commonAttributes>
   <commonAttributes>CommonAttribute.ОбластьДанныхОсновныеДанные</commonAttributes>
   <commonAttributes>CommonAttribute.ЗапретРедактированияДокументов</commonAttributes>
@@ -4174,6 +4180,7 @@
   <constants>Constant.ИспользованиеТаможенногоДокумента</constants>
   <constants>Constant.ВремяДляДокументовПомошникаЗагрузкиИзБанка</constants>
   <constants>Constant.ИспользоватьГарантииВНарядЗаказах</constants>
+  <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <commonForms>CommonForm.АвтоматическийОбменСПодключаемымОборудованиемOffline</commonForms>
   <commonForms>CommonForm.АвтономнаяРабота</commonForms>
   <commonForms>CommonForm.АдресУчастникаОбменаЭД</commonForms>
@@ -4713,6 +4720,14 @@
   <catalogs>Catalog.ПараметрыДляОбменаДаннымиРозницаHTTP</catalogs>
   <catalogs>Catalog.Адреса</catalogs>
   <catalogs>Catalog.ДопустимыеВидыЦен</catalogs>
+  <catalogs>Catalog.AzRyНастройки</catalogs>
+  <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
+  <catalogs>Catalog.AzRytmpНоменклатурныеГруппы</catalogs>
+  <catalogs>Catalog.AzRyСпецификацииПриоритет</catalogs>
+  <catalogs>Catalog.AzRyDivision</catalogs>
+  <catalogs>Catalog.AzRytmpОПТИМУС_АмортизационныеГруппы</catalogs>
+  <catalogs>Catalog.AzRyТегКартинки</catalogs>
+  <catalogs>Catalog.AzRyДеиствие</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.АктПостановкиНаБалансЕГАИС</documents>
@@ -4860,6 +4875,10 @@
   <documents>Document.НачислениеНалоговыхЛгот</documents>
   <documents>Document.ОдноразовыеНачисления</documents>
   <documents>Document.ТаможенноеОформление</documents>
+  <documents>Document.AzRyКонвертацияВалюты</documents>
+  <documents>Document.AzRyДоговор</documents>
+  <documents>Document.AzRyВременноеПередачаЗапасов</documents>
+  <documents>Document.AzRyИнвентаризацияИмущество</documents>
   <documentNumerators>DocumentNumerator.ПерсонифицированныйУчет</documentNumerators>
   <documentJournals>DocumentJournal.ДокументыПланированияДенег</documentJournals>
   <documentJournals>DocumentJournal.ДокументыПланированияРесурсов</documentJournals>
@@ -5303,6 +5322,20 @@
   <enums>Enum.ВидыОперацийСписаниеТопливаЗапасов</enums>
   <enums>Enum.ТипЛгот</enums>
   <enums>Enum.СтатусыКомПредложение</enums>
+  <enums>Enum.AzRyТипыКонвертацияВалюты</enums>
+  <enums>Enum.AzRyТипыПроектов</enums>
+  <enums>Enum.AzRyТипЗаписыАвтоматизацияНачисленийЗарплаты</enums>
+  <enums>Enum.AzRyТипСозданияДокумента</enums>
+  <enums>Enum.AzRyВидыОперацийКонвертацияВалюты</enums>
+  <enums>Enum.AzRyДоговорТипПродажи</enums>
+  <enums>Enum.AzRyДоговорПериодичностьСписаниеЗапасов</enums>
+  <enums>Enum.AzRy_УТ_ПериодичностиРасписанийРассылокОтчетов</enums>
+  <enums>Enum.AzRyRS_GE_ТранспортноеСредство</enums>
+  <enums>Enum.AzRyВидыОперацийВременноеПередачаЗапасов</enums>
+  <enums>Enum.AzRyВидыКатинкиДляПрайсЛиста</enums>
+  <enums>Enum.AzRyВидыОперацийЧекККМ</enums>
+  <enums>Enum.AzRyВидыОперацийИзменениеПараметровВА</enums>
+  <enums>Enum.AzRyTempoObjects</enums>
   <reports>Report.АнализДоступности</reports>
   <reports>Report.АвтоматическиеСкидки</reports>
   <reports>Report.ABCXYZАнализПродаж</reports>
@@ -5687,6 +5720,7 @@
   <dataProcessors>DataProcessor.ОбработкаИзменениеЦен</dataProcessors>
   <dataProcessors>DataProcessor.ПомошникСозданияДокументовПеремещенияЗапасов</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатурыРасширенная</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyТЕСТ_ЧекККМ</dataProcessors>
   <informationRegisters>InformationRegister.УдалитьАдресныйКлассификатор</informationRegisters>
   <informationRegisters>InformationRegister.АктивированныеАгентыРезервногоКопирования</informationRegisters>
   <informationRegisters>InformationRegister.АдресныеОбъекты</informationRegisters>
@@ -6154,6 +6188,7 @@
   <accumulationRegisters>AccumulationRegister.ЗатратыНаОСиТС</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.НалоговыеЛготы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ГарантийноеОбслуживание</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.AzRyВременноеПередачаЗапасов</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.УдалитьВидыДоступа</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.АналитикаДоходовИРасходов</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.КатегорииНовостей</chartsOfCharacteristicTypes>
