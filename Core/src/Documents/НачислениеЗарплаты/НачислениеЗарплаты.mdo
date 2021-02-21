@@ -591,6 +591,87 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="219f80f5-c17f-42ea-b462-9d352a994940">
+    <name>AzRyТипСозданияДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип создания документа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დოკუმენტის დაგენერირების ხერხი</value>
+    </synonym>
+    <type>
+      <types>EnumRef.AzRyТипСозданияДокумента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>1ef90c4b-6a99-43a7-979c-a937afda2027.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e557bfb1-8018-4785-a28d-01a724fcd8ff">
+    <name>AzRyПроекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проекты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) პროექტები</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="804ec932-7b83-4674-9013-15d537ac73ab">
+    <name>AzRyJiraCode</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  Jira code</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  Jira-ს კოდი</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="81f21d52-744a-4ac3-81e0-9f6d74113ff7">
+    <name>AzRyDivision</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Division</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) Division</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AzRyDivision</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="b32f46b1-799c-49b2-95e4-7ac3dea6fdb5">
     <name>ФормаДокумента</name>
     <synonym>
@@ -1689,6 +1770,54 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="a5a994cd-3e52-49f1-83c0-24fc57dd991f">
+      <name>AzRyНоменклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურა</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Направление деятельности, на которое будет отнесена сумма начисления или удержания</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>საქმიანობის მიმართულება, რომელსაც მიეკუთვნება დარიცხვები და დაკავებები</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>СчетЗатрат</name>
+        <field>Document.НачислениеЗарплаты.TabularSection.НачисленияУдержания.Attribute.СчетЗатрат</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6a468f00-40b4-40c2-8ab2-4384b7272085">
+      <name>AzRyDivision</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Division</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) Division</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyDivision</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="b4cab208-c9a7-4a98-8031-1474147b8bf9">
     <producedTypes>
@@ -1847,6 +1976,32 @@
           <scale>2</scale>
         </numberQualifiers>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0f829e70-8b97-4261-a93c-d0fb027bd4f2">
+      <name>AzRyЗаказПокупателя</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Заказ покупателя</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) მყიდველის შეკვეთა</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ЗаказПокупателя</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Заказ покупателя, на который будет отнесена сумма начисления или удержания</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მყიდველის შეკვეთა, რომელსაც მიეკუთვნება დარიცხვები და დაკავებები</value>
+      </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>

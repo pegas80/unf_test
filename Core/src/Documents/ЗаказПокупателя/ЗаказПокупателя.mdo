@@ -4002,6 +4002,111 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="6a90a147-bd0c-497f-9fa9-3ac6a2b30b71">
+    <name>AzRyJiraКлюч</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  jira ключ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  jira ключ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="446641db-004d-4995-a002-b695889d8b56">
+    <name>AzRyПроекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проекты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) პროექტები</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2552dede-3ed1-4e12-b00b-5324c4820a50">
+    <name>AzRyJiraCode</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  Jira code</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  Jira-ს კოდი</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4976ac61-0e0f-4744-875e-ce2c20bb3645">
+    <name>AzRyГарантийныйСрок</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Гарантийный срок</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) საგარანტიო პერიოდი</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fb55e1f9-d620-4f1a-a829-02444070c886">
+    <name>AzRyАванс</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Аванс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) ავანსი იბეგრება დღგ-თი</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="ebb83fc7-27e0-4a96-8ec9-174b79894203">
     <name>ФормаДокумента</name>
     <synonym>
@@ -5296,6 +5401,50 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="250026bb-7828-4f43-9978-d28808e9e782">
+      <name>AzRyШтрихкодыНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Штрихкоды номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის შტრიხკოდი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="51434d23-af3e-496a-8887-137269da4d1d">
+      <name>AzRyПартииНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Партия номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის პარტია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ЗаказПокупателя.TabularSection.Запасы.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="0eb66dc4-bef5-4b4d-a222-14126bcfff79">
     <producedTypes>
@@ -6480,6 +6629,42 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="73df5406-f3b0-4906-bd24-fa08cb231ecb">
+      <name>AzRyНоменклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურა</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="42960c12-24ab-4d9e-963d-f40d96a6db0f">
+      <name>AzRyПартииНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Партии номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის პარტია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="fd72cbc8-d918-4618-b77b-78e39776998a">
     <producedTypes>
@@ -7374,6 +7559,24 @@
         <key>en</key>
         <value>Ключ связи</value>
       </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="43a1f474-536e-4983-a877-df07abd95d96">
+      <name>AzRyНаправленияДеятельности</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Направления деятельности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) საქმიანობის მიმართულება</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.НаправленияДеятельности</types>
+      </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>

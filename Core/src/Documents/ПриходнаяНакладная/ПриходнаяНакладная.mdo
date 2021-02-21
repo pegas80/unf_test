@@ -1952,6 +1952,47 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="c33e8a9c-7097-48d9-a670-4b432dc460fc">
+    <name>AzRyПроекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проекты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) პროექტები</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ae925a06-2805-4ca4-a6a9-0882612a3861">
+    <name>AzRyJiraCode</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  Jira code</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  Jira-ს კოდი</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="ef714f6b-830a-47df-ac2a-9fb935cdd353">
     <name>ФормаДокумента</name>
     <synonym>
@@ -3110,6 +3151,111 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="334b6178-0ebf-4aa9-939e-2914866dba3f">
+      <name>AzRyНаименованияПоставщиков</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Наименования поставщиков</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) მომწოდებლის დასახელება</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyНаименованияПоставщиков</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ПриходнаяНакладная.TabularSection.Запасы.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="159d0806-71d9-4126-9248-464dee8701f0">
+      <name>AzRyШтрихкодыНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Штрихкоды номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის შტრიხკოდი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="53c8f70e-d467-4971-bf70-25c683e7fc7a">
+      <name>AzRyСуммаРасходовВключаяНДС</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Сумма расходов (Включая НДС)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ხარჯების ოდენობა (დღგ-ს ჩათვლით)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Распределенная стоимость расходов на стоимость поступивших запасов (Включая НДС)</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მიღებული მარაგების ღირებულებაზე დანახარჯების გადანაწილებული ღირებულება (დღგ-ს ჩათვლით)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9f320493-ff93-443f-affc-e8b86f0523e3">
+      <name>AzRyСуммаРасходовНДС</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Сумма расходов - только НДС</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ხარჯების ოდენობა (მხოლოდ დღგ)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Распределенная стоимость расходов на стоимость поступивших запасов (Только НДС)</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მიღებული მარაგების ღირებულებაზე დანახარჯების გადანაწილებული ღირებულება (მხოლოდ დღგ)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="d600102f-6949-4281-9f93-14137bf28404">
     <producedTypes>
@@ -3881,6 +4027,45 @@
           <precision>15</precision>
           <scale>2</scale>
         </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a44066ef-c5c8-4bd5-88ec-c3fd9bb50c81">
+      <name>AzRyНаименованияПоставщиков</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Наименования поставщиков</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) მომწოდებლის დასახელება</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyНаименованияПоставщиков</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="80579658-1947-4261-988c-cdcf2f95b0b2">
+      <name>AzRyШтрихкодыНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Штрихкоды номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის შტრიხკოდი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

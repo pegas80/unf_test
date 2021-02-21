@@ -3313,6 +3313,80 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="85e804b7-b374-4ed1-9cab-4c145c118924">
+    <name>AzRyПроекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проекты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) პროექტები</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e3900b4e-2de5-4ea8-be33-7bcbe600f873">
+    <name>AzRyJiraCode</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  Jira code</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  Jira-ს კოდი</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f75cf062-8ddf-4d44-b98d-0800cacc908d">
+    <name>AzRyПроект</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Проект, в рамках которого открывается заказ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პროექტი, რომლის ფარგლებშიც იხსნება შეკვეთა</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Контрагент</name>
+      <field>0:1371d910-ad1b-48fe-ae24-803656eb6c75</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Проекты.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="f2399716-997d-48c1-8d29-70d2ec17d5ff">
     <name>ФормаДокумента</name>
     <synonym>
@@ -4731,6 +4805,50 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a4f6d001-edb2-4fad-adf7-2a38aab0938d">
+      <name>AzRyШтрихкодыНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Штрихкоды номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის შტრიხკოდი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="06bc6aed-ebc9-4032-94f5-bf5a8e1d8cc2">
+      <name>AzRyПартииНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Партия номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის პარტია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.РасходнаяНакладная.TabularSection.Запасы.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <createOnInput>Use</createOnInput>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

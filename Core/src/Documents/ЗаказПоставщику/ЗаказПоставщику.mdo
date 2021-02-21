@@ -1531,6 +1531,85 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="545ea09d-9e59-4526-9f6b-9a999645b098">
+    <name>AzRyПроекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Проекты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) პროექტები</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2145cb77-d8a3-4625-a315-092a04c09cf5">
+    <name>AzRyJiraCode</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy)  Jira code</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy)  Jira-ს კოდი</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="280d35ac-65d8-4af5-823b-c63432d7ccff">
+    <name>AzRyДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Документ основание</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) საფუძველი დოკუმენტი</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="21b1fe9f-b4d4-4527-97d1-a89bb5668bc3">
+    <name>AzRyАванс</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Аванс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) ავანსი იბეგრება დღგ-თი</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="1f79424c-0d2f-4648-9b0b-4959e1ad6eeb">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2133,6 +2212,68 @@
         <name>Отбор.ХарактеристикаПродукции</name>
         <field>Document.ЗаказПоставщику.TabularSection.Запасы.Attribute.Характеристика</field>
       </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1348ad5e-ab26-480b-87e2-6aba6e599387">
+      <name>AzRyНаименованияПоставщиков</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Наименования поставщиков</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) მომწოდებლის დასახელება</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyНаименованияПоставщиков</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ЗаказПоставщику.TabularSection.Запасы.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7572e683-af65-4885-bb1b-3fb0c6db329a">
+      <name>AzRyИнфо</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Инфо</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ინფო</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a58d368f-402d-4bba-9bb7-f2f11d0b3cd6">
+      <name>AzRyШтрихкодыНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Штрихкоды номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის შტრიხკოდი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
