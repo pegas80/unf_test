@@ -23,7 +23,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="76d9e036-ae20-43d2-82e5-820dba705e97"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="7a238a7b-3f12-4b41-9a64-02e14d1176f0"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.9</configurationExtensionCompatibilityMode>
@@ -55,6 +55,8 @@
   <styleItems>StyleItem.ТекстВторостепеннойНадписи</styleItems>
   <styleItems>StyleItem.ВыполненноеЗадание</styleItems>
   <styleItems>StyleItem.ФонУправляющегоПоля</styleItems>
+  <styleItems>StyleItem.ЦветТекстаПравойПанелиОтборов</styleItems>
+  <styleItems>StyleItem.НепринятаяВерсия</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -72,6 +74,8 @@
   <commonPictures>CommonPicture.СохранитьДокументКакШаблон</commonPictures>
   <commonPictures>CommonPicture.ВставкаСтрок</commonPictures>
   <commonPictures>CommonPicture.КопированиеСтрок</commonPictures>
+  <commonPictures>CommonPicture.СброситьФильтр</commonPictures>
+  <commonPictures>CommonPicture.УстановитьФильтр</commonPictures>
   <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьЗаказыВРозничнойТорговле</functionalOptions>
@@ -79,6 +83,7 @@
   <functionalOptions>FunctionalOption.ИспользоватьАвтоматическиеСкидкиНаценки</functionalOptions>
   <functionalOptions>FunctionalOption.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</functionalOptions>
   <functionalOptions>FunctionalOption.УчетГТД</functionalOptions>
+  <functionalOptions>FunctionalOption.РазноситьОплатуОтЭквайрераПоЭквайринговымОперациям</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
@@ -87,6 +92,7 @@
   <commonCommands>CommonCommand.ЗаполнениеОбъекта</commonCommands>
   <commonCommands>CommonCommand.Напомнить</commonCommands>
   <commonCommands>CommonCommand.ДополнительныеСведенияКоманднаяПанель</commonCommands>
+  <commonCommands>CommonCommand.ИсторияИзменений</commonCommands>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьДисконтныеКарты</constants>
@@ -94,6 +100,8 @@
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <constants>Constant.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</constants>
   <constants>Constant.ФункциональнаяОпцияУчетГТД</constants>
+  <constants>Constant.ФункциональнаяОпцияРазноситьОплатуОтЭквайрераПоЭквайринговымОперациям</constants>
+  <constants>Constant.ВалютаУчета</constants>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -135,6 +143,10 @@
   <catalogs>Catalog.КлассификаторАлкогольнойПродукцииЕГАИС</catalogs>
   <catalogs>Catalog.СтраныМира</catalogs>
   <catalogs>Catalog.НомераГТД</catalogs>
+  <catalogs>Catalog.Банки</catalogs>
+  <catalogs>Catalog.БанковскиеСчета</catalogs>
+  <catalogs>Catalog.Кассы</catalogs>
+  <catalogs>Catalog.КодыКазначейства</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -162,6 +174,16 @@
   <documents>Document.AzRyИнвентаризацияИмущество</documents>
   <documents>Document.ЗаказПоставщику</documents>
   <documents>Document.СчетФактураПолученныйГрузия</documents>
+  <documents>Document.РасходСоСчета</documents>
+  <documents>Document.Взаимозачет</documents>
+  <documents>Document.СчетНаОплатуПоставщика</documents>
+  <documents>Document.ДоговорКредитаИЗайма</documents>
+  <documents>Document.ОтчетПереработчика</documents>
+  <documents>Document.ДополнительныеРасходы</documents>
+  <documents>Document.ПеремещениеДСПлан</documents>
+  <documents>Document.РасходДСПлан</documents>
+  <documents>Document.ПлатежнаяВедомость</documents>
+  <documents>Document.СчетНаОплату</documents>
   <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
@@ -198,6 +220,18 @@
   <enums>Enum.AzRyВидыОперацийИзменениеПараметровВА</enums>
   <enums>Enum.AzRyTempoObjects</enums>
   <enums>Enum.ДействияГрупповогоИзмененияСтрок</enums>
+  <enums>Enum.ТипыНалогообложенияНДС</enums>
+  <enums>Enum.ТипыРасчетов</enums>
+  <enums>Enum.ВидыОперацийЗаказПоставщику</enums>
+  <enums>Enum.ВидыОперацийРасходСоСчета</enums>
+  <enums>Enum.ВариантыЗаполненияРасшифровкиПлатежа</enums>
+  <enums>Enum.ВидыОперацийПлатежнаяВедомость</enums>
+  <enums>Enum.ТипыСуммГрафикаКредитовИЗаймов</enums>
+  <enums>Enum.ТипыОтправки</enums>
+  <enums>Enum.ТипыКомиссии</enums>
+  <enums>Enum.ВидыОперацийКонвертация</enums>
+  <enums>Enum.ВидыОбязательногоСтрахованияСотрудников</enums>
+  <enums>Enum.ОперацииПФ</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -215,6 +249,9 @@
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
   <informationRegisters>InformationRegister.МинимальныеОстаткиСклада</informationRegisters>
+  <informationRegisters>InformationRegister.КурсыВалют</informationRegisters>
+  <informationRegisters>InformationRegister.УчетнаяПолитикаРегл</informationRegisters>
+  <informationRegisters>InformationRegister.ОтчетПоКурсовымРазницам</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ДоходыИРасходы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Запасы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗапасыНаСкладах</accumulationRegisters>

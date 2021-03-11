@@ -11,5 +11,56 @@
   </producedTypes>
   <name>Управленческий</name>
   <objectBelonging>Adopted</objectBelonging>
-  <extension xsi:type="mdclassExtension:ChartOfAccountsExtension"/>
+  <extension xsi:type="mdclassExtension:ChartOfAccountsExtension">
+    <codeLength>Checked</codeLength>
+    <descriptionLength>Checked</descriptionLength>
+    <predefined>Extended</predefined>
+    <orderLength>Checked</orderLength>
+  </extension>
+  <codeLength>8</codeLength>
+  <descriptionLength>120</descriptionLength>
+  <predefined>
+    <items id="7ed65262-d2ea-446a-8eec-7baae8c92725">
+      <name>ПрочиеДоходыИРасходы</name>
+      <description>Прочие доходы и расходы</description>
+      <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+        <state>AdoptedCheck</state>
+      </extension>
+      <code>91      </code>
+      <accountType>ActivePassive</accountType>
+      <order> 91     </order>
+      <childItems id="3d5ba957-49ae-4fc1-8390-a2704a68f6b8">
+        <name>ПрочиеРасходы</name>
+        <description>Прочие расходы</description>
+        <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+          <state>AdoptedCheck</state>
+        </extension>
+        <code>91.02   </code>
+        <order> 91.02  </order>
+      </childItems>
+      <childItems id="b61a704c-7120-4a08-bbd4-528143b809ef">
+        <name>ПрочиеДоходы</name>
+        <description>Прочие доходы</description>
+        <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+          <state>AdoptedCheck</state>
+        </extension>
+        <code>91.01   </code>
+        <accountType>Passive</accountType>
+        <order> 91.01  </order>
+      </childItems>
+    </items>
+  </predefined>
+  <orderLength>9</orderLength>
+  <accountingFlags uuid="68705bd8-d421-48e5-b654-8dc12ae4e9b2">
+    <name>Валютный</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </accountingFlags>
 </mdclass:ChartOfAccounts>
