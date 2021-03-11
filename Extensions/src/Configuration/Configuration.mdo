@@ -23,7 +23,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="ca27e9b3-0972-47f9-9673-5aa0e758ba32"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="8f603ae4-965b-4742-b7ee-e991422651f2"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.9</configurationExtensionCompatibilityMode>
@@ -53,14 +53,25 @@
   <subsystems>Subsystem.РасшAzRy_AzRy</subsystems>
   <styleItems>StyleItem.ИтогиФонГруппы</styleItems>
   <styleItems>StyleItem.ТекстВторостепеннойНадписи</styleItems>
+  <styleItems>StyleItem.ВыполненноеЗадание</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
   <commonPictures>CommonPicture.ПодключаемоеОборудованиеЗагрузитьИзТСД</commonPictures>
   <commonPictures>CommonPicture.ЕГАИС_ИсходящийЗапрос</commonPictures>
   <commonPictures>CommonPicture.ЗагрузкаИзФайла</commonPictures>
+  <commonPictures>CommonPicture.ПодключаемоеОборудованиеФискальныйРегистратор16</commonPictures>
+  <commonPictures>CommonPicture.ЗаполнитьПоОснованию</commonPictures>
+  <commonPictures>CommonPicture.СчитатьДисконтнуюКарту</commonPictures>
+  <commonPictures>CommonPicture.КонтактнаяИнформацияТелефон</commonPictures>
+  <commonPictures>CommonPicture.КонтактнаяИнформацияЕмэйл</commonPictures>
+  <commonPictures>CommonPicture.rs</commonPictures>
+  <commonPictures>CommonPicture.ПодключаемоеОборудованиеККТЗакрытиеСмены</commonPictures>
+  <commonPictures>CommonPicture.СостояниеРассылкиОтчетов</commonPictures>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьЗаказыВРозничнойТорговле</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьДисконтныеКарты</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьАвтоматическиеСкидкиНаценки</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
@@ -69,6 +80,8 @@
   <commonCommands>CommonCommand.ЗаполнениеОбъекта</commonCommands>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле</constants>
+  <constants>Constant.ФункциональнаяОпцияИспользоватьДисконтныеКарты</constants>
+  <constants>Constant.ФункциональнаяОпцияИспользоватьАвтоматическиеСкидкиНаценки</constants>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -100,6 +113,8 @@
   <catalogs>Catalog.Патенты</catalogs>
   <catalogs>Catalog.Пользователи</catalogs>
   <catalogs>Catalog.АвтоматическиеСкидки</catalogs>
+  <catalogs>Catalog.ФизическиеЛица</catalogs>
+  <catalogs>Catalog.ВнеоборотныеАктивы</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -118,6 +133,10 @@
   <documents>Document.КорректировкаРегистров</documents>
   <documents>Document.ЗакрытиеМесяца</documents>
   <documents>Document.КорректировкаРеализации</documents>
+  <documents>Document.РС_ЭлектроннаяНакладная</documents>
+  <documents>Document.ПеремещениеВА</documents>
+  <documents>Document.ПеремещениеЗапасов</documents>
+  <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
   <enums>Enum.ИзмеренияПланирования</enums>
@@ -131,6 +150,13 @@
   <enums>Enum.СтатусыИнформированияГИСМ</enums>
   <enums>Enum.СтатусыОтчетаОРозничныхПродажах</enums>
   <enums>Enum.ТипыДенежныхСредств</enums>
+  <enums>Enum.ТипыСтруктурныхЕдиниц</enums>
+  <enums>Enum.ПоложениеРеквизитаНаФорме</enums>
+  <enums>Enum.РС_СтатусыТН</enums>
+  <enums>Enum.РС_ТипыТН</enums>
+  <enums>Enum.РС_ВидыТранспортировки</enums>
+  <enums>Enum.ПлательщикТранспортировкиТН</enums>
+  <enums>Enum.СтатусыЧековККМ</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -141,6 +167,7 @@
   <reports>Report.Продажи</reports>
   <reports>Report.ABCАнализПродаж</reports>
   <reports>Report.Продажи1</reports>
+  <dataProcessors>DataProcessor.МенеджерПодсказок</dataProcessors>
   <informationRegisters>InformationRegister.УправлениеЗапасами</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
