@@ -9,7 +9,15 @@
   </producedTypes>
   <name>БанковскиеСчета</name>
   <objectBelonging>Adopted</objectBelonging>
-  <extension xsi:type="mdclassExtension:CatalogExtension"/>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <owners>Checked</owners>
+    <descriptionLength>Checked</descriptionLength>
+  </extension>
+  <owners>Catalog.Организации</owners>
+  <owners>Catalog.Контрагенты</owners>
+  <owners>Catalog.Сотрудники</owners>
+  <owners>Catalog.КодыКазначейства</owners>
+  <descriptionLength>100</descriptionLength>
   <attributes uuid="6776f1ee-a213-482e-92be-cbfef51d814f">
     <name>СчетУчета</name>
     <objectBelonging>Adopted</objectBelonging>
@@ -22,4 +30,171 @@
       </typeExtension>
     </extension>
   </attributes>
+  <attributes uuid="e4b67e7c-44d8-4de3-a6ff-5041e33720f6">
+    <name>БанкРасчетов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Банки</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="feb0db72-c064-4855-94c7-7c954a002c4e">
+    <name>ДатаОткрытия</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="3e46e471-4d49-49df-bbe3-7ce1ab6fa9db">
+    <name>ВариантУказанияКПП</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ВариантыУказанияКПП</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="fcaae501-0273-443a-8dd2-e2054f5eca8c">
+    <name>ВидСчета</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="11854c37-57ed-4b6d-8011-7d7e37ddfff5">
+    <name>Банк</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Банки</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="0505a7aa-4751-4123-9a11-6692e6e19ed2">
+    <name>НомерСчета</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>34</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="4a064dcc-407d-4312-bf20-b03dc44fc326">
+    <name>ВалютаДенежныхСредств</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Валюты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="c00dcedf-efb3-4fb8-96a0-7645d31774fa">
+    <name>ВариантВыводаМесяца</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ВариантыВыводаМесяцаВДатеДокумента</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="9c434557-cbfd-406f-aeaf-5fc8db992b6a">
+    <name>СуммаБезКопеек</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="55d7744a-23ed-4690-903f-46b28d146d32">
+    <name>ТекстНазначения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers/>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="9fa48957-ba16-4439-839e-7351064de03c">
+    <name>ДатаЗакрытия</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="b0229af3-d98e-4786-a846-103c9406cc5c">
+    <name>НомерИДатаРазрешения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <forms uuid="c8ebed1b-0647-4c77-93ba-690d2a85b03c">
+    <name>ФормаЭлемента</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <form>Extended</form>
+    </extension>
+  </forms>
 </mdclass:Catalog>
