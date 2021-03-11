@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="10f933b6-e089-4591-9b47-c889a0bd8c0e">
+  <producedTypes>
+    <selectionType typeId="d4727bec-bf39-4e87-bec3-b9b63f6b4316" valueTypeId="16d5bbbc-03da-4c9c-856f-46b1a4bf3020"/>
+    <listType typeId="5010302e-f57d-4d5e-ac14-11523254a59a" valueTypeId="8fc344ab-c324-4ff9-95d2-faee5ca9c1e4"/>
+    <managerType typeId="d08636d3-10af-4700-9059-755cb43a7ba7" valueTypeId="5beb344b-7b39-4043-a81d-533a269a72d1"/>
+    <recordSetType typeId="46eb7617-0f30-49a7-a5fb-42642865e42c" valueTypeId="71e88e4f-1896-473a-bc93-45a7f1b50628"/>
+    <recordKeyType typeId="6827ad47-b45b-49db-af83-6558103ae9e5" valueTypeId="d35b845f-da2d-4d9e-bc48-a8a16616dafa"/>
+    <recordType typeId="b255bdec-4580-40aa-af46-b369e55620c8" valueTypeId="9748585b-177b-48ea-95b6-9179fc4048be"/>
+    <recordManagerType typeId="a60e8aa4-233d-4ef3-9604-5573c450bcee" valueTypeId="71290634-8dda-42d2-80fc-678ce8eec4dc"/>
+  </producedTypes>
+  <name>ЦеныНоменклатурыКонтрагентов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <resources uuid="a276d3bb-d175-4b7a-a0e9-74a124958440">
+    <name>Актуальность</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="43b88579-1b16-4897-8750-b34e3bec7a3f">
+    <name>Цена</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="86710f40-07cd-40f8-a6dc-45a88c46a017">
+    <name>ЕдиницаИзмерения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </resources>
+  <dimensions uuid="6c34c6e9-6c20-4eed-a8a8-c47c1527eae7">
+    <name>ВидЦенКонтрагента</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ВидыЦенКонтрагентов</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="5eff85dd-59b4-44c7-b3be-b57b596f39e6">
+    <name>Номенклатура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Номенклатура</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="13561c32-9951-4335-8e30-038ed88c280f">
+    <name>Характеристика</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ХарактеристикиНоменклатуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+</mdclass:InformationRegister>

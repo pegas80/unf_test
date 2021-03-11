@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="bc093fa0-481f-477c-aff7-82c574da4d85">
+  <producedTypes>
+    <selectionType typeId="af86701a-cdc9-4df1-9ea9-a38758eb6cb4" valueTypeId="8a5493d7-bcc4-448f-bfe4-34a0e55c6e45"/>
+    <listType typeId="c825ff65-4b4c-46ee-93d2-2bae578881a5" valueTypeId="62fef422-3d1c-4179-80e1-445aba0a1168"/>
+    <managerType typeId="aca186b8-4529-46be-bcdc-36b66b2bbade" valueTypeId="9e14ff79-b755-467e-8a07-959c1aec15f5"/>
+    <recordSetType typeId="dab82922-eb5c-4937-998d-f75d6b459203" valueTypeId="623f9427-318d-4548-9c52-b6f8f4e59b50"/>
+    <recordKeyType typeId="e224ed52-34ea-4480-9c19-97a205a64667" valueTypeId="ed40b028-ee0c-475c-a513-0b183434cabc"/>
+    <recordType typeId="5c84cbfc-c9c5-4203-a165-57429966509d" valueTypeId="c41d9fe9-af7e-4cb9-bc25-1d4257741b78"/>
+  </producedTypes>
+  <name>ОплатаПлатежнымиКартами</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:AccumulationRegisterExtension">
+    <registerType>Checked</registerType>
+  </extension>
+  <registerType>Turnovers</registerType>
+  <resources uuid="5ea731cf-87b2-449e-bcfa-02fb375eb8dc">
+    <name>Сумма</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="2faf4f47-48f6-452e-b3da-a7a63ebc80ed">
+    <name>СуммаВал</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="37bc6601-4ffe-47f5-9492-44bb7315f4b6">
+    <name>СуммаКомиссииПоДоговору</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="2e8d8de6-3e1e-441e-82c5-8fd2e4d5f68a">
+    <name>СуммаКомиссииПоДоговоруВал</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <dimensions uuid="d8b2d000-c538-4be6-b118-05b5af5b2cee">
+    <name>Организация</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Организации</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="237d24f1-8dc9-4888-9670-3ad289233670">
+    <name>ЭквайринговыйТерминал</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ЭквайринговыеТерминалы</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="24e8964a-be98-4990-9d76-44cfb98b8f96">
+    <name>СтруктурнаяЕдиница</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.СтруктурныеЕдиницы</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="7ba1e40b-7bd8-4946-bf99-cf877203e7ba">
+    <name>Контрагент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Контрагенты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="f47290e7-5b44-4b0f-bb91-c3491d583bfe">
+    <name>ВидПлатежнойКарты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="4cd40601-82d0-42cf-9716-2a900e8d8ae0">
+    <name>НомерПлатежнойКарты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>22</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="c649c83b-7ef4-49e1-a6f8-b3b1ece34c70">
+    <name>Заказ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЗаказПокупателя</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+</mdclass:AccumulationRegister>

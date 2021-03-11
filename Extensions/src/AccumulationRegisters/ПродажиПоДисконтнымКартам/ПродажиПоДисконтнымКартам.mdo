@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="0e919484-6c6d-46a1-8bae-79310c126eb9">
+  <producedTypes>
+    <selectionType typeId="92f69485-717d-47c9-8595-a2bd3fe5ed5f" valueTypeId="8aaacc44-7e55-47ef-993d-9a811726c170"/>
+    <listType typeId="afdc7874-1b3a-4653-ae2e-e815ffe603b6" valueTypeId="17319725-8532-4433-9c5d-3be6a0843af8"/>
+    <managerType typeId="944b9774-e19c-4129-a4e4-f5fc7355ce46" valueTypeId="059a24ab-3353-452e-98fd-3146bd168401"/>
+    <recordSetType typeId="aa707c90-1cae-419f-aded-da4468968574" valueTypeId="e6b6aa7c-7d8c-4dec-afcf-d6b7123c34ed"/>
+    <recordKeyType typeId="4d34e4b5-db6b-4a72-b9ea-68389ef283ec" valueTypeId="c296d7bf-a5f9-438b-b384-30d65eebf098"/>
+    <recordType typeId="4ee46f9c-57f6-4cc6-a37f-42838f24bb87" valueTypeId="437aa486-a4a0-49ef-bcd8-69d6a5926536"/>
+  </producedTypes>
+  <name>ПродажиПоДисконтнымКартам</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:AccumulationRegisterExtension">
+    <registerType>Checked</registerType>
+  </extension>
+  <registerType>Turnovers</registerType>
+  <resources uuid="b535d537-e117-43dd-8d91-7bef59ddccde">
+    <name>Сумма</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <dimensions uuid="1d8b7f81-cb0b-468b-b3f9-570bea34ebc6">
+    <name>ДисконтнаяКарта</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ДисконтныеКарты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="745f4be2-140f-4526-9e5b-038ef77dddbb">
+    <name>ВладелецКарты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Контрагенты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+</mdclass:AccumulationRegister>

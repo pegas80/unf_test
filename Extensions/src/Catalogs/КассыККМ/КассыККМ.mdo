@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="21a96a67-5bc3-4578-bf6e-c52bdfaa63db">
+  <producedTypes>
+    <objectType typeId="6b760eb5-2c61-4a5b-8228-2b318bd767a1" valueTypeId="fe115a71-c4af-42f0-90c5-82a69ad377ad"/>
+    <refType typeId="0535cb70-e6b6-480a-ae92-9580e8c4b3e6" valueTypeId="97daa89b-b818-4e95-8d90-bb6e91c240ed"/>
+    <selectionType typeId="2ab07157-dbd4-488c-b79e-d5e9dfac632a" valueTypeId="845aa8f3-f278-4607-b4fd-e3c5e51a387e"/>
+    <listType typeId="f0b97814-2a2e-4397-a819-e0fe147be341" valueTypeId="adc2bb2e-c1d9-435e-a811-96bbf64d6222"/>
+    <managerType typeId="6b92c9b0-6591-40f7-9b05-4d478b913487" valueTypeId="ff5f0bd3-5e3e-4307-9450-0ec3352de224"/>
+  </producedTypes>
+  <name>КассыККМ</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <owners>Checked</owners>
+    <codeLength>Checked</codeLength>
+    <codeAllowedLength>Checked</codeAllowedLength>
+    <descriptionLength>Checked</descriptionLength>
+    <codeType>Checked</codeType>
+  </extension>
+  <owners>Catalog.Организации</owners>
+  <codeLength>7</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <attributes uuid="603dbfe4-4f2a-46bd-ab7d-15866519312c">
+    <name>ВалютаДенежныхСредств</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Валюты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="e361dc99-f577-4de2-bf4b-de885e61677a">
+    <name>ТипКассы</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ТипыКассККМ</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="f93b9382-a9dd-40cd-af36-1ad0c9d59ce2">
+    <name>СтруктурнаяЕдиница</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.СтруктурныеЕдиницы</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="8ed5cb44-542d-498e-a0c4-a33385499d0c">
+    <name>Подразделение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.СтруктурныеЕдиницы</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="3fe5d9a1-e0ab-4a43-9bee-a24f2396c5c9">
+    <name>ПодключаемоеОборудование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ПодключаемоеОборудование</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="c97d4f0d-ed8b-4e15-935b-3a2446d64ab2">
+    <name>ИспользоватьБезПодключенияОборудования</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="b7772ff8-132b-4cd8-a6b9-d32c03cf3552">
+    <name>СерийныйНомер</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>128</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="65144836-a85e-43f1-b864-ecd1ed31ba9e">
+    <name>AzRyПроект</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Проекты</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <forms uuid="ffb6914f-5a3b-43b4-963e-d41bb22eff0a">
+    <name>ФормаЭлемента</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <form>Extended</form>
+    </extension>
+  </forms>
+</mdclass:Catalog>
