@@ -23,7 +23,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="4e426540-cac2-44f8-8244-ba45bd58ba5b"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="76d9e036-ae20-43d2-82e5-820dba705e97"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.9</configurationExtensionCompatibilityMode>
@@ -54,6 +54,7 @@
   <styleItems>StyleItem.ИтогиФонГруппы</styleItems>
   <styleItems>StyleItem.ТекстВторостепеннойНадписи</styleItems>
   <styleItems>StyleItem.ВыполненноеЗадание</styleItems>
+  <styleItems>StyleItem.ФонУправляющегоПоля</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -68,21 +69,31 @@
   <commonPictures>CommonPicture.rs</commonPictures>
   <commonPictures>CommonPicture.ПодключаемоеОборудованиеККТЗакрытиеСмены</commonPictures>
   <commonPictures>CommonPicture.СостояниеРассылкиОтчетов</commonPictures>
+  <commonPictures>CommonPicture.СохранитьДокументКакШаблон</commonPictures>
+  <commonPictures>CommonPicture.ВставкаСтрок</commonPictures>
+  <commonPictures>CommonPicture.КопированиеСтрок</commonPictures>
+  <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьЗаказыВРозничнойТорговле</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьДисконтныеКарты</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьАвтоматическиеСкидкиНаценки</functionalOptions>
+  <functionalOptions>FunctionalOption.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</functionalOptions>
+  <functionalOptions>FunctionalOption.УчетГТД</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
   <commonCommands>CommonCommand.ОтчетПоДвижениям</commonCommands>
   <commonCommands>CommonCommand.ОтправитьПоЭлектроннойПочте</commonCommands>
   <commonCommands>CommonCommand.ЗаполнениеОбъекта</commonCommands>
+  <commonCommands>CommonCommand.Напомнить</commonCommands>
+  <commonCommands>CommonCommand.ДополнительныеСведенияКоманднаяПанель</commonCommands>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьДисконтныеКарты</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьАвтоматическиеСкидкиНаценки</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
+  <constants>Constant.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</constants>
+  <constants>Constant.ФункциональнаяОпцияУчетГТД</constants>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -117,6 +128,13 @@
   <catalogs>Catalog.ФизическиеЛица</catalogs>
   <catalogs>Catalog.ВнеоборотныеАктивы</catalogs>
   <catalogs>Catalog.AzRyДеиствие</catalogs>
+  <catalogs>Catalog.ВидыНачисленийИУдержаний</catalogs>
+  <catalogs>Catalog.ДоговорыКонтрагентов</catalogs>
+  <catalogs>Catalog.ВидыНалогов</catalogs>
+  <catalogs>Catalog.ТипыНДФЛ</catalogs>
+  <catalogs>Catalog.КлассификаторАлкогольнойПродукцииЕГАИС</catalogs>
+  <catalogs>Catalog.СтраныМира</catalogs>
+  <catalogs>Catalog.НомераГТД</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -142,6 +160,8 @@
   <documents>Document.AzRyКонвертацияВалюты</documents>
   <documents>Document.AzRyДоговор</documents>
   <documents>Document.AzRyИнвентаризацияИмущество</documents>
+  <documents>Document.ЗаказПоставщику</documents>
+  <documents>Document.СчетФактураПолученныйГрузия</documents>
   <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
@@ -177,6 +197,7 @@
   <enums>Enum.AzRyВидыОперацийЧекККМ</enums>
   <enums>Enum.AzRyВидыОперацийИзменениеПараметровВА</enums>
   <enums>Enum.AzRyTempoObjects</enums>
+  <enums>Enum.ДействияГрупповогоИзмененияСтрок</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -188,6 +209,8 @@
   <reports>Report.ABCАнализПродаж</reports>
   <reports>Report.Продажи1</reports>
   <dataProcessors>DataProcessor.МенеджерПодсказок</dataProcessors>
+  <dataProcessors>DataProcessor.НастройкаПрограммы</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyТЕСТ_ЧекККМ</dataProcessors>
   <informationRegisters>InformationRegister.УправлениеЗапасами</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
