@@ -10,4 +10,181 @@
   <name>AzRyНастройкаРЛС</name>
   <objectBelonging>Adopted</objectBelonging>
   <extension xsi:type="mdclassExtension:CatalogExtension"/>
+  <attributes uuid="fceb7f80-56a1-4982-8a1d-1d6ac68075e6">
+    <name>Пользователь</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Пользователи</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="6e37588d-67af-4d9e-8488-1b9271784864">
+    <name>ОграниченияПоОрганизациям</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="11aebcfe-dbab-4d80-9c98-f11da41c2481">
+    <name>ОграниченияПоКонтрагентам</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="5aadd1e5-c3f2-418c-9ae4-e8dac85c91c6">
+    <name>ОграниченияПоПодразделениям</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="c534f541-5574-438b-a078-51b3c5082d6b">
+    <name>ОграниченияПоПроектам</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="071442e4-3d7b-4209-b0a5-607f49503bd5">
+    <name>ОграниченияПоСтруктурныеЕдиницам</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <tabularSections uuid="bdf29c05-8dfc-464b-9df7-fb34c6ee47cd">
+    <producedTypes>
+      <objectType typeId="ff399447-5df5-4a06-87e0-9293e7be26de" valueTypeId="e8f17615-7958-49b2-8a6e-2ca1ebfc621c"/>
+      <rowType typeId="766714ef-3a0c-46bc-ae34-803e5b7c81ac" valueTypeId="f85ab612-aac9-44d2-b20a-f1c28b5f1dea"/>
+    </producedTypes>
+    <name>Организации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="4377736d-ce5a-48b4-9c26-c41de33ca45b">
+      <name>Организация</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Организации</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="43193897-9a64-424e-af91-4c09c5c4dc07">
+    <producedTypes>
+      <objectType typeId="af14c251-077e-425f-b55e-a6cfa745cb75" valueTypeId="23929200-3af7-4e7d-aa10-fd3337f65d12"/>
+      <rowType typeId="c62277cb-2711-4480-9855-fd3e5cb0be3e" valueTypeId="bd10eb58-c948-4821-ad5c-121a59080e10"/>
+    </producedTypes>
+    <name>Контрагенты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="d9c7c043-9a07-4556-8d72-b7d5bea162cc">
+      <name>Контрагент</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Контрагенты</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="21750b1c-50eb-4f1d-bd89-c6c02ff8ddc0">
+    <producedTypes>
+      <objectType typeId="1cf848ea-1892-4128-ba06-fc8574d2142c" valueTypeId="8ba62c4e-3a33-4498-a794-22f1f85271f3"/>
+      <rowType typeId="b2db59c3-d8fc-428f-9978-41122c74ec5a" valueTypeId="ae2ec380-c39e-4e93-9dfe-df66391270d7"/>
+    </producedTypes>
+    <name>Подразделения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="87c91e69-f60e-4521-b9b1-3d104498e000">
+      <name>Подразделение</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.СтруктурныеЕдиницы</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="ce71fad0-c38e-4e1c-8dd9-18b4c9624fa6">
+    <producedTypes>
+      <objectType typeId="2cb60e6f-f163-4647-8bba-3a41b692cc1d" valueTypeId="8dee1085-cdf7-4641-ad01-86ad35f461e3"/>
+      <rowType typeId="bc345230-6338-44ce-9960-25c4253880a9" valueTypeId="1cf19f04-c3c9-4334-bdf9-fef4ab7b4605"/>
+    </producedTypes>
+    <name>Проекты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="78d69af9-20a1-4b2a-bc3c-40fbd76f1f79">
+      <name>Проект</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Проекты</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="f5547e1c-1860-4cb3-8da1-10aa7c0ce4df">
+    <producedTypes>
+      <objectType typeId="acb20b43-4712-4674-8b34-f2503c799160" valueTypeId="f91134ef-2923-4628-86b9-33d2d6175716"/>
+      <rowType typeId="bd902542-be72-437f-92e2-77e949b7915c" valueTypeId="4f30236a-6bac-4ed4-ae65-7ed0b0dbd7a4"/>
+    </producedTypes>
+    <name>СтруктурныеЕдиницы</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension"/>
+    <attributes uuid="57f6e424-93f2-4418-9a04-270152ec8405">
+      <name>СтруктурныеЕдиница</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.СтруктурныеЕдиницы</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+  </tabularSections>
 </mdclass:Catalog>
