@@ -23,7 +23,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="43a0a42b-e3da-45b4-bec5-96a9ac8c489c"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="1debcf61-680b-4559-a117-558a54e54f2f"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.9</configurationExtensionCompatibilityMode>
@@ -57,6 +57,8 @@
   <styleItems>StyleItem.ФонУправляющегоПоля</styleItems>
   <styleItems>StyleItem.ЦветТекстаПравойПанелиОтборов</styleItems>
   <styleItems>StyleItem.НепринятаяВерсия</styleItems>
+  <styleItems>StyleItem.ПоясняющийТекст</styleItems>
+  <styleItems>StyleItem.ЦветШрифтаНаименованияПоля</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -76,6 +78,12 @@
   <commonPictures>CommonPicture.КопированиеСтрок</commonPictures>
   <commonPictures>CommonPicture.СброситьФильтр</commonPictures>
   <commonPictures>CommonPicture.УстановитьФильтр</commonPictures>
+  <commonPictures>CommonPicture.ДлительнаяОперация16</commonPictures>
+  <commonPictures>CommonPicture.ЯндексДоставка</commonPictures>
+  <commonPictures>CommonPicture.GoogleMaps</commonPictures>
+  <commonPictures>CommonPicture.ЯндексКарты</commonPictures>
+  <commonPictures>CommonPicture.ПодчиненныеЭлементы</commonPictures>
+  <commonPictures>CommonPicture.ВниманиеВВидеТреугольника</commonPictures>
   <roles>Role.БазовыеПрава</roles>
   <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
@@ -87,6 +95,8 @@
   <functionalOptions>FunctionalOption.РазноситьОплатуОтЭквайрераПоЭквайринговымОперациям</functionalOptions>
   <functionalOptions>FunctionalOption.ВестиУчетМаркировкиПродукцииВГИСМ</functionalOptions>
   <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+  <functionalOptions>FunctionalOption.НесколькоВариантовКП</functionalOptions>
+  <functionalOptions>FunctionalOption.ПлатежныйКалендарь</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <definedTypes>DefinedType.Объем</definedTypes>
   <definedTypes>DefinedType.Вес</definedTypes>
@@ -109,6 +119,8 @@
   <constants>Constant.ВалютаУчета</constants>
   <constants>Constant.ВестиУчетМаркировкиПродукцииВГИСМ</constants>
   <constants>Constant.ФункциональнаяОпцияРезервированиеЗапасов</constants>
+  <constants>Constant.ИспользоватьНесколькоВариантовКП</constants>
+  <constants>Constant.ФункциональнаяОпцияПлатежныйКалендарь</constants>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -160,6 +172,12 @@
   <catalogs>Catalog.СостоянияЗаказовПоставщикам</catalogs>
   <catalogs>Catalog.СправкиБЕГАИС</catalogs>
   <catalogs>Catalog.ТранспортныеСредства</catalogs>
+  <catalogs>Catalog.ПараметрыРасчетовДоставки</catalogs>
+  <catalogs>Catalog.НастройкиЯндексДоставки</catalogs>
+  <catalogs>Catalog.СлужбыДоставки</catalogs>
+  <catalogs>Catalog.ПунктыВыдачиЗаказа</catalogs>
+  <catalogs>Catalog.ПричиныОтменыЗаказа</catalogs>
+  <catalogs>Catalog.ЗоныТарифыДоставки</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -199,6 +217,8 @@
   <documents>Document.СчетНаОплату</documents>
   <documents>Document.ТТНИсходящаяЕГАИС</documents>
   <documents>Document.СчетФактураОтправленныйГрузия</documents>
+  <documents>Document.РезервированиеЗапасов</documents>
+  <documents>Document.ПеремещениеДС</documents>
   <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
@@ -253,6 +273,10 @@
   <enums>Enum.ВидВлключениеНалоговВЦену</enums>
   <enums>Enum.ВидыЭД</enums>
   <enums>Enum.СтатусыОбработкиТТНИсходящейЕГАИС</enums>
+  <enums>Enum.СпособыДоставки</enums>
+  <enums>Enum.СтатусыЯндексДоставки</enums>
+  <enums>Enum.ТипыСтрокСоставаСпецификации</enums>
+  <enums>Enum.ВариантыУчетаДоставки</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
