@@ -9,16 +9,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Пробег</dataPath>
 			<field>Пробег</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пробег</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>გარბენი</v8:content>
-				</v8:item>
-			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -65,8 +55,8 @@
 			<field>ВнеоборотныйАктив</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>ძირითადი საშუალებები</v8:content>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ძირითადი საშუალება</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -86,15 +76,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подразделение</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>ქვეგანყოფილება</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Subdivision</v8:content>
+					<v8:content>განყოფილება</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -108,12 +90,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Склад</dataPath>
 			<field>Склад</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>Склад</v8:content>
-				</v8:item>
-			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЭтоТС</dataPath>
@@ -155,12 +131,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВнеоборотныйАктивСсылка</dataPath>
 			<field>ВнеоборотныйАктивСсылка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>ძირითადი საშუალებები</v8:content>
-				</v8:item>
-			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -175,8 +145,7 @@
 	ЗатратыНаОСиТСОбороты.Регистратор КАК Регистратор
 ПОМЕСТИТЬ ВременнаяЗатратыНаоситс
 ИЗ
-	//РегистрНакопления.ЗатратыНаОСиТС.Обороты(, , Запись, ВнеоборотныйАктив ССЫЛКА Справочник.ТранспортныеСредства) КАК ЗатратыНаОСиТСОбороты
-	РегистрНакопления.ЗатратыНаОСиТС.Обороты(, , Запись, ) КАК ЗатратыНаОСиТСОбороты
+	РегистрНакопления.ЗатратыНаОСиТС.Обороты(, , Запись, ВнеоборотныйАктив ССЫЛКА Справочник.ТранспортныеСредства) КАК ЗатратыНаОСиТСОбороты
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -253,7 +222,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
 	ВТ_ИтогПробег.Регистратор КАК Регистратор,
-	ЕстьNULL(ВТ_ИтогПробег.Период, ВременнаяЗатратыНаоситс.Период) КАК Период,
+	ВТ_ИтогПробег.Период КАК Период,
 	ВТ_ИтогПробег.ТранспортноеСредство КАК ТранспортноеСредство,
 	ВТ_ИтогПробег.ПробегНачало КАК ПробегНачало,
 	ВТ_ИтогПробег.ПробегОкончание КАК ПробегОкончание,
@@ -262,16 +231,15 @@
 	ВременнаяЗатратыНаоситс.КоличествоРасход КАК КоличествоРасход,
 	ВременнаяЗатратыНаоситс.СуммаРасход КАК СуммаРасход,
 	ВременнаяЗатратыНаоситс.Подразделение КАК Подразделение,
-	ВременнаяЗатратыНаоситс.ВнеоборотныйАктивСсылка КАК ВнеоборотныйАктивСсылка,
-	ВременнаяЗатратыНаоситс.ВнеоборотныйАктивСсылка КАК ВнеоборотныйАктивСсылка1
+	ВременнаяЗатратыНаоситс.ВнеоборотныйАктивСсылка КАК ВнеоборотныйАктивСсылка
 ПОМЕСТИТЬ ВременнаяДанные
 ИЗ
 	ВременнаяЗатратыНаоситс КАК ВременнаяЗатратыНаоситс
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ИтогПробег КАК ВТ_ИтогПробег
-		ПО ВременнаяЗатратыНаоситс.ВнеоборотныйАктивСсылка = ВТ_ИтогПробег.ТранспортноеСредство
-			И ВременнаяЗатратыНаоситс.Организация = ВТ_ИтогПробег.Организация
-			И ВременнаяЗатратыНаоситс.Регистратор = ВТ_ИтогПробег.Регистратор
-			И ВременнаяЗатратыНаоситс.Период = ВТ_ИтогПробег.Период
+		ПО (ВременнаяЗатратыНаоситс.ВнеоборотныйАктивСсылка = ВТ_ИтогПробег.ТранспортноеСредство
+				И ВременнаяЗатратыНаоситс.Организация = ВТ_ИтогПробег.Организация
+				И ВременнаяЗатратыНаоситс.Регистратор = ВТ_ИтогПробег.Регистратор
+				И ВременнаяЗатратыНаоситс.Период = ВТ_ИтогПробег.Период)
 
 ДЛЯ ИЗМЕНЕНИЯ
 ;
@@ -291,7 +259,7 @@
 	ВременнаяДанные.ВнеоборотныйАктивСсылка,
 	ВременнаяДанные.ПробегОкончание - ВременнаяДанные.ПробегНачало КАК Пробег
 ИЗ
-	ВременнаяДанные КАК ВременнаяДанные	</query>
+	ВременнаяДанные КАК ВременнаяДанные</query>
 	</dataSet>
 	<totalField>
 		<dataPath>КоличествоРасход</dataPath>
@@ -348,10 +316,6 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდი</v8:content>
 			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Period</v8:content>
-			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>v8:StandardPeriod</v8:Type>
@@ -373,10 +337,6 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>საწვავის ხარჯი სატრანსპორტო საშუალებების მიხედვით</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Main</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -412,13 +372,6 @@
 					<dcsset:field>СуммаРасход</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">Операция</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийСписаниеТопливаЗапасов.СписаниеТоплива</dcsset:right>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>СтПериод</dcscor:parameter>
@@ -440,7 +393,7 @@
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>ВнеоборотныйАктивСсылка</dcsset:field>
+						<dcsset:field>ТранспортноеСредство</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -533,17 +486,7 @@
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаРасход</dcsset:field>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВнеоборотныйАктивСсылка.Наименование</dcsset:field>
-				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">Операция</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийСписаниеТопливаЗапасов.СписаниеЗапасовНаВнеоборотныеАктивы</dcsset:right>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>СтПериод</dcscor:parameter>
@@ -565,14 +508,6 @@
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>ВнеоборотныйАктивСсылка</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:use>false</dcsset:use>
 						<dcsset:field>ТранспортноеСредство</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>

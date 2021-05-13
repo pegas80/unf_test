@@ -25,7 +25,7 @@
 		ServiceManager = Новый COMОбъект("com.sun.star.ServiceManager");
 	Исключение
 		ЖурналРегистрацииКлиент.ДобавитьСообщениеДляЖурналаРегистрации(СобытиеЖурналаРегистрации(), "Ошибка",
-			НСтр("ka='შეცდომა სერვის მენეჯერთან დაკავშირებისას (com.sun.star.ServiceManager).';ru='Ошибка при связи с сервис менеджером (com.sun.star.ServiceManager).';en='Error in connection with the service manager (com.sun.star.ServiceManager).'")
+			НСтр("ka='შეცდომა სერვის მენეჯერთან დაკავშირებისას (com.sun.star.ServiceManager).';ru='Ошибка при связи с сервис менеджером (com.sun.star.ServiceManager).'")
 			+ Символы.ПС + ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()),,Истина);
 		НеУдалосьСформироватьПечатнуюФорму(ИнформацияОбОшибке());
 	КонецПопытки;
@@ -34,7 +34,7 @@
 		Desktop = ServiceManager.CreateInstance("com.sun.star.frame.Desktop");
 	Исключение
 		ЖурналРегистрацииКлиент.ДобавитьСообщениеДляЖурналаРегистрации(СобытиеЖурналаРегистрации(), "Ошибка",
-			НСтр("ka='შეცდომა სერვის Desktop-ის გაშვებისას (com.sun.star.frame.Desktop).';ru='Ошибка при запуске сервиса Desktop (com.sun.star.frame.Desktop).';en='Error when you start Desktop service (com.sun.star.frame.Desktop).'")
+			НСтр("ka='შეცდომა სერვის Desktop-ის გაშვებისას (com.sun.star.frame.Desktop).';ru='Ошибка при запуске сервиса Desktop (com.sun.star.frame.Desktop).'")
 			+ Символы.ПС + ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()),,Истина);
 		НеУдалосьСформироватьПечатнуюФорму(ИнформацияОбОшибке());
 	КонецПопытки;
@@ -90,7 +90,7 @@
 		ServiceManager = Новый COMОбъект("com.sun.star.ServiceManager");
 	Исключение
 		ЖурналРегистрацииКлиент.ДобавитьСообщениеДляЖурналаРегистрации(СобытиеЖурналаРегистрации(), "Ошибка",
-			НСтр("ka='შეცდომა სერვის მენეჯერთან დაკავშირებისას (com.sun.star.ServiceManager).';ru='Ошибка при связи с сервис менеджером (com.sun.star.ServiceManager).';en='Error in connection with the service manager (com.sun.star.ServiceManager).'")
+			НСтр("ka='შეცდომა სერვის მენეჯერთან დაკავშირებისას (com.sun.star.ServiceManager).';ru='Ошибка при связи с сервис менеджером (com.sun.star.ServiceManager).'")
 			+ Символы.ПС + ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()),,Истина);
 		НеУдалосьСформироватьПечатнуюФорму(ИнформацияОбОшибке());
 	КонецПопытки;
@@ -99,7 +99,7 @@
 		Desktop = ServiceManager.CreateInstance("com.sun.star.frame.Desktop");
 	Исключение
 		ЖурналРегистрацииКлиент.ДобавитьСообщениеДляЖурналаРегистрации(СобытиеЖурналаРегистрации(), "Ошибка",
-			НСтр("ka='შეცდომა სერვის Desktop-ის გაშვებისას (com.sun.star.frame.Desktop).';ru='Ошибка при запуске сервиса Desktop (com.sun.star.frame.Desktop).';en='Error when you start Desktop service (com.sun.star.frame.Desktop).'")
+			НСтр("ka='შეცდომა სერვის Desktop-ის გაშვებისას (com.sun.star.frame.Desktop).';ru='Ошибка при запуске сервиса Desktop (com.sun.star.frame.Desktop).'")
 			+ Символы.ПС + ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()),,Истина);
 		НеУдалосьСформироватьПечатнуюФорму(ИнформацияОбОшибке());
 	КонецПопытки;
@@ -436,7 +436,7 @@
 	xSearchDescr.SearchWords = Истина;
 	xFound = xDocument.findFirst(xSearchDescr);
 	Если xFound = Неопределено Тогда
-		ВызватьИсключение НСтр("ka='მაკეტის მიდამოს დასაწყისი ნაპოვნი არ არის:';ru='Не найдено начало области макета:';en='It found the beginning of the layout area:'") + " " + ИмяОбласти;	
+		ВызватьИсключение НСтр("ka='მაკეტის მიდამოს დასაწყისი ნაპოვნი არ არის:';ru='Не найдено начало области макета:'") + " " + ИмяОбласти;	
 	КонецЕсли;
 	Возврат xFound.End;
 	
@@ -452,7 +452,7 @@
 	xSearchDescr.SearchWords = Истина;
 	xFound = xDocument.findFirst(xSearchDescr);
 	Если xFound = Неопределено Тогда
-		ВызватьИсключение НСтр("ka='მაკეტის მიდამოს ბოლო ნაპოვნი არ არის:';ru='Не найден конец области макета:';en='the end of the layout area is not found:'") + " " + ИмяОбласти;	
+		ВызватьИсключение НСтр("ka='მაკეტის მიდამოს ბოლო ნაპოვნი არ არის:';ru='Не найден конец области макета:'") + " " + ИмяОбласти;	
 	КонецЕсли;
 	Возврат xFound.Start;
 	
@@ -494,12 +494,12 @@
 КонецФункции
 
 Функция СобытиеЖурналаРегистрации()
-	Возврат НСтр("ka='ბეჭდვა';ru='Печать';en='Print'");
+	Возврат НСтр("ka='ბეჭდვა';ru='Печать'");
 КонецФункции
 
 Процедура НеУдалосьСформироватьПечатнуюФорму(ИнформацияОбОшибке)
 #Если ВебКлиент Тогда
-	ТекстУточнения = Символы.ПС + НСтр("ka='ვებით მუშაობისას საჭიროა ბროუზერი Internet Explorer-ი საოპერაციო სისტემა Windows-ის მართვის ქვეშ.';ru='При работе через веб, требуется браузер Internet Explorer под управлением операционной системы Windows.';en='When working through the web, requires Internet Explorer browser under Windows operating system.'");
+	ТекстУточнения = Символы.ПС + НСтр("ka='ვებით მუშაობისას საჭიროა ბროუზერი Internet Explorer-ი საოპერაციო სისტემა Windows-ის მართვის ქვეშ.';ru='При работе через веб, требуется браузер Internet Explorer под управлением операционной системы Windows.'");
 #Иначе		
 	ТекстУточнения = "";	
 #КонецЕсли

@@ -25,10 +25,6 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>თანხა</v8:content>
 				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Сумма</v8:content>
-				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -43,10 +39,6 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>Статья (приход)</v8:content>
 				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Article (Parish)</v8:content>
-				</v8:item>
 			</title>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -55,11 +47,16 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ДенежныеСредства.Организация,
 	ДенежныеСредства.Статья КАК СтатьяПриход,
-	СУММА(ДенежныеСредства.Сумма) КАК СуммаПриход
+	СУММА(ДенежныеСредства.Сумма) КАК СуммаПриход,
+	ДенежныеСредства.Проект
 ИЗ
 	РегистрНакопления.ДенежныеСредства КАК ДенежныеСредства
 ГДЕ
@@ -73,7 +70,8 @@
 
 СГРУППИРОВАТЬ ПО
 	ДенежныеСредства.Организация,
-	ДенежныеСредства.Статья</query>
+	ДенежныеСредства.Статья,
+	ДенежныеСредства.Проект</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных2</name>
@@ -130,12 +128,20 @@
 			<dataPath>СуммаОборот</dataPath>
 			<field>СуммаОборот</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ДенежныеСредстваОстаткиИОбороты.Организация,
 	ДенежныеСредстваОстаткиИОбороты.СуммаНачальныйОстаток,
 	ДенежныеСредстваОстаткиИОбороты.СуммаОборот,
-	ДенежныеСредстваОстаткиИОбороты.СуммаКонечныйОстаток
+	ДенежныеСредстваОстаткиИОбороты.СуммаКонечныйОстаток,
+	ДенежныеСредстваОстаткиИОбороты.Проект
 ИЗ
 	РегистрНакопления.ДенежныеСредства.ОстаткиИОбороты(, , Период, Движения, ) КАК ДенежныеСредстваОстаткиИОбороты</query>
 	</dataSet>
@@ -164,10 +170,6 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>Статья (расход)</v8:content>
 				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Article (expense)</v8:content>
-				</v8:item>
 			</title>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -176,11 +178,16 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ДенежныеСредства.Организация,
 	ДенежныеСредства.Статья КАК СтатьяРасход,
-	СУММА(ДенежныеСредства.Сумма) КАК СуммаРасход
+	СУММА(ДенежныеСредства.Сумма) КАК СуммаРасход,
+	ДенежныеСредства.Проект
 ИЗ
 	РегистрНакопления.ДенежныеСредства КАК ДенежныеСредства
 ГДЕ
@@ -194,7 +201,8 @@
 
 СГРУППИРОВАТЬ ПО
 	ДенежныеСредства.Организация,
-	ДенежныеСредства.Статья</query>
+	ДенежныеСредства.Статья,
+	ДенежныеСредства.Проект</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных2</sourceDataSet>
@@ -245,10 +253,6 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასაწყისი</v8:content>
 			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Beginning of period</v8:content>
-			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -272,10 +276,6 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასასრული</v8:content>
 			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>End of period</v8:content>
-			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -298,10 +298,6 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდი</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Period</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -417,10 +413,6 @@
 							</v8:item>
 							<v8:item>
 								<v8:lang>ka</v8:lang>
-								<v8:content>Движение денежных средств</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
 								<v8:content>Движение денежных средств</v8:content>
 							</v8:item>
 						</dcsat:value>
@@ -748,10 +740,6 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>Денежные средства на начало периода</v8:content>
 							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Cash beginning of period</v8:content>
-							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
@@ -950,10 +938,6 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Поступления денежных средств:</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Cash flows:</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -1191,10 +1175,6 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>Итого поступлений</v8:content>
 							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Total income</v8:content>
-							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
@@ -1393,10 +1373,6 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Выбытия денежных средств:</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Cash outflows:</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -1622,10 +1598,6 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>Итого выбытий</v8:content>
 							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Total disposals</v8:content>
-							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
@@ -1820,10 +1792,6 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Чистый приток / отток</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Net cash inflow / outflow</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -2020,10 +1988,6 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>Денежные средства на конец периода</v8:content>
 							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Cash eop</v8:content>
-							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
@@ -2171,10 +2135,6 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>ფულადი სახსრების მოძრაობა</v8:content>
 			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Flow of funds</v8:content>
-			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:filter>
@@ -2227,10 +2187,6 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>ფულადი სახსრების მოძრაობა</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>money movement</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>

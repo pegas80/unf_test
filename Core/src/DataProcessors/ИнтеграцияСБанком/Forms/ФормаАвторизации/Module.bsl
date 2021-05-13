@@ -36,15 +36,9 @@
 	//
 	//АдресСтраницыАутентификации = "https://cib2-web-dev.bog.ge:8090/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https%3A%2F%2Fcib2-web-dev.bog.ge%3A8090%2FOauth%2FConnect%2FToken.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
 	
-	ID_Пользователя = ПолучитьIDПользователя();
-	ДатаНачалИспользованияНовогоДоступаКБанкуBOG = УправлениеНебольшойФирмойПовтИсп.ПолучитьЗначениеКонстанты("ДатаНачалаИспользованияНовогоДоступаКБанкуBOG");
-	Если НачалоДня(ДатаНачалИспользованияНовогоДоступаКБанкуBOG) <= НачалоДня(ТекущаяДата()) Тогда 
-		//АдресСтраницыАутентификации = "https://account.bog.ge/auth/realms/bog/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https://account.bog.ge/auth/realms/bog/protocol/openid-connect/token&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
-		АдресСтраницыАутентификации = "https://account.bog.ge/auth/realms/bog/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=token&scope=corp&redirect_uri=https://account.bog.ge/auth/realms/bog/protocol/openid-connect/token&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
-	Иначе
-		АдресСтраницыАутентификации = "https://businessonline.ge/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https://businessonline.ge/Oauth/Connect/Token.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
-	КонецЕсли;
-	
+	ID_Пользователя = "4b59427a-4d5c-4d62-9ecf-a7a0d02bd5fb";
+	АдресСтраницыАутентификации = "https://businessonline.ge/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https://businessonline.ge/Oauth/Connect/Token.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
+		
 КонецПроцедуры
 
 &НаСервере
