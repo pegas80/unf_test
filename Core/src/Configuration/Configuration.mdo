@@ -15,7 +15,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="fa8da642-afe1-467d-b297-91e8256e2e60"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="20f495c2-06f2-408c-8e47-820526d98e1e"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="64e053a2-692f-4df1-8c1d-2e1cfce66792"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="5f771da7-03ef-4dca-a807-463e99b50c78"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="8e85c169-6b5f-4a3b-8490-39e3a36c3424"/>
   <configurationExtensionCompatibilityMode>8.3.25</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
@@ -124,6 +124,18 @@
       <value>Georgian</value>
     </synonym>
     <languageCode>ka</languageCode>
+  </languages>
+  <languages uuid="d3f42b1c-b93d-4363-9772-bc65a8dafd37">
+    <name>English</name>
+    <synonym>
+      <key>ru</key>
+      <value>Английский</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ინგლისური</value>
+    </synonym>
+    <languageCode>en</languageCode>
   </languages>
   <languages uuid="dcf8a907-33cb-4d66-9117-5511772d052f">
     <name>Aнглийский</name>
@@ -3432,9 +3444,6 @@
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияСтатьяДДС</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияДополнительныеФункцииПроизводства</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияНаправлениеДеятельностиТаблицеРасходныхЗакупочныхДокументации</functionalOptions>
-  <functionalOptions>FunctionalOption.ПроверятьПлатежиПередОтправкойВБанк</functionalOptions>
-  <functionalOptions>FunctionalOption.ИспользованиеВложенийФункциональнаяОпция</functionalOptions>
-  <functionalOptions>FunctionalOption.ИспользоватьГарантииВНарядЗаказах</functionalOptions>
   <functionalOptionsParameters>FunctionalOptionsParameter.Организация</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.Пользователь</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.ТипВерсионируемогоОбъекта</functionalOptionsParameters>
@@ -4178,14 +4187,6 @@
   <constants>Constant.КоличествоАктивныхПользователей</constants>
   <constants>Constant.ПарольДляУстановкиКоличестваАктивныхПользователей</constants>
   <constants>Constant.КонтрагентыБезВзаиморасчетовПоЗаказам</constants>
-  <constants>Constant.ФункциональнаяОпцияПроверятьПлатежиПередОтправкойВБанк</constants>
-  <constants>Constant.ПустойРеквизитСтатьяВДокументах</constants>
-  <constants>Constant.VINКодОбязательноеПоле</constants>
-  <constants>Constant.ОтключениеПроверкиРасчетаСПокупателямиВДокуменнтахЗаказНаряд_Покупателя</constants>
-  <constants>Constant.ДатаНачалаИспользованияНовогоДоступаКБанкуBOG</constants>
-  <constants>Constant.ИспользованиеТаможенногоДокумента</constants>
-  <constants>Constant.ВремяДляДокументовПомошникаЗагрузкиИзБанка</constants>
-  <constants>Constant.ИспользоватьГарантииВНарядЗаказах</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <commonForms>CommonForm.АвтоматическийОбменСПодключаемымОборудованиемOffline</commonForms>
   <commonForms>CommonForm.АвтономнаяРабота</commonForms>
@@ -5551,6 +5552,7 @@
   <reports>Report.АнализКоммерческихПредложений</reports>
   <reports>Report.Продажи1</reports>
   <reports>Report.ОтчетЗаСмену</reports>
+  <reports>Report.ЗапасыПоПроектам</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
   <dataProcessors>DataProcessor.АктивныеПользователи</dataProcessors>
   <dataProcessors>DataProcessor.БазовыеФункцииИнтернетПоддержки</dataProcessors>
@@ -6121,6 +6123,7 @@
   <informationRegisters>InformationRegister.Пробег</informationRegisters>
   <informationRegisters>InformationRegister.ОдноразовыеНачисления</informationRegisters>
   <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВнеоборотныеАктивы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыполнениеДоговоровОбслуживания</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыработкаВнеоборотныхАктивов</accumulationRegisters>
@@ -6196,7 +6199,7 @@
   <accumulationRegisters>AccumulationRegister.СебестоимостьЗакупки</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗатратыНаОСиТС</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.НалоговыеЛготы</accumulationRegisters>
-  <accumulationRegisters>AccumulationRegister.ГарантийноеОбслуживание</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.НачисленияИУдержанияВРазрезеПроекта</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyВременноеПередачаЗапасов</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.УдалитьВидыДоступа</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.АналитикаДоходовИРасходов</chartsOfCharacteristicTypes>
