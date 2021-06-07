@@ -23,7 +23,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="f7a798d0-3a02-430d-a054-6697c11a94c7"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="e39d936d-c59a-4268-a6a4-f31d491eec25"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.9</configurationExtensionCompatibilityMode>
@@ -50,7 +50,8 @@
     </extension>
     <languageCode>ka</languageCode>
   </languages>
-  <subsystems>Subsystem.РасшAzRy_AzRy</subsystems>
+  <subsystems>Subsystem.AzRy</subsystems>
+  <subsystems>Subsystem.БухгалтерскийУчет</subsystems>
   <styleItems>StyleItem.ИтогиФонГруппы</styleItems>
   <styleItems>StyleItem.ТекстВторостепеннойНадписи</styleItems>
   <styleItems>StyleItem.ВыполненноеЗадание</styleItems>
@@ -59,6 +60,9 @@
   <styleItems>StyleItem.НепринятаяВерсия</styleItems>
   <styleItems>StyleItem.ПоясняющийТекст</styleItems>
   <styleItems>StyleItem.ЦветШрифтаНаименованияПоля</styleItems>
+  <styleItems>StyleItem.БыстрыеНастройкиФонГруппы</styleItems>
+  <styleItems>StyleItem.ЦветТекстаНевыбраннойКартинки</styleItems>
+  <styleItems>StyleItem.НадписьПредупрежденияЦвет</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -84,7 +88,11 @@
   <commonPictures>CommonPicture.ЯндексКарты</commonPictures>
   <commonPictures>CommonPicture.ПодчиненныеЭлементы</commonPictures>
   <commonPictures>CommonPicture.ВниманиеВВидеТреугольника</commonPictures>
+  <commonPictures>CommonPicture._История</commonPictures>
+  <commonPictures>CommonPicture.НачнитеОтсюда</commonPictures>
+  <commonPictures>CommonPicture.ПросмотретьОтчет32</commonPictures>
   <roles>Role.БазовыеПрава</roles>
+  <roles>Role.АдминистраторСистемы</roles>
   <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьЗаказыВРозничнойТорговле</functionalOptions>
@@ -98,6 +106,7 @@
   <functionalOptions>FunctionalOption.НесколькоВариантовКП</functionalOptions>
   <functionalOptions>FunctionalOption.ПлатежныйКалендарь</functionalOptions>
   <functionalOptions>FunctionalOption.УчетВалютныхОпераций</functionalOptions>
+  <functionalOptions>FunctionalOption.УчетРозничныхПродаж</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <definedTypes>DefinedType.Объем</definedTypes>
   <definedTypes>DefinedType.Вес</definedTypes>
@@ -109,6 +118,7 @@
   <commonCommands>CommonCommand.Напомнить</commonCommands>
   <commonCommands>CommonCommand.ДополнительныеСведенияКоманднаяПанель</commonCommands>
   <commonCommands>CommonCommand.ИсторияИзменений</commonCommands>
+  <commandGroups>CommandGroup.Печать</commandGroups>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьДисконтныеКарты</constants>
@@ -123,6 +133,7 @@
   <constants>Constant.ИспользоватьНесколькоВариантовКП</constants>
   <constants>Constant.ФункциональнаяОпцияПлатежныйКалендарь</constants>
   <constants>Constant.ФункциональнаяУчетВалютныхОпераций</constants>
+  <constants>Constant.ФункциональнаяОпцияУчетРозничныхПродаж</constants>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -180,6 +191,12 @@
   <catalogs>Catalog.ПунктыВыдачиЗаказа</catalogs>
   <catalogs>Catalog.ПричиныОтменыЗаказа</catalogs>
   <catalogs>Catalog.ЗоныТарифыДоставки</catalogs>
+  <catalogs>Catalog.РегистрацииВНалоговомОргане</catalogs>
+  <catalogs>Catalog.КлассификаторБанковРФ</catalogs>
+  <catalogs>Catalog.ЗадачиКалендаряПодготовкиОтчетности</catalogs>
+  <catalogs>Catalog.Подписи</catalogs>
+  <catalogs>Catalog.Календари</catalogs>
+  <catalogs>Catalog.ВидыТарифовСтраховыхВзносов</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -223,6 +240,7 @@
   <documents>Document.ПеремещениеДС</documents>
   <documents>Document.ПоступлениеНаСчет</documents>
   <documents>Document.ПоступлениеДСПлан</documents>
+  <documents>Document.ПриемНаРаботу</documents>
   <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
@@ -282,6 +300,12 @@
   <enums>Enum.ТипыСтрокСоставаСпецификации</enums>
   <enums>Enum.ВариантыУчетаДоставки</enums>
   <enums>Enum.ВидыОперацийПоступлениеНаСчет</enums>
+  <enums>Enum.ВидыУчетаСтраховыхВзносов</enums>
+  <enums>Enum.СоответствияНоменклатуры</enums>
+  <enums>Enum.ЮридическоеФизическоеЛицо</enums>
+  <enums>Enum.ВидыОбъектовНалогообложения</enums>
+  <enums>Enum.ПолФизическогоЛица</enums>
+  <enums>Enum.РС_ВидыРежимовПротокола</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -292,10 +316,12 @@
   <reports>Report.Продажи</reports>
   <reports>Report.ABCАнализПродаж</reports>
   <reports>Report.Продажи1</reports>
+  <reports>Report.AzRyОборотноСальдоваяВедомостьРеглUSD</reports>
   <dataProcessors>DataProcessor.МенеджерПодсказок</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.AzRyТЕСТ_ЧекККМ</dataProcessors>
   <dataProcessors>DataProcessor.Тест_НовыеЗадания</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyБазомер</dataProcessors>
   <informationRegisters>InformationRegister.УправлениеЗапасами</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
@@ -304,6 +330,10 @@
   <informationRegisters>InformationRegister.УчетнаяПолитикаРегл</informationRegisters>
   <informationRegisters>InformationRegister.ОтчетПоКурсовымРазницам</informationRegisters>
   <informationRegisters>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы</informationRegisters>
+  <informationRegisters>InformationRegister.ПрименяемыеТарифыСтраховыхВзносов</informationRegisters>
+  <informationRegisters>InformationRegister.ДокументыФизическихЛиц</informationRegisters>
+  <informationRegisters>InformationRegister.СистемыНалогообложенияОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.ФИОФизЛиц</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ДоходыИРасходы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Запасы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗапасыНаСкладах</accumulationRegisters>
@@ -317,4 +347,6 @@
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.АналитикаДоходовИРасходов</chartsOfCharacteristicTypes>
   <chartsOfAccounts>ChartOfAccounts.Управленческий</chartsOfAccounts>
   <chartsOfAccounts>ChartOfAccounts.Хозрасчетный</chartsOfAccounts>
+  <accountingRegisters>AccountingRegister.Хозрасчетный</accountingRegisters>
+  <accountingRegisters>AccountingRegister.AzRyХозрасчетныйUSD</accountingRegisters>
 </mdclass:Configuration>
