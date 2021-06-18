@@ -180,6 +180,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Контрагент</dataPath>
 			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Ответственный</dataPath>
@@ -192,6 +195,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>პასუხისმგებელი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Responsible Person</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -223,7 +230,11 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Количество факт</v8:content>
+					<v8:content>რაოდენობა ფაქტი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Number of fact</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -237,7 +248,11 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Сумма план</v8:content>
+					<v8:content>თანხა გეგმა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>sum plan</v8:content>
 				</v8:item>
 			</title>
 			<appearance>
@@ -257,7 +272,11 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Количество план</v8:content>
+					<v8:content>რაოდენობა გეგმა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Number plan</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -271,7 +290,11 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Сумма факт</v8:content>
+					<v8:content>თანხა ფაქტი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The amount of fact</v8:content>
 				</v8:item>
 			</title>
 			<appearance>
@@ -280,6 +303,42 @@
 					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
 				</dcscor:item>
 			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчетаРегл</dataPath>
+			<field>СчетУчетаРегл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстаток</dataPath>
+			<field>СуммаОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчетаЗатратРегл</dataPath>
+			<field>СчетУчетаЗатратРегл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчета</dataPath>
+			<field>СчетУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОстаток</dataPath>
+			<field>КоличествоОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyАналитикаКонтрагент</dataPath>
+			<field>AzRyАналитикаКонтрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyПроект</dataPath>
+			<field>AzRyПроект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyНаименованияПоставщиков</dataPath>
+			<field>AzRyНаименованияПоставщиков</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -305,7 +364,10 @@
 	СУММА(ВложенныйЗапрос.КоличествоПлан) КАК КоличествоПлан,
 	СУММА(ВложенныйЗапрос.СуммаПлан) КАК СуммаПлан,
 	СУММА(ВложенныйЗапрос.КоличествоФакт) КАК КоличествоФакт,
-	СУММА(ВложенныйЗапрос.СуммаФакт) КАК СуммаФакт
+	СУММА(ВложенныйЗапрос.СуммаФакт) КАК СуммаФакт,
+	ВложенныйЗапрос.Контрагент КАК Контрагент,
+	ЗапасыОстатки.КоличествоОстаток,
+	ЗапасыОстатки.СуммаОстаток
 ИЗ
 	(ВЫБРАТЬ
 		ПланыПродажОбороты.НомерСтроки КАК НомерСтроки,
@@ -330,7 +392,8 @@
 		ПланыПродажОбороты.КоличествоОборот КАК КоличествоПлан,
 		ПланыПродажОбороты.СуммаОборот КАК СуммаПлан,
 		0 КАК КоличествоФакт,
-		0 КАК СуммаФакт
+		0 КАК СуммаФакт,
+		ПланыПродажОбороты.Контрагент КАК Контрагент
 	ИЗ
 		РегистрНакопления.ПланыПродаж.Обороты(
 				,
@@ -384,9 +447,22 @@
 		0,
 		0,
 		ПродажиОбороты.КоличествоОборот,
-		ПродажиОбороты.СуммаОборот
+		ПродажиОбороты.СуммаОборот,
+		ПродажиОбороты.Контрагент
 	ИЗ
 		РегистрНакопления.Продажи.Обороты(, , Авто, ) КАК ПродажиОбороты) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(
+				,
+				СчетУчетаРегл = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.Товары)
+					И ВЫБОР
+						КОГДА &amp;СтруктурнаяЕдиница = ЗНАЧЕНИЕ(Справочник.СтруктурныеЕдиницы.ПустаяСсылка)
+							ТОГДА ИСТИНА
+						ИНАЧЕ СтруктурнаяЕдиница = &amp;СтруктурнаяЕдиница
+					КОНЕЦ) КАК ЗапасыОстатки
+		ПО ВложенныйЗапрос.Организация = ЗапасыОстатки.Организация
+			И ВложенныйЗапрос.ОбъектПланирования = ЗапасыОстатки.Номенклатура
+			И ВложенныйЗапрос.Характеристика = ЗапасыОстатки.Характеристика
+			И ВложенныйЗапрос.ЗаказПокупателя = ЗапасыОстатки.ЗаказПокупателя
 
 СГРУППИРОВАТЬ ПО
 	ВложенныйЗапрос.ПериодМинута,
@@ -406,7 +482,10 @@
 	ВложенныйЗапрос.ЗаказПокупателя,
 	ВложенныйЗапрос.Ответственный,
 	ВложенныйЗапрос.ПериодСекунда,
-	ВложенныйЗапрос.Регистратор</query>
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.Регистратор,
+	ЗапасыОстатки.КоличествоОстаток,
+	ЗапасыОстатки.СуммаОстаток</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>КоличествоОтклонение</dataPath>
@@ -418,7 +497,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Количество отклонение</v8:content>
+				<v8:content>გადახრა რაოდენობა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Number deviation</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -438,7 +521,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Сумма отклонение</v8:content>
+				<v8:content>თანხა გადახრა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Amount deviation</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -458,7 +545,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Количество отклонение процент</v8:content>
+				<v8:content>გადახრა პროცენტი რაოდენობა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Number percentage deviation</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -478,7 +569,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Сумма отклонение процент</v8:content>
+				<v8:content>გადახრა პროცენტი თანხა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Amount percentage deviation</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -498,7 +593,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Количество факт прогноз (экстраполяция)</v8:content>
+				<v8:content>რაოდენობა ფაქტი პროგნოზი (ექსტრაპოლაცია)</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Number of forecast fact (extrapolation)</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -518,7 +617,11 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Сумма факт прогноз (экстраполяция)</v8:content>
+				<v8:content>თანხა ფაქტი პროგნოზი (ექსტრაპოლაცია)</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Sum fact forecast (extrapolation)</v8:content>
 			</v8:item>
 		</title>
 		<appearance>
@@ -568,6 +671,14 @@
 		<dataPath>СуммаФактПрогноз</dataPath>
 		<expression>ВЫБОР КОГДА &amp;НачалоПериода = &amp;КонецПериода ИЛИ &amp;ТекДата &lt;= &amp;НачалоПериода ИЛИ &amp;ТекДата &gt;= &amp;КонецПериода ТОГДА Сумма(СуммаФакт) ИНАЧЕ (Сумма(СуммаФакт) * РАЗНОСТЬДАТ(&amp;КонецПериода, &amp;НачалоПериода, "СЕКУНДА")) / РАЗНОСТЬДАТ(&amp;ТекДата, &amp;НачалоПериода, "СЕКУНДА") КОНЕЦ</expression>
 	</totalField>
+	<totalField>
+		<dataPath>КоличествоОстаток</dataPath>
+		<expression>Сумма(КоличествоОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстаток</dataPath>
+		<expression>Сумма(СуммаОстаток)</expression>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -578,6 +689,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასაწყისი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Beginning of period</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -602,6 +717,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასასრული</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -624,6 +743,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>Тек дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Teck date</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -648,6 +771,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>განზომილება</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>measurement</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ИзмеренияПланирования</v8:Type>
@@ -666,6 +793,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -689,6 +820,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>Выводить заголовок</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Show header</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:boolean</v8:Type>
@@ -708,6 +843,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>Показатель диаграммы</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>index chart</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -730,6 +869,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>По сумме</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>on the sum of</v8:content>
+				</v8:item>
 			</presentation>
 		</availableValue>
 		<availableValue>
@@ -743,8 +886,46 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>По количеству</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>In count</v8:content>
+				</v8:item>
 			</presentation>
 		</availableValue>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;СтПериод.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>СтруктурнаяЕдиница</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Структурная единица</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
 		<use>Always</use>
 	</parameter>
 	<settingsVariant>
@@ -758,11 +939,28 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>გაყიდვების გეგმა-ფაქტობრივი ანალიზი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Plan vs. actual sales analysis</v8:content>
+			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
-					<dcsset:title>Количество</dcsset:title>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>რაოდენობა</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Quantity</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>КоличествоПлан</dcsset:field>
 						<dcsset:title>план</dcsset:title>
@@ -782,7 +980,20 @@
 					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
-					<dcsset:title>Сумма</dcsset:title>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>თანხა</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Amount</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>СуммаПлан</dcsset:field>
 						<dcsset:title>план</dcsset:title>
@@ -800,6 +1011,12 @@
 						<dcsset:title>%</dcsset:title>
 					</dcsset:item>
 					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстаток</dcsset:field>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>627a3ba5-1c10-41f3-a14b-75b1af3e5e57</dcsset:userSettingID>
@@ -827,6 +1044,10 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>только запланированные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>only planned</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 					<dcsset:userSettingID>1ea9f276-155b-48ca-9bb4-2e12cfb51104</dcsset:userSettingID>
@@ -891,6 +1112,11 @@
 					<dcscor:value xsi:type="xs:string">Сумма</dcscor:value>
 					<dcsset:userSettingID>8015e950-73cc-421b-954f-9394d9fb8d84</dcsset:userSettingID>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СтруктурнаяЕдиница</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>9664012e-d757-472f-a85a-3174bdcd59cd</dcsset:userSettingID>
+				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -919,6 +1145,10 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>გაყიდვების გეგმა-ფაქტობრივი ანალიზი</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Plan vs. actual sales analysis</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -992,7 +1222,219 @@
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>რაოდენობა</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Quantity</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоОтклонение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоОтклонениеПроцент</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>თანხა</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Amount</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОтклонение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОтклонениеПроцент</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
 				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>რაოდენობა</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Quantity</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоПлан</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоФакт</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоОтклонение</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоОтклонениеПроцент</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>თანხა</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Amount</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаПлан</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаФакт</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаОтклонение</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СуммаОтклонениеПроцент</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Регистратор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Количество</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>რაოდენობა</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Quantity</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КоличествоПлан</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КоличествоФакт</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>КоличествоОтклонение</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>КоличествоОтклонениеПроцент</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Auto</dcsset:placement>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>თანხა</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Amount</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>СуммаПлан</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>СуммаФакт</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>СуммаОтклонение</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>СуммаОтклонениеПроцент</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Auto</dcsset:placement>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
 			</dcsset:item>
 			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 			<dcsset:itemsUserSettingID>d1207132-267f-422c-9fcc-9e31c576a745</dcsset:itemsUserSettingID>

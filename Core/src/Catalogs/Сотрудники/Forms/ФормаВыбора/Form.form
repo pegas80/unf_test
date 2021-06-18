@@ -25,6 +25,10 @@
         <key>ka</key>
         <value>დასახელება</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Name</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -70,6 +74,10 @@
         <key>ka</key>
         <value>სატაბელო ნომერი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Personnel Number</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -85,6 +93,10 @@
       <toolTip>
         <key>ka</key>
         <value>სატაბელო ნომერი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Personnel Number</value>
       </toolTip>
       <extendedTooltip>
         <name>КодРасширеннаяПодсказка</name>
@@ -121,6 +133,10 @@
       <title>
         <key>ka</key>
         <value>დასაქმებულობის ტიპი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>type of employment</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -400,9 +416,45 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	СправочникСотрудники.Ссылка,
+	СправочникСотрудники.ПометкаУдаления,
+	СправочникСотрудники.Родитель,
+	СправочникСотрудники.ЭтоГруппа,
+	СправочникСотрудники.Код,
+	СправочникСотрудники.Наименование,
+	СправочникСотрудники.Физлицо,
+	СправочникСотрудники.ТипЗанятости,
+	СправочникСотрудники.СчетРасчетовСПерсоналом,
+	СправочникСотрудники.СчетРасчетовСПодотчетниками,
+	СправочникСотрудники.СчетРасчетовПоПерерасходу,
+	СправочникСотрудники.СчетРасчетовСПерсоналомРегл,
+	СправочникСотрудники.СчетРасчетовСПодотчетникамиРегл,
+	СправочникСотрудники.СчетРасчетовПоПерерасходуРегл,
+	СправочникСотрудники.ВидВыдачиНДФЛ,
+	СправочникСотрудники.БанковскийСчетПоУмолчанию,
+	СправочникСотрудники.КатегорияПолучателейДоходов,
+	СправочникСотрудники.НаименованиеНаИностранскомЯзыке,
+	СправочникСотрудники.ВидНачисленияУдержания,
+	СправочникСотрудники.Предопределенный,
+	СправочникСотрудники.ИмяПредопределенныхДанных,
+	ЕСТЬNULL(ВложенныйЗапрос.УволенПред, ЛОЖЬ) КАК Уволен
+ИЗ
+	Справочник.Сотрудники КАК СправочникСотрудники
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СотрудникиСрезПоследних.Сотрудник КАК Сотрудник,
+			ВЫБОР
+				КОГДА СотрудникиСрезПоследних.Регистратор ССЫЛКА Документ.Увольнение
+					ТОГДА ИСТИНА
+				ИНАЧЕ ЛОЖЬ
+			КОНЕЦ КАК УволенПред
+		ИЗ
+			РегистрСведений.Сотрудники.СрезПоследних КАК СотрудникиСрезПоследних) КАК ВложенныйЗапрос
+		ПО СправочникСотрудники.Ссылка = ВложенныйЗапрос.Сотрудник</queryText>
       <mainTable>Catalog.Сотрудники</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
     </extInfo>
@@ -417,6 +469,10 @@
       <key>ka</key>
       <value>ძირითადი პასუხისმგებლის დაყენება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Set the primary responsibility</value>
+    </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
@@ -425,6 +481,10 @@
     <toolTip>
       <key>ka</key>
       <value>შერჩეული ელემენტი ხელუხლებლად დადგება მომხმარებლის დოკუმენტებში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The selected item will be substituted in the default user documents</value>
     </toolTip>
     <use>
       <common>true</common>

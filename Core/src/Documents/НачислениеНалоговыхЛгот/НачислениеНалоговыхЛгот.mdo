@@ -14,7 +14,7 @@
   </synonym>
   <synonym>
     <key>ka</key>
-    <value>საშემოშავლო შეღავათების რეგისტრაცია</value>
+    <value>საშემოსავლო შეღავათების რეგისტრაცია</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Document.НачислениеНалоговыхЛгот.StandardAttribute.Number</inputByString>
@@ -29,6 +29,7 @@
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.НачислениеНалоговыхЛгот.Form.ФормаДокумента</defaultObjectForm>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
+  <registerRecords>AccumulationRegister.ОстаткиНалоговыхЛьгот</registerRecords>
   <registerRecords>InformationRegister.НалоговыеЛготыИнформация</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -42,6 +43,10 @@
       <key>ka</key>
       <value>ორგანიზაცია</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
     <type>
       <types>CatalogRef.Организации</types>
     </type>
@@ -52,6 +57,10 @@
     <toolTip>
       <key>ka</key>
       <value>საწარმოს ორგანიზაცია, რომლის სახელით ფორმდება დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The organization of the enterprise, in whose name the document is issued.</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -75,6 +84,10 @@
       <key>ka</key>
       <value>თანამშრომელი</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
     <type>
       <types>CatalogRef.Сотрудники</types>
     </type>
@@ -95,6 +108,10 @@
       <key>ka</key>
       <value>თანხა</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
     <type>
       <types>Number</types>
       <numberQualifiers>
@@ -108,11 +125,41 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="ae25f02c-e9bd-4fe9-b9c8-5e5bf8566428">
+    <name>ДатаОкончанияДействияЛьготы</name>
+    <synonym>
+      <key>ru</key>
+      <value>по</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>по</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="14eb42f5-a599-4b54-acf8-9b4a373734b3">
     <name>ФормаДокумента</name>
     <synonym>
       <key>ru</key>
       <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form of the document</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
@@ -131,6 +178,10 @@
       <key>ka</key>
       <value>ქვეგანყოფილებები</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>unit</value>
+    </synonym>
     <attributes uuid="df3dc465-41d8-45d1-9da3-e65ad77c97c9">
       <name>Подразделение</name>
       <synonym>
@@ -140,6 +191,10 @@
       <synonym>
         <key>ka</key>
         <value>ქვეგანყოფილება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Subdivision</value>
       </synonym>
       <type>
         <types>CatalogRef.СтруктурныеЕдиницы</types>

@@ -58,6 +58,10 @@
       <key>ka</key>
       <value>ოპერაცია</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Operation</value>
+    </synonym>
     <type>
       <types>EnumRef.ВидыОперацийСписаниеТопливаЗапасов</types>
     </type>
@@ -68,6 +72,10 @@
     <toolTip>
       <key>ka</key>
       <value>დოკუმენტის ოპერაციის ტიპი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Вид операции документа</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -85,6 +93,10 @@
       <key>ka</key>
       <value>ავტორი</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Author</value>
+    </synonym>
     <type>
       <types>CatalogRef.Пользователи</types>
     </type>
@@ -95,6 +107,10 @@
     <toolTip>
       <key>ka</key>
       <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Пользователь, создавший документ</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -111,6 +127,10 @@
     <synonym>
       <key>ka</key>
       <value>კომენტარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Comment</value>
     </synonym>
     <type>
       <types>String</types>
@@ -132,6 +152,10 @@
       <key>ka</key>
       <value>საქმიანობის მიმართულება</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Направление деятельности</value>
+    </synonym>
     <type>
       <types>CatalogRef.НаправленияДеятельности</types>
     </type>
@@ -142,6 +166,10 @@
     <toolTip>
       <key>ka</key>
       <value>საქმიანობის მიმართულება, რომელსაც მიეკუთვნება დარიცხული ამორტიზაცია</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Activity, which refers to the depreciation</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -163,6 +191,10 @@
       <key>ka</key>
       <value>ორგანიზაცია</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
     <type>
       <types>CatalogRef.Организации</types>
     </type>
@@ -173,6 +205,10 @@
     <toolTip>
       <key>ka</key>
       <value>ორგანიზაცია, რომელიც აფორმებს შეკვეთას</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The organization, in which the order is issued</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -207,6 +243,10 @@
       <key>ka</key>
       <value>ქვეგანყოფილება</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
     <type>
       <types>CatalogRef.СтруктурныеЕдиницы</types>
     </type>
@@ -217,6 +257,10 @@
     <toolTip>
       <key>ka</key>
       <value>ინფორმაცია ოპერაციაზე პასუხისმგებელი ქვეგანყოფილების შესახებ</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Информация о подразделение ответственном за операцию</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -262,6 +306,10 @@
       <key>ka</key>
       <value>საწყობი</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Warehouse</value>
+    </synonym>
     <type>
       <types>CatalogRef.СтруктурныеЕдиницы</types>
     </type>
@@ -272,6 +320,10 @@
     <toolTip>
       <key>ka</key>
       <value>სტრუქტურული ერთეული, სადაც ფორმდება მარაგების შემოსვლა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Структурная единица, в которую оформляется поступление запасов</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -310,35 +362,16 @@
       <key>ka</key>
       <value>ხარჯების ანგარიში (რეგლ)</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>cost accounting expense (Regla)</value>
+    </synonym>
     <type>
       <types>ChartOfAccountsRef.Хозрасчетный</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <choiceParameters>
-      <name>Отбор.ТипСчета</name>
-      <value xsi:type="core:ReferenceValue">
-        <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
-      </value>
-    </choiceParameters>
-    <choiceParameters>
-      <name>Отбор.ТипСчета1</name>
-      <value xsi:type="core:ReferenceValue">
-        <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
-      </value>
-    </choiceParameters>
-    <choiceParameters>
-      <name>Отбор.ТипСчета2</name>
-      <value xsi:type="core:ReferenceValue">
-        <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
-      </value>
-    </choiceParameters>
-    <choiceParameters>
-      <name>Отбор.ТипСчета3</name>
-      <value xsi:type="core:ReferenceValue">
-        <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
-      </value>
-    </choiceParameters>
+    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -349,6 +382,10 @@
       <key>ru</key>
       <value>Форма документа</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form of the document</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
@@ -358,6 +395,10 @@
       <key>ru</key>
       <value>Форма списка</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form of the list</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
@@ -366,6 +407,10 @@
     <synonym>
       <key>ru</key>
       <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Shape selection</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
@@ -428,6 +473,10 @@
       <key>ru</key>
       <value>Расходы</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Costs</value>
+    </synonym>
     <attributes uuid="36a4e467-28d2-40d6-a60e-06efd238e616">
       <name>Дата</name>
       <synonym>
@@ -437,6 +486,10 @@
       <synonym>
         <key>ka</key>
         <value>თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Date</value>
       </synonym>
       <type>
         <types>Date</types>
@@ -498,6 +551,10 @@
         <key>ka</key>
         <value>ნომენკლატურა</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
       <type>
         <types>CatalogRef.Номенклатура</types>
       </type>
@@ -508,6 +565,10 @@
       <toolTip>
         <key>ka</key>
         <value>ნომენკლატურის პოზიცია, რომლის გასავალი აისახება მოცემული დოკუმენტით.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Позиция номенклатуры, расход которой отражается данным документом.</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -541,6 +602,10 @@
         <key>ka</key>
         <value>მახასიათებელი</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
       <type>
         <types>CatalogRef.ХарактеристикиНоменклатуры</types>
       </type>
@@ -551,6 +616,10 @@
       <toolTip>
         <key>ka</key>
         <value>აუცილებლობის შემთხვევაში ამ ველში მიეთითება ნომენკლატურის მახასიათებელი.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>При необходимости в данном поле указывается характеристика номенклатуры.</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -571,6 +640,10 @@
         <key>ka</key>
         <value>ერთეული</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Unit</value>
+      </synonym>
       <type>
         <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
         <types>CatalogRef.ЕдиницыИзмерения</types>
@@ -582,6 +655,10 @@
       <toolTip>
         <key>ka</key>
         <value>ნომენკლატურის პოზიციის საზომი ერთეული.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Unit of measurement commodity item.</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -603,6 +680,10 @@
         <key>ka</key>
         <value>რაოდენობა</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Количество</value>
+      </synonym>
       <type>
         <types>Number</types>
         <numberQualifiers>
@@ -618,6 +699,10 @@
       <toolTip>
         <key>ka</key>
         <value>იმ ნომენკლატურული პოზიციის რაოდენობა, რომელიც ექვემდებარება რეალიზაციას (გადატვირთვას)</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Количество номенклатурной позиции, подлежащей реализации (отгрузке).</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -719,6 +804,10 @@
         <key>ka</key>
         <value>საწყობი</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Warehouse</value>
+      </synonym>
       <type>
         <types>CatalogRef.СтруктурныеЕдиницы</types>
       </type>
@@ -729,6 +818,10 @@
       <toolTip>
         <key>ka</key>
         <value>სტრუქტურული ერთეული, სადაც ფორმდება მარაგების შემოსვლა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Структурная единица, в которую оформляется поступление запасов</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -763,6 +856,10 @@
         <key>ka</key>
         <value>ქვეგანყოფილება</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Subdivision</value>
+      </synonym>
       <type>
         <types>CatalogRef.СтруктурныеЕдиницы</types>
       </type>
@@ -773,6 +870,10 @@
       <toolTip>
         <key>ka</key>
         <value>ინფორმაცია ოპერაციაზე პასუხისმგებელი ქვეგანყოფილების შესახებ</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Информация о подразделение ответственном за операцию</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -795,6 +896,10 @@
         <key>ka</key>
         <value>საქმიანობის მიმართულება</value>
       </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Направление деятельности</value>
+      </synonym>
       <type>
         <types>CatalogRef.НаправленияДеятельности</types>
       </type>
@@ -805,6 +910,10 @@
       <toolTip>
         <key>ka</key>
         <value>საქმიანობის მიმართულება, რომელსაც მიეკუთვნება დარიცხული ამორტიზაცია</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Activity, which refers to the depreciation</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -824,6 +933,10 @@
       <synonym>
         <key>ka</key>
         <value>ხარჯების ანგარიში (რეგლ)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>cost accounting expense (Regla)</value>
       </synonym>
       <type>
         <types>ChartOfAccountsRef.Хозрасчетный</types>
@@ -867,6 +980,10 @@
     <synonym>
       <key>ka</key>
       <value>ფაილიდან ჩატვირთვა ხარჯები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Загрузка из файла расходы</value>
     </synonym>
   </templates>
   <templates uuid="adb9a963-2616-4d45-86b9-3e4912aebeba">

@@ -94,6 +94,10 @@
       <key>ka</key>
       <value>სტანდარტული რეკვიზიტები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>standard details</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Стандартные реквизиты</value>
@@ -101,6 +105,10 @@
     <toolTip>
       <key>ka</key>
       <value>სტანდარტული რეკვიზიტები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>standard details</value>
     </toolTip>
     <extendedTooltip>
       <name>СтандартныеРеквизитыExtendedTooltip</name>
@@ -124,6 +132,14 @@
   <items xsi:type="form:FormField">
     <name>ТипВнеоборотныеАктивы</name>
     <id>66</id>
+    <title>
+      <key>ru</key>
+      <value>Категория Внеоборотные Активы</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ძირითადი საშუალებების კატეგორია</value>
+    </title>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -311,6 +327,11 @@
           <value>Enum.СпособыНачисленияАмортизацииВнеоборотныхАктивов.EnumValue.ПропорциональноОбъемуПродукции</value>
         </value>
       </choiceList>
+      <choiceList>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.СпособыНачисленияАмортизацииВнеоборотныхАктивов.EnumValue.УменьшенногоОстатка</value>
+        </value>
+      </choiceList>
       <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
     </extInfo>
   </items>
@@ -368,6 +389,10 @@
         <key>ka</key>
         <value>ვალ.</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Shaft.</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -416,6 +441,10 @@
       <key>ka</key>
       <value>საწყისი ღირებულება აღრიცხვის ვალუტაში</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>The initial cost, taking into account currency</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Начальная стоимость валюта учета</value>
@@ -423,6 +452,10 @@
     <toolTip>
       <key>ka</key>
       <value>საწყისი ღირებულება აღრიცხვის ვალუტაში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The initial value of the account currency</value>
     </toolTip>
     <extendedTooltip>
       <name>НачальнаяСтоимостьВалютаУчетаExtendedTooltip</name>
@@ -498,6 +531,10 @@
       <key>ka</key>
       <value>დამატებითი რეკვიზიტები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Additional Information</value>
+    </title>
     <extendedTooltip>
       <name>ГруппаДополнительныеРеквизитыРасширеннаяПодсказка</name>
       <id>52</id>
@@ -531,6 +568,10 @@
       <key>ka</key>
       <value>საგადასახადო აღრიცხვა (УСН)</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Tax Accounting (USN)</value>
+    </title>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -546,6 +587,10 @@
     <toolTip>
       <key>ka</key>
       <value>В случае, если актив будет учитываться в налоговом учете, данные будут автоматически  попадать в книгу учета доходов и расходов.</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>If the asset is taken into account for tax purposes, the data will automatically appear in the book of income and expense.</value>
     </toolTip>
     <toolTipRepresentation>Button</toolTipRepresentation>
     <handlers>
@@ -692,6 +737,10 @@
       <key>ka</key>
       <value>ჯგუფი УСН</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>STS Group</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Группа УСН</value>
@@ -699,6 +748,10 @@
     <toolTip>
       <key>ka</key>
       <value>ჯგუფი УСН</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>STS Group</value>
     </toolTip>
     <extendedTooltip>
       <name>ГруппаУСНРасширеннаяПодсказка</name>
@@ -713,6 +766,170 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаУменьшенногоОстатка</name>
+    <id>69</id>
+    <items xsi:type="form:FormField">
+      <name>НачальнаяСтоимостьДляУменшенногоОстатка</name>
+      <id>74</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.НачальнаяСтоимостьДляУменьшенногоОстатка</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>НачальнаяСтоимостьДляУменшенногоОстаткаПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>НачальнаяСтоимостьДляУменшенногоОстаткаРасширеннаяПодсказка</name>
+        <id>76</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>НачальнаяСтоимостьДляУменшенногоОстаткаКонтекстноеМеню</name>
+        <id>75</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ЛиквидационнаСтоимостьДляУменшенногоОстатка</name>
+      <id>71</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ЛиквидационнаяСтоимостьДляУменьшенногоОстатка</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ЛиквидационнаСтоимостьДляУменшенногоОстаткаРасширеннаяПодсказка</name>
+        <id>73</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ЛиквидационнаСтоимостьДляУменшенногоОстаткаКонтекстноеМеню</name>
+        <id>72</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ГодовойПроцентАмортизацииДляУменьшонногоОстатка</name>
+      <id>77</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ГодовойПроцентАмортизацииДляУменьшенногоОстатка</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ГодовойПроцентАмортизацииДляУменьшенногоОстаткаПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ГодовойПроцентАмортизацииДляУменьшонногоОстаткаРасширеннаяПодсказка</name>
+        <id>79</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ГодовойПроцентАмортизацииДляУменьшонногоОстаткаКонтекстноеМеню</name>
+        <id>78</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа уменьшенного остатка</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа уменьшенного остатка</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаУменьшенногоОстаткаРасширеннаяПодсказка</name>
+      <id>70</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
       <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
@@ -767,6 +984,10 @@
         <key>ka</key>
         <value>ჯგუფი გლობალური ბრძანებები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Группа глобальные команды</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Группа глобальные команды</value>
@@ -774,6 +995,10 @@
       <toolTip>
         <key>ka</key>
         <value>ჯგუფი გლობალური ბრძანებები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Группа глобальные команды</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаГлобальныеКомандыРасширеннаяПодсказка</name>
@@ -872,6 +1097,10 @@
       <key>ka</key>
       <value>პროდუქციის მოცულობის პროპორციულად</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>In proportion to the volume of production</value>
+    </title>
     <id>2</id>
     <valueType>
       <types>EnumRef.СпособыНачисленияАмортизацииВнеоборотныхАктивов</types>
@@ -893,9 +1122,42 @@
       <key>ka</key>
       <value>აღრიცხვის ვალუტა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>currency account</value>
+    </title>
     <id>3</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>МесячныйПроцентУменьшенногоОстатка</name>
+    <title>
+      <key>ru</key>
+      <value>Месячный процент</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Месячный процент</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Месячный процент</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
     </valueType>
     <view>
       <common>true</common>

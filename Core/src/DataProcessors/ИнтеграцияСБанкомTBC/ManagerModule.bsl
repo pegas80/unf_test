@@ -17,24 +17,46 @@
 	
 	Если СтруктураПараметров.Свойство("ИспользоватьТестовыйРежим") 
 		И СтруктураПараметров.ИспользоватьТестовыйРежим Тогда 
-		Сервер = "https://test.tbconline.ge/dbi/dbiService";
-	Иначе
-		Сервер = "https://tbconline.ge/dbi/dbiService";
+		//Сервер = "https://test.tbconline.ge/dbi/dbiService";
+		Сервер = "test.tbconline.ge/dbi/dbiService";
+	ИначеЕсли ЗначениеЗаполнено(СтруктураПараметров.Сертификат) Тогда 
+		//Сервер = "https://tbconline.ge/dbi/dbiService";
+		Сервер = "secdbi.tbconline.ge/dbi/dbiService";
+	Иначе 
+		Сервер = "tbconline.ge/dbi/dbiService";
 	КонецЕсли;
 	
+	//Если mhttp = Неопределено Тогда
+	//	mhttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1"); 
+	//Конецесли;
+	
 	Если mhttp = Неопределено Тогда
-		mhttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1"); 
+		//mhttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1");
+		Если ЗначениеЗаполнено(СокрЛП(СтруктураПараметров.Сертификат)) Тогда 
+			mhttp = Новый HTTPСоединение(Сервер,,,,,,Новый ЗащищенноеСоединениеOpenSSL(Новый СертификатКлиентаФайл(СокрЛП(СтруктураПараметров.Сертификат), СокрЛП(СтруктураПараметров.ПарольСертификата))));
+		Иначе
+			mhttp = Новый HTTPСоединение(Сервер,,,,,,Новый ЗащищенноеСоединениеOpenSSL());
+		КонецЕсли;
 	Конецесли;
 	
-	mhttp.SetTimeouts(6000000, 6000000, 6000000, 6000000);
+	//mhttp.SetTimeouts(6000000, 6000000, 6000000, 6000000);
+	//
+	//mhttp.open("POST", Сервер, False);
+	//
+	//mhttp.setRequestHeader("Accept-Encoding", "gzip,deflate");
+	//mhttp.setRequestHeader("Content-Type"	, "text/xml; charset=utf-8");
+	//mhttp.setRequestHeader("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/"+СтруктураПараметров.Метод+"");
+	//mhttp.setRequestHeader("Connection"		, "Keep-Alive");
+	//mhttp.setRequestHeader("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
 	
-	mhttp.open("POST", Сервер, False);
+	Заголовки = Новый Соответствие;
+	Заголовки.Вставить("Accept-Encoding", "gzip,deflate");
+	Заголовки.Вставить("Content-Type"	, "text/xml; charset=utf-8");
+	Заголовки.Вставить("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/"+СтруктураПараметров.Метод+"");
+	Заголовки.Вставить("Connection"		, "Keep-Alive");
+	Заголовки.Вставить("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
 	
-	mhttp.setRequestHeader("Accept-Encoding", "gzip,deflate");
-	mhttp.setRequestHeader("Content-Type"	, "text/xml; charset=utf-8");
-	mhttp.setRequestHeader("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/"+СтруктураПараметров.Метод+"");
-	mhttp.setRequestHeader("Connection"		, "Keep-Alive");
-	mhttp.setRequestHeader("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
+	Запрос = Новый HTTPЗапрос("/", Заголовки);
 	
 	USER = СтруктураПараметров.USER;
 	PASSWORD = СтруктураПараметров.PASSWORD;
@@ -302,13 +324,18 @@
 	
 	xml = xml + ПолучитьТекстОкончания(ИмяМетода, СуфиксЗапроса);
 	
-	mhttp.send(xml);
-	res = mhttp.WaitForResponse();
+	Запрос.УстановитьТелоИзСтроки(xml, КодировкаТекста.UTF8, ИспользованиеByteOrderMark.Использовать);
 	
-	СтрокаJSONРезультат = mhttp.responseText;
+	//mhttp.send(xml);
+	Результат = mhttp.ОтправитьДляОбработки(Запрос);
+	//res = mhttp.WaitForResponse();
+	res = Результат.КодСостояния;
+	
+	//СтрокаJSONРезультат = mhttp.responseText;
+	СтрокаJSONРезультат = Результат.ПолучитьТелоКакСтроку();
 	
 	Если СтрНайти(СтрокаJSONРезультат, "Error 500") > 0 Тогда
-		Сообщить(НСтр("ka='Ошибка отправки запроса';ru='Ошибка отправки запроса'") + Символы.НПП + СтрокаJSONРезультат);
+		Сообщить(НСтр("ka='Ошибка отправки запроса';ru='Ошибка отправки запроса';en='Error sending request'") + Символы.НПП + СтрокаJSONРезультат);
 		
 		СтруктураОтвета = Новый Структура;
 		Если МассивСсылокДокументовПакетов <> Неопределено И МассивСсылокДокументовПакетов.Количество() > 0 Тогда 

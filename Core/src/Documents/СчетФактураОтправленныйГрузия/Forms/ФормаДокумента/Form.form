@@ -1,56 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <items xsi:type="form:FormGroup">
-    <name>Группа2</name>
-    <id>218</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <extendedTooltip>
-      <name>Группа2ExtendedTooltip</name>
-      <id>240</id>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <type>UsualGroup</type>
-    <extInfo xsi:type="form:UsualGroupExtInfo">
-      <behavior>Auto</behavior>
-      <showLeftMargin>true</showLeftMargin>
-      <united>true</united>
-      <throughAlign>Auto</throughAlign>
-      <currentRowUse>Auto</currentRowUse>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormGroup">
     <name>Шапка</name>
     <id>1</id>
     <items xsi:type="form:FormGroup">
       <name>ЛеваяКолонка</name>
       <id>2</id>
-      <items xsi:type="form:FormField">
-        <name>Аванс</name>
-        <id>331</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаКорректировка</name>
+        <id>396</id>
+        <items xsi:type="form:FormField">
+          <name>Аванс</name>
+          <id>331</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Аванс</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>АвансПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>АвансРасширеннаяПодсказка</name>
+            <id>333</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>АвансКонтекстноеМеню</name>
+            <id>332</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>Декорация1</name>
+          <id>414</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>Декорация1РасширеннаяПодсказка</name>
+            <id>416</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>Декорация1КонтекстноеМеню</name>
+            <id>415</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <width>13</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>Корректировочная</name>
+          <id>398</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Корректировочная</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>КорректировочнаяПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>КорректировочнаяРасширеннаяПодсказка</name>
+            <id>400</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КорректировочнаяКонтекстноеМеню</name>
+            <id>399</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.Аванс</segments>
-        </dataPath>
-        <handlers>
-          <event>OnChange</event>
-          <name>АвансПриИзменении</name>
-        </handlers>
+        <title>
+          <key>ru</key>
+          <value>Корректировка</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>კორექტირება</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>კორექტირება</value>
+        </title>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <extendedTooltip>
-          <name>АвансРасширеннаяПодсказка</name>
-          <id>333</id>
+          <name>ГруппаКорректировкаРасширеннаяПодсказка</name>
+          <id>397</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -58,17 +142,15 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>АвансКонтекстноеМеню</name>
-          <id>332</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>CheckBoxField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>ГруппаНомерДата</name>
@@ -84,6 +166,7 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Date</segments>
           </dataPath>
+          <titleLocation>Left</titleLocation>
           <extendedTooltip>
             <name>ДатаExtendedTooltip</name>
             <id>241</id>
@@ -105,7 +188,6 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>16</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <chooseType>true</chooseType>
@@ -124,6 +206,7 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Number</segments>
           </dataPath>
+          <titleLocation>Left</titleLocation>
           <extendedTooltip>
             <name>НомерExtendedTooltip</name>
             <id>246</id>
@@ -145,10 +228,8 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>11</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <horizontalStretch>false</horizontalStretch>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
@@ -167,6 +248,10 @@
           <key>ka</key>
           <value>ჯგუფი ნომერი თარიღი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Группа номер дата</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа номер дата</value>
@@ -175,6 +260,11 @@
           <key>ka</key>
           <value>ჯგუფი ნომერი თარიღი</value>
         </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Группа номер дата</value>
+        </toolTip>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <extendedTooltip>
           <name>ГруппаНомерДатаExtendedTooltip</name>
           <id>245</id>
@@ -205,6 +295,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.Организация</segments>
         </dataPath>
+        <titleLocation>Left</titleLocation>
         <handlers>
           <event>OnChange</event>
           <name>ОрганизацияПриИзменении</name>
@@ -225,15 +316,14 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <editMode>Enter</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>34</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <horizontalStretch>false</horizontalStretch>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
@@ -246,6 +336,7 @@
         <userVisible>
           <common>true</common>
         </userVisible>
+        <titleLocation>Left</titleLocation>
         <handlers>
           <event>OnChange</event>
           <name>ВидОперацииПриИзменении</name>
@@ -266,6 +357,7 @@
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <editMode>Enter</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -310,6 +402,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.Статус</segments>
         </dataPath>
+        <titleLocation>Left</titleLocation>
         <extendedTooltip>
           <name>СтатусПеречислениеExtendedTooltip</name>
           <id>293</id>
@@ -327,15 +420,14 @@
         </contextMenu>
         <type>InputField</type>
         <readOnly>true</readOnly>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <editMode>Enter</editMode>
         <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>34</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <horizontalStretch>false</horizontalStretch>
           <wrap>true</wrap>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
@@ -343,19 +435,23 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
-        <name>ГруппаДокументОснование</name>
-        <id>91</id>
+        <name>РеквизитыКорректировочнойФактуры</name>
+        <id>409</id>
         <items xsi:type="form:FormField">
-          <name>ДокументОснование</name>
-          <id>92</id>
+          <name>ПричинаКорректировки</name>
+          <id>401</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ПричинаКорректировки</segments>
+          </dataPath>
+          <titleLocation>Left</titleLocation>
           <extendedTooltip>
-            <name>ДокументОснованиеExtendedTooltip</name>
-            <id>250</id>
+            <name>ПричинаКорректировкиРасширеннаяПодсказка</name>
+            <id>403</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -364,38 +460,88 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>ДокументОснованиеКонтекстноеМеню</name>
-            <id>93</id>
+            <name>ПричинаКорректировкиКонтекстноеМеню</name>
+            <id>402</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
-          <editMode>EnterOnInput</editMode>
+          <editMode>Enter</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
           </extInfo>
         </items>
+        <items xsi:type="form:FormField">
+          <name>ОснованиеКорректировки</name>
+          <id>404</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ОснованиеКорректировки</segments>
+          </dataPath>
+          <titleLocation>Left</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ОснованиеКорректировкиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ОснованиеКорректировкиРасширеннаяПодсказка</name>
+            <id>406</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ОснованиеКорректировкиКонтекстноеМеню</name>
+            <id>405</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <toolTip>
+        <title>
           <key>ru</key>
-          <value>Группа документ основание</value>
-        </toolTip>
-        <toolTip>
+          <value>Реквизиты корректировочной фактуры</value>
+        </title>
+        <title>
           <key>ka</key>
-          <value>ჯგუფი დოკუმენტი საფუძველი</value>
-        </toolTip>
+          <value>კორექტირების ფაქტურის რეკვიზიტები</value>
+        </title>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <extendedTooltip>
-          <name>ГруппаДокументОснованиеExtendedTooltip</name>
-          <id>249</id>
+          <name>РеквизитыКорректировочнойФактурыРасширеннаяПодсказка</name>
+          <id>410</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -405,6 +551,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
           <behavior>Auto</behavior>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
@@ -426,6 +573,7 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.ВидНалога</segments>
           </dataPath>
+          <titleLocation>Left</titleLocation>
           <handlers>
             <event>OnChange</event>
             <name>ВидНалогаПриИзменении</name>
@@ -453,6 +601,7 @@
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
             <wrap>true</wrap>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
@@ -470,6 +619,7 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.СчетУчетаРегл</segments>
           </dataPath>
+          <titleLocation>Left</titleLocation>
           <extendedTooltip>
             <name>СчетУчетаРеглРасширеннаяПодсказка</name>
             <id>392</id>
@@ -493,6 +643,7 @@
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
             <wrap>true</wrap>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
@@ -508,6 +659,12 @@
           <key>ru</key>
           <value>Счет НДС</value>
         </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>VAT Account</value>
+        </toolTip>
+        <horizontalStretch>false</horizontalStretch>
+        <groupHorizontalAlign>Left</groupHorizontalAlign>
         <extendedTooltip>
           <name>СчетНДСРасширеннаяПодсказка</name>
           <id>389</id>
@@ -520,7 +677,6 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>AlwaysHorizontal</group>
           <behavior>Auto</behavior>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
@@ -541,6 +697,12 @@
         <key>ka</key>
         <value>მარცხენა სვეტი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Левая колонка</value>
+      </title>
+      <width>50</width>
+      <horizontalStretch>false</horizontalStretch>
       <extendedTooltip>
         <name>ЛеваяКолонкаExtendedTooltip</name>
         <id>244</id>
@@ -608,10 +770,8 @@
             <event>Tuning</event>
             <name>ДатаВходящегоДокументаРегулирование</name>
           </handlers>
-          <width>19</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <horizontalStretch>false</horizontalStretch>
           <choiceButton>true</choiceButton>
           <choiceButtonPicture xsi:type="core:PictureRef">
             <picture>StdPicture.InputFieldCalendar</picture>
@@ -659,7 +819,6 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>38</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <chooseType>true</chooseType>
@@ -703,7 +862,6 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <width>38</width>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <chooseType>true</chooseType>
@@ -746,10 +904,8 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>14</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <horizontalStretch>false</horizontalStretch>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
@@ -787,10 +943,8 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>9</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <horizontalStretch>false</horizontalStretch>
             <wrap>true</wrap>
             <choiceButtonPicture xsi:type="core:PictureRef">
               <picture>StdPicture.InputFieldCalendar</picture>
@@ -813,6 +967,10 @@
           <key>ka</key>
           <value>ჯგუფი დოკუმენტი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Group document</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа документ</value>
@@ -820,6 +978,10 @@
         <toolTip>
           <key>ka</key>
           <value>ჯგუფი დოკუმენტი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Group document</value>
         </toolTip>
         <readOnly>true</readOnly>
         <extendedTooltip>
@@ -842,7 +1004,7 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
-        <name>УникалниНомерСчетФактури</name>
+        <name>Идентификатор</name>
         <id>155</id>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -853,7 +1015,7 @@
           <segments>Объект.Идентификатор</segments>
         </dataPath>
         <extendedTooltip>
-          <name>УникалниНомерСчетФактуриExtendedTooltip</name>
+          <name>ИдентификаторРасширеннаяПодсказка</name>
           <id>292</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -863,7 +1025,7 @@
           </extInfo>
         </extendedTooltip>
         <contextMenu>
-          <name>УникалниНомерСчетФактуриКонтекстноеМеню</name>
+          <name>ИдентификаторКонтекстноеМеню</name>
           <id>156</id>
           <autoFill>true</autoFill>
         </contextMenu>
@@ -885,6 +1047,10 @@
             <key>ka</key>
             <value>ЧН=' '; ЧГ=0</value>
           </editFormat>
+          <editFormat>
+            <key>en</key>
+            <value>CHN = ''; * P = 0</value>
+          </editFormat>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
@@ -903,6 +1069,12 @@
         <key>ka</key>
         <value>მარჯვენა სვეტი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Right Column</value>
+      </title>
+      <width>50</width>
+      <horizontalStretch>false</horizontalStretch>
       <extendedTooltip>
         <name>ПраваяКолонкаExtendedTooltip</name>
         <id>251</id>
@@ -936,6 +1108,10 @@
       <key>ka</key>
       <value>თავსართი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Heder</value>
+    </title>
     <extendedTooltip>
       <name>ШапкаExtendedTooltip</name>
       <id>243</id>
@@ -949,7 +1125,6 @@
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
       <behavior>Auto</behavior>
-      <representation>StrongSeparation</representation>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -1271,6 +1446,31 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
+            <items xsi:type="form:Button">
+              <name>ДокументыОснованияДобавитьКорректировкиРеализации</name>
+              <id>407</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ДокументыОснованияДобавитьКорректировкиРеализацииРасширеннаяПодсказка</name>
+                <id>408</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ДобавитьКорректировкиРеализации</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1284,9 +1484,17 @@
               <key>ka</key>
               <value>დოკუმენტის დამატება</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Add documents</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Добавить документы</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Add documents</value>
             </toolTip>
             <extendedTooltip>
               <name>ДобавитьДокументыРасширеннаяПодсказка</name>
@@ -1472,6 +1680,10 @@
         <key>ka</key>
         <value>საფუძვლის დოკუმენტები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>founding documents</value>
+      </title>
       <toolTip>
         <key>ka</key>
         <value>ჯგუფი საფუძვლის დოკუმენტები</value>
@@ -1643,6 +1855,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Запасы.Количество</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЗапасыКоличествоПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ЗапасыКоличествоExtendedTooltip</name>
             <id>275</id>
@@ -1710,11 +1926,13 @@
             <autoMaxHeight>true</autoMaxHeight>
             <horizontalStretch>false</horizontalStretch>
             <choiceListButton>true</choiceListButton>
+            <dropListButton>true</dropListButton>
             <choiceButton>false</choiceButton>
+            <openButton>false</openButton>
             <autoChoiceIncomplete>true</autoChoiceIncomplete>
             <autoMarkIncomplete>true</autoMarkIncomplete>
-            <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -1728,6 +1946,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Запасы.Цена</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЗапасыЦенаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ЗапасыЦенаExtendedTooltip</name>
             <id>277</id>
@@ -1769,6 +1991,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Запасы.Сумма</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЗапасыСуммаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ЗапасыСуммаExtendedTooltip</name>
             <id>278</id>
@@ -1809,6 +2035,10 @@
             <segments>Объект.Запасы.СтавкаНДС</segments>
           </dataPath>
           <skipOnInput>true</skipOnInput>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЗапасыСтавкаНДСПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ЗапасыСтавкаНДСExtendedTooltip</name>
             <id>279</id>
@@ -1849,6 +2079,10 @@
             <segments>Объект.Запасы.СуммаНДС</segments>
           </dataPath>
           <skipOnInput>true</skipOnInput>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЗапасыСуммаНДСПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ЗапасыСуммаНДСExtendedTooltip</name>
             <id>280</id>
@@ -2012,12 +2246,20 @@
               <key>ka</key>
               <value>Запасы стандартные кнопки</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Запасы стандартные кнопки</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Запасы стандартные кнопки</value>
             </toolTip>
             <toolTip>
               <key>ka</key>
+              <value>Запасы стандартные кнопки</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
               <value>Запасы стандартные кнопки</value>
             </toolTip>
             <extendedTooltip>
@@ -2108,6 +2350,10 @@
             <toolTip>
               <key>ka</key>
               <value>Запасы сортировка</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Stocks Sorting</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыСортировкаРасширеннаяПодсказка</name>
@@ -2274,6 +2520,10 @@
       <title>
         <key>ka</key>
         <value>საქონელი/მომსახურება</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Goods / Services</value>
       </title>
       <extendedTooltip>
         <name>ГруппаЗапасыExtendedTooltip</name>
@@ -2706,6 +2956,10 @@
         <key>ka</key>
         <value>ავანსები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Advances</value>
+      </title>
       <extendedTooltip>
         <name>ГруппаАвансыРасширеннаяПодсказка</name>
         <id>335</id>
@@ -2738,6 +2992,10 @@
           <title>
             <key>ka</key>
             <value>ტვირთის გამგზავნი:</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Dispatcher:</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -2776,6 +3034,10 @@
           <title>
             <key>ka</key>
             <value>ტვირთის მიმღები:</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Consignee:</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -2817,6 +3079,10 @@
           <key>ka</key>
           <value>წარწერების ჯგუფი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>writing group</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа надписи</value>
@@ -2824,6 +3090,10 @@
         <toolTip>
           <key>ka</key>
           <value>წარწერების ჯგუფი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>writing group</value>
         </toolTip>
         <extendedTooltip>
           <name>ГруппаНадписиExtendedTooltip</name>
@@ -2907,6 +3177,10 @@
             <key>ka</key>
             <value>ტვირთგამგზავნის ჯგუფი</value>
           </title>
+          <title>
+            <key>en</key>
+            <value>Group shipper</value>
+          </title>
           <toolTip>
             <key>ru</key>
             <value>Грузоотправитель</value>
@@ -2914,6 +3188,10 @@
           <toolTip>
             <key>ka</key>
             <value>ტვირთის გამგზავნი:</value>
+          </toolTip>
+          <toolTip>
+            <key>en</key>
+            <value>Consignor</value>
           </toolTip>
           <extendedTooltip>
             <name>ГруппаГрузоотправительExtendedTooltip</name>
@@ -2990,6 +3268,10 @@
           <key>ka</key>
           <value>ველის ჯგუფი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>field Group</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа поля</value>
@@ -2997,6 +3279,10 @@
         <toolTip>
           <key>ka</key>
           <value>ველის ჯგუფი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>field Group</value>
         </toolTip>
         <extendedTooltip>
           <name>ГруппаПоляExtendedTooltip</name>
@@ -3030,6 +3316,10 @@
         <key>ka</key>
         <value>დამატებით</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Additionally</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Дополнительно</value>
@@ -3037,6 +3327,10 @@
       <toolTip>
         <key>ka</key>
         <value>დამატებით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Additionally</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаДополнительноExtendedTooltip</name>
@@ -3066,6 +3360,10 @@
       <key>ka</key>
       <value>გვერდები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Pages</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Страницы</value>
@@ -3073,6 +3371,10 @@
     <toolTip>
       <key>ka</key>
       <value>გვერდები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Pages</value>
     </toolTip>
     <extendedTooltip>
       <name>СтраницыExtendedTooltip</name>
@@ -3203,6 +3505,10 @@
         <key>ka</key>
         <value>შედეგები</value>
       </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Итоги</value>
+      </toolTip>
       <extendedTooltip>
         <name>ИтогиExtendedTooltip</name>
         <id>294</id>
@@ -3311,6 +3617,10 @@
         <key>ka</key>
         <value>ავანსი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Prepaid expense</value>
+      </title>
       <extendedTooltip>
         <name>ИтогиАвансРасширеннаяПодсказка</name>
         <id>291</id>
@@ -3343,6 +3653,10 @@
     <toolTip>
       <key>ka</key>
       <value>სარდაფი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Подвал</value>
     </toolTip>
     <extendedTooltip>
       <name>ПодвалExtendedTooltip</name>
@@ -3377,6 +3691,10 @@
         <key>ka</key>
         <value>დოკუმენტის ავტორი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Автор Документа</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -3389,6 +3707,10 @@
       <toolTip>
         <key>ka</key>
         <value>მომხმარებელი, დოკუმენტის ავტორი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The user, the author of the document</value>
       </toolTip>
       <extendedTooltip>
         <name>КартинкаАвторДокументаExtendedTooltip</name>
@@ -3438,6 +3760,10 @@
         <key>ka</key>
         <value>დოკუმენტის ავტორი</value>
       </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Автор Документа</value>
+      </toolTip>
       <extendedTooltip>
         <name>АвторДокументаExtendedTooltip</name>
         <id>301</id>
@@ -3483,6 +3809,10 @@
       <key>ka</key>
       <value>ინფორმაცია</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Information</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Группа информация</value>
@@ -3490,6 +3820,10 @@
     <toolTip>
       <key>ka</key>
       <value>ჯგუფი ინფორმაცია</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Group information</value>
     </toolTip>
     <extendedTooltip>
       <name>ГруппаИнформацияExtendedTooltip</name>
@@ -3573,6 +3907,10 @@
       <key>ka</key>
       <value>ძირითადი რეკვიზიტები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Key details</value>
+    </title>
     <id>2</id>
     <valueType>
       <types>String</types>
@@ -3594,6 +3932,10 @@
     <title>
       <key>ka</key>
       <value>ფასები და ვალუტა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Цены и валюта</value>
     </title>
     <id>3</id>
     <valueType>
@@ -3618,6 +3960,10 @@
       <key>ka</key>
       <value>კომპანია</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Company</value>
+    </title>
     <id>4</id>
     <valueType>
       <types>CatalogRef.Организации</types>
@@ -3638,6 +3984,10 @@
     <title>
       <key>ka</key>
       <value>დოკუმენტის თარიღი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Document Date</value>
     </title>
     <id>5</id>
     <valueType>
@@ -3663,6 +4013,10 @@
       <key>ka</key>
       <value>საავანსო ოპერაციის ტიპი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Kind of an advance operation</value>
+    </title>
     <id>7</id>
     <valueType>
       <types>EnumRef.ВидыОперацийСчетФактура</types>
@@ -3683,6 +4037,10 @@
     <title>
       <key>ka</key>
       <value>კონტრაგენტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Counterparty</value>
     </title>
     <id>6</id>
     <valueType>
@@ -3705,6 +4063,10 @@
       <key>ka</key>
       <value>არ გავხსნათ ფორმა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Do Not Open a Form</value>
+    </title>
     <id>8</id>
     <valueType>
       <types>Boolean</types>
@@ -3725,6 +4087,10 @@
     <title>
       <key>ka</key>
       <value>სურათი დოკუმენტის მდგომარეობა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>document state image</value>
     </title>
     <id>9</id>
     <valueType>
@@ -3750,6 +4116,10 @@
       <key>ka</key>
       <value>ნებადართულია გატარება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Разрешено проведение</value>
+    </title>
     <id>10</id>
     <valueType>
       <types>Boolean</types>
@@ -3770,6 +4140,10 @@
     <title>
       <key>ka</key>
       <value>დოკუმენტის მდგომარეობა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>document status</value>
     </title>
     <id>11</id>
     <valueType>
@@ -3795,6 +4169,10 @@
       <key>ka</key>
       <value>შესაერთებელი მოწყობილობის გამოყენება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Использовать подключаемое оборудование</value>
+    </title>
     <id>12</id>
     <valueType>
       <types>Boolean</types>
@@ -3816,6 +4194,10 @@
       <key>ka</key>
       <value>ეროვნული ვალუტა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>National Currency</value>
+    </title>
     <id>13</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
@@ -3836,6 +4218,10 @@
     <title>
       <key>ka</key>
       <value>ოპერაციის თვე</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>month operation</value>
     </title>
     <id>15</id>
     <valueType>
@@ -3861,6 +4247,10 @@
       <key>ka</key>
       <value>დოკუმენტებიდან შევსება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Fill out documents</value>
+    </title>
     <id>8</id>
     <toolTip>
       <key>ru</key>
@@ -3869,6 +4259,10 @@
     <toolTip>
       <key>ka</key>
       <value>დოკუმენტებიდან შევსება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Fill out documents</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3890,6 +4284,10 @@
       <key>ka</key>
       <value>შენახვა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>retain</value>
+    </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
@@ -3898,6 +4296,10 @@
     <toolTip>
       <key>ka</key>
       <value>შენახვა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>retain</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3919,6 +4321,10 @@
       <key>ka</key>
       <value>გაგზავნა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>to send</value>
+    </title>
     <id>2</id>
     <toolTip>
       <key>ru</key>
@@ -3927,6 +4333,10 @@
     <toolTip>
       <key>ka</key>
       <value>გაგზავნა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>to send</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3947,6 +4357,10 @@
     <title>
       <key>ka</key>
       <value>გასავლის ზედდებულების დამატება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Add overhead consumables</value>
     </title>
     <id>3</id>
     <use>
@@ -3969,10 +4383,18 @@
       <key>ka</key>
       <value>უკან დაბრუნებების დამატება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Add refunds</value>
+    </title>
     <id>4</id>
     <toolTip>
       <key>ru</key>
       <value>Добавить возвраты</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Add refunds</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3994,6 +4416,10 @@
       <key>ka</key>
       <value>შეკვეთა-განწესების დამატება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Add work orders</value>
+    </title>
     <id>5</id>
     <use>
       <common>true</common>
@@ -4014,6 +4440,10 @@
     <title>
       <key>ka</key>
       <value>ავანსების შევსება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>fill advances</value>
     </title>
     <id>6</id>
     <use>
@@ -4040,6 +4470,10 @@
       <key>ka</key>
       <value>ავანსის დამატება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Add advances</value>
+    </title>
     <id>7</id>
     <use>
       <common>true</common>
@@ -4054,6 +4488,27 @@
     </action>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ДобавитьКорректировкиРеализации</name>
+    <title>
+      <key>ru</key>
+      <value>Добавить корректировки реализации</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>რეალიზაციის კორექტირებების დამატება</value>
+    </title>
+    <id>9</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьКорректировкиРеализации</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>
     <name>User_ID</name>

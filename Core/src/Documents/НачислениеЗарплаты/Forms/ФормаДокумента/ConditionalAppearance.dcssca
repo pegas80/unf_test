@@ -29,6 +29,10 @@
 						<v8:lang>ka</v8:lang>
 						<v8:content>ზომა</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>The size</v8:content>
+					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
 		</appearance>
@@ -62,6 +66,10 @@
 						<v8:lang>ka</v8:lang>
 						<v8:content>დღე</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>days</v8:content>
+					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
 		</appearance>
@@ -94,6 +102,10 @@
 					<v8:item>
 						<v8:lang>ka</v8:lang>
 						<v8:content>საათი</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>hours</v8:content>
 					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
@@ -132,6 +144,10 @@
 					<v8:item>
 						<v8:lang>ka</v8:lang>
 						<v8:content>&lt;შევსება არ ხდება&gt;</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>&lt;Do not fill&gt;</v8:content>
 					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
@@ -174,6 +190,10 @@
 					<v8:item>
 						<v8:lang>ka</v8:lang>
 						<v8:content>&lt;შევსება არ ხდება&gt;</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>&lt;Do not fill&gt;</v8:content>
 					</v8:item>
 				</dcscor:value>
 			</dcscor:item>
@@ -218,103 +238,6 @@
 			<dcscor:item xsi:type="SettingsParameterValue">
 				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
 				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</item>
-	<item>
-		<selection>
-			<item>
-				<field>НачисленияУдержанияОтработаноДней</field>
-			</item>
-			<item>
-				<field>НачисленияУдержанияОтработаноЧасов</field>
-			</item>
-		</selection>
-		<filter>
-			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">УчетПоПроектам</left>
-				<comparisonType>Equal</comparisonType>
-				<right xsi:type="xs:boolean">true</right>
-			</item>
-		</filter>
-		<appearance>
-			<dcscor:item xsi:type="SettingsParameterValue">
-				<dcscor:parameter>Видимость</dcscor:parameter>
-				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</item>
-	<item>
-		<selection>
-			<item>
-				<field>НачисленияУдержанияОтработаноДнейПоПроекту</field>
-			</item>
-		</selection>
-		<filter>
-			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">Объект.НачисленияУдержания.ОтработаноДнейПоПроекту</left>
-				<comparisonType>Equal</comparisonType>
-				<right xsi:type="xs:decimal">0</right>
-			</item>
-		</filter>
-		<appearance>
-			<dcscor:item xsi:type="SettingsParameterValue">
-				<dcscor:parameter>ЦветТекста</dcscor:parameter>
-				<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-			</dcscor:item>
-			<dcscor:item xsi:type="SettingsParameterValue">
-				<dcscor:parameter>Текст</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Дней</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>ka</v8:lang>
-						<v8:content>დღე</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Дней</v8:content>
-					</v8:item>
-				</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</item>
-	<item>
-		<selection>
-			<item>
-				<field>НачисленияУдержанияОтработаноЧасовПоПроекту</field>
-			</item>
-		</selection>
-		<filter>
-			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">Объект.НачисленияУдержания.ОтработаноЧасовПоПроекту</left>
-				<comparisonType>Equal</comparisonType>
-				<right xsi:type="xs:decimal">0</right>
-			</item>
-		</filter>
-		<appearance>
-			<dcscor:item xsi:type="SettingsParameterValue">
-				<dcscor:parameter>ЦветТекста</dcscor:parameter>
-				<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
-			</dcscor:item>
-			<dcscor:item xsi:type="SettingsParameterValue">
-				<dcscor:parameter>Текст</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Часов</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>ka</v8:lang>
-						<v8:content>საათი</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Часов</v8:content>
-					</v8:item>
-				</dcscor:value>
 			</dcscor:item>
 		</appearance>
 	</item>

@@ -298,7 +298,11 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>მაქსიმალური ზღვარი</v8:content>
+					<v8:content>МаксимальныйУровеньЗапаса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მარაგის მაქსიმალური ზღვარი</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -308,13 +312,13 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>მინიმალური ზღვარი</v8:content>
+					<v8:content>МинимальныйУровеньЗапаса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მარაგის მინიმალური ზღვარი</v8:content>
 				</v8:item>
 			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Проект</dataPath>
-			<field>Проект</field>
 		</field>
 		<item xsi:type="DataSetQuery">
 			<name>НаборДанных1</name>
@@ -627,13 +631,6 @@
 					</v8:item>
 				</title>
 			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>Проект</dataPath>
-				<field>Проект</field>
-				<role>
-					<dcscom:dimension>true</dcscom:dimension>
-				</role>
-			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВЫБОР
@@ -678,8 +675,7 @@
 		ИНАЧЕ "Собственные"
 	КОНЕЦ КАК Статус,
 	ЕСТЬNULL(УправлениеЗапасами.МинимальныйУровеньЗапаса, 0) КАК МинимальныйУровеньЗапаса,
-	ЕСТЬNULL(УправлениеЗапасами.МаксимальныйУровеньЗапаса, 0) КАК МаксимальныйУровеньЗапаса,
-	ЗапасыОстаткиИОбороты.Проект
+	ЕСТЬNULL(УправлениеЗапасами.МаксимальныйУровеньЗапаса, 0) КАК МаксимальныйУровеньЗапаса
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
 			,
@@ -806,13 +802,6 @@
 				<dataPath>МинимальныйУровеньЗапаса</dataPath>
 				<field>МинимальныйУровеньЗапаса</field>
 			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>Проект</dataPath>
-				<field>Проект</field>
-				<role>
-					<dcscom:dimension>true</dcscom:dimension>
-				</role>
-			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Номенклатура.Ссылка КАК Номенклатура,
@@ -851,8 +840,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ЗапасыОстаткиИОбороты.Организация,
-	ЗапасыОстаткиИОбороты.СтруктурнаяЕдиница,
-	ЗапасыОстаткиИОбороты.Проект
+	ЗапасыОстаткиИОбороты.СтруктурнаяЕдиница
 ПОМЕСТИТЬ ВременнаяТаблицаДанныеПоСкладам
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
@@ -875,15 +863,14 @@
 	ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка) КАК Партия,
 	"Собственные" КАК Статус,
 	УправлениеЗапасами.МинимальныйУровеньЗапаса,
-	УправлениеЗапасами.МаксимальныйУровеньЗапаса,
-	ВременнаяТаблицаДанныеПоСкладам.Проект
+	УправлениеЗапасами.МаксимальныйУровеньЗапаса
 ИЗ
 	ВременнаяТаблицаНоменклатураХарактеристики КАК ВременнаяТаблицаНоменклатураХарактеристики
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВременнаяТаблицаДанныеПоСкладам КАК ВременнаяТаблицаДанныеПоСкладам
 		ПО (ИСТИНА)
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.УправлениеЗапасами КАК УправлениеЗапасами
-		ПО (УправлениеЗапасами.Номенклатура = ВременнаяТаблицаНоменклатураХарактеристики.Номенклатура)
-			И (УправлениеЗапасами.Характеристика = ВременнаяТаблицаНоменклатураХарактеристики.Характеристика)</query>
+		ПО УправлениеЗапасами.Номенклатура = ВременнаяТаблицаНоменклатураХарактеристики.Номенклатура
+			И УправлениеЗапасами.Характеристика = ВременнаяТаблицаНоменклатураХарактеристики.Характеристика</query>
 		</item>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
@@ -1008,13 +995,6 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Проект</dataPath>
-			<field>Проект</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ЦеныНоменклатурыКонтрагентов.Номенклатура КАК Номенклатура,
@@ -1074,8 +1054,7 @@
 		ИНАЧЕ "Собственные"
 	КОНЕЦ КАК Статус,
 	УправлениеЗапасами.МинимальныйУровеньЗапаса,
-	УправлениеЗапасами.МаксимальныйУровеньЗапаса,
-	ЗапасыОстаткиИОбороты.Проект
+	УправлениеЗапасами.МаксимальныйУровеньЗапаса
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
 			,
@@ -1211,11 +1190,11 @@
 	</totalField>
 	<totalField>
 		<dataPath>МаксимальныйУровеньЗапаса</dataPath>
-		<expression>Сумма(МаксимальныйУровеньЗапаса)</expression>
+		<expression>(МаксимальныйУровеньЗапаса)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>МинимальныйУровеньЗапаса</dataPath>
-		<expression>Сумма(МинимальныйУровеньЗапаса)</expression>
+		<expression>(МинимальныйУровеньЗапаса)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -1444,9 +1423,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Проект</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Номенклатура</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1659,24 +1635,6 @@
 					</dcsset:item>
 					<dcsset:placement>Vertically</dcsset:placement>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>МаксимальныйУровеньЗапаса</dcsset:field>
-					<dcsset:lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>მაქსიმალური ზღვარი</v8:content>
-						</v8:item>
-					</dcsset:lwsTitle>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>МинимальныйУровеньЗапаса</dcsset:field>
-					<dcsset:lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>მინიმალური ზღვარი</v8:content>
-						</v8:item>
-					</dcsset:lwsTitle>
-				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>46924fd1-c276-47d3-b632-9bcf07404d73</dcsset:userSettingID>
 			</dcsset:selection>
@@ -1750,7 +1708,7 @@
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Проект</dcsset:field>
+					<dcsset:field>СтруктурнаяЕдиница</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -1781,6 +1739,12 @@
 						</dcsset:item>
 						<dcsset:item>
 							<dcsset:field>СуммаКонечныйОстаток</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>МаксимальныйУровеньЗапаса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>МинимальныйУровеньЗапаса</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
@@ -1830,7 +1794,7 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Проект</dcsset:field>
+						<dcsset:field>Номенклатура</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -1846,7 +1810,7 @@
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:field>Регистратор</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -1859,39 +1823,22 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
-					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Регистратор</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>6806fe88-6527-4fc0-ba73-acdfa731ed67</dcsset:userSettingID>
-						<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>По документам движения</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>ka</v8:lang>
-								<v8:content>По документам движения</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>According to the movement documents</v8:content>
-							</v8:item>
-						</dcsset:userSettingPresentation>
-					</dcsset:item>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>b38658c5-81f8-45f7-9db9-43dd82951e55</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По документам движения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>По документам движения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>According to the movement documents</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
 				</dcsset:item>
 			</dcsset:item>
 			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>

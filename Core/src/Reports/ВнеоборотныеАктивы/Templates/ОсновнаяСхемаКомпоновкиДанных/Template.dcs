@@ -23,15 +23,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Регистратор</dataPath>
-			<field>Регистратор</field>
-			<role>
-				<dcscom:periodNumber>1</dcscom:periodNumber>
-				<dcscom:periodType>Main</dcscom:periodType>
-				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>АмортизацияКонечныйОстаток</dataPath>
 			<field>АмортизацияКонечныйОстаток</field>
 			<title xsi:type="v8:LocalStringType">
@@ -284,24 +275,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Подразделение</dataPath>
-			<field>Подразделение</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Подразделение</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>ქვეგანყოფილება</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Subdivision</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СтоимостьОстаточная</dataPath>
 			<field>СтоимостьОстаточная</field>
 			<title xsi:type="v8:LocalStringType">
@@ -388,22 +361,74 @@
 			<field>СчетУчетаРегл</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>СрокИспользованияДляВычисленияАмортизации</dataPath>
 			<field>СрокИспользованияДляВычисленияАмортизации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>გამოყენების ვადა</v8:content>
+					<v8:content>რეგისტრატორი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнеоборотныйАктивТипВнеоборотныеАктивы</dataPath>
+			<field>ВнеоборотныйАктивТипВнеоборотныеАктивы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имущество.Тип внеоборотные активы</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+		<query>ВЫБРАТЬ
+	ПараметрыВнеоборотныхАктивов.Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив,
+	МАКСИМУМ(ПараметрыВнеоборотныхАктивов.Период) КАК Период
+ПОМЕСТИТЬ ВТ
+ИЗ
+	РегистрСведений.ПараметрыВнеоборотныхАктивов КАК ПараметрыВнеоборотныхАктивов
+ГДЕ
 	ВЫБОР
-		КОГДА ВнеоборотныеАктивыОстаткиИОбороты.Регистратор = НЕОПРЕДЕЛЕНО
-			ТОГДА NULL
-		ИНАЧЕ ВнеоборотныеАктивыОстаткиИОбороты.Регистратор
-	КОНЕЦ КАК Регистратор,
+			КОГДА &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				ТОГДА ПараметрыВнеоборотныхАктивов.Период &lt; &amp;КонецПериода
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	ПараметрыВнеоборотныхАктивов.Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПараметрыВнеоборотныхАктивов.Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив,
+	ПараметрыВнеоборотныхАктивов.СтруктурнаяЕдиница,
+	ПараметрыВнеоборотныхАктивов.СрокИспользованияДляВычисленияАмортизации
+ПОМЕСТИТЬ Вт2
+ИЗ
+	ВТ КАК ВТ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыВнеоборотныхАктивов КАК ПараметрыВнеоборотныхАктивов
+		ПО ВТ.Организация = ПараметрыВнеоборотныхАктивов.Организация
+			И ВТ.ВнеоборотныйАктив = ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив
+			И ВТ.Период = ПараметрыВнеоборотныхАктивов.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодСекунда,
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодДень,
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодМесяц,
@@ -421,7 +446,6 @@
 	ВнеоборотныеАктивыОстаткиИОбороты.АмортизацияРасход,
 	ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив.СчетУчетаРегл КАК СчетУчета,
 	ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив.СчетАмортизацииРегл КАК СчетАмортизации,
-	ПараметрыВнеоборотныхАктивовСрезПоследних.СтруктурнаяЕдиница КАК Подразделение,
 	ВнеоборотныеАктивыОстаткиИОбороты.СтоимостьПриход - ВнеоборотныеАктивыОстаткиИОбороты.СтоимостьРасход КАК СтоимостьИзменение,
 	ВнеоборотныеАктивыОстаткиИОбороты.СтоимостьКонечныйОстаток - ВнеоборотныеАктивыОстаткиИОбороты.АмортизацияКонечныйОстаток КАК СтоимостьОстаточная,
 	ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив.Код КАК ИнвентарныйНомер,
@@ -434,12 +458,19 @@
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодКвартал,
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодПолугодие,
 	ВнеоборотныеАктивыОстаткиИОбороты.ПериодГод,
-	ПараметрыВнеоборотныхАктивовСрезПоследних.СрокИспользованияДляВычисленияАмортизации
+	ВТ.СтруктурнаяЕдиница,
+	ВТ.СрокИспользованияДляВычисленияАмортизации,
+	ВЫБОР
+		КОГДА ВнеоборотныеАктивыОстаткиИОбороты.Регистратор = НЕОПРЕДЕЛЕНО
+			ТОГДА NULL
+		ИНАЧЕ ВнеоборотныеАктивыОстаткиИОбороты.Регистратор
+	КОНЕЦ КАК Регистратор,
+	ВТ.ВнеоборотныйАктив.ТипВнеоборотныеАктивы
 ИЗ
 	РегистрНакопления.ВнеоборотныеАктивы.ОстаткиИОбороты(, , Авто, Движения, ) КАК ВнеоборотныеАктивыОстаткиИОбороты
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыВнеоборотныхАктивов.СрезПоследних(&amp;КонецПериода, ) КАК ПараметрыВнеоборотныхАктивовСрезПоследних
-		ПО ВнеоборотныеАктивыОстаткиИОбороты.Организация = ПараметрыВнеоборотныхАктивовСрезПоследних.Организация
-			И ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив = ПараметрыВнеоборотныхАктивовСрезПоследних.ВнеоборотныйАктив</query>
+		ЛЕВОЕ СОЕДИНЕНИЕ Вт2 КАК ВТ
+		ПО ВнеоборотныеАктивыОстаткиИОбороты.Организация = ВТ.Организация
+			И ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив = ВТ.ВнеоборотныйАктив</query>
 	</dataSet>
 	<totalField>
 		<dataPath>АмортизацияКонечныйОстаток</dataPath>
@@ -493,6 +524,10 @@
 		<dataPath>СтоимостьРасход</dataPath>
 		<expression>Сумма(СтоимостьРасход)</expression>
 	</totalField>
+	<totalField>
+		<dataPath>ВнеоборотныйАктивТипВнеоборотныеАктивы</dataPath>
+		<expression>Количество(ВнеоборотныйАктивТипВнеоборотныеАктивы)</expression>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -545,33 +580,6 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;СтПериод.ДатаОкончания</expression>
-		<availableAsField>false</availableAsField>
-	</parameter>
-	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>ka</v8:lang>
-				<v8:content>პერიოდი</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Period</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>&amp;СтПериод.ДатаНачала</expression>
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
@@ -644,6 +652,9 @@
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВнеоборотныйАктив.ТипВнеоборотныеАктивы</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВнеоборотныйАктив</dcsset:field>
@@ -858,6 +869,10 @@
 			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -867,11 +882,11 @@
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Начисленная амортизация</v8:content>
+							<v8:content>Лист Основних Средств</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>ka</v8:lang>
-							<v8:content>დარიცხული ამორტიზაცია</v8:content>
+							<v8:content>ძირითადი საშუალებების უწყისი</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -891,9 +906,10 @@
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:field>СтруктурнаяЕдиница</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

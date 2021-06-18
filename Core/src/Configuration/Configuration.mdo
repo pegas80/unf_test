@@ -15,7 +15,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="fa8da642-afe1-467d-b297-91e8256e2e60"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="20f495c2-06f2-408c-8e47-820526d98e1e"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="64e053a2-692f-4df1-8c1d-2e1cfce66792"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="e41c5ab9-4b0b-483c-9eb5-f205e18ddf80"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="173a2a32-8a66-4ef5-b8a4-500c11fad9eb"/>
   <configurationExtensionCompatibilityMode>8.3.25</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
@@ -103,6 +103,10 @@
       <key>ka</key>
       <value>რუსული</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Russian</value>
+    </synonym>
     <languageCode>ru</languageCode>
   </languages>
   <languages uuid="063c0bb2-4dab-4fec-9bc7-013aa4d61840">
@@ -114,6 +118,10 @@
     <synonym>
       <key>ka</key>
       <value>ქართული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Georgian</value>
     </synonym>
     <languageCode>ka</languageCode>
   </languages>
@@ -1614,6 +1622,8 @@
   <roles>Role.НастройкаКоличестваЛицензии</roles>
   <roles>Role.АдминистрированиеААГрупп</roles>
   <roles>Role.ГарантияВЗаказНаряде</roles>
+  <roles>Role.РезервированиеСнятьРезервВЗаказе</roles>
+  <roles>Role.РаботаСОборудованиемOffline</roles>
   <roles>Role.AzRyДобавлениеИзменениеAzRyСправочников</roles>
   <roles>Role.AzRyУдаление</roles>
   <roles>Role.AzRyДобавлениеИзменениеПодсистемыРозничныеПродажи</roles>
@@ -1713,6 +1723,7 @@
   <commonTemplates>CommonTemplate.СтруктураПодчиненности</commonTemplates>
   <commonTemplates>CommonTemplate.КомпонентаПечатиШтрихкодов</commonTemplates>
   <commonTemplates>CommonTemplate.ПФ_MXL_Invoice</commonTemplates>
+  <commonTemplates>CommonTemplate.ДрайверBOG_AXConnect</commonTemplates>
   <filterCriteria>FilterCriterion.ДисконтныеКартыПоКонтрагенту</filterCriteria>
   <filterCriteria>FilterCriterion.ДокументыПоЗаказуПокупателя</filterCriteria>
   <filterCriteria>FilterCriterion.ДокументыПоЗаказуПоставщику</filterCriteria>
@@ -2774,6 +2785,7 @@
   <commonModules>CommonModule.LT_КонвертацияXML_Фаилов_DMS</commonModules>
   <commonModules>CommonModule.ПодключаемоеОборудованиеDATECSФискальныеРегистраторыКлиент</commonModules>
   <commonModules>CommonModule.РозницаHTTP</commonModules>
+  <commonModules>CommonModule.ПодключаемоеОборудованиеBOG_AXConnect</commonModules>
   <commonModules>CommonModule.AzRyDEV</commonModules>
   <commonModules>CommonModule.AzRyУправлениеНебольшойФирмойСервер</commonModules>
   <commonModules>CommonModule.AzRyРаботаСДокументамыКлиентСервер</commonModules>
@@ -3436,6 +3448,15 @@
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияСтатьяДДС</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияДополнительныеФункцииПроизводства</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияНаправлениеДеятельностиТаблицеРасходныхЗакупочныхДокументации</functionalOptions>
+  <functionalOptions>FunctionalOption.ПроверятьПлатежиПередОтправкойВБанк</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользованиеВложенийФункциональнаяОпция</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьГарантииВНарядЗаказах</functionalOptions>
+  <functionalOptions>FunctionalOption.НерегулярнаяОплатаВРознице</functionalOptions>
+  <functionalOptions>FunctionalOption.АвтоматическоеПроизводство</functionalOptions>
+  <functionalOptions>FunctionalOption.НеРезервировотьОстоткиВПриходнойНакладной</functionalOptions>
+  <functionalOptions>FunctionalOption.ФункциональнаяОпцияФункционалРезервированияЗаказов</functionalOptions>
+  <functionalOptions>FunctionalOption.ФункциональнаяОпцияТипЦеныНоменклатурыПоКоличеству</functionalOptions>
+  <functionalOptions>FunctionalOption.ОтчетПоПроводкамВторойВариант</functionalOptions>
   <functionalOptionsParameters>FunctionalOptionsParameter.Организация</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.Пользователь</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.ТипВерсионируемогоОбъекта</functionalOptionsParameters>
@@ -3741,9 +3762,12 @@
   <commandGroups>CommandGroup.Документы</commandGroups>
   <commandGroups>CommandGroup.RS_GE</commandGroups>
   <constants>Constant.УдалитьАлгоритмПодписи</constants>
-  <constants>Constant.АдресСервисаНовостей</constants>
-  <constants>Constant.АдресДляВосстановленияПароляУчетнойЗаписи</constants>
   <constants>Constant.АвтоматическиПодключатьФормыРОЧерезМеханизмОнлайнСервисовРО</constants>
+  <constants>Constant.АвтоматическиНастраиватьРазрешенияВПрофиляхБезопасности</constants>
+  <constants>Constant.АдресДляВосстановленияПароляУчетнойЗаписи</constants>
+  <constants>Constant.АдресПрограммногоИнтерфейсаСлужбыПоддержки</constants>
+  <constants>Constant.АдресСервисаНовостей</constants>
+  <constants>Constant.ГлавныйУзел</constants>
   <constants>Constant.АдресПубликацииИнформационнойБазыВИнтернете</constants>
   <constants>Constant.АдресСервераСдачиОтчетности</constants>
   <constants>Constant.АдресСервисаНаправленийСдачиОтчетности</constants>
@@ -4143,18 +4167,15 @@
   <constants>Constant.ФункциональнаяОпцияИспользоватьИсториюНалогообложенияОрганизации</constants>
   <constants>Constant.ФункционалКодовРазблокировки</constants>
   <constants>Constant.ИспользоватьВЗаказНарядеУпрошенныйЗачеАавансов</constants>
-  <constants>Constant.ЗапретРедактированияДокументовОператоров</constants>
-  <constants>Constant.ПоказатСебестоимостиВТаблице</constants>
-  <constants>Constant.КонтролУникалностиПоКодуТранспортныеСредства</constants>
-  <constants>Constant.ФункционалПраваРедактированияНоменклатуры</constants>
+  <constants>Constant.ВидимостьСтатьяДДС</constants>
   <constants>Constant.ИспользоватьРегламентированныйПланСчетов</constants>
   <constants>Constant.ДатаНачалаИспользованияРеглПланаСчетов</constants>
-  <constants>Constant.ВидимостьСтатьяДДС</constants>
-  <constants>Constant.ЗначенияПоУмолначиюДругойТранспорт</constants>
   <constants>Constant.ФункциональнаяОпцияДополнительныеФункцииПроизводства</constants>
+  <constants>Constant.ЗначенияПоУмолначиюДругойТранспорт</constants>
   <constants>Constant.УстановитьВзаиморасчетыКонтрагента</constants>
-  <constants>Constant.РезервированиеБезСебестоимости</constants>
-  <constants>Constant.ФункциональДляУдаленияСвязанныхОбъектов</constants>
+  <constants>Constant.ФункционалПраваРедактированияНоменклатуры</constants>
+  <constants>Constant.ПоказатСебестоимостиВТаблице</constants>
+  <constants>Constant.ЗапретРедактированияДокументовОператоров</constants>
   <constants>Constant.ГруппироватьБухгалтерскиеПроводкиВДокументахДвиженияДенег</constants>
   <constants>Constant.КонтрольОстатковВЗаказеПокупателя</constants>
   <constants>Constant.ТипТранспортировкиДрогое</constants>
@@ -4166,12 +4187,12 @@
   <constants>Constant.КонтролСкидкиНаЗаказПокупателя</constants>
   <constants>Constant.ПозицияИмениВФИО</constants>
   <constants>Constant.ПозицияФамилииФИО</constants>
-  <constants>Constant.АвтоматическиПолучатьУведомленияОтЯндексКассы</constants>
+  <constants>Constant.КонтролУникалностиПоКодуТранспортныеСредства</constants>
   <constants>Constant.ФилтрСобитииПоОтветственному</constants>
   <constants>Constant.ФункциональнаяОпцияНаправлениеДеятельностиТаблицеРасходныхЗакупочныхДокументации</constants>
-  <constants>Constant.АвтоматическиНастраиватьРазрешенияВПрофиляхБезопасности</constants>
-  <constants>Constant.АдресПрограммногоИнтерфейсаСлужбыПоддержки</constants>
-  <constants>Constant.ГлавныйУзел</constants>
+  <constants>Constant.ФункциональДляУдаленияСвязанныхОбъектов</constants>
+  <constants>Constant.РезервированиеБезСебестоимости</constants>
+  <constants>Constant.АвтоматическиПолучатьУведомленияОтЯндексКассы</constants>
   <constants>Constant.НеРезервироватьВФормеПодбора</constants>
   <constants>Constant.Субконто1СчетовДоходаПродажи</constants>
   <constants>Constant.Субконто2СчетовДоходаПродажи</constants>
@@ -4179,9 +4200,30 @@
   <constants>Constant.КоличествоАктивныхПользователей</constants>
   <constants>Constant.ПарольДляУстановкиКоличестваАктивныхПользователей</constants>
   <constants>Constant.КонтрагентыБезВзаиморасчетовПоЗаказам</constants>
+  <constants>Constant.ФункциональнаяОпцияПроверятьПлатежиПередОтправкойВБанк</constants>
+  <constants>Constant.ПустойРеквизитСтатьяВДокументах</constants>
+  <constants>Constant.VINКодОбязательноеПоле</constants>
+  <constants>Constant.ОтключениеПроверкиРасчетаСПокупателямиВДокуменнтахЗаказНаряд_Покупателя</constants>
+  <constants>Constant.ДатаНачалаИспользованияНовогоДоступаКБанкуBOG</constants>
+  <constants>Constant.ИспользованиеТаможенногоДокумента</constants>
+  <constants>Constant.ВремяДляДокументовПомошникаЗагрузкиИзБанка</constants>
+  <constants>Constant.ИспользоватьГарантииВНарядЗаказах</constants>
+  <constants>Constant.ФункциональнаОпцияНерегулярнаяОплатаВРознице</constants>
+  <constants>Constant.АвтоматическоеПроизводство</constants>
+  <constants>Constant.выключениеАвтоматическихСкидок</constants>
+  <constants>Constant.ФункциональнаОпцияНеРезервировотьОстоткиВПриходнойНакладной</constants>
+  <constants>Constant.ПоискШтрихкодаВТабличнойЧастиДокументаЗаказПокупателя</constants>
+  <constants>Constant.АвтоматическоеСозданияПроизводстваПриНедостачиКассовойСмены</constants>
+  <constants>Constant.ДублироватьПечатьЧекаККМ</constants>
+  <constants>Constant.НоваяСхемаРасчетаПотребностейИКалькуляцииЗаказа</constants>
+  <constants>Constant.ОтключениеКонтроляОстатковВДокументахДенежныхСредств</constants>
+  <constants>Constant.ОтключениеАвтоматическогоРезервированияПриСбореТовара</constants>
+  <constants>Constant.ТипЦеныНоменклатурыПоКоличеству</constants>
+  <constants>Constant.ОтчетПоПроводкамВторойВариант</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <commonForms>CommonForm.АвтоматическийОбменСПодключаемымОборудованиемOffline</commonForms>
   <commonForms>CommonForm.АвтономнаяРабота</commonForms>
+  <commonForms>CommonForm.АвтономнаяРаботаВМоделиСервиса</commonForms>
   <commonForms>CommonForm.АдресУчастникаОбменаЭД</commonForms>
   <commonForms>CommonForm.АЛКОВводРеквизитовОП</commonForms>
   <commonForms>CommonForm.АЛКОДлительнаяОперация</commonForms>
@@ -4414,15 +4456,15 @@
   <commonForms>CommonForm.КоличествоПлановОбменаДистрибуции</commonForms>
   <commonForms>CommonForm.ФункционалСбораТоваров</commonForms>
   <commonForms>CommonForm.ФормаКонстантИнтеграцийСБанком</commonForms>
-  <commonForms>CommonForm.ФормаНастройкиDatecsФискальныйРегистратор</commonForms>
   <commonForms>CommonForm.ФормаКонстантИспользованияРеглУчета</commonForms>
   <commonForms>CommonForm.ПозицияИменивФИО</commonForms>
-  <commonForms>CommonForm.АвтономнаяРаботаВМоделиСервиса</commonForms>
+  <commonForms>CommonForm.ФормаНастройкиDatecsФискальныйРегистратор</commonForms>
   <commonForms>CommonForm.ПрисоединенныеФайлыСотрудники</commonForms>
   <commonForms>CommonForm.ПрисоединенныйФайлСотрудники</commonForms>
   <commonForms>CommonForm.ФормаНастройкиСубконтоСчета6110</commonForms>
   <commonForms>CommonForm.ФормаПароля</commonForms>
   <commonForms>CommonForm.КонстантыКоличествоАктивныхПользователей</commonForms>
+  <commonForms>CommonForm.ФормаНастройкиBOG_AXConnect</commonForms>
   <catalogs>Catalog.АвансовыйОтчетПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.АвтоматическиеСкидки</catalogs>
   <catalogs>Catalog.АктВыполненныхРаботПрисоединенныеФайлы</catalogs>
@@ -4719,6 +4761,8 @@
   <catalogs>Catalog.ПараметрыДляОбменаДаннымиРозницаHTTP</catalogs>
   <catalogs>Catalog.Адреса</catalogs>
   <catalogs>Catalog.ДопустимыеВидыЦен</catalogs>
+  <catalogs>Catalog.ДоступныеСклады</catalogs>
+  <catalogs>Catalog.НедоступныеГруппыНоменклатуры</catalogs>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRytmpНоменклатурныеГруппы</catalogs>
   <catalogs>Catalog.AzRyСпецификацииПриоритет</catalogs>
@@ -5322,6 +5366,8 @@
   <enums>Enum.ВидыОперацийСписаниеТопливаЗапасов</enums>
   <enums>Enum.ТипЛгот</enums>
   <enums>Enum.СтатусыКомПредложение</enums>
+  <enums>Enum.ПричиныКорректировкиСФ</enums>
+  <enums>Enum.ПриоритетСоответствияДляПоискаНоменклатурВБазе</enums>
   <enums>Enum.AzRyТипыКонвертацияВалюты</enums>
   <enums>Enum.AzRyТипыПроектов</enums>
   <enums>Enum.AzRyТипЗаписыАвтоматизацияНачисленийЗарплаты</enums>
@@ -5544,6 +5590,13 @@
   <reports>Report.АнализКоммерческихПредложений</reports>
   <reports>Report.Продажи1</reports>
   <reports>Report.ОтчетЗаСмену</reports>
+  <reports>Report.МинимальныеОстаткиНаСкладе</reports>
+  <reports>Report.АнализЗаказовИОстатков</reports>
+  <reports>Report.ДоходыРасходыПоЗаказамПокупателей</reports>
+  <reports>Report.ЗаказыНаПроизводство_ОстаткиМатериалов</reports>
+  <reports>Report.КонтактнаяИнформацияКонтрагента</reports>
+  <reports>Report.ОтчетПоПроводкамГоризонтальный</reports>
+  <reports>Report.ОстаткиНалоговыхЛьгот</reports>
   <reports>Report.ЗапасыПоПроектам</reports>
   <reports>Report.AzRyОборотноСальдоваяВедомостьРеглUSD</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
@@ -6116,6 +6169,9 @@
   <informationRegisters>InformationRegister.LT_ГруппаЗапасов</informationRegisters>
   <informationRegisters>InformationRegister.Пробег</informationRegisters>
   <informationRegisters>InformationRegister.ОдноразовыеНачисления</informationRegisters>
+  <informationRegisters>InformationRegister.АвтоматическоеПроизводство</informationRegisters>
+  <informationRegisters>InformationRegister.НумераторыЧековККМДляОчереди</informationRegisters>
+  <informationRegisters>InformationRegister.ЦеныНоменклатурыПоКоличество</informationRegisters>
   <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВнеоборотныеАктивы</accumulationRegisters>
@@ -6193,6 +6249,8 @@
   <accumulationRegisters>AccumulationRegister.СебестоимостьЗакупки</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗатратыНаОСиТС</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.НалоговыеЛготы</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ГарантийноеОбслуживание</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ОстаткиНалоговыхЛьгот</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.НачисленияИУдержанияВРазрезеПроекта</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyВременноеПередачаЗапасов</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.УдалитьВидыДоступа</chartsOfCharacteristicTypes>

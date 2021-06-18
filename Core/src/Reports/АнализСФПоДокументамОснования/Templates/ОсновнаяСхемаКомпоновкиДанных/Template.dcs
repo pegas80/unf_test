@@ -18,6 +18,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>აფ-ს ნომერი</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>SF number</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -31,6 +35,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>დღგ-ის თანხა აფ-ის მიხედვით პორტალზე</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The amount of VAT on the SF portal</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -46,6 +54,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>თანხა აფ-ის მიხედვით პორტალზე</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The sum of SF portal</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -59,6 +71,34 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>აფ მიღებული</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The resulting SF</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДС</dataPath>
+			<field>СуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -103,6 +143,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>ზედნადების თანხა</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The amount of the invoice</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -116,6 +160,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>ზედნადების დღგ-ს თანხა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>VAT amount of the invoice</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -131,6 +179,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>მიღებული ანგარიშფაქტურა</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The resulting SF</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -144,6 +196,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>საფუძვლის დოკუმენტი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>founding document</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -159,6 +215,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>კონტრაგენტი</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Counterparty</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
@@ -168,12 +228,12 @@
 	СчетФактураПолученныйГрузияДокументыОснования.ДокументОснование.Контрагент КАК Контрагент,
 	ВЫБОР
 		КОГДА СчетФактураПолученныйГрузияДокументыОснования.ДокументОснование ССЫЛКА Документ.РасходнаяНакладная
-			ТОГДА -СчетФактураПолученныйГрузияДокументыОснования.СуммаДокумента
+			ТОГДА СчетФактураПолученныйГрузияДокументыОснования.СуммаДокумента
 		ИНАЧЕ СчетФактураПолученныйГрузияДокументыОснования.СуммаДокумента
 	КОНЕЦ КАК Сумма,
 	ВЫБОР
 		КОГДА СчетФактураПолученныйГрузияДокументыОснования.ДокументОснование ССЫЛКА Документ.РасходнаяНакладная
-			ТОГДА -СчетФактураПолученныйГрузияДокументыОснования.СуммаНДС
+			ТОГДА СчетФактураПолученныйГрузияДокументыОснования.СуммаНДС
 		ИНАЧЕ СчетФактураПолученныйГрузияДокументыОснования.СуммаНДС
 	КОНЕЦ КАК СуммаНДС
 ИЗ
@@ -212,6 +272,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>დაწყ თარიღი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Date of the beginning</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -233,6 +297,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>დასრ თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>con Date</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -256,6 +324,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>v8:StandardPeriod</v8:Type>
@@ -277,6 +349,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>აფ ანალიზი საფუძვლის დოკუმენტებით</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>By analysis of SFs base documents</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">

@@ -1,4 +1,18 @@
 
+&НаСервере
+Процедура ПриСозданииНаСервере(Отказ, СтандартнаяОбработка)
+	
+	Если Параметры.Свойство("Сертификат") Тогда 
+		Сертификат = Параметры.Сертификат;
+	КонецЕсли;
+	
+	Если Параметры.Свойство("ПарольСертификата") Тогда 
+		ПарольСертификата = Параметры.ПарольСертификата;
+	КонецЕсли;
+	
+КонецПроцедуры
+
+
 &НаКлиенте
 Процедура ЗакрытьФорму(Команда)
 	ЭтаФорма.Закрыть();
@@ -9,22 +23,39 @@
 	
 	Перем mhttp;
 	
-	Сервер = "https://tbconline.ge/dbi/dbiService";
+	//Сервер = "https://tbconline.ge/dbi/dbiService";    https://secdbitst.tbconline.ge/dbi/dbiService
+	Если ЗначениеЗаполнено(СокрЛП(Сертификат)) Тогда
+		Сервер = "secdbi.tbconline.ge/dbi/dbiService";
+	Иначе
+		Сервер = "tbconline.ge/dbi/dbiService";
+	КонецЕсли;
 	
 	Если mhttp = Неопределено Тогда
-		mhttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1"); 
+		//mhttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1");
+		Если ЗначениеЗаполнено(СокрЛП(Сертификат)) Тогда 
+			mhttp = Новый HTTPСоединение(Сервер,,,,,,Новый ЗащищенноеСоединениеOpenSSL(Новый СертификатКлиентаФайл(СокрЛП(Сертификат), СокрЛП(ПарольСертификата))));
+		Иначе
+			mhttp = Новый HTTPСоединение(Сервер,,,,,,Новый ЗащищенноеСоединениеOpenSSL());
+		КонецЕсли;
 	Конецесли;
 	
-	mhttp.SetTimeouts(6000000, 6000000, 6000000, 6000000);
+	//mhttp.SetTimeouts(6000000, 6000000, 6000000, 6000000);
+	//
+	//mhttp.open("POST", Сервер, False);
 	
-	mhttp.open("POST", Сервер, False);
+	//mhttp.setRequestHeader("Accept-Encoding", "gzip,deflate");
+	//mhttp.setRequestHeader("Content-Type"	, "text/xml; charset=utf-8");
+	//mhttp.setRequestHeader("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/ChangePassword");
+	//mhttp.setRequestHeader("Connection"		, "Keep-Alive");
+	//mhttp.setRequestHeader("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
+	Заголовки = Новый Соответствие;
+	Заголовки.Вставить("Accept-Encoding", "gzip,deflate");
+	Заголовки.Вставить("Content-Type"	, "text/xml; charset=utf-8");
+	Заголовки.Вставить("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/ChangePassword");
+	Заголовки.Вставить("Connection"		, "Keep-Alive");
+	Заголовки.Вставить("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
 	
-	mhttp.setRequestHeader("Accept-Encoding", "gzip,deflate");
-	mhttp.setRequestHeader("Content-Type"	, "text/xml; charset=utf-8");
-	mhttp.setRequestHeader("SoapAction"		, "http://www.mygemini.com/schemas/mygemini/ChangePassword");
-	mhttp.setRequestHeader("Connection"		, "Keep-Alive");
-	mhttp.setRequestHeader("User-Agent"		, "Apache-HttpClient/4.1.1 (java 1.5)");
-	
+	Запрос = Новый HTTPЗапрос("/", Заголовки);
 	
 	xml = 
 	"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:myg=""http://www.mygemini.com/schemas/mygemini"" xmlns:wsse=""http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"">"
@@ -44,13 +75,17 @@
 	+"</soapenv:Body>"
 	+"</soapenv:Envelope>";
 	
-	mhttp.send(xml);
-	res = mhttp.WaitForResponse();
+	Запрос.УстановитьТелоИзСтроки(xml, КодировкаТекста.UTF8, ИспользованиеByteOrderMark.Использовать);
+	//mhttp.send(xml);
+	Результат = mhttp.ОтправитьДляОбработки(Запрос);
+	//res = mhttp.WaitForResponse();
+	res = Результат.КодСостояния;
 	
-	СтрокаJSONРезультат = mhttp.responseText;
+	//СтрокаJSONРезультат = mhttp.responseText;
+	СтрокаJSONРезультат = Результат.ПолучитьТелоКакСтроку();
 	
 	Если СтрНайти(СтрокаJSONРезультат, "Error 500") > 0 Тогда
-		Сообщить(НСтр("ka='შეცდომა მოთხოვნის გაგზავნისას';ru='Ошибка отправки запроса'") + Символы.НПП + СтрокаJSONРезультат);
+		Сообщить(НСтр("ka='შეცდომა მოთხოვნის გაგზავნისას';ru='Ошибка отправки запроса';en='Error sending request'") + Символы.НПП + СтрокаJSONРезультат);
 	КонецЕсли;
 	
 	ТэгМетода = "ns2:" + "ChangePassword" + "ResponseIo";
@@ -166,7 +201,7 @@
 Процедура ИзменитьПароль(Команда)
 	
 	Nonce = "";
-	Подсказка = НСтр("ka='შეიყვანეთ DigiPass –ის პაროლი';ru='Введите пароль DigiPass!'");
+	Подсказка = НСтр("ka='შეიყვანეთ DigiPass –ის პაროლი';ru='Введите пароль DigiPass!';en='Enter the password of DigiPass!'");
 	Если НЕ ВвестиСтроку(Nonce, Подсказка, 0, Истина) Тогда
 		// запомнить текст напоминания
 		Возврат;
@@ -179,3 +214,4 @@
 Процедура NewPasswordConfirmationПриИзменении(Элемент)
 	Элементы.ФормаИзменитьПароль.Доступность = NewPassword = NewPasswordConfirmation;
 КонецПроцедуры
+

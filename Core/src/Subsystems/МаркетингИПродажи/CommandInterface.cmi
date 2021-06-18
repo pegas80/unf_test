@@ -2,31 +2,11 @@
 <cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
   <commandsVisibility>
     <visibilityFragments>
-      <command>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</command>
-      <visible>
-        <common>true</common>
-      </visible>
-    </visibilityFragments>
-    <visibilityFragments>
-      <command>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</command>
-      <visible>
-        <common>true</common>
-      </visible>
-    </visibilityFragments>
-    <visibilityFragments>
-      <command>Catalog.Сегменты.Command.Сегменты</command>
-      <visible/>
-    </visibilityFragments>
-    <visibilityFragments>
       <command>Document.ЗаказНаПроизводство.StandardCommand.OpenList</command>
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
       <command>Document.ПеремещениеЗапасов.StandardCommand.OpenList</command>
-      <visible/>
-    </visibilityFragments>
-    <visibilityFragments>
-      <command>Catalog.Сегменты.StandardCommand.OpenList</command>
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
@@ -61,18 +41,28 @@
       <command>Catalog.ШаблоныЭтикетокИЦенников.StandardCommand.OpenList</command>
       <visible/>
     </visibilityFragments>
+    <visibilityFragments>
+      <command>Constant.НоваяСхемаРасчетаПотребностейИКалькуляцииЗаказа.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
   </commandsVisibility>
   <commandsPlacement>
-    <placementFragments>
-      <group>CommandGroup.Сервис</group>
-      <commands>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</commands>
-      <commands>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</commands>
-    </placementFragments>
     <placementFragments>
       <group>NavigationPanelSeeAlso</group>
       <commands>Document.ЗаказНаПроизводство.StandardCommand.OpenList</commands>
       <commands>Document.ПеремещениеЗапасов.StandardCommand.OpenList</commands>
-      <commands>Catalog.Сегменты.StandardCommand.OpenList</commands>
       <commands>Document.Событие.StandardCommand.OpenList</commands>
       <commands>Document.Событие.Command.ТелефонныеЗвонки</commands>
       <commands>Document.Событие.Command.ЭлектроннаяПочта</commands>
@@ -81,19 +71,18 @@
       <commands>Document.Событие.Command.ПрочиеСобытия</commands>
       <commands>Catalog.Теги.StandardCommand.OpenList</commands>
       <commands>Catalog.ШаблоныЭтикетокИЦенников.StandardCommand.OpenList</commands>
+    </placementFragments>
+    <placementFragments>
+      <group>CommandGroup.Сервис</group>
+      <commands>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</commands>
+      <commands>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</commands>
     </placementFragments>
   </commandsPlacement>
   <commandsOrder>
     <orderFragments>
-      <group>CommandGroup.Сервис</group>
-      <commands>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</commands>
-      <commands>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</commands>
-    </orderFragments>
-    <orderFragments>
       <group>NavigationPanelSeeAlso</group>
       <commands>Document.ЗаказНаПроизводство.StandardCommand.OpenList</commands>
       <commands>Document.ПеремещениеЗапасов.StandardCommand.OpenList</commands>
-      <commands>Catalog.Сегменты.StandardCommand.OpenList</commands>
       <commands>Document.Событие.StandardCommand.OpenList</commands>
       <commands>Document.Событие.Command.ТелефонныеЗвонки</commands>
       <commands>Document.Событие.Command.ЭлектроннаяПочта</commands>
@@ -102,6 +91,11 @@
       <commands>Document.Событие.Command.ПрочиеСобытия</commands>
       <commands>Catalog.Теги.StandardCommand.OpenList</commands>
       <commands>Catalog.ШаблоныЭтикетокИЦенников.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>CommandGroup.Сервис</group>
+      <commands>DataProcessor.ПечатьЭтикетокИЦенников.Command.ОткрытьПечатьЭтикетокИЦенников</commands>
+      <commands>CommonCommand.ДополнительныеОбработкиМаркетингИПродажи</commands>
     </orderFragments>
   </commandsOrder>
   <subsystemsOrder>
@@ -115,5 +109,6 @@
     <subsystems>Subsystem.МаркетингИПродажи.Subsystem.Планирование</subsystems>
     <subsystems>Subsystem.МаркетингИПродажи.Subsystem.Аналитика</subsystems>
     <subsystems>Subsystem.МаркетингИПродажи.Subsystem.Взаиморасчеты</subsystems>
+    <subsystems>Subsystem.МаркетингИПродажи.Subsystem.Доставка</subsystems>
   </subsystemsOrder>
 </cmi:CommandInterface>

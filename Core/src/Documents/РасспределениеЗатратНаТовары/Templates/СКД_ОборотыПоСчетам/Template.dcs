@@ -18,6 +18,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>ხარჯის ანგარიში</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>expense account</v8:content>
+				</v8:item>
 			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
@@ -34,6 +38,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>განყოფილება</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subdivision</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -58,10 +66,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сумма</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>თანხა</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -95,11 +99,27 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗапасыОбороты.СтруктурнаяЕдиница КАК Подразделение,
 	ЗапасыОбороты.СчетУчетаРегл КАК СчетУчета,
-	СУММА(ЗапасыОбороты.СуммаОборот) КАК Сумма
+	СУММА(ЗапасыОбороты.СуммаОборот) КАК Сумма,
+	ЗапасыОбороты.Номенклатура,
+	ЗапасыОбороты.Характеристика
 ПОМЕСТИТЬ ВТ_Обороты
 ИЗ
 	РегистрНакопления.Запасы.Обороты(
@@ -118,21 +138,27 @@
 
 СГРУППИРОВАТЬ ПО
 	ЗапасыОбороты.СтруктурнаяЕдиница,
-	ЗапасыОбороты.СчетУчетаРегл
+	ЗапасыОбороты.СчетУчетаРегл,
+	ЗапасыОбороты.Номенклатура,
+	ЗапасыОбороты.Характеристика
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
 	ВТ_Обороты.Подразделение,
 	ВТ_Обороты.СчетУчета,
-	СУММА(ВТ_Обороты.Сумма) КАК Сумма
+	СУММА(ВТ_Обороты.Сумма) КАК Сумма,
+	ВТ_Обороты.Номенклатура,
+	ВТ_Обороты.Характеристика
 ПОМЕСТИТЬ ВТ_ОборотыГрупп
 ИЗ
 	ВТ_Обороты КАК ВТ_Обороты
 
 СГРУППИРОВАТЬ ПО
 	ВТ_Обороты.Подразделение,
-	ВТ_Обороты.СчетУчета
+	ВТ_Обороты.СчетУчета,
+	ВТ_Обороты.Номенклатура,
+	ВТ_Обороты.Характеристика
 
 ИМЕЮЩИЕ
 	СУММА(ВТ_Обороты.Сумма) &lt;&gt; 0
@@ -146,7 +172,9 @@
 	ВЫБОР
 		КОГДА ХозрасчетныйВидыСубконто.НомерСтроки = 1
 			ТОГДА ХозрасчетныйВидыСубконто.ВидСубконто
-	КОНЕЦ КАК ВидСубконто1
+	КОНЕЦ КАК ВидСубконто1,
+	ВТ_ОборотыГрупп.Номенклатура,
+	ВТ_ОборотыГрупп.Характеристика
 ПОМЕСТИТЬ ВТ_Суб1
 {ВЫБРАТЬ
 	Подразделение.*,
@@ -172,7 +200,9 @@
 	ВЫБОР
 		КОГДА ХозрасчетныйВидыСубконто.НомерСтроки = 2
 			ТОГДА ХозрасчетныйВидыСубконто.ВидСубконто
-	КОНЕЦ КАК ВидСубконто2
+	КОНЕЦ КАК ВидСубконто2,
+	ВТ_ОборотыГрупп.Номенклатура,
+	ВТ_ОборотыГрупп.Характеристика
 ПОМЕСТИТЬ ВТ_Суб2
 {ВЫБРАТЬ
 	Подразделение.*,
@@ -198,7 +228,9 @@
 	ВЫБОР
 		КОГДА ХозрасчетныйВидыСубконто.НомерСтроки = 3
 			ТОГДА ХозрасчетныйВидыСубконто.ВидСубконто
-	КОНЕЦ КАК ВидСубконто3
+	КОНЕЦ КАК ВидСубконто3,
+	ВТ_ОборотыГрупп.Номенклатура,
+	ВТ_ОборотыГрупп.Характеристика
 ПОМЕСТИТЬ ВТ_Суб3
 {ВЫБРАТЬ
 	Подразделение.*,
@@ -223,14 +255,18 @@
 	ВТ_ОборотыГрупп.Сумма КАК Сумма,
 	ВТ_Суб1.ВидСубконто1 КАК ВидСубконто1,
 	ВТ_Суб2.ВидСубконто2 КАК ВидСубконто2,
-	ВТ_Суб3.ВидСубконто3 КАК ВидСубконто3
+	ВТ_Суб3.ВидСубконто3 КАК ВидСубконто3,
+	ВТ_ОборотыГрупп.Номенклатура КАК Номенклатура,
+	ВТ_ОборотыГрупп.Характеристика КАК Характеристика
 {ВЫБРАТЬ
 	Подразделение.*,
 	СчетУчета.*,
 	Сумма,
 	ВидСубконто1.*,
 	ВидСубконто2.*,
-	ВидСубконто3.*}
+	ВидСубконто3.*,
+	Номенклатура.*,
+	Характеристика.*}
 ИЗ
 	ВТ_ОборотыГрупп КАК ВТ_ОборотыГрупп
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Суб1 КАК ВТ_Суб1
@@ -249,7 +285,17 @@
 	ВТ_ОборотыГрупп.Сумма &gt; 0
 {ГДЕ
 	ВТ_ОборотыГрупп.Подразделение.*,
-	ВТ_ОборотыГрупп.СчетУчета.*}</query>
+	ВТ_ОборотыГрупп.СчетУчета.*}
+	
+СГРУППИРОВАТЬ ПО
+	ВТ_ОборотыГрупп.Подразделение,
+	ВТ_ОборотыГрупп.СчетУчета,
+	ВТ_ОборотыГрупп.Сумма,
+	ВТ_Суб1.ВидСубконто1,
+	ВТ_Суб2.ВидСубконто2,
+	ВТ_Суб3.ВидСубконто3,
+	ВТ_ОборотыГрупп.Номенклатура,
+	ВТ_ОборотыГрупп.Характеристика</query>
 		<autoFillFields>false</autoFillFields>
 	</dataSet>
 	<parameter>
@@ -262,6 +308,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>საწყისი თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>the date of the beginning</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -284,6 +334,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>საბოლოო თარიღი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>expiration date</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -305,6 +359,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>ორგრანიზაცია</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Organization</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
@@ -322,6 +380,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>ბმული</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Ref</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -396,6 +458,10 @@
 							<v8:lang>ka</v8:lang>
 							<v8:content>განყოფილება</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Subdivision</v8:content>
+						</v8:item>
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -408,6 +474,10 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>ხარჯების ანგარიშები</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>expense account</v8:content>
 						</v8:item>
 					</dcsset:lwsTitle>
 				</dcsset:item>
@@ -422,6 +492,10 @@
 							<v8:lang>ka</v8:lang>
 							<v8:content>თანხა</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -432,6 +506,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВидСубконто3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -448,6 +528,10 @@
 							<v8:lang>ka</v8:lang>
 							<v8:content>განყოფილება</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Subdivision</v8:content>
+						</v8:item>
 					</dcsset:presentation>
 					<dcsset:userSettingID>2731b59f-de6c-4c9b-a679-1e3ed98de970</dcsset:userSettingID>
 				</dcsset:item>
@@ -463,6 +547,10 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>ხარჯების ანგარიშები</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>expense account</v8:content>
 						</v8:item>
 					</dcsset:presentation>
 					<dcsset:userSettingID>b616be2e-4ad5-40d7-ad14-74263b82b67b</dcsset:userSettingID>

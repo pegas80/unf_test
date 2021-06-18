@@ -16,7 +16,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Группа сотрудника</v8:content>
+					<v8:content>თანამშრომელთა ჯგუფი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -34,7 +34,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Группа физлица</v8:content>
+					<v8:content>ფიზიკური პირების ჯგუფი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -132,7 +132,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Адрес за пределами РФ</v8:content>
+					<v8:content>მისამართი რუსეთის ფედერაციის გარეთ</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -150,7 +150,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Адрес по прописке</v8:content>
+					<v8:content>სარეგისტრაციო მისამართი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -168,7 +168,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Адрес проживания</v8:content>
+					<v8:content>საცხოვრებელი მისამართი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -186,7 +186,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Другая контактная информация</v8:content>
+					<v8:content>სხვა საკონტაქტო ინფორმაცია</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -222,7 +222,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Таб. номер</v8:content>
+					<v8:content>ტაბი/ნომერი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -256,7 +256,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Период сотрудники</v8:content>
+					<v8:content>თანამშრომლების პერიოდი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -274,7 +274,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Регистратор кадрового движения</v8:content>
+					<v8:content>პერსონალის მოძრაობის რეგისტრი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -321,7 +321,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Работает</v8:content>
+					<v8:content>სამუშაო</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -387,11 +387,43 @@
 			<dataPath>СрокДействия</dataPath>
 			<field>СрокДействия</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникПенсионногоФонда</dataPath>
+			<field>УчастникПенсионногоФонда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участник пенсионного фонда</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საპენსიო ფონდის მონაწილე</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресЭП</dataPath>
+			<field>АдресЭП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Сотрудники.Родитель КАК ГруппаСотрудника,
 	Сотрудники.Код КАК ТабНомер,
-	Сотрудники.Ссылка КАК Сотрудник,
+	Сотрудники.Ссылка КАК Сотрудник,              	
 	Сотрудники.Физлицо,
 	Сотрудники.ТипЗанятости,
 	Сотрудники.Физлицо.Родитель КАК ГруппаФизлица,
@@ -411,7 +443,7 @@
 	СотрудникиСрезПоследних.ГрафикРаботы,
 	СотрудникиСрезПоследних.Период КАК ПериодСотрудники,
 	ВЫБОР
-		КОГДА СотрудникиСрезПоследних.СтруктурнаяЕдиница ЕСТЬ NULL 
+		КОГДА СотрудникиСрезПоследних.СтруктурнаяЕдиница ЕСТЬ NULL
 				ИЛИ СотрудникиСрезПоследних.СтруктурнаяЕдиница = ЗНАЧЕНИЕ(Справочник.СтруктурныеЕдиницы.ПустаяСсылка)
 			ТОГДА ЛОЖЬ
 		ИНАЧЕ ИСТИНА
@@ -426,7 +458,9 @@
 	ДокументыФизическихЛицСрезПоследних.Номер,
 	ДокументыФизическихЛицСрезПоследних.КемВыдан,
 	ДокументыФизическихЛицСрезПоследних.КодПодразделения,
-	ДокументыФизическихЛицСрезПоследних.ЯвляетсяДокументомУдостоверяющимЛичность
+	ДокументыФизическихЛицСрезПоследних.ЯвляетсяДокументомУдостоверяющимЛичность,
+	СотрудникиСрезПоследних.УчастникПенсионногоФонда,
+	ТабАдресЭП.Представление КАК АдресЭП
 ИЗ
 	Справочник.Сотрудники КАК Сотрудники
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ФизическиеЛица.КонтактнаяИнформация КАК ТабАдресДляИнформирования
@@ -452,7 +486,10 @@
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних КАК ФИОФизЛицСрезПоследних
 		ПО Сотрудники.Физлицо = ФИОФизЛицСрезПоследних.ФизЛицо
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДокументыФизическихЛиц.СрезПоследних КАК ДокументыФизическихЛицСрезПоследних
-		ПО Сотрудники.Физлицо = ДокументыФизическихЛицСрезПоследних.Физлицо</query>
+		ПО Сотрудники.Физлицо = ДокументыФизическихЛицСрезПоследних.Физлицо
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ФизическиеЛица.КонтактнаяИнформация КАК ТабАдресЭП
+		ПО Сотрудники.Физлицо.Ссылка = ТабАдресЭП.Ссылка
+			И (ТабАдресЭП.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.EmailФизическиеЛица))</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных2</name>
@@ -478,7 +515,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Регистратор начисления удержания</v8:content>
+					<v8:content>დარიცხვა დაკავების რეგისტრი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -497,6 +534,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СчетЗатрат</dataPath>
 			<field>СчетЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет затрат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულების ანგარიში</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ТипНачисленияУдержания</dataPath>
@@ -508,7 +555,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Тип начисления удержания</v8:content>
+					<v8:content>დაკავების ტიპი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>

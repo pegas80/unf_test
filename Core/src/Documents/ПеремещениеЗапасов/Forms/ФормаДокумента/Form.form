@@ -107,11 +107,15 @@
               <key>ka</key>
               <value>უჯრედი</value>
             </inputHint>
+            <inputHint>
+              <key>en</key>
+              <value>Cell</value>
+            </inputHint>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
           <name>ПроектОтправитель</name>
-          <id>321</id>
+          <id>319</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -126,7 +130,7 @@
           </handlers>
           <extendedTooltip>
             <name>ПроектОтправительРасширеннаяПодсказка</name>
-            <id>323</id>
+            <id>321</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -136,7 +140,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ПроектОтправительКонтекстноеМеню</name>
-            <id>322</id>
+            <id>320</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -166,6 +170,10 @@
           <key>ka</key>
           <value>საწყობი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Warehouse</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Склад</value>
@@ -173,6 +181,10 @@
         <toolTip>
           <key>ka</key>
           <value>საწყობი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Warehouse</value>
         </toolTip>
         <extendedTooltip>
           <name>СкладРасширеннаяПодсказка</name>
@@ -290,11 +302,15 @@
               <key>ka</key>
               <value>უჯრედი</value>
             </inputHint>
+            <inputHint>
+              <key>en</key>
+              <value>Cell</value>
+            </inputHint>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
           <name>ПроектПолучатель</name>
-          <id>324</id>
+          <id>322</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -309,7 +325,7 @@
           </handlers>
           <extendedTooltip>
             <name>ПроектПолучательРасширеннаяПодсказка</name>
-            <id>326</id>
+            <id>324</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -319,7 +335,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ПроектПолучательКонтекстноеМеню</name>
-            <id>325</id>
+            <id>323</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -349,6 +365,10 @@
           <key>ka</key>
           <value>მიმღები საწყობი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Warehouse Receiver</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Склад получатель</value>
@@ -356,6 +376,10 @@
         <toolTip>
           <key>ka</key>
           <value>მიმღები საწყობი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Warehouse Receiver</value>
         </toolTip>
         <extendedTooltip>
           <name>СкладПолучательРасширеннаяПодсказка</name>
@@ -545,123 +569,6 @@
           <textEdit>true</textEdit>
         </extInfo>
       </items>
-      <items xsi:type="form:FormGroup">
-        <name>Транзит</name>
-        <id>254</id>
-        <items xsi:type="form:FormField">
-          <name>ЧерезТранзитныйСклад</name>
-          <id>256</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.ЧерезТранзитныйСклад</segments>
-          </dataPath>
-          <handlers>
-            <event>OnChange</event>
-            <name>ЧерезТранзитныйСкладПриИзменении</name>
-          </handlers>
-          <extendedTooltip>
-            <name>ЧерезТранзитныйСкладРасширеннаяПодсказка</name>
-            <id>258</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ЧерезТранзитныйСкладКонтекстноеМеню</name>
-            <id>257</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>CheckBoxField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>ДатаПеремещенияИзТранзита</name>
-          <id>259</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.ДатаПеремещенияИзТранзита</segments>
-          </dataPath>
-          <handlers>
-            <event>OnChange</event>
-            <name>ДатаПеремещенияИзТранзитаПриИзменении</name>
-          </handlers>
-          <extendedTooltip>
-            <name>ДатаПеремещенияИзТранзитаРасширеннаяПодсказка</name>
-            <id>261</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>ДатаПеремещенияИзТранзитаКонтекстноеМеню</name>
-            <id>260</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Транзит</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ტრანზიტი</value>
-        </title>
-        <extendedTooltip>
-          <name>ТранзитРасширеннаяПодсказка</name>
-          <id>255</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>UsualGroup</type>
-        <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>AlwaysHorizontal</group>
-          <behavior>Auto</behavior>
-          <showLeftMargin>true</showLeftMargin>
-          <united>true</united>
-          <throughAlign>Auto</throughAlign>
-          <currentRowUse>Auto</currentRowUse>
-        </extInfo>
-      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -674,6 +581,10 @@
       <title>
         <key>ka</key>
         <value>მარცხენა სვეტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Left Column</value>
       </title>
       <extendedTooltip>
         <name>ЛеваяКолонкаExtendedTooltip</name>
@@ -748,6 +659,10 @@
               <key>ka</key>
               <value>&lt;ავტო></value>
             </inputHint>
+            <inputHint>
+              <key>en</key>
+              <value>&lt;Авто></value>
+            </inputHint>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -760,6 +675,10 @@
           <title>
             <key>ka</key>
             <value>(საიდან, ვისგან)</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>From</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -815,6 +734,10 @@
           <key>ka</key>
           <value>ნომერი, თარიღი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Number, Date</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Номер, дата</value>
@@ -822,6 +745,10 @@
         <toolTip>
           <key>ka</key>
           <value>ნომერი, თარიღი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Number, Date</value>
         </toolTip>
         <extendedTooltip>
           <name>НомерДатаExtendedTooltip</name>
@@ -852,6 +779,10 @@
         <title>
           <key>ka</key>
           <value>ოპერაცია</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Operation</value>
         </title>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -1074,7 +1005,7 @@
       </items>
       <items xsi:type="form:FormField">
         <name>Проект</name>
-        <id>315</id>
+        <id>325</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -1089,7 +1020,7 @@
         </handlers>
         <extendedTooltip>
           <name>ПроектРасширеннаяПодсказка</name>
-          <id>317</id>
+          <id>327</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -1099,7 +1030,7 @@
         </extendedTooltip>
         <contextMenu>
           <name>ПроектКонтекстноеМеню</name>
-          <id>316</id>
+          <id>326</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
@@ -1128,6 +1059,10 @@
       <title>
         <key>ka</key>
         <value>მარჯვენა სვეტი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Right Column</value>
       </title>
       <horizontalStretch>false</horizontalStretch>
       <extendedTooltip>
@@ -1163,6 +1098,10 @@
       <key>ka</key>
       <value>თავსართი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Heder</value>
+    </title>
     <extendedTooltip>
       <name>ШапкаExtendedTooltip</name>
       <id>85</id>
@@ -1175,6 +1114,127 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Транзит</name>
+    <id>254</id>
+    <items xsi:type="form:FormField">
+      <name>ЧерезТранзитныйСклад</name>
+      <id>256</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ЧерезТранзитныйСклад</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ЧерезТранзитныйСкладПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ЧерезТранзитныйСкладРасширеннаяПодсказка</name>
+        <id>258</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ЧерезТранзитныйСкладКонтекстноеМеню</name>
+        <id>257</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ДатаПеремещенияИзТранзита</name>
+      <id>259</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ДатаПеремещенияИзТранзита</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ДатаПеремещенияИзТранзитаПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>ДатаПеремещенияИзТранзитаРасширеннаяПодсказка</name>
+        <id>261</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДатаПеремещенияИзТранзитаКонтекстноеМеню</name>
+        <id>260</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Транзит</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ტრანზიტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Transit</value>
+    </title>
+    <extendedTooltip>
+      <name>ТранзитРасширеннаяПодсказка</name>
+      <id>255</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>AlwaysHorizontal</group>
       <behavior>Auto</behavior>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
@@ -1921,7 +1981,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>ЗапасыПроект</name>
-          <id>318</id>
+          <id>328</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1932,7 +1992,7 @@
           </dataPath>
           <extendedTooltip>
             <name>ЗапасыПроектРасширеннаяПодсказка</name>
-            <id>320</id>
+            <id>330</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1942,7 +2002,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗапасыПроектКонтекстноеМеню</name>
-            <id>319</id>
+            <id>329</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -1961,7 +2021,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>ЗапасыПроектОтправитель</name>
-          <id>327</id>
+          <id>331</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1972,7 +2032,7 @@
           </dataPath>
           <extendedTooltip>
             <name>ЗапасыПроектОтправительРасширеннаяПодсказка</name>
-            <id>329</id>
+            <id>333</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1982,7 +2042,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗапасыПроектОтправительКонтекстноеМеню</name>
-            <id>328</id>
+            <id>332</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -2001,7 +2061,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>ЗапасыПроектПолучатель</name>
-          <id>330</id>
+          <id>334</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2012,7 +2072,7 @@
           </dataPath>
           <extendedTooltip>
             <name>ЗапасыПроектПолучательРасширеннаяПодсказка</name>
-            <id>332</id>
+            <id>336</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -2022,7 +2082,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЗапасыПроектПолучательКонтекстноеМеню</name>
-            <id>331</id>
+            <id>335</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -2173,6 +2233,10 @@
               <key>ka</key>
               <value>Запасы стандартные кнопки</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Stock Standard Buttons</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Запасы стандартные кнопки</value>
@@ -2180,6 +2244,10 @@
             <toolTip>
               <key>ka</key>
               <value>Запасы стандартные кнопки</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Stock Standard Buttons</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыСтандартныеКнопкиРасширеннаяПодсказка</name>
@@ -2262,6 +2330,10 @@
               <value>Запасы сортировка
 </value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Stocks Sorting</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Запасы сортировка</value>
@@ -2269,6 +2341,10 @@
             <toolTip>
               <key>ka</key>
               <value>Запасы сортировка</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Stocks Sorting</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыСортировкаРасширеннаяПодсказка</name>
@@ -2401,6 +2477,10 @@
               <key>ka</key>
               <value>Группа торговое оборудование</value>
             </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Группа торговое оборудование</value>
+            </toolTip>
             <extendedTooltip>
               <name>ГруппаТорговоеОборудованиеРасширеннаяПодсказка</name>
               <id>216</id>
@@ -2454,6 +2534,10 @@
               <title>
                 <key>ka</key>
                 <value>საწყობში არსებული ნაშთის მიხედვით</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>By warehouse stocks</value>
               </title>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -2527,6 +2611,31 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
+            <items xsi:type="form:Button">
+              <name>ЗапасыЗаполнитьКолонкуОС</name>
+              <id>317</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ЗапасыЗаполнитьКолонкуОСРасширеннаяПодсказка</name>
+                <id>318</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ЗаполнитьКолонкуОС</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2540,6 +2649,10 @@
               <key>ka</key>
               <value>შევსება</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Insert</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Заполнить</value>
@@ -2547,6 +2660,10 @@
             <toolTip>
               <key>ka</key>
               <value>შევსება</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Insert</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗаполнитьExtendedTooltip</name>
@@ -2629,6 +2746,10 @@
               <key>ka</key>
               <value>მარაგები ჯგუფი სტრიქონების კოპირება</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Запасы группа копирование строк</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Запасы группа копирование строк</value>
@@ -2636,6 +2757,10 @@
             <toolTip>
               <key>ka</key>
               <value>მარაგები ჯგუფი სტრიქონების კოპირება</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Запасы группа копирование строк</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыГруппаКопированиеСтрокРасширеннаяПодсказка</name>
@@ -2717,6 +2842,10 @@
               <key>ka</key>
               <value>რეზერვის შეცვლა</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Edit Reserve</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Изменить колонку резерв</value>
@@ -2724,6 +2853,10 @@
             <toolTip>
               <key>ka</key>
               <value>სვეტ რეზერვის შეცვლა</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Изменить колонку резерв</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыИзменитьРезервExtendedTooltip</name>
@@ -2739,6 +2872,31 @@
             <extInfo xsi:type="form:PopupGroupExtInfo">
               <representation>Auto</representation>
             </extInfo>
+          </items>
+          <items xsi:type="form:Button">
+            <name>ЗапасыЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+            <id>315</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ЗапасыЗапасыЗагрузкаДанныхИзВнешнегоИсточникаРасширеннаяПодсказка</name>
+              <id>316</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
           </items>
           <items xsi:type="form:FormGroup">
             <name>ЗапасыЗаполнитьОчистить</name>
@@ -2806,6 +2964,10 @@
               <key>ka</key>
               <value>შევსება/გასუფთავება</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Insert / Clear</value>
+            </title>
             <toolTip>
               <key>ru</key>
               <value>Заполнить/Очистить</value>
@@ -2813,6 +2975,10 @@
             <toolTip>
               <key>ka</key>
               <value>შევსება/გასუფთავება</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Insert / Clear</value>
             </toolTip>
             <extendedTooltip>
               <name>ЗапасыЗаполнитьОчиститьРасширеннаяПодсказка</name>
@@ -2977,6 +3143,10 @@
         <key>ka</key>
         <value>მარაგები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Stocks</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Страница запасы</value>
@@ -2984,6 +3154,10 @@
       <toolTip>
         <key>ka</key>
         <value>გვერდი მარაგები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Страница запасы</value>
       </toolTip>
       <extendedTooltip>
         <name>СтраницаЗапасыРасширеннаяПодсказка</name>
@@ -3026,6 +3200,10 @@
           <key>ka</key>
           <value>დოკუმენტის ავტორი</value>
         </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Автор Документа</value>
+        </toolTip>
         <extendedTooltip>
           <name>АвторДокументаExtendedTooltip</name>
           <id>130</id>
@@ -3062,6 +3240,10 @@
           <key>ka</key>
           <value>ბეჭდვის რეკვიზიტები</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Stamp Details</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -3078,6 +3260,10 @@
           <title>
             <key>ka</key>
             <value>საბეჭდი ფორმების რეკვიზიტების შევსება, მაგალითად: კომპანიის ლოგო, ფაქსიმილია და ა.შ.</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Заполнение свойств и реквизитов, используемых в печатных формах, например, подписи ответственных лиц, факсимиле и т.д.</value>
           </title>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -3337,12 +3523,20 @@
           <key>ka</key>
           <value>RS</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>RS</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа RS</value>
         </toolTip>
         <toolTip>
           <key>ka</key>
+          <value>Группа RS</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
           <value>Группа RS</value>
         </toolTip>
         <extendedTooltip>
@@ -3382,6 +3576,10 @@
           <key>ka</key>
           <value>ბეჭდვა</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Print</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа данные для печати</value>
@@ -3389,6 +3587,10 @@
         <toolTip>
           <key>ka</key>
           <value>ჯგუფი მონაცემები ამოსაბეჭდად</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Группа данные для печати</value>
         </toolTip>
         <horizontalStretch>true</horizontalStretch>
         <extendedTooltip>
@@ -3428,6 +3630,10 @@
           <key>ka</key>
           <value>დამატებითი რეკვიზიტები</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Additional Details</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа дополнительные реквизиты</value>
@@ -3435,6 +3641,10 @@
         <toolTip>
           <key>ka</key>
           <value>დამატებითი რეკვიზიტების ჯგუფი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Группа дополнительные реквизиты</value>
         </toolTip>
         <extendedTooltip>
           <name>ГруппаДополнительныеРеквизитыExtendedTooltip</name>
@@ -3471,6 +3681,10 @@
         <key>ka</key>
         <value>დამატებით</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Additional Information</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Страница дополнительно</value>
@@ -3478,6 +3692,10 @@
       <toolTip>
         <key>ka</key>
         <value>გვერდი დამატებით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Страница дополнительно</value>
       </toolTip>
       <extendedTooltip>
         <name>СтраницаДополнительноРасширеннаяПодсказка</name>
@@ -3507,6 +3725,10 @@
     <toolTip>
       <key>ka</key>
       <value>გვერდის ჯგუფი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Группа страницы</value>
     </toolTip>
     <extendedTooltip>
       <name>ГруппаСтраницыРасширеннаяПодсказка</name>
@@ -3621,6 +3843,10 @@
           <key>ka</key>
           <value>კომენტარი</value>
         </inputHint>
+        <inputHint>
+          <key>en</key>
+          <value>Commentary</value>
+        </inputHint>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -3637,6 +3863,10 @@
           <key>ka</key>
           <value>საფუძველი: არჩევა</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Base: Select</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -3649,6 +3879,10 @@
         <toolTip>
           <key>ka</key>
           <value>გახსნა, შევსება, გასუფთავება</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Открыть, заполнить, очистить</value>
         </toolTip>
         <extendedTooltip>
           <name>ДокументОснованиеНадписьРасширеннаяПодсказка</name>
@@ -3690,6 +3924,10 @@
         <key>ka</key>
         <value>დოკუმენტი საფუძველი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Document Base</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Документ основание</value>
@@ -3697,6 +3935,10 @@
       <toolTip>
         <key>ka</key>
         <value>დოკუმენტი საფუძველი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Document Base</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаДокументОснованиеExtendedTooltip</name>
@@ -3727,6 +3969,10 @@
       <title>
         <key>ka</key>
         <value>Электронная накладная: создать</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Electronic Invoice: Create</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -3771,6 +4017,10 @@
       <title>
         <key>ka</key>
         <value>საგადასახადო დოკუმენტი: შექმნა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Tax Document: Create</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -3818,6 +4068,10 @@
       <key>ka</key>
       <value>სარდაფი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Basement</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Подвал</value>
@@ -3825,6 +4079,10 @@
     <toolTip>
       <key>ka</key>
       <value>სარდაფი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Basement</value>
     </toolTip>
     <verticalStretch>false</verticalStretch>
     <extendedTooltip>
@@ -3897,6 +4155,10 @@
           <key>ka</key>
           <value>ბეჭდვა</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Print</value>
+        </title>
         <extendedTooltip>
           <name>ПодменюПечатьРасширеннаяПодсказка</name>
           <id>205</id>
@@ -3928,6 +4190,10 @@
         <key>ka</key>
         <value>ჯგუფი მნიშვნელოვანი ბრძანებები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Группа важные команды</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Группа важные команды</value>
@@ -3935,6 +4201,10 @@
       <toolTip>
         <key>ka</key>
         <value>ჯგუფი მნიშვნელოვანი ბრძანებები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Группа важные команды</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаВажныеКомандыРасширеннаяПодсказка</name>
@@ -4105,6 +4375,10 @@
         <key>ka</key>
         <value>ჯგუფი გლობალური ბრძანებები</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Группа глобальные команды</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Группа глобальные команды</value>
@@ -4112,6 +4386,10 @@
       <toolTip>
         <key>ka</key>
         <value>ჯგუფი გლობალური ბრძანებები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Группа глобальные команды</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаГлобальныеКомандыРасширеннаяПодсказка</name>
@@ -4266,6 +4544,10 @@
       <key>ka</key>
       <value>კომპანია</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Company</value>
+    </title>
     <id>2</id>
     <valueType>
       <types>CatalogRef.Организации</types>
@@ -4286,6 +4568,10 @@
     <title>
       <key>ka</key>
       <value>დოკუმენტის თარიღი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Document Date</value>
     </title>
     <id>3</id>
     <valueType>
@@ -4309,6 +4595,10 @@
       <key>ka</key>
       <value>შესაერთებელი მოწყობილობის გამოყენება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Use Plug-in Equipment</value>
+    </title>
     <id>4</id>
     <valueType>
       <types>Boolean</types>
@@ -4329,6 +4619,10 @@
     <title>
       <key>ka</key>
       <value>ნებადართულია გატარება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Posting Enabled</value>
     </title>
     <id>6</id>
     <valueType>
@@ -4351,6 +4645,10 @@
       <key>ka</key>
       <value>არის საცალო ვაჭრობა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Retail</value>
+    </title>
     <id>12</id>
     <valueType>
       <types>Boolean</types>
@@ -4371,6 +4669,10 @@
     <title>
       <key>ka</key>
       <value>საცალო</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Retail</value>
     </title>
     <id>13</id>
     <valueType>
@@ -4393,6 +4695,10 @@
       <key>ka</key>
       <value>გამოიყენება დარეზერვება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Used Reservation</value>
+    </title>
     <id>8</id>
     <valueType>
       <types>Boolean</types>
@@ -4414,6 +4720,10 @@
       <key>ka</key>
       <value>შერჩევის გახსნის პარამეტრები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Parameters Opening Selection</value>
+    </title>
     <id>7</id>
     <valueType/>
     <view>
@@ -4432,6 +4742,10 @@
     <title>
       <key>ka</key>
       <value>შესაერთებელი მოწყობილობის მხარდაჭერილი ტიპები</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Supported Types of Equipment to be Connected</value>
     </title>
     <id>5</id>
     <valueType>
@@ -4455,6 +4769,10 @@
       <key>ka</key>
       <value>სერიული ნომრების გამოყენება ნაშთი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Use Serial Numbers Remains</value>
+    </title>
     <id>14</id>
     <valueType/>
     <view>
@@ -4473,6 +4791,10 @@
     <title>
       <key>ka</key>
       <value>მნიშვნელობების ქეში</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Cache Values</value>
     </title>
     <id>15</id>
     <valueType/>
@@ -4493,6 +4815,10 @@
       <key>ka</key>
       <value>შექმნის საფუძველი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Basis of Creation</value>
+    </title>
     <id>16</id>
     <valueType/>
     <view>
@@ -4511,6 +4837,10 @@
     <title>
       <key>ka</key>
       <value>უჯრედების მიხედვით აღრიცხვა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Accounting by Cells</value>
     </title>
     <id>17</id>
     <valueType>
@@ -4532,6 +4862,10 @@
     <title>
       <key>ka</key>
       <value>სია დოკუმენტი საფუძველი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>List of paper base</value>
     </title>
     <id>18</id>
     <valueType>
@@ -4626,6 +4960,10 @@
       <key>ru</key>
       <value>Использовать статусы в перемещении и во внутренных заказах</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Use Status in the Movement and in the Internal Order</value>
+    </title>
     <id>23</id>
     <valueType>
       <types>Boolean</types>
@@ -4643,10 +4981,33 @@
       <key>ru</key>
       <value>Использовать только регламентированный план счетов</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Использовать только регламентированный план счетов</value>
+    </title>
     <id>24</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НастройкиЗагрузкиДанных</name>
+    <title>
+      <key>ru</key>
+      <value>Настройки загрузки данных</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის გამართვები</value>
+    </title>
+    <id>25</id>
+    <valueType/>
     <view>
       <common>true</common>
     </view>
@@ -4668,7 +5029,7 @@
       <key>en</key>
       <value>Учет по проектам</value>
     </title>
-    <id>25</id>
+    <id>26</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -4689,6 +5050,10 @@
       <key>ka</key>
       <value>შერჩევა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Select</value>
+    </title>
     <id>2</id>
     <toolTip>
       <key>ru</key>
@@ -4697,6 +5062,10 @@
     <toolTip>
       <key>ka</key>
       <value>შერჩევა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Select</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4719,6 +5088,10 @@
       <key>ka</key>
       <value>შტრიხკოდის მიხედვით ძებნა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Search by Barcode</value>
+    </title>
     <id>3</id>
     <toolTip>
       <key>ru</key>
@@ -4727,6 +5100,10 @@
     <toolTip>
       <key>ka</key>
       <value>შტრიხკოდის მიხედვით ძებნა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Search by Barcode</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4753,6 +5130,10 @@
       <key>ka</key>
       <value>პარამეტრები</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Settings</value>
+    </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
@@ -4761,6 +5142,10 @@
     <toolTip>
       <key>ka</key>
       <value>დოკუმენტის გამართვა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Document Settings</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4788,6 +5173,10 @@
       <key>ka</key>
       <value>წონა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Weight</value>
+    </title>
     <id>4</id>
     <toolTip>
       <key>ru</key>
@@ -4796,6 +5185,10 @@
     <toolTip>
       <key>ka</key>
       <value>წონის მიღება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Получить вес</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4822,6 +5215,10 @@
       <key>ka</key>
       <value>ТСД-დან მონაცემების ჩატვირთვა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Загрузить данные из ТСД</value>
+    </title>
     <id>5</id>
     <toolTip>
       <key>ru</key>
@@ -4830,6 +5227,10 @@
     <toolTip>
       <key>ka</key>
       <value>ТСД-დან მონაცემების ჩატვირთვა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Загрузить данные из ТСД</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4855,6 +5256,10 @@
       <key>ka</key>
       <value>შევსება საწყობის ნაშთების მიხედვით</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Заполнить по остаткам на складе</value>
+    </title>
     <id>7</id>
     <toolTip>
       <key>ru</key>
@@ -4863,6 +5268,10 @@
     <toolTip>
       <key>ka</key>
       <value>შევსება საწყობის ნაშთების მიხედვით</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Заполнить по остаткам на складе</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4884,6 +5293,10 @@
       <key>ka</key>
       <value>რეზერვების მიხედვით შევსება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Insert by Reserves</value>
+    </title>
     <id>9</id>
     <toolTip>
       <key>ru</key>
@@ -4892,6 +5305,10 @@
     <toolTip>
       <key>ka</key>
       <value>რეზერვის შევსება საწყობში არსებული რეზერვების მიხედვით</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Заполнить резерв по резервам на складе</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4915,6 +5332,10 @@
       <key>ka</key>
       <value>გავასუფთავოთ სვეტი</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Clear Column</value>
+    </title>
     <id>10</id>
     <toolTip>
       <key>ru</key>
@@ -4923,6 +5344,10 @@
     <toolTip>
       <key>ka</key>
       <value>გავასუფთავოთ სვეტი რეზერვი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Очистить колонку Резерв</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4946,6 +5371,10 @@
       <key>ka</key>
       <value>სტრიქომენის ჩადგმა</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Insert Rows</value>
+    </title>
     <id>11</id>
     <toolTip>
       <key>ru</key>
@@ -4954,6 +5383,10 @@
     <toolTip>
       <key>ka</key>
       <value>სტრიქონების ჩასმა გაცვლის ბუფერიდან</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Вставить строки из буфера обмена</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -4980,6 +5413,10 @@
       <key>ka</key>
       <value>სტრიქონების კოპირება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Copy Line</value>
+    </title>
     <id>12</id>
     <toolTip>
       <key>ru</key>
@@ -4988,6 +5425,10 @@
     <toolTip>
       <key>ka</key>
       <value>სტრიქონების კოპირება გაცვლის ბუფერში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Скопировать строки в буфер обмена</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -5014,6 +5455,10 @@
       <key>ka</key>
       <value>დოკუმენტი შევინახოთ შაბლონად</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Save the Document as a Template</value>
+    </title>
     <id>15</id>
     <toolTip>
       <key>ru</key>
@@ -5022,6 +5467,10 @@
     <toolTip>
       <key>ka</key>
       <value>დოკუმენტი შევინახოთ შაბლონად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Save the Document as a Template</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -5046,6 +5495,10 @@
       <key>ka</key>
       <value>Выгрузить в шаблон RS</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Выгрузить в шаблон RS</value>
+    </title>
     <id>6</id>
     <toolTip>
       <key>ru</key>
@@ -5053,6 +5506,10 @@
     </toolTip>
     <toolTip>
       <key>ka</key>
+      <value>Выгрузить в шаблон RS</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
       <value>Выгрузить в шаблон RS</value>
     </toolTip>
     <use>
@@ -5078,6 +5535,10 @@
       <key>ka</key>
       <value>მინიმალური ნაშთამდე შევსება</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Заполнить до минимального остатка</value>
+    </title>
     <id>8</id>
     <use>
       <common>true</common>
@@ -5099,9 +5560,17 @@
       <key>ka</key>
       <value>მყიდველის შეკვეთის მიხედვით</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>По заказам покупателя</value>
+    </title>
     <id>13</id>
     <toolTip>
       <key>ru</key>
+      <value>Заполнить по заказам покупателя</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
       <value>Заполнить по заказам покупателя</value>
     </toolTip>
     <use>
@@ -5124,6 +5593,10 @@
       <key>ka</key>
       <value>შევსება რაოდენობა გზაში</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Insert Quantity on the Way</value>
+    </title>
     <id>14</id>
     <use>
       <common>true</common>
@@ -5145,6 +5618,10 @@
       <key>ka</key>
       <value>გასუფთავება რაოდენობა გზაში</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Clear Quantity on the Way</value>
+    </title>
     <id>16</id>
     <use>
       <common>true</common>
@@ -5155,6 +5632,64 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+    <title>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მარაგების ჩატვირთვა გარე წყაროდან</value>
+    </title>
+    <id>17</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ЗагрузкаИзФайла</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗаполнитьКолонкуОС</name>
+    <title>
+      <key>ru</key>
+      <value>Заполнить колонку ОС</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ძ/შ შევსება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>ძ/შ შევსება</value>
+    </title>
+    <id>18</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполнить колонку ОС</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаполнитьКолонкуОС</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

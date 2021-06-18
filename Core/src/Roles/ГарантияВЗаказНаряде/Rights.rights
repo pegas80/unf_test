@@ -733,6 +733,21 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ГарантийноеОбслуживание</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.УдалитьКонтекстКриптографии</name>
 		<right>
 			<name>Read</name>
@@ -745,6 +760,17 @@
 	</object>
 	<object>
 		<name>Constant.ИспользоватьЭлектронныеПодписи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.VINКодОбязательноеПоле</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -3292,6 +3318,14 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениямРасширенный( "РегистрСведений.ЦеныНоменклатуры","Чтение","",
+"ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК Т1
+ПО Т.ВидЦен = Т1.Ссылка",
+"",
+"ВидыЦен","Т1.Ссылка","",
+"","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4787,6 +4821,25 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ИспользоватьГарантииВНарядЗаказах</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -10331,6 +10384,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ПустойРеквизитСтатьяВДокументах</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.КодировкиВерсийФайлов</name>
 		<right>
 			<name>Read</name>
@@ -10551,6 +10615,17 @@
 	</object>
 	<object>
 		<name>Constant.СинхронизироватьФайлы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ФункциональнаяОпцияПроверятьПлатежиПередОтправкойВБанк</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>

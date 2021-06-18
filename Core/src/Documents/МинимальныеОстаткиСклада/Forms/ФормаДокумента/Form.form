@@ -99,6 +99,10 @@
         <key>ka</key>
         <value>მარცხენა სვეტი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Левая колонка</value>
+      </title>
       <extendedTooltip>
         <name>ЛеваяКолонкаExtendedTooltip</name>
         <id>46</id>
@@ -171,6 +175,10 @@
               <key>ka</key>
               <value>&lt;ავტო></value>
             </inputHint>
+            <inputHint>
+              <key>en</key>
+              <value>&lt;Авто></value>
+            </inputHint>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -231,6 +239,10 @@
           <key>ka</key>
           <value>ჯგუფი ნომერი თარიღი</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Группа номер дата</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Группа номер дата</value>
@@ -238,6 +250,10 @@
         <toolTip>
           <key>ka</key>
           <value>ჯგუფი ნომერი თარიღი</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Группа номер дата</value>
         </toolTip>
         <extendedTooltip>
           <name>ГруппаНомерДатаExtendedTooltip</name>
@@ -271,6 +287,10 @@
         <key>ka</key>
         <value>მარჯვენა სვეტი</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>Right Column</value>
+      </title>
       <extendedTooltip>
         <name>ПраваяКолонкаExtendedTooltip</name>
         <id>80</id>
@@ -302,6 +322,10 @@
     <title>
       <key>ka</key>
       <value>თავსართი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Heder</value>
     </title>
     <extendedTooltip>
       <name>ШапкаExtendedTooltip</name>
@@ -580,12 +604,20 @@
           <key>ka</key>
           <value>Запасы стандартные кнопки</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Запасы стандартные кнопки</value>
+        </title>
         <toolTip>
           <key>ru</key>
           <value>Запасы стандартные кнопки</value>
         </toolTip>
         <toolTip>
           <key>ka</key>
+          <value>Запасы стандартные кнопки</value>
+        </toolTip>
+        <toolTip>
+          <key>en</key>
           <value>Запасы стандартные кнопки</value>
         </toolTip>
         <extendedTooltip>
@@ -677,6 +709,10 @@
           <key>ka</key>
           <value>Запасы сортировка</value>
         </toolTip>
+        <toolTip>
+          <key>en</key>
+          <value>Stocks Sorting</value>
+        </toolTip>
         <extendedTooltip>
           <name>ЗапасыСортировкаРасширеннаяПодсказка</name>
           <id>105</id>
@@ -710,6 +746,31 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.ДобавитьПоГруппе</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+        <id>110</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточникаРасширеннаяПодсказка</name>
+          <id>111</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -940,6 +1001,25 @@
     <main>true</main>
     <savedData>true</savedData>
   </attributes>
+  <attributes>
+    <name>НастройкиЗагрузкиДанных</name>
+    <title>
+      <key>ru</key>
+      <value>Настройки загрузки данных</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის გამართვები</value>
+    </title>
+    <id>2</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ДобавитьПоГруппе</name>
     <title>
@@ -949,6 +1029,10 @@
     <title>
       <key>ka</key>
       <value>დამატება ჯგუფების მიხედვით</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Add to groups</value>
     </title>
     <id>1</id>
     <use>
@@ -960,6 +1044,35 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+    <title>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მარაგების ჩატვირთვა გარე წყაროდან</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ЗагрузкаИзФайла</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

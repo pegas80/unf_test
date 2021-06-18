@@ -155,6 +155,20 @@
 			<dataPath>СчетУчетаЗатратРегл</dataPath>
 			<field>СчетУчетаЗатратРегл</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьОтгрузитьЧастичноВыполнено</dataPath>
+			<field>ОсталосьОтгрузитьЧастичноВыполнено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось отгрузить (Частично выполнено)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>დარჩა გადასატვირთი (ნაწილობრივი შესრულება)</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ЗаказыПокупателейОстаткиИОбороты.Номенклатура КАК Номенклатура,
@@ -173,7 +187,12 @@
 		КОГДА ЗаказыПокупателейОстаткиИОбороты.Номенклатура.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Запас)
 			ТОГДА ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток - ЕСТЬNULL(Резервы.КоличествоОстаток, 0) - ЕСТЬNULL(РазмещениеЗаказовОстатки.КоличествоОстаток, 0)
 		ИНАЧЕ 0
-	КОНЕЦ КАК ОсталосьОбеспечить
+	КОНЕЦ КАК ОсталосьОбеспечить,
+	ВЫБОР
+		КОГДА ЗаказыПокупателейОстаткиИОбороты.ЗаказПокупателя.ВариантЗавершения = ЗНАЧЕНИЕ(перечисление.ВариантыЗавершенияЗаказа.Успешно)
+			ТОГДА ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток = 0
+		ИНАЧЕ ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток
+	КОНЕЦ КАК ОсталосьОтгрузитьЧастичноВыполнено
 ИЗ
 	РегистрНакопления.ЗаказыПокупателей.ОстаткиИОбороты(, , , , ЗаказПокупателя = &amp;Заказ) КАК ЗаказыПокупателейОстаткиИОбороты
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(, ЗаказПокупателя = &amp;Заказ) КАК Резервы
@@ -268,6 +287,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>Осталось оплатить / переплачено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>It remains to pay / overpaid</v8:content>
 				</v8:item>
 			</title>
 			<appearance>
@@ -515,6 +538,10 @@
 		<dataPath>СуммаДокумента</dataPath>
 		<expression>Сумма(СуммаДокумента)</expression>
 	</totalField>
+	<totalField>
+		<dataPath>ОсталосьОтгрузитьЧастичноВыполнено</dataPath>
+		<expression>Сумма(ОсталосьОтгрузитьЧастичноВыполнено)</expression>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -525,6 +552,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასაწყისი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Beginning of period</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -548,6 +579,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდის დასასრული</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -570,6 +605,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>პერიოდი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -591,6 +630,10 @@
 			<v8:item>
 				<v8:lang>ka</v8:lang>
 				<v8:content>შეკვეთა</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Order</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -615,6 +658,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Состояние заказа:</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Order Status:</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -664,6 +711,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>კონტრაგენტი:</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Counterpart:</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -718,6 +769,10 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>Договор:</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>treaty:</v8:content>
+							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
@@ -770,6 +825,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Валюта документа:</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Document Currency:</v8:content>
 							</v8:item>
 						</dcsat:value>
 					</dcsat:item>
@@ -845,6 +904,10 @@
 				<v8:lang>ka</v8:lang>
 				<v8:content>მყიდველის შეკვეთების ანალიზი</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Analysis of the buyer's order</v8:content>
+			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:filter>
@@ -874,6 +937,10 @@
 						<v8:item>
 							<v8:lang>ka</v8:lang>
 							<v8:content>შეკვეთის ანალიზი</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>order analysis</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -966,6 +1033,10 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>ერთეული</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Unit</v8:content>
+							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -980,6 +1051,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>გადატვირთვა</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>shipment</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1002,6 +1077,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>Обеспечение</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Security</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1035,6 +1114,10 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>გადატვირთვა</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>shipment</v8:content>
+							</v8:item>
 						</dcscor:value>
 					</dcscor:item>
 				</dcsset:outputParameters>
@@ -1054,6 +1137,10 @@
 								<v8:lang>ka</v8:lang>
 								<v8:content>გადასახდელად</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>To pay</v8:content>
+							</v8:item>
 						</dcsset:lwsTitle>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>СуммаДокумента</dcsset:field>
@@ -1069,6 +1156,10 @@
 									<v8:lang>ka</v8:lang>
 									<v8:content>დაგეგმილია</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>planned</v8:content>
+								</v8:item>
 							</dcsset:lwsTitle>
 						</dcsset:item>
 						<dcsset:placement>Auto</dcsset:placement>
@@ -1082,6 +1173,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>გადახდილია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>paid</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1100,6 +1195,10 @@
 								<v8:item>
 									<v8:lang>ka</v8:lang>
 									<v8:content>სულ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Total</v8:content>
 								</v8:item>
 							</dcsset:lwsTitle>
 						</dcsset:item>
@@ -1124,6 +1223,10 @@
 							<v8:item>
 								<v8:lang>ka</v8:lang>
 								<v8:content>გადახდა</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Payment</v8:content>
 							</v8:item>
 						</dcscor:value>
 					</dcscor:item>
