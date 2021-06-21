@@ -17,6 +17,10 @@
     <key>ka</key>
     <value>მომხმარებლების გასწორებები</value>
   </synonym>
+  <synonym>
+    <key>en</key>
+    <value>user settings</value>
+  </synonym>
   <inputByString>ChartOfCharacteristicTypes.НастройкиПользователей.StandardAttribute.Description</inputByString>
   <inputByString>ChartOfCharacteristicTypes.НастройкиПользователей.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
@@ -44,7 +48,9 @@
     <types>CatalogRef.ГруппыДоступаКонтрагентов</types>
     <types>CatalogRef.Номенклатура</types>
     <types>Boolean</types>
+    <types>CatalogRef.БанковскиеСчета</types>
     <types>CatalogRef.ПриоритетСкладов</types>
+    <types>CatalogRef.ДоступныеСклады</types>
     <types>CatalogRef.СостоянияЗаказовПоставщикам</types>
     <types>CatalogRef.КатегорииНоменклатуры</types>
     <types>CatalogRef.СтавкиНДС</types>
@@ -65,6 +71,7 @@
     <types>EnumRef.ПоложениеРеквизитаНаФорме</types>
     <types>EnumRef.СпособЗагрузкиДанныхИзВнешнихИсточников</types>
     <types>EnumRef.СпособВыводаОстатковВПодборе</types>
+    <types>CatalogRef.НедоступныеГруппыНоменклатуры</types>
     <types>CatalogRef.КалендариСотрудников</types>
     <stringQualifiers>
       <length>100</length>
@@ -303,6 +310,22 @@
           <types>Boolean</types>
         </type>
       </content>
+      <content id="9437f45a-028f-4ae3-87bf-1150a4233aca">
+        <name>ДоступныеСклады</name>
+        <description>Доступные склады</description>
+        <code>00082</code>
+        <type>
+          <types>CatalogRef.ДоступныеСклады</types>
+        </type>
+      </content>
+      <content id="4ee023df-9ec9-4a00-8d03-639b6f346f86">
+        <name>ОсновнойБанковскийСчет</name>
+        <description>Основной банковский счет</description>
+        <code>00078</code>
+        <type>
+          <types>CatalogRef.БанковскиеСчета</types>
+        </type>
+      </content>
       <content id="498115df-21af-4ff5-804f-662b98cc1abe">
         <name>ЗачитыватьАвансыДолгиАвтоматически</name>
         <description>ავანსის ვალდებულების ავტომატური წაკითხვა</description>
@@ -317,6 +340,14 @@
         <code>00061</code>
         <type>
           <types>Boolean</types>
+        </type>
+      </content>
+      <content id="12e02b8b-3e2c-49a1-8c6a-ad7a8d60d3ac">
+        <name>ЗапретРедактированияЦенВДокументахРазрезеГруппНоменклатуры</name>
+        <description>დოკუმენტებში ფასის რედაქტირების შეზღუდვა ნომენკლატურის ჯგუფების მიხედვით</description>
+        <code>00086</code>
+        <type>
+          <types>CatalogRef.НедоступныеГруппыНоменклатуры</types>
         </type>
       </content>
       <content id="a48e6c6a-9764-45f3-9a53-4c2a05441a77">
@@ -418,6 +449,14 @@
           <types>EnumRef.ПериодыВыгрузкиВМобильноеПриложение</types>
         </type>
       </content>
+      <content id="16b4f0e2-1ce9-4e59-9176-2199d359edde">
+        <name>ПравоРедактированиеСтоимостьДоставки</name>
+        <description>მყიდველთა შეკვეთის დოკუმენტში მიწოდების ღირებულების რედაქტირების უფლება</description>
+        <code>00085</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
       <content id="77a0b280-fb61-4c78-a2a7-edcc086b8c0e">
         <name>ПоложениеДатыОтгрузкиВЗаказеПокупателя</name>
         <description>მყიდველის შეკვეთის გადაზიდვის თარიღი</description>
@@ -482,6 +521,14 @@
           <types>Boolean</types>
         </type>
       </content>
+      <content id="0ada9298-c38a-4098-87de-454f1da18cb5">
+        <name>УправлениеСхарактеристикамиНоменклатуры</name>
+        <description>ნომენკლატურის მახასიათების დოკუმენტებში გამოყენების შეზღუდვა</description>
+        <code>00087</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
       <content id="c5ef6006-e10c-43da-b26a-046c38defe1f">
         <name>ПравоДобавленияЦеныНоменклатуры</name>
         <description>ნომენკლატურის ფასის დამატების უფლება</description>
@@ -536,6 +583,22 @@
         <code>00018</code>
         <type>
           <types>Boolean</types>
+        </type>
+      </content>
+      <content id="ab83a611-6f7c-4f20-ad8c-a09fe412e735">
+        <name>ПоложениеСкладаВДокументахОтгрузки</name>
+        <description>საწყობის მდგომარეობა გასავლის ზედდებულის დოკუმენტში</description>
+        <code>00084</code>
+        <type>
+          <types>EnumRef.ПоложениеРеквизитаНаФорме</types>
+        </type>
+      </content>
+      <content id="67024b9e-7307-4951-a719-5ef6491f5aef">
+        <name>ПоложениеСкладаВЗаказеПокупателя</name>
+        <description>საწყობის მდგომარეობა მყიდველის შეკვეთის დოკუმენტში</description>
+        <code>00083</code>
+        <type>
+          <types>EnumRef.ПоложениеРеквизитаНаФорме</types>
         </type>
       </content>
       <content id="0c029efa-1eff-44e5-9a9d-a1ccc142da5c">
@@ -663,6 +726,29 @@
         <code>00050</code>
         <type>
           <types>CatalogRef.ПрайсЛисты</types>
+        </type>
+      </content>
+    </items>
+    <items id="319051bd-d76d-4674-b20b-0cccb1e54861">
+      <name>ОсновныеНастройки</name>
+      <description>ძირითადი პარამეტრები</description>
+      <isFolder>true</isFolder>
+      <code>00079</code>
+      <type/>
+      <content id="888ccdda-cec6-47be-aafd-833101731a39">
+        <name>ЗапретНаПросмотрЦенВкарточкеНоменклатуры</name>
+        <description>ნომენკლატურის ბარათზე ფასების ნახვის აკრძალვა</description>
+        <code>00080</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="3f2b7e68-a36a-487f-9fc8-1a8d8dc7d866">
+        <name>ФильтрСкладскихДокументовПоОсновномуСкладу</name>
+        <description>საწყობის დოკუმენტაციის გაფილტვრა ძირითადი საწყობის მიხედვით</description>
+        <code>00081</code>
+        <type>
+          <types>Boolean</types>
         </type>
       </content>
     </items>
