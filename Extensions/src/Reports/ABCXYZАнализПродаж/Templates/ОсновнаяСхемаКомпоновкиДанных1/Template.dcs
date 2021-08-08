@@ -307,6 +307,10 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПродажиОбороты.Период,
@@ -337,7 +341,7 @@
 	ПродажиОбороты.AzRyПроект КАК AzRyПроект
 	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	
 ИЗ
-	РегистрНакопления.Продажи.Обороты(, , Месяц {(&amp;ПериодичностьЗапроса)}, ) КАК ПродажиОбороты
+	РегистрНакопления.Продажи.Обороты КАК ПродажиОбороты
 
 СГРУППИРОВАТЬ ПО
 	ПродажиОбороты.Организация,
