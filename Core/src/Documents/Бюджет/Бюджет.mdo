@@ -420,6 +420,29 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="19aebfb6-b608-4ae2-8a1c-1b2361e1bc5e">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Project</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="b06bdd57-688f-4b4c-ae8d-e30d06c475b0">
     <name>ФормаДокумента</name>
     <synonym>
@@ -541,7 +564,12 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ДенежныеСредства</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -622,6 +650,66 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="f39619c0-b2ca-4e08-8334-8e931e22c1a7">
+      <name>Статья</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bb1c3369-47a9-42bd-9d78-3f0033e99053">
+      <name>СчетРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет регл</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Score</value>
+      </synonym>
+      <comment>Счет</comment>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет учета</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>აღრიცხვის ანგარიში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>expense account</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ДенежныеСредства</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="5f6fb493-b75d-4f57-ab48-ed1c8bbbb1f9">
     <producedTypes>
@@ -683,7 +771,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -718,7 +805,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:ReferenceValue">
@@ -759,7 +845,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -900,7 +985,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -935,7 +1019,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:ReferenceValue">
@@ -976,7 +1059,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1226,7 +1308,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:ReferenceValue">
@@ -1267,7 +1348,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1305,6 +1385,46 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3c1ceb78-4737-44f3-be0e-f3375d3a56f0">
+      <name>СчетРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет регл</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Score</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет учета денежных средств</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ფულადი სახსრების აღრიცხვის ანგარიში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>cash accounting expense</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ДенежныеСредства</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1478,7 +1598,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:ReferenceValue">
@@ -1519,7 +1638,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1557,6 +1675,46 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6ee0279a-ae88-4b34-adad-78bf3e547067">
+      <name>СчетРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет регл</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Score</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет учета денежных средств</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ფულადი სახსრების აღრიცხვის ანგარიში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>cash accounting expense</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ДенежныеСредства</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1629,18 +1787,18 @@
       <name>Счет</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Статья денежних средств</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ფულადი სახსრების მუხლი</value>
       </synonym>
       <synonym>
         <key>en</key>
         <value>Score</value>
       </synonym>
       <type>
-        <types>ChartOfAccountsRef.Управленческий</types>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
       </type>
       <toolTip>
         <key>ru</key>
@@ -1656,22 +1814,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
-      <choiceParameters>
-        <name>Отбор.ТипСчета</name>
-        <value xsi:type="core:FixedArrayValue">
-          <values xsi:type="core:ReferenceValue">
-            <value>Enum.ТипыСчетов.EnumValue.Доходы</value>
-          </values>
-          <values xsi:type="core:ReferenceValue">
-            <value>Enum.ТипыСчетов.EnumValue.ПрочиеДоходы</value>
-          </values>
-        </value>
-      </choiceParameters>
-      <choiceParameters>
-        <name>Отбор.Валютный</name>
-        <value xsi:type="core:BooleanValue"/>
-      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1746,7 +1888,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1884,6 +2025,52 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="9e69ebd8-52eb-43e3-84f1-23024057272b">
+      <name>КоррСчетРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>A source</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Источник</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>წყარო</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>A source</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Доходы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеДоходы</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="b40c2322-1858-47e1-9afd-54783e238b5e">
     <producedTypes>
@@ -1980,7 +2167,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:FixedArrayValue">
@@ -2032,7 +2218,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -2209,6 +2394,69 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="721fddb6-4dff-472f-9479-53f427074e01">
+      <name>КоррСчетРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Источник</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>წყარო</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>A source</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Источник</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>წყარო</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>A source</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d2cfb7ba-1e4c-4d64-b63a-9abffc4b2a90">
+      <name>ДенежниеСредства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ფულადი სახსრების მუხლი</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Денежние средства</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="cc6cb5b0-8536-4549-a540-b0fad6268dfe">
     <producedTypes>
@@ -2282,7 +2530,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -2317,7 +2564,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:FixedArrayValue">
@@ -2411,7 +2657,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <choiceParameters>
         <name>Отбор.ТипСчета</name>
         <value xsi:type="core:FixedArrayValue">
@@ -2510,7 +2755,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

@@ -24687,19 +24687,15 @@
 		<name>InformationRegister.ЦеныНоменклатуры</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениямРасширенный( "РегистрСведений.ЦеныНоменклатуры","Чтение","",
+"ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК Т1
+ПО Т.ВидЦен = Т1.Ссылка",
+"",
+"ВидыЦен","Т1.Ссылка","",
+"","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>TotalsControl</name>
@@ -30784,6 +30780,10 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям( "Справочник.ВидыЦен","Чтение","",
+"ВидыЦен","Ссылка", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>

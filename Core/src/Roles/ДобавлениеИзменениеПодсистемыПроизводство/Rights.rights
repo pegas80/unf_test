@@ -335,7 +335,15 @@
 		<name>InformationRegister.ЦеныНоменклатуры</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениямРасширенный( "РегистрСведений.ЦеныНоменклатуры","Чтение","",
+"ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК Т1
+ПО Т.ВидЦен = Т1.Ссылка",
+"",
+"ВидыЦен","Т1.Ссылка","",
+"","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","" )</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -441,6 +449,10 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям( "Справочник.ВидыЦен","Чтение","",
+"ВидыЦен","Ссылка", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
