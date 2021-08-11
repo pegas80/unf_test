@@ -18,6 +18,7 @@
 	СписокВалют = ПолучитьСписокВалют();
 	
 	
+	//Адрес = "/en/api/v1/nbg_rates?currency=" + СписокВалют + "&start_date=" + unixtime + "&end_date=" + unixtime2;
 	Адрес = "/en/api/v1/nbg_rates?currency=" + СписокВалют + "&start_date=" + unixtime + "&end_date=" + unixtime2;
 	
 	НТТР = Новый HTTPСоединение(СерверИсточник,,,,,,Новый ЗащищенноеСоединениеOpenSSL);
