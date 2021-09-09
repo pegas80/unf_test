@@ -166,6 +166,10 @@
               <key>ka</key>
               <value>თვე</value>
             </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Month</value>
+            </presentation>
             <value xsi:type="core:NumberValue">
               <value>0</value>
             </value>
@@ -178,6 +182,10 @@
             <presentation>
               <key>ka</key>
               <value>კვარტალი</value>
+            </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Quarter</value>
             </presentation>
             <value xsi:type="core:NumberValue">
               <value>1</value>
@@ -192,50 +200,14 @@
               <key>ka</key>
               <value>წელი</value>
             </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Year</value>
+            </presentation>
             <value xsi:type="core:NumberValue">
               <value>2</value>
             </value>
           </choiceList>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormField">
-        <name>Проект</name>
-        <id>33</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Проекты</segments>
-        </dataPath>
-        <extendedTooltip>
-          <name>ПроектРасширеннаяПодсказка</name>
-          <id>35</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>ПроектКонтекстноеМеню</name>
-          <id>34</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -247,9 +219,17 @@
         <key>ru</key>
         <value>Группа лево</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>The group left</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Группа лево</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The group left</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаЛевоРасширеннаяПодсказка</name>
@@ -275,6 +255,46 @@
     <items xsi:type="form:FormGroup">
       <name>ГруппаНастройки</name>
       <id>18</id>
+      <items xsi:type="form:FormField">
+        <name>Организация</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Отчет.Организация</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ОрганизацияРасширеннаяПодсказка</name>
+          <id>37</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ОрганизацияКонтекстноеМеню</name>
+          <id>36</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
       <items xsi:type="form:FormField">
         <name>ЯзыкВыводаМесяцев</name>
         <id>15</id>
@@ -323,6 +343,10 @@
               <key>ka</key>
               <value>ინგლისური</value>
             </presentation>
+            <presentation>
+              <key>en</key>
+              <value>English</value>
+            </presentation>
             <value xsi:type="core:StringValue">
               <value>en</value>
             </value>
@@ -335,6 +359,10 @@
             <presentation>
               <key>ka</key>
               <value>რუსული</value>
+            </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Russian</value>
             </presentation>
             <value xsi:type="core:StringValue">
               <value>ru</value>
@@ -349,26 +377,155 @@
               <key>ka</key>
               <value>ქართული</value>
             </presentation>
+            <presentation>
+              <key>en</key>
+              <value>Georgian</value>
+            </presentation>
             <value xsi:type="core:StringValue">
               <value>ka</value>
             </value>
           </choiceList>
         </extInfo>
       </items>
-      <items xsi:type="form:FormField">
-        <name>Точность</name>
-        <id>20</id>
+      <items xsi:type="form:FormGroup">
+        <name>Группа1</name>
+        <id>33</id>
+        <items xsi:type="form:FormField">
+          <name>Точность</name>
+          <id>20</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Точность</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ТочностьРасширеннаяПодсказка</name>
+            <id>22</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ТочностьКонтекстноеМеню</name>
+            <id>21</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>РазделительГрупп</name>
+          <id>23</id>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფის გამყოფი</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>РазделительГрупп</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>РазделительГруппРасширеннаяПодсказка</name>
+            <id>25</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РазделительГруппКонтекстноеМеню</name>
+            <id>24</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>РазделительДробнойЧасти</name>
+          <id>26</id>
+          <title>
+            <key>ka</key>
+            <value>წილადის გამყოფი</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>РазделительДробнойЧасти</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>РазделительДробнойЧастиРасширеннаяПодсказка</name>
+            <id>28</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РазделительДробнойЧастиКонтекстноеМеню</name>
+            <id>27</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Точность</segments>
-        </dataPath>
         <extendedTooltip>
-          <name>ТочностьРасширеннаяПодсказка</name>
-          <id>22</id>
+          <name>Группа1РасширеннаяПодсказка</name>
+          <id>34</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -376,103 +533,15 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ТочностьКонтекстноеМеню</name>
-          <id>21</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormField">
-        <name>РазделительГрупп</name>
-        <id>23</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>РазделительГрупп</segments>
-        </dataPath>
-        <extendedTooltip>
-          <name>РазделительГруппРасширеннаяПодсказка</name>
-          <id>25</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>РазделительГруппКонтекстноеМеню</name>
-          <id>24</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormField">
-        <name>РазделительДробнойЧасти</name>
-        <id>26</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>РазделительДробнойЧасти</segments>
-        </dataPath>
-        <extendedTooltip>
-          <name>РазделительДробнойЧастиРасширеннаяПодсказка</name>
-          <id>28</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>РазделительДробнойЧастиКонтекстноеМеню</name>
-          <id>27</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <behavior>Auto</behavior>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -484,9 +553,17 @@
         <key>ru</key>
         <value>Настройки</value>
       </title>
+      <title>
+        <key>en</key>
+        <value>settings</value>
+      </title>
       <toolTip>
         <key>ru</key>
         <value>Группа настройки</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Group settings</value>
       </toolTip>
       <extendedTooltip>
         <name>ГруппаНастройкиРасширеннаяПодсказка</name>
@@ -505,7 +582,6 @@
         <representation>WeakSeparation</representation>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
-        <showTitle>true</showTitle>
         <throughAlign>Auto</throughAlign>
         <currentRowUse>Auto</currentRowUse>
       </extInfo>
@@ -519,9 +595,17 @@
       <key>ru</key>
       <value>Группа шапка</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Group cap</value>
+    </title>
     <toolTip>
       <key>ru</key>
       <value>Группа шапка</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Group cap</value>
     </toolTip>
     <extendedTooltip>
       <name>ГруппаШапкаРасширеннаяПодсказка</name>
@@ -632,6 +716,10 @@
       <key>ru</key>
       <value>Табличный документ</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>spreadsheet document</value>
+    </title>
     <id>2</id>
     <valueType>
       <types>SpreadsheetDocument</types>
@@ -653,6 +741,10 @@
     <title>
       <key>ka</key>
       <value>პერიოდულობა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>conclusion of</value>
     </title>
     <id>4</id>
     <valueType>
@@ -700,6 +792,10 @@
       <key>ka</key>
       <value>დამრგვალების სიზუსტე</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Accuracy</value>
+    </title>
     <id>6</id>
     <valueType>
       <types>Number</types>
@@ -719,6 +815,10 @@
     <title>
       <key>ru</key>
       <value>Разделитель дробной части</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Decimal separator</value>
     </title>
     <id>7</id>
     <valueType>
@@ -791,10 +891,18 @@
       <key>ru</key>
       <value>Сформировать</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>to form</value>
+    </title>
     <id>1</id>
     <toolTip>
       <key>ru</key>
       <value>Сформировать</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>to form</value>
     </toolTip>
     <use>
       <common>true</common>

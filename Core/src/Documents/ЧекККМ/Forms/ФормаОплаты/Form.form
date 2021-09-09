@@ -3764,6 +3764,950 @@
         <showTitle>true</showTitle>
       </extInfo>
     </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаНоваяФормаОплаты</name>
+      <id>413</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаОсновная</name>
+        <id>419</id>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКнопок</name>
+          <id>417</id>
+          <items xsi:type="form:Decoration">
+            <name>СуммаОплатыНаличными</name>
+            <id>463</id>
+            <title>
+              <key>ru</key>
+              <value>Сумма оплаты наличными</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Cash payment amount</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ნაღდი ანგარიშსწორების თანხა</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>СуммаОплатыНаличнымиРасширеннаяПодсказка</name>
+              <id>465</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СуммаОплатыНаличнымиКонтекстноеМеню</name>
+              <id>464</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <width>30</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <font xsi:type="core:FontRef">
+              <font>Style.LargeTextFont</font>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Center</horizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ОплатыСуммаНаличные</name>
+            <id>460</id>
+            <title>
+              <key>ka</key>
+              <value>ნაღდი ფულით გადახდა</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Cash</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value> </value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ОплатыСуммаНаличные</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <handlers>
+              <event>OnChange</event>
+              <name>ДокументЧекККМПолученоНаличнымиПриИзменении</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ОплатыСуммаНаличныеРасширеннаяПодсказка</name>
+              <id>462</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ОплатыСуммаНаличныеКонтекстноеМеню</name>
+              <id>461</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>30</width>
+              <maxWidth>30</maxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <dropListButton>true</dropListButton>
+              <choiceButton>false</choiceButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа кнопок</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа кнопок</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаКнопокРасширеннаяПодсказка</name>
+            <id>418</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <behavior>Auto</behavior>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>Декорация3</name>
+          <id>466</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>Декорация3РасширеннаяПодсказка</name>
+            <id>468</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>Декорация3КонтекстноеМеню</name>
+            <id>467</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>true</horizontalStretch>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКалькуляторИНомерКарты2</name>
+          <id>423</id>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаКалькулятор_4</name>
+            <id>425</id>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаКнопкиКолонка1_4</name>
+              <id>427</id>
+              <items xsi:type="form:Button">
+                <name>Кнопка7_4</name>
+                <id>429</id>
+                <title>
+                  <key>ru</key>
+                  <value>7</value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>7</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка7_4РасширеннаяПодсказка</name>
+                  <id>430</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка7_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка4_4</name>
+                <id>431</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка4_4РасширеннаяПодсказка</name>
+                  <id>432</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка4_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка1_4</name>
+                <id>433</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка1_4РасширеннаяПодсказка</name>
+                  <id>434</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка1_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка0_4</name>
+                <id>435</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка0_4РасширеннаяПодсказка</name>
+                  <id>436</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка0_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 1</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი1</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Group Column button 1</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка1 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი1 2</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Group column1 button 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаКнопкиКолонка1_4РасширеннаяПодсказка</name>
+                <id>428</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <behavior>Auto</behavior>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаКнопкиКолонка2_4</name>
+              <id>437</id>
+              <items xsi:type="form:Button">
+                <name>Кнопка8_4</name>
+                <id>439</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка8_4РасширеннаяПодсказка</name>
+                  <id>440</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка8_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка5_4</name>
+                <id>441</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка5_4РасширеннаяПодсказка</name>
+                  <id>442</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка5_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка2_4</name>
+                <id>443</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка2_4РасширеннаяПодсказка</name>
+                  <id>444</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка2_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РазделительДробнойЧасти_4</name>
+                <id>445</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РазделительДробнойЧасти_4РасширеннаяПодсказка</name>
+                  <id>446</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.РазделительДробнойЧасти_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 2</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი2</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Column Group 2 button</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка2 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი2 2</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Group column2 button 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаКнопкиКолонка2_4РасширеннаяПодсказка</name>
+                <id>438</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <behavior>Auto</behavior>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаКнопкиКолонка3_4</name>
+              <id>447</id>
+              <items xsi:type="form:Button">
+                <name>Кнопка9_4</name>
+                <id>449</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка9_4РасширеннаяПодсказка</name>
+                  <id>450</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка9_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка6_4</name>
+                <id>451</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка6_4РасширеннаяПодсказка</name>
+                  <id>452</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка6_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Кнопка3_4</name>
+                <id>453</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Кнопка3_4РасширеннаяПодсказка</name>
+                  <id>454</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Кнопка3_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Сбросить_4</name>
+                <id>455</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Сбросить_4РасширеннаяПодсказка</name>
+                  <id>456</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Сбросить_2</commandName>
+                <representation>Auto</representation>
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 3</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი3</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Group 3 column buttons</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка3 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ჯგუფი ღილაკები სვეტი3 2</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Group column3 button 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаКнопкиКолонка3_4РасширеннаяПодсказка</name>
+                <id>448</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <behavior>Auto</behavior>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Группа калькулятор 2</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ჯგუფი კალკულატორი 2</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Group 2 calculator</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа калькулятор 2</value>
+            </toolTip>
+            <toolTip>
+              <key>ka</key>
+              <value>ჯგუფი კალკულატორი 2</value>
+            </toolTip>
+            <toolTip>
+              <key>en</key>
+              <value>Group 2 calculator</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>ГруппаКалькулятор_4РасширеннаяПодсказка</name>
+              <id>426</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <behavior>Auto</behavior>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <backColor xsi:type="core:ColorRef">
+                <color>Style.ЦветТекстаНевыбраннойКартинки</color>
+              </backColor>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>НадписьТекущееПолеВвода2</name>
+            <id>457</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>НадписьТекущееПолеВвода</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <extendedTooltip>
+              <name>НадписьТекущееПолеВвода2РасширеннаяПодсказка</name>
+              <id>459</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>НадписьТекущееПолеВвода2КонтекстноеМеню</name>
+              <id>458</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <horizontalAlign>Center</horizontalAlign>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>13</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа калькулятор и номер карты</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი კალკულატორი და ბარათის ნომერი</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>calculator group and card number</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа калькулятор и номер карты</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>ჯგუფი კალკულატორი და ბარათის ნომერი</value>
+          </toolTip>
+          <toolTip>
+            <key>en</key>
+            <value>calculator group and card number</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаКалькуляторИНомерКарты2РасширеннаяПодсказка</name>
+            <id>424</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <behavior>Auto</behavior>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <backColor xsi:type="core:ColorRef">
+              <color>Style.ЦветТекстаНевыбраннойКартинки</color>
+            </backColor>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа основная</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа основная</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ГруппаОсновнаяРасширеннаяПодсказка</name>
+          <id>420</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Оплата</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>გადახდა</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Payment</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа новая форма оплаты</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ГруппаНоваяФормаОплатыРасширеннаяПодсказка</name>
+        <id>414</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -6134,6 +7078,105 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ОплатыСуммаНаличные</name>
+    <title>
+      <key>ka</key>
+      <value>მიღებულია ნაღდი ფულით</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>cashed</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value> </value>
+    </title>
+    <id>35</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИспользоватьНовуюФормуОплат</name>
+    <title>
+      <key>ru</key>
+      <value>Использовать новую форму оплат</value>
+    </title>
+    <id>36</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТаблицаКнопокТерминалов</name>
+    <title>
+      <key>ru</key>
+      <value>Таблица кнопок терминалов</value>
+    </title>
+    <id>37</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ИмяКнопки</name>
+      <title>
+        <key>ru</key>
+        <value>Имя кнопки</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЭквайринговыйТерминал</name>
+      <title>
+        <key>ru</key>
+        <value>Эквайринговый терминал</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.ЭквайринговыеТерминалы</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
   <formCommands>
     <name>ОК</name>
     <title>
@@ -6555,6 +7598,10 @@
       <key>ka</key>
       <value>0</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>0</value>
+    </title>
     <id>19</id>
     <toolTip>
       <key>ru</key>
@@ -6591,7 +7638,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>one</value>
+      <value>1</value>
     </title>
     <id>20</id>
     <toolTip>
@@ -6625,6 +7672,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>2</value>
     </title>
     <id>21</id>
@@ -6661,6 +7712,10 @@
       <key>ka</key>
       <value>3</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>3</value>
+    </title>
     <id>22</id>
     <toolTip>
       <key>ru</key>
@@ -6693,6 +7748,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>4</value>
     </title>
     <id>23</id>
@@ -6729,6 +7788,10 @@
       <key>ka</key>
       <value>5</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>5</value>
+    </title>
     <id>24</id>
     <toolTip>
       <key>ru</key>
@@ -6761,6 +7824,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>6</value>
     </title>
     <id>25</id>
@@ -6797,6 +7864,10 @@
       <key>ka</key>
       <value>7</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>7</value>
+    </title>
     <id>26</id>
     <toolTip>
       <key>ru</key>
@@ -6829,6 +7900,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>8</value>
     </title>
     <id>27</id>
@@ -6867,7 +7942,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>nine</value>
+      <value>9</value>
     </title>
     <id>28</id>
     <toolTip>
@@ -6943,7 +8018,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>FROM</value>
+      <value>C</value>
     </title>
     <id>30</id>
     <toolTip>

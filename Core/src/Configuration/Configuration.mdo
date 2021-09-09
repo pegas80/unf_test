@@ -15,7 +15,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="fa8da642-afe1-467d-b297-91e8256e2e60"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="20f495c2-06f2-408c-8e47-820526d98e1e"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="64e053a2-692f-4df1-8c1d-2e1cfce66792"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="a89c250a-cc05-4c6e-b970-5a90013c68ea"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="921e3620-0b67-4796-ad14-3985db157b8d"/>
   <configurationExtensionCompatibilityMode>8.3.25</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
@@ -3459,6 +3459,8 @@
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияФункционалРезервированияЗаказов</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияТипЦеныНоменклатурыПоКоличеству</functionalOptions>
   <functionalOptions>FunctionalOption.ОтчетПоПроводкамВторойВариант</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьНесколькоЧековДляРозичнойТорговли</functionalOptions>
+  <functionalOptions>FunctionalOption.ФункциональнаяОпцияРаспределитьМатериалыПоДолеСтоимости</functionalOptions>
   <functionalOptionsParameters>FunctionalOptionsParameter.Организация</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.Пользователь</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.ТипВерсионируемогоОбъекта</functionalOptionsParameters>
@@ -4222,6 +4224,11 @@
   <constants>Constant.ОтключениеАвтоматическогоРезервированияПриСбореТовара</constants>
   <constants>Constant.ТипЦеныНоменклатурыПоКоличеству</constants>
   <constants>Constant.ОтчетПоПроводкамВторойВариант</constants>
+  <constants>Constant.ПеренестиСобранноеКоличествоЗапасовИзЗаказаПокупателяВРасходнойНакладной</constants>
+  <constants>Constant.ОчередьНаКассе</constants>
+  <constants>Constant.ИспользоватьКонсультантыВЧекККМ</constants>
+  <constants>Constant.ФункциональнаяОпцияИспользоватьНесколькоЧековДляРозничнойТорговли</constants>
+  <constants>Constant.РаспределитьМатериалыПоДолеСтоимости</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <commonForms>CommonForm.АвтоматическийОбменСПодключаемымОборудованиемOffline</commonForms>
   <commonForms>CommonForm.АвтономнаяРабота</commonForms>
@@ -5378,6 +5385,7 @@
   <enums>Enum.СтатусыКомПредложение</enums>
   <enums>Enum.ПричиныКорректировкиСФ</enums>
   <enums>Enum.ПриоритетСоответствияДляПоискаНоменклатурВБазе</enums>
+  <enums>Enum.ВидыЧековДляНоменклатурыККМ</enums>
   <enums>Enum.AzRyТипыКонвертацияВалюты</enums>
   <enums>Enum.AzRyТипыПроектов</enums>
   <enums>Enum.AzRyТипЗаписыАвтоматизацияНачисленийЗарплаты</enums>
@@ -5608,7 +5616,9 @@
   <reports>Report.ОтчетПоПроводкамГоризонтальный</reports>
   <reports>Report.ОстаткиНалоговыхЛьгот</reports>
   <reports>Report.ЗапасыПоПроектам</reports>
-  <reports>Report.Отчет1</reports>
+  <reports>Report.ОтчетДокументЗапроса</reports>
+  <reports>Report.ЗапасыПоОптовымИУчетнымЦенам</reports>
+  <reports>Report.ОтчетДляЭакрытияСмены</reports>
   <reports>Report.AzRyОборотноСальдоваяВедомостьРеглUSD</reports>
   <reports>Report.AzRyКарточкаСчетаUSD</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
@@ -5787,6 +5797,8 @@
   <dataProcessors>DataProcessor.ОбработкаИзменениеЦен</dataProcessors>
   <dataProcessors>DataProcessor.ПомошникСозданияДокументовПеремещенияЗапасов</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатурыРасширенная</dataProcessors>
+  <dataProcessors>DataProcessor.ОобработкаЗагрузкиТабличнойЧастиРегистра</dataProcessors>
+  <dataProcessors>DataProcessor.ХарактеристикиВключитьГалочкуИспользуетсяВдокументах</dataProcessors>
   <dataProcessors>DataProcessor.AzRyТЕСТ_ЧекККМ</dataProcessors>
   <dataProcessors>DataProcessor.Тест_НовыеЗадания</dataProcessors>
   <dataProcessors>DataProcessor.AzRyБазомер</dataProcessors>
@@ -6191,6 +6203,7 @@
   <informationRegisters>InformationRegister.НумераторыЧековККМДляОчереди</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыПоКоличество</informationRegisters>
   <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.СинонимиВалют</informationRegisters>
   <informationRegisters>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</informationRegisters>
   <informationRegisters>InformationRegister.AzRyJiraПараметры</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВнеоборотныеАктивы</accumulationRegisters>
@@ -6272,6 +6285,7 @@
   <accumulationRegisters>AccumulationRegister.ОстаткиНалоговыхЛьгот</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.НачисленияИУдержанияВРазрезеПроекта</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.РегистрДокументЗапроса</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.НалогиБюджет</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyВременноеПередачаЗапасов</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyАналитикаРасчетыСПокупателями</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.УдалитьВидыДоступа</chartsOfCharacteristicTypes>

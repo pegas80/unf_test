@@ -188,6 +188,7 @@
   </standardAttributes>
   <basedOn>Document.ЗаказНаПроизводство</basedOn>
   <basedOn>Document.ЗаказПокупателя</basedOn>
+  <basedOn>Document.СборкаЗапасов</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -233,12 +234,16 @@
   <realTimePosting>Deny</realTimePosting>
   <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
   <registerRecords>AccumulationRegister.СдельныеНаряды</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыСПенсионнымФондом</registerRecords>
   <registerRecords>AccumulationRegister.НачисленияИУдержания</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПерсоналом</registerRecords>
+  <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="fa885a25-1efb-4fb2-a03c-ff09c40528c4">
@@ -627,6 +632,119 @@
     <type>
       <types>DocumentRef.ЗаказПокупателя</types>
       <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.СборкаЗапасов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c3322a48-c716-4631-bd81-83d316c263d6">
+    <name>СуммаНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма НДФЛ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d09dd08c-4407-4e30-8496-14d87790a473">
+    <name>ВидУдержанияНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Вид удержания НДФЛ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c0d52917-59d7-4a2f-bb11-249f4ae1fefe">
+    <name>ВидУдержанияПФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საპენსიო ფონდის დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Вид удержания ПФ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="80582f2b-6598-47a8-9be4-117b5cd7b1dc">
+    <name>СуммаПФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საპენსიო თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма ПФ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -916,6 +1034,12 @@
         <name>Отбор.Владелец</name>
         <field>Document.СдельныйНаряд.TabularSection.Операции.Attribute.Номенклатура</field>
       </choiceParameterLinks>
+      <choiceParameters>
+        <name>Отбор.ИспользуетсяВдокументах</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1430,6 +1554,281 @@
         <key>en</key>
         <value>The coefficient of labor participation, which is divided in proportion to the cost of works</value>
       </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2204f95a-69d0-4b27-ae8e-b858697e054b">
+      <name>ВидНачисленияУдержания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид начисления (удержания)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დარიცხვის (დაკავების) ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>View charges (withholding)</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Начисление или удержание</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დარიცხვა ან დაკავება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Начисление или удержание</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Начисление</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="19f06d6b-346c-4325-94ad-82c7868f658c">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა </value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e3bded0d-75e7-47bb-9872-4bb2bcd3c29b">
+      <name>ВидУдержанияНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Вид удержания НДФЛ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>удержание</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დაკავება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>retention</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3cc32bec-50d6-4d29-af4b-b62cf92d1162">
+      <name>СуммаНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма НДФЛ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1351af01-b85a-49d0-bdba-d5a36e6b78c3">
+      <name>ВидУдержанияПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიოს დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>View PF deduction</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>удержание</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დაკავება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>retention</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9bc32643-9d1e-4d7f-8160-8f2a4e7ea5bc">
+      <name>СуммаПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიოს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>PF sum</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4a44b2e1-1d70-4b26-a9a1-572387704547">
+      <name>СуммаЛгот</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма лгот</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შეღავათის თანხა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ba007b2e-3d6e-4aa4-9d01-56a10b219c07">
+      <name>СуммаБезНалогов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма без налогов</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა გადასახადების გარეშე</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ka</key>
+        <value>ველი, რომელიც ფასების და ვალუტის გამართვების შესაბამისად, ავტომატურად ივსება მომსახურებების ჯამური ღირებულებით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Поле, автоматически заполняемое суммарной стоимостью услуг согласно настройкам цен и валют</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="222179d0-769b-430b-92b0-ae57f1e0a226">
+      <name>Коэффициент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>

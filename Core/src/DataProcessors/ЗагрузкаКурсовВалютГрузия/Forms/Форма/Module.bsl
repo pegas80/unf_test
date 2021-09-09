@@ -6,7 +6,7 @@
 
 &НаСервере
 Процедура ПриСозданииНаСервере(Отказ, СтандартнаяОбработка)
-	ПутьКRSS = "https://nbg.gov.ge/monetary-policy/currency";//"http://www.nbg.gov.ge/rss.php";
+	ПутьКRSS = "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json";//"http://www.nbg.gov.ge/rss.php";
 	ТекущаяДата = ТекущаяДата();
 	РежимВыводаСообщений = Ложь;
 КонецПроцедуры

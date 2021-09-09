@@ -25,6 +25,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Цена</dataPath>
 			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ფასი (ფასის ტიპი 1)</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Штрихкод</dataPath>
@@ -234,6 +244,34 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоследнегоИзмененияЦены2</dataPath>
+			<field>ДатаПоследнегоИзмененияЦены2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последнего изменения цены2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаВидцен2</dataPath>
+			<field>ЦенаВидцен2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена (Вид цен 2)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ფასი (ფასის ტიპი 2 )</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВЫРАЗИТЬ(ИсходныеДанные.Номенклатура КАК Справочник.Номенклатура) КАК Номенклатура,
@@ -311,7 +349,9 @@
 	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Период) КАК ДатаПоследнегоИзмененияЦены,
 	МАКСИМУМ(ЗапасыНаСкладахОстатки.КоличествоОстаток) КАК ОстатокНаСкладе,
 	МАКСИМУМ(&amp;ТекущееВремя) КАК ТекущееВремя,
-	МАКСИМУМ(Пользователи.Ссылка) КАК ТекущийПользователь
+	МАКСИМУМ(Пользователи.Ссылка) КАК ТекущийПользователь,
+	МАКСИМУМ(ЦеныНоменклатурыВидЦен2.Цена) КАК ЦенаВидцен2,
+	МАКСИМУМ(ЦеныНоменклатурыВидЦен2.Период) КАК ДатаПоследнегоИзмененияЦены2
 {ВЫБРАТЬ
 	Номенклатура.*,
 	НоменклатураНаименованиеПолное,
@@ -329,7 +369,9 @@
 	ДатаПоследнегоИзмененияЦены,
 	ОстатокНаСкладе,
 	ТекущееВремя,
-	ТекущийПользователь.*}
+	ТекущийПользователь.*,
+	ЦенаВидцен2 КАК ЦенаВидцен2,
+	ДатаПоследнегоИзмененияЦены2}
 ИЗ
 	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
 		{ЛЕВОЕ СОЕДИНЕНИЕ ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
@@ -341,7 +383,8 @@
 		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ЦеныНоменклатурыСрезПоследних.Номенклатура
 			И (ЦеныНоменклатурыСрезПоследних.Характеристика = ИсходныеДанныеПоследнийЗапрос.Характеристика)}
 		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК ВидыЦен
-		ПО (ВидыЦен.Ссылка = &amp;ВидЦен)}
+		ПО (ВидыЦен.Ссылка = &amp;ВидЦен)
+			И (ВидыЦен.Ссылка = &amp;ВидЦен1)}
 		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Организации
 		ПО (Организации.Ссылка = &amp;Организация)}
 		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
@@ -356,6 +399,9 @@
 		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ЗапасыНаСкладахОстатки.Номенклатура
 			И ИсходныеДанныеПоследнийЗапрос.Характеристика = ЗапасыНаСкладахОстатки.Характеристика
 			И (ИсходныеДанныеПоследнийЗапрос.Партия = ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка))}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(, ВидЦен = &amp;ВидЦен1) КАК ЦеныНоменклатурыВидЦен2
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ЦеныНоменклатурыВидЦен2.Номенклатура
+			И (ЦеныНоменклатурыВидЦен2.Характеристика = ИсходныеДанныеПоследнийЗапрос.Характеристика)}
 {ГДЕ
 	ИсходныеДанныеПоследнийЗапрос.Номенклатура.* КАК Номенклатура,
 	ИсходныеДанныеПоследнийЗапрос.Характеристика.* КАК Характеристика,
@@ -363,7 +409,9 @@
 	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
 	ЦеныНоменклатурыСрезПоследних.Цена КАК Цена,
 	ЦеныНоменклатурыСрезПоследних.Период КАК ДатаПоследнегоИзмененияЦены,
-	ЗапасыНаСкладахОстатки.КоличествоОстаток КАК ОстатокНаСкладе}
+	ЗапасыНаСкладахОстатки.КоличествоОстаток КАК ОстатокНаСкладе,
+	ЦеныНоменклатурыВидЦен2.Период,
+	ЦеныНоменклатурыВидЦен2.Цена КАК ЦенаВидцен2}
 
 СГРУППИРОВАТЬ ПО
 	ИсходныеДанныеПоследнийЗапрос.Номенклатура,
@@ -470,6 +518,20 @@
 		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыЦен.ПустаяСсылка</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
+	<parameter>
+		<name>ВидЦен1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цен1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВидыЦен.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -531,7 +593,19 @@
 					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 					<dcsset:presentation xsi:type="xs:string">Только с остатками на складе</dcsset:presentation>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЦенаВидцен2</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
 			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦен1</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>

@@ -172,6 +172,7 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходыПрогноз</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.ДенежныеСредстваПрогноз</registerRecords>
+  <registerRecords>AccumulationRegister.НалогиБюджет</registerRecords>
   <registerRecords>AccumulationRegister.ФинансовыйРезультатПрогноз</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -536,11 +537,11 @@
       <name>Счет</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -650,24 +651,6 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="f39619c0-b2ca-4e08-8334-8e931e22c1a7">
-      <name>Статья</name>
-      <synonym>
-        <key>ru</key>
-        <value>Статья</value>
-      </synonym>
-      <synonym>
-        <key>ka</key>
-        <value>სტატია</value>
-      </synonym>
-      <type>
-        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
     <attributes uuid="bb1c3369-47a9-42bd-9d78-3f0033e99053">
       <name>СчетРегл</name>
       <synonym>
@@ -676,7 +659,7 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში რეგლ</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -707,6 +690,24 @@
           <value>Enum.ТипыСчетов.EnumValue.ДенежныеСредства</value>
         </value>
       </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f39619c0-b2ca-4e08-8334-8e931e22c1a7">
+      <name>Статья</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სტატია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -1281,11 +1282,11 @@
       <name>Счет</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში მმართველობით</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -1571,11 +1572,11 @@
       <name>Счет</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -1861,11 +1862,11 @@
       <name>КоррСчет</name>
       <synonym>
         <key>ru</key>
-        <value>Источник</value>
+        <value>Корр счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>წყარო</value>
+        <value>ანგარიში მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -1888,6 +1889,17 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Доходы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеДоходы</value>
+          </values>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -2029,11 +2041,11 @@
       <name>КоррСчетРегл</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Счет регл</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში რეგლ</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -2140,11 +2152,11 @@
       <name>Счет</name>
       <synonym>
         <key>ru</key>
-        <value>Счет</value>
+        <value>Счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში</value>
+        <value>ანგარიში მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -2191,11 +2203,11 @@
       <name>КоррСчет</name>
       <synonym>
         <key>ru</key>
-        <value>Источник</value>
+        <value>Корр счет упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>წყარო</value>
+        <value>ანგარიში მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -2218,6 +2230,17 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
+          </values>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -2398,15 +2421,15 @@
       <name>КоррСчетРегл</name>
       <synonym>
         <key>ru</key>
-        <value>Источник</value>
+        <value>Счет</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>წყარო</value>
+        <value>ანგარიში</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>A source</value>
+        <value>Code</value>
       </synonym>
       <type>
         <types>ChartOfAccountsRef.Хозрасчетный</types>
@@ -2537,11 +2560,11 @@
       <name>СчетДт</name>
       <synonym>
         <key>ru</key>
-        <value>Счет Дт</value>
+        <value>Счет Дт упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში დტ</value>
+        <value>ანგარიში დტ მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -2626,15 +2649,33 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="290987e1-9db3-4eeb-80bb-eff405353543">
+      <name>ДенежниеСредстваДТ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Денежние средства ДТ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფულადი სახსრების მუხლი დტ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
     <attributes uuid="c9ed667e-ea52-4d5a-9f12-66f65e4e49b2">
       <name>СчетКт</name>
       <synonym>
         <key>ru</key>
-        <value>Счет Кт</value>
+        <value>Счет Кт упр</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიში კტ</value>
+        <value>ანგარიში კტ მმართველობითი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -2719,6 +2760,24 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="9316c2aa-fe24-4c80-bb66-bc629c33f36c">
+      <name>ДенежниеСредстваКТ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Денежние средства КТ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფულადი სახსრების მუხლი კტ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
     <attributes uuid="6970243b-5b7f-4495-bc1f-de53a7f7ea3f">
       <name>Сумма</name>
       <synonym>
@@ -2792,6 +2851,267 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c066108f-a0bd-4868-8353-4dd8fdaeea6c">
+      <name>СчетДтРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет Дт Регл</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში დტ რეგლ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Account Debit</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет учета</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>აღრიცხვის ანგარიში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>expense account</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ВнеоборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.АмортизацияВнеоборотныхАктивов</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеВнеоборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Запасы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КраткосрочныеФинансовыеВложения</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Кредиторы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Дебиторы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Капитал</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.РезервныйИДобавочныйКапитал</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НераспределеннаяПрибыль</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеОборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеКраткосрочныеОбязательства</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрибылиУбытки</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НалогНаПрибыль</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="600f1768-3b95-43f1-b891-97aa30eb1717">
+      <name>СчетКтРегл</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет Кт Регл</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიში კტ რეგლ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Rm Account</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет учета</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>აღრიცხვის ანგარიში</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>expense account</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСчета</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ВнеоборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.АмортизацияВнеоборотныхАктивов</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеВнеоборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Запасы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КраткосрочныеФинансовыеВложения</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Кредиторы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Дебиторы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.Капитал</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.РезервныйИДобавочныйКапитал</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НераспределеннаяПрибыль</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеОборотныеАктивы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрочиеКраткосрочныеОбязательства</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.ПрибылиУбытки</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыСчетов.EnumValue.НалогНаПрибыль</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6292b77d-102f-4b82-89dd-6bdd307bb127">
+      <name>НаправлениеДеятельности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Направление деятельности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საქმიანობის მიმართულება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Направление деятельности</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.НаправленияДеятельности</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Направление деятельности на которое относится доход</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>საქმიანობის მიმართულება, რომელსაც მიეკუთვნება შემოსავალი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Direction of the activity that relates to income</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9b4ada14-c593-4e51-bb91-eb7baeeb3580">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ქვეგანყოფილება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Subdivision</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Собственное подразделение, для которого производится планирование бюджета</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>საკთარი ორგანიზაცია, რომლისთვის ხორციელდება ბიუჯეტის დაგეგმვა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Own unit for which you are budgeting</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

@@ -40,8 +40,72 @@
 		Элементы.Банк.Вид = ВидПоляФормы.ПолеВвода;
 	КонецЕсли;
 	
+	АутентификацияЧерезAPI();
+	
 КонецПроцедуры
 
+&НаСервере
+Процедура АутентификацияЧерезAPI()
+	
+	clientId = УправлениеНебольшойФирмойПовтИсп.ПолучитьЗначениеПоУмолчаниюПользователя(Пользователи.АвторизованныйПользователь(), "clientIdBOG");
+	secretId = УправлениеНебольшойФирмойПовтИсп.ПолучитьЗначениеПоУмолчаниюПользователя(Пользователи.АвторизованныйПользователь(), "secretIdBOG");
+	
+	Если ЗначениеЗаполнено(clientId) И ЗначениеЗаполнено(secretId) Тогда 
+		ОтправитьЗапросНаТокен();
+	КонецЕсли;
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ОтправитьЗапросНаТокен()
+	
+	ТестовыйРежим = НЕ Объект.ЗапускатьРеальныйБанк;
+	
+	ssl = Новый ЗащищенноеСоединениеOpenSSL;
+	
+	Если ТестовыйРежим Тогда
+		HTTPСоединение = Новый HTTPСоединение("account-test.bog.ge", 443, clientId, secretId,,,ssl);
+	Иначе
+		HTTPСоединение = Новый HTTPСоединение("account.bog.ge", 443, clientId, secretId,,,ssl);
+	КонецЕсли;
+	
+	Заголовки = Новый Соответствие;
+	Заголовки.Вставить("Content-Type", "application/x-www-form-urlencoded");
+	ТелоЗапроса = "grant_type=client_credentials";
+	
+	Если ТестовыйРежим Тогда
+		HTTPЗапрос = Новый HTTPЗапрос("/auth/realms/bog-test/protocol/openid-connect/token", Заголовки);
+	Иначе
+		HTTPЗапрос = Новый HTTPЗапрос("/auth/realms/bog/protocol/openid-connect/token", Заголовки);
+	КонецЕсли;
+	HTTPЗапрос.УстановитьТелоИзСтроки(ТелоЗапроса);
+	
+	Ответ = HTTPСоединение.ОтправитьДляОбработки(HTTPЗапрос);
+	Если Ответ.КодСостояния <> 200 Тогда
+		ОбщегоНазначенияКлиентСервер.СообщитьПользователю("Ошибка авторизации. Проверьте пользователя и пароль. Код состояния " + Ответ.КодСостояния);
+		ЗаписьЖурналаРегистрации("BOG", УровеньЖурналаРегистрации.Ошибка,,,"Код состояния " + ответ.КодСостояния + ", " + Ответ.ПолучитьТелоКакСтроку());
+		Возврат;
+	КонецЕсли; 
+	
+	
+	ЧтениеJSON = Новый ЧтениеJSON;
+	ЧтениеJSON.УстановитьСтроку(Ответ.ПолучитьТелоКакСтроку());
+	ДанныеОтвета = ПрочитатьJSON(ЧтениеJSON, Истина);
+	ЧтениеJSON.Закрыть();
+	
+	access_token = ДанныеОтвета["access_token"];
+	
+	ТокенДоступа = access_token;
+	УстановитьТокенДоступа(ТокенДоступа);
+	Токен = ТокенДоступа;
+	ТокенПолучен = Истина;
+	Элементы.СтраницаОбщая.Видимость = Истина;
+	Элементы.СтраницыВебСервисов.Видимость = Ложь;
+	
+	УстановитьВидимость();
+	
+КонецПроцедуры
+	
 &НаКлиенте
 Процедура ПриОткрытии(Отказ)
 	
@@ -116,7 +180,12 @@
 	Если НЕ Объект.ЗапускатьРеальныйБанк Тогда 
 		ID_Пользователя = ПолучитьIDПользователя();
 		
-		АдресСтраницыАутентификации = "https://cib2-web-dev.bog.ge:8090/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https%3A%2F%2Fcib2-web-dev.bog.ge%3A8090%2FOauth%2FConnect%2FToken.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
+		//АдресСтраницыАутентификации = "https://cib2-web-dev.bog.ge:8090/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https%3A%2F%2Fcib2-web-dev.bog.ge%3A8090%2FOauth%2FConnect%2FToken.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
+		//АдресСтраницыАутентификации = "https://cib-api-staging.bog.ge/Oauth/Connect/Authorize.aspx?client_id="+ID_Пользователя+"&response_type=token&scope=read+write&redirect_uri=https%3A%2F%2Fcib2-web-dev.bog.ge%3A8090%2FOauth%2FConnect%2FToken.aspx&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b";
+		//АдресСтраницыАутентификации = "https://account-test.bog.ge/auth/realms/bog-test/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=token&scope=corp&redirect_uri=https%3A%2F%2Fexample.com%3A44312%2Fcallback&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b&kc_locale=ka";
+		//АдресСтраницыАутентификации = "https://account-test.bog.ge/auth/realms/bog-test/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=code&scope=corp&redirect_uri=https%3A%2F%2Fexample.com%3A44312%2Fcallback";
+		АдресСтраницыАутентификации = "https://cib-staging.bog.ge/auth/realms/bog-test/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=token&scope=corp&redirect_uri=https%3A%2F%2Fexample.com%3A44312%2Fcallback&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b&kc_locale=ka";
+	  //АдресСтраницыАутентификации = "https://cib-api-staging.bog.ge/auth/realms/bog-test/protocol/openid-connect/auth?client_id="+ID_Пользователя+"&response_type=token&scope=corp&redirect_uri=https%3A%2F%2Fexample.com%3A44312%2Fcallback&state=e46fcdf4-a4bf-4dc6-8a42-e1b12e27826b&kc_locale=ka";	
 	Иначе
 		ID_Пользователя = IDРеальногоБанка;
 		ДатаНачалИспользованияНовогоДоступаКБанкуBOG = УправлениеНебольшойФирмойПовтИсп.ПолучитьЗначениеКонстанты("ДатаНачалаИспользованияНовогоДоступаКБанкуBOG");
