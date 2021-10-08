@@ -271,6 +271,7 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходыПоЗаказамПрогноз</registerRecords>
   <registerRecords>AccumulationRegister.Продажи</registerRecords>
   <registerRecords>AccumulationRegister.ОплатаСчетовИЗаказов</registerRecords>
+  <registerRecords>AccumulationRegister.Усушкa_СобранныеPаказы</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ПлатежныйКалендарь</registerRecords>
@@ -5562,6 +5563,98 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="8ca1f87e-dc85-45f5-8655-2b0a7c21f675">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="12de7c76-fdb8-4bb3-8751-81a9de5032cb">
+      <name>Усушка_Потери</name>
+      <synonym>
+        <key>en</key>
+        <value>Losses</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Потери</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზარალის</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Потери</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0880d407-106b-4871-a48f-649a7d9d08a6">
+      <name>Усушка_СписаниеНаПотери</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет учета потерь</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზარალის ჩამოწერა ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Account of losses</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СписаниеНаПотери</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="15853329-0132-4c41-b4ba-b1a38d80876e">
+      <name>Усушка_КоличествоСобрNET</name>
+      <synonym>
+        <key>en</key>
+        <value>Quantity of collected (NET)</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Собрано количество (NET)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>აგროვებული რაოდენობა (NET)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
     <attributes uuid="23902764-fdba-420e-8505-226a0c4d5f34">
       <name>ОптоваяДиапазон</name>
       <synonym>
@@ -5629,22 +5722,26 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="8ca1f87e-dc85-45f5-8655-2b0a7c21f675">
-      <name>Проект</name>
+    <attributes uuid="fc7432ed-30a7-4088-a317-732fcdd34f0f">
+      <name>Усушка_КоличествоСобрПотери</name>
+      <synonym>
+        <key>en</key>
+        <value>Losses quantity</value>
+      </synonym>
       <synonym>
         <key>ru</key>
-        <value>Проект</value>
+        <value>Количество (Потери)</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>პროექტი</value>
-      </synonym>
-      <synonym>
-        <key>en</key>
-        <value>Project</value>
+        <value>რაოდენობა (ზარალის)</value>
       </synonym>
       <type>
-        <types>CatalogRef.Проекты</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

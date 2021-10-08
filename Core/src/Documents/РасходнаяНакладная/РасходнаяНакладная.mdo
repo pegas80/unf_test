@@ -273,6 +273,7 @@
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыВРазрезеГТД</registerRecords>
   <registerRecords>AccumulationRegister.Продажи</registerRecords>
+  <registerRecords>AccumulationRegister.Усушкa_СобранныеPаказы</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
   <registerRecords>AccumulationRegister.Закупки</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
@@ -3379,22 +3380,22 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="a7c52de5-7309-4277-bb6a-6fe149ea950d">
-    <name>ОтключитьКонтрольЗадолжностиПокупателя</name>
+  <attributes uuid="6cb1018e-b875-4a46-9cf9-521c8e8c07fb">
+    <name>Проект</name>
     <synonym>
       <key>ru</key>
-      <value>Отключить контроль задолжности покупателя</value>
+      <value>Проект</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>მყიდველის დავალიანების  კონტროლის გამორთვა</value>
+      <value>პროექტი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Disable control  for customer debts</value>
+      <value>Project</value>
     </synonym>
     <type>
-      <types>Boolean</types>
+      <types>CatalogRef.Проекты</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -3457,22 +3458,22 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="6cb1018e-b875-4a46-9cf9-521c8e8c07fb">
-    <name>Проект</name>
+  <attributes uuid="a7c52de5-7309-4277-bb6a-6fe149ea950d">
+    <name>ОтключитьКонтрольЗадолжностиПокупателя</name>
     <synonym>
       <key>ru</key>
-      <value>Проект</value>
+      <value>Отключить контроль задолжности покупателя</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>პროექტი</value>
+      <value>მყიდველის დავალიანების  კონტროლის გამორთვა</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Project</value>
+      <value>Disable control  for customer debts</value>
     </synonym>
     <type>
-      <types>CatalogRef.Проекты</types>
+      <types>Boolean</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -4975,6 +4976,28 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="d0d18bf2-a558-4fc7-995a-8d61a126a0b9">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
     <attributes uuid="9bac4ee0-e147-4eee-b710-fce49aebc72a">
       <name>КоличествоСобр</name>
       <synonym>
@@ -4984,6 +5007,76 @@
       <synonym>
         <key>ka</key>
         <value>აგროვებული რაოდენობა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="677f84c9-d8b1-45ca-9d32-0bc0dbf293ec">
+      <name>Усушка_Потери</name>
+      <synonym>
+        <key>en</key>
+        <value>Losses</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Потери</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზარალის</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Потери</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2f0a3914-86e0-4b85-b84d-2f5e9badf55e">
+      <name>Усушка_СписаниеНаПотери</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет учета потерь</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზარალის ჩამოწერა ანგარიში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Account of losses</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СписаниеНаПотери</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5f238b9e-a4d9-41d3-899c-a4afd84764ac">
+      <name>Усушка_КоличествоСобрПотери</name>
+      <synonym>
+        <key>en</key>
+        <value>Losses quantity</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество (Потери)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რაოდენობა (ზარალის)</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -5020,22 +5113,26 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="d0d18bf2-a558-4fc7-995a-8d61a126a0b9">
-      <name>Проект</name>
+    <attributes uuid="57cbf46a-e433-4124-933b-35da63d3e300">
+      <name>Усушкa_КоличествоСтарое</name>
+      <synonym>
+        <key>en</key>
+        <value>Quantity (old)</value>
+      </synonym>
       <synonym>
         <key>ru</key>
-        <value>Проект</value>
+        <value>Количество (старое)</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>პროექტი</value>
-      </synonym>
-      <synonym>
-        <key>en</key>
-        <value>Project</value>
+        <value>რაოდენობა (ძველი)</value>
       </synonym>
       <type>
-        <types>CatalogRef.Проекты</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -6119,6 +6216,17 @@
     <synonym>
       <key>en</key>
       <value>Waybill</value>
+    </synonym>
+  </templates>
+  <templates uuid="1cc21476-9850-4e01-a200-cd185fb62800">
+    <name>Макет_печатьГодность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годность</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ვარგისიანობა</value>
     </synonym>
   </templates>
   <commands uuid="b516b710-763f-468a-b796-9d89733672be">

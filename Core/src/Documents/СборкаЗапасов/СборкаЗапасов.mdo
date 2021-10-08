@@ -269,6 +269,7 @@
   <registerRecords>AccumulationRegister.ЗапасыВРазрезеГТД</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКПоступлениюНаСклады</registerRecords>
+  <registerRecords>AccumulationRegister.ПроизводственныеПотери</registerRecords>
   <registerRecords>AccumulationRegister.ЗаказыНаПроизводство</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
   <registerRecords>AccumulationRegister.ПотребностьВЗапасах</registerRecords>
@@ -1265,6 +1266,29 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="7231d6c3-00c7-4c2e-bddc-c21499860943">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Project</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <attributes uuid="ed14ce44-6759-455e-8e91-a65dc99d2c50">
     <name>AzRyJiraCode</name>
     <synonym>
@@ -1287,25 +1311,22 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="7231d6c3-00c7-4c2e-bddc-c21499860943">
-    <name>Проект</name>
+  <attributes uuid="4e64b301-4040-482b-a513-1169bc1f2552">
+    <name>ТыпОперации</name>
     <synonym>
       <key>ru</key>
-      <value>Проект</value>
+      <value>Тып операции</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>პროექტი</value>
-    </synonym>
-    <synonym>
-      <key>en</key>
-      <value>Project</value>
+      <value>ოპერაციის ტიპი</value>
     </synonym>
     <type>
-      <types>CatalogRef.Проекты</types>
+      <types>EnumRef.ТипыОперации</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <createOnInput>DontUse</createOnInput>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -1855,6 +1876,47 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="f0522490-e7a3-420f-9d01-6ed2a2ef934c">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7122a6c9-2402-4598-a7b3-7e650a52689e">
+      <name>AzRyПартииНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Партия номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) ნომენკლატურის პარტია</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
     <attributes uuid="0f83f245-853f-4836-9f2b-318ea66e3ec2">
       <name>ДоляСтоимости</name>
       <synonym>
@@ -1892,47 +1954,6 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillChecking>ShowError</fillChecking>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="7122a6c9-2402-4598-a7b3-7e650a52689e">
-      <name>AzRyПартииНоменклатуры</name>
-      <synonym>
-        <key>ru</key>
-        <value>(AzRy) Партия номенклатуры</value>
-      </synonym>
-      <synonym>
-        <key>ka</key>
-        <value>(AzRy) ნომენკლატურის პარტია</value>
-      </synonym>
-      <type>
-        <types>CatalogRef.ПартииНоменклатуры</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <createOnInput>Use</createOnInput>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="f0522490-e7a3-420f-9d01-6ed2a2ef934c">
-      <name>Проект</name>
-      <synonym>
-        <key>ru</key>
-        <value>Проект</value>
-      </synonym>
-      <synonym>
-        <key>ka</key>
-        <value>პროექტი</value>
-      </synonym>
-      <synonym>
-        <key>en</key>
-        <value>Project</value>
-      </synonym>
-      <type>
-        <types>CatalogRef.Проекты</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

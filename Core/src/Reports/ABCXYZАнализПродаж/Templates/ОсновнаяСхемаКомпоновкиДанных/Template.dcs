@@ -277,6 +277,28 @@
 				</v8:NumberQualifiers>
 			</valueType>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyАналитикаКонтрагент</dataPath>
+			<field>AzRyАналитикаКонтрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyПроект</dataPath>
+			<field>AzRyПроект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyШтрихкодыНоменклатуры</dataPath>
+			<field>AzRyШтрихкодыНоменклатуры</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПродажиОбороты.Период,
@@ -302,6 +324,10 @@
 			ТОГДА ПродажиОбороты.Номенклатура.КатегорияНоменклатуры
 		ИНАЧЕ NULL
 	КОНЕЦ КАК ОбъектАнализа
+	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	,ПродажиОбороты.AzRyАналитикаКонтрагент КАК AzRyАналитикаКонтрагент,
+	ПродажиОбороты.AzRyПроект КАК AzRyПроект
+	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	
 ИЗ
 	РегистрНакопления.Продажи.Обороты(, , Месяц {(&amp;ПериодичностьЗапроса)}, ) КАК ПродажиОбороты
 
@@ -323,7 +349,11 @@
 			ТОГДА ПродажиОбороты.Номенклатура.КатегорияНоменклатуры
 		ИНАЧЕ NULL
 	КОНЕЦ,
-	ПродажиОбороты.Документ.Контрагент</query>
+	ПродажиОбороты.Документ.Контрагент
+	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	,ПродажиОбороты.AzRyАналитикаКонтрагент,
+	ПродажиОбороты.AzRyПроект
+	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetObject">
 		<name>КлассификацияОбъектов</name>
