@@ -24,7 +24,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="922479fb-59c1-4e69-8b11-676a971d641e"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="d429befc-7d1c-461e-bd04-47752ed83b1c"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.12</configurationExtensionCompatibilityMode>
@@ -100,6 +100,12 @@
   <commonPictures>CommonPicture.ОтчетРазвернуть</commonPictures>
   <commonPictures>CommonPicture.ЭлектронноеПисьмо</commonPictures>
   <commonPictures>CommonPicture.РежимРедактированияСпискаЭлементов</commonPictures>
+  <commonPictures>CommonPicture.СостояниеЗаказа</commonPictures>
+  <commonPictures>CommonPicture.СоздатьПоШаблону</commonPictures>
+  <commonPictures>CommonPicture.КОплате</commonPictures>
+  <commonPictures>CommonPicture.ЗнакСтоп</commonPictures>
+  <commonPictures>CommonPicture.КОтгрузке</commonPictures>
+  <commonPictures>CommonPicture.ЗанятьФайл</commonPictures>
   <roles>Role.БазовыеПрава</roles>
   <roles>Role.АдминистраторСистемы</roles>
   <roles>Role.AzRyДобавлениеИзменениеПодсистемыРозничныеПродажи</roles>
@@ -115,6 +121,7 @@
   <commonModules>CommonModule.ОтчетыУНФ</commonModules>
   <commonAttributes>CommonAttribute.AzRyДокументЗагруженИзДругойБазыРедактированиеЗапрешено</commonAttributes>
   <commonAttributes>CommonAttribute.AzRyВычислитьКурсовуюРазницу</commonAttributes>
+  <commonAttributes>CommonAttribute.ЗапретРедактированияДокументов</commonAttributes>
   <functionalOptions>FunctionalOption.ИспользоватьПодключаемоеОборудование</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьЗаказыВРозничнойТорговле</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьДисконтныеКарты</functionalOptions>
@@ -128,9 +135,11 @@
   <functionalOptions>FunctionalOption.ПлатежныйКалендарь</functionalOptions>
   <functionalOptions>FunctionalOption.УчетВалютныхОпераций</functionalOptions>
   <functionalOptions>FunctionalOption.УчетРозничныхПродаж</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьНесколькоОрганизаций</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <definedTypes>DefinedType.Объем</definedTypes>
   <definedTypes>DefinedType.Вес</definedTypes>
+  <definedTypes>DefinedType.ОснованияЭлектронныхДокументов</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
   <commonCommands>CommonCommand.ОтчетПоДвижениям</commonCommands>
@@ -159,6 +168,7 @@
   <constants>Constant.ФункциональнаяУчетВалютныхОпераций</constants>
   <constants>Constant.ФункциональнаяОпцияУчетРозничныхПродаж</constants>
   <constants>Constant.German_Butcher</constants>
+  <constants>Constant.ИспользоватьНесколькоОрганизаций</constants>
   <commonForms>CommonForm.ФормаОтчетаУНФ</commonForms>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
@@ -234,6 +244,7 @@
   <catalogs>Catalog.Потери</catalogs>
   <catalogs>Catalog.ВариантыОтчетов</catalogs>
   <catalogs>Catalog.КлючевыеОперации</catalogs>
+  <catalogs>Catalog.СостоянияЗаказовПокупателей</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -288,6 +299,7 @@
   <documents>Document.СборкаЗапасов</documents>
   <documents>Document.ПередачаВА</documents>
   <documents>Document.Импорт</documents>
+  <documents>Document.Событие</documents>
   <documentJournals>DocumentJournal.ЧекиККМ</documentJournals>
   <enums>Enum.ВидыМаркировки</enums>
   <enums>Enum.ВидыОперацийЗаказПокупателя</enums>
@@ -364,6 +376,7 @@
   <enums>Enum.СпособыНачисленияАмортизацииВнеоборотныхАктивов</enums>
   <enums>Enum.ВидыЧековДляНоменклатурыККМ</enums>
   <enums>Enum.Периодичность</enums>
+  <enums>Enum.СостоянияВерсийЭД</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -405,6 +418,10 @@
   <informationRegisters>InformationRegister.НеПереоцениватьСчета</informationRegisters>
   <informationRegisters>InformationRegister.СчетаФинансовогоРезультатаДоходы</informationRegisters>
   <informationRegisters>InformationRegister.СчетаКосвенныхПроизводственныхЗатрат</informationRegisters>
+  <informationRegisters>InformationRegister.ФактОплатыЗаказов</informationRegisters>
+  <informationRegisters>InformationRegister.СостоянияЭД</informationRegisters>
+  <informationRegisters>InformationRegister.ГрафикВыполненияЗаказов</informationRegisters>
+  <informationRegisters>InformationRegister.ГрафикОплатыЗаказов</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ДоходыИРасходы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Запасы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗапасыНаСкладах</accumulationRegisters>
