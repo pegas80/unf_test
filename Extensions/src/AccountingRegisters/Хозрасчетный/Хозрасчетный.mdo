@@ -12,6 +12,157 @@
   <name>Хозрасчетный</name>
   <objectBelonging>Adopted</objectBelonging>
   <extension xsi:type="mdclassExtension:AccountingRegisterExtension">
+    <chartOfAccounts>Checked</chartOfAccounts>
+    <correspondence>Checked</correspondence>
     <recordSetModule>Extended</recordSetModule>
   </extension>
+  <chartOfAccounts>ChartOfAccounts.Хозрасчетный</chartOfAccounts>
+  <correspondence>true</correspondence>
+  <dimensions uuid="8f0311c9-1c74-48de-80b7-93494354d71c">
+    <name>Валюта</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterDimensionExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Валюты</type>
+        </types>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </dimensions>
+  <dimensions uuid="3dd3aee8-0476-4ec6-881d-e710debc2aca">
+    <name>Подразделение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterDimensionExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </dimensions>
+  <resources uuid="7df0be49-455d-4565-b7b3-77a9f09c915f">
+    <name>СуммаВР</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </resources>
+  <resources uuid="c9959642-d9db-4047-9825-5b8c5c30ca82">
+    <name>Сумма</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+    <balance>true</balance>
+  </resources>
+  <resources uuid="3eb04a56-f05f-44d0-97c1-d573de2ec4a8">
+    <name>СуммаНУ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </resources>
+  <resources uuid="afebedfa-48c1-4fe9-b152-fa6bddfb1c8c">
+    <name>Количество</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </resources>
+  <resources uuid="541ecb42-da98-4fd7-aad8-184e9944ba45">
+    <name>ВалютнаяСумма</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </resources>
+  <resources uuid="dc4fd93a-92ce-4ed1-8a90-c275fec45ad2">
+    <name>СуммаПР</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:AccountingRegisterResourceExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+      <balance>Checked</balance>
+    </extension>
+  </resources>
+  <attributes uuid="9a7203f3-fa84-42bc-9513-c3d6107cdbf7">
+    <name>Содержание</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
 </mdclass:AccountingRegister>
