@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ec04942-c84b-4e1f-a8c4-f05572f292d1">
+  <producedTypes>
+    <selectionType typeId="427ff411-a79d-41b2-861a-ff12f51bdc97" valueTypeId="a70a177e-ec27-42c2-89d6-73e897373bed"/>
+    <listType typeId="47a23463-4d72-4744-a908-d3470aafbca3" valueTypeId="a9987508-b680-4750-949e-4e714664f124"/>
+    <managerType typeId="764f0085-d983-41fc-a3b3-46ded2ea8264" valueTypeId="df457271-9073-431f-8f7c-cfcd7e6fcc56"/>
+    <recordSetType typeId="9b9cb0de-4c50-42c0-bcba-2ce071ef2110" valueTypeId="f51eacca-c10e-42eb-9479-85ccdad18773"/>
+    <recordKeyType typeId="e8cd4961-a6f9-4284-820a-d18ad8ba5376" valueTypeId="6176fcf8-352c-48b5-b3c1-1acf3516cb5d"/>
+    <recordType typeId="4c256d8f-7e9e-4ebb-bda2-9e67f8570a83" valueTypeId="d1bb17e4-0eb8-40eb-982e-6f7a59b19ca8"/>
+    <recordManagerType typeId="7872cfe9-cf0e-4b0a-8668-797ca8174982" valueTypeId="eac2a05e-8ba6-496f-ac39-a7c0cea53355"/>
+  </producedTypes>
+  <name>НалогообложениеОрганизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Налогообложение организации</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ორგანიზაციის გადასახადებით დაბეგვრა</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>taxation organization</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НалогообложениеОрганизации.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="98024c1a-e807-42f0-aa0a-bef994a7776d">
+    <name>НалогообложениеНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налогообложение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადასახადებით დაბეგვრა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Taxation</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыНалогообложенияНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ТипыНалогообложенияНДС.EnumValue.ОблагаетсяНДС</value>
+    </fillValue>
+  </resources>
+  <resources uuid="48f0b1d3-ee76-4403-9221-8c2d21ffa78c">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>% НДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>% დღგ</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>% VAT</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ставка налога на добавленную стоимость.</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დამატებით ღირებულებაზე გადასახადის განაკვეთი.</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Ставка налога на добавленную стоимость.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="9950ff0a-ed5c-4595-8c3e-04734910079e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="3feb2e03-95d9-4f75-b3fb-59ee790d1dba">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

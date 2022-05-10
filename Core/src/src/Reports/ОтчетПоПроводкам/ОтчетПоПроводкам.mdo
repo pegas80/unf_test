@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="06f42e1a-e05e-4f46-b271-a3daf1f64311">
+  <producedTypes>
+    <objectType typeId="00d23d5e-9d88-4274-b8ea-aa2942b7c78b" valueTypeId="2cecaa07-0e8f-43a9-9297-0941a4ae9706"/>
+    <managerType typeId="dbd9b03d-8bcc-4af1-80d8-20732e36f345" valueTypeId="dbbf6464-acce-44b7-a6a9-5dcb22f4dee9"/>
+  </producedTypes>
+  <name>ОтчетПоПроводкам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет по проводкам</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ანგარიშგება გატარებების მიხედვით</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Report on transactions</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОтчетПоПроводкам.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОтчетПоПроводкам.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="529c6b10-7b13-4176-add1-5a0dd6e55187">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d5b9c687-9ac3-44bc-ae2b-1177d17b4846">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასაწყისი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Beginning of period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="758075f7-e984-4af1-a711-f87da8deca39">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასასრული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>End of period</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c3948e7c-0792-4890-9edd-560ddd8859c6">
+    <name>ВключатьОбособленныеПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Включая обособленные подразделения</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყოფილი განყოფილებების ჩართვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Including separate subdivisions</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7c7b8f25-1619-4bf3-a1de-ef27fc2602a5">
+    <name>ПоказательБУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>БУ (данные бухгалтерского учета)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ლარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>BU (accounting data)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c70a8dbf-963e-4088-b903-49e0a53b4892">
+    <name>ПоказательНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>НУ (данные налогового учета)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>OU (data of tax accounting)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e59a4057-01b0-4594-b7c5-143795b3a4d0">
+    <name>ПоказательПР</name>
+    <synonym>
+      <key>ru</key>
+      <value>ПР (данные по учету постоянных разниц)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>OL (the accounting of permanent differences)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f3d652c0-0fb1-49f9-9eb6-824106a646f1">
+    <name>ПоказательВР</name>
+    <synonym>
+      <key>ru</key>
+      <value>ВР (данные по учету временных разниц)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>BP (data to record time differences)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8747c5de-ca59-4a07-ac31-e33e50c3e7f5">
+    <name>ПоказательВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სავალუტო თანხის ჩვენება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>currency amount</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5259f688-c369-414e-bfb1-2e88949b0679">
+    <name>ПоказательКоличество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობის ჩვენება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>number</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1d3398fa-ce2c-4eb1-a738-d0f533d0d66f">
+    <name>РежимРасшифровки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим расшифровки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გაშიფვრის რეჟიმი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>decryption mode</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="c86c5d0b-7599-441f-b29c-6d3fecb7e32b">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>report Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="a8d7ea7e-242c-4236-807c-bcc70be9a11a">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Basic data composition circuit</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="a7fad84a-0d5c-4670-9c91-ca527f4c4b56">
+    <name>СхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Driving data composition</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="6133c020-de73-4268-99f4-86a941001641">
+    <name>ПроводкиРегл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проводки (регл.)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ბუღალტრული გატარებები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Wiring (Reglami).</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.СписаниеЗапасов</types>
+      <types>DocumentRef.ПередачаВА</types>
+      <types>DocumentRef.КорректировкаРеализации</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ОдноразовыеНачисления</types>
+      <types>DocumentRef.ПеремещениеЗапасов</types>
+      <types>DocumentRef.СчетФактураПолученныйГрузия</types>
+      <types>DocumentRef.КомплектацияВА</types>
+      <types>DocumentRef.РасспределениеЗатратНаТовары</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЧекККМВозврат</types>
+      <types>DocumentRef.АмортизацияВА</types>
+      <types>DocumentRef.ВыработкаВА</types>
+      <types>DocumentRef.АктВыполненныхРабот</types>
+      <types>DocumentRef.НачислениеНалогов</types>
+      <types>DocumentRef.ТаможенноеОформление</types>
+      <types>DocumentRef.КомПредложение</types>
+      <types>DocumentRef.СписаниеТопливаЗапасов</types>
+      <types>DocumentRef.РасходСоСчета</types>
+      <types>DocumentRef.ЧекККМ</types>
+      <types>DocumentRef.ПринятиеКУчетуВА</types>
+      <types>DocumentRef.ПрочиеРасходы</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.ИзменениеПараметровВА</types>
+      <types>DocumentRef.ПеремещениеВА</types>
+      <types>DocumentRef.ПоступлениеВКассу</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.КорректировкаПоступления</types>
+      <types>DocumentRef.Конвертация</types>
+      <types>DocumentRef.НачисленияПоКредитамИЗаймам</types>
+      <types>DocumentRef.СборкаЗапасов</types>
+      <types>DocumentRef.ВозвратДенегОтПФ</types>
+      <types>DocumentRef.РаспределениеЗатрат</types>
+      <types>DocumentRef.НачислениеЗарплаты</types>
+      <types>DocumentRef.ОтчетОРозничныхПродажах</types>
+      <types>DocumentRef.ОтчетПереработчика</types>
+      <types>DocumentRef.ПересортицаЗапасов</types>
+      <types>DocumentRef.ПеремещениеДС</types>
+      <types>DocumentRef.РасходИзКассы</types>
+      <types>DocumentRef.Импорт</types>
+      <types>DocumentRef.Взаимозачет</types>
+      <types>DocumentRef.ЗакрытиеМесяца</types>
+      <types>DocumentRef.СписаниеВАНаТовары</types>
+      <types>DocumentRef.СчетФактураОтправленныйГрузия</types>
+      <types>DocumentRef.ПоступлениеНаСчет</types>
+      <types>DocumentRef.ВводНачальныхОстатков</types>
+      <types>DocumentRef.РС_НалоговыйДокумент</types>
+      <types>DocumentRef.СписаниеВА</types>
+      <types>DocumentRef.СдельныйНаряд</types>
+      <types>DocumentRef.ДополнительныеРасходы</types>
+      <types>DocumentRef.ОперацияПоПлатежнымКартам</types>
+      <types>DocumentRef.ОприходованиеЗапасов</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ЖурналПроводок_Грузия</picture>
+    </picture>
+  </commands>
+</mdclass:Report>

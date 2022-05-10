@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f93b9c5a-d9ec-4ca9-b948-a241a0d55473">
+  <producedTypes>
+    <objectType typeId="f71a6d66-010c-4339-93ea-29fd4538b15a" valueTypeId="fb2a094c-de0a-47c5-af64-83bc71dc26c8"/>
+    <managerType typeId="764d6f8f-6365-4e3f-bc8d-693fdeab4643" valueTypeId="ec13de52-9372-425d-b5da-eef39dc1cdf7"/>
+  </producedTypes>
+  <name>ПомощникКорректировкиОстатковЕГАИС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Помощник корректировки остатков ЕГАИС</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Помощник корректировки остатков ЕГАИС</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Assistant adjustments residues EGAIS</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПомощникКорректировкиОстатковЕГАИС.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="ee2ba521-4009-4799-ab30-6ca8214b74f3">
+    <name>ОрганизацияЕГАИС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация ЕГАИС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ЕГАИС ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>organization EGAIS</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторОрганизацийЕГАИС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Организация, остатки которой необходимо скорректировать</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Организация, остатки которой необходимо скорректировать</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The organization, the remains of which need to be adjusted</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="cddd603e-bffb-4ba1-8eaa-6823b3c8d776">
+    <name>КорректироватьОстаткиНемаркируемойПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Корректировать остатки немаркируемой продукции</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Корректировать остатки немаркируемой продукции</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Adjust product residues nemarkiruemoy</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Если в дальнейшем не планируется отражать продажи немаркируемой продукции в ЕГАИС, то флаг можно снять</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Если в дальнейшем не планируется отражать продажи немаркируемой продукции в ЕГАИС, то флаг можно снять</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>If no further planned to reflect the sale of products in nemarkiruemoy EGAIS, the flag can be removed</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f347160e-73d8-404f-97fc-229cdaa80d48">
+    <name>ОстаткиВРегистре1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки в регистре №1</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Остатки в регистре №1</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Remains in the register №1</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОстаткиЕГАИС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Документ запроса остатков по регистру №1</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Документ запроса остатков по регистру №1</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>residues request document on the register №1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.ОрганизацияЕГАИС</name>
+      <field>DataProcessor.ПомощникКорректировкиОстатковЕГАИС.Attribute.ОрганизацияЕГАИС</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Отбор.ВидДокумента</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ВидыДокументовЕГАИС.EnumValue.ЗапросОстатков</value>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.СтатусОбработки</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.СтатусыОбработкиОстатковЕГАИС.EnumValue.ПолученыОстатки</value>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.Проведен</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+    <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+  </attributes>
+  <attributes uuid="eb7269d3-d661-423a-ae3f-ff3060425691">
+    <name>ОстаткиВРегистре2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки в регистре №2</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Остатки в регистре №2</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Residues in register №2</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОстаткиЕГАИС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Документ запроса остатков по регистру №2</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Документ запроса остатков по регистру №2</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>residues request document on the register №2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.ОрганизацияЕГАИС</name>
+      <field>DataProcessor.ПомощникКорректировкиОстатковЕГАИС.Attribute.ОрганизацияЕГАИС</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Отбор.ВидДокумента</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ВидыДокументовЕГАИС.EnumValue.ЗапросОстатковВТорговомЗале</value>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.СтатусОбработки</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.СтатусыОбработкиОстатковЕГАИС.EnumValue.ПолученыОстатки</value>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.Проведен</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+    <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+  </attributes>
+  <attributes uuid="c5a16603-281c-42e1-b5f7-93dea86c039e">
+    <name>ДатаУчетныхОстатков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата учетных остатков</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Дата учетных остатков</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Date account balances</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата получения учетных остатков. Если не заполнена, будут использованы текущие</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Дата получения учетных остатков. Если не заполнена, будут использованы текущие</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Date of receipt of account balances. If not filled, they will be used by the current</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="faa4ba46-3300-4ed9-adec-f40fc4ab1220">
+    <name>ЭтоСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это склад</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Это склад</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>This warehouse</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что торговый объект является складским помещением</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Признак того, что торговый объект является складским помещением</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>A sign that commercial property is a storage room</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="24c13629-78de-4cbb-97d7-add2cd1f9a53">
+    <name>ЭтоТорговыйЗал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это торговый зал</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Это торговый зал</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>This trading room</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что торговый объект является торговым залом</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Признак того, что торговый объект является торговым залом</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>A sign that commercial property is a trading hall</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="e54cb568-e1e5-476b-b73d-2228addb1af5">
+    <producedTypes>
+      <objectType typeId="01b8c0b5-4b1b-41d5-bf0b-1c82365b6ecd" valueTypeId="851f7b86-335b-4907-ade5-68d997f22680"/>
+      <rowType typeId="96756867-b5bd-4eb5-9c47-e9bbc82eefdc" valueTypeId="87ce321c-ec6a-4354-bd4a-e56791d3e898"/>
+    </producedTypes>
+    <name>ТаблицаОстатков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица остатков</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Таблица остатков</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Table residues</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="015a269c-b5e9-4a65-96a4-011763bfd5ac">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>DefinedType.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქციის სახელწოდება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>alcoholic beverages Name</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.АлкогольнаяПродукция</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="e860f52d-a97d-4a56-a305-e746c82fe7cd">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ХарактеристикаНоменклатуры</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის მახასიათებელი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Характеристика номенклатуры</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.ПомощникКорректировкиОстатковЕГАИС.TabularSection.ТаблицаОстатков.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="d7876255-c99a-4966-b5c4-d94e688c38c3">
+      <name>ПродаетсяВРозлив</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продается в розлив</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Продается в розлив</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Sold on tap</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Продукция, продаваемая в розлив, требует передачи операции вскрытия тары в ЕГАИС</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Продукция, продаваемая в розлив, требует передачи операции вскрытия тары в ЕГАИС</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Products sold on tap, requires the transmission of the opening operation of packaging EGAIS</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a67359ca-9aac-4ad6-b75c-ad4c7099de79">
+      <name>ОбъемДАЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Объем в декалитрах</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მოცულობა დეკალიტრებში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The volume in deciliters</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>18</precision>
+          <scale>6</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Объем в декалитрах, используемый в журнале учета объема розничной продажи алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მოცულობა დეკალიტრებში, რომელიც ალკოჰოლური პროდუქციის საცალო გაყიდვის მოცულობის აღრიცხვის ჟურნალში გამოიყენება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The volume in deciliters used in the register of retail sales of alcoholic beverages</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e105345d-2851-45e7-8e3e-3c59d24b1416">
+      <name>АлкогольнаяПродукция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Алкогольная продукция</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქცია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Алкогольная продукция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქციის სახელწოდება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>alcoholic beverages Name</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="bf4c5b54-c335-4a72-b2b7-8d2d9d273437">
+      <name>ТипПродукции</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип продукции</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროდუქციის ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>type of product</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ТипыПродукцииЕГАИС</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Тип продукции: упакованная или неупакованная</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Тип продукции: упакованная или неупакованная</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Product Type: packed or unpacked</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b0767d3b-355a-41dc-9953-416dbfb33145">
+      <name>ОстатокРегистр1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>register №1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара по регистру №1</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара по регистру №1</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance on goods register №1</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e645e745-73e4-4b42-ac75-404091108089">
+      <name>ОстатокРегистр2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>register №2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара по регистру №2</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара по регистру №2</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance on goods register №2</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a4b1750c-788d-480f-9820-daa81b68fe73">
+      <name>ОстатокСклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток на складе</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნაშთი საწყობში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance in stock</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара на складе</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара на складе</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in stock</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e682bdd6-ed5c-4237-bd70-32bf74a0e453">
+      <name>ОстатокТорговыйЗал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток в торговом зале</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Остаток в торговом зале</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance on the trading floor</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара в торговом зале</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара в торговом зале</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in the sales area</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f1246d87-03f3-48c5-bf0b-c01e7be01422">
+      <name>ОстатокСкладБазЕд</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток на складе (баз. ед.)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Остаток на складе (баз. ед.)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance in stock (databases. Units).</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара на складе в базовых единицах</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара на складе в базовых единицах</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in a warehouse in the base unit</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f7e2e734-1ed9-4276-9d73-11b66cbe6800">
+      <name>ОстатокТорговыйЗалБазЕд</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток в торговом зале (баз. ед.)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Остаток в торговом зале (баз. ед.)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance on the trading floor (bases. Units).</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара в торговом зале в базовых единицах</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара в торговом зале в базовых единицах</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in the sales area in the base unit</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="85430d59-4a4f-4d72-b714-8c96344a7e6f">
+    <producedTypes>
+      <objectType typeId="cb723816-0128-4ebc-bd5e-2b36f9ae00e4" valueTypeId="cf5f9553-f04c-494b-be86-51dee8396540"/>
+      <rowType typeId="e27f4751-494f-4e14-a30d-3345a0a69633" valueTypeId="901e2733-b49f-457d-871a-8fc05ab92f7a"/>
+    </producedTypes>
+    <name>ТаблицаКорректировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица корректировки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Таблица корректировки</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>correction table</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Таблица с рассчитанным количеством для корректировки остатков</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Таблица с рассчитанным количеством для корректировки остатков</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Table with a calculated amount for correcting residues</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="6b0dac72-8505-4b70-bf24-3d17406ed4eb">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>DefinedType.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქციის სახელწოდება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>alcoholic beverages Name</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.АлкогольнаяПродукция</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="a62f1068-b4ef-4f8d-a9d8-aa33db208771">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ХарактеристикаНоменклатуры</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის მახასიათებელი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Характеристика номенклатуры</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.ПомощникКорректировкиОстатковЕГАИС.TabularSection.ТаблицаКорректировки.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="218ee405-5674-4931-8fa5-45a0d31e9479">
+      <name>АлкогольнаяПродукция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Алкогольная продукция</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქცია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Алкогольная продукция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ალკოჰოლური პროდუქციის სახელწოდება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>alcoholic beverages Name</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    </attributes>
+    <attributes uuid="0fda8927-acb5-4ea9-b4ce-f8df298c57ec">
+      <name>ПродаетсяВРозлив</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продается в розлив</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Продается в розлив</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Sold on tap</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Продукция, продаваемая в розлив, требует передачи операции вскрытия тары в ЕГАИС</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Продукция, продаваемая в розлив, требует передачи операции вскрытия тары в ЕГАИС</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Products sold on tap, requires the transmission of the opening operation of packaging EGAIS</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4b64e705-bffa-4b3f-a26d-36c366be2e3a">
+      <name>ОбъемДАЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Объем в декалитрах</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მოცულობა დეკალიტრებში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The volume in deciliters</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>18</precision>
+          <scale>6</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Объем в декалитрах, используемый в журнале учета объема розничной продажи алкогольной продукции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მოცულობა დეკალიტრებში, რომელიც ალკოჰოლური პროდუქციის საცალო გაყიდვის მოცულობის აღრიცხვის ჟურნალში გამოიყენება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The volume in deciliters used in the register of retail sales of alcoholic beverages</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="53afb3a7-8bee-429b-8bc4-a8bcc39ce94e">
+      <name>ОстатокСклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток на складе</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნაშთი საწყობში</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance in stock</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара на складе</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара на складе</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in stock</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6a46b001-50f7-4adf-9c63-4304348d349b">
+      <name>ОстатокТорговыйЗал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток в торговом зале</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Остаток в торговом зале</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Balance on the trading floor</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара в торговом зале</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара в торговом зале</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance of goods in the sales area</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="83579abb-b48d-4ef0-9a00-fa467d205739">
+      <name>ОстатокРегистр1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>register №1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара по регистру №1</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара по регистру №1</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance on goods register №1</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ef13f1ef-fccd-41a1-94a2-2381e74e474f">
+      <name>ОстатокРегистр2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>register №2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Остаток товара по регистру №2</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Остаток товара по регистру №2</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Balance on goods register №2</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a67a8dd5-d8e4-45ec-a8f4-e1ad1662176a">
+      <name>ПередатьВРегистр2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Передать в регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Передать в регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Transfer into register №2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество, требуемое для передачи (возврата) из регистра №2</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Количество, требуемое для передачи (возврата) из регистра №2</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The amount required for transmitting (returning) from the register №2</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="29ffdfa5-7d0e-4805-8892-a5e9b4bc4b96">
+      <name>ПоставитьНаБалансВРегистр2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поставить на баланс в регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Поставить на баланс в регистр №2</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Put on the balance in the register №2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество, требуемое для постановки на баланс (списания) из регистра №2</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Количество, требуемое для постановки на баланс (списания) из регистра №2</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The amount required to arm the balance (cancellation) of the register №2</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="900aff52-a359-41e0-adac-e36ff78c657a">
+      <name>ПоставитьНаБалансВРегистр1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поставить на баланс в регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Поставить на баланс в регистр №1</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Put on the balance in the register №1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество, требуемое для постановки на баланс (списания) из регистра №1</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Количество, требуемое для постановки на баланс (списания) из регистра №1</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>The amount required to arm the balance (cancellation) of the register №1</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="b396a846-d20a-437c-ad51-3aa93072948b">
+    <producedTypes>
+      <objectType typeId="80e1e063-4baa-4da6-a12f-0649e9e35352" valueTypeId="d4a1b90a-5f05-4a61-b44f-0b9ca27f9736"/>
+      <rowType typeId="83d79566-32e7-41af-b451-2ed857dda029" valueTypeId="4495acad-2891-4ef4-91e2-145e079a0b84"/>
+    </producedTypes>
+    <name>СозданныеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Созданные документы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Созданные документы</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>created documents</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Созданные документы корректировки остатков по регистрам ЕГАИС</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Созданные документы корректировки остатков по регистрам ЕГАИС</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>By remnants of adjustment documents registers EGAIS</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a4e80986-d618-4324-b879-29d5d7f41cb6">
+      <name>ДокументСсылка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი ბმული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>reference document</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.АктПостановкиНаБалансЕГАИС</types>
+        <types>DocumentRef.АктСписанияЕГАИС</types>
+        <types>DocumentRef.ПередачаВТорговыйЗалЕГАИС</types>
+        <types>DocumentRef.ВозвратИзТорговогоЗалаЕГАИС</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Документ корректировки остатков</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>Документ корректировки остатков</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>residues adjustment document</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="1540bd47-d7ed-4fef-8be5-67668242a424">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფორმა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

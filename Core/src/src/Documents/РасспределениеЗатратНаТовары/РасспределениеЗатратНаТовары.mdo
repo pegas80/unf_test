@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="22882040-2e92-4c7e-b6b3-8ec931eabf86">
+  <producedTypes>
+    <objectType typeId="6ff6ec15-a928-498a-b7cd-299cf3071393" valueTypeId="3792d2ef-fb1e-47ac-99be-cb56eb3042f6"/>
+    <refType typeId="1c21c65d-fd72-455b-b65d-b9408057c2dc" valueTypeId="250edc8a-a719-41d5-8455-d5dd354bff78"/>
+    <selectionType typeId="936e4a11-97b9-44dd-b9ea-8b5d34b68590" valueTypeId="03c5f19b-51b0-4b2c-b2d8-ad947dccf322"/>
+    <listType typeId="f3f745a6-e278-465a-86ee-cdffafcc4794" valueTypeId="a026ad8c-46da-4c8a-a3f8-caaec7bc50a7"/>
+    <managerType typeId="0d7a513c-c557-4683-9d44-3ed30064bc25" valueTypeId="79354cac-1d96-444c-9722-3aaeb5200c30"/>
+  </producedTypes>
+  <name>РасспределениеЗатратНаТовары</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расспределение затрат на товары</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>მარაგებზე და ქონებაზე  ხარჯების გადანაწილება</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>ALLOTMENT cost of goods</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.РасспределениеЗатратНаТовары.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.РасспределениеЗатратНаТовары.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
+  <registerRecords>InformationRegister.ПараметрыВнеоборотныхАктивов</registerRecords>
+  <registerRecords>AccumulationRegister.Запасы</registerRecords>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
+  <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <registerRecords>AccumulationRegister.ВнеоборотныеАктивы</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="62704948-e979-4808-b76b-dd0c78d9cad9">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ოპერაციის სახეობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type of transaction</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОперацийРасспределениеЗатратНаТовары</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ad3a199c-d97a-4b0b-b254-677328647ea4">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასაწყისი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>the date of the beginning</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4c363a70-4c31-47f1-89bd-409430f77e1f">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პერიოდის დასასრული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>expiration date</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7785c11f-ec4d-438c-95bc-62b09b2a10b1">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6866a7c7-9381-413b-b2e0-9de3c466040d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კომენტარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="afe26a7f-bd8a-4a53-b82a-0edb3b6ba66f">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ავტორი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Author</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="10ce857f-a69e-47c0-a33f-c1aba5673b5b">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პასუხისმგებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Responsible Person</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2ed8083c-9bbd-4d3a-af14-0a20b82baba6">
+    <name>ВнеоборотныйАктив</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имущество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქონება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Propety</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнеоборотныеАктивы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Имущество, для которого фиксируется объем выработки</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონება, რომლისთვისაც ხდება გამომუშავების მოცულობის ფიქსირება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The property, which is fixed to volume production</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="53e405f2-98e9-4250-8545-7c02ab3cdd83">
+    <name>ОбъемПродукцииРаботДляВычисленияАмортизацииТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объем продукции (работ) для исчисления амортизации в натуральных ед.</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროდუქციის (სამუშაოების) მოცულობა ამორტიზაციის გამოსათვლელად ნატურალურ ერთეულებში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The volume of goods (works) for the calculation of depreciation in natural units.</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объем продукции для вычисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პროდუქციის მოცულობა ამორტიზაციის გამოსათვლელად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Volume production for the calculation of depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="919f674a-21e6-4efa-8b27-4c79b759bdce">
+    <name>СрокИспользованияДляВычисленияАмортизацииТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок использования для вычисления амортизации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყენების ვადა ამორტიზაციის გასაანგარიშებლად</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>use time to calculate the depreciation</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Срок использования для вычисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გამოყენების ვადა ამორტიზაციის გასაანგარიშებლად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>use time to calculate the depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f400e212-39aa-41ae-af84-18bced63001f">
+    <name>СчетЗатратТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დანახარჯების ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense Account</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Управленческий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Account allocation of costs for depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипСчета</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="746e564c-2114-4f96-9277-2658bf94dee0">
+    <name>СтруктурнаяЕдиницаТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Структурная единица на которую относятся затраты по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>სტრუქტურული ერთეული, რომელსაც მიეკუთვნება ქონების ამორტიზაციაზე დანახარჯები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The structural unit which includes the cost of depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипСтруктурнойЕдиницы</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3308a5c1-3566-4825-b663-c9020beacc75">
+    <name>СчетЗатратРеглТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат (регл)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დანახარჯების ანგარიში (регл)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense Account</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Account allocation of costs for depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3c1d0242-c836-4a87-aa4a-27ef895317c5">
+    <name>СтоимостьДляВычисленияАмортизацииТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ღირებულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>cost of</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Стоимость для начисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ღირებულება ამორტიზაციის დასარიცხად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The cost for the calculation of depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d331f68e-7136-4f36-a85c-e2cead45b539">
+    <name>ОбъемПродукцииРаботДляВычисленияАмортизацииНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объем продукции (работ) для исчисления амортизации в натуральных ед.</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროდუქციის (სამუშაოების) მოცულობა ამორტიზაციის გამოსათვლელად ნატურალურ ერთეულებში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The volume of goods (works) for the calculation of depreciation in natural units.</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объем продукции для вычисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პროდუქციის მოცულობა ამორტიზაციის გამოსათვლელად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Volume production for the calculation of depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0a01e778-4c20-417a-a567-51e6de94bba6">
+    <name>СрокИспользованияДляВычисленияАмортизацииНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок использования для вычисления амортизации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყენების ვადა ამორტიზაციის გასაანგარიშებლად</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>use time to calculate the depreciation</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Срок использования для вычисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გამოყენების ვადა ამორტიზაციის გასაანგარიშებლად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>use time to calculate the depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c720a851-a092-4913-8983-2ed444cb68ae">
+    <name>СчетЗатратНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დანახარჯების ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense Account</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Управленческий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Account allocation of costs for depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипСчета</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9b3e6c36-237d-40ff-9388-f7bf2ce3d038">
+    <name>СтруктурнаяЕдиницаНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Структурная единица на которую относятся затраты по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>სტრუქტურული ერთეული, რომელსაც მიეკუთვნება ქონების ამორტიზაციაზე დანახარჯები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The structural unit which includes the cost of depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипСтруктурнойЕдиницы</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4e149de6-7d0a-48f6-9e28-7b78eb13b8e3">
+    <name>СчетЗатратРеглНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат (регл)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დანახარჯების ანგარიში (регл)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expense Account</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Account allocation of costs for depreciation of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="71813762-99f9-425b-890e-852b74d559b5">
+    <name>СтоимостьДляВычисленияАмортизацииНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ღირებულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>cost of</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Стоимость для начисления амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ღირებულება ამორტიზაციის დასარიცხად</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The cost for the calculation of depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="85ad46b3-e48e-49ef-adbe-bc4067549f24">
+    <name>СчетПереоценкиНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет переоценки нов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადაფასების ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Revaluation Account new</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Управленческий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества
+</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипСчета</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ПрочиеДоходы</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f46a4a52-e3fe-4019-9372-764f426b9a2b">
+    <name>СчетПереоценкиРеглНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет переоценки (регл)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადაფასების ანგარიში (регл)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Revaluation Account (Regla)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет отнесения затрат по амортизации имущества (регл)
+</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონების ამორტიზაციის ხარჯების მიკუთვნების ანგარიში (регл)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ef01cfc2-f7a9-44f4-adb1-bed98db78181">
+    <name>НачислятьАмортизациюВТекущемМесяцеНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начислять амортизацию в текущем месяце</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მიმდინარე თვეში ამორტიზაციის დარიცხვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Depreciate this month</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак начисления амортизации начиная с текущего месяца</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მიმდინარე თვიდან ცვეთის დარიცხვის ნიშანი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>depreciation sign starting with the current month</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="81f1d665-d936-4d6d-92b4-12a4b9cd6af8">
+    <name>НаправлениеДеятельностиТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление деятельности тек</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საქმიანობის მიმართულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Direction tech activities</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НаправленияДеятельности</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Направление деятельности, на которое относится начисление амортизации</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>საქმიანობის მიმართულება, რომელსაც მიეკუთვნება დარიცხული ამორტიზაცია</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Activity, which refers to the depreciation</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>СчетЗатрат</name>
+      <field>0:b680849e-317f-4b5c-8872-03c4cc66f3d4/0:2a4a83bb-6a39-4756-b46b-93b113da140f</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1df11303-cedf-4359-a6b5-c184fcd10d46">
+    <name>АдресТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес тек</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მისამართი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Address</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="379d1620-bee8-42ea-9e15-2852effad607">
+    <name>АдресНовый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес новый</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მისამართი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Address</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bbf6e878-3c8a-4581-8356-b2f9c0565c26">
+    <name>ГодовойПроцентАмортизацииДляУменьшенногоОстаткаТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годовой процент амортизации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ამორტიზაციის %</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Annual percentage</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2d30457f-16ef-4beb-bd96-e10c7c9d05ed">
+    <name>ЛиквидационнаяСтоимостьДляУменьшенногоОстаткаТек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ликвидационная стоимость</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სალიკვიდაციო ღირებულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Liquidation value</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="73cf93eb-c1c4-4ccc-b58b-b5f7d8f2f93a">
+    <name>ГодовойПроцентАмортизацииДляУменьшенногоОстаткаНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годовой процент амортизации</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ამორტიზაციის %</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Annual percentage</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5a841f1c-f2ea-4f94-bd9e-829d8c8ca60b">
+    <name>ЛиквидационнаяСтоимостьДляУменьшенногоОстаткаНов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ликвидационная стоимость</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სალიკვიდაციო ღირებულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Liquidation value</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="26768345-626a-4370-a357-0f28c2c66022">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The form of the document</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="d9437b37-26c4-46ad-8351-9fb3acd6062e">
+    <producedTypes>
+      <objectType typeId="43d641bf-4068-46d3-b7a4-73c0e769287a" valueTypeId="97994737-b151-49c2-a49e-7dde31da9d95"/>
+      <rowType typeId="a6f5ba6b-c461-48e8-b5ea-a62c0f4e9a61" valueTypeId="0a492630-d62c-4054-b083-4ccf486342c1"/>
+    </producedTypes>
+    <name>ОстаткиПоСчетам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки по счетам</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Balances</value>
+    </synonym>
+    <attributes uuid="4e23911e-98a4-400d-9b8a-d406fb430df1">
+      <name>СчетУчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Счет учета</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ხარჯების ანგარიშები</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>expense account</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Хозрасчетный</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5f01f6c1-2e54-4791-8e1e-9a2872195d56">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b7c61244-137e-4d16-b599-74f61bdbcde8">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Структурная единица</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>განყოფილება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>structural unit</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="70bfbdbc-f965-45f4-9cf8-fe089e09e9de">
+      <name>ВидСубконто1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид субконто1</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>View subkonto1</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5d5130b1-c010-4a3f-a7f8-5a1a91b759cc">
+      <name>ВидСубконто2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид субконто2</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>View subkonto2</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a73768c3-0291-417c-90bf-2a88d9e17e79">
+      <name>ВидСубконто3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид субконто3</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>View subkonto3</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cfbbe1ba-6471-4368-bc0e-a3cf4a042219">
+      <name>СуммаКотроль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма котроль</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>sum kotrol</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="817a17c8-26fe-4030-8545-68ff5df3455e">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="305ba076-def1-4635-be06-aeba0e35bff3">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.РасспределениеЗатратНаТовары.TabularSection.ОстаткиПоСчетам.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="531eb949-925f-4061-82f4-e9feebfb950a">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Проект</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="87f33dca-fe26-4d16-8f77-c4cd7b14b5de">
+      <name>Партия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Партия</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პარტია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The consignment</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>В данном поле указывается партия номенклатуры.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ამ ველში მიეთითება ნომენკლატურის პარტია.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>В данном поле указывается партия номенклатуры.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>Document.РасспределениеЗатратНаТовары.Attribute.ВидОперации</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.РасспределениеЗатратНаТовары.TabularSection.ОстаткиПоСчетам.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="f58436bb-4e86-4f96-8ea3-0ac7ce6116bd">
+    <producedTypes>
+      <objectType typeId="03ff77fc-1e42-4fbf-900c-f59f083b7808" valueTypeId="5a90384c-9365-47aa-b852-870546c302ae"/>
+      <rowType typeId="75d1f8a0-bb87-4ccf-bed5-b25ed16c847f" valueTypeId="0663b01a-9687-4e3a-b01b-062b4dfef308"/>
+    </producedTypes>
+    <name>ОстаткиТоваровНаСкладе</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки товаров на складе</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Remains of products in stock</value>
+    </synonym>
+    <attributes uuid="e660199f-6597-436a-aef7-c1397e695261">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value> </value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value> </value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c1279f6a-f29a-4595-8ffd-6c72fd330e02">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Структурная единица</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საწყობი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>structural unit</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="59e6f157-76fe-4693-85ca-91c6515e5b14">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c98dbd13-0150-48ee-8f93-763930230eef">
+      <name>Характеристика</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მახასიათებელი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.РасспределениеЗатратНаТовары.TabularSection.ОстаткиТоваровНаСкладе.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bd3156d6-d454-49ea-80a1-9836036bca30">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რაოდენობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f956c494-4b09-4686-8e4c-97b3ea749db0">
+      <name>СуммаРасходов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма распределения</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>განაწილების თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The amount of the distribution</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c40e1bf7-c670-4bce-82bd-3ace85c81ac6">
+      <name>Себистоимость</name>
+      <synonym>
+        <key>ru</key>
+        <value>Себистоимость</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თვითღირებულება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Sebistoimost</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f985a4a8-1f97-4638-8302-5c44e95f3e02">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Проект</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="77d60cdd-305a-4e91-b138-233c26d6070c">
+      <name>Партия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Партия</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პარტია</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>The consignment</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>В данном поле указывается партия номенклатуры.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ამ ველში მიეთითება ნომენკლატურის პარტია.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>В данном поле указывается партия номенклатуры.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>Document.РасспределениеЗатратНаТовары.Attribute.ВидОперации</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.РасспределениеЗатратНаТовары.TabularSection.ОстаткиТоваровНаСкладе.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="f46ee8cc-8e3c-44c6-960e-dcb95d8e62b3">
+    <name>СКД_ОстаткиТоваровНаСкладе</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД остатки товаров на складе</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>SKD remains of goods in stock</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="8b7e9568-821f-4596-8b5e-6ed1a4ae498f">
+    <name>СКД_ОборотыПоСчетам</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД обороты по счетам</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>SKD turnovers on accounts</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="62d26bbe-7379-469c-a821-72d9e4854011">
+    <name>СКД_ОборотыПоСчетамПроектов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обороты по счетам проектов (СКД)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Обороты по счетам проектов (СКД)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Обороты по счетам проектов (СКД)</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="718320d9-d80f-4180-8ea4-30d65efcd098">
+    <name>СКД_ОстаткиТоваровНаСкладеПоПроекту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки товаров на складе по проекту (СКД)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Остатки товаров на складе по проекту (СКД)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Остатки товаров на складе по проекту (СКД)</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Document>

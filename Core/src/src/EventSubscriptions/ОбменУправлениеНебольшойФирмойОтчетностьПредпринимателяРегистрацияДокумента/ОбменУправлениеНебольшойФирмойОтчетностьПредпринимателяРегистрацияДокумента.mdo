@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5e363ec6-11c9-4752-9a2d-9130fb3e3a7f">
+  <name>ОбменУправлениеНебольшойФирмойОтчетностьПредпринимателяРегистрацияДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными &quot;Управление нашей фирмой&quot; - &quot;Отчетность предпринимателя&quot;. Перед записью документа.</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Обмен данными &quot;Управление нашей фирмой&quot; - &quot;Отчетность предпринимателя&quot;. Перед записью документа.</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Communication &quot;Our Firm Management&quot; - &quot;Reporting a businessman.&quot; Before recording of the document.</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.РасходСоСчета</types>
+    <types>DocumentObject.РасходИзКассы</types>
+    <types>DocumentObject.ПоступлениеНаСчет</types>
+    <types>DocumentObject.ПоступлениеВКассу</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОП.ОбменУправлениеНебольшойФирмойОтчетностьПредпринимателяПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

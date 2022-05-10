@@ -1,0 +1,1697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://v8.1c.ru/8.2/roles" xsi:type="Rights">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.Гражданство</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Прочитан</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.СинхронизацияЭлектронныхТТН</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.АвансыПолученныхФактур</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>РегНакопления ИЗ РегистрНакопления.АвансыПолученныхФактур КАК РегНакопления, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА РегНакопления.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА РегНакопления.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Вид</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.СинхронизацияЭлектронныхСФ</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.ДатаРождения</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ТипЭлементаВерсииЭД</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ТипДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.Dimension.Пользователь</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.РасчетыСПенсионнымФондом</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ТребуетсяИзвещение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.НакладныеБезФактур</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТоварыПоставщиковВТТН</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.АвансыПолученныхФактур</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.Resource.РежимовПротоколаДляОбменаRS</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ИспользоватьДокументыВАДляЭлектронныхНакладных</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураОтправленныйГрузия.Command.Отправить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ПричинаОтклонения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ДатаДокументаОтправителя</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.АдресЭП</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.УникальныйИД</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Банки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.TabularSection.ИдентификаторыОснованийВладельцаФайла</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.ЗначенияПолей</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ИнтеграцияСНалоговойСлужбойГрузии</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ОПТИМУС_ИспользоватьАдресИзДоговораДляТТН</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.СтраховойНомерПФР</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.ДополнительныеРеквизиты.Attribute.ТекстоваяСтрока</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураОтправленныйГрузия.Command.ОбнавитьСтатус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ИнтеграцияСНалоговойСлужбойГрузии.Subsystem.Накладные</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.StandardAttribute.Active</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.StandardAttribute.LineNumber</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.StandardAttribute.Recorder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.StandardAttribute.Period</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.ИНН</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.ДоменноеИмяСервера</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Организации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.Dimension.Организация</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.ДополнительныеРеквизиты.Attribute.Значение</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.НомерВерсииЭД</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.НомерТелефона</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.АнализСФПоДокументамОснования</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Представление</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.TabularSection.ДокументыОснования.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Тип</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураПолученныйГрузия</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.СчетФактураПолученныйГрузия КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА ДокументОбъект.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Город</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.TabularSection.ДокументыОснования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.УдалитьДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ВерсияРегламентаЭДО</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Ответственный</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РС_НалоговыйДокумент</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.РС_НалоговыйДокумент КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ВидЭД</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураОтправленныйГрузия.Command.Сохранить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.TabularSection.ИдентификаторыОснованийВладельцаФайла.Attribute.ИдентификаторЭДДокументаОснования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Страна</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Текст</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ТребуетсяПодтверждение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ОПТИМУС_ФункциональнаяОпцияДистрибуция</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.Пол</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураОтправленныйГрузия.Command.СоздатьСчетФактура</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.АвансыОтправленныхФактур</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.СуммаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.НастройкаЭДО</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Сотрудники</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.ПриходнаяНакладная КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА ДокументОбъект.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоПодразделениям
+				ТОГДА ДокументОбъект.СтруктурнаяЕдиница В
+						(ВЫБРАТЬ
+							НастройкаРЛСПодразделения.Подразделение
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Подразделения КАК НастройкаРЛСПодразделения
+						ГДЕ
+							НастройкаРЛСПодразделения.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСПодразделения.Подразделение)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПеремещениеЗапасов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.ПеремещениеЗапасов КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоПодразделениям
+				ТОГДА ДокументОбъект.СтруктурнаяЕдиница В
+						(ВЫБРАТЬ
+							НастройкаРЛСПодразделения.Подразделение
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Подразделения КАК НастройкаРЛСПодразделения
+						ГДЕ
+							НастройкаРЛСПодразделения.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСПодразделения.Подразделение)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.Attribute.ЯвляетсяНеРезидентом</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СравнитьДанные_Документа_И_RS</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.Resource.ПользовательПодключения</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СчетФактураОтправленныйГрузия</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.СчетФактураОтправленныйГрузия КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА ДокументОбъект.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.ДополнительныеРеквизиты</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.НомерТелефонаБезКодов</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Контрагенты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.СостояниеЭДО</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ИнтеграцияСНалоговойСлужбойГрузии.Subsystem.Фактуры</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РС_ЭлектроннаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.РС_ЭлектроннаяНакладная КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.TabularSection.ИдентификаторыОснованийВладельцаФайла.Attribute.ИдентификаторДокументаОснования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.НомерДокументаОтправителя</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ДатаИзмененияСостоянияЭДО</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Predefined</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Ref</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.IsFolder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Owner</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Parent</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Description</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.StandardAttribute.Code</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ДокументОбъект ИЗ Документ.РасходнаяНакладная КАК ДокументОбъект, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА ДокументОбъект.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА ДокументОбъект.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоПодразделениям
+				ТОГДА ДокументОбъект.СтруктурнаяЕдиница В
+						(ВЫБРАТЬ
+							НастройкаРЛСПодразделения.Подразделение
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Подразделения КАК НастройкаРЛСПодразделения
+						ГДЕ
+							НастройкаРЛСПодразделения.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСПодразделения.Подразделение)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ТранспортныеСредства</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящий.Attribute.ПрофильНастроекЭДО</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.АвансыОтправленныхФактур</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>РегНакопления ИЗ РегистрНакопления.АвансыОтправленныхФактур КАК РегНакопления, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоКонтрагентам) КАК ОграниченияПоКонтрагентам,
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоПодразделениям) КАК ОграниченияПоПодразделениям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА РегНакопления.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоКонтрагентам
+				ТОГДА РегНакопления.Контрагент В
+						(ВЫБРАТЬ
+							НастройкаРЛСКонтрагенты.Контрагент
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Контрагенты КАК НастройкаРЛСКонтрагенты
+						ГДЕ
+							НастройкаРЛСКонтрагенты.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСКонтрагенты.Контрагент)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ФизическиеЛица.TabularSection.КонтактнаяИнформация.Attribute.Регион</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РС_ПользователиИнтеграцийНалоговойСлужбы.Resource.ПарольПодключения</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+</Rights>

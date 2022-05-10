@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ВыпискаDate</field>
+			</item>
+			<item>
+				<field>ВыпискаCreditSum</field>
+			</item>
+			<item>
+				<field>ВыпискаDebitSum</field>
+			</item>
+			<item>
+				<field>ВыпискаRate</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Выписка.Date</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:OrangeRed</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящие</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.Контрагент</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.ДоговорКонтрагента</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СчетКонтрагента</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FF9900</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящие</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящие</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.Контрагент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.ДоговорКонтрагента</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СчетКонтрагента</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СозданныйДокумент</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящие</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеВидОперации</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящие</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеНомерСтроки</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеНомерСтрокиРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеПометка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеПометкаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеВидОперацииРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеСозданныйДокумент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеГруппаДокументаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеПроведен</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеПроведенРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонтрагент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонтрагентРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderInnРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеГруппаКонтрагентРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеСчетКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеСчетКонтрагентаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеДоговорКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеДоговорКонтрагентаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеГруппаСчетДоговорРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentNomination</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentInformation</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentNominationРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentInformationРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentActualDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentActualDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentBeneficiaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentBeneficiaryInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentBranch</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentBranchРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentBankCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentCorrespondentBankNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDepartment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDepartmentРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDestinationAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDestinationAmountРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDestinationCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentDestinationCurrencyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentExpiryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentExpiryDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentIntermediaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentIntermediaryInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentKey</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentKeyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentPayee</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentPayeeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentProductGroup</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentProductGroupРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRateLimit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRateLimitРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentReceiveDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentReceiveDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRegistrationRateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentRegistrationRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSenderInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSenderInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSourceAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSourceAmountРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSourceCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentSourceCurrencyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentTreasuryCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentTreasuryCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentValueDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеDocumentValueDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAccountPoint</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAccountPointРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountBaseРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountCredit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountCreditРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountCreditBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountCreditBaseРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountDebit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountDebitРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryAmountDebitBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryComment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryCommentРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryDepartment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryDocumentNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryDocumentNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryId</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеEntryIdРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryBankNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryBankCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеBeneficiaryInnРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеSenderBankCodeРасширеннаяПодсказка</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.Видимость</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходы</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.Контрагент</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.ДоговорКонтрагента</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СчетКонтрагента</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FF9900</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходы</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходы</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.Контрагент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.ДоговорКонтрагента</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СчетКонтрагента</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СозданныйДокумент</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходы</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходы</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыНомерСтроки</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыНомерСтрокиРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыПометка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыПометкаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыВидОперации</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыВидОперацииРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСозданныйДокумент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСозданныйДокументРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыГруппаОперациДокументРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыПроведен</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыПроведенРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКонтрагент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКонтрагентРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryInnРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыГруппаКонтрагентРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСчетКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСчетКонтрагентаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыДоговорКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыДоговорКонтрагентаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыГруппаСчетДоговорРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКорреспонденция</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКорреспонденцияРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКорреспонденцияРегл</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыКорреспонденцияРеглРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыГруппаСчетаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСтатья</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСтатьяРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыГруппаСтатьяКорреспонденцияРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыВидимость</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыВидимостьРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentActualDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentActualDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentBeneficiaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentBeneficiaryInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentBranch</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentBranchРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentBankCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentCorrespondentBankNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDepartment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDepartmentРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDestinationAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDestinationAmountРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDestinationCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentDestinationCurrencyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentExpiryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentExpiryDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentIntermediaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentIntermediaryInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentInformation</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentInformationРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentKey</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentKeyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentNomination</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentNominationРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentPayee</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentPayeeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentProductGroup</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentProductGroupРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRateLimit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRateLimitРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentReceiveDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentReceiveDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRegistrationRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentRegistrationRateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSenderInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSenderInstitutionРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSourceAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSourceAmountРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSourceCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentSourceCurrencyРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentTreasuryCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentTreasuryCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentValueDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыDocumentValueDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAccountPoint</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAccountPointРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountBaseРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountCredit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountCreditРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountCreditBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountCreditBaseРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountDebit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountDebitРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountDebitBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryAmountDebitBaseРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryComment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryCommentРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryDateРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryDepartmentРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryDocumentNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryDocumentNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryId</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыEntryIdРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryBankNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыBeneficiaryBankCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderBankNameРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderAccountNumberРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderInnРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыSenderBankCodeРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСоздатьДокументыРасхода</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСоздатьДокументыРасходаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСтрокаПоискаРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыСостояниеПросмотраРасширеннаяПодсказка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыУправлениеПоискомРасширеннаяПодсказка</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.Видимость</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеВидОперации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящие.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеРасходыВидОперации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеРасходы.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СчетКонтрагента</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СчетОтправителя</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FF9900</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СчетОтправителя</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СчетКонтрагента</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СозданныйДокумент</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертации</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.СозданныйДокумент</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертации</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииНомерСтроки</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииПометка</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииВидОперации</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииСозданныйДокумент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииBeneficiaryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииСчетОтправителя</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииSenderAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииСчетКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentDestinationAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentSourceAmount</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentDestinationCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentInformation</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentKey</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentNomination</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAmountBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentSourceCurrency</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииДоговорКонтрагента</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииПроведен</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentActualDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentBeneficiaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentBranch</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentCorrespondentAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentCorrespondentBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentCorrespondentBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentDepartment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentExpiryDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentIntermediaryInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentPayee</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentProductGroup</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentRateLimit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentReceiveDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentRegistrationRate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentSenderInstitution</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentTreasuryCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииDocumentValueDate</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAccountNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAccountPoint</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAmountCredit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAmountCreditBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAmountDebit</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryAmountDebitBase</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryComment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryDepartment</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииEntryDocumentNumber</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииBeneficiaryBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииBeneficiaryBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииBeneficiaryInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииSenderName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииSenderBankName</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииSenderBankCode</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииSenderInn</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииКонтрагент</field>
+			</item>
+			<item>
+				<field>ПлатежныеПорученияВходящиеКонвертацииВидимость</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПлатежныеПорученияВходящиеКонвертации.Видимость</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

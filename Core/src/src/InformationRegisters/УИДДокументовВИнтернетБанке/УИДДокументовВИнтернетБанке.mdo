@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7664fb3d-e60e-4efa-9078-bf52823bd79f">
+  <producedTypes>
+    <selectionType typeId="47399233-e63f-46c3-8b28-ee18da2b83bd" valueTypeId="47f9bd00-b2ca-4317-9c73-73fe962413cd"/>
+    <listType typeId="fd3b56ac-3049-4357-8422-c256fef8daf4" valueTypeId="697975e1-abe3-4542-ad87-a59f513e9e78"/>
+    <managerType typeId="c8686983-f9d1-4a51-84b4-e46824734639" valueTypeId="c4043e02-da79-4293-b811-58f91dae1e1d"/>
+    <recordSetType typeId="a00d9c5f-a59d-494a-9d61-d5fdb534d861" valueTypeId="0f76ebe5-5f6c-4736-b667-298d33bbc60f"/>
+    <recordKeyType typeId="435b726c-8b22-4f9b-b989-6afad0053823" valueTypeId="90f39d64-2f57-40b9-96f9-d4ce77f3d39a"/>
+    <recordType typeId="93921a90-26ca-4b4f-8664-eae48d44d4e3" valueTypeId="05e5deba-ffb1-4cbc-b573-e6b62e8cf115"/>
+    <recordManagerType typeId="ec79bf16-009a-45aa-b021-d530e2c52e7a" valueTypeId="637a7f3d-4c73-401f-89a1-c8b1d7f57355"/>
+  </producedTypes>
+  <name>УИДДокументовВИнтернетБанке</name>
+  <synonym>
+    <key>ru</key>
+    <value>УИД Документов в интернет банке</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>УИД Документов в интернет банке</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>IIC documents online bank</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="51b54ffe-f746-4642-8a87-0cd3e5fc0c2c">
+    <name>УИДДокументаВБанке</name>
+    <synonym>
+      <key>ru</key>
+      <value>УИД документа в банке</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>УИД документа в банке</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>DSC instrument bank</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="f8ad3888-79a0-4f40-ae60-40d3feadf0e2">
+    <name>Выгружен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгружен</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Выгружен</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>unloaded</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3317bbe0-cf8b-4478-a4c3-d0f1665a001a">
+    <name>ДокументСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ ссылка</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Документ ссылка</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>reference document</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходСоСчета</types>
+      <types>DocumentRef.Конвертация</types>
+      <types>DocumentRef.ПоступлениеНаСчет</types>
+      <types>DocumentRef.ПлатежнаяВедомость</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c643e225-d8a5-4c13-894b-fec5ae9cd77c">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="50fe8de3-b29d-472a-8abd-d0717154e0a2">
+    <name>Банк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банк</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Bank</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Банки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
