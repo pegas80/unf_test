@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="562ff8c9-a504-4a6d-bedd-e958649c40cc">
+  <producedTypes>
+    <objectType typeId="7fea20e5-f17d-450f-b165-246f62532f28" valueTypeId="255896c3-b719-436b-b1dc-141d70bd0d5a"/>
+    <managerType typeId="67de93b4-3966-47d5-97d5-acd1d0b7a1dd" valueTypeId="d72bf663-9e24-4158-b263-b22c794de8e4"/>
+  </producedTypes>
+  <name>AzRyJiraИЗарплата</name>
+  <synonym>
+    <key>ru</key>
+    <value>(AzRy) Jiira и зарплата</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.AzRyJiraИЗарплата.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ka</lang>
+    </pages>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="b2ced9ab-8507-4bc7-bb50-39a718daed29">
+    <name>КоличествоРабочихДнейВМесяце</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество рабочих дней в месяце</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სამუშო დღეების რაოდენობა თვეში</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="379eba0b-b647-4985-9059-08e1e07dc739">
+    <name>КоличествоРабочихЧасов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество рабочих часов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სამუშაო საათების რაოდენობა</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="015f915a-ed70-46c6-b0f9-f195da97088a">
+    <name>ДатаОтбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თარიღი</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="435597dc-49b7-4bfb-b753-58550c16f852">
+    <producedTypes>
+      <objectType typeId="414d4fde-0bbc-4e4d-bc72-b78e9afd6f53" valueTypeId="8c0a07c4-9621-4d27-a4a5-6cef26d3f956"/>
+      <rowType typeId="e16c1fe6-072c-490f-a530-c81cb1930916" valueTypeId="508d3194-1862-473f-a862-4a976ca7a4f8"/>
+    </producedTypes>
+    <name>ТабличнаяЧастьСотрудники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Табличная часть сотрудники</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="86b70bb9-089e-4e2f-b542-8aa9172aae22">
+      <name>Сотрудники</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანამშრომელი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6257a117-d144-4073-b767-1dccf3b8ea03">
+      <name>Тариф</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тариф</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტარიფი</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0af05a37-fa5f-44c9-81c8-0a7a8a0c4499">
+      <name>ЗагрузкаПлан</name>
+      <synonym>
+        <key>ru</key>
+        <value>Загрузка план</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნამუშევარი საათები</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f82bc4cc-e452-44a5-9fc9-8c085118c277">
+      <name>ТарифЗаЧас</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тариф за час</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ხელფასი საათში</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b4fd9572-9a9e-4156-9d90-2c8563f1fb8b">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="f83a44b1-6256-4a58-8561-ba96d7e6045c">
+    <producedTypes>
+      <objectType typeId="ec54bdee-fffc-44b7-9482-d769fe25543b" valueTypeId="0ce82390-ab9b-4c2f-9e90-8c8decf9c8cf"/>
+      <rowType typeId="1a9ddcae-e706-4974-b1ca-c5616308d3ab" valueTypeId="d16fb21c-de37-4988-b6b5-6baaeb00d4a6"/>
+    </producedTypes>
+    <name>ТабличнаяЧастьРазница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Табличная часть разница</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b5e9be73-5e66-4af8-9f7f-57626120848c">
+      <name>Сотрудники</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудники</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანამშრომელი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="639e71ea-d92b-4859-974e-b718dfa13803">
+      <name>ТарифЗаЧас</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тариф за час</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტარიფი საათში</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f1556519-1a72-4a81-b321-cb13a49b538b">
+      <name>Тариф</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тариф</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტარიფი</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="925e8de6-6a09-4083-a4a5-aff48ca6ef79">
+      <name>Worklogs</name>
+      <synonym>
+        <key>ru</key>
+        <value>Worklogs</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Worklogs</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="619bf86a-936f-4a3f-8b82-ea50f5ac0947">
+      <name>WorklogsSum</name>
+      <synonym>
+        <key>ru</key>
+        <value>Worklogs sum</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Worklogs თანხა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Worklogs sum</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>თანხა დალოგილი საათების მიხედვით</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="268cd311-fa6d-400e-852e-c134a82cfaff">
+      <name>Разница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Разница</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სხვაობა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="c8d3a0ab-e3cd-4c74-b930-a7bc717d9cb2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
