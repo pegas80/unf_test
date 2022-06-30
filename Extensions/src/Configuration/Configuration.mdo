@@ -24,7 +24,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="a9a67670-c76b-413a-b43b-b73b03d0beb1"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="e9beed0d-0737-4100-a9c3-454aac9118ce"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.12</configurationExtensionCompatibilityMode>
@@ -73,6 +73,8 @@
   <styleItems>StyleItem.РабочееМестоКассираЦветДополнительнойПанели</styleItems>
   <styleItems>StyleItem.РабочееМестоКассираЦветТекстаСдачи</styleItems>
   <styleItems>StyleItem.ГруппаВариантовОтчетовЦвет</styleItems>
+  <styleItems>StyleItem.ЗапрещенноеПравоДоступа</styleItems>
+  <styleItems>StyleItem.ФонПанелиВариантовОтбора</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -128,6 +130,14 @@
   <commonPictures>CommonPicture.ПодключаемоеОборудованиеККТОтчетОТекущемСостоянииРасчетов</commonPictures>
   <commonPictures>CommonPicture.Плюс</commonPictures>
   <commonPictures>CommonPicture.БольшеВозможностей</commonPictures>
+  <commonPictures>CommonPicture.БыстрыйДоступ</commonPictures>
+  <commonPictures>CommonPicture.КнопкаВыпадающегоСписка</commonPictures>
+  <commonPictures>CommonPicture.ИзображениеПредыдущее</commonPictures>
+  <commonPictures>CommonPicture.ИзображениеСледующее</commonPictures>
+  <commonPictures>CommonPicture.ТоварУслугаСписок</commonPictures>
+  <commonPictures>CommonPicture.ТележкаМаленькая</commonPictures>
+  <commonPictures>CommonPicture.ТележкаПустая</commonPictures>
+  <commonPictures>CommonPicture.Папки</commonPictures>
   <sessionParameters>SessionParameter.AzRyОрганиация</sessionParameters>
   <roles>Role.БазовыеПрава</roles>
   <roles>Role.АдминистраторСистемы</roles>
@@ -173,10 +183,12 @@
   <functionalOptions>FunctionalOption.УчетПоНесколькимПодразделениям</functionalOptions>
   <functionalOptions>FunctionalOption.ИспользоватьПодсистемуЗарплата</functionalOptions>
   <functionalOptions>FunctionalOption.ПланироватьЗагрузкуРесурсовПредприятия</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьПодсистемуРаботы</functionalOptions>
   <definedTypes>DefinedType.ОбъектПланирования</definedTypes>
   <definedTypes>DefinedType.Объем</definedTypes>
   <definedTypes>DefinedType.Вес</definedTypes>
   <definedTypes>DefinedType.ОснованияЭлектронныхДокументов</definedTypes>
+  <definedTypes>DefinedType.GTIN</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
   <commonCommands>CommonCommand.ОтчетПоДвижениям</commonCommands>
@@ -231,6 +243,7 @@
   <constants>Constant.ИспользоватьЗагрузкуИзБанка</constants>
   <constants>Constant.AzRyJiraНаименованиеИнтернетРесурса</constants>
   <constants>Constant.ФункциональнаяОпцияПланироватьЗагрузкуРесурсовПредприятия</constants>
+  <constants>Constant.ФункциональнаяОпцияИспользоватьПодсистемуРаботы</constants>
   <commonForms>CommonForm.ФормаОтчетаУНФ</commonForms>
   <commonForms>CommonForm.ПраваДоступа</commonForms>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
@@ -332,6 +345,14 @@
   <catalogs>Catalog.РабочиеМеста</catalogs>
   <catalogs>Catalog.КлючевыеРесурсы</catalogs>
   <catalogs>Catalog.МенеджерыСектора</catalogs>
+  <catalogs>Catalog.НоменклатураПрисоединенныеФайлы</catalogs>
+  <catalogs>Catalog.ШаблоныНаименований</catalogs>
+  <catalogs>Catalog.КлассификаторТНВЭД</catalogs>
+  <catalogs>Catalog.ЦеновыеГруппы</catalogs>
+  <catalogs>Catalog.НаборыДополнительныхРеквизитовИСведений</catalogs>
+  <catalogs>Catalog.ЗначенияСвойствОбъектов</catalogs>
+  <catalogs>Catalog.ЗначенияСвойствОбъектовИерархия</catalogs>
+  <catalogs>Catalog.AzRytmpНоменклатурныеГруппы</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -500,6 +521,13 @@
   <enums>Enum.БазыРаспределенияРасходов</enums>
   <enums>Enum.ВидыПериодовРМК</enums>
   <enums>Enum.ВариантыРемонта</enums>
+  <enums>Enum.ВидыНаименованийОбъектов</enums>
+  <enums>Enum.СпособыПополненияЗапасов</enums>
+  <enums>Enum.СпособыВыпускаВОборотГИСМ</enums>
+  <enums>Enum.ВидыКиЗГИСМ</enums>
+  <enums>Enum.РазмерыКиЗГИСМ</enums>
+  <enums>Enum.МетодОценкиЗапасов</enums>
+  <enums>Enum.ВидыОтборовНоменклатуры</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
