@@ -334,6 +334,10 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<item xsi:type="DataSetQuery">
 			<name>НаборДанных1</name>
 			<field xsi:type="DataSetFieldField">
@@ -655,6 +659,10 @@
 					</v8:item>
 				</title>
 			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ
 	МинимальныеОстаткиСкладаСрезПоследних.СтруктурнаяЕдиница,
@@ -839,6 +847,10 @@
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МинимальныйУровеньЗапаса</dataPath>
 				<field>МинимальныйУровеньЗапаса</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -1032,6 +1044,10 @@
 					<v8:content>მინიმალური ზღვარი</v8:content>
 				</v8:item>
 			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -1233,6 +1249,10 @@
 	<totalField>
 		<dataPath>МинимальныйУровеньЗапаса</dataPath>
 		<expression>(МинимальныйУровеньЗапаса)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МинималныйОстатокНаСкладе</dataPath>
+		<expression>Сумма(МинималныйОстатокНаСкладе)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83c224b9-2057-4d58-916d-783a626c0747">
+  <producedTypes>
+    <objectType typeId="1572dce0-d72a-4bb4-b0a8-0669b92523af" valueTypeId="16927098-77ea-4bb0-9805-004086209631"/>
+    <managerType typeId="adc08265-db42-4c85-b78b-da299525c8fe" valueTypeId="529aca2a-cfc2-46bf-8990-62ee59ad15fd"/>
+  </producedTypes>
+  <name>ВедомостьОСуммированииНоменклатур</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ведомость о суммировании номенклатур</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>საქონლის აჯამების უწყისი</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВедомостьОСуммированииНоменклатур.Form.Форма</defaultForm>
+  <tabularSections uuid="fd026dfa-0a3a-49bd-9ec3-31fe64282e90">
+    <producedTypes>
+      <objectType typeId="49cd2d87-762f-4e34-9544-55466e048b53" valueTypeId="78066e7d-d528-4242-95ce-9cfa5562fff8"/>
+      <rowType typeId="394fc0d7-33a3-47f1-86a8-81165232adff" valueTypeId="7237ed13-f175-46fa-bd08-c3bc662ecfb5"/>
+    </producedTypes>
+    <name>Водители</name>
+    <synonym>
+      <key>ru</key>
+      <value>Водители</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მძღოლები</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b09fcd58-83d0-4a65-857e-7d3922384aef">
+      <name>Пометка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пометка</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნიშნული</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="64288246-bf4c-4849-91b2-89817ea21342">
+      <name>Водитель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Водитель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მძღოლი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="57b66e91-f240-4a68-b9f8-d4071132a51e">
+      <name>СкладВодителя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад водителя</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მძღოლის საწყობი</value>
+      </synonym>
+      <comment>Склад</comment>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Структурная единица, в которую оформляется поступление запасов</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>0:9e7d151f-0e35-4425-9391-b53e9d15a1db</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.СтруктурныеЕдиницы.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="9aa9d9aa-7920-4dc3-8fb4-8f521fb8a2b5">
+      <name>ТранспортноеСредство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Транспортное средство</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სატრანსპორტო საშუალება</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Информация о транспортном средстве</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b173b7a1-cb0b-4341-99da-2eba0ef849b5">
+      <name>НомерТС</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ТС</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სანომრე ნიშანი</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ec3650df-c5e7-44ba-b68c-b7cc8f910e5e">
+      <name>Ответственный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответственный</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პასუხისმგებელი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Ответственный, принявший заказ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.Сотрудники.EmptyRef</value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="3379c4e4-6f38-48cd-8cf3-5c4c707ed676">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="cef7049e-52cb-41e2-aa4e-dca2cd3be264">
+    <name>МакетВедомостьОСуммированииНоменклатур</name>
+    <synonym>
+      <key>ka</key>
+      <value>Макет ведомость о суммировании номенклатур</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

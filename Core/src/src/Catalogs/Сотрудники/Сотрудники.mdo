@@ -851,6 +851,25 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="b6994ff9-d3d3-4a64-a335-99cee29ce3ed">
+    <name>PersonId</name>
+    <synonym>
+      <key>ru</key>
+      <value>Person id</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="a4f85c54-ecfe-4b97-b146-e884c6b10cde">
     <producedTypes>
       <objectType typeId="376d5ec9-dea7-4f3c-884e-5afa8f025dcd" valueTypeId="2d12bb7f-b391-477c-ba8e-b27e0b84bfb4"/>
@@ -885,6 +904,154 @@
           <length>70</length>
         </stringQualifiers>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="1229dd4a-57f5-4c54-94ac-186491fabc53">
+    <producedTypes>
+      <objectType typeId="16c09ac7-8009-492f-bddb-621d3c2552e9" valueTypeId="0f01c420-f93f-4113-8b17-745e365b588e"/>
+      <rowType typeId="f497751b-3478-46a7-a4c1-f7069ab1b462" valueTypeId="bac6c1fa-7a62-4ce4-8719-9bacad378fec"/>
+    </producedTypes>
+    <name>ДополнительныеРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დამატებითი რეკვიზიტები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Additional Information</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительные реквизиты партии запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მარაგების პარტიების დამატებითი რეკვიზიტები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Дополнительные реквизиты партии запасов</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:NumberValue">
+        <value>0</value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="bfad9eda-3c1f-42aa-891c-fd9e8ced5722">
+      <name>Свойство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Свойство</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თვისება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Property</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Дополнительный реквизит</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დამატებითი რეკვიზიტი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Дополнительный реквизит</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="77aa86d9-67f1-4e5d-910c-d9a5fcbc82ba">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მნიშვნელობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Value</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დამატებითი რეკვიზიტის მნიშვნელობა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Catalog.Сотрудники.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0d6596a7-85b9-4b46-806b-430c5cbac2eb">
+      <name>ТекстоваяСтрока</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ტექსტური სტრიქონი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>სტრიქონული დამატებითი რეკვიზიტის სრული ტექსტი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>

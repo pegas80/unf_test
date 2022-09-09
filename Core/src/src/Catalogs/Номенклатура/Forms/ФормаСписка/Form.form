@@ -193,7 +193,7 @@
                 </title>
                 <title>
                   <key>ka</key>
-                  <value>შეკვეთა-განწესი</value>
+                  <value>სერვისის დოკუმენტი</value>
                 </title>
                 <title>
                   <key>en</key>
@@ -2198,18 +2198,31 @@
             <excludedCommands>Tree</excludedCommands>
             <items xsi:type="form:FormField">
               <name>Наименование</name>
-              <id>1201</id>
+              <id>6</id>
+              <title>
+                <key>ru</key>
+                <value>Наименование</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>დასახელება</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Name</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
               <dataPath xsi:type="form:DataPath">
-                <segments>СписокЗапасы.Наименование</segments>
+                <segments>СписокЗапасы.Description</segments>
               </dataPath>
+              <defaultItem>true</defaultItem>
               <extendedTooltip>
-                <name>НаименованиеРасширеннаяПодсказка</name>
-                <id>1203</id>
+                <name>НаименованиеExtendedTooltip</name>
+                <id>84</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -2219,7 +2232,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>НаименованиеКонтекстноеМеню</name>
-                <id>1202</id>
+                <id>7</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>LabelField</type>
@@ -2228,44 +2241,12 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:LabelFieldExtInfo">
+                <width>20</width>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
-              </extInfo>
-            </items>
-            <items xsi:type="form:FormField">
-              <name>AzRyНомерЯчейки</name>
-              <id>1198</id>
-              <visible>true</visible>
-              <enabled>true</enabled>
-              <userVisible>
-                <common>true</common>
-              </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>СписокЗапасы.AzRyНомерЯчейки</segments>
-              </dataPath>
-              <extendedTooltip>
-                <name>AzRyНомерЯчейкиРасширеннаяПодсказка</name>
-                <id>1200</id>
-                <type>Label</type>
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
-                <extInfo xsi:type="form:LabelDecorationExtInfo">
-                  <horizontalAlign>Left</horizontalAlign>
-                </extInfo>
-              </extendedTooltip>
-              <contextMenu>
-                <name>AzRyНомерЯчейкиКонтекстноеМеню</name>
-                <id>1199</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>LabelField</type>
-              <editMode>Enter</editMode>
-              <showInHeader>true</showInHeader>
-              <headerHorizontalAlign>Left</headerHorizontalAlign>
-              <showInFooter>true</showInFooter>
-              <extInfo xsi:type="form:LabelFieldExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
-                <autoMaxHeight>true</autoMaxHeight>
+                <borderColor xsi:type="core:ColorRef">
+                  <color>Style.ФонПанелиВариантовОтбора</color>
+                </borderColor>
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
@@ -2500,7 +2481,7 @@
               <enabled>true</enabled>
               <userVisible/>
               <dataPath xsi:type="form:DataPath">
-                <segments>СписокЗапасы.Код</segments>
+                <segments>СписокЗапасы.Code</segments>
               </dataPath>
               <extendedTooltip>
                 <name>КодExtendedTooltip</name>
@@ -3281,7 +3262,7 @@
               <enabled>true</enabled>
               <userVisible/>
               <dataPath xsi:type="form:DataPath">
-                <segments>СписокЗапасы.Родитель</segments>
+                <segments>СписокЗапасы.Parent</segments>
               </dataPath>
               <extendedTooltip>
                 <name>РодительРасширеннаяПодсказка</name>
@@ -8565,6 +8546,9 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокЗапасы.IsFolder</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокЗапасы.ЕдиницаИзмерения</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
@@ -8594,49 +8578,46 @@
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокЗапасы.Цена</segments>
     </notDefaultUseAlwaysAttributes>
-    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>СписокЗапасы.ЭтоГруппа</segments>
-    </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
 	СправочникНоменклатура.Ссылка КАК Ссылка,
 	СправочникНоменклатура.Ссылка КАК Номенклатура,
-	СправочникНоменклатура.ПометкаУдаления КАК ПометкаУдаления,
-	СправочникНоменклатура.Родитель КАК Родитель,
-	СправочникНоменклатура.ЭтоГруппа КАК ЭтоГруппа,
-	СправочникНоменклатура.Код КАК Код,
-	СправочникНоменклатура.Наименование КАК Наименование,
-	СправочникНоменклатура.Артикул КАК Артикул,
-	СправочникНоменклатура.ДатаИзменения КАК ДатаИзменения,
+	СправочникНоменклатура.ПометкаУдаления,
+	СправочникНоменклатура.Родитель,
+	СправочникНоменклатура.ЭтоГруппа,
+	СправочникНоменклатура.Код,
+	СправочникНоменклатура.Наименование,
+	СправочникНоменклатура.Артикул,
+	СправочникНоменклатура.ДатаИзменения,
 	СправочникНоменклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
-	СправочникНоменклатура.МетодОценки КАК МетодОценки,
+	СправочникНоменклатура.МетодОценки,
 	ВЫРАЗИТЬ(СправочникНоменклатура.НаименованиеПолное КАК СТРОКА(1000)) КАК НаименованиеПолное,
-	СправочникНоменклатура.НаправлениеДеятельности КАК НаправлениеДеятельности,
-	СправочникНоменклатура.КатегорияНоменклатуры КАК КатегорияНоменклатуры,
-	СправочникНоменклатура.Поставщик КАК Поставщик,
-	СправочникНоменклатура.Склад КАК Склад,
-	СправочникНоменклатура.Спецификация КАК Спецификация,
-	СправочникНоменклатура.СпособПополнения КАК СпособПополнения,
-	СправочникНоменклатура.СрокПополнения КАК СрокПополнения,
-	СправочникНоменклатура.СтавкаНДС КАК СтавкаНДС,
-	СправочникНоменклатура.СчетУчетаЗапасов КАК СчетУчетаЗапасов,
-	СправочникНоменклатура.СчетУчетаЗатрат КАК СчетУчетаЗатрат,
-	СправочникНоменклатура.ТипНоменклатуры КАК ТипНоменклатуры,
-	СправочникНоменклатура.Ячейка КАК Ячейка,
-	СправочникНоменклатура.ЦеноваяГруппа КАК ЦеноваяГруппа,
-	СправочникНоменклатура.ИспользоватьХарактеристики КАК ИспользоватьХарактеристики,
+	СправочникНоменклатура.НаправлениеДеятельности,
+	СправочникНоменклатура.КатегорияНоменклатуры,
+	СправочникНоменклатура.Поставщик,
+	СправочникНоменклатура.Склад,
+	СправочникНоменклатура.Спецификация,
+	СправочникНоменклатура.СпособПополнения,
+	СправочникНоменклатура.СрокПополнения,
+	СправочникНоменклатура.СтавкаНДС,
+	СправочникНоменклатура.СчетУчетаЗапасов,
+	СправочникНоменклатура.СчетУчетаЗатрат,
+	СправочникНоменклатура.ТипНоменклатуры,
+	СправочникНоменклатура.Ячейка,
+	СправочникНоменклатура.ЦеноваяГруппа,
+	СправочникНоменклатура.ИспользоватьХарактеристики,
 	СправочникНоменклатура.ИспользоватьПартии КАК ИспользуетсяРезервирование,
 	СправочникНоменклатура.ИспользоватьПартии КАК ИспользоватьПартии,
-	СправочникНоменклатура.Недействителен КАК Недействителен,
-	СправочникНоменклатура.СрокИсполненияЗаказа КАК СрокИсполненияЗаказа,
-	СправочникНоменклатура.НормаВремени КАК НормаВремени,
-	СправочникНоменклатура.ФиксированнаяСтоимость КАК ФиксированнаяСтоимость,
-	СправочникНоменклатура.СтранаПроисхождения КАК СтранаПроисхождения,
-	СправочникНоменклатура.ВидАлкогольнойПродукции КАК ВидАлкогольнойПродукции,
-	СправочникНоменклатура.ИмпортнаяАлкогольнаяПродукция КАК ИмпортнаяАлкогольнаяПродукция,
-	СправочникНоменклатура.ПроизводительИмпортерАлкогольнойПродукции КАК ПроизводительИмпортерАлкогольнойПродукции,
-	СправочникНоменклатура.ОбъемДАЛ КАК ОбъемДАЛ,
+	СправочникНоменклатура.Недействителен,
+	СправочникНоменклатура.СрокИсполненияЗаказа,
+	СправочникНоменклатура.НормаВремени,
+	СправочникНоменклатура.ФиксированнаяСтоимость,
+	СправочникНоменклатура.СтранаПроисхождения,
+	СправочникНоменклатура.ВидАлкогольнойПродукции,
+	СправочникНоменклатура.ИмпортнаяАлкогольнаяПродукция,
+	СправочникНоменклатура.ПроизводительИмпортерАлкогольнойПродукции,
+	СправочникНоменклатура.ОбъемДАЛ,
 	ПОДСТРОКА(СправочникНоменклатура.Комментарий, 1, 1000) КАК Комментарий,
 	ВЫБОР
 		КОГДА СправочникНоменклатура.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Запас)
@@ -8653,9 +8634,9 @@
 	КОНЕЦ КАК ВариантКартинки,
 	0 КАК Цена,
 	0 КАК КоличествоОстаток,
-	СправочникНоменклатура.ИспользоватьСерийныеНомера КАК ИспользоватьСерийныеНомера,
-	СправочникНоменклатура.ГарантийныйСрок КАК ГарантийныйСрок,
-	СправочникНоменклатура.ВыписыватьГарантийныйТалон КАК ВыписыватьГарантийныйТалон
+	СправочникНоменклатура.ИспользоватьСерийныеНомера,
+	СправочникНоменклатура.ГарантийныйСрок,
+	СправочникНоменклатура.ВыписыватьГарантийныйТалон
 ИЗ
 	Справочник.Номенклатура КАК СправочникНоменклатура
 ГДЕ

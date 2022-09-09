@@ -361,62 +361,6 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
-        <name>Сотрудник</name>
-        <id>1006</id>
-        <title>
-          <key>ru</key>
-          <value>Сотрудник</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>თანამშრომელი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Employee</value>
-        </title>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.Подотчетник</segments>
-        </dataPath>
-        <handlers>
-          <event>OnChange</event>
-          <name>СотрудникПриИзменении</name>
-        </handlers>
-        <extendedTooltip>
-          <name>СотрудникРасширеннаяПодсказка</name>
-          <id>1008</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <contextMenu>
-          <name>СотрудникКонтекстноеМеню</name>
-          <id>1007</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormField">
         <name>Подотчетник</name>
         <id>167</id>
         <visible>true</visible>
@@ -2347,6 +2291,62 @@
         <showLeftMargin>true</showLeftMargin>
         <throughAlign>Auto</throughAlign>
         <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Сотрудник</name>
+      <id>1006</id>
+      <title>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>თანამშრომელი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Employee</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.Подотчетник</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>СотрудникПриИзменении</name>
+      </handlers>
+      <extendedTooltip>
+        <name>СотрудникРасширеннаяПодсказка</name>
+        <id>1008</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СотрудникКонтекстноеМеню</name>
+        <id>1007</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -6130,7 +6130,7 @@
               </title>
               <title>
                 <key>ka</key>
-                <value>ანგარიშსწორებათა თანხა</value>
+                <value>ანგარიშსწორების თანხა</value>
               </title>
               <title>
                 <key>en</key>
@@ -14875,7 +14875,7 @@
             </title>
             <title>
               <key>ka</key>
-              <value>Вх. вид документа</value>
+              <value>Вх. დოკუმენტის ტიპი</value>
             </title>
             <title>
               <key>en</key>
@@ -17512,7 +17512,7 @@
       </title>
       <title>
         <key>ka</key>
-        <value>Тип НДФЛ</value>
+        <value>საშემოსავლოს ტიპი</value>
       </title>
       <title>
         <key>en</key>
@@ -18224,7 +18224,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>Вид операции покупателю</value>
+      <value>მყიდველის ოპერაციის ტიპები</value>
     </title>
     <title>
       <key>en</key>
@@ -18298,6 +18298,10 @@
       <value>Используется интеграция с банком</value>
     </title>
     <title>
+      <key>ka</key>
+      <value>გამოიყენება ინტერნეტ ბანკთან ინტეგრაცია</value>
+    </title>
+    <title>
       <key>en</key>
       <value>Using integration with the bank</value>
     </title>
@@ -18317,6 +18321,10 @@
     <title>
       <key>ru</key>
       <value>Статус документа в интернет банке</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>დოკუმენტის სტატუსი ინტერნეტ ბანკში</value>
     </title>
     <title>
       <key>en</key>
@@ -18387,7 +18395,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>Подразделение обязательно</value>
+      <value>ქვეგანყოფილება აუცილებ ელია</value>
     </title>
     <title>
       <key>en</key>
@@ -18410,6 +18418,10 @@
       <key>ru</key>
       <value>Пустой реквизит статья в документах</value>
     </title>
+    <title>
+      <key>ka</key>
+      <value>მუხლის ცარიელი რეკვიზიტი დოკუმენტებში</value>
+    </title>
     <id>65</id>
     <valueType>
       <types>Boolean</types>
@@ -18427,6 +18439,10 @@
       <key>ru</key>
       <value>Пустая статья ДДС</value>
     </title>
+    <title>
+      <key>ka</key>
+      <value>ცარიელი ფულადი სახსრების მუხლი</value>
+    </title>
     <id>66</id>
     <valueType>
       <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
@@ -18443,6 +18459,14 @@
     <title>
       <key>ru</key>
       <value>Использовать проекты</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>პროექტების გამოყენება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Use projects</value>
     </title>
     <id>67</id>
     <valueType>

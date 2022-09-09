@@ -278,6 +278,7 @@
   <registerRecords>AccumulationRegister.Закупки</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ПродажиПоДисконтнымКартам</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыУКлиента</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
   <registerRecords>AccumulationRegister.ВыполнениеДоговоровОбслуживания</registerRecords>
@@ -287,6 +288,7 @@
   <registerRecords>AccumulationRegister.Декларация</registerRecords>
   <registerRecords>InformationRegister.РублевыеСуммыДокументовВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
+  <registerRecords>AccumulationRegister.БалыЛояльности</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыПереданные</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
   <registerRecords>AccumulationRegister.ВыпускПродукции</registerRecords>
@@ -305,6 +307,7 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетодЭквайринг</registerRecords>
   <registerRecords>AccumulationRegister.ЗакупкиДляКУДиР</registerRecords>
+  <registerRecords>AccumulationRegister.ЦеныВозвратаНоменклатурDgFIFO</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
   <registerRecords>AccumulationRegister.АвансыОтправленныхФактур</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
@@ -3459,6 +3462,166 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="8952d75f-d984-43d8-a29c-de34e1cda1a4">
+    <name>ОптоваяЦенаВДок</name>
+    <synonym>
+      <key>ka</key>
+      <value>Оптовая цена в док</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="924d4d47-a3f2-413d-b2c9-29cbe56212f7">
+    <name>ВывестиСообщение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вывести сообщение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="35e276d9-ef32-4a7a-868d-cebdae92f9b2">
+    <name>КартаЛояльности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Карта лояльности</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ლოიალურობის ბარათი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КартыЛояльности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ВладелецКарты</name>
+      <field>Document.РасходнаяНакладная.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="735efe5b-a8ec-4ad0-8ed6-a72ce4b3425f">
+    <name>ДоступноБалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступно балов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2057e2dd-6c6d-401f-9428-7101d9776cd5">
+    <name>ВидИспользоыванияБалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Балы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქულები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Балы</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыИспользованияБалов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыИспользованияБалов.EnumValue.НакоплениеИРасход</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c92ee045-fa0d-475d-b25e-cddadaca7b66">
+    <name>ПроцентСкидкиПоКартеЛояльности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент скидки по карте лояльности</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფასდაკლების პროცენტი დისკონტური ბარათის მიხედვით</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Процент скидки по карте лояльности</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b8bfe88a-bc00-4574-a2f1-c7452eb7f0d2">
+    <name>ПроцентНакопленияБалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент накопления балов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9bc239bc-0b09-4f5c-9d05-e8799567fea6">
+    <name>ДокументАвтоматическогоПроизводства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ автоматического производства</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СборкаЗапасов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="f2399716-997d-48c1-8d29-70d2ec17d5ff">
     <name>ФормаДокумента</name>
     <synonym>
@@ -3674,13 +3837,23 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <choiceParameterLinks>
-        <name>ВидОперации</name>
-        <field>Document.РасходнаяНакладная.Attribute.ВидОперации</field>
-      </choiceParameterLinks>
-      <choiceParameterLinks>
         <name>Отбор.Владелец</name>
         <field>Document.РасходнаяНакладная.TabularSection.Запасы.Attribute.Номенклатура</field>
       </choiceParameterLinks>
+      <choiceParameters>
+        <name>Отбор.Статус</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.СтатусыПартий.EnumValue.ТоварыНаКомиссии</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.СтатусыПартий.EnumValue.СобственныеЗапасы</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.СтатусыПартий.EmptyRef</value>
+          </values>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -5110,6 +5283,94 @@
         <numberQualifiers>
           <precision>15</precision>
           <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="54953293-aff3-4c51-a011-bff4f9490533">
+      <name>Исполнитель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Исполнитель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შემსრულებელი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="32212d01-3a0e-456b-b0c6-53ae9039dd6f">
+      <name>КоличествоНаСкладе</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество на складе</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რაოდენობა საწყობში</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9bddc593-993c-4cc3-b380-68e48dc9fce3">
+      <name>БалыРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Балы расход</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გახარჯული ქულები</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7327f320-09fe-4159-b300-fbccad8842d8">
+      <name>ПроцентСкидкаЛояльности</name>
+      <synonym>
+        <key>ru</key>
+        <value>% Лояльности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ლოიალურობის %</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>% Лояльности</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
         </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0813d968-2be0-4312-b31d-3211e6b4aab0">
+  <producedTypes>
+    <objectType typeId="b227393f-217a-495a-9b27-02f8ce2889f9" valueTypeId="84c40794-fa48-4af9-8aa1-6801f2519883"/>
+    <managerType typeId="18eb8531-c8ff-4748-89cf-6ce8d864fdbc" valueTypeId="c6df3552-c7a4-48dc-a916-e708a8d4ce4f"/>
+  </producedTypes>
+  <name>DigiSMВесыСПечатьюЭтикеток</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузить товары в весы DIGI</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>მარაგების DIGI სასწორში გადატვირთვა</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Load goods in DIGI</value>
+  </synonym>
+  <comment>Обработка осуществляет обслуживание весов с печатью этикеток, поддерживаемых драйвером «Digi SM OLE»</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.DigiSMВесыСПечатьюЭтикеток.Form.ФормаНастройкиУправляемая</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <tabularSections uuid="f352177c-1d1b-4d6d-9c69-0629b7993649">
+    <producedTypes>
+      <objectType typeId="e33e30c5-1c61-4945-aed8-59bdf244cd78" valueTypeId="a8fe8628-c580-468e-b350-390d6b9c9503"/>
+      <rowType typeId="af6baafb-38a0-43f9-abaf-bafa956d4904" valueTypeId="e8aab226-1deb-47f2-ba8f-f8e28cabab20"/>
+    </producedTypes>
+    <name>ТабНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таб номенклатуры</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="f4757a71-e9c1-482c-b8e9-988805835905">
+      <name>Наименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>256</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="7c145213-c92e-4ec0-a91f-f3e658769346">
+      <name>ШтрихКод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих код</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>7</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="0e3e024b-4f03-479f-9d28-a0903e47bfc6">
+      <name>PLU</name>
+      <synonym>
+        <key>ru</key>
+        <value>PLU</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="cf03ca1c-e1ab-4909-bb03-b9d09f3685c2">
+      <name>ШтрихКодПолный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих код полный</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შტრიხკოდი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Code</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Штрихкод номенклатуры.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის შტრიხკოდი.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Barcode nomenclature.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="3bf8d1bf-a8ef-4793-b173-f16771bf0737">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>SHELFLIFE</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>SHELFLIFE</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f68e03ce-4260-4603-adad-f94d37f2a85c">
+      <name>Цена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5530a4d1-9787-4e54-996d-afd15e317b93">
+      <name>Весовой</name>
+      <synonym>
+        <key>ru</key>
+        <value>Весовой</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="8eb643af-9d20-48b5-b9d0-73bd62b695d2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1eaa87df-2fc8-44f1-b694-5047ba3d2549">
+    <name>ФормаНастройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки</value>
+    </synonym>
+    <comment>Форма настройки оборудования, поддерживаемого данной обработкой обслуживания.</comment>
+    <formType>Ordinary</formType>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="85fb3463-7dde-43e6-a93a-049280109f3f">
+    <name>ФормаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="edfe7834-b626-4519-bc11-7369d86bc2fd">
+    <name>ФормаНастройкиУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

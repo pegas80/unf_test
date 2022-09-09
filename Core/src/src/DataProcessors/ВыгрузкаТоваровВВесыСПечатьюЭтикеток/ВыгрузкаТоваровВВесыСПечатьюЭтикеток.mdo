@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a652e9f3-33d0-420c-b024-6c050a7af736">
+  <producedTypes>
+    <objectType typeId="e112f3fe-cab5-4c0a-9c05-97d9210b88f6" valueTypeId="264234d5-0142-43fb-a2b9-0cccd076269e"/>
+    <managerType typeId="dc4a0646-b2a9-4d3a-9edc-bf6f68bf0279" valueTypeId="acecec71-9120-4395-8f72-c174cb82d224"/>
+  </producedTypes>
+  <name>ВыгрузкаТоваровВВесыСПечатьюЭтикеток</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка товаров в весы с печатью этикеток</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>საქონლის გადატვირთვა სასწორზე</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Export goods to the scale</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВыгрузкаТоваровВВесыСПечатьюЭтикеток.Form.Форма</defaultForm>
+  <attributes uuid="dd54c448-b196-4cc2-aca2-2deb3e654f64">
+    <name>ВидЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цены</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფასების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type of prices</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="23b42976-ef95-42a8-8abc-77ce7ba1c328">
+    <producedTypes>
+      <objectType typeId="f518635f-d51f-4f64-8e58-9b64250a76d3" valueTypeId="dab3cfd2-5241-483a-b71b-20605d242f1e"/>
+      <rowType typeId="8da58763-0560-4ba0-85b4-e8a287b1e21b" valueTypeId="b106cc4b-6488-48a1-8ad3-124d75abfa23"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საქონელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Goods</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a387d92a-d7ce-4a09-b74e-00a62ecaa4f3">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Item</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0f8f6d3e-96a6-4ed4-9dc7-b1cfcaf550cc">
+      <name>НаименованиеНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Наименование номенклатуры</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Stock name</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ac83aa5f-b2b2-475f-89cd-6c1e35ca277a">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შტრიხკოდი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Barcode</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ba6de3b3-d6d9-44f5-9a41-dffdd453ef1f">
+      <name>Весовая</name>
+      <synonym>
+        <key>ru</key>
+        <value>Весовая</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>წონითი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Weight</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="379c3fa5-010b-4907-a43b-e6e0c0fa255f">
+      <name>PLU</name>
+      <synonym>
+        <key>ru</key>
+        <value>PLU</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>PLU</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>PLU</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>5</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="fda3b694-a0df-4c99-aba1-58ac16e25666">
+      <name>Код</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კოდი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>code</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>5</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="5db956bf-42f8-4781-a759-f9c5827f0e8b">
+      <name>Цена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფასი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Price</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d3f9dce1-eddb-4f0a-b178-1a52508b096a">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვარგისიანობის ვადა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Shelf life</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ddd3d244-3290-4565-aacf-637573037569">
+      <name>КодРодитель</name>
+      <synonym>
+        <key>ka</key>
+        <value>Код родитель</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="8bf138af-58cc-4839-8ba1-1cb85a4172ef">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ზომ. ერთეული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Units of measurement</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>0:417ef1ee-c5d8-4e36-9523-d78b2e7d8973</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>НеИспользоватьКлассификатор</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1fb82e8d-9168-48be-af69-3daf5f43fbd2">
+      <name>ПредставлениеВесовойЕдиницы</name>
+      <synonym>
+        <key>ka</key>
+        <value>Представление весовой единицы</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>2</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="23878af5-d19c-42fd-9641-9f1eb2298c29">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფორმა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0d48fe90-8540-4a74-ad37-f4430c89493f">
+    <name>twswtcp</name>
+    <synonym>
+      <key>ka</key>
+      <value>Twswtcp</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Twswtcp</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+</mdclass:DataProcessor>

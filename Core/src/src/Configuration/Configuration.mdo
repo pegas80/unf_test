@@ -15,7 +15,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="fa8da642-afe1-467d-b297-91e8256e2e60"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="20f495c2-06f2-408c-8e47-820526d98e1e"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="64e053a2-692f-4df1-8c1d-2e1cfce66792"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="28e354e1-9014-4e23-a3b2-92436db4499f"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="33eab711-970c-46e7-b0f4-680565a0fc8e"/>
   <configurationExtensionCompatibilityMode>8.3.25</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
@@ -32,7 +32,6 @@
     </pages>
   </help>
   <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
-  <useOrdinaryFormInManagedApplication>true</useOrdinaryFormInManagedApplication>
   <defaultReportForm>CommonForm.ФормаОтчета</defaultReportForm>
   <defaultReportVariantForm>CommonForm.ФормаВариантаОтчетаУНФ</defaultReportVariantForm>
   <defaultReportSettingsForm>CommonForm.ФормаНастроекОтчета</defaultReportSettingsForm>
@@ -182,6 +181,7 @@
   <subsystems>Subsystem.Склад</subsystems>
   <subsystems>Subsystem.РозницаHTTP</subsystems>
   <subsystems>Subsystem.ПотериПриУсушке</subsystems>
+  <subsystems>Subsystem.WSI_SalesInvoiceHTTP</subsystems>
   <styleItems>StyleItem.ВидДняПроизводственногоКалендаряВоскресеньеЦвет</styleItems>
   <styleItems>StyleItem.БыстрыеНастройкиФонГруппы</styleItems>
   <styleItems>StyleItem.НеПринятыеКИсполнениюЗадачи</styleItems>
@@ -1364,6 +1364,7 @@
   <commonPictures>CommonPicture.ОС</commonPictures>
   <commonPictures>CommonPicture.ЖурналПроводок_Грузия</commonPictures>
   <commonPictures>CommonPicture.РазделСклад</commonPictures>
+  <commonPictures>CommonPicture.ИзменениеЗначенияБол</commonPictures>
   <sessionParameters>SessionParameter.ВидыДоступаБезГруппДляЗначенияДоступа</sessionParameters>
   <sessionParameters>SessionParameter.АвторизованныйПользователь</sessionParameters>
   <sessionParameters>SessionParameter.ВерсияРасширений</sessionParameters>
@@ -1722,6 +1723,7 @@
   <commonTemplates>CommonTemplate.КомпонентаПечатиШтрихкодов</commonTemplates>
   <commonTemplates>CommonTemplate.ПФ_MXL_Invoice</commonTemplates>
   <commonTemplates>CommonTemplate.ДрайверBOG_AXConnect</commonTemplates>
+  <commonTemplates>CommonTemplate.ДрайверВесыDIGI</commonTemplates>
   <filterCriteria>FilterCriterion.ДисконтныеКартыПоКонтрагенту</filterCriteria>
   <filterCriteria>FilterCriterion.ДокументыПоЗаказуПокупателя</filterCriteria>
   <filterCriteria>FilterCriterion.ДокументыПоЗаказуПоставщику</filterCriteria>
@@ -2784,6 +2786,12 @@
   <commonModules>CommonModule.ПодключаемоеОборудованиеDATECSФискальныеРегистраторыКлиент</commonModules>
   <commonModules>CommonModule.РозницаHTTP</commonModules>
   <commonModules>CommonModule.ПодключаемоеОборудованиеBOG_AXConnect</commonModules>
+  <commonModules>CommonModule.ОбменСВесамиСПечатьюЭтикетокСервер</commonModules>
+  <commonModules>CommonModule.ПодключаемоеОборудованиеВесыСПечатьюЭтикетокКлиент</commonModules>
+  <commonModules>CommonModule.УчетРабочегоВремениСервер</commonModules>
+  <commonModules>CommonModule.АвтоматическоеПроизводствоСервер</commonModules>
+  <commonModules>CommonModule.WordPress</commonModules>
+  <commonModules>CommonModule.ВыгрузкаЗаказовНаСкладСервер</commonModules>
   <commonModules>CommonModule.AzRyDEV</commonModules>
   <commonModules>CommonModule.AzRyУправлениеНебольшойФирмойСервер</commonModules>
   <commonModules>CommonModule.AzRyРаботаСДокументамыКлиентСервер</commonModules>
@@ -3027,6 +3035,7 @@
   <httpServices>HTTPService.УдалитьTelephonyAnonimizer</httpServices>
   <httpServices>HTTPService.shopapi</httpServices>
   <httpServices>HTTPService.РозницаHTTP</httpServices>
+  <httpServices>HTTPService.WSI_SalesInvoiceHTTP</httpServices>
   <eventSubscriptions>EventSubscription.ЗаписатьВерсиюОбъекта</eventSubscriptions>
   <eventSubscriptions>EventSubscription.АвтономнаяРаботаПроверитьВозможностьЗаписиОбщихДанныхНаборЗаписейРасчета</eventSubscriptions>
   <eventSubscriptions>EventSubscription.КонтрольНеразделенныхНаборовЗаписейПриЗаписиТехнологияСервиса</eventSubscriptions>
@@ -3204,6 +3213,7 @@
   <eventSubscriptions>EventSubscription.ОПТИМУС_ЗарегистрироватьИзмененияСправочникаДляОбменаОПТИМУС_Дистрибуция</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ОПТИМУС_ЗарегистрироватьИзмененияСправочникаПриЗаписиДляОбменаОПТИМУС_Дистрибуция</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ЗапретЗаписьДокументов</eventSubscriptions>
+  <eventSubscriptions>EventSubscription.ПравоРедактированияПроведенныхДокументов</eventSubscriptions>
   <eventSubscriptions>EventSubscription.AzRyЗапретРедактированияДокументов</eventSubscriptions>
   <scheduledJobs>ScheduledJob.ВсеОбновленияНовостей</scheduledJobs>
   <scheduledJobs>ScheduledJob.ВсеОбновленияОблачногоАрхива</scheduledJobs>
@@ -3271,6 +3281,10 @@
   <scheduledJobs>ScheduledJob.ЭкспортОценкиПроизводительности</scheduledJobs>
   <scheduledJobs>ScheduledJob.ЗагрузкаКурсовВалютГрузия</scheduledJobs>
   <scheduledJobs>ScheduledJob.LT_КонвертацияXML_Фаилов_DMS</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ВыгрузкаТоваровВВесы</scheduledJobs>
+  <scheduledJobs>ScheduledJob.ПолучениеДанныхУчетаРабочегоВремени</scheduledJobs>
+  <scheduledJobs>ScheduledJob.WordPress_Загрузка_Заказов</scheduledJobs>
+  <scheduledJobs>ScheduledJob.WordPress_Выгрузка_Остатков</scheduledJobs>
   <settingsStorages>SettingsStorage.БуферОбмена</settingsStorages>
   <settingsStorages>SettingsStorage.БуферыОбменаНовостей</settingsStorages>
   <settingsStorages>SettingsStorage.НастройкиНовостей</settingsStorages>
@@ -3464,6 +3478,11 @@
   <functionalOptions>FunctionalOption.ИспользоватьНесколькоЧековДляРозичнойТорговли</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияРаспределитьМатериалыПоДолеСтоимости</functionalOptions>
   <functionalOptions>FunctionalOption.German_Butcher</functionalOptions>
+  <functionalOptions>FunctionalOption.РазрешитьСписаниеСебестоимостиВРазрезеОрганизаций</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьУникальныйПрефиксДляНумерацииДокументов</functionalOptions>
+  <functionalOptions>FunctionalOption.ФункциональнаяОпцияПроизводственныеПотери</functionalOptions>
+  <functionalOptions>FunctionalOption.ИспользоватьКартыЛояльности</functionalOptions>
+  <functionalOptions>FunctionalOption.ВозвратОтПокупателяDG</functionalOptions>
   <functionalOptionsParameters>FunctionalOptionsParameter.Организация</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.Пользователь</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.ТипВерсионируемогоОбъекта</functionalOptionsParameters>
@@ -3752,6 +3771,7 @@
   <commonCommands>CommonCommand.ЗапретРедактированияДокументов</commonCommands>
   <commonCommands>CommonCommand.ЗагрузкаСпискаНоменклатуры</commonCommands>
   <commonCommands>CommonCommand.ЗагрузкаСпискаНоменклатурыРасширенный</commonCommands>
+  <commonCommands>CommonCommand.НастройкиУникальныхПрефиксовДокументов</commonCommands>
   <commandGroups>CommandGroup.СинхронизацияДанных</commandGroups>
   <commandGroups>CommandGroup.CRM</commandGroups>
   <commandGroups>CommandGroup.ТоварыИУслуги</commandGroups>
@@ -4233,6 +4253,25 @@
   <constants>Constant.ФункциональнаяОпцияИспользоватьНесколькоЧековДляРозничнойТорговли</constants>
   <constants>Constant.РаспределитьМатериалыПоДолеСтоимости</constants>
   <constants>Constant.German_Butcher</constants>
+  <constants>Constant.ПроизводственныеПотери</constants>
+  <constants>Constant.ЗаполнитьОтветственногоИзКонтрагента</constants>
+  <constants>Constant.ИсполнительВТаблицеЗаказаПокупателяИрасходнойНакладной</constants>
+  <constants>Constant.ХранилищеНастроекДляВебСервиса</constants>
+  <constants>Constant.РазрешитьСписаниеСебестоимостиВРазрезеОрганизаций</constants>
+  <constants>Constant.ИспользоватьУникальныйПрефиксДляНумерацииДокументов</constants>
+  <constants>Constant.ЗначениеIDДляВебСервисаНесколькихЧековДляРозничнойТорговли</constants>
+  <constants>Constant.НастройкиОбменаСДаннымиОПосещенииСотрудников</constants>
+  <constants>Constant.ВзаимозачетПодсчетСуммы</constants>
+  <constants>Constant.ФункциональнаяОпцияИспользоватьКартыЛояльности</constants>
+  <constants>Constant.НаименованиеДляПечатиНоменклатуриВпечатныхФормах</constants>
+  <constants>Constant.ВнутреннийЗаказЗаморозкаВремени</constants>
+  <constants>Constant.ОтчетАктСверкиСкрытьПромежуточныйДолг</constants>
+  <constants>Constant.ВозвратОтПокупателяDG</constants>
+  <constants>Constant.КоличествоЭкземплюровДляПечатногоУстройства</constants>
+  <constants>Constant.ПлательщикТранспортировкиТН_в_Организации</constants>
+  <constants>Constant.ОчиститьРезервПриПеремещенииЗапасов</constants>
+  <constants>Constant.КонтрольДебиторскойЗадолженности</constants>
+  <constants>Constant.ОбязательноеПолеОтветственный</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <constants>Constant.AzRyJiraНаименованиеИнтернетРесурса</constants>
   <commonForms>CommonForm.АвтоматическийОбменСПодключаемымОборудованиемOffline</commonForms>
@@ -4479,6 +4518,9 @@
   <commonForms>CommonForm.ФормаПароля</commonForms>
   <commonForms>CommonForm.КонстантыКоличествоАктивныхПользователей</commonForms>
   <commonForms>CommonForm.ФормаНастройкиBOG_AXConnect</commonForms>
+  <commonForms>CommonForm.ФормаНастройкиDIGIВесыСПечатьюЭтикеток</commonForms>
+  <commonForms>CommonForm.ФормаКонстантыХранилищеНастроекДляВебСервиса</commonForms>
+  <commonForms>CommonForm.СписокЗначенийОтбора</commonForms>
   <catalogs>Catalog.АвансовыйОтчетПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.АвтоматическиеСкидки</catalogs>
   <catalogs>Catalog.АктВыполненныхРаботПрисоединенныеФайлы</catalogs>
@@ -4780,6 +4822,12 @@
   <catalogs>Catalog.СостоянияДокументЗапроса</catalogs>
   <catalogs>Catalog.Потери</catalogs>
   <catalogs>Catalog.СписаниеНаПотери</catalogs>
+  <catalogs>Catalog.НастрайкиВебСервисовДляКассККМ</catalogs>
+  <catalogs>Catalog.ВидыКартЛояльности</catalogs>
+  <catalogs>Catalog.КартыЛояльности</catalogs>
+  <catalogs>Catalog.ПравоИзмененияЦеныНоменклатурыВРасходнойНакл</catalogs>
+  <catalogs>Catalog.ПричиныНевыходовНаРаботу</catalogs>
+  <catalogs>Catalog.РетроБонусыИПроцентМаркетинговогоБюджета</catalogs>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRytmpНоменклатурныеГруппы</catalogs>
   <catalogs>Catalog.AzRyСпецификацииПриоритет</catalogs>
@@ -4945,6 +4993,10 @@
   <documents>Document.ОдноразовыеНачисления</documents>
   <documents>Document.ТаможенноеОформление</documents>
   <documents>Document.ДокументЗапроса</documents>
+  <documents>Document.ЗагрузитьДляЗапасовУКлиента</documents>
+  <documents>Document.НевыходыНаРаботуСотрудников</documents>
+  <documents>Document.УчетРабочегоВремениСотрудников</documents>
+  <documents>Document.УстановкаСкидок</documents>
   <documents>Document.AzRyКонвертацияВалюты</documents>
   <documents>Document.AzRyВременноеПередачаЗапасов</documents>
   <documents>Document.AzRyИнвентаризацияИмущество</documents>
@@ -5396,6 +5448,11 @@
   <enums>Enum.ПриоритетСоответствияДляПоискаНоменклатурВБазе</enums>
   <enums>Enum.ВидыЧековДляНоменклатурыККМ</enums>
   <enums>Enum.ТипыОперации</enums>
+  <enums>Enum.ПричиныНевыходовНаРаботу</enums>
+  <enums>Enum.ТипыУчетаРабочегоВремени</enums>
+  <enums>Enum.ВидыИспользованияБалов</enums>
+  <enums>Enum.ВидВзаиморасчетаСКонтрагентом</enums>
+  <enums>Enum.СпособыОкругления</enums>
   <enums>Enum.AzRyТипыКонвертацияВалюты</enums>
   <enums>Enum.AzRyТипыПроектов</enums>
   <enums>Enum.AzRyТипЗаписыАвтоматизацияНачисленийЗарплаты</enums>
@@ -5628,16 +5685,25 @@
   <reports>Report.ЗапасыПоПроектам</reports>
   <reports>Report.ОтчетДокументЗапроса</reports>
   <reports>Report.ЗапасыПоОптовымИУчетнымЦенам</reports>
-  <reports>Report.ОтчетДляЭакрытияСмены</reports>
+  <reports>Report.ОтчетПоPLU</reports>
   <reports>Report.ЗаказыПокупателейСобранныеЗаказы</reports>
   <reports>Report.СводныйАнализЗаказовПокупателейСобранныеЗаказы</reports>
+  <reports>Report.ОтчетЗапасыУклиента</reports>
+  <reports>Report.ОтчетДляЭакрытияСмены</reports>
+  <reports>Report.ЗапасыНаСкладах</reports>
+  <reports>Report.УчетРабочегоВремениСотрудников</reports>
+  <reports>Report.НакопленныеБалы</reports>
+  <reports>Report.КарточкаСубконто</reports>
+  <reports>Report.ОборотыМеждуСубконто</reports>
+  <reports>Report.ОборотыСубконто</reports>
+  <reports>Report.ЧасыОтсутствияСотрудника</reports>
+  <reports>Report.ПериодДействияДоговораСотрудника</reports>
   <reports>Report.AzRyОборотноСальдоваяВедомостьРеглUSD</reports>
   <reports>Report.AzRyКарточкаСчетаUSD</reports>
   <reports>Report.AzRyИсторияЗарплатыСотрудника</reports>
-  <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
-  <dataProcessors>DataProcessor.АктивныеПользователи</dataProcessors>
+  <dataProcessors>DataProcessor.Marani_ЗаполнитьТабельПоДаннымТурникета</dataProcessors>
   <dataProcessors>DataProcessor.БазовыеФункцииИнтернетПоддержки</dataProcessors>
-  <dataProcessors>DataProcessor.БанкИКасса</dataProcessors>
+  <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
   <dataProcessors>DataProcessor.БизнесСеть</dataProcessors>
   <dataProcessors>DataProcessor.БлокировкаРаботыПользователей</dataProcessors>
   <dataProcessors>DataProcessor.БыстрыеДействия</dataProcessors>
@@ -5646,80 +5712,92 @@
   <dataProcessors>DataProcessor.ВыгрузкаБазыТоваровВТСД</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаEnterpriseData</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхГрафЗависимостейСловарейСопоставленияСсылок</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиДанныхИнформационнойБазы</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиНастроекПользователей</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиДанныхИнформационнойБазы</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиНастроекПользователей</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерКонтейнера</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерОбработчиковВыгрузкиДанных</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерОбработчиковЗагрузкиДанных</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерПересозданияСсылок</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерСопоставленияСсылок</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаменыСсылок</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиДанныхИнформационнойБазы</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиПересоздаваемыхСсылок</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиСопоставляемыхСсылок</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЧтенияДанныхИнформационнойБазы</dataProcessors>
   <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</dataProcessors>
   <dataProcessors>DataProcessor.ВыполнениеОбменаДанными</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерПересозданияСсылок</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиДанныхИнформационнойБазы</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерСопоставленияСсылок</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиНастроекПользователей</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиДанныхИнформационнойБазы</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиНастроекПользователей</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерКонтейнера</dataProcessors>
-  <dataProcessors>DataProcessor.ГрупповоеИзменениеРеквизитов</dataProcessors>
   <dataProcessors>DataProcessor.ВыставлениеСчетовПоДоговорамОбслуживания</dataProcessors>
+  <dataProcessors>DataProcessor.ГрупповоеИзменениеРеквизитов</dataProcessors>
   <dataProcessors>DataProcessor.ГрупповоеПерепроведениеДокументов</dataProcessors>
-  <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
   <dataProcessors>DataProcessor.ДисконтныеКарты</dataProcessors>
   <dataProcessors>DataProcessor.ДокументооборотСКонтролирующимиОрганами</dataProcessors>
-  <dataProcessors>DataProcessor.ЗагрузкаДанныхИзУТ103</dataProcessors>
+  <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузитьДанныеСайта</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаДанныхИзВнешнегоИсточника</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаДанныхИзУТ103</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаДанныхИзФайла</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаКурсовВалют</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаКурсовВалютГрузия</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаПравилРегистрацииОбъектов</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатуры</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатурыРасширенная</dataProcessors>
   <dataProcessors>DataProcessor.ЗакрытиеМесяца</dataProcessors>
-  <dataProcessors>DataProcessor.ЗащитаПерсональныхДанных</dataProcessors>
-  <dataProcessors>DataProcessor.ИнтерактивноеИзменениеВыгрузки</dataProcessors>
   <dataProcessors>DataProcessor.ЗакупкаТоваров</dataProcessors>
   <dataProcessors>DataProcessor.ЗаменаИОбъединениеЭлементов</dataProcessors>
-  <dataProcessors>DataProcessor.ИнформационныйЦентр</dataProcessors>
+  <dataProcessors>DataProcessor.ЗаполнениеРеквизитовПланаСчетовХозрасчетный</dataProcessors>
+  <dataProcessors>DataProcessor.ЗащитаПерсональныхДанных</dataProcessors>
   <dataProcessors>DataProcessor.ИнструкцияПоИспользованиюПроверкиКонтрагента</dataProcessors>
   <dataProcessors>DataProcessor.ИнструментыРазработчикаПроверкаКонтрагентов</dataProcessors>
-  <dataProcessors>DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаменыСсылок</dataProcessors>
+  <dataProcessors>DataProcessor.ИнтеграцияСБанком</dataProcessors>
+  <dataProcessors>DataProcessor.ИнтеграцияСБанкомTBC</dataProcessors>
+  <dataProcessors>DataProcessor.ИнтерактивноеИзменениеВыгрузки</dataProcessors>
+  <dataProcessors>DataProcessor.ИнформационныйЦентр</dataProcessors>
   <dataProcessors>DataProcessor.ИнформацияПриЗапуске</dataProcessors>
-  <dataProcessors>DataProcessor.КлиентБанк</dataProcessors>
   <dataProcessors>DataProcessor.КалендарьБухгалтера</dataProcessors>
-  <dataProcessors>DataProcessor.КонвертацияОбъектовИнформационныхБаз</dataProcessors>
+  <dataProcessors>DataProcessor.КлиентБанк</dataProcessors>
   <dataProcessors>DataProcessor.КонвертацияОбъектовXDTO</dataProcessors>
+  <dataProcessors>DataProcessor.КонвертацияОбъектовИнформационныхБаз</dataProcessors>
   <dataProcessors>DataProcessor.КонвертацияОбъектовРаспределенныхИнформационныхБаз</dataProcessors>
-  <dataProcessors>DataProcessor.ЛегальностьПолученияОбновлений</dataProcessors>
   <dataProcessors>DataProcessor.КонсолидацияОтчетностиПоНДС</dataProcessors>
   <dataProcessors>DataProcessor.КонтрольПравильностиУчета</dataProcessors>
+  <dataProcessors>DataProcessor.ЛегальностьПолученияОбновлений</dataProcessors>
   <dataProcessors>DataProcessor.МенеджерПодсказок</dataProcessors>
-  <dataProcessors>DataProcessor.НастройкаРезервногоКопированияИБ</dataProcessors>
   <dataProcessors>DataProcessor.МониторИнтернетПоддержки</dataProcessors>
   <dataProcessors>DataProcessor.МониторыРуководителя</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаРазрешенийНаИспользованиеВнешнихРесурсов</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервиса</dataProcessors>
-  <dataProcessors>DataProcessor.НастройкиПользователей</dataProcessors>
+  <dataProcessors>DataProcessor.НастройкаРезервногоКопированияИБ</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаРезервногоКопированияПриложения</dataProcessors>
   <dataProcessors>DataProcessor.НастройкаСтандартногоИнтерфейсаOData</dataProcessors>
-  <dataProcessors>DataProcessor.УстановкаОбновлений</dataProcessors>
+  <dataProcessors>DataProcessor.НастройкиПользователей</dataProcessors>
   <dataProcessors>DataProcessor.НачалоРаботыСПрограммой</dataProcessors>
   <dataProcessors>DataProcessor.НерекомендуемаяВерсияПлатформы</dataProcessors>
   <dataProcessors>DataProcessor.ОблачныйАрхив</dataProcessors>
   <dataProcessors>DataProcessor.ОбменСGoogle</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработчикиВыгрузкиВБухгалтерияПредприятия30</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзБухгалтерияПредприятия30</dataProcessors>
+  <dataProcessors>DataProcessor.ОбменСБанками</dataProcessors>
+  <dataProcessors>DataProcessor.ОбменСКонтрагентами</dataProcessors>
+  <dataProcessors>DataProcessor.ОбновитьПланСчетов</dataProcessors>
   <dataProcessors>DataProcessor.ОбновлениеПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.ОбновлениеРегламентированнойОтчетности</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработкаИзменениеЦен</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработкаРелизов</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработкаСобранныхЗаказов</dataProcessors>
   <dataProcessors>DataProcessor.ОбработкиНалоговИОтчетности</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработчикиВыгрузкиВБухгалтерияПредприятия30</dataProcessors>
   <dataProcessors>DataProcessor.ОбработчикиВыгрузкиВОтчетностьПредпринимателя</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзОтчетностьПредпринимателя</dataProcessors>
   <dataProcessors>DataProcessor.ОбработчикиВыгрузкиВРозница</dataProcessors>
-  <dataProcessors>DataProcessor.ОбменСБанками</dataProcessors>
-  <dataProcessors>DataProcessor.ОценкаПроизводительности</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзБухгалтерияПредприятия30</dataProcessors>
+  <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзОтчетностьПредпринимателя</dataProcessors>
   <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзРозница</dataProcessors>
   <dataProcessors>DataProcessor.ОбработчикиЗагрузкиИзУправлениеТорговлей103</dataProcessors>
   <dataProcessors>DataProcessor.ОбщиеОбъектыРеглОтчетности</dataProcessors>
   <dataProcessors>DataProcessor.ОнлайнСервисыРегламентированнойОтчетности</dataProcessors>
-  <dataProcessors>DataProcessor.СинхронизацияЭлектронныхСФ</dataProcessors>
+  <dataProcessors>DataProcessor.ОПТИМУС_МониторСостоянияУзлаОбена</dataProcessors>
+  <dataProcessors>DataProcessor.ОценкаПроизводительности</dataProcessors>
+  <dataProcessors>DataProcessor.ОчистаСсылокУправленческогоПланаСчетовВСправочниках</dataProcessors>
   <dataProcessors>DataProcessor.ОчисткаИсторииОбсуждений</dataProcessors>
   <dataProcessors>DataProcessor.Панель1СМаркировка</dataProcessors>
   <dataProcessors>DataProcessor.ПанельАдминистрирования1СМаркировка</dataProcessors>
@@ -5738,15 +5816,18 @@
   <dataProcessors>DataProcessor.ПечатьУКД</dataProcessors>
   <dataProcessors>DataProcessor.ПечатьЭтикетокИЦенников</dataProcessors>
   <dataProcessors>DataProcessor.Планировщик</dataProcessors>
+  <dataProcessors>DataProcessor.ПМ_ЗаполнениеДокумента_ОтчетОРозничныхПродажах</dataProcessors>
   <dataProcessors>DataProcessor.ПодборПеремещение</dataProcessors>
   <dataProcessors>DataProcessor.ПодборПоступление</dataProcessors>
   <dataProcessors>DataProcessor.ПодборРеализация</dataProcessors>
   <dataProcessors>DataProcessor.ПодборСерийныхНомеров</dataProcessors>
   <dataProcessors>DataProcessor.Подключение1СТакском</dataProcessors>
   <dataProcessors>DataProcessor.ПодтверждениеПоступившихКиЗГИСМ</dataProcessors>
+  <dataProcessors>DataProcessor.ПоискИУдалениеДублей</dataProcessors>
   <dataProcessors>DataProcessor.ПолнотекстовыйПоискВДанных</dataProcessors>
-  <dataProcessors>DataProcessor.ЗагрузкаДанныхИзФайла</dataProcessors>
+  <dataProcessors>DataProcessor.ПомошникСозданияДокументовПеремещенияЗапасов</dataProcessors>
   <dataProcessors>DataProcessor.ПомощникВводаНачальныхОстатков</dataProcessors>
+  <dataProcessors>DataProcessor.ПомощникЗагрузкиБанковскойВыписки</dataProcessors>
   <dataProcessors>DataProcessor.ПомощникИнтерактивногоОбменаДанными</dataProcessors>
   <dataProcessors>DataProcessor.ПомощникИнтерактивногоОбменаДаннымиВМоделиСервиса</dataProcessors>
   <dataProcessors>DataProcessor.ПомощникКорректировкиОстатковЕГАИС</dataProcessors>
@@ -5756,62 +5837,55 @@
   <dataProcessors>DataProcessor.ПомощникСозданияОбменаДаннымиССайтом</dataProcessors>
   <dataProcessors>DataProcessor.ПрайсЛистыКонтрагентов</dataProcessors>
   <dataProcessors>DataProcessor.ПульсБизнеса</dataProcessors>
+  <dataProcessors>DataProcessor.РабочееМестоКладовщика</dataProcessors>
   <dataProcessors>DataProcessor.РасчетПотребностей</dataProcessors>
   <dataProcessors>DataProcessor.РегистрацияИзмененийДляОбменаДанными</dataProcessors>
+  <dataProcessors>DataProcessor.РегистрацияКонтрагентов</dataProcessors>
   <dataProcessors>DataProcessor.РегламентированнаяОтчетностьСоотношенияПоказателей</dataProcessors>
-  <dataProcessors>DataProcessor.ПоискИУдалениеДублей</dataProcessors>
   <dataProcessors>DataProcessor.РегламентныеИФоновыеЗадания</dataProcessors>
+  <dataProcessors>DataProcessor.РезервноеКопированиеИБ</dataProcessors>
   <dataProcessors>DataProcessor.РезультатыОбновленияПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.РеквизитыПечати</dataProcessors>
   <dataProcessors>DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</dataProcessors>
   <dataProcessors>DataProcessor.СдвигГраницыИтогов</dataProcessors>
+  <dataProcessors>DataProcessor.СинхронизацияНалоговыхДокументов</dataProcessors>
+  <dataProcessors>DataProcessor.СинхронизацияЭлектронныхСФ</dataProcessors>
+  <dataProcessors>DataProcessor.СинхронизацияЭлектронныхТТН</dataProcessors>
   <dataProcessors>DataProcessor.Сканирование</dataProcessors>
   <dataProcessors>DataProcessor.СкрытиеКонфиденциальнойИнформации</dataProcessors>
   <dataProcessors>DataProcessor.СоздатьСайт</dataProcessors>
   <dataProcessors>DataProcessor.СообщенияВКонтролирующийОрган</dataProcessors>
   <dataProcessors>DataProcessor.СопоставлениеНоменклатурыЕГАИС</dataProcessors>
-  <dataProcessors>DataProcessor.РезервноеКопированиеИБ</dataProcessors>
+  <dataProcessors>DataProcessor.СопоставлениеОбъектовИнформационныхБаз</dataProcessors>
   <dataProcessors>DataProcessor.СопоставлениеОрганизацийЕГАИС</dataProcessors>
   <dataProcessors>DataProcessor.СправкаСПАРКРиски</dataProcessors>
   <dataProcessors>DataProcessor.ТекущиеДела</dataProcessors>
   <dataProcessors>DataProcessor.ТекущиеДелаПоЭДО</dataProcessors>
-  <dataProcessors>DataProcessor.СопоставлениеОбъектовИнформационныхБаз</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаEMAIL</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаFILE</dataProcessors>
-  <dataProcessors>DataProcessor.ИнтеграцияСБанком</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаFTP</dataProcessors>
   <dataProcessors>DataProcessor.УдалениеПомеченныхОбъектов</dataProcessors>
   <dataProcessors>DataProcessor.УдалениеФайловОтработанныхПакетовЭД</dataProcessors>
-  <dataProcessors>DataProcessor.УправлениеНовостями</dataProcessors>
   <dataProcessors>DataProcessor.УниверсальныйОбменДаннымиXML</dataProcessors>
+  <dataProcessors>DataProcessor.УправлениеИтогамиИАгрегатами</dataProcessors>
+  <dataProcessors>DataProcessor.УправлениеНовостями</dataProcessors>
+  <dataProcessors>DataProcessor.УстановкаОбновлений</dataProcessors>
   <dataProcessors>DataProcessor.ФормированиеДокументовДоставки</dataProcessors>
   <dataProcessors>DataProcessor.ФормированиеПрайсЛистов</dataProcessors>
-  <dataProcessors>DataProcessor.Ценообразование</dataProcessors>
-  <dataProcessors>DataProcessor.УправлениеИтогамиИАгрегатами</dataProcessors>
-  <dataProcessors>DataProcessor.ЗагрузкаКурсовВалютГрузия</dataProcessors>
-  <dataProcessors>DataProcessor.ОбменСКонтрагентами</dataProcessors>
-  <dataProcessors>DataProcessor.СинхронизацияЭлектронныхТТН</dataProcessors>
-  <dataProcessors>DataProcessor.ОбновитьПланСчетов</dataProcessors>
-  <dataProcessors>DataProcessor.ЭлектронныеДокументыОтправкаКаталога</dataProcessors>
-  <dataProcessors>DataProcessor.ОПТИМУС_МониторСостоянияУзлаОбена</dataProcessors>
-  <dataProcessors>DataProcessor.ПомощникЗагрузкиБанковскойВыписки</dataProcessors>
-  <dataProcessors>DataProcessor.РабочееМестоКладовщика</dataProcessors>
-  <dataProcessors>DataProcessor.ИнтеграцияСБанкомTBC</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработкаСобранныхЗаказов</dataProcessors>
-  <dataProcessors>DataProcessor.Marani_ЗаполнитьТабельПоДаннымТурникета</dataProcessors>
-  <dataProcessors>DataProcessor.ПМ_ЗаполнениеДокумента_ОтчетОРозничныхПродажах</dataProcessors>
   <dataProcessors>DataProcessor.ФормированияЦенПродажИзЗакупочнойЦены</dataProcessors>
-  <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатуры</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработкаРелизов</dataProcessors>
-  <dataProcessors>DataProcessor.ЗаполнениеРеквизитовПланаСчетовХозрасчетный</dataProcessors>
-  <dataProcessors>DataProcessor.СинхронизацияНалоговыхДокументов</dataProcessors>
-  <dataProcessors>DataProcessor.ОчистаСсылокУправленческогоПланаСчетовВСправочниках</dataProcessors>
-  <dataProcessors>DataProcessor.РегистрацияКонтрагентов</dataProcessors>
-  <dataProcessors>DataProcessor.ОбработкаИзменениеЦен</dataProcessors>
-  <dataProcessors>DataProcessor.ПомошникСозданияДокументовПеремещенияЗапасов</dataProcessors>
-  <dataProcessors>DataProcessor.ЗагрузкаСпискаНоменклатурыРасширенная</dataProcessors>
+  <dataProcessors>DataProcessor.Ценообразование</dataProcessors>
+  <dataProcessors>DataProcessor.ЭлектронныеДокументыОтправкаКаталога</dataProcessors>
   <dataProcessors>DataProcessor.ОобработкаЗагрузкиТабличнойЧастиРегистра</dataProcessors>
+  <dataProcessors>DataProcessor.АктивныеПользователи</dataProcessors>
+  <dataProcessors>DataProcessor.БанкИКасса</dataProcessors>
   <dataProcessors>DataProcessor.ХарактеристикиВключитьГалочкуИспользуетсяВдокументах</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузитьДляЗапасовУКлиента</dataProcessors>
+  <dataProcessors>DataProcessor.DigiSMВесыСПечатьюЭтикеток</dataProcessors>
+  <dataProcessors>DataProcessor.ВыгрузкаТоваровВВесыСПечатьюЭтикеток</dataProcessors>
+  <dataProcessors>DataProcessor.ОтправкаЧековККМНаВебСервис</dataProcessors>
+  <dataProcessors>DataProcessor.ВедомостьКонсигнации</dataProcessors>
+  <dataProcessors>DataProcessor.ВедомостьОСуммированииНоменклатур</dataProcessors>
+  <dataProcessors>DataProcessor.ЗагрузкаДанныхИзВнешнихФайлов</dataProcessors>
   <dataProcessors>DataProcessor.AzRyТЕСТ_ЧекККМ</dataProcessors>
   <dataProcessors>DataProcessor.Тест_НовыеЗадания</dataProcessors>
   <dataProcessors>DataProcessor.AzRyБазомер</dataProcessors>
@@ -5825,6 +5899,7 @@
   <dataProcessors>DataProcessor.AzRyJiraИЗарплата</dataProcessors>
   <informationRegisters>InformationRegister.УдалитьАдресныйКлассификатор</informationRegisters>
   <informationRegisters>InformationRegister.АктивированныеАгентыРезервногоКопирования</informationRegisters>
+  <informationRegisters>InformationRegister.АдресныеОбъекты</informationRegisters>
   <informationRegisters>InformationRegister.АрхивДанныхРегламентированнойОтчетности</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанных</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</informationRegisters>
@@ -6217,11 +6292,25 @@
   <informationRegisters>InformationRegister.НумераторыЧековККМДляОчереди</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыПоКоличество</informationRegisters>
   <informationRegisters>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</informationRegisters>
-  <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.СинонимиВалют</informationRegisters>
-  <informationRegisters>InformationRegister.АдресныеОбъекты</informationRegisters>
-  <informationRegisters>InformationRegister.AzRyJiraПараметры</informationRegisters>
+  <informationRegisters>InformationRegister.АдресаВесов</informationRegisters>
+  <informationRegisters>InformationRegister.ШаблоныУникальныхПрефиксовДляДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.СчетыДляСписанияИОприходованияЗапасов</informationRegisters>
+  <informationRegisters>InformationRegister.ПриходыУходыСотрудников</informationRegisters>
+  <informationRegisters>InformationRegister.НевыходыНаРаботуСотрудников</informationRegisters>
+  <informationRegisters>InformationRegister.УчетРабочегоВремениСотрудников</informationRegisters>
+  <informationRegisters>InformationRegister.ЗначенияПредопределенныхЭлементовДляРасширений</informationRegisters>
+  <informationRegisters>InformationRegister.СкидкиПоНоменклатурам</informationRegisters>
+  <informationRegisters>InformationRegister.СкидкиПоНоменклатурнымГруппам</informationRegisters>
+  <informationRegisters>InformationRegister.КодыТоваровSKU</informationRegisters>
+  <informationRegisters>InformationRegister.СопоставлениеКонтрагентовWordPress</informationRegisters>
+  <informationRegisters>InformationRegister.СопоставлениеНоменклатурыWordPress</informationRegisters>
+  <informationRegisters>InformationRegister.СопоставлениеЗаказПокупателяWordPress</informationRegisters>
+  <informationRegisters>InformationRegister.СопоставлениеНеудачнаяЗагрузкаЗаказПокупателяWordPress</informationRegisters>
+  <informationRegisters>InformationRegister.РетроБонуси</informationRegisters>
   <informationRegisters>InformationRegister.СчетаРасходыДляРасчетаРетроБонуси</informationRegisters>
+  <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.AzRyJiraПараметры</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВнеоборотныеАктивы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыполнениеДоговоровОбслуживания</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыработкаВнеоборотныхАктивов</accumulationRegisters>
@@ -6304,6 +6393,9 @@
   <accumulationRegisters>AccumulationRegister.НалогиБюджет</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ПроизводственныеПотери</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Усушкa_СобранныеPаказы</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ЗапасыУКлиента</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.БалыЛояльности</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ЦеныВозвратаНоменклатурDgFIFO</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyВременноеПередачаЗапасов</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.AzRyАналитикаРасчетыСПокупателями</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.УдалитьВидыДоступа</chartsOfCharacteristicTypes>
@@ -6314,6 +6406,7 @@
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.НастройкиПользователей</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.РазделыДатЗапретаИзменения</chartsOfCharacteristicTypes>
+  <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ПредопределенныеЭлементыДляРасширений</chartsOfCharacteristicTypes>
   <chartsOfAccounts>ChartOfAccounts.Управленческий</chartsOfAccounts>
   <chartsOfAccounts>ChartOfAccounts.Хозрасчетный</chartsOfAccounts>
   <accountingRegisters>AccountingRegister.Управленческий</accountingRegisters>

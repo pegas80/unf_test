@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="42b2d230-f0af-451c-bd5f-568c7504055b">
+  <name>ПравоРедактированияПроведенныхДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Право редактирования проведенных документов</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>გატარებული დოკუმენტების(გასავლის ზედდებული,წარმოება,მარაგების გადაადგილება) რედაქტირერბის შეზღუდვა</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПеремещениеЗапасов</types>
+    <types>DocumentObject.ПриходнаяНакладная</types>
+    <types>DocumentObject.СборкаЗапасов</types>
+    <types>DocumentObject.РасходнаяНакладная</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДатыЗапретаИзменения.ПравоРедактированияПроведенныхДокументовРеализацияПеремещенияПроизводство</handler>
+</mdclass:EventSubscription>

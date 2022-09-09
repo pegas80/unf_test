@@ -226,6 +226,7 @@
   <basedOn>Document.СчетНаОплату</basedOn>
   <basedOn>Document.ПриемИПередачаВРемонт</basedOn>
   <basedOn>Document.ДокументЗапроса</basedOn>
+  <basedOn>Document.ВнутреннийЗаказ</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -303,6 +304,7 @@
   <registerRecords>AccumulationRegister.РасчетыСПоставщиками</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
   <registerRecords>AccumulationRegister.ЗакупкиДляКУДиР</registerRecords>
+  <registerRecords>AccumulationRegister.ЦеныВозвратаНоменклатурDgFIFO</registerRecords>
   <registerRecords>AccumulationRegister.ВнеоборотныеАктивы</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
@@ -666,6 +668,7 @@
       <types>DocumentRef.ПриемИПередачаВРемонт</types>
       <types>DocumentRef.ДокументЗапроса</types>
       <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.ВнутреннийЗаказ</types>
       <types>DocumentRef.ПриходныйОрдер</types>
       <types>DocumentRef.СчетНаОплатуПоставщика</types>
     </type>
@@ -3361,6 +3364,48 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1a401002-0c5d-4e9b-8601-d13a573a5cf7">
+      <name>ДокументОснование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Основание</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საფუძველი</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходнаяНакладная</types>
+        <types>DocumentRef.ЗаказПокупателя</types>
+        <types>DocumentRef.ЗаказПоставщику</types>
+        <types>DocumentRef.ПриходныйОрдер</types>
+        <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Документ-основание</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დოკუმენტი-საფუძველი</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>Document.ПриходнаяНакладная.Attribute.ВидОперации</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Отбор.Договор</name>
+        <field>Document.ПриходнаяНакладная.Attribute.Договор</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Отбор.Контрагент</name>
+        <field>Document.ПриходнаяНакладная.Attribute.Контрагент</field>
+      </choiceParameterLinks>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

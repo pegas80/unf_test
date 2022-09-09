@@ -672,4 +672,152 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
+  <tabularSections uuid="a61d4952-d361-495a-bbfc-83ffe64d4211">
+    <producedTypes>
+      <objectType typeId="3f93f039-d721-4580-a74e-2c74d9595732" valueTypeId="82122585-ede6-4ad5-b433-7d6cce8587bf"/>
+      <rowType typeId="cfc77be0-80b5-49f0-b5cf-dffdbd7bb768" valueTypeId="183b130a-6890-416d-bc0b-09344896c96d"/>
+    </producedTypes>
+    <name>ВыданныеАвансы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выданные авансы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გაცემული ავანსები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>advances paid</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Авансы, выданные подотчетному лицу</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>საქვეანგარიშო პირზე გაცემული ავანსები</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Advances paid to the accountable person</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="94100fa4-807c-4854-93d8-77ee4acf3a64">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Document</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходСоСчета</types>
+        <types>DocumentRef.РасходИзКассы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Документ выдачи денежных средств подотчетному лицу</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>საქვეანგარიშო პირისთვის თანხის გაცემის დოკუმენტი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Document cash dispensing face accountable</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Отбор.ВалютаДенежныхСредств</name>
+        <field>Document.Конвертация.Attribute.ВалютаОтправитель</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Отбор.Подотчетник</name>
+        <field>Document.Конвертация.Attribute.Подотчетник</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Отбор.ВидОперации</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ВидыОперацийРасходИзКассы.EnumValue.Подотчетнику</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ВидыОперацийРасходСоСчета.EnumValue.Подотчетнику</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ВидыОперацийКонвертация.EnumValue.Подотчетник</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <choiceParameters>
+        <name>ВидОперацииКасса</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ВидыОперацийРасходИзКассы.EnumValue.Подотчетнику</value>
+        </value>
+      </choiceParameters>
+      <choiceParameters>
+        <name>ВидОперацииБанк</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ВидыОперацийРасходСоСчета.EnumValue.Подотчетнику</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d2d87e5d-cf2a-4c1f-93bd-cc5cf13c901b">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Израсходованная сумма по документу выдачи</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>გაცემის დოკუმენტის მიხედვით დახარჯული თანხა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Amount spent on document issuance</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

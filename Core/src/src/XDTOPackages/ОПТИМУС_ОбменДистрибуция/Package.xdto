@@ -84,6 +84,7 @@
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Discount" type="d2p1:TypeTotal" nillable="true"/>
 						<property name="Present" type="xs:boolean" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -96,6 +97,7 @@
 						<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -110,6 +112,7 @@
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Discount" type="d2p1:TypeTotal" nillable="true"/>
 						<property name="Present" type="xs:boolean" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -122,6 +125,7 @@
 						<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -132,6 +136,7 @@
 					<typeDef xsi:type="ObjectType">
 						<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
 						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -149,6 +154,7 @@
 			<typeDef xsi:type="ObjectType">
 				<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
 				<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+				<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 			</typeDef>
 		</property>
 	</objectType>
@@ -189,7 +195,12 @@
 			<typeDef xsi:type="ObjectType">
 				<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
 				<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
+				<property name="Characteristic" type="d2p1:Characteristicitems" lowerBound="0" nillable="true"/>
 			</typeDef>
 		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.optimus.ge/SB/DistributionExchange" name="Characteristicitems" base="d2p1:Object">
+		<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
 	</objectType>
 </package>

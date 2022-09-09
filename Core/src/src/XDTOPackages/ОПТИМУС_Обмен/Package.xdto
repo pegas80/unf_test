@@ -62,6 +62,7 @@
 						<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -74,6 +75,7 @@
 				<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
 				<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
 				<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+				<property name="Characteristic" type="d2p1:Characteristicitems"/>
 			</typeDef>
 		</property>
 	</objectType>
@@ -97,6 +99,7 @@
 						<property name="Price" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
 						<property name="Quantity" type="d2p1:TypeQuantity" lowerBound="0" nillable="true"/>
 						<property name="Total" type="d2p1:TypeTotal" lowerBound="0" nillable="true"/>
+						<property name="Characteristic" type="d2p1:Characteristicitems"/>
 					</typeDef>
 				</property>
 			</typeDef>
@@ -154,5 +157,9 @@
 		<property name="Posted" type="xs:boolean" lowerBound="0" nillable="true"/>
 		<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true"/>
 		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.optimus.ge/SB/MobileExchange" name="Characteristicitems" base="d2p1:Object">
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Nomenclature" type="d2p1:CatItems" lowerBound="0" nillable="true"/>
 	</objectType>
 </package>

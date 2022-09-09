@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0df84920-9403-4cad-96f4-b959f182e358">
+  <producedTypes>
+    <selectionType typeId="4e4524f7-0a58-4c52-aadd-e75c6390b1c1" valueTypeId="3ae2d182-bb81-4547-9c88-26c0197d9ab0"/>
+    <listType typeId="1d8834d7-0b00-4c06-9a4b-7ffef9067418" valueTypeId="443d2fc2-3890-4f0a-b0b9-f67a20614d28"/>
+    <managerType typeId="79ba986a-2b07-4e18-b77e-2a83bd3a1e1f" valueTypeId="f6b420e9-dbb0-46ba-bd7b-f247187f80c8"/>
+    <recordSetType typeId="c159f713-6dca-40fa-8398-4c3e1c1dbc15" valueTypeId="e3c2dc8a-a487-4d67-ac36-71013e588add"/>
+    <recordKeyType typeId="586fb017-3003-4354-b367-a5d35f42a512" valueTypeId="bd13fbe6-5128-470c-8a69-36a78f137f61"/>
+    <recordType typeId="e4c74277-d8d4-41fe-b291-fbef8dabe480" valueTypeId="325f9800-4907-4b3a-97f0-eb07fda6e5f8"/>
+    <recordManagerType typeId="421c609a-789b-4fe0-9dd1-3f7ee4d88e99" valueTypeId="93723a83-d6dd-4f4b-856b-133ec86f61c0"/>
+  </producedTypes>
+  <name>УчетРабочегоВремениСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет рабочего времени сотрудников</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>თანამშრომლის სამუშაო საათების აღრიცხვა</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Employee work time tracking</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3e682910-8a4c-42a6-9199-dad67d7f4760">
+    <name>КоличествоЧасов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество часов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნამუშევარი საათების რაოდენობა</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="da69f7ee-879c-4c66-b248-b6358c834052">
+    <name>Возмещаемый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возмещаемый</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="01d2f51e-f2bd-4321-bb33-b5e918743cb8">
+    <name>ПричинаНевыхода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина невыхода</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>არგამოცხადების მიზეზი</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныНевыходовНаРаботу</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ffff198f-0b1f-438b-a488-b9b2b89f2439">
+    <name>Приход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приход</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შემოსვლა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Приход</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="083d8186-9552-4c9a-a7ec-76f93b9748e8">
+    <name>Уход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уход</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გასვლა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Уход</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8def58fb-70ab-4be8-ba80-048054b9988c">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fe2c5174-4464-4872-b07d-c3349d697b9b">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სტრუქტურული ერთეული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>structural unit</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="15821730-3f52-4f05-bb06-71af3b37e12e">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сотрудник, по которому вводится информация</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>თანამშრომელი, რომელზეც შეჰყავთ ინფორმაცია</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The employee, in which information is entered</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.Уволен</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7bc3e0e8-f016-4194-be2d-eac745628e7b">
+    <name>ГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მუშაობის გრაფიკები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Schedule</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГрафикиРаботы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5a03dfff-7a7f-49da-bee7-f9748c1e2c50">
+    <name>ТипУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип учета</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>აღრიცხვის ტიპი</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыУчетаРабочегоВремени</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ab9f10ce-0f53-47eb-8b5e-05666375a43b">
+    <name>ВремяНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время начала</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაწყვების დრო</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Время начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9b330a95-8485-420e-abca-f1b8e596cfb8">
+    <name>ВремяОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время окончания</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დასრულების დრო</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Время окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

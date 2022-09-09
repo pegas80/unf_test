@@ -396,6 +396,16 @@
 			<dataPath>СчетЗатратРегл</dataPath>
 			<field>СчетЗатратРегл</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВВодаВЕксплуатацию</dataPath>
+			<field>ДатаВВодаВЕксплуатацию</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата в вода в експлуатацию</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПараметрыВнеоборотныхАктивов.Организация КАК Организация,
@@ -422,7 +432,8 @@
 	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
 	ПараметрыВнеоборотныхАктивов.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
 	ПараметрыВнеоборотныхАктивов.СрокИспользованияДляВычисленияАмортизации КАК СрокИспользованияДляВычисленияАмортизации,
-	ПараметрыВнеоборотныхАктивов.СчетЗатратРегл КАК СчетЗатратРегл
+	ПараметрыВнеоборотныхАктивов.СчетЗатратРегл КАК СчетЗатратРегл,
+	ПараметрыВнеоборотныхАктивов.Период КАК ДатаВВодаВЕксплуатацию
 ПОМЕСТИТЬ Вт2
 ИЗ
 	ВТ КАК ВТ
@@ -471,7 +482,8 @@
 		ИНАЧЕ ВнеоборотныеАктивыОстаткиИОбороты.Регистратор
 	КОНЕЦ КАК Регистратор,
 	ВТ.ВнеоборотныйАктив.ТипВнеоборотныеАктивы КАК ВнеоборотныйАктивТипВнеоборотныеАктивы,
-	ВТ.СчетЗатратРегл КАК СчетЗатратРегл
+	ВТ.СчетЗатратРегл КАК СчетЗатратРегл,
+	ВТ.ДатаВВодаВЕксплуатацию КАК ДатаВВодаВЕксплуатацию
 ИЗ
 	РегистрНакопления.ВнеоборотныеАктивы.ОстаткиИОбороты(, , Авто, Движения, ) КАК ВнеоборотныеАктивыОстаткиИОбороты
 		ЛЕВОЕ СОЕДИНЕНИЕ Вт2 КАК ВТ
@@ -520,7 +532,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>СтоимостьОстаточная</dataPath>
-		<expression>ВычислитьВыражение("МИНИМУМ(СтоимостьОстаточная)",,,"Предыдущая", "Текущая")</expression>
+		<expression>Сумма(СтоимостьОстаточная)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>СтоимостьПриход</dataPath>
@@ -664,6 +676,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВнеоборотныйАктив</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВВодаВЕксплуатацию</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
 					<dcsset:lwsTitle>
@@ -947,6 +962,13 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>СпособАмортизации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДатаВВодаВЕксплуатацию</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

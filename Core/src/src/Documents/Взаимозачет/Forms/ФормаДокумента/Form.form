@@ -1271,9 +1271,38 @@
             <placementArea>UserCmds</placementArea>
             <representationInContextMenu>Auto</representationInContextMenu>
           </items>
+          <items xsi:type="form:Button">
+            <name>ДебиторЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+            <id>364</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ДебиторЗапасыЗагрузкаДанныхИзВнешнегоИсточникаРасширеннаяПодсказка</name>
+              <id>365</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
         </autoCommandBar>
+        <handlers>
+          <event>OnChange</event>
+          <name>ДебиторПриИзменении</name>
+        </handlers>
         <searchStringAddition>
           <name>ДебиторСтрокаПоиска</name>
           <id>271</id>
@@ -1937,12 +1966,41 @@
             <placementArea>UserCmds</placementArea>
             <representationInContextMenu>Auto</representationInContextMenu>
           </items>
+          <items xsi:type="form:Button">
+            <name>КредиторЗапасыЗагрузкаДанныхИзВнешнегоИсточника1</name>
+            <id>368</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>КредиторЗапасыЗагрузкаДанныхИзВнешнегоИсточника1РасширеннаяПодсказка</name>
+              <id>369</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ЗапасыЗагрузкаДанныхИзВнешнегоИсточника1</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
         </autoCommandBar>
         <handlers>
           <event>OnActivateCell</event>
           <name>КредиторПриАктивизацииЯчейки</name>
+        </handlers>
+        <handlers>
+          <event>OnChange</event>
+          <name>КредиторПриИзменении</name>
         </handlers>
         <searchStringAddition>
           <name>КредиторСтрокаПоиска</name>
@@ -4167,6 +4225,25 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>НастройкиЗагрузкиДанных</name>
+    <title>
+      <key>ru</key>
+      <value>Настройки загрузки данных</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის გამართვები</value>
+    </title>
+    <id>26</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ПодборРасчетыСПокупателем</name>
     <title>
@@ -4319,6 +4396,64 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+    <title>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მარაგების ჩატვირთვა გარე წყაროდან</value>
+    </title>
+    <id>5</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ЗагрузкаИзФайла</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника1</name>
+    <title>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მარაგების ჩატვირთვა გარე წყაროდან</value>
+    </title>
+    <id>6</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Запасы загрузка данных из внешнего источника</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ЗагрузкаИзФайла</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗапасыЗагрузкаДанныхИзВнешнегоИсточника1</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>
