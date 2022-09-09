@@ -855,14 +855,6 @@
       <items xsi:type="form:FormField">
         <name>AzRyJiraCode</name>
         <id>497</id>
-        <title>
-          <key>ru</key>
-          <value>(AzRy) Jira code</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>(AzRy) Jira code</value>
-        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -3679,14 +3671,6 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Список</name>
-    <title>
-      <key>ru</key>
-      <value>(AzRy) Jira code</value>
-    </title>
-    <title>
-      <key>ka</key>
-      <value>(AzRy) Jira code</value>
-    </title>
     <id>1</id>
     <valueType>
       <types>DynamicList</types>
@@ -3728,6 +3712,7 @@
 		КОГДА НЕ ДокументЗаказПокупателя.Проведен
 				ИЛИ ДокументЗаказПокупателя.ВариантЗавершения = ЗНАЧЕНИЕ(Перечисление.ВариантыЗавершенияЗаказа.Отменен)
 				ИЛИ ДокументЗаказПокупателя.ОжидаетсяВыборВариантаКП
+				ИЛИ ДокументЗаказПокупателя.СуммаДокумента = 0
 			ТОГДА 2
 		КОГДА ГрафикВыполнения.Заказ ЕСТЬ NULL
 				И ГрафикВыполненияПлан.Заказ ЕСТЬ NULL
@@ -3897,7 +3882,6 @@
 	// +++ { AzRy - [15.04.2022] - Jira: - Developer:გიორგი მამულაშვილი - Comment:ERPM-880
 	,ДокументЗаказПокупателя.AzRyJiraCode КАК AzRyJiraCode
 	// +++ } AzRy - [15.04.2022] - Jira: - Developer:გიორგი მამულაშვილი - Comment:ERPM-880	
-	
 ИЗ
 	Документ.ЗаказПокупателя КАК ДокументЗаказПокупателя
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ГрафикВыполненияЗаказов КАК ГрафикВыполнения

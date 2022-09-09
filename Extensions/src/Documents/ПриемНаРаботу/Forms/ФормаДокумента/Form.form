@@ -338,20 +338,114 @@
             <fixingInTable>Left</fixingInTable>
           </extInfo>
         </items>
-        <items xsi:type="form:FormField">
-          <name>СотрудникиПериод</name>
-          <id>51</id>
+        <items xsi:type="form:FormGroup">
+          <name>СотрудникиГруппаПериод</name>
+          <id>228</id>
+          <items xsi:type="form:FormField">
+            <name>СотрудникиПериод</name>
+            <id>51</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Сотрудники.Период</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СотрудникиПериодExtendedTooltip</name>
+              <id>102</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СотрудникиПериодКонтекстноеМеню</name>
+              <id>52</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>10</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <backColor xsi:type="core:ColorRef">
+                <color>Style.ФонУправляющегоПоля</color>
+              </backColor>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>СотрудникиДатаОкончанияСрокаДействияДоговора</name>
+            <id>230</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Сотрудники.ДатаОкончанияДоговора</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СотрудникиДатаОкончанияСрокаДействияДоговораРасширеннаяПодсказка</name>
+              <id>227</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СотрудникиДатаОкончанияСрокаДействияДоговораКонтекстноеМеню</name>
+              <id>226</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <multiLine>true</multiLine>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Сотрудники.Период</segments>
-          </dataPath>
+          <title>
+            <key>ru</key>
+            <value>Сотрудники группа период</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>თანამშრომელი ჯგუფი პერიოდი</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Сотрудники группа период</value>
+          </toolTip>
           <extendedTooltip>
-            <name>СотрудникиПериодExtendedTooltip</name>
-            <id>102</id>
+            <name>СотрудникиГруппаПериодРасширеннаяПодсказка</name>
+            <id>231</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -359,27 +453,10 @@
               <horizontalAlign>Left</horizontalAlign>
             </extInfo>
           </extendedTooltip>
-          <contextMenu>
-            <name>СотрудникиПериодКонтекстноеМеню</name>
-            <id>52</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>EnterOnInput</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <width>10</width>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <horizontalStretch>false</horizontalStretch>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-            <backColor xsi:type="core:ColorRef">
-              <color>Style.ФонУправляющегоПоля</color>
-            </backColor>
+          <type>ColumnGroup</type>
+          <extInfo xsi:type="form:ColumnGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -932,7 +1009,7 @@
         <autoMaxRowsCount>true</autoMaxRowsCount>
         <selectionMode>MultiRow</selectionMode>
         <header>true</header>
-        <headerHeight>1</headerHeight>
+        <headerHeight>2</headerHeight>
         <footerHeight>1</footerHeight>
         <horizontalScrollBar>AutoUse</horizontalScrollBar>
         <verticalScrollBar>AutoUse</verticalScrollBar>

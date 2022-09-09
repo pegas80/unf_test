@@ -1082,6 +1082,42 @@
       </typeExtension>
     </extension>
   </attributes>
+  <attributes uuid="5de3748d-9e7b-4d47-99b2-847c3d026fef">
+    <name>ДокументАвтоматическогоПроизводства</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.СборкаЗапасов</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="db7a8b9d-8dc8-4488-8a9a-45501a2a97d6">
+    <name>КартаЛояльности</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.КартыЛояльности</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="bcb0ac49-c407-4a36-b3d0-a18aed4d86ed">
+    <name>ВидИспользоыванияБалов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ВидыИспользованияБалов</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
   <forms uuid="25b25c6f-955d-4976-a5eb-1b448df69103">
     <name>ФормаДокумента</name>
     <objectBelonging>Adopted</objectBelonging>
@@ -1689,6 +1725,66 @@
           <numberQualifiers>
             <precision>5</precision>
             <nonNegative>true</nonNegative>
+          </numberQualifiers>
+        </typeExtension>
+      </extension>
+    </attributes>
+    <attributes uuid="346f2313-0058-407a-b0d1-3f5922ec5f3b">
+      <name>ПроцентСкидкаЛояльности</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>Number</type>
+          </types>
+          <numberQualifiers>
+            <precision>5</precision>
+            <scale>2</scale>
+          </numberQualifiers>
+        </typeExtension>
+      </extension>
+    </attributes>
+    <attributes uuid="999f594a-831f-425d-b6f6-677ad59bfd0d">
+      <name>БалыРасход</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>Number</type>
+          </types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>2</scale>
+          </numberQualifiers>
+        </typeExtension>
+      </extension>
+    </attributes>
+    <attributes uuid="b99f69cf-af71-4351-aea4-84b4ad4e9624">
+      <name>Исполнитель</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Сотрудники</type>
+          </types>
+        </typeExtension>
+      </extension>
+    </attributes>
+    <attributes uuid="a707d472-d580-4963-97c4-e2e2eafc3383">
+      <name>КоличествоНаСкладе</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>Number</type>
+          </types>
+          <numberQualifiers>
+            <precision>16</precision>
+            <scale>2</scale>
           </numberQualifiers>
         </typeExtension>
       </extension>

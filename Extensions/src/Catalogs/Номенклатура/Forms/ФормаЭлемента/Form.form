@@ -2240,18 +2240,6 @@
         <items xsi:type="form:FormField">
           <name>Усушка_Потери</name>
           <id>870</id>
-          <title>
-            <key>ru</key>
-            <value>% усушки</value>
-          </title>
-          <title>
-            <key>ka</key>
-            <value>შემცირების %</value>
-          </title>
-          <title>
-            <key>en</key>
-            <value>Drying %</value>
-          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2292,18 +2280,6 @@
         <items xsi:type="form:FormField">
           <name>Усушка_СписаниеНаПотери</name>
           <id>873</id>
-          <title>
-            <key>ru</key>
-            <value>Счет учета потерь</value>
-          </title>
-          <title>
-            <key>ka</key>
-            <value>ზარალის ჩამოწერა ანგარიში</value>
-          </title>
-          <title>
-            <key>en</key>
-            <value>Account of losses</value>
-          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -3825,6 +3801,59 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
+          <name>СрокГодности</name>
+          <id>882</id>
+          <title>
+            <key>ru</key>
+            <value>Срок годности, дней</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ვარგისიანობის ვადა, დღის</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Shelflife, days</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.СрокГодности</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>СрокГодностиРасширеннаяПодсказка</name>
+            <id>888</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СрокГодностиКонтекстноеМеню</name>
+            <id>887</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <choiceButton>true</choiceButton>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
           <name>Ячейка</name>
           <id>45</id>
           <title>
@@ -4324,6 +4353,39 @@
         <contextMenu>
           <name>НеактивенКонтекстноеМеню</name>
           <id>849</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ВыгружатьВВесы</name>
+        <id>879</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.ВыгружатьВВесы</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ВыгружатьВВесыРасширеннаяПодсказка</name>
+          <id>886</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВыгружатьВВесыКонтекстноеМеню</name>
+          <id>885</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>

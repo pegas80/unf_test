@@ -2039,6 +2039,10 @@
           <items xsi:type="form:Button">
             <name>УпорядочитьПоАртикулуУбывание</name>
             <id>2500</id>
+            <title>
+              <key>ka</key>
+              <value>არტიკულების კლებადობის მიხედვით სორტირება</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2064,6 +2068,10 @@
           <items xsi:type="form:Button">
             <name>УпорядочитьПоАртикулуВозрастание</name>
             <id>2502</id>
+            <title>
+              <key>ka</key>
+              <value>არტიკულების ზრდადობის მიხედვით სორტირება</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2094,6 +2102,14 @@
           <title>
             <key>ru</key>
             <value>Упорядочить по артикулу</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>არტიკულების მიხედვით სორტირება</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Sort by SKU</value>
           </title>
           <toolTip>
             <key>ru</key>
@@ -4798,6 +4814,46 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыИсполнитель</name>
+          <id>2516</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Запасы.Исполнитель</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗапасыИсполнительРасширеннаяПодсказка</name>
+            <id>2518</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыИсполнительКонтекстноеМеню</name>
+            <id>2517</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
         </items>
         <commandBarLocation>None</commandBarLocation>
         <autoCommandBar>
