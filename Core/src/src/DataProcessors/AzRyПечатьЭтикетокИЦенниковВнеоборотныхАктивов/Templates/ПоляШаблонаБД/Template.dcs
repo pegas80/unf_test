@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнеоборотныеАктивы</dataPath>
+			<field>ВнеоборотныеАктивы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Имущество</dataPath>
+			<field>Имущество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имущество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущееВремя</dataPath>
+			<field>ТекущееВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее время</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВнеоборотныеАктивы.Ссылка КАК Имущество
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	Справочник.ВнеоборотныеАктивы КАК ВнеоборотныеАктивы
+ГДЕ
+	НЕ ВнеоборотныеАктивы.ПометкаУдаления
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Штрихкоды.ВнеоборотныеАктивы КАК Имущество,
+	Штрихкоды.Штрихкод КАК Штрихкод
+ПОМЕСТИТЬ ШтрихкодыНоменклатуры
+ИЗ
+	РегистрСведений.AzRyШтрихкодыВнеоборотныеАктивы КАК Штрихкоды
+ГДЕ
+	Штрихкоды.ВнеоборотныеАктивы В
+			(ВЫБРАТЬ
+				ИсходныеДанные.Имущество
+			ИЗ
+				ИсходныеДанные)
+{ГДЕ
+	Штрихкоды.ВнеоборотныеАктивы.*}
+
+СГРУППИРОВАТЬ ПО
+	Штрихкоды.ВнеоборотныеАктивы,
+	Штрихкоды.Штрихкод
+
+ИНДЕКСИРОВАТЬ ПО
+	Имущество
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходныеДанныеПоследнийЗапрос.Имущество КАК Имущество,
+	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
+	МАКСИМУМ(1) КАК Количество,
+	МАКСИМУМ(&amp;ТекущееВремя) КАК ТекущееВремя
+{ВЫБРАТЬ
+	Имущество.*,
+	Штрихкод,
+	Количество,
+	ТекущееВремя}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
+		{ЛЕВОЕ СОЕДИНЕНИЕ ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ИсходныеДанныеПоследнийЗапрос.Имущество = ШтрихкодыНоменклатуры.Имущество}
+{ГДЕ
+	ИсходныеДанныеПоследнийЗапрос.Имущество.* КАК Имущество,
+	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод}
+
+СГРУППИРОВАТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Имущество,
+	ШтрихкодыНоменклатуры.Штрихкод
+
+УПОРЯДОЧИТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Имущество.Наименование</query>
+	</dataSet>
+	<parameter>
+		<name>ТекущееВремя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущее время</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ძირითადი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Main</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Имущество</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВнеоборотныеАктивы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Только со штрихкодом</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТекущееВремя</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
