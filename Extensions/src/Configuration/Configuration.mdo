@@ -24,7 +24,7 @@
   <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="dc51a752-51a8-44aa-a96f-1ec30c886cf3"/>
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="91ceed6a-f595-4f24-9ca9-4458afb6067b"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="f9cbbc40-8af9-41dd-9b78-427b2d29b1e7"/>
-  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="94e7f4d4-79cf-4b27-a0ca-22b2d04cdd9b"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="f3a0bfbc-d5f0-42d1-ac6f-cb0d27f5b88c"/>
   <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
   <namePrefix>РасшAzRy_</namePrefix>
   <configurationExtensionCompatibilityMode>8.3.12</configurationExtensionCompatibilityMode>
@@ -56,6 +56,8 @@
   <subsystems>Subsystem.ЗарплатаИПерсонал</subsystems>
   <subsystems>Subsystem.AzRyЮрист</subsystems>
   <subsystems>Subsystem.AzRyПроизводство</subsystems>
+  <subsystems>Subsystem.HR</subsystems>
+  <subsystems>Subsystem.МаркетингИПродажи</subsystems>
   <styleItems>StyleItem.ИтогиФонГруппы</styleItems>
   <styleItems>StyleItem.ТекстВторостепеннойНадписи</styleItems>
   <styleItems>StyleItem.ВыполненноеЗадание</styleItems>
@@ -139,6 +141,9 @@
   <commonPictures>CommonPicture.ТележкаПустая</commonPictures>
   <commonPictures>CommonPicture.Папки</commonPictures>
   <commonPictures>CommonPicture.ФорматExcel</commonPictures>
+  <commonPictures>CommonPicture.Предупреждение32</commonPictures>
+  <commonPictures>CommonPicture.ПоказатьТолькоВыбранныеРоли</commonPictures>
+  <commonPictures>CommonPicture.Предупреждение</commonPictures>
   <sessionParameters>SessionParameter.AzRyОрганиация</sessionParameters>
   <roles>Role.БазовыеПрава</roles>
   <roles>Role.АдминистраторСистемы</roles>
@@ -149,6 +154,7 @@
   <roles>Role.ДобавлениеИзменениеПодсистемыЗакупки</roles>
   <roles>Role.AzRyЮрист</roles>
   <roles>Role.ЧтениеДокументовПоБанкуИКассе</roles>
+  <roles>Role.AzRyHR</roles>
   <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <commonModules>CommonModule.СтандартныеПодсистемыПовтИсп</commonModules>
   <commonModules>CommonModule.ЗаполнениеОбъектовУНФ</commonModules>
@@ -159,6 +165,7 @@
   <commonModules>CommonModule.СтандартныеПодсистемыСервер</commonModules>
   <commonModules>CommonModule.ОтчетыУНФ</commonModules>
   <commonModules>CommonModule.ДатыЗапретаИзмененияПереопределяемый</commonModules>
+  <commonModules>CommonModule.AzRyFunctions</commonModules>
   <commonAttributes>CommonAttribute.AzRyДокументЗагруженИзДругойБазыРедактированиеЗапрешено</commonAttributes>
   <commonAttributes>CommonAttribute.AzRyВычислитьКурсовуюРазницу</commonAttributes>
   <commonAttributes>CommonAttribute.ЗапретРедактированияДокументов</commonAttributes>
@@ -194,6 +201,8 @@
   <definedTypes>DefinedType.Вес</definedTypes>
   <definedTypes>DefinedType.ОснованияЭлектронныхДокументов</definedTypes>
   <definedTypes>DefinedType.GTIN</definedTypes>
+  <definedTypes>DefinedType.ФизическоеЛицо</definedTypes>
+  <definedTypes>DefinedType.Подразделение</definedTypes>
   <commonCommands>CommonCommand.ОтчетыОбъекта</commonCommands>
   <commonCommands>CommonCommand.СтруктураПодчиненности</commonCommands>
   <commonCommands>CommonCommand.ОтчетПоДвижениям</commonCommands>
@@ -594,6 +603,8 @@
   <dataProcessors>DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</dataProcessors>
   <dataProcessors>DataProcessor.СдвигГраницыИтогов</dataProcessors>
   <dataProcessors>DataProcessor.AzRyJiraИЗарплата</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyПечатьЭтикетокИЦенниковВнеоборотныхАктивов</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyПриИзмененийОстатковЗапасаУведомитьВладельцаСклада</dataProcessors>
   <informationRegisters>InformationRegister.УправлениеЗапасами</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
@@ -618,6 +629,8 @@
   <informationRegisters>InformationRegister.СтатусыДокументовВИнтернетБанке</informationRegisters>
   <informationRegisters>InformationRegister.УИДДокументовВИнтернетБанке</informationRegisters>
   <informationRegisters>InformationRegister.СчетаРасходыДляРасчетаРетроБонуси</informationRegisters>
+  <informationRegisters>InformationRegister.ПлановыеНачисленияИУдержания</informationRegisters>
+  <informationRegisters>InformationRegister.Сотрудники</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ДоходыИРасходы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Запасы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗапасыНаСкладах</accumulationRegisters>
@@ -640,6 +653,7 @@
   <accumulationRegisters>AccumulationRegister.ЗаказыНаПроизводство</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.АналитикаДоходовИРасходов</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
+  <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.НастройкиПользователей</chartsOfCharacteristicTypes>
   <chartsOfAccounts>ChartOfAccounts.Управленческий</chartsOfAccounts>
   <chartsOfAccounts>ChartOfAccounts.Хозрасчетный</chartsOfAccounts>
   <accountingRegisters>AccountingRegister.Хозрасчетный</accountingRegisters>
