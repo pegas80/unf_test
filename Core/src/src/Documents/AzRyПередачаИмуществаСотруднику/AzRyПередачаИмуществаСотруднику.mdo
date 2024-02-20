@@ -69,6 +69,8 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.AzRyПередачаИмуществаСотруднику.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.AzRyПередачаИмуществаСотруднику.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.AzRyПередачаИмуществаСотруднику</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="b648435a-b7a9-49ab-b8f7-51ba1e4d1477">
@@ -110,37 +112,144 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="124dd32a-059f-4a06-9c06-e485b92bcda0">
-    <name>Автор</name>
+  <attributes uuid="cad2dff7-e42e-4659-b65d-9e2c3d78d141">
+    <name>Сотрудник</name>
     <synonym>
       <key>ru</key>
-      <value>Автор</value>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3fe44090-7f43-4351-aafb-4747a7f3662a">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>ავტორი</value>
+      <value>ოპერაცია</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Author</value>
+      <value>Operation</value>
     </synonym>
     <type>
-      <types>CatalogRef.Пользователи</types>
+      <types>EnumRef.AzRyВидыОперацийПередачаИмуществаСотруднику</types>
     </type>
     <toolTip>
       <key>ru</key>
-      <value>Пользователь, создавший документ</value>
+      <value>Вид операции документа</value>
     </toolTip>
     <toolTip>
       <key>ka</key>
-      <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+      <value>დოკუმენტის ოპერაციის ტიპი</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Пользователь, создавший документ</value>
+      <value>Вид операции документа</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыОперацийПриходнаяНакладная.EnumValue.ПоступлениеОтПоставщика</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ca5967a9-6990-4c08-845e-bb5898b10fb2">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საწყობი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a444e8cb-557c-4282-93bf-44f3fdaea1ea">
+    <name>IT</name>
+    <synonym>
+      <key>ru</key>
+      <value>IT</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>IT</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>IT</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9d7df3b6-418f-4bb9-ae59-3293b19e22f8">
+    <name>HumanResources</name>
+    <synonym>
+      <key>ru</key>
+      <value>HR</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>HR</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>HR</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b29d3980-5eb5-4fe7-adaf-f930334a045c">
+    <name>ЗаведующийПоСкладу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заведующий по складу</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საწყობზე პასუხისმგებელი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -181,106 +290,37 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="9d7df3b6-418f-4bb9-ae59-3293b19e22f8">
-    <name>HumanResources</name>
+  <attributes uuid="124dd32a-059f-4a06-9c06-e485b92bcda0">
+    <name>Автор</name>
     <synonym>
       <key>ru</key>
-      <value>HR</value>
+      <value>Автор</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>HR</value>
+      <value>ავტორი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>HR</value>
+      <value>Author</value>
     </synonym>
     <type>
-      <types>CatalogRef.Сотрудники</types>
+      <types>CatalogRef.Пользователи</types>
     </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="a444e8cb-557c-4282-93bf-44f3fdaea1ea">
-    <name>IT</name>
-    <synonym>
+    <toolTip>
       <key>ru</key>
-      <value>IT</value>
-    </synonym>
-    <synonym>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
       <key>ka</key>
-      <value>IT</value>
-    </synonym>
-    <synonym>
+      <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
       <key>en</key>
-      <value>IT</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Сотрудники</types>
-    </type>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="b29d3980-5eb5-4fe7-adaf-f930334a045c">
-    <name>ЗаведующийПоСкладу</name>
-    <synonym>
-      <key>ru</key>
-      <value>Заведующий по складу</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>საწყობზე პასუხისმგებელი</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Сотрудники</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="ca5967a9-6990-4c08-845e-bb5898b10fb2">
-    <name>Склад</name>
-    <synonym>
-      <key>ru</key>
-      <value>Склад</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>საწყობი</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.СтруктурныеЕдиницы</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="cad2dff7-e42e-4659-b65d-9e2c3d78d141">
-    <name>Сотрудник</name>
-    <synonym>
-      <key>ru</key>
-      <value>Сотрудник</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Сотрудники</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -290,6 +330,15 @@
     <synonym>
       <key>ru</key>
       <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="af22a12d-1d65-455f-aeae-30057c8a3070">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="19f0f2e6-3f35-44c9-bfbe-1e739026ca16">
+  <producedTypes>
+    <selectionType typeId="d762b415-9a2e-40bc-a608-66e8c7afccf5" valueTypeId="fdb4d499-066c-4bb2-b2b0-c368b5cd41ea"/>
+    <listType typeId="dd4f3937-3f44-421e-b804-7cf9e59261de" valueTypeId="ac36f847-d918-481c-9f80-b1be547eb195"/>
+    <managerType typeId="2290764e-34ac-4a3a-851d-54275763ba74" valueTypeId="13b66da4-dfd1-4ab5-8b31-edcd525f46d2"/>
+    <recordSetType typeId="d293e180-dac1-4808-a27e-6b0940db360f" valueTypeId="0eabc701-cb9d-43af-8306-f4fde574b662"/>
+    <recordKeyType typeId="e19f0b4a-e225-4495-a9a4-5d6b2f949cf3" valueTypeId="cb493eb7-82da-4377-8b2a-968f78fd9675"/>
+    <recordType typeId="6309bcb3-a8eb-4081-bca5-e746e2b56a2c" valueTypeId="e51f6bd3-56d5-4717-9945-ed7bfe0995f5"/>
+  </producedTypes>
+  <name>AzRyПередачаИмуществаСотруднику</name>
+  <synonym>
+    <key>ru</key>
+    <value>(AzRy) Передача имущества сотруднику</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>(AzRy) ძირითადი საშუალების გადაცემა თანამშრომლისთვის</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="f11cba1b-210e-4115-a0ce-cc43a3dca78e">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="39e2bb5c-4ec5-45f4-aea2-7a41d0de517f">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="8d437dfb-1ea7-40a0-9a21-b060a145a35e">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ავტორი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Author</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>მომხმარებელი, რომელმაც შექმნა დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="50cb695b-ea34-467e-be3e-633b9b5423dc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Собственная организация, от которой производится продажа имущества</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>საკუთარი ორგანიზაცია, რომელიც ახორციელებს ქონების გაყიდვას</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Own organization, which is made from the sale of property</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5290c137-3cb4-4543-b7f0-d09643ce954a">
+    <name>ВнеоборотныйАктив</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имущество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქონება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Propety</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнеоборотныеАктивы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Имущество, передаваемое покупателю</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ქონება, რომელიც გადაეცემა მყიდველს</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Property transferred to the buyer</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6b9e53c7-5d5a-4860-bca9-fcda2856c61b">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8e82bace-73e9-45cf-9e49-f862874e68b4">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ოპერაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Operation</value>
+    </synonym>
+    <type>
+      <types>EnumRef.AzRyВидыОперацийПередачаИмуществаСотруднику</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид операции документа</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დოკუმენტის ოპერაციის ტიპი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Вид операции документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="49149f0b-b2c7-4c6d-9d13-2971a6dc60e0">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საწყობი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="73bc6206-45d0-4200-9efe-d8571563071c">
+    <name>IT</name>
+    <synonym>
+      <key>ru</key>
+      <value>IT</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>IT</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>IT</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="640c547f-eac4-44a7-97a2-5a12eb8f120c">
+    <name>HumanResources</name>
+    <synonym>
+      <key>ru</key>
+      <value>HR</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>HR</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>HR</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="34f46e84-a2e6-4138-9be3-03320de39953">
+    <name>ЗаведующийПоСкладу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заведующий по складу</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საწყობზე პასუხისმგებელი</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
