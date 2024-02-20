@@ -1917,9 +1917,6 @@
             <visible>true</visible>
             <enabled>false</enabled>
             <userVisible/>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.НачисленияУдержания.ТипСчета</segments>
-            </dataPath>
             <toolTip>
               <key>ru</key>
               <value>Реквизит управления условным оформлением</value>
@@ -5592,7 +5589,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.Напомнить</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -5664,7 +5660,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетПоДвижениям</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -5693,7 +5688,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ЗаполнениеОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -5721,7 +5715,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетыОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -5785,7 +5778,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.НачислениеЗарплаты</types>
     </valueType>
@@ -5800,86 +5793,6 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <savedData>true</savedData>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.НачисленияУдержания</segments>
-      </tablePath>
-      <columns>
-        <name>ТипСчета</name>
-        <title>
-          <key>ru</key>
-          <value>Тип счета</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ანგარიშის ტიპი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>account type</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>EnumRef.ТипыСчетов</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ЗависитОтДней</name>
-        <title>
-          <key>ru</key>
-          <value>Зависит от дней</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>Зависит от дней</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Зависит от дней</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ЗависитОтЧасов</name>
-        <title>
-          <key>ru</key>
-          <value>Зависит от часов</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>Зависит от часов</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Зависит от часов</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
   </attributes>
   <attributes>
     <name>ДатаДокумента</name>
@@ -5895,7 +5808,7 @@
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers>
@@ -5923,7 +5836,7 @@
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -5948,7 +5861,7 @@
       <key>en</key>
       <value>Document Currency</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -5973,7 +5886,7 @@
       <key>en</key>
       <value>credited with</value>
     </title>
-    <id>9</id>
+    <id>1000005</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6002,7 +5915,7 @@
       <key>en</key>
       <value>retained</value>
     </title>
-    <id>10</id>
+    <id>1000006</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6031,7 +5944,7 @@
       <key>en</key>
       <value>Total</value>
     </title>
-    <id>11</id>
+    <id>1000007</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6060,7 +5973,7 @@
       <key>en</key>
       <value>Разрешено проведение</value>
     </title>
-    <id>6</id>
+    <id>1000008</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6085,7 +5998,7 @@
       <key>en</key>
       <value>Period</value>
     </title>
-    <id>8</id>
+    <id>1000009</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -6113,7 +6026,7 @@
       <key>en</key>
       <value>extinguished</value>
     </title>
-    <id>12</id>
+    <id>1000010</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6142,7 +6055,7 @@
       <key>en</key>
       <value>contributions</value>
     </title>
-    <id>13</id>
+    <id>1000011</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6172,7 +6085,7 @@
       <key>en</key>
       <value>Count without fees</value>
     </title>
-    <id>14</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6197,7 +6110,7 @@
       <key>en</key>
       <value>Carry out performance measurements</value>
     </title>
-    <id>15</id>
+    <id>1000013</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6218,7 +6131,7 @@
       <key>en</key>
       <value>Exhaust employee</value>
     </title>
-    <id>16</id>
+    <id>1000014</id>
     <valueType>
       <types>CatalogRef.Сотрудники</types>
     </valueType>
@@ -6239,7 +6152,7 @@
       <key>en</key>
       <value>Использовать только регламентированный план счетов</value>
     </title>
-    <id>17</id>
+    <id>1000015</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6260,7 +6173,7 @@
       <key>ka</key>
       <value>გადასანაწილებელი საშემოსავლო</value>
     </title>
-    <id>18</id>
+    <id>1000016</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -6327,7 +6240,7 @@
       <key>ru</key>
       <value>Учет по проектам</value>
     </title>
-    <id>19</id>
+    <id>1000017</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6352,7 +6265,7 @@
       <key>en</key>
       <value>Recount</value>
     </title>
-    <id>2</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Рассчитать</value>
@@ -6386,7 +6299,7 @@
       <key>en</key>
       <value>Fill in and calculate</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить</value>

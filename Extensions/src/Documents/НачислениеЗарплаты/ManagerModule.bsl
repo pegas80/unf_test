@@ -174,6 +174,9 @@
 	// +++ { AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
 	|	,НачислениеЗарплатыНачисленияУдержания.AzRyDivision КАК AzRyDivision
 	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
+	// +++ { AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
+	|	,НачислениеЗарплатыНачисленияУдержания.AzRyJiraProject КАК AzRyПроект
+	// +++ } AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
 	|ПОМЕСТИТЬ ТаблицаНачисления
 	|ИЗ
 	|	Документ.НачислениеЗарплаты.НачисленияУдержания КАК НачислениеЗарплатыНачисленияУдержания
@@ -240,6 +243,9 @@
 	// +++ { AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
 	|	,НЕОПРЕДЕЛЕНО
 	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
+	// +++ { AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
+	|	,НЕОПРЕДЕЛЕНО
+	// +++ } AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
 	|ИЗ
 	|	Документ.НачислениеЗарплаты.НалогиНаДоходы КАК НачислениеЗарплатыНачисленияУдержания
 	|		ЛЕВОЕ СОЕДИНЕНИЕ КурсыВалютУчета КАК КурсыВалютУчета
@@ -779,7 +785,10 @@
 	|	ВЫРАЗИТЬ(&НачислениеЗарплаты КАК СТРОКА(100)) КАК СодержаниеПроводки
 	// +++ { AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
 	|	,НачислениеЗарплатыНачисленияУдержания.AzRyDivision КАК AzRyDivision
-	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili	
+	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
+	// +++ { AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
+	|	,НачислениеЗарплатыНачисленияУдержания.AzRyПроект КАК AzRyПроект
+	// +++ } AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili	
 	|ИЗ
 	|	ТаблицаНачисления КАК НачислениеЗарплатыНачисленияУдержания
 	|ГДЕ
@@ -860,7 +869,10 @@
 	|	ВЫРАЗИТЬ(&НачислениеВзносов КАК СТРОКА(100))
 	// +++ { AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
 	|	,НЕОПРЕДЕЛЕНО
-	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili	
+	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
+	// +++ { AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
+	|	,НЕОПРЕДЕЛЕНО
+	// +++ } AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili	
 	|ИЗ
 	|	ТаблицаВзносов КАК НачислениеЗарплатыНачисленияВзносы
 	|ГДЕ
@@ -941,6 +953,9 @@
 	// +++ { AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
 	|	,НачислениеЗарплатыНачисленияУдержания.AzRyDivision
 	// +++ } AzRy - [04.08.2022] - Jira: - Developer: George Mamulashvili
+	// +++ { AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili
+	|	,НачислениеЗарплатыНачисленияУдержания.AzRyПроект
+	// +++ } AzRy - [19.02.2024] - Jira: - Developer: George Mamulashvili	
 	|ИЗ
 	|	ТаблицаНачисления КАК НачислениеЗарплатыНачисленияУдержания
 	|ГДЕ
