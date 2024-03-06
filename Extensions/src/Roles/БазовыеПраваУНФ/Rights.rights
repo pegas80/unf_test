@@ -235,6 +235,34 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ВводНачальныхОстатков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Док ИЗ Документ.ВводНачальныхОстатков КАК Док, (ВЫБРАТЬ
+	МАКСИМУМ(НастройкаРЛС.ОграниченияПоОрганизациям) КАК ОграниченияПоОрганизациям
+ИЗ
+	Справочник.AzRyНастройкаРЛС КАК НастройкаРЛС
+ГДЕ
+	НастройкаРЛС.Пользователь = &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+ГДЕ ВЫБОР
+			КОГДА ВложенныйЗапрос.ОграниченияПоОрганизациям
+				ТОГДА Док.Организация В
+						(ВЫБРАТЬ
+							НастройкаРЛСОрганизации.Организация
+						ИЗ
+							Справочник.AzRyНастройкаРЛС.Организации КАК НастройкаРЛСОрганизации
+						ГДЕ
+							НастройкаРЛСОрганизации.Ссылка.Пользователь = &amp;ТекущийПользователь
+						СГРУППИРОВАТЬ ПО
+							НастройкаРЛСОрганизации.Организация)
+			ИНАЧЕ 1 = 1
+		КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.БольшеВозможностейРаботы</name>
 		<right>
 			<name>View</name>
@@ -249,6 +277,33 @@
 		</right>
 		<right>
 			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.РасширениеAzRy</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
 			<value>true</value>
 		</right>
 	</object>
