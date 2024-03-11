@@ -291,6 +291,25 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </attributes>
+  <attributes uuid="ac26ed33-fb32-460c-bd52-bc2399871e91">
+    <name>ДопИнфоКоличествоНовыхJiraProjects</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество новых Jira Projects</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ახალი ჯირა პროექტების რაოდენობა:</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
   <tabularSections uuid="6345f11e-a715-4eeb-8a4b-11e493efde23">
     <producedTypes>
       <objectType typeId="0ad60f0b-0a7e-403b-a479-c25ec37e11c9" valueTypeId="9c8f5e2f-c98c-46e0-bc4c-65b03cb9cb70"/>
@@ -776,6 +795,50 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
+    <attributes uuid="eb707f4f-7c27-4cd4-adbd-471d196d00da">
+      <name>wr_issue_id</name>
+      <synonym>
+        <key>ru</key>
+        <value>Issue</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Count</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2e273fe4-5df7-4da2-9a8d-5c0f21c5754c">
+      <name>wr_jiraproject_id</name>
+      <synonym>
+        <key>ru</key>
+        <value>Jira Project</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Jira Project</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Jira Project</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
     <attributes uuid="123f923b-a55f-4f09-8b26-b31bf43b42d0">
       <name>Сотрудник</name>
       <synonym>
@@ -898,6 +961,48 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
+    <attributes uuid="fb3204e6-1ee9-42a1-bb73-e8129556d1af">
+      <name>JiraProject</name>
+      <synonym>
+        <key>ru</key>
+        <value>Jira Project</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Jira Project</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Jira Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyJiraProject</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4bbd2520-f1ee-4a8c-a334-5a9ec147bb61">
+      <name>JiraProjectСоот</name>
+      <synonym>
+        <key>ru</key>
+        <value>Jira Project Соот</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Jira Project Соот</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Jira Project Соот</value>
+      </synonym>
+      <type>
+        <types>AnyRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="a7351917-bfe1-440f-abdb-dc0df7617ad2">
     <producedTypes>
@@ -928,6 +1033,263 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="997b6eb1-c161-40ec-8ded-138030d89e84">
+    <producedTypes>
+      <objectType typeId="45a0cd74-d929-4396-993d-ee9c7a6817a3" valueTypeId="3fbf0440-2719-4934-aa8d-94cd6592f9b8"/>
+      <rowType typeId="ee0c36bf-6243-47cc-98dc-2691b94cefba" valueTypeId="ac562eec-bd07-4d44-9567-147f8e1d3cdb"/>
+    </producedTypes>
+    <name>JiraProjects</name>
+    <synonym>
+      <key>ru</key>
+      <value>Jira Projects</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Jira Projects</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Jira Projects</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="9a100d16-e238-4b26-a403-9955cf72d3bc">
+      <name>Новый</name>
+      <synonym>
+        <key>ru</key>
+        <value>Новый</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="960148b9-716b-42ef-9d84-165373feb882">
+      <name>Измененный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Измененный</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="69299cc7-e318-4449-9aa1-12a348742bee">
+      <name>id</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2ce47749-e8c9-4aed-9bd0-e717b900bb57">
+      <name>key</name>
+      <synonym>
+        <key>ru</key>
+        <value>Key</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Key</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Key</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="e0c5af22-737c-4b18-9c37-cef0b576a524">
+      <name>_description</name>
+      <synonym>
+        <key>ru</key>
+        <value>Description</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Description</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Description</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="a1be5c7d-4e2a-4c2b-a4a8-218c1c186c16">
+      <name>lead</name>
+      <synonym>
+        <key>ru</key>
+        <value>Lead</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Lead</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Lead</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="12932fde-602e-4792-9fd0-2c2a41b6c5cc">
+      <name>leadId</name>
+      <synonym>
+        <key>ru</key>
+        <value>Lead ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Lead ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Lead ID</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="94bde314-e7b7-4124-8f42-8d8b1c845c41">
+      <name>active</name>
+      <synonym>
+        <key>ru</key>
+        <value>Active</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Active</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Active</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="43184f72-dea6-43ef-8ed1-ab8381222120">
+      <name>name</name>
+      <synonym>
+        <key>ru</key>
+        <value>Name</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Name</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Name</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="c00ad6f2-f39b-4049-aecc-bcbdb0d9e0ae">
+      <name>projectTypeKey</name>
+      <synonym>
+        <key>ru</key>
+        <value>Project type key</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Project type key</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project type key</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="6c305120-9708-4053-bad8-3b46ac00dd56">
+      <name>AzRyJiraProject</name>
+      <synonym>
+        <key>ru</key>
+        <value>(AzRy) Jira Project</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>(AzRy) Jira Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.AzRyJiraProject</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <createOnInput>Use</createOnInput>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
   </tabularSections>
