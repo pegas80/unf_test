@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b7f9366-cd97-4352-8dd1-27da574eb418">
+  <name>AzRyЗапретНаУдаление</name>
+  <synonym>
+    <key>ru</key>
+    <value>(AzRy) Запрет на удаление</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>(AzRy) წაშლაზე მონიშვნის აკრძალვა</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>(AzRy) Запрет на удаление</value>
+  </synonym>
+  <source>
+    <types>ChartOfAccountsObject.Хозрасчетный</types>
+    <types>ChartOfAccountsObject.Управленческий</types>
+    <types>ChartOfAccountsObject</types>
+    <types>CatalogObject</types>
+    <types>DocumentObject</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.AzRyОбщегоНазначения.AzRyЗапретНаУдалениеПриЗаписи</handler>
+</mdclass:EventSubscription>

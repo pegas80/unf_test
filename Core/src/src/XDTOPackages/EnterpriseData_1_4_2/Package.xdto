@@ -849,7 +849,7 @@
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="18"/>
 		</property>
 		<property name="ПоказательДаты" lowerBound="0" nillable="true">
-			<typeDef xmlns:d4p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" xsi:type="ValueType" variety="Union" memberTypes="d4p1:ТипДатаФНС d4p1:ТипНоль"/>
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4}ТипДатаФНС {http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4}ТипНоль"/>
 		</property>
 		<property name="ПоказательТипа" lowerBound="0" nillable="true">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2"/>
@@ -875,7 +875,7 @@
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="18"/>
 		</property>
 		<property name="ПоказательДаты" nillable="true">
-			<typeDef xmlns:d4p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" xsi:type="ValueType" variety="Union" memberTypes="d4p1:ТипДатаФНС d4p1:ТипНоль"/>
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4}ТипДатаФНС {http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4}ТипНоль"/>
 		</property>
 		<property name="ПоказательТипа" nillable="true">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2"/>
@@ -4587,14 +4587,14 @@
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="БанковскийСчетКонтрагента" type="d3p1:КлючевыеСвойстваБанковскийСчет" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="РасшифровкаПлатежа" type="d3p1:РасшифровкаПлатежаПрочихДоходов"/>
 	</objectType>
-	<objectType name="Документ.ПБДСПрочееПоступление" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.ПБДСПрочееПоступление" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваПБДСПрочееПоступление"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваПБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="БанковскийСчетКонтрагента" type="d3p1:КлючевыеСвойстваБанковскийСчет" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="РасшифровкаПлатежа" type="d3p1:РасшифровкаПлатежаПрочее"/>
 	</objectType>
-	<objectType name="Документ.ПБДСПоПлатежнымКартам" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.ПБДСПоПлатежнымКартам" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваПБДСПоПлатежнымКартам"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваПБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент" lowerBound="0"/>
@@ -4615,7 +4615,7 @@
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КурсВзаиморасчетов" type="d3p1:ТипКурс" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КратностьВзаиморасчетов" type="d3p1:ТипКратность" lowerBound="0"/>
 	</objectType>
-	<objectType name="Документ.ПБДСРасчетыСКонтрагентами" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.ПБДСРасчетыСКонтрагентами" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваПБДСРасчетыСКонтрагентами"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваПБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ВидРасчетов" type="d3p1:ВидыРасчетовСКонтрагентами"/>
@@ -5295,12 +5295,12 @@
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="РасшифровкаПлатежа" type="d3p1:РасшифровкаПлатежаКонвертацииВалюты"/>
 	</objectType>
-	<objectType name="Документ.СБДСПереводНаДругойСчет" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.СБДСПереводНаДругойСчет" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваСБДСПереводНаДругойСчет"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваСБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="СтатьяДДС" type="d3p1:КлючевыеСвойстваСтатьяДДС" lowerBound="0"/>
 	</objectType>
-	<objectType name="Документ.СБДСПеречислениеЗаработнойПлаты" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.СБДСПеречислениеЗаработнойПлаты" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваСБДСПеречислениеЗаработнойПлаты"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваСБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент" lowerBound="0"/>
@@ -5319,7 +5319,7 @@
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="РасшифровкаПлатежа" type="d3p1:РасшифровкаПлатежаПрочее"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ВидОперации" type="d3p1:ВидыОперацийСБДСПрочее"/>
 	</objectType>
-	<objectType name="Документ.СБДСПлатежиВБюджет" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.СБДСПлатежиВБюджет" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваСБДСПлатежиВБюджет"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваСБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ПлатежиВБюджет" type="d3p1:ОбщиеСвойстваПлатежиВБюджет" lowerBound="0"/>
@@ -5332,7 +5332,7 @@
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент" lowerBound="0"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="РасшифровкаПлатежа" type="d3p1:РасшифровкаПлатежаПрочихРасходов"/>
 	</objectType>
-	<objectType name="Документ.СБДСРасчетыСКонтрагентами" open="true" sequenced="true">
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Документ.СБДСРасчетыСКонтрагентами" base="d2p1:Object" open="true" sequenced="true">
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="КлючевыеСвойства" type="d3p1:КлючевыеСвойстваСБДСРасчетыСКонтрагентами"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="ОбщиеДанные" type="d3p1:ОбщиеСвойстваСБДС"/>
 		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.4" name="Контрагент" type="d3p1:КлючевыеСвойстваКонтрагент"/>
