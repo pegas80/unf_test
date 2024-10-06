@@ -632,91 +632,6 @@
       <items xsi:type="form:FormGroup">
         <name>AzRyГруппаJiraCode</name>
         <id>576</id>
-        <items xsi:type="form:Decoration">
-          <name>AzRyГиперссылкаJira</name>
-          <id>578</id>
-          <title>
-            <key>ru</key>
-            <value>https://azrystudio.jira.com/browse/</value>
-          </title>
-          <title>
-            <key>ka</key>
-            <value>https://azrystudio.jira.com/browse/</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>AzRyГиперссылкаJiraРасширеннаяПодсказка</name>
-            <id>580</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>AzRyГиперссылкаJiraКонтекстноеМеню</name>
-            <id>579</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <handlers xsi:type="form:EventHandlerExtension">
-              <event>Click</event>
-              <name>РасшAzRy_ГиперссылкаJiraНажатиеПосле</name>
-              <callType>After</callType>
-            </handlers>
-            <hyperlink>true</hyperlink>
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
-          <name>AzRyJiraCode</name>
-          <id>581</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>1/0:d406d2bc-abe5-40f9-b69b-2a3606b96e15</segments>
-          </dataPath>
-          <titleLocation>None</titleLocation>
-          <extendedTooltip>
-            <name>AzRyJiraCodeРасширеннаяПодсказка</name>
-            <id>583</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>AzRyJiraCodeКонтекстноеМеню</name>
-            <id>582</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -724,7 +639,11 @@
         </userVisible>
         <title>
           <key>ru</key>
-          <value>Az ry группа jira code</value>
+          <value>(AzRy) Jira Code</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>(AzRy) Jira Code</value>
         </title>
         <toolTip>
           <key>ru</key>
@@ -745,6 +664,275 @@
           <group>HorizontalIfPossible</group>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>AzRyГруппаJira</name>
+        <id>587</id>
+        <items xsi:type="form:FormGroup">
+          <name>AzRyГрпJiraProject</name>
+          <id>589</id>
+          <items xsi:type="form:FormField">
+            <name>AzRyJiraProject</name>
+            <id>591</id>
+            <title>
+              <key>ru</key>
+              <value>(AzRy) Jira Project</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>(AzRy) Jira Project</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.AzRyJiraProject</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <extendedTooltip>
+              <name>AzRyJiraProjectРасширеннаяПодсказка</name>
+              <id>593</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AzRyJiraProjectКонтекстноеМеню</name>
+              <id>592</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Project</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Project</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>(AzRy) Jira Project</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>(AzRy) Jira Project</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>AzRyГрпJiraProjectРасширеннаяПодсказка</name>
+            <id>590</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>true</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>AzRyГрпJiraCode</name>
+          <id>594</id>
+          <items xsi:type="form:Decoration">
+            <name>AzRyГиперссылкаJira</name>
+            <id>578</id>
+            <title>
+              <key>ru</key>
+              <value>https://azrystudio.jira.com/browse/</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>https://azrystudio.jira.com/browse/</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>AzRyГиперссылкаJiraРасширеннаяПодсказка</name>
+              <id>580</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AzRyГиперссылкаJiraКонтекстноеМеню</name>
+              <id>579</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <handlers xsi:type="form:EventHandlerExtension">
+                <event>Click</event>
+                <name>РасшAzRy_ГиперссылкаJiraНажатиеПосле</name>
+                <callType>After</callType>
+              </handlers>
+              <hyperlink>true</hyperlink>
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>AzRyJiraCode</name>
+            <id>581</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>1000001/0:d406d2bc-abe5-40f9-b69b-2a3606b96e15</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <extendedTooltip>
+              <name>AzRyJiraCodeРасширеннаяПодсказка</name>
+              <id>583</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AzRyJiraCodeКонтекстноеМеню</name>
+              <id>582</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>15</width>
+              <maxWidth>15</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Issue Key</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>Issue Key</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>(AzRy) Jira Code</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>(AzRy) Jira Code</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>AzRyГрпJiraCodeРасширеннаяПодсказка</name>
+            <id>595</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>true</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>(AzRy) JIRA</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>(AzRy) Группа JIRA</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>(AzRy) Группа JIRA</value>
+        </toolTip>
+        <toolTip>
+          <key>ka</key>
+          <value>(AzRy) ჯგუფი JIRA</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>AzRyГруппаJiraРасширеннаяПодсказка</name>
+          <id>588</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
@@ -1957,9 +2145,6 @@
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Запасы.Пометка</segments>
-          </dataPath>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
             <name>ЗапасыПометкаРасширеннаяПодсказка</name>
@@ -6122,7 +6307,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.ДополнительныеРасходы</types>
     </valueType>
@@ -6141,31 +6326,6 @@
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.Запасы</segments>
       </tablePath>
-      <columns>
-        <name>Пометка</name>
-        <title>
-          <key>ru</key>
-          <value>Пометка</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ნიშნული</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>remark</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -6182,7 +6342,7 @@
       <key>en</key>
       <value>Цены и валюта</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6208,7 +6368,7 @@
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -6233,7 +6393,7 @@
       <key>en</key>
       <value>The settlement currency</value>
     </title>
-    <id>2</id>
+    <id>1000004</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -6258,7 +6418,7 @@
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers/>
@@ -6284,7 +6444,7 @@
       <key>en</key>
       <value>Agreement</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <valueType>
       <types>CatalogRef.ДоговорыКонтрагентов</types>
     </valueType>
@@ -6309,7 +6469,7 @@
       <key>en</key>
       <value>Order</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <valueType>
       <types>DocumentRef.ЗаказПоставщику</types>
     </valueType>
@@ -6334,7 +6494,7 @@
       <key>en</key>
       <value>Counterparty</value>
     </title>
-    <id>9</id>
+    <id>1000008</id>
     <valueType>
       <types>CatalogRef.Контрагенты</types>
     </valueType>
@@ -6359,7 +6519,7 @@
       <key>en</key>
       <value>Кратность национальная валюта</value>
     </title>
-    <id>10</id>
+    <id>1000009</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6388,7 +6548,7 @@
       <key>en</key>
       <value>The course of the national currency</value>
     </title>
-    <id>11</id>
+    <id>1000010</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6418,7 +6578,7 @@
       <key>en</key>
       <value>National Currency</value>
     </title>
-    <id>12</id>
+    <id>1000011</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -6443,7 +6603,7 @@
       <key>en</key>
       <value>Учет валютных операций</value>
     </title>
-    <id>8</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6468,7 +6628,7 @@
       <key>en</key>
       <value>Разрешено проведение</value>
     </title>
-    <id>14</id>
+    <id>1000013</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6493,7 +6653,7 @@
       <key>en</key>
       <value>Счет-фактура</value>
     </title>
-    <id>16</id>
+    <id>1000014</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6519,7 +6679,7 @@
       <key>en</key>
       <value>Использовать подключаемое оборудование</value>
     </title>
-    <id>17</id>
+    <id>1000015</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6544,7 +6704,7 @@
       <key>en</key>
       <value>Контрагент вести расчеты по заказам</value>
     </title>
-    <id>19</id>
+    <id>1000016</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6569,7 +6729,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>22</id>
+    <id>1000017</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -6594,7 +6754,7 @@
       <key>en</key>
       <value>Value</value>
     </title>
-    <id>23</id>
+    <id>1000018</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -6617,7 +6777,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>24</id>
+    <id>1000019</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6643,7 +6803,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>25</id>
+    <id>1000020</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6669,7 +6829,7 @@
       <key>en</key>
       <value>Запасы резервная копия таблицы адрес</value>
     </title>
-    <id>26</id>
+    <id>1000021</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6695,7 +6855,7 @@
       <key>en</key>
       <value>Поддержка Google</value>
     </title>
-    <id>27</id>
+    <id>1000022</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -6718,7 +6878,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>28</id>
+    <id>1000023</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -6743,7 +6903,7 @@
       <key>en</key>
       <value>Пред ставка НДС</value>
     </title>
-    <id>29</id>
+    <id>1000024</id>
     <valueType>
       <types>CatalogRef.СтавкиНДС</types>
     </valueType>
@@ -6760,7 +6920,7 @@
       <key>ka</key>
       <value>Изменилась учитывать НДФЛ</value>
     </title>
-    <id>30</id>
+    <id>1000025</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6777,7 +6937,7 @@
       <key>ka</key>
       <value>Учитывать НДФЛ</value>
     </title>
-    <id>31</id>
+    <id>1000026</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6802,7 +6962,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Редактировать зачет предоплаты</value>
@@ -6839,7 +6999,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>5</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -6872,7 +7032,7 @@
       <key>en</key>
       <value>in count</value>
     </title>
-    <id>2</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Распределить услуги по количеству</value>
@@ -6905,7 +7065,7 @@
       <key>en</key>
       <value>the sum of</value>
     </title>
-    <id>6</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Распределить услуги по сумме</value>
@@ -6938,7 +7098,7 @@
       <key>en</key>
       <value>Inventories selection of documents</value>
     </title>
-    <id>10</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Запасы подбор по документам</value>
@@ -6971,7 +7131,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>3</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -7009,7 +7169,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>4</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -7046,7 +7206,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>7</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -7084,7 +7244,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>8</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -7121,7 +7281,7 @@
       <key>en</key>
       <value>Run</value>
     </title>
-    <id>12</id>
+    <id>1000010</id>
     <toolTip>
       <key>ru</key>
       <value>Выполнить</value>
@@ -7155,7 +7315,7 @@
       <key>en</key>
       <value>Edit</value>
     </title>
-    <id>13</id>
+    <id>1000011</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить строки таблицы</value>
@@ -7187,7 +7347,7 @@
       <key>en</key>
       <value>cancellation</value>
     </title>
-    <id>14</id>
+    <id>1000012</id>
     <toolTip>
       <key>ru</key>
       <value>Отменить все изменения</value>
@@ -7220,7 +7380,7 @@
       <key>en</key>
       <value>Unmark</value>
     </title>
-    <id>15</id>
+    <id>1000013</id>
     <toolTip>
       <key>ru</key>
       <value>Снять пометки</value>
@@ -7256,7 +7416,7 @@
       <key>en</key>
       <value>Установить пометки</value>
     </title>
-    <id>16</id>
+    <id>1000014</id>
     <toolTip>
       <key>ru</key>
       <value>Установить пометки</value>
@@ -7292,7 +7452,7 @@
       <key>en</key>
       <value>Сохранить документ как шаблон</value>
     </title>
-    <id>17</id>
+    <id>1000015</id>
     <toolTip>
       <key>ru</key>
       <value>Сохранить документ как шаблон</value>
@@ -7327,7 +7487,7 @@
       <key>en</key>
       <value>Заполнить фактуры</value>
     </title>
-    <id>9</id>
+    <id>1000016</id>
     <use>
       <common>true</common>
     </use>
@@ -7351,7 +7511,7 @@
       <key>en</key>
       <value>Добавить фактуры</value>
     </title>
-    <id>11</id>
+    <id>1000017</id>
     <use>
       <common>true</common>
     </use>
@@ -7375,7 +7535,7 @@
       <key>en</key>
       <value>по весу</value>
     </title>
-    <id>18</id>
+    <id>1000018</id>
     <toolTip>
       <key>ru</key>
       <value>Распределить услуги по количеству</value>
@@ -7405,7 +7565,7 @@
       <key>ka</key>
       <value>მოცულობით</value>
     </title>
-    <id>19</id>
+    <id>1000019</id>
     <toolTip>
       <key>ru</key>
       <value>Распределить услуги по количеству</value>
