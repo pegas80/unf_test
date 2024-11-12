@@ -1340,9 +1340,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>1000001/0:d406d2bc-abe5-40f9-b69b-2a3606b96e15</segments>
-            </dataPath>
             <titleLocation>None</titleLocation>
             <extendedTooltip>
               <name>AzRyJiraCodeРасширеннаяПодсказка</name>
@@ -15399,6 +15396,14 @@
     <commandBar/>
   </commandInterface>
   <extInfo xsi:type="form:DocumentFormExtInfo">
+    <handlers xsi:type="form:EventHandlerExtension">
+      <event>BeforeWrite</event>
+      <name>РасшAzRy_ПередЗаписьюПеред</name>
+    </handlers>
+    <handlers xsi:type="form:EventHandlerExtension">
+      <event>OnWriteAtServer</event>
+      <name>РасшAzRy_ПриЗаписиНаСервереПеред</name>
+    </handlers>
     <repostOnWrite>true</repostOnWrite>
   </extInfo>
 </form:Form>

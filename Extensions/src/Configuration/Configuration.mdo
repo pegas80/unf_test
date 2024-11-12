@@ -13,6 +13,7 @@
   <extension xsi:type="mdclassExtension:ConfigurationExtension">
     <defaultRunMode>Checked</defaultRunMode>
     <usePurposes>Checked</usePurposes>
+    <managedApplicationModule>Extended</managedApplicationModule>
     <sessionModule>Extended</sessionModule>
     <defaultLanguage>Checked</defaultLanguage>
     <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
@@ -51,12 +52,12 @@
     </extension>
     <languageCode>ka</languageCode>
   </languages>
-  <subsystems>Subsystem.AzRyВсеОбъекты</subsystems>
+  <subsystems>Subsystem.AzRyРасш_ВсеОбъекты</subsystems>
   <subsystems>Subsystem.БухгалтерскийУчет</subsystems>
   <subsystems>Subsystem.ЗарплатаИПерсонал</subsystems>
-  <subsystems>Subsystem.AzRyЮрист</subsystems>
-  <subsystems>Subsystem.AzRyПроизводство</subsystems>
-  <subsystems>Subsystem.HR</subsystems>
+  <subsystems>Subsystem.AzRyРасш_AzRyЮрист</subsystems>
+  <subsystems>Subsystem.AzRyРасш_AzRyПроизводство</subsystems>
+  <subsystems>Subsystem.AzRyРасш_HR</subsystems>
   <subsystems>Subsystem.МаркетингИПродажи</subsystems>
   <subsystems>Subsystem.ВнеоборотныеАктивы</subsystems>
   <subsystems>Subsystem.ДенежныеСредства</subsystems>
@@ -79,6 +80,12 @@
   <styleItems>StyleItem.ГруппаВариантовОтчетовЦвет</styleItems>
   <styleItems>StyleItem.ЗапрещенноеПравоДоступа</styleItems>
   <styleItems>StyleItem.ФонПанелиВариантовОтбора</styleItems>
+  <styleItems>StyleItem.ФонНеактивногоВариантаВторой</styleItems>
+  <styleItems>StyleItem.ЦветЗаголовкаМонитораРуководителя</styleItems>
+  <styleItems>StyleItem.ЦветНадписейМонитораРуководителя</styleItems>
+  <styleItems>StyleItem.ФонАктивногоВариантаПервый</styleItems>
+  <styleItems>StyleItem.ФонАктивногоВариантаВторой</styleItems>
+  <styleItems>StyleItem.ФонНеактивногоВариантаПервый</styleItems>
   <commonPictures>CommonPicture.НовыйПоШтрихкоду</commonPictures>
   <commonPictures>CommonPicture.ПолучитьВес</commonPictures>
   <commonPictures>CommonPicture.НастройкаДокумента</commonPictures>
@@ -147,6 +154,7 @@
   <commonPictures>CommonPicture.ПоказатьТолькоВыбранныеРоли</commonPictures>
   <commonPictures>CommonPicture.Предупреждение</commonPictures>
   <commonPictures>CommonPicture.Успешно</commonPictures>
+  <commonPictures>CommonPicture.ПолностьюИсправлено16</commonPictures>
   <sessionParameters>SessionParameter.AzRyОрганиация</sessionParameters>
   <roles>Role.БазовыеПрава</roles>
   <roles>Role.АдминистраторСистемы</roles>
@@ -161,6 +169,8 @@
   <roles>Role.ПолныеПрава</roles>
   <roles>Role.AzRyЗапретНаСозданиеНоменклатуры</roles>
   <roles>Role.ДобавлениеИзменениеПодсистемыРаботы</roles>
+  <roles>Role.AzRyНапоминанияПользователя</roles>
+  <roles>Role.AzRyНапоминанияПользователяАдминистратор</roles>
   <commonModules>CommonModule.УправлениеНебольшойФирмойСервер</commonModules>
   <commonModules>CommonModule.СтандартныеПодсистемыПовтИсп</commonModules>
   <commonModules>CommonModule.ЗаполнениеОбъектовУНФ</commonModules>
@@ -172,6 +182,9 @@
   <commonModules>CommonModule.ОтчетыУНФ</commonModules>
   <commonModules>CommonModule.ДатыЗапретаИзмененияПереопределяемый</commonModules>
   <commonModules>CommonModule.AzRyFunctions</commonModules>
+  <commonModules>CommonModule.НапоминанияПользователяСлужебный</commonModules>
+  <commonModules>CommonModule.ОбсужденияКлиент</commonModules>
+  <commonModules>CommonModule.НастройкаПрограммыПереопределяемый</commonModules>
   <commonAttributes>CommonAttribute.AzRyДокументЗагруженИзДругойБазыРедактированиеЗапрешено</commonAttributes>
   <commonAttributes>CommonAttribute.AzRyВычислитьКурсовуюРазницу</commonAttributes>
   <commonAttributes>CommonAttribute.ЗапретРедактированияДокументов</commonAttributes>
@@ -235,9 +248,11 @@
   <commonCommands>CommonCommand.БольшеВозможностейПродажи</commonCommands>
   <commonCommands>CommonCommand.БольшеВозможностейРаботы</commonCommands>
   <commonCommands>CommonCommand.БольшеВозможностейCRM</commonCommands>
+  <commonCommands>CommonCommand.AzRyНапоминанияПользователя</commonCommands>
   <commandGroups>CommandGroup.Печать</commandGroups>
   <commandGroups>CommandGroup.Настройки</commandGroups>
   <commandGroups>CommandGroup.Органайзер</commandGroups>
+  <commandGroups>CommandGroup.AzRyНапоминанияПользователя</commandGroups>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьДисконтныеКарты</constants>
@@ -267,8 +282,12 @@
   <constants>Constant.ФункциональнаяОпцияПланироватьЗагрузкуРесурсовПредприятия</constants>
   <constants>Constant.ФункциональнаяОпцияИспользоватьПодсистемуРаботы</constants>
   <constants>Constant.ВозвратОтПокупателяDG</constants>
+  <constants>Constant.AzRyНапоминанияПользователя</constants>
+  <constants>Constant.AzRyПроверкаЗаполнениеТаблицыФактурыАвансовОтключена</constants>
+  <constants>Constant.КонтролироватьОстаткиПриПроведении</constants>
   <commonForms>CommonForm.ФормаОтчетаУНФ</commonForms>
   <commonForms>CommonForm.ПраваДоступа</commonForms>
+  <commonForms>CommonForm.РасшAzRy_Форма</commonForms>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRyНастройки</catalogs>
   <catalogs>Catalog.Валюты</catalogs>
@@ -383,6 +402,14 @@
   <catalogs>Catalog.ШаблоныЭтикетокИЦенников</catalogs>
   <catalogs>Catalog.AzRyJiraProject</catalogs>
   <catalogs>Catalog.AzRyHS</catalogs>
+  <catalogs>Catalog.AzRytmpОПТИМУС_АмортизационныеГруппы</catalogs>
+  <catalogs>Catalog.AzRyТегКартинки</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодСтрана</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодЗарезервировано</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодМодель</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодКатегория</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодБренд</catalogs>
+  <catalogs>Catalog.AzRyШтрихкодПродукт</catalogs>
   <documents>Document.АвансовыйОтчет</documents>
   <documents>Document.АктВыполненныхРабот</documents>
   <documents>Document.ЗаказНаПроизводство</documents>
@@ -564,6 +591,8 @@
   <enums>Enum.ВидыИспользованияБалов</enums>
   <enums>Enum.СпособыОкругления</enums>
   <enums>Enum.ТипыВнеоборотныхАктивов</enums>
+  <enums>Enum.AzRyСтатусНапоминания</enums>
+  <enums>Enum.ВидыОперацийСборкаЗапасов</enums>
   <reports>Report.ДоходыИРасходы</reports>
   <reports>Report.Запасы</reports>
   <reports>Report.Склад</reports>
@@ -625,6 +654,9 @@
   <dataProcessors>DataProcessor.AzRyПриИзмененийОстатковЗапасаУведомитьВладельцаСклада</dataProcessors>
   <dataProcessors>DataProcessor.AzRyРасходСоСчета_заменаДатыДокумента</dataProcessors>
   <dataProcessors>DataProcessor.AzRyПоискИЗаменаЗначений_8_3</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyHTTPЗапрос</dataProcessors>
+  <dataProcessors>DataProcessor.AzRyАнализПотребности</dataProcessors>
+  <dataProcessors>DataProcessor.МониторыРуководителя</dataProcessors>
   <informationRegisters>InformationRegister.УправлениеЗапасами</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатурыКонтрагентов</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
@@ -654,6 +686,9 @@
   <informationRegisters>InformationRegister.AzRyНоменклатураЯчейка</informationRegisters>
   <informationRegisters>InformationRegister.ПараметрыВнеоборотныхАктивов</informationRegisters>
   <informationRegisters>InformationRegister.AzRyШтрихкодыВнеоборотныеАктивы</informationRegisters>
+  <informationRegisters>InformationRegister.AzRyДатыНачалоРаботПоОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.СотрудникиПользователя</informationRegisters>
+  <informationRegisters>InformationRegister.AzRyНапоминанияПользователя</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ДоходыИРасходы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Запасы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ЗапасыНаСкладах</accumulationRegisters>
@@ -696,6 +731,8 @@
   <accumulationRegisters>AccumulationRegister.СерийныеНомера</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.РасчетыНДФЛ</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.АвансыПолученныхФактур</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.AzRyАналитикаРасчетыСПокупателями</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.AzRyПередачаИмуществаСотруднику</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.АналитикаДоходовИРасходов</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.НастройкиПользователей</chartsOfCharacteristicTypes>
