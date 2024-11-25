@@ -1067,6 +1067,36 @@
           <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
         </items>
         <items xsi:type="form:Button">
+          <name>ОтчетДокументовЗарплатыДжира</name>
+          <id>605</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ОтчетДокументовЗарплатыДжираРасширеннаяПодсказка</name>
+            <id>606</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.ОтчетДокументовЗарплатыДжира</commandName>
+          <representation>PictureAndText</representation>
+          <width>40</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Сформировать</picture>
+          </picture>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ОбновлениеДокументовЗарплатыДжира</name>
           <id>558</id>
           <visible>true</visible>
@@ -1120,6 +1150,45 @@
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>Ссылка</name>
+          <id>607</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Ссылка</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>СсылкаРасширеннаяПодсказка</name>
+            <id>609</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СсылкаКонтекстноеМеню</name>
+            <id>608</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -7233,6 +7302,35 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОбновлениеДокументовЗарплатыДжираНаСервереБезПроведенияРегистров</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОтчетДокументовЗарплатыДжира</name>
+    <title>
+      <key>ru</key>
+      <value>Отчет документов зарплаты джира</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჯირას ხელფასის მონაცემების რეპორტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>ჯირას ხელფასის მონაცემების რეპორტი</value>
+    </title>
+    <id>8</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Обновление документов зарплаты джира</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОтчетДокументовЗарплатыДжира</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
