@@ -554,9 +554,9 @@
 &НаСервере
 Процедура РасшAzRy_ПриСозданииНаСервереПосле(Отказ, СтандартнаяОбработка)
 	
-	// +++ { AzRy - [26.05.2022] - Jira:ERPM-886 - Developer:ადმინისტრატორი (administrator@azry.com) - Comment:
+	// +++ { AzRy - [12.11.2024] - Jira: - Developer:ადმინისტრატორი (administrator@azry.com) - Comment:
 	КонтрольНаСкладеОтключен = НЕ УправлениеНебольшойФирмойСервер.ВыполнитьКонтрольОстатков();
-	// +++ } AzRy - [26.05.2022] - Jira:ERPM-886 - Developer:ადმინისტრატორი (administrator@azry.com) - Comment:	
+	// +++ } AzRy - [12.11.2024] - Jira: - Developer:ადმინისტრატორი (administrator@azry.com) - Comment:	
 	
 КонецПроцедуры
 
