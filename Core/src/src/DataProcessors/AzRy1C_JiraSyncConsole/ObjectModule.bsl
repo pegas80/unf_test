@@ -35,17 +35,32 @@
 
 // HTTP Requests
 
-Функция GetAccountCategories() Экспорт
+Функция Get(Парам) Экспорт
 	
-	// Возврат ВыполнитьHTTPЗапрос(Перечисления.AzRyTempoObjects.Account_categories);
-	Возврат ВыполнитьHTTPЗапрос5(Перечисления.AzRyTempoObjects.Account_categories);
+	JsonData = Новый Структура("metadata", Новый Структура("next", Истина));
+	RequestUriString = "https://api.tempo.io/4/" + Парам;
 	
-КонецФункции
-
-Функция GetAccounts() Экспорт
-
-	//Возврат ВыполнитьHTTPЗапрос(Перечисления.AzRyTempoObjects.Accounts);
-	Возврат ВыполнитьHTTPЗапрос5(Перечисления.AzRyTempoObjects.Accounts);
+	Массив = Новый Массив;
+	Пока JsonData.metadata.Свойство("next") Цикл
+			
+		Ответ = ВыполнитьHTTPЗапрос5(RequestUriString);
+		//Ответ = ВыполнитьHTTPЗапрос3(RequestUriString);
+		JsonData = JSON2Текст(Ответ.Текст);
+		Если JsonData.Свойство("errors") Тогда
+			Ответ.Ощибка = Истина;
+			Возврат Ответ;
+		КонецЕсли; 
+		ОбщегоНазначенияКлиентСервер.ДополнитьМассив(Массив, JsonData.results);
+		
+		Если JsonData.metadata.Свойство("next") Тогда
+			RequestUriString = JsonData.metadata.next;
+		Иначе 	
+			RequestUriString = "";
+		КонецЕсли; 
+	КонецЦикла; 
+		
+	Ответ.Вставить("Массив", Массив);
+   	Возврат Ответ;
 	
 КонецФункции
 
@@ -67,17 +82,19 @@
 	
 	ТЗПроектов = ЗапросТЗПроектов();
 	
-	Ответ = GetAccountCategories();
-	Если Ответ.ОщибкаСоединения Или Ответ.ОщибкаКодСостояния Тогда
+	Ответ = Get("account-categories");
+	Если Ответ.Ощибка Тогда
 		Возврат Ответ;
 	КонецЕсли; 		
-	JsonDataAccountCategories = JSON2Текст(Ответ.Текст);
+	JsonDataAccountCategories = Ответ.Массив;
 	
-	Ответ = GetAccounts();
-	Если Ответ.ОщибкаСоединения Или Ответ.ОщибкаКодСостояния Тогда
+	//ОбщегоНазначенияКлиентСервер.ДополнитьМассив(
+	
+	Ответ = Get("accounts");
+	Если Ответ.Ощибка Тогда
 		Возврат Ответ;
 	КонецЕсли;
-	JsonDataAccounts = JSON2Текст(Ответ.Текст);
+	JsonDataAccounts = Ответ.Массив;;
 
 	СоотвКонтрагенты = СоответствиеКонтрагентыCustomers(JsonDataAccounts);
 	Если AccountsWithNoProjects Тогда
@@ -91,7 +108,7 @@
 	Ответ.Вставить("ДопИнфо", ДопИнфо(AccountCategoriesAndAccounts));
 	Возврат Ответ;
 	
-КонецФункции
+КонецФункции 
 
 Функция СозданиеНовыхПроектов() Экспорт
 	
@@ -111,7 +128,7 @@
 	СписокAccounts = ОбновитьТаблицуWorklogs().ДопИнфо.UniqueAccountsList;
 	
 	AccountCategoriesAndAccounts.Очистить();		
-	Для каждого ТекСтрока Из JsonDataAccountCategories.results Цикл
+	Для каждого ТекСтрока Из JsonDataAccountCategories Цикл
 		
 		////Debug
 		//Если НЕ ТекСтрока.key = "CDSPSL" Тогда
@@ -132,7 +149,7 @@
 		КонецЕсли; 
 	КонецЦикла;
 	
-	Для каждого ТекСтрока Из JsonDataAccounts.results Цикл
+	Для каждого ТекСтрока Из JsonDataAccounts Цикл
 		
 		////Debug
 		//Если НЕ ТекСтрока.key = "CDSPSL" Тогда
@@ -310,20 +327,18 @@
 
 КонецФункции
 
-Функция ВыполнитьHTTPЗапрос5(ResourcePlus)
+Функция ВыполнитьHTTPЗапрос5(RequestUriString)
 	
 	КлассJira = Новый COMОбъект("AzRy.Atlassian.ApiTempoIO");
+	КлассJira.AuthorizationToken = "Lqjcf5cjGa0ZuuKpKEqEqk4u3Qa9N8";
 	
-	Если ResourcePlus = Перечисления.AzRyTempoObjects.Account_categories Тогда
-		json_text = КлассJira.GetAccountCategories();	
-	Иначе 	
-	    json_text = КлассJira.GetAccounts();
-	КонецЕсли; 
+	json_text = КлассJira.Get(RequestUriString);
 	
 	Ответ = Новый Структура;
-	Ответ.Вставить("ОщибкаСоединения", Ложь);
-	Ответ.Вставить("ОщибкаКодСостояния", Ложь);
-	Ответ.Вставить("HTTPЗапрос", Неопределено);
+	//Ответ.Вставить("ОщибкаСоединения", Ложь);
+	//Ответ.Вставить("ОщибкаКодСостояния", Ложь);
+	Ответ.Вставить("Ощибка", Ложь);
+	//Ответ.Вставить("HTTPЗапрос", Неопределено);
 	Ответ.Вставить("Текст", json_text);
 	
 	Возврат Ответ;
@@ -459,7 +474,7 @@
 
 	СП = Новый СписокЗначений;
 	
-	Для каждого ТекСтрока Из Accounts.results Цикл
+	Для каждого ТекСтрока Из Accounts Цикл
 		Если ТекСтрока.Свойство("customer") Тогда		
 			СП.Добавить(ТекСтрока.customer.key);		
 		КонецЕсли; 		
