@@ -330,7 +330,7 @@
 Функция ВыполнитьHTTPЗапрос5(RequestUriString)
 	
 	КлассJira = Новый COMОбъект("AzRy.Atlassian.ApiTempoIO");
-	КлассJira.AuthorizationToken = "Lqjcf5cjGa0ZuuKpKEqEqk4u3Qa9N8";
+	КлассJira.AuthorizationToken = "t9gkY5BNJXhYsU7ezX9Nc6BjZuhbAl-us";
 	
 	json_text = КлассJira.Get(RequestUriString);
 	
@@ -1773,7 +1773,7 @@ JsonData              = Неопределено;
 #Область Accounts_and_AccountCategories_ОПЕРАТОРЫ
 Сервер                = "api.tempo.io";
 Resource              = "core/3";
-Authorization         = "Bearer Lqjcf5cjGa0ZuuKpKEqEqk4u3Qa9N8";
+Authorization         = "Bearer t9gkY5BNJXhYsU7ezX9Nc6BjZuhbAl-us";
 
 // Temp solution
 СписокИсключений = Новый СписокЗначений;
