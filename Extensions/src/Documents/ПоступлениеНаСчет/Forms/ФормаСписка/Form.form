@@ -110,6 +110,30 @@
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
+          <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанк</name>
+          <id>273</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанкРасширеннаяПодсказка</name>
+            <id>275</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ФормаПоступлениеВозвратЗаймаСотрудникомБанк</name>
           <id>219</id>
           <visible>true</visible>
@@ -650,9 +674,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка</name>
           <id>108</id>
@@ -759,9 +780,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка</name>
           <id>106</id>
@@ -787,9 +805,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетПоДвижениямРасширеннаяПодсказка</name>
           <id>102</id>
@@ -816,9 +831,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка</name>
           <id>98</id>
@@ -844,9 +856,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка</name>
           <id>104</id>
@@ -872,9 +881,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка</name>
           <id>100</id>
@@ -2174,9 +2180,6 @@
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible/>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.НазначениеПлатежа</segments>
-        </dataPath>
         <titleLocation>Left</titleLocation>
         <extendedTooltip>
           <name>НазначениеПлатежаРасширеннаяПодсказка</name>
@@ -2302,9 +2305,6 @@
           <strikeout>false</strikeout>
         </font>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
-          <picture xsi:type="core:PictureRef">
-            <picture>CommonPicture.РазвернутьОтборы</picture>
-          </picture>
           <hyperlink>true</hyperlink>
           <pictureSize>Proportionally</pictureSize>
           <zoomable>true</zoomable>
@@ -3453,7 +3453,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Список</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DynamicList</types>
     </valueType>
@@ -3489,7 +3489,7 @@
       <key>en</key>
       <value>Type of transaction</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>EnumRef.ВидыОперацийПоступлениеНаСчет</types>
     </valueType>
@@ -3517,7 +3517,7 @@
       <key>en</key>
       <value>Bank account</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>CatalogRef.БанковскиеСчета</types>
     </valueType>
@@ -3545,7 +3545,7 @@
       <key>en</key>
       <value>Organization</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -3574,7 +3574,7 @@
       <key>en</key>
       <value>list of organizations</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3597,7 +3597,7 @@
       <key>en</key>
       <value>currency selection</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -3625,7 +3625,7 @@
       <key>en</key>
       <value>Counterparty</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <valueType>
       <types>CatalogRef.Контрагенты</types>
     </valueType>
@@ -3653,7 +3653,7 @@
       <key>en</key>
       <value>Selection Period</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <valueType>
       <types>StandardPeriod</types>
     </valueType>
@@ -3681,7 +3681,7 @@
       <key>en</key>
       <value>Представление периода</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3707,7 +3707,7 @@
       <key>en</key>
       <value>Данные меток</value>
     </title>
-    <id>10</id>
+    <id>1000010</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -3831,7 +3831,7 @@
       <key>en</key>
       <value>The selection of the author</value>
     </title>
-    <id>11</id>
+    <id>1000011</id>
     <valueType>
       <types>CatalogRef.Пользователи</types>
     </valueType>
@@ -3856,7 +3856,7 @@
       <key>en</key>
       <value>Создать по шаблону</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Создать по шаблону</value>
@@ -3892,7 +3892,7 @@
       <key>en</key>
       <value>Upload a bank statement</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Загрузить списания по счету из клиент-банка</value>
@@ -3928,7 +3928,7 @@
       <key>en</key>
       <value>Return the loan officer</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление возврат займа сотрудником банк</value>
@@ -3961,7 +3961,7 @@
       <key>en</key>
       <value>tax Refund</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление налоги банк</value>
@@ -3993,7 +3993,7 @@
       <key>en</key>
       <value>from podotchetnika</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от подотчетника банк</value>
@@ -4025,7 +4025,7 @@
       <key>en</key>
       <value>from the buyer</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от покупателя банк</value>
@@ -4057,7 +4057,7 @@
       <key>en</key>
       <value>Vendor (return)</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от поставщика банк</value>
@@ -4089,7 +4089,7 @@
       <key>en</key>
       <value>report acquirer</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление отчет эквайрера банк</value>
@@ -4122,7 +4122,7 @@
       <key>en</key>
       <value>purchase of currency</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Покупка валюты</value>
@@ -4155,7 +4155,7 @@
       <key>en</key>
       <value>Getting credit</value>
     </title>
-    <id>10</id>
+    <id>1000010</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление получение кредита банк</value>
@@ -4188,7 +4188,7 @@
       <key>en</key>
       <value>miscellaneous income</value>
     </title>
-    <id>11</id>
+    <id>1000011</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление прочее банк</value>
@@ -4220,7 +4220,7 @@
       <key>en</key>
       <value>Other settlements</value>
     </title>
-    <id>12</id>
+    <id>1000012</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление прочие расчеты банк</value>
@@ -4252,7 +4252,7 @@
       <key>en</key>
       <value>Go to the sheet</value>
     </title>
-    <id>13</id>
+    <id>1000013</id>
     <toolTip>
       <key>ru</key>
       <value>Ведомость перейти</value>
@@ -4284,7 +4284,7 @@
       <key>en</key>
       <value>cash contribution</value>
     </title>
-    <id>14</id>
+    <id>1000014</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от покупателя банк</value>
@@ -4316,7 +4316,7 @@
       <key>en</key>
       <value>Translation from dr.scheta</value>
     </title>
-    <id>15</id>
+    <id>1000015</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от покупателя банк</value>
@@ -4348,7 +4348,7 @@
       <key>en</key>
       <value>The courier company, or email</value>
     </title>
-    <id>16</id>
+    <id>1000016</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление от курьерской компании почты</value>
@@ -4380,7 +4380,7 @@
       <key>en</key>
       <value>Return of the employee</value>
     </title>
-    <id>17</id>
+    <id>1000017</id>
     <toolTip>
       <key>ru</key>
       <value>Поступление возврат от сотрудника</value>

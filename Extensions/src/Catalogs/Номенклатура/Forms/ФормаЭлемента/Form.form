@@ -138,6 +138,19 @@
               <value>Enum.ТипыНоменклатуры.EnumValue.ВидРабот</value>
             </value>
           </choiceList>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Лицензия</value>
+            </presentation>
+            <presentation>
+              <key>ka</key>
+              <value>ლიცენზია</value>
+            </presentation>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.ТипыНоменклатуры.EnumValue.Лицензия</value>
+            </value>
+          </choiceList>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -669,6 +682,86 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
+          <name>ГруппаСтавкаЛицензии</name>
+          <id>905</id>
+          <items xsi:type="form:FormField">
+            <name>СтавкаЛицензии</name>
+            <id>884</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.СтавкаЛицензии</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СтавкаЛицензииРасширеннаяПодсказка</name>
+              <id>909</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СтавкаЛицензииКонтекстноеМеню</name>
+              <id>908</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <maxWidth>21</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа ставка лицензии</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი ლიცენზიის განაკვეთი</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа ставка лицензии</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаСтавкаЛицензииРасширеннаяПодсказка</name>
+            <id>883</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
           <name>ГруппаОбъемИВес</name>
           <id>832</id>
           <items xsi:type="form:FormField">
@@ -1099,6 +1192,117 @@
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСобр</name>
+      <id>895</id>
+      <items xsi:type="form:FormField">
+        <name>НужнаПроверит</name>
+        <id>897</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.НужнаПроверит</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>НужнаПроверитРасширеннаяПодсказка</name>
+          <id>899</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НужнаПроверитКонтекстноеМеню</name>
+          <id>898</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Отклонение</name>
+        <id>900</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.Отклонение</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ОтклонениеРасширеннаяПодсказка</name>
+          <id>902</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ОтклонениеКонтекстноеМеню</name>
+          <id>901</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible/>
+      <title>
+        <key>ru</key>
+        <value>Группа собр</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯგუფი აგროვება</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа собр</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ГруппаСобрРасширеннаяПодсказка</name>
+        <id>896</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>HorizontalIfPossible</group>
+        <representation>WeakSeparation</representation>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -3801,59 +4005,6 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>СрокГодности</name>
-          <id>882</id>
-          <title>
-            <key>ru</key>
-            <value>Срок годности, дней</value>
-          </title>
-          <title>
-            <key>ka</key>
-            <value>ვარგისიანობის ვადა, დღის</value>
-          </title>
-          <title>
-            <key>en</key>
-            <value>Shelflife, days</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.СрокГодности</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>СрокГодностиРасширеннаяПодсказка</name>
-            <id>888</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>СрокГодностиКонтекстноеМеню</name>
-            <id>887</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <choiceButton>true</choiceButton>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
           <name>Ячейка</name>
           <id>45</id>
           <title>
@@ -3902,6 +4053,137 @@
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаСрокГодности</name>
+          <id>903</id>
+          <items xsi:type="form:FormField">
+            <name>СрокГодности</name>
+            <id>882</id>
+            <title>
+              <key>ru</key>
+              <value>Срок годности, дней</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ვარგისიანობის ვადა, დღის</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Shelflife, days</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.СрокГодности</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СрокГодностиРасширеннаяПодсказка</name>
+              <id>888</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СрокГодностиКонтекстноеМеню</name>
+              <id>887</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <choiceButton>true</choiceButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ВключенВрегистр</name>
+            <id>889</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ВключенВрегистр</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ВключенВрегистрРасширеннаяПодсказка</name>
+              <id>891</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ВключенВрегистрКонтекстноеМеню</name>
+              <id>890</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа срок годности</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი ვარგისიანობის ვადა</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Group expiration date</value>
+          </title>
+          <toolTip>
+            <key>ka</key>
+            <value>Группа срок годности</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаСрокГодностиРасширеннаяПодсказка</name>
+            <id>910</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>true</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -4340,6 +4622,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.Неактивен</segments>
         </dataPath>
+        <titleLocation>Right</titleLocation>
         <extendedTooltip>
           <name>НеактивенРасширеннаяПодсказка</name>
           <id>850</id>
@@ -4373,6 +4656,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.ВыгружатьВВесы</segments>
         </dataPath>
+        <titleLocation>Right</titleLocation>
         <extendedTooltip>
           <name>ВыгружатьВВесыРасширеннаяПодсказка</name>
           <id>886</id>
@@ -4386,6 +4670,38 @@
         <contextMenu>
           <name>ВыгружатьВВесыКонтекстноеМеню</name>
           <id>885</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ЕдиницаИзмеренияСчетФактури</name>
+        <id>892</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible/>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.ЕдиницаИзмеренияСчетФактури</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <extendedTooltip>
+          <name>ЕдиницаИзмеренияСчетФактуриРасширеннаяПодсказка</name>
+          <id>894</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ЕдиницаИзмеренияСчетФактуриКонтекстноеМеню</name>
+          <id>893</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
@@ -4606,9 +4922,6 @@
           <autoMaxHeight>true</autoMaxHeight>
           <horizontalStretch>true</horizontalStretch>
           <extInfo xsi:type="form:PictureDecorationExtInfo">
-            <picture xsi:type="core:PictureRef">
-              <picture>CommonPicture.ИзображениеПредыдущее</picture>
-            </picture>
             <hyperlink>true</hyperlink>
           </extInfo>
         </items>
@@ -4865,9 +5178,6 @@
           <autoMaxHeight>true</autoMaxHeight>
           <horizontalStretch>true</horizontalStretch>
           <extInfo xsi:type="form:PictureDecorationExtInfo">
-            <picture xsi:type="core:PictureRef">
-              <picture>CommonPicture.ИзображениеСледующее</picture>
-            </picture>
             <hyperlink>true</hyperlink>
           </extInfo>
         </items>
@@ -6741,7 +7051,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>CatalogObject.Номенклатура</types>
     </valueType>
@@ -6768,7 +7078,7 @@
       <key>en</key>
       <value>The method of calculating the cost of works</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6795,7 +7105,7 @@
       <key>en</key>
       <value>element modified</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6820,7 +7130,7 @@
       <key>en</key>
       <value>notify selection</value>
     </title>
-    <id>5</id>
+    <id>1000004</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6845,7 +7155,7 @@
       <key>en</key>
       <value>Generate full name automatically</value>
     </title>
-    <id>6</id>
+    <id>1000005</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6870,7 +7180,7 @@
       <key>en</key>
       <value>This addition of pictures from the nomenclature</value>
     </title>
-    <id>9</id>
+    <id>1000006</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6895,7 +7205,7 @@
       <key>en</key>
       <value>sales chart</value>
     </title>
-    <id>12</id>
+    <id>1000007</id>
     <valueType>
       <types>Chart</types>
     </valueType>
@@ -6921,7 +7231,7 @@
       <key>en</key>
       <value>sales chart available periods</value>
     </title>
-    <id>13</id>
+    <id>1000008</id>
     <valueType>
       <types>ValueList</types>
     </valueType>
@@ -6949,7 +7259,7 @@
       <key>en</key>
       <value>sales chart number</value>
     </title>
-    <id>14</id>
+    <id>1000009</id>
     <valueType>
       <types>Chart</types>
     </valueType>
@@ -6975,7 +7285,7 @@
       <key>en</key>
       <value>Chart sale period</value>
     </title>
-    <id>15</id>
+    <id>1000010</id>
     <valueType>
       <types>StandardPeriod</types>
     </valueType>
@@ -7000,7 +7310,7 @@
       <key>en</key>
       <value>period header</value>
     </title>
-    <id>16</id>
+    <id>1000011</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -7026,7 +7336,7 @@
       <key>en</key>
       <value>Periodicity</value>
     </title>
-    <id>17</id>
+    <id>1000012</id>
     <valueType>
       <types>DataAnalysisTimeIntervalUnitType</types>
     </valueType>
@@ -7051,7 +7361,7 @@
       <key>en</key>
       <value>Chart sale date format</value>
     </title>
-    <id>19</id>
+    <id>1000013</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -7077,7 +7387,7 @@
       <key>en</key>
       <value>Prices</value>
     </title>
-    <id>20</id>
+    <id>1000014</id>
     <valueType>
       <types>Chart</types>
     </valueType>
@@ -7103,7 +7413,7 @@
       <key>en</key>
       <value>Chart currency prices</value>
     </title>
-    <id>21</id>
+    <id>1000015</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -7128,7 +7438,7 @@
       <key>en</key>
       <value>Chart of currency rates</value>
     </title>
-    <id>22</id>
+    <id>1000016</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7206,7 +7516,7 @@
       <key>en</key>
       <value>Diagram available periods prices</value>
     </title>
-    <id>23</id>
+    <id>1000017</id>
     <valueType>
       <types>ValueList</types>
     </valueType>
@@ -7234,7 +7544,7 @@
       <key>en</key>
       <value>Chart price unit</value>
     </title>
-    <id>24</id>
+    <id>1000018</id>
     <valueType>
       <types>CatalogRef.ЕдиницыИзмерения</types>
       <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
@@ -7260,7 +7570,7 @@
       <key>en</key>
       <value>Chart of currency rates</value>
     </title>
-    <id>25</id>
+    <id>1000019</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7339,7 +7649,7 @@
       <key>en</key>
       <value>Chart Period Price</value>
     </title>
-    <id>26</id>
+    <id>1000020</id>
     <valueType>
       <types>StandardPeriod</types>
     </valueType>
@@ -7364,7 +7674,7 @@
       <key>en</key>
       <value>Diagram prices during the header</value>
     </title>
-    <id>27</id>
+    <id>1000021</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -7390,7 +7700,7 @@
       <key>en</key>
       <value>Price chart periodicity</value>
     </title>
-    <id>28</id>
+    <id>1000022</id>
     <valueType>
       <types>DataAnalysisTimeIntervalUnitType</types>
     </valueType>
@@ -7415,7 +7725,7 @@
       <key>en</key>
       <value>Chart price date format</value>
     </title>
-    <id>31</id>
+    <id>1000023</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -7441,7 +7751,7 @@
       <key>en</key>
       <value>balances</value>
     </title>
-    <id>33</id>
+    <id>1000024</id>
     <valueType>
       <types>ValueTree</types>
     </valueType>
@@ -7572,7 +7882,7 @@
       <key>en</key>
       <value>Images</value>
     </title>
-    <id>34</id>
+    <id>1000025</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7648,7 +7958,7 @@
       <key>en</key>
       <value>current image</value>
     </title>
-    <id>35</id>
+    <id>1000026</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -7676,7 +7986,7 @@
       <key>en</key>
       <value>prices</value>
     </title>
-    <id>36</id>
+    <id>1000027</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7808,7 +8118,7 @@
       <key>en</key>
       <value>Colors kinds of prices</value>
     </title>
-    <id>37</id>
+    <id>1000028</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7883,7 +8193,7 @@
       <key>en</key>
       <value>Поддержка Google</value>
     </title>
-    <id>38</id>
+    <id>1000029</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -7906,7 +8216,7 @@
       <key>en</key>
       <value>District A record of alcoholic beverages</value>
     </title>
-    <id>39</id>
+    <id>1000030</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -7931,7 +8241,7 @@
       <key>en</key>
       <value>Templates names cache</value>
     </title>
-    <id>40</id>
+    <id>1000031</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -8032,7 +8342,7 @@
       <key>en</key>
       <value>Templates names Settings</value>
     </title>
-    <id>41</id>
+    <id>1000032</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -8055,7 +8365,7 @@
       <key>en</key>
       <value>Allowed editing of prices</value>
     </title>
-    <id>42</id>
+    <id>1000033</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8080,7 +8390,7 @@
       <key>en</key>
       <value>Allowed to view prices</value>
     </title>
-    <id>43</id>
+    <id>1000034</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8105,7 +8415,7 @@
       <key>en</key>
       <value>Allowed to view sales</value>
     </title>
-    <id>44</id>
+    <id>1000035</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8130,7 +8440,7 @@
       <key>en</key>
       <value>Allowed to view balances</value>
     </title>
-    <id>45</id>
+    <id>1000036</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8155,7 +8465,7 @@
       <key>en</key>
       <value>FOIspolzovat subsystem production</value>
     </title>
-    <id>46</id>
+    <id>1000037</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8180,7 +8490,7 @@
       <key>en</key>
       <value>The rate of default NDSPo</value>
     </title>
-    <id>47</id>
+    <id>1000038</id>
     <valueType>
       <types>CatalogRef.СтавкиНДС</types>
     </valueType>
@@ -8205,7 +8515,7 @@
       <key>en</key>
       <value>nomenclature type</value>
     </title>
-    <id>48</id>
+    <id>1000039</id>
     <valueType>
       <types>EnumRef.ТипыНоменклатуры</types>
     </valueType>
@@ -8230,7 +8540,7 @@
       <key>en</key>
       <value>FOUchet several units</value>
     </title>
-    <id>49</id>
+    <id>1000040</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8255,7 +8565,7 @@
       <key>en</key>
       <value>FOUchet several warehouses</value>
     </title>
-    <id>50</id>
+    <id>1000041</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8280,7 +8590,7 @@
       <key>en</key>
       <value>FOPeredacha raw materials for processing</value>
     </title>
-    <id>51</id>
+    <id>1000042</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8305,7 +8615,7 @@
       <key>en</key>
       <value>used labeling</value>
     </title>
-    <id>52</id>
+    <id>1000043</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8326,7 +8636,7 @@
       <key>en</key>
       <value>The right to add the range of prices</value>
     </title>
-    <id>53</id>
+    <id>1000044</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8347,7 +8657,7 @@
       <key>en</key>
       <value>The right to change the nomenclature of Article</value>
     </title>
-    <id>54</id>
+    <id>1000045</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8368,7 +8678,7 @@
       <key>en</key>
       <value>The right to change the nomenclature code</value>
     </title>
-    <id>55</id>
+    <id>1000046</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8389,7 +8699,7 @@
       <key>en</key>
       <value>The right to change the name of the nomenclature</value>
     </title>
-    <id>56</id>
+    <id>1000047</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8410,7 +8720,7 @@
       <key>en</key>
       <value>The right to change the range of prices</value>
     </title>
-    <id>57</id>
+    <id>1000048</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8431,7 +8741,7 @@
       <key>en</key>
       <value>Использовать только регламентированный план счетов</value>
     </title>
-    <id>58</id>
+    <id>1000049</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8448,7 +8758,7 @@
       <key>ru</key>
       <value>Запрет отображения цен</value>
     </title>
-    <id>59</id>
+    <id>1000050</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8473,7 +8783,7 @@
       <key>en</key>
       <value>Учет по проектам</value>
     </title>
-    <id>60</id>
+    <id>1000051</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -8498,7 +8808,7 @@
       <key>en</key>
       <value>Add</value>
     </title>
-    <id>2</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Добавить изображение</value>
@@ -8534,7 +8844,7 @@
       <key>en</key>
       <value>change image</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить изображение</value>
@@ -8570,7 +8880,7 @@
       <key>en</key>
       <value>View</value>
     </title>
-    <id>5</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Просмотреть изображение</value>
@@ -8605,7 +8915,7 @@
       <key>en</key>
       <value>for weeks</value>
     </title>
-    <id>8</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8637,7 +8947,7 @@
       <key>en</key>
       <value>Monthly</value>
     </title>
-    <id>9</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8669,7 +8979,7 @@
       <key>en</key>
       <value>quarterly</value>
     </title>
-    <id>10</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8701,7 +9011,7 @@
       <key>en</key>
       <value>By days</value>
     </title>
-    <id>11</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8733,7 +9043,7 @@
       <key>en</key>
       <value>On years</value>
     </title>
-    <id>12</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8765,7 +9075,7 @@
       <key>en</key>
       <value>The cut on the sum of</value>
     </title>
-    <id>13</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма продажи срез по сумме</value>
@@ -8797,7 +9107,7 @@
       <key>en</key>
       <value>for weeks</value>
     </title>
-    <id>14</id>
+    <id>1000010</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8829,7 +9139,7 @@
       <key>en</key>
       <value>Monthly</value>
     </title>
-    <id>15</id>
+    <id>1000011</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8861,7 +9171,7 @@
       <key>en</key>
       <value>The cut in the number of</value>
     </title>
-    <id>16</id>
+    <id>1000012</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма продажи срез по сумме</value>
@@ -8893,7 +9203,7 @@
       <key>en</key>
       <value>quarterly</value>
     </title>
-    <id>17</id>
+    <id>1000013</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8925,7 +9235,7 @@
       <key>en</key>
       <value>By days</value>
     </title>
-    <id>18</id>
+    <id>1000014</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8957,7 +9267,7 @@
       <key>en</key>
       <value>On years</value>
     </title>
-    <id>19</id>
+    <id>1000015</id>
     <toolTip>
       <key>ru</key>
       <value>Диаграмма цены срез по дням</value>
@@ -8989,7 +9299,7 @@
       <key>en</key>
       <value>make primary</value>
     </title>
-    <id>22</id>
+    <id>1000016</id>
     <toolTip>
       <key>ru</key>
       <value>Установить изображение основным</value>
@@ -9025,7 +9335,7 @@
       <key>en</key>
       <value>Copies of products to be marked</value>
     </title>
-    <id>1</id>
+    <id>1000017</id>
     <toolTip>
       <key>ru</key>
       <value>Серии ГИСМ</value>
@@ -9058,7 +9368,7 @@
       <key>en</key>
       <value>+ New price</value>
     </title>
-    <id>4</id>
+    <id>1000018</id>
     <toolTip>
       <key>ru</key>
       <value>Создать новую цену</value>
@@ -9090,7 +9400,7 @@
       <key>en</key>
       <value>+ His props</value>
     </title>
-    <id>6</id>
+    <id>1000019</id>
     <toolTip>
       <key>ru</key>
       <value>Создать новый доп реквизит</value>

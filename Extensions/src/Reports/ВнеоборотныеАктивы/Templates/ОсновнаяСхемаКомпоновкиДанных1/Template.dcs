@@ -176,7 +176,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Инвентарный номер</v8:content>
+					<v8:content>საინვენტარო ნომერი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -311,6 +311,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПериодЧас</dataPath>
 			<field>ПериодЧас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>პერიოდი, საათი</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:periodNumber>4</dcscom:periodNumber>
 				<dcscom:periodType>Additional</dcscom:periodType>
@@ -404,6 +414,24 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Дата в вода в експлуатацию</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ექსპლუატაციაში შესვლის თარიღი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛиквидационнаяСтоимость</dataPath>
+			<field>ЛиквидационнаяСтоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ликвидационная стоимость</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>სალიკვიდაციო ღირებულება</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -447,7 +475,8 @@
 	ПараметрыВнеоборотныхАктивов.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
 	ПараметрыВнеоборотныхАктивов.СрокИспользованияДляВычисленияАмортизации КАК СрокИспользованияДляВычисленияАмортизации,
 	ПараметрыВнеоборотныхАктивов.СчетЗатратРегл КАК СчетЗатратРегл,
-	ПараметрыВнеоборотныхАктивов.Период КАК ДатаВВодаВЕксплуатацию
+	ПараметрыВнеоборотныхАктивов.Период КАК ДатаВВодаВЕксплуатацию,
+	ПараметрыВнеоборотныхАктивов.ЛиквидационнаяСтоимостьДляУменьшенногоОстатка КАК ЛиквидационнаяСтоимостьДляУменьшенногоОстатка
 ПОМЕСТИТЬ Вт2
 ИЗ
 	ВТ КАК ВТ
@@ -498,7 +527,12 @@
 	ВТ.ВнеоборотныйАктив.ТипВнеоборотныеАктивы КАК ВнеоборотныйАктивТипВнеоборотныеАктивы,
 	ВТ.СчетЗатратРегл КАК СчетЗатратРегл,
 	ВТ.ДатаВВодаВЕксплуатацию КАК ДатаВВодаВЕксплуатацию,
-	ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив.AzRyОтветственный КАК AzRyОтветственный
+	ВТ.ЛиквидационнаяСтоимостьДляУменьшенногоОстатка КАК ЛиквидационнаяСтоимость
+	
+	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	,ВнеоборотныеАктивыОстаткиИОбороты.ВнеоборотныйАктив.AzRyОтветственный КАК AzRyОтветственный
+	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	
 ИЗ
 	РегистрНакопления.ВнеоборотныеАктивы.ОстаткиИОбороты(, , Авто, Движения, ) КАК ВнеоборотныеАктивыОстаткиИОбороты
 		ЛЕВОЕ СОЕДИНЕНИЕ Вт2 КАК ВТ
@@ -560,6 +594,10 @@
 	<totalField>
 		<dataPath>ВнеоборотныйАктивТипВнеоборотныеАктивы</dataPath>
 		<expression>Количество(ВнеоборотныйАктивТипВнеоборотныеАктивы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЛиквидационнаяСтоимость</dataPath>
+		<expression>Сумма(ЛиквидационнаяСтоимость)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -984,13 +1022,6 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>ДатаВВодаВЕксплуатацию</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>AzRyОтветственный</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

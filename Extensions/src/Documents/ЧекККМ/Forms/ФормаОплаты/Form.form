@@ -16,7 +16,7 @@
       </title>
       <title>
         <key>en</key>
-        <value>Сумма</value>
+        <value>Amount</value>
       </title>
       <titleTextColor xsi:type="core:ColorRef">
         <color>Style.FormTextColor</color>
@@ -2392,20 +2392,107 @@
         </font>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
-      <items xsi:type="form:FormField">
-        <name>ЭквайринговыйТерминал</name>
-        <id>233</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаТерминал</name>
+        <id>474</id>
+        <items xsi:type="form:FormField">
+          <name>ЭквайринговыйТерминал</name>
+          <id>233</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ЭквайринговыйТерминал</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЭквайринговыйТерминалРасширеннаяПодсказка</name>
+            <id>235</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЭквайринговыйТерминалКонтекстноеМеню</name>
+            <id>234</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <choiceParameterLinks>
+              <name>Отбор.Касса</name>
+              <datapath xsi:type="form:DataPath">
+                <segments>17</segments>
+              </datapath>
+            </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияСтатусТерминала</name>
+          <id>476</id>
+          <title>
+            <key>ru</key>
+            <value>Декорация статус терминала</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияСтатусТерминалаРасширеннаяПодсказка</name>
+            <id>478</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияСтатусТерминалаКонтекстноеМеню</name>
+            <id>477</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <fileDragMode>AsFileRef</fileDragMode>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.ЭквайринговыйТерминал</segments>
-        </dataPath>
+        <title>
+          <key>ru</key>
+          <value>Группа терминал</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа терминал</value>
+        </toolTip>
         <extendedTooltip>
-          <name>ЭквайринговыйТерминалРасширеннаяПодсказка</name>
-          <id>235</id>
+          <name>ГруппаТерминалРасширеннаяПодсказка</name>
+          <id>475</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -2413,30 +2500,13 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ЭквайринговыйТерминалКонтекстноеМеню</name>
-          <id>234</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <autoMarkIncomplete>true</autoMarkIncomplete>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <choiceParameterLinks>
-            <name>Отбор.Касса</name>
-            <datapath xsi:type="form:DataPath">
-              <segments>КассаККМ</segments>
-            </datapath>
-          </choiceParameterLinks>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -2544,6 +2614,10 @@
               <items xsi:type="form:FormField">
                 <name>СООплатаКартой</name>
                 <id>400</id>
+                <title>
+                  <key>en</key>
+                  <value>Amount</value>
+                </title>
                 <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
@@ -3630,20 +3704,107 @@
         </font>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
-      <items xsi:type="form:FormField">
-        <name>ЭквайринговыйТерминал1</name>
-        <id>393</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаТерминал1</name>
+        <id>469</id>
+        <items xsi:type="form:FormField">
+          <name>ЭквайринговыйТерминал1</name>
+          <id>393</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ЭквайринговыйТерминал</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЭквайринговыйТерминал1РасширеннаяПодсказка</name>
+            <id>395</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЭквайринговыйТерминал1КонтекстноеМеню</name>
+            <id>394</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <choiceParameterLinks>
+              <name>Отбор.Касса</name>
+              <datapath xsi:type="form:DataPath">
+                <segments>17</segments>
+              </datapath>
+            </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияСтатусТерминала1</name>
+          <id>471</id>
+          <title>
+            <key>ru</key>
+            <value>Декорация статус терминала1</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияСтатусТерминала1РасширеннаяПодсказка</name>
+            <id>473</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияСтатусТерминала1КонтекстноеМеню</name>
+            <id>472</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <fileDragMode>AsFileRef</fileDragMode>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.ЭквайринговыйТерминал</segments>
-        </dataPath>
+        <title>
+          <key>ru</key>
+          <value>Группа терминал1</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа терминал1</value>
+        </toolTip>
         <extendedTooltip>
-          <name>ЭквайринговыйТерминал1РасширеннаяПодсказка</name>
-          <id>395</id>
+          <name>ГруппаТерминал1РасширеннаяПодсказка</name>
+          <id>470</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -3651,30 +3812,13 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ЭквайринговыйТерминал1КонтекстноеМеню</name>
-          <id>394</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <autoMarkIncomplete>true</autoMarkIncomplete>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <choiceParameterLinks>
-            <name>Отбор.Касса</name>
-            <datapath xsi:type="form:DataPath">
-              <segments>КассаККМ</segments>
-            </datapath>
-          </choiceParameterLinks>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -4848,11 +4992,7 @@
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <verticalStretch>true</verticalStretch>
-          <extInfo xsi:type="form:PictureDecorationExtInfo">
-            <picture xsi:type="core:PictureRef">
-              <picture>CommonPicture.КонтактнаяИнформацияТелефон</picture>
-            </picture>
-          </extInfo>
+          <extInfo xsi:type="form:PictureDecorationExtInfo"/>
         </items>
         <items xsi:type="form:FormField">
           <name>Телефон</name>
@@ -4976,11 +5116,7 @@
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <verticalStretch>true</verticalStretch>
-          <extInfo xsi:type="form:PictureDecorationExtInfo">
-            <picture xsi:type="core:PictureRef">
-              <picture>CommonPicture.КонтактнаяИнформацияЕмэйл</picture>
-            </picture>
-          </extInfo>
+          <extInfo xsi:type="form:PictureDecorationExtInfo"/>
         </items>
         <items xsi:type="form:FormField">
           <name>АдресЭП</name>
@@ -5047,7 +5183,7 @@
         </title>
         <title>
           <key>ka</key>
-          <value>Группа адрес ЭП</value>
+          <value>ელფოსტის მისამართების ჯგუფი</value>
         </title>
         <title>
           <key>en</key>
@@ -5059,7 +5195,7 @@
         </toolTip>
         <toolTip>
           <key>ka</key>
-          <value>Группа адрес ЭП</value>
+          <value>ელფოსტის მისამართების ჯგუფი</value>
         </toolTip>
         <toolTip>
           <key>en</key>
@@ -5286,6 +5422,10 @@
       <items xsi:type="form:FormField">
         <name>ПринимаемаяСуммаСО</name>
         <id>410</id>
+        <title>
+          <key>en</key>
+          <value>Amount received</value>
+        </title>
         <titleTextColor xsi:type="core:ColorRef">
           <color>Style.FormTextColor</color>
         </titleTextColor>
@@ -5517,11 +5657,7 @@
           <autoMaxWidth>true</autoMaxWidth>
           <height>1</height>
           <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:PictureDecorationExtInfo">
-            <picture xsi:type="core:PictureRef">
-              <picture>StdPicture.Print</picture>
-            </picture>
-          </extInfo>
+          <extInfo xsi:type="form:PictureDecorationExtInfo"/>
         </items>
         <items xsi:type="form:FormField">
           <name>СформироватьТоварныйЧек</name>
@@ -5757,7 +5893,7 @@
       <key>en</key>
       <value>cashed</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5787,7 +5923,7 @@
       <key>en</key>
       <value>Received payment cards</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5817,7 +5953,7 @@
       <key>en</key>
       <value>deposit sum</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5846,7 +5982,7 @@
       <key>en</key>
       <value>The amount of the document</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5875,7 +6011,7 @@
       <key>en</key>
       <value>To generate a receipt</value>
     </title>
-    <id>10</id>
+    <id>1000005</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5900,7 +6036,7 @@
       <key>en</key>
       <value>Document Currency</value>
     </title>
-    <id>11</id>
+    <id>1000006</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -5925,7 +6061,7 @@
       <key>en</key>
       <value>Number of cards</value>
     </title>
-    <id>5</id>
+    <id>1000007</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5953,7 +6089,7 @@
       <key>en</key>
       <value>The first entry</value>
     </title>
-    <id>7</id>
+    <id>1000008</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5978,7 +6114,7 @@
       <key>en</key>
       <value>The number of characters after the decimal point</value>
     </title>
-    <id>8</id>
+    <id>1000009</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6006,7 +6142,7 @@
       <key>en</key>
       <value>Cashed (line)</value>
     </title>
-    <id>9</id>
+    <id>1000010</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6032,7 +6168,7 @@
       <key>en</key>
       <value>Current input field sums</value>
     </title>
-    <id>12</id>
+    <id>1000011</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6058,7 +6194,7 @@
       <key>en</key>
       <value>hint</value>
     </title>
-    <id>13</id>
+    <id>1000012</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6084,7 +6220,7 @@
       <key>en</key>
       <value>Inscription current input field</value>
     </title>
-    <id>14</id>
+    <id>1000013</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6110,7 +6246,7 @@
       <key>en</key>
       <value>Types of payment cards</value>
     </title>
-    <id>15</id>
+    <id>1000014</id>
     <valueType>
       <types>ValueList</types>
     </valueType>
@@ -6138,7 +6274,7 @@
       <key>en</key>
       <value>Cashier CMC</value>
     </title>
-    <id>17</id>
+    <id>1000015</id>
     <valueType>
       <types>CatalogRef.КассыККМ</types>
     </valueType>
@@ -6163,7 +6299,7 @@
       <key>en</key>
       <value>Использовать подключаемое оборудование</value>
     </title>
-    <id>18</id>
+    <id>1000016</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6188,7 +6324,7 @@
       <key>en</key>
       <value>fiscal registrar</value>
     </title>
-    <id>19</id>
+    <id>1000017</id>
     <valueType>
       <types>CatalogRef.ПодключаемоеОборудование</types>
     </valueType>
@@ -6213,9 +6349,9 @@
       <key>en</key>
       <value>acquiring terminal</value>
     </title>
-    <id>20</id>
+    <id>1000018</id>
     <valueType>
-      <types>CatalogRef.ПодключаемоеОборудование</types>
+      <types>CatalogRef.ЭквайринговыеТерминалы</types>
     </valueType>
     <view>
       <common>true</common>
@@ -6238,7 +6374,7 @@
       <key>en</key>
       <value>Cashier KKMIspolzovat without connecting equipment</value>
     </title>
-    <id>21</id>
+    <id>1000019</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6263,7 +6399,7 @@
       <key>en</key>
       <value>Save a document</value>
     </title>
-    <id>22</id>
+    <id>1000020</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6288,7 +6424,7 @@
       <key>en</key>
       <value>An object</value>
     </title>
-    <id>23</id>
+    <id>1000021</id>
     <valueType>
       <types>DocumentObject.ЧекККМ</types>
     </valueType>
@@ -6306,134 +6442,6 @@
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.ОплатаПлатежнымиКартами</segments>
       </tablePath>
-      <columns>
-        <name>СуммаСтрока</name>
-        <title>
-          <key>ru</key>
-          <value>Сумма строка</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>სტრიქონი თანხა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The amount of line</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПервыйВвод</name>
-        <title>
-          <key>ru</key>
-          <value>Первый ввод</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>პირველი შეყვანა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The first entry</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ОплатаУдалена</name>
-        <title>
-          <key>ru</key>
-          <value>Оплата удалена</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>გადახდა გაუქმებულია</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Payment removed</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ОплатаУдаленаСумма</name>
-        <title>
-          <key>ru</key>
-          <value>Сумма (уд.)</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>თანხა (уд.)</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Amount (sp.)</value>
-        </title>
-        <id>4</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ИмяКоманды</name>
-        <title>
-          <key>ru</key>
-          <value>Имя команды</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ბრძანების სახელი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>team name</value>
-        </title>
-        <id>5</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -6450,7 +6458,7 @@
       <key>en</key>
       <value>Stock Сontrol Вisabled</value>
     </title>
-    <id>24</id>
+    <id>1000022</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6475,7 +6483,7 @@
       <key>en</key>
       <value>Temporary card table</value>
     </title>
-    <id>6</id>
+    <id>1000023</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -6789,7 +6797,7 @@
       <key>en</key>
       <value>Number of header cards</value>
     </title>
-    <id>16</id>
+    <id>1000024</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6817,7 +6825,7 @@
       <key>en</key>
       <value>Button is pressed to cancel</value>
     </title>
-    <id>25</id>
+    <id>1000025</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6842,7 +6850,7 @@
       <key>en</key>
       <value>Button is pressed to punch the check</value>
     </title>
-    <id>26</id>
+    <id>1000026</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6867,7 +6875,7 @@
       <key>en</key>
       <value>Phone address EP</value>
     </title>
-    <id>27</id>
+    <id>1000027</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -6889,7 +6897,7 @@
       <key>en</key>
       <value>N view of the payment card</value>
     </title>
-    <id>28</id>
+    <id>1000028</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -6913,7 +6921,7 @@
       <key>en</key>
       <value>P payment card number</value>
     </title>
-    <id>29</id>
+    <id>1000029</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -6933,7 +6941,7 @@
       <key>ru</key>
       <value>Доступность смешанной оплаты</value>
     </title>
-    <id>32</id>
+    <id>1000030</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -6954,7 +6962,7 @@
       <key>ka</key>
       <value>ბარათით გადახდა</value>
     </title>
-    <id>33</id>
+    <id>1000031</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -6979,7 +6987,7 @@
       <key>ka</key>
       <value>მიღებული თანხა</value>
     </title>
-    <id>34</id>
+    <id>1000032</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -7008,7 +7016,7 @@
       <key>ru</key>
       <value> </value>
     </title>
-    <id>35</id>
+    <id>1000033</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -7030,7 +7038,7 @@
       <key>ru</key>
       <value>Использовать новую форму оплат</value>
     </title>
-    <id>36</id>
+    <id>1000034</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -7047,7 +7055,7 @@
       <key>ru</key>
       <value>Таблица кнопок терминалов</value>
     </title>
-    <id>37</id>
+    <id>1000035</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -7107,7 +7115,7 @@
       <key>en</key>
       <value>OK</value>
     </title>
-    <id>3</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>ОК</value>
@@ -7139,7 +7147,7 @@
       <key>en</key>
       <value>Add card</value>
     </title>
-    <id>4</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Добавить карту</value>
@@ -7171,7 +7179,11 @@
       <key>ka</key>
       <value>0</value>
     </title>
-    <id>5</id>
+    <title>
+      <key>en</key>
+      <value>0</value>
+    </title>
+    <id>1000003</id>
     <use>
       <common>true</common>
     </use>
@@ -7189,9 +7201,9 @@
     </title>
     <title>
       <key>en</key>
-      <value>one</value>
+      <value>1</value>
     </title>
-    <id>6</id>
+    <id>1000004</id>
     <use>
       <common>true</common>
     </use>
@@ -7207,7 +7219,11 @@
       <key>ka</key>
       <value>2</value>
     </title>
-    <id>7</id>
+    <title>
+      <key>en</key>
+      <value>2</value>
+    </title>
+    <id>1000005</id>
     <use>
       <common>true</common>
     </use>
@@ -7223,7 +7239,11 @@
       <key>ka</key>
       <value>3</value>
     </title>
-    <id>8</id>
+    <title>
+      <key>en</key>
+      <value>3</value>
+    </title>
+    <id>1000006</id>
     <use>
       <common>true</common>
     </use>
@@ -7239,7 +7259,11 @@
       <key>ka</key>
       <value>4</value>
     </title>
-    <id>9</id>
+    <title>
+      <key>en</key>
+      <value>4</value>
+    </title>
+    <id>1000007</id>
     <use>
       <common>true</common>
     </use>
@@ -7255,7 +7279,11 @@
       <key>ka</key>
       <value>5</value>
     </title>
-    <id>10</id>
+    <title>
+      <key>en</key>
+      <value>5</value>
+    </title>
+    <id>1000008</id>
     <use>
       <common>true</common>
     </use>
@@ -7271,7 +7299,11 @@
       <key>ka</key>
       <value>6</value>
     </title>
-    <id>11</id>
+    <title>
+      <key>en</key>
+      <value>6</value>
+    </title>
+    <id>1000009</id>
     <use>
       <common>true</common>
     </use>
@@ -7289,9 +7321,9 @@
     </title>
     <title>
       <key>en</key>
-      <value>one</value>
+      <value>1</value>
     </title>
-    <id>12</id>
+    <id>1000010</id>
     <use>
       <common>true</common>
     </use>
@@ -7307,7 +7339,11 @@
       <key>ka</key>
       <value>8</value>
     </title>
-    <id>13</id>
+    <title>
+      <key>en</key>
+      <value>8</value>
+    </title>
+    <id>1000011</id>
     <use>
       <common>true</common>
     </use>
@@ -7325,9 +7361,9 @@
     </title>
     <title>
       <key>en</key>
-      <value>nine</value>
+      <value>9</value>
     </title>
-    <id>14</id>
+    <id>1000012</id>
     <use>
       <common>true</common>
     </use>
@@ -7345,9 +7381,9 @@
     </title>
     <title>
       <key>en</key>
-      <value>FROM</value>
+      <value>C</value>
     </title>
-    <id>15</id>
+    <id>1000013</id>
     <toolTip>
       <key>ru</key>
       <value>Сбросить</value>
@@ -7379,7 +7415,7 @@
       <key>en</key>
       <value>.</value>
     </title>
-    <id>16</id>
+    <id>1000014</id>
     <toolTip>
       <key>ru</key>
       <value>Разделитель дробной части</value>
@@ -7411,7 +7447,7 @@
       <key>en</key>
       <value>cancel</value>
     </title>
-    <id>17</id>
+    <id>1000015</id>
     <toolTip>
       <key>ru</key>
       <value>Отменить оплату картой на эквайринговом терминале</value>
@@ -7443,7 +7479,7 @@
       <key>en</key>
       <value>0</value>
     </title>
-    <id>19</id>
+    <id>1000016</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка0 2</value>
@@ -7476,7 +7512,7 @@
       <key>en</key>
       <value>1</value>
     </title>
-    <id>20</id>
+    <id>1000017</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка1 2</value>
@@ -7509,7 +7545,7 @@
       <key>en</key>
       <value>2</value>
     </title>
-    <id>21</id>
+    <id>1000018</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка2 2</value>
@@ -7542,7 +7578,7 @@
       <key>en</key>
       <value>3</value>
     </title>
-    <id>22</id>
+    <id>1000019</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка3 2</value>
@@ -7575,7 +7611,7 @@
       <key>en</key>
       <value>4</value>
     </title>
-    <id>23</id>
+    <id>1000020</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка4 2</value>
@@ -7608,7 +7644,7 @@
       <key>en</key>
       <value>5</value>
     </title>
-    <id>24</id>
+    <id>1000021</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка5 2</value>
@@ -7641,7 +7677,7 @@
       <key>en</key>
       <value>6</value>
     </title>
-    <id>25</id>
+    <id>1000022</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка6 2</value>
@@ -7674,7 +7710,7 @@
       <key>en</key>
       <value>7</value>
     </title>
-    <id>26</id>
+    <id>1000023</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка7 2</value>
@@ -7707,7 +7743,7 @@
       <key>en</key>
       <value>8</value>
     </title>
-    <id>27</id>
+    <id>1000024</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка8 2</value>
@@ -7740,7 +7776,7 @@
       <key>en</key>
       <value>9</value>
     </title>
-    <id>28</id>
+    <id>1000025</id>
     <toolTip>
       <key>ru</key>
       <value>Кнопка9 2</value>
@@ -7773,7 +7809,7 @@
       <key>en</key>
       <value>.</value>
     </title>
-    <id>29</id>
+    <id>1000026</id>
     <toolTip>
       <key>ru</key>
       <value>Разделитель дробной части</value>
@@ -7806,7 +7842,7 @@
       <key>en</key>
       <value>C</value>
     </title>
-    <id>30</id>
+    <id>1000027</id>
     <toolTip>
       <key>ru</key>
       <value>Сбросить</value>
@@ -7839,7 +7875,7 @@
       <key>en</key>
       <value>select card</value>
     </title>
-    <id>34</id>
+    <id>1000028</id>
     <toolTip>
       <key>ru</key>
       <value>Выбрать карту для удаления оплаты</value>

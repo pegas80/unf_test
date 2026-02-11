@@ -18,18 +18,6 @@
             <items xsi:type="form:FormField">
               <name>ВидЗаказа</name>
               <id>1652</id>
-              <title>
-                <key>ru</key>
-                <value>Вид и состояние</value>
-              </title>
-              <title>
-                <key>ka</key>
-                <value>ტიპი და მდგომარეობა</value>
-              </title>
-              <title>
-                <key>en</key>
-                <value>And condition</value>
-              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -1039,6 +1027,46 @@
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
               <maxWidth>29</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ВидНалогаНДС</name>
+            <id>1930</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ВидНалогаНДС</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ВидНалогаНДСРасширеннаяПодсказка</name>
+              <id>1932</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ВидНалогаНДСКонтекстноеМеню</name>
+              <id>1931</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
@@ -3019,9 +3047,6 @@
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Работы.Пометка</segments>
-          </dataPath>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
             <name>ЗНРаботыПометкаРасширеннаяПодсказка</name>
@@ -4555,7 +4580,7 @@
               <choiceParameterLinks>
                 <name>Организация</name>
                 <datapath xsi:type="form:DataPath">
-                  <segments>Объект.Организация</segments>
+                  <segments>1</segments>
                 </datapath>
               </choiceParameterLinks>
               <choiceParameterLinks>
@@ -4582,6 +4607,88 @@
                   <segments>Items.ЗНМатериалы.CurrentData.Характеристика</segments>
                 </datapath>
               </choiceParameterLinks>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ЗНМатериалыОжидаемыеПоставки</name>
+            <id>1924</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Материалы.ОжидаемыеПоставки</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ЗНМатериалыОжидаемыеПоставкиРасширеннаяПодсказка</name>
+              <id>1926</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ЗНМатериалыОжидаемыеПоставкиКонтекстноеМеню</name>
+              <id>1925</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ЗНМатериалыОжидаемыеСвободныеОстатки</name>
+            <id>1927</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.Материалы.ОжидаемыеСвободныеОстатки</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ЗНМатериалыОжидаемыеСвободныеОстаткиРасширеннаяПодсказка</name>
+              <id>1929</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ЗНМатериалыОжидаемыеСвободныеОстаткиКонтекстноеМеню</name>
+              <id>1928</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
             </extInfo>
           </items>
           <autoCommandBar>
@@ -5163,6 +5270,74 @@
                 <extendedTooltip>
                   <name>ЗНМатериалыГруппаРезервОчиститьExtendedTooltip</name>
                   <id>830</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ЗНМатериалыГруппаПроверитьСвободныеОстатки</name>
+                <id>1920</id>
+                <items xsi:type="form:Button">
+                  <name>ЗНМатериалыЗНМатериалыПроверитьСвободныеОстатки</name>
+                  <id>1922</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>ЗНМатериалыЗНМатериалыПроверитьСвободныеОстаткиРасширеннаяПодсказка</name>
+                    <id>1923</id>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>ru</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </title>
+                <title>
+                  <key>en</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </title>
+                <toolTip>
+                  <key>ru</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </toolTip>
+                <toolTip>
+                  <key>ka</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </toolTip>
+                <toolTip>
+                  <key>en</key>
+                  <value>ЗНМатериалы группа ПроверитьСвободныеОстатки</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ЗНМатериалыГруппаПроверитьСвободныеОстаткиРасширеннаяПодсказка</name>
+                  <id>1921</id>
                   <type>Label</type>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -6204,6 +6379,30 @@
             <placementArea>UserCmds</placementArea>
             <representationInContextMenu>Auto</representationInContextMenu>
           </items>
+          <items xsi:type="form:Button">
+            <name>ЗапасыПроверитьСвободныеОстатки</name>
+            <id>1912</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ЗапасыПроверитьСвободныеОстаткиРасширеннаяПодсказка</name>
+              <id>1913</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -6668,9 +6867,6 @@
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Запасы.Пометка</segments>
-          </dataPath>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
             <name>ЗапасыПометкаРасширеннаяПодсказка</name>
@@ -6830,9 +7026,6 @@
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible/>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Запасы.НоменклатураСсылка</segments>
-            </dataPath>
             <extendedTooltip>
               <name>ЗапасыНоменклатураСсылкаРасширеннаяПодсказка</name>
               <id>1754</id>
@@ -7729,7 +7922,7 @@
             <choiceParameterLinks>
               <name>Организация</name>
               <datapath xsi:type="form:DataPath">
-                <segments>Объект.Организация</segments>
+                <segments>1</segments>
               </datapath>
             </choiceParameterLinks>
             <choiceParameterLinks>
@@ -7756,6 +7949,88 @@
                 <segments>Items.Запасы.CurrentData.Характеристика</segments>
               </datapath>
             </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыОжидаемыеПоставки</name>
+          <id>1914</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Запасы.ОжидаемыеПоставки</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗапасыОжидаемыеПоставкиРасширеннаяПодсказка</name>
+            <id>1916</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыОжидаемыеПоставкиКонтекстноеМеню</name>
+            <id>1915</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыОжидаемыеСвободныеОстатки</name>
+          <id>1917</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Запасы.ОжидаемыеСвободныеОстатки</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗапасыОжидаемыеСвободныеОстаткиРасширеннаяПодсказка</name>
+            <id>1919</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыОжидаемыеСвободныеОстаткиКонтекстноеМеню</name>
+            <id>1918</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <autoCommandBar>
@@ -10575,7 +10850,6 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
-            <readOnly>true</readOnly>
             <editMode>EnterOnInput</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -11961,9 +12235,6 @@
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.ПлатежныйКалендарь.Растяжение</segments>
-          </dataPath>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
             <name>СписокПлатежныйКалендарьРастяжениеРасширеннаяПодсказка</name>
@@ -12566,6 +12837,40 @@
           <name>ЗНДополнительноЛеваяКолонка</name>
           <id>1221</id>
           <items xsi:type="form:FormField">
+            <name>ОтключитьКонтрольЛимитаЗадолжностиПокупателя</name>
+            <id>1936</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ОтключитьКонтрольЛимитаЗадолжностиПокупателя</segments>
+            </dataPath>
+            <titleLocation>Right</titleLocation>
+            <extendedTooltip>
+              <name>ОтключитьКонтрольЛимитаЗадолжностиПокупателяРасширеннаяПодсказка</name>
+              <id>1940</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ОтключитьКонтрольЛимитаЗадолжностиПокупателяКонтекстноеМеню</name>
+              <id>1939</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <items xsi:type="form:FormField">
             <name>ЗНПроект</name>
             <id>174</id>
             <visible>true</visible>
@@ -12751,6 +13056,39 @@
         <items xsi:type="form:FormGroup">
           <name>ЗНДополнительноПраваяКолонка</name>
           <id>1223</id>
+          <items xsi:type="form:FormField">
+            <name>ОтключитьКонтрольЗадолжностиПокупателя</name>
+            <id>1933</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ОтключитьКонтрольЗадолжностиПокупателя</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ОтключитьКонтрольЗадолжностиПокупателяРасширеннаяПодсказка</name>
+              <id>1942</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ОтключитьКонтрольЗадолжностиПокупателяКонтекстноеМеню</name>
+              <id>1941</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
           <items xsi:type="form:FormField">
             <name>ЗНОтветственный</name>
             <id>323</id>
@@ -14868,7 +15206,7 @@
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
       <name>ПоказатьВЖурналеКонтрагентов</name>
@@ -14952,7 +15290,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.ЗаказПокупателя</types>
     </valueType>
@@ -14971,352 +15309,21 @@
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.Запасы</segments>
       </tablePath>
-      <columns>
-        <name>ОбщаяСуммаСкидкиБольшеСуммы</name>
-        <title>
-          <key>ru</key>
-          <value>Общая сумма скидки больше суммы</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ფასდაკლების საერთო თანხა ჯამზე მეტია</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The total amount of discounts greater than the sum</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Пометка</name>
-        <title>
-          <key>ru</key>
-          <value>Пометка</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ნიშნული</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>remark</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>НоменклатураСсылка</name>
-        <title>
-          <key>ru</key>
-          <value>Ссылка</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ბმული</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Ref</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>CatalogRef.Номенклатура</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
     <additionalColumns>
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.ПлатежныйКалендарь</segments>
       </tablePath>
-      <columns>
-        <name>Растяжение</name>
-        <title>
-          <key>ru</key>
-          <value>Растяжение</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>გაწელვა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>extension</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
     <additionalColumns>
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.СкидкиНаценки</segments>
       </tablePath>
-      <columns>
-        <name>Номенклатура</name>
-        <title>
-          <key>ru</key>
-          <value>Номенклатура</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ნომენკლატურა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Nomenclature</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>CatalogRef.Номенклатура</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Характеристика</name>
-        <title>
-          <key>ru</key>
-          <value>Характеристика</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>მახასიათებელი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Characteristic</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>CatalogRef.ХарактеристикиНоменклатуры</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>НомерСтрокиОсновойТаблицы</name>
-        <title>
-          <key>ru</key>
-          <value>№ в &quot;Товарах&quot;</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value># &quot;საქონლები&quot;-ში</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Number in the &quot;Goods&quot;</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>Number</types>
-          <numberQualifiers>
-            <precision>10</precision>
-          </numberQualifiers>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ХарактеристикиИспользуются</name>
-        <title>
-          <key>ru</key>
-          <value>Характеристики используются</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>მახასიათებლები გამოიყენება</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>characteristics used</value>
-        </title>
-        <id>4</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>СкидкаЗапрещенаКПросмору</name>
-        <title>
-          <key>ru</key>
-          <value>Скидка запрещена к просмору</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ფასდაკლების ნახვა აკრძალულია</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Discount banned for PLAYBACK</value>
-        </title>
-        <id>5</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
     <additionalColumns>
       <tablePath xsi:type="form:DataPath">
         <segments>Объект.Работы</segments>
       </tablePath>
-      <columns>
-        <name>Материалы</name>
-        <title>
-          <key>ru</key>
-          <value>Материалы</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>მასალები</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>materials</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Исполнители</name>
-        <title>
-          <key>ru</key>
-          <value>Исполнители</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>შემსრულებლები</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>artists</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ОбщаяСуммаСкидкиБольшеСуммы</name>
-        <title>
-          <key>ru</key>
-          <value>Общая сумма скидки больше суммы</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ფასდაკლების საერთო თანხა ჯამზე მეტია</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The total amount of discounts greater than the sum</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Пометка</name>
-        <title>
-          <key>ru</key>
-          <value>Пометка</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ნიშნული</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>remark</value>
-        </title>
-        <id>4</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -15333,7 +15340,7 @@
       <key>en</key>
       <value>Цены и валюта</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -15359,7 +15366,7 @@
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -15384,7 +15391,7 @@
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>5</id>
+    <id>1000004</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers/>
@@ -15410,7 +15417,7 @@
       <key>en</key>
       <value>Agreement</value>
     </title>
-    <id>6</id>
+    <id>1000005</id>
     <valueType>
       <types>CatalogRef.ДоговорыКонтрагентов</types>
     </valueType>
@@ -15435,7 +15442,7 @@
       <key>en</key>
       <value>Counterparty</value>
     </title>
-    <id>8</id>
+    <id>1000006</id>
     <valueType>
       <types>CatalogRef.Контрагенты</types>
     </valueType>
@@ -15460,7 +15467,7 @@
       <key>en</key>
       <value>Кратность национальная валюта</value>
     </title>
-    <id>9</id>
+    <id>1000007</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -15489,7 +15496,7 @@
       <key>en</key>
       <value>The course of the national currency</value>
     </title>
-    <id>10</id>
+    <id>1000008</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -15519,7 +15526,7 @@
       <key>en</key>
       <value>National Currency</value>
     </title>
-    <id>11</id>
+    <id>1000009</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -15544,7 +15551,7 @@
       <key>en</key>
       <value>The settlement currency</value>
     </title>
-    <id>13</id>
+    <id>1000010</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -15569,7 +15576,7 @@
       <key>en</key>
       <value>Учет валютных операций</value>
     </title>
-    <id>12</id>
+    <id>1000011</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15594,7 +15601,7 @@
       <key>en</key>
       <value>Использовать подключаемое оборудование</value>
     </title>
-    <id>14</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15619,7 +15626,7 @@
       <key>en</key>
       <value>Kind of works in the cap</value>
     </title>
-    <id>16</id>
+    <id>1000013</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15644,7 +15651,7 @@
       <key>en</key>
       <value>Name of the table</value>
     </title>
-    <id>17</id>
+    <id>1000014</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -15670,7 +15677,7 @@
       <key>en</key>
       <value>The result of all</value>
     </title>
-    <id>18</id>
+    <id>1000015</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -15700,7 +15707,7 @@
       <key>en</key>
       <value>Total VAT Amount</value>
     </title>
-    <id>19</id>
+    <id>1000016</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -15730,7 +15737,7 @@
       <key>en</key>
       <value>Разрешено проведение</value>
     </title>
-    <id>22</id>
+    <id>1000017</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15755,7 +15762,7 @@
       <key>en</key>
       <value>Счет-фактура</value>
     </title>
-    <id>26</id>
+    <id>1000018</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -15781,7 +15788,7 @@
       <key>en</key>
       <value>Контрагент вести расчеты по заказам</value>
     </title>
-    <id>31</id>
+    <id>1000019</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15806,7 +15813,7 @@
       <key>en</key>
       <value>Text log errors</value>
     </title>
-    <id>32</id>
+    <id>1000020</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -15832,7 +15839,7 @@
       <key>en</key>
       <value>Selection of materials in works</value>
     </title>
-    <id>2</id>
+    <id>1000021</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15857,7 +15864,7 @@
       <key>en</key>
       <value>Use subsystem Salary</value>
     </title>
-    <id>15</id>
+    <id>1000022</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15882,7 +15889,7 @@
       <key>en</key>
       <value>Параметры открытия подбора</value>
     </title>
-    <id>34</id>
+    <id>1000023</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -15905,7 +15912,7 @@
       <key>en</key>
       <value>Functional redundancy option reserves</value>
     </title>
-    <id>7</id>
+    <id>1000024</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15930,7 +15937,7 @@
       <key>en</key>
       <value>Address discounts applied in the temporary storage</value>
     </title>
-    <id>20</id>
+    <id>1000025</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -15956,7 +15963,7 @@
       <key>en</key>
       <value>Document Date changed manually</value>
     </title>
-    <id>21</id>
+    <id>1000026</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -15981,7 +15988,7 @@
       <key>en</key>
       <value>Use automatic discounts</value>
     </title>
-    <id>23</id>
+    <id>1000027</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16006,7 +16013,7 @@
       <key>en</key>
       <value>Discounts are calculated before recording</value>
     </title>
-    <id>29</id>
+    <id>1000028</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16031,7 +16038,7 @@
       <key>en</key>
       <value>Set gray</value>
     </title>
-    <id>30</id>
+    <id>1000029</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16056,7 +16063,7 @@
       <key>en</key>
       <value>Refresh image auto discounts after recording</value>
     </title>
-    <id>33</id>
+    <id>1000030</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16081,7 +16088,7 @@
       <key>en</key>
       <value>Считана дисконтная карта</value>
     </title>
-    <id>36</id>
+    <id>1000031</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16106,7 +16113,7 @@
       <key>en</key>
       <value>Поддерживаемые типы подключаемого оборудования</value>
     </title>
-    <id>37</id>
+    <id>1000032</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16132,7 +16139,7 @@
       <key>en</key>
       <value>selection marker</value>
     </title>
-    <id>38</id>
+    <id>1000033</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -16160,7 +16167,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>41</id>
+    <id>1000034</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -16185,7 +16192,7 @@
       <key>en</key>
       <value>Value</value>
     </title>
-    <id>42</id>
+    <id>1000035</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16208,7 +16215,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>43</id>
+    <id>1000036</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16234,7 +16241,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>44</id>
+    <id>1000037</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16260,7 +16267,7 @@
       <key>en</key>
       <value>Запасы резервная копия таблицы адрес</value>
     </title>
-    <id>45</id>
+    <id>1000038</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16286,7 +16293,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>46</id>
+    <id>1000039</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -16311,7 +16318,7 @@
       <key>en</key>
       <value>Value</value>
     </title>
-    <id>47</id>
+    <id>1000040</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16334,7 +16341,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>48</id>
+    <id>1000041</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16360,7 +16367,7 @@
       <key>en</key>
       <value>Запасы изменение строк объект изменений элемент</value>
     </title>
-    <id>49</id>
+    <id>1000042</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16386,7 +16393,7 @@
       <key>en</key>
       <value>Запасы резервная копия таблицы адрес</value>
     </title>
-    <id>50</id>
+    <id>1000043</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16412,7 +16419,7 @@
       <key>en</key>
       <value>Discount Ratio (Margin)</value>
     </title>
-    <id>51</id>
+    <id>1000044</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -16441,7 +16448,7 @@
       <key>en</key>
       <value>Discount Amount</value>
     </title>
-    <id>52</id>
+    <id>1000045</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -16470,7 +16477,7 @@
       <key>en</key>
       <value>Поддержка Google</value>
     </title>
-    <id>53</id>
+    <id>1000046</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16493,7 +16500,7 @@
       <key>en</key>
       <value>Запасы резервная копия таблицы адрес</value>
     </title>
-    <id>55</id>
+    <id>1000047</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16519,7 +16526,7 @@
       <key>en</key>
       <value>Использовать серийные номера остатки</value>
     </title>
-    <id>56</id>
+    <id>1000048</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16542,7 +16549,7 @@
       <key>en</key>
       <value>List of auto counterparty selection</value>
     </title>
-    <id>57</id>
+    <id>1000049</id>
     <valueType>
       <types>ValueList</types>
     </valueType>
@@ -16570,7 +16577,7 @@
       <key>en</key>
       <value>Кэш значений</value>
     </title>
-    <id>58</id>
+    <id>1000050</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16593,7 +16600,7 @@
       <key>en</key>
       <value>calculating the parameters of the counterparty</value>
     </title>
-    <id>59</id>
+    <id>1000051</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -16616,7 +16623,7 @@
       <key>en</key>
       <value>Use types of custom clothes</value>
     </title>
-    <id>61</id>
+    <id>1000052</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16641,7 +16648,7 @@
       <key>en</key>
       <value>You need to update the data selection condition</value>
     </title>
-    <id>62</id>
+    <id>1000053</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16666,7 +16673,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>63</id>
+    <id>1000054</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -16691,7 +16698,7 @@
       <key>en</key>
       <value>Что сделать</value>
     </title>
-    <id>64</id>
+    <id>1000055</id>
     <valueType>
       <types>EnumRef.ДействияГрупповогоИзмененияСтрок</types>
     </valueType>
@@ -16716,7 +16723,7 @@
       <key>en</key>
       <value>Order outfit in the running state</value>
     </title>
-    <id>65</id>
+    <id>1000056</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16741,7 +16748,7 @@
       <key>en</key>
       <value>Name Print command summary report</value>
     </title>
-    <id>66</id>
+    <id>1000057</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -16767,7 +16774,7 @@
       <key>en</key>
       <value>Available full rights</value>
     </title>
-    <id>67</id>
+    <id>1000058</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16788,7 +16795,7 @@
       <key>en</key>
       <value>FCC document reserve</value>
     </title>
-    <id>68</id>
+    <id>1000059</id>
     <valueType>
       <types>DocumentRef.РезервированиеЗапасов</types>
     </valueType>
@@ -16809,7 +16816,7 @@
       <key>ka</key>
       <value>VIN კოდი</value>
     </title>
-    <id>69</id>
+    <id>1000060</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -16833,7 +16840,7 @@
       <key>ka</key>
       <value>გარბენი</value>
     </title>
-    <id>70</id>
+    <id>1000061</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -16854,7 +16861,7 @@
       <key>ru</key>
       <value>Дата финишь перед изменением</value>
     </title>
-    <id>71</id>
+    <id>1000062</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers/>
@@ -16872,7 +16879,7 @@
       <key>ru</key>
       <value>Дата финиш документа</value>
     </title>
-    <id>72</id>
+    <id>1000063</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers/>
@@ -16898,7 +16905,7 @@
       <key>en</key>
       <value>Учет по проектам</value>
     </title>
-    <id>73</id>
+    <id>1000064</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -16923,7 +16930,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>3</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -16956,7 +16963,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>4</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -16989,7 +16996,7 @@
       <key>en</key>
       <value>Поиск по штрихкоду</value>
     </title>
-    <id>1</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Поиск по штрихкоду</value>
@@ -17026,7 +17033,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>6</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Редактировать зачет предоплаты</value>
@@ -17063,7 +17070,7 @@
       <key>en</key>
       <value>List</value>
     </title>
-    <id>7</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Редактировать списком</value>
@@ -17095,7 +17102,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>8</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -17128,7 +17135,7 @@
       <key>en</key>
       <value>Settings</value>
     </title>
-    <id>9</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Настройка документа</value>
@@ -17165,7 +17172,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>10</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -17198,7 +17205,7 @@
       <key>en</key>
       <value>According to the current job specification</value>
     </title>
-    <id>11</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по спецификации</value>
@@ -17235,7 +17242,7 @@
       <key>en</key>
       <value>Weight</value>
     </title>
-    <id>12</id>
+    <id>1000010</id>
     <toolTip>
       <key>ru</key>
       <value>ЗНПолучить вес</value>
@@ -17272,7 +17279,7 @@
       <key>en</key>
       <value>for ongoing work</value>
     </title>
-    <id>14</id>
+    <id>1000011</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по ресурсам для текущей работы</value>
@@ -17298,6 +17305,16 @@
       <for>
         <role>Role.ДобавлениеИзменениеПодсистемыЗакупки</role>
       </for>
+      <for>
+        <role>Role.ЧтениеДокументовПоБанкуИКассе</role>
+      </for>
+      <for>
+        <role>Role.ДобавлениеИзменениеПодсистемыРаботы</role>
+      </for>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </use>
     <functionalOptions>FunctionalOption.ПланироватьЗагрузкуРесурсовПредприятия</functionalOptions>
     <representation>TextPicture</representation>
@@ -17318,7 +17335,7 @@
       <key>en</key>
       <value>Загрузить данные из ТСД</value>
     </title>
-    <id>15</id>
+    <id>1000012</id>
     <toolTip>
       <key>ru</key>
       <value>Загрузить данные из ТСД</value>
@@ -17354,7 +17371,7 @@
       <key>en</key>
       <value>Fill materials of all specifications</value>
     </title>
-    <id>16</id>
+    <id>1000013</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить материалы из всех спецификаций</value>
@@ -17390,7 +17407,7 @@
       <key>en</key>
       <value>for ongoing work</value>
     </title>
-    <id>25</id>
+    <id>1000014</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по бригадам для текущей работы</value>
@@ -17416,6 +17433,16 @@
       <for>
         <role>Role.ДобавлениеИзменениеПодсистемыЗакупки</role>
       </for>
+      <for>
+        <role>Role.ЧтениеДокументовПоБанкуИКассе</role>
+      </for>
+      <for>
+        <role>Role.ДобавлениеИзменениеПодсистемыРаботы</role>
+      </for>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </use>
     <representation>TextPicture</representation>
     <modifiesStoredData>true</modifiesStoredData>
@@ -17435,7 +17462,7 @@
       <key>en</key>
       <value>for all the work</value>
     </title>
-    <id>26</id>
+    <id>1000015</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по бригадам для всех работ</value>
@@ -17461,6 +17488,16 @@
       <for>
         <role>Role.ДобавлениеИзменениеПодсистемыЗакупки</role>
       </for>
+      <for>
+        <role>Role.ЧтениеДокументовПоБанкуИКассе</role>
+      </for>
+      <for>
+        <role>Role.ДобавлениеИзменениеПодсистемыРаботы</role>
+      </for>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </use>
     <representation>TextPicture</representation>
     <modifiesStoredData>true</modifiesStoredData>
@@ -17480,7 +17517,7 @@
       <key>en</key>
       <value>for all the work</value>
     </title>
-    <id>27</id>
+    <id>1000016</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по ресурсам для всех работ</value>
@@ -17506,6 +17543,16 @@
       <for>
         <role>Role.ДобавлениеИзменениеПодсистемыЗакупки</role>
       </for>
+      <for>
+        <role>Role.ЧтениеДокументовПоБанкуИКассе</role>
+      </for>
+      <for>
+        <role>Role.ДобавлениеИзменениеПодсистемыРаботы</role>
+      </for>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </use>
     <functionalOptions>FunctionalOption.ПланироватьЗагрузкуРесурсовПредприятия</functionalOptions>
     <representation>TextPicture</representation>
@@ -17526,7 +17573,7 @@
       <key>en</key>
       <value>Clear Column</value>
     </title>
-    <id>32</id>
+    <id>1000017</id>
     <toolTip>
       <key>ru</key>
       <value>Очистить колонку Резерв</value>
@@ -17543,6 +17590,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17560,7 +17608,7 @@
       <key>en</key>
       <value>fill on balances</value>
     </title>
-    <id>33</id>
+    <id>1000018</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по свободным остаткам на складе</value>
@@ -17577,6 +17625,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17594,7 +17643,7 @@
       <key>en</key>
       <value>Insert by Reserves</value>
     </title>
-    <id>34</id>
+    <id>1000019</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по резервам на складе</value>
@@ -17611,6 +17660,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17628,7 +17678,7 @@
       <key>en</key>
       <value>fill on balances</value>
     </title>
-    <id>36</id>
+    <id>1000020</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по свободным остаткам на складе</value>
@@ -17645,6 +17695,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17662,7 +17713,7 @@
       <key>en</key>
       <value>Insert by Reserves</value>
     </title>
-    <id>37</id>
+    <id>1000021</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по резервам на складе</value>
@@ -17679,6 +17730,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17696,7 +17748,7 @@
       <key>en</key>
       <value>Clear Column</value>
     </title>
-    <id>38</id>
+    <id>1000022</id>
     <toolTip>
       <key>ru</key>
       <value>Очистить колонку Резерв</value>
@@ -17713,6 +17765,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17730,7 +17783,7 @@
       <key>en</key>
       <value>fill from the remains (for all jobs)</value>
     </title>
-    <id>40</id>
+    <id>1000023</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по свободным остаткам на складе</value>
@@ -17747,6 +17800,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17764,7 +17818,7 @@
       <key>en</key>
       <value>fill on provisions (for all jobs)</value>
     </title>
-    <id>41</id>
+    <id>1000024</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить резерв по резервам на складе</value>
@@ -17781,6 +17835,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17798,7 +17853,7 @@
       <key>en</key>
       <value>clean the column (for all jobs)</value>
     </title>
-    <id>42</id>
+    <id>1000025</id>
     <toolTip>
       <key>ru</key>
       <value>Очистить колонку Резерв</value>
@@ -17815,6 +17870,7 @@
       <common>true</common>
     </use>
     <functionalOptions>FunctionalOption.РезервированиеЗапасов</functionalOptions>
+    <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
     <modifiesStoredData>true</modifiesStoredData>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -17832,7 +17888,7 @@
       <key>en</key>
       <value>Consider discount card</value>
     </title>
-    <id>2</id>
+    <id>1000026</id>
     <toolTip>
       <key>ru</key>
       <value>Считать дисконтную карту</value>
@@ -17869,7 +17925,7 @@
       <key>en</key>
       <value>% Auto.</value>
     </title>
-    <id>5</id>
+    <id>1000027</id>
     <toolTip>
       <key>ru</key>
       <value>Рассчитать автоматические скидки, наценки</value>
@@ -17906,7 +17962,7 @@
       <key>en</key>
       <value>% Auto.</value>
     </title>
-    <id>13</id>
+    <id>1000028</id>
     <toolTip>
       <key>ru</key>
       <value>Открыть информацию о скидках (наценках) для текущей строки</value>
@@ -17943,7 +17999,7 @@
       <key>en</key>
       <value>% Auto.</value>
     </title>
-    <id>17</id>
+    <id>1000029</id>
     <toolTip>
       <key>ru</key>
       <value>Открыть информацию о скидках (наценках) для текущей строки</value>
@@ -17980,7 +18036,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>18</id>
+    <id>1000030</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -18017,7 +18073,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>19</id>
+    <id>1000031</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -18054,7 +18110,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>20</id>
+    <id>1000032</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -18091,7 +18147,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>21</id>
+    <id>1000033</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -18128,7 +18184,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>22</id>
+    <id>1000034</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -18165,7 +18221,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>23</id>
+    <id>1000035</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -18202,7 +18258,7 @@
       <key>en</key>
       <value>Вставить строки</value>
     </title>
-    <id>24</id>
+    <id>1000036</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -18239,7 +18295,7 @@
       <key>en</key>
       <value>Copy Rows</value>
     </title>
-    <id>28</id>
+    <id>1000037</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -18276,7 +18332,7 @@
       <key>en</key>
       <value>Run</value>
     </title>
-    <id>31</id>
+    <id>1000038</id>
     <toolTip>
       <key>ru</key>
       <value>Выполнить</value>
@@ -18310,7 +18366,7 @@
       <key>en</key>
       <value>Edit</value>
     </title>
-    <id>35</id>
+    <id>1000039</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить строки таблицы</value>
@@ -18342,7 +18398,7 @@
       <key>en</key>
       <value>cancellation</value>
     </title>
-    <id>39</id>
+    <id>1000040</id>
     <toolTip>
       <key>ru</key>
       <value>Отменить все изменения</value>
@@ -18375,7 +18431,7 @@
       <key>en</key>
       <value>Unmark</value>
     </title>
-    <id>43</id>
+    <id>1000041</id>
     <toolTip>
       <key>ru</key>
       <value>Снять пометки</value>
@@ -18411,7 +18467,7 @@
       <key>en</key>
       <value>Установить пометки</value>
     </title>
-    <id>44</id>
+    <id>1000042</id>
     <toolTip>
       <key>ru</key>
       <value>Установить пометки</value>
@@ -18447,7 +18503,7 @@
       <key>en</key>
       <value>Run</value>
     </title>
-    <id>45</id>
+    <id>1000043</id>
     <toolTip>
       <key>ru</key>
       <value>Выполнить</value>
@@ -18481,7 +18537,7 @@
       <key>en</key>
       <value>Edit</value>
     </title>
-    <id>46</id>
+    <id>1000044</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить строки таблицы</value>
@@ -18513,7 +18569,7 @@
       <key>en</key>
       <value>cancellation</value>
     </title>
-    <id>47</id>
+    <id>1000045</id>
     <toolTip>
       <key>ru</key>
       <value>Отменить все изменения</value>
@@ -18546,7 +18602,7 @@
       <key>en</key>
       <value>Unmark</value>
     </title>
-    <id>48</id>
+    <id>1000046</id>
     <toolTip>
       <key>ru</key>
       <value>Снять пометки</value>
@@ -18582,7 +18638,7 @@
       <key>en</key>
       <value>Установить пометки</value>
     </title>
-    <id>49</id>
+    <id>1000047</id>
     <toolTip>
       <key>ru</key>
       <value>Установить пометки</value>
@@ -18618,7 +18674,7 @@
       <key>en</key>
       <value>Сохранить документ как шаблон</value>
     </title>
-    <id>50</id>
+    <id>1000048</id>
     <toolTip>
       <key>ru</key>
       <value>Сохранить документ как шаблон</value>
@@ -18653,7 +18709,7 @@
       <key>en</key>
       <value>Заполнить по основанию</value>
     </title>
-    <id>29</id>
+    <id>1000049</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по основанию</value>
@@ -18688,7 +18744,7 @@
       <key>en</key>
       <value>Включить режим &quot;Работать с ГТД&quot;</value>
     </title>
-    <id>30</id>
+    <id>1000050</id>
     <toolTip>
       <key>ru</key>
       <value>Режим ГТДЗапасы</value>
@@ -18721,7 +18777,7 @@
       <key>en</key>
       <value>Включить режим &quot;Работать с ГТД&quot;</value>
     </title>
-    <id>51</id>
+    <id>1000051</id>
     <toolTip>
       <key>ru</key>
       <value>Режим ГТДЗапасы</value>
@@ -18754,7 +18810,7 @@
       <key>en</key>
       <value>Summary of the purchase order</value>
     </title>
-    <id>52</id>
+    <id>1000052</id>
     <toolTip>
       <key>ru</key>
       <value>Сводный отчет</value>
@@ -18786,7 +18842,7 @@
       <key>en</key>
       <value>Make a reservation</value>
     </title>
-    <id>53</id>
+    <id>1000053</id>
     <toolTip>
       <key>ru</key>
       <value>Фкс резервировать</value>
@@ -18814,7 +18870,7 @@
       <key>en</key>
       <value>Remove from the reserve</value>
     </title>
-    <id>54</id>
+    <id>1000054</id>
     <toolTip>
       <key>ru</key>
       <value>Фкс снять с резерва</value>
@@ -18842,7 +18898,7 @@
       <key>en</key>
       <value>Заполнить фактуры</value>
     </title>
-    <id>55</id>
+    <id>1000055</id>
     <use>
       <common>true</common>
     </use>
@@ -18866,7 +18922,7 @@
       <key>en</key>
       <value>Добавить фактуры</value>
     </title>
-    <id>56</id>
+    <id>1000056</id>
     <use>
       <common>true</common>
     </use>
@@ -18882,7 +18938,7 @@
       <key>ru</key>
       <value>Подписать</value>
     </title>
-    <id>58</id>
+    <id>1000057</id>
     <toolTip>
       <key>ru</key>
       <value>Подписать</value>

@@ -218,6 +218,46 @@
       <textEdit>true</textEdit>
     </extInfo>
   </items>
+  <items xsi:type="form:FormField">
+    <name>ОсновнойШтрихКод</name>
+    <id>283</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ОсновнойШтрихКод</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>ОсновнойШтрихКодРасширеннаяПодсказка</name>
+      <id>287</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ОсновнойШтрихКодКонтекстноеМеню</name>
+      <id>286</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+    </extInfo>
+  </items>
   <items xsi:type="form:FormGroup">
     <name>ГруппаЛичныеДанные</name>
     <id>115</id>
@@ -2985,7 +3025,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>CatalogObject.Сотрудники</types>
     </valueType>
@@ -3012,7 +3052,7 @@
       <key>en</key>
       <value>Deductions for children</value>
     </title>
-    <id>4</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3038,7 +3078,7 @@
       <key>en</key>
       <value>property deduction</value>
     </title>
-    <id>5</id>
+    <id>1000003</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3064,7 +3104,7 @@
       <key>en</key>
       <value>personal deduction</value>
     </title>
-    <id>6</id>
+    <id>1000004</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3090,15 +3130,23 @@
       <key>en</key>
       <value>Individual</value>
     </title>
-    <id>7</id>
+    <id>1000005</id>
     <valueType>
       <types>CatalogObject.ФизическиеЛица</types>
     </valueType>
     <view>
       <common>true</common>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </view>
     <edit>
       <common>true</common>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
     </edit>
     <savedData>true</savedData>
   </attributes>
@@ -3116,7 +3164,7 @@
       <key>en</key>
       <value>Create automatically</value>
     </title>
-    <id>12</id>
+    <id>1000006</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3129,7 +3177,7 @@
   </attributes>
   <attributes>
     <name>КлючТекущиеКадровыеДанныеСотрудников</name>
-    <id>20</id>
+    <id>1000007</id>
     <valueType>
       <types>InformationRegisterRecordManager.ТекущиеКадровыеДанныеСотрудников</types>
     </valueType>
@@ -3154,7 +3202,7 @@
       <key>en</key>
       <value>The key document physical persons</value>
     </title>
-    <id>21</id>
+    <id>1000008</id>
     <valueType>
       <types>InformationRegisterRecordManager.ДокументыФизическихЛиц</types>
     </valueType>
@@ -3180,7 +3228,7 @@
       <key>en</key>
       <value>Parameters contact information</value>
     </title>
-    <id>22</id>
+    <id>1000009</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3203,7 +3251,7 @@
       <key>en</key>
       <value>Contact information to describe additional details</value>
     </title>
-    <id>23</id>
+    <id>1000010</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -3434,7 +3482,7 @@
       <key>en</key>
       <value>Address of natural person for a residence permit</value>
     </title>
-    <id>24</id>
+    <id>1000011</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3460,7 +3508,7 @@
       <key>en</key>
       <value>Available via physical person data</value>
     </title>
-    <id>25</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3485,7 +3533,7 @@
       <key>en</key>
       <value>property deduction</value>
     </title>
-    <id>26</id>
+    <id>1000013</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3511,7 +3559,7 @@
       <key>en</key>
       <value>History imusch.vychetov</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>История имущественных вычетов</value>
@@ -3547,7 +3595,7 @@
       <key>en</key>
       <value>History lichn.vychetov</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>История личных вычетов</value>
@@ -3583,7 +3631,7 @@
       <key>en</key>
       <value>Recruit</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Оформить прием на работу</value>
@@ -3615,7 +3663,7 @@
       <key>en</key>
       <value>dismiss</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Оформить увольнение</value>
@@ -3647,7 +3695,7 @@
       <key>en</key>
       <value>Edit</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить должность</value>
@@ -3679,7 +3727,7 @@
       <key>en</key>
       <value>Edit</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Изменить оклад</value>
@@ -3711,7 +3759,7 @@
       <key>en</key>
       <value>The history of social deductions</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>История имущественных вычетов</value>
@@ -3747,7 +3795,7 @@
       <key>en</key>
       <value>Get info from RS</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Получить инфо из RS</value>

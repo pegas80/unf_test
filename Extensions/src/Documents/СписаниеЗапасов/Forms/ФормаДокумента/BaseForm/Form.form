@@ -306,11 +306,35 @@
     <items xsi:type="form:Decoration">
       <name>ДекорацияОтступ</name>
       <id>150</id>
+      <title>
+        <key>en</key>
+        <value>(write-off from warehouse)</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>(ჩამოწერა საწყობიდან)</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>(списание со склада)</value>
+      </title>
       <visible>true</visible>
       <enabled>false</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
+      <toolTip>
+        <key>ru</key>
+        <value>(списание со склада)</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>(ჩამოწერა საწყობიდან)</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>(write-off from warehouse)</value>
+      </toolTip>
       <extendedTooltip>
         <name>ДекорацияОтступРасширеннаяПодсказка</name>
         <id>152</id>
@@ -1200,7 +1224,7 @@
             <choiceParameterLinks>
               <name>Организация</name>
               <datapath xsi:type="form:DataPath">
-                <segments>Объект.Организация</segments>
+                <segments>1</segments>
               </datapath>
             </choiceParameterLinks>
             <choiceParameterLinks>
@@ -1229,6 +1253,43 @@
             </choiceParameterLinks>
           </extInfo>
         </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыКоличествоНаСкладе</name>
+          <id>226</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ЗапасыКоличествоНаСкладеРасширеннаяПодсказка</name>
+            <id>228</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыКоличествоНаСкладеКонтекстноеМеню</name>
+            <id>227</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
         <autoCommandBar>
           <name>ЗапасыКоманднаяПанель</name>
           <id>20</id>
@@ -1253,7 +1314,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Copy</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1278,7 +1338,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Change</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1303,7 +1362,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Delete</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1374,7 +1432,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.SortListAsc</commandName>
               <representation>Auto</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1399,7 +1456,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.SortListDesc</commandName>
               <representation>Auto</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2477,7 +2533,6 @@ Commentary</value>
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтправитьПоЭлектроннойПочте</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2589,7 +2644,6 @@ Commentary</value>
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.СтруктураПодчиненности</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2617,7 +2671,6 @@ Commentary</value>
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетПоДвижениям</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2646,7 +2699,6 @@ Commentary</value>
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ЗаполнениеОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2674,7 +2726,6 @@ Commentary</value>
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетыОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2789,7 +2840,7 @@ Commentary</value>
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.СписаниеЗапасов</types>
     </valueType>
@@ -2804,36 +2855,6 @@ Commentary</value>
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <savedData>true</savedData>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Запасы</segments>
-      </tablePath>
-      <columns>
-        <name>НеобходимостьВводаСправкиНаАлкоголь</name>
-        <title>
-          <key>ru</key>
-          <value>Необходимость ввода справки на алкоголь</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ალკოჰოლის შესახებ ცნობის შეყვანის აუცილებლობა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Need to Enter a Certificate on  Alcohol</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
   </attributes>
   <attributes>
     <name>Компания</name>
@@ -2849,7 +2870,7 @@ Commentary</value>
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>4</id>
+    <id>1000002</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -2874,7 +2895,7 @@ Commentary</value>
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>5</id>
+    <id>1000003</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers/>
@@ -2900,7 +2921,7 @@ Commentary</value>
       <key>en</key>
       <value>Do not Open a Form</value>
     </title>
-    <id>2</id>
+    <id>1000004</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -2925,7 +2946,7 @@ Commentary</value>
       <key>en</key>
       <value>Use Plug-in Equipment</value>
     </title>
-    <id>3</id>
+    <id>1000005</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -2950,7 +2971,7 @@ Commentary</value>
       <key>en</key>
       <value>Posting alowed</value>
     </title>
-    <id>7</id>
+    <id>1000006</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -2975,7 +2996,7 @@ Commentary</value>
       <key>en</key>
       <value>Supported Types of Connected Equipment</value>
     </title>
-    <id>6</id>
+    <id>1000007</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3001,7 +3022,7 @@ Commentary</value>
       <key>en</key>
       <value>Use Serial Numbers, Balances</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3024,7 +3045,7 @@ Commentary</value>
       <key>en</key>
       <value>Статус ЕГАИС</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3050,7 +3071,7 @@ Commentary</value>
       <key>en</key>
       <value>Cache Values ​</value>
     </title>
-    <id>10</id>
+    <id>1000010</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3074,7 +3095,7 @@ Commentary</value>
       <key>en</key>
       <value>Type of Structural Unit</value>
     </title>
-    <id>11</id>
+    <id>1000011</id>
     <valueType>
       <types>EnumRef.ТипыСтруктурныхЕдиниц</types>
     </valueType>
@@ -3100,7 +3121,7 @@ Commentary</value>
       <value>
 Order warehouse</value>
     </title>
-    <id>12</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3125,7 +3146,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Accounting by Cells</value>
     </title>
-    <id>13</id>
+    <id>1000013</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3150,7 +3171,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Текст уведомления о списании ГИСМ</value>
     </title>
-    <id>14</id>
+    <id>1000014</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3176,7 +3197,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Choose</value>
     </title>
-    <id>2</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -3209,7 +3230,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Search by Barcode</value>
     </title>
-    <id>3</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Поиск по штрихкоду</value>
@@ -3246,7 +3267,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Weight</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Получить вес</value>
@@ -3257,7 +3278,7 @@ Order warehouse</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Получить вес</value>
+      <value>Get weight</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3283,7 +3304,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Загрузить данные из ТСД</value>
     </title>
-    <id>5</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Загрузить данные из ТСД</value>
@@ -3313,9 +3334,13 @@ Order warehouse</value>
     </title>
     <title>
       <key>ka</key>
-      <value>Копировать строки </value>
+      <value>სტრიქონის კოპირება</value>
     </title>
-    <id>6</id>
+    <title>
+      <key>en</key>
+      <value>Copy rows</value>
+    </title>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Скопировать строки в буфер обмена</value>
@@ -3346,9 +3371,13 @@ Order warehouse</value>
     </title>
     <title>
       <key>ka</key>
-      <value>Вставить строки </value>
+      <value>სტრიქონის ჩასმა</value>
     </title>
-    <id>7</id>
+    <title>
+      <key>en</key>
+      <value>Insert rows</value>
+    </title>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Вставить строки из буфера обмена</value>
@@ -3385,7 +3414,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Save the document as a template</value>
     </title>
-    <id>1</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Сохранить документ как шаблон</value>
@@ -3420,7 +3449,7 @@ Order warehouse</value>
       <key>en</key>
       <value>Передать в ЕГАИС</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Передать данные в ЕГАИС</value>
@@ -3431,7 +3460,7 @@ Order warehouse</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Передать данные в ЕГАИС</value>
+      <value>Transfer data to EGAIS</value>
     </toolTip>
     <use>
       <common>true</common>

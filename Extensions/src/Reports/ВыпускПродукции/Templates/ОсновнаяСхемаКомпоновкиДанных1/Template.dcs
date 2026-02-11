@@ -231,22 +231,8 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>AzRyПартииНоменклатуры</dataPath>
-			<field>AzRyПартииНоменклатуры</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>(AzRy) Партии номенклатуры</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>(AzRy) ნომენკლატურის პარტია</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>(AzRy) Партии номенклатуры</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -263,9 +249,22 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>(AzRy) ნომენკლატურა</v8:content>
 				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyПартииНоменклатуры</dataPath>
+			<field>AzRyПартииНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>(AzRy) Номенклатура</v8:content>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(AzRy) Партии номенклатуры</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>(AzRy) ნომენკლატურის პარტიები</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -298,8 +297,13 @@
 	ВыпускПродукцииОбороты.Спецификация КАК Спецификация,
 	ВыпускПродукцииОбороты.КоличествоОборот КАК Количество,
 	ВыпускПродукцииОбороты.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
-	ВыпускПродукцииОбороты.AzRyНоменклатура КАК AzRyНоменклатура,
+	ВыпускПродукцииОбороты.Проект КАК Проект
+	
+	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	,ВыпускПродукцииОбороты.AzRyНоменклатура КАК AzRyНоменклатура,
 	ВыпускПродукцииОбороты.AzRyПартииНоменклатуры КАК AzRyПартииНоменклатуры
+	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	
 ИЗ
 	РегистрНакопления.ВыпускПродукции.Обороты(, , Авто, ) КАК ВыпускПродукцииОбороты
 ГДЕ
@@ -436,12 +440,6 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Номенклатура</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>AzRyНоменклатура</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>AzRyПартииНоменклатуры</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Количество</dcsset:field>

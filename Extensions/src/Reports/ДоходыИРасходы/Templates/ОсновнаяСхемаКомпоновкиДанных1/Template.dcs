@@ -206,7 +206,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Прибыль (убыток)</v8:content>
+					<v8:content>მოგება (ზარალი)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -224,6 +224,13 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СчетУчетаРегл</dataPath>
 			<field>СчетУчетаРегл</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -251,20 +258,13 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>(AzRy) Проект</v8:content>
+					<v8:content>(AzRy) Jira Project</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>(AzRy) პროექტი</v8:content>
 				</v8:item>
 			</title>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Проект</dataPath>
-			<field>Проект</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -287,6 +287,20 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyСотрудник</dataPath>
+			<field>AzRyСотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(AzRy) Сотрудник</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>(AzRy) თანამშრომელი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>AzRyDivision</dataPath>
 			<field>AzRyDivision</field>
 			<title xsi:type="v8:LocalStringType">
@@ -296,6 +310,10 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
+					<v8:content>(AzRy) Division</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
 					<v8:content>(AzRy) Division</v8:content>
 				</v8:item>
 			</title>
@@ -328,20 +346,21 @@
 	ДоходыИРасходыОбороты.ПериодПолугодие,
 	ДоходыИРасходыОбороты.ПериодГод,
 	ДоходыИРасходыОбороты.СчетУчетаРегл,
+	ДоходыИРасходыОбороты.Проект,
 	0 КАК ОперационнаяПрибыльУбыток,
 	ВЫБОР
 		КОГДА ДоходыИРасходыОбороты.Аналитика = НЕОПРЕДЕЛЕНО
 			ТОГДА NULL
 		ИНАЧЕ ДоходыИРасходыОбороты.Аналитика
 	КОНЕЦ КАК Аналитика
-	
+
 	// +++ { AzRy - [01.12.2020] - Jira:ERPM-804 - Developer:ადმინი - Comment:
 	, ДоходыИРасходыОбороты.AzRyАналитикаКонтрагент КАК AzRyАналитикаКонтрагент,
 	ДоходыИРасходыОбороты.AzRyПроект КАК AzRyПроект,
-	ДоходыИРасходыОбороты.Проект КАК Проект,
 	ДоходыИРасходыОбороты.AzRyНаименованияПоставщиков КАК AzRyНаименованияПоставщиков,
 	ДоходыИРасходыОбороты.AzRyDivision КАК AzRyDivision
-	// +++ } AzRy - [01.12.2020] - Jira:ERPM-804 - Developer:ადმინი - Comment:	
+	// +++ } AzRy - [01.12.2020] - Jira:ERPM-804 - Developer:ადმინი - Comment:
+		
 ИЗ
 	РегистрНакопления.ДоходыИРасходы.Обороты(, , Авто, ) КАК ДоходыИРасходыОбороты</query>
 	</dataSet>
@@ -485,6 +504,9 @@
 				<v8:content>Periodicity</v8:content>
 			</v8:item>
 		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.Периодичность</v8:Type>
+		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 		<inputParameters>
@@ -757,6 +779,24 @@
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Проект</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
 					</dcsset:item>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>ddaa476c-d93f-4923-a16c-b5a95979dafe</dcsset:userSettingID>
@@ -897,7 +937,7 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">0:0d0ada8a-09bb-4634-bf50-199f3779dad5</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>Текст</dcscor:parameter>

@@ -2611,27 +2611,81 @@
             </extInfo>
           </items>
           <items xsi:type="form:FormGroup">
-            <name>ГруппаДатаТранспортировки</name>
-            <id>92</id>
-            <items xsi:type="form:FormField">
-              <name>ДатаНачалаТранспортировки</name>
-              <id>94</id>
-              <title>
-                <key>ka</key>
-                <value>რიცხვი, თვე და წელი    საათი  წუთი</value>
-              </title>
+            <name>ГруппаПодвал</name>
+            <id>422</id>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаДатаТранспортировки</name>
+              <id>92</id>
+              <items xsi:type="form:FormField">
+                <name>ДатаНачалаТранспортировки</name>
+                <id>94</id>
+                <title>
+                  <key>ka</key>
+                  <value>რიცხვი, თვე და წელი    საათი  წუთი</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Объект.ДатаНачалаТранспортировки</segments>
+                </dataPath>
+                <titleLocation>Top</titleLocation>
+                <extendedTooltip>
+                  <name>ДатаНачалаТранспортировкиРасширеннаяПодсказка</name>
+                  <id>96</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ДатаНачалаТранспортировкиКонтекстноеМеню</name>
+                  <id>95</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>20</width>
+                  <maxWidth>20</maxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>Объект.ДатаНачалаТранспортировки</segments>
-              </dataPath>
-              <titleLocation>Top</titleLocation>
+              <title>
+                <key>ru</key>
+                <value>Группа дата транспортировки</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ტრანსპორტირების დაწყების თარიღი</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Group transportation date</value>
+              </title>
+              <toolTip>
+                <key>ka</key>
+                <value>Группа дата транспортировки</value>
+              </toolTip>
               <extendedTooltip>
-                <name>ДатаНачалаТранспортировкиРасширеннаяПодсказка</name>
-                <id>96</id>
+                <name>ГруппаДатаТранспортировкиРасширеннаяПодсказка</name>
+                <id>93</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -2639,24 +2693,222 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <contextMenu>
-                <name>ДатаНачалаТранспортировкиКонтекстноеМеню</name>
-                <id>95</id>
-                <autoFill>true</autoFill>
-              </contextMenu>
-              <type>InputField</type>
-              <editMode>Enter</editMode>
-              <showInHeader>true</showInHeader>
-              <headerHorizontalAlign>Left</headerHorizontalAlign>
-              <showInFooter>true</showInFooter>
-              <extInfo xsi:type="form:InputFieldExtInfo">
-                <width>20</width>
-                <maxWidth>20</maxWidth>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>HorizontalIfPossible</group>
+                <representation>WeakSeparation</representation>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <showTitle>true</showTitle>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаОтступ</name>
+              <id>432</id>
+              <items xsi:type="form:Decoration">
+                <name>Декорация1</name>
+                <id>434</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Декорация1РасширеннаяПодсказка</name>
+                  <id>436</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>Декорация1КонтекстноеМеню</name>
+                  <id>435</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <width>50</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>2</height>
                 <autoMaxHeight>true</autoMaxHeight>
-                <wrap>true</wrap>
-                <chooseType>true</chooseType>
-                <typeDomainEnabled>true</typeDomainEnabled>
-                <textEdit>true</textEdit>
+                <extInfo xsi:type="form:PictureDecorationExtInfo">
+                  <fileDragMode>AsFileRef</fileDragMode>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа отступ</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа отступ</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаОтступРасширеннаяПодсказка</name>
+                <id>433</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>HorizontalIfPossible</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаИтоги</name>
+              <id>424</id>
+              <items xsi:type="form:FormField">
+                <name>ИтогСуммаНДС</name>
+                <id>426</id>
+                <title>
+                  <key>ru</key>
+                  <value>НДС</value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>დღგ</value>
+                </title>
+                <title>
+                  <key>en</key>
+                  <value>VAT</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ИтогСуммаНДСРасширеннаяПодсказка</name>
+                  <id>428</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ИтогСуммаНДСКонтекстноеМеню</name>
+                  <id>427</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <readOnly>true</readOnly>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>12</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <wrap>true</wrap>
+                  <choiceListButton>false</choiceListButton>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>ИтогВсего</name>
+                <id>429</id>
+                <title>
+                  <key>ru</key>
+                  <value>Всего</value>
+                </title>
+                <title>
+                  <key>ka</key>
+                  <value>სულ</value>
+                </title>
+                <title>
+                  <key>en</key>
+                  <value>Total</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>ИтогВсегоРасширеннаяПодсказка</name>
+                  <id>431</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ИтогВсегоКонтекстноеМеню</name>
+                  <id>430</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <readOnly>true</readOnly>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>12</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <wrap>true</wrap>
+                  <choiceListButton>false</choiceListButton>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа итоги</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа итоги</value>
+              </toolTip>
+              <readOnly>true</readOnly>
+              <extendedTooltip>
+                <name>ГруппаИтогиРасширеннаяПодсказка</name>
+                <id>425</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <backColor xsi:type="core:ColorRef">
+                  <color>Style.ИтогиФонГруппы</color>
+                </backColor>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
               </extInfo>
             </items>
             <visible>true</visible>
@@ -2666,23 +2918,15 @@
             </userVisible>
             <title>
               <key>ru</key>
-              <value>Группа дата транспортировки</value>
-            </title>
-            <title>
-              <key>ka</key>
-              <value>ტრანსპორტირების დაწყების თარიღი</value>
-            </title>
-            <title>
-              <key>en</key>
-              <value>Group transportation date</value>
+              <value>Группа подвал</value>
             </title>
             <toolTip>
-              <key>ka</key>
-              <value>Группа дата транспортировки</value>
+              <key>ru</key>
+              <value>Группа подвал</value>
             </toolTip>
             <extendedTooltip>
-              <name>ГруппаДатаТранспортировкиРасширеннаяПодсказка</name>
-              <id>93</id>
+              <name>ГруппаПодвалРасширеннаяПодсказка</name>
+              <id>423</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2692,11 +2936,9 @@
             </extendedTooltip>
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
-              <group>HorizontalIfPossible</group>
-              <representation>WeakSeparation</representation>
+              <group>AlwaysHorizontal</group>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
-              <showTitle>true</showTitle>
               <throughAlign>Auto</throughAlign>
               <currentRowUse>Auto</currentRowUse>
             </extInfo>
@@ -4750,7 +4992,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.РС_ЭлектроннаяНакладная</types>
     </valueType>
@@ -4780,7 +5022,7 @@
       <key>en</key>
       <value>INNGruzootpravitelya</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -4808,7 +5050,7 @@
       <key>en</key>
       <value>INN consignee</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -4836,7 +5078,7 @@
       <key>en</key>
       <value>founding documents</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>ValueList</types>
     </valueType>
@@ -4863,7 +5105,7 @@
       <key>ka</key>
       <value>ИННПеревозчика</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <valueType>
       <types>String</types>
       <stringQualifiers>
@@ -4883,7 +5125,7 @@
       <key>ka</key>
       <value>Эта перемещение ВА</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -4908,7 +5150,7 @@
       <key>en</key>
       <value>Create TN</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <toolTip>
       <key>ka</key>
       <value>Создать ТН</value>
@@ -4933,7 +5175,7 @@
       <key>en</key>
       <value>Create and activate TN</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <toolTip>
       <key>ka</key>
       <value>Создать и активировать ТН</value>
@@ -4958,7 +5200,7 @@
       <key>en</key>
       <value>cancel</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Отменить ТН</value>
@@ -4991,7 +5233,7 @@
       <key>en</key>
       <value>adjust</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Корректировать</value>
@@ -5024,7 +5266,7 @@
       <key>en</key>
       <value>update status</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <toolTip>
       <key>ka</key>
       <value>Обновить статус ТН</value>
@@ -5049,7 +5291,7 @@
       <key>en</key>
       <value>complete TN</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <toolTip>
       <key>ka</key>
       <value>Завершить ТН</value>
@@ -5074,7 +5316,7 @@
       <key>en</key>
       <value>TN Print</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <toolTip>
       <key>ka</key>
       <value>Печать ТН</value>
@@ -5099,7 +5341,7 @@
       <key>en</key>
       <value>fill Products</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить товары</value>
@@ -5131,7 +5373,7 @@
       <key>en</key>
       <value>Update details sending</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Обновить данные отправки</value>
@@ -5163,7 +5405,7 @@
       <key>en</key>
       <value>Edit ID</value>
     </title>
-    <id>10</id>
+    <id>1000010</id>
     <toolTip>
       <key>ru</key>
       <value>Редактировать ИД</value>
@@ -5199,7 +5441,7 @@
       <key>en</key>
       <value>activate TN</value>
     </title>
-    <id>11</id>
+    <id>1000011</id>
     <toolTip>
       <key>ka</key>
       <value>Создать и активировать ТН</value>
@@ -5228,7 +5470,7 @@
       <key>ka</key>
       <value>გადამზიდავთან გადაგზავნა</value>
     </title>
-    <id>13</id>
+    <id>1000012</id>
     <toolTip>
       <key>ru</key>
       <value>Отправить перевозчику</value>

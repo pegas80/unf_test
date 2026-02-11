@@ -1059,9 +1059,6 @@
               <userVisible>
                 <common>true</common>
               </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>Items.СписокЗапасы.CurrentData.Номенклатура</segments>
-              </dataPath>
               <extendedTooltip>
                 <name>СписокЗапасыОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка</name>
                 <id>859</id>
@@ -1114,9 +1111,6 @@
               <userVisible>
                 <common>true</common>
               </userVisible>
-              <dataPath xsi:type="form:DataPath">
-                <segments>Items.СписокЗапасы.CurrentData.Номенклатура</segments>
-              </dataPath>
               <extendedTooltip>
                 <name>СписокЗапасыОбщаяКомандаДополнительныеСведенияКоманднаяПанельРасширеннаяПодсказка</name>
                 <id>861</id>
@@ -2597,6 +2591,10 @@
             <items xsi:type="form:FormField">
               <name>НаименованиеПолное</name>
               <id>1179</id>
+              <title>
+                <key>ka</key>
+                <value>დასაბეჭდი სახელწოდება</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible/>
@@ -5676,9 +5674,6 @@
           <strikeout>false</strikeout>
         </font>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
-          <picture xsi:type="core:PictureRef">
-            <picture>CommonPicture.РазвернутьОтборы</picture>
-          </picture>
           <hyperlink>true</hyperlink>
           <pictureSize>Proportionally</pictureSize>
           <zoomable>true</zoomable>
@@ -5731,9 +5726,6 @@
             <height>4</height>
             <autoMaxHeight>true</autoMaxHeight>
             <extInfo xsi:type="form:PictureDecorationExtInfo">
-              <picture xsi:type="core:PictureRef">
-                <picture>CommonPicture.ТележкаПустая</picture>
-              </picture>
               <hyperlink>true</hyperlink>
               <pictureSize>Proportionally</pictureSize>
               <enableStartDrag>true</enableStartDrag>
@@ -7065,6 +7057,37 @@
                 <contextMenu>
                   <name>ОтборТипВидРаботКонтекстноеМеню</name>
                   <id>256</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>CheckBoxField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>ОтборТипЛицензия</name>
+                <id>1201</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <titleLocation>Right</titleLocation>
+                <extendedTooltip>
+                  <name>ОтборТипЛицензияРасширеннаяПодсказка</name>
+                  <id>1205</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ОтборТипЛицензияКонтекстноеМеню</name>
+                  <id>1204</id>
                   <autoFill>true</autoFill>
                 </contextMenu>
                 <type>CheckBoxField</type>
@@ -10652,7 +10675,12 @@
       <key>en</key>
       <value>Loading data from an external source</value>
     </toolTip>
-    <use/>
+    <use>
+      <for>
+        <value>true</value>
+        <role>Role.ПолныеПрава</role>
+      </for>
+    </use>
     <picture xsi:type="core:PictureRef">
       <picture>CommonPicture.ЗагрузкаИзФайла</picture>
     </picture>

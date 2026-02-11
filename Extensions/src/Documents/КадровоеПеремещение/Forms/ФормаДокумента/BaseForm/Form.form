@@ -60,6 +60,16 @@
               <value>Enum.ВидыОперацийКадровоеПеремещение.EnumValue.ИзменениеСпособаОплаты</value>
             </value>
           </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.ВидыОперацийКадровоеПеремещение.EnumValue.СписаниеДнейОтпуска</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.ВидыОперацийКадровоеПеремещение.EnumValue.ВидыОтпусков</value>
+            </value>
+          </choiceList>
           <backColor xsi:type="core:ColorRef">
             <color>Style.ФонУправляющегоПоля</color>
           </backColor>
@@ -198,6 +208,226 @@
           </inputHint>
         </extInfo>
       </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаСписанияОтпусков</name>
+        <id>253</id>
+        <items xsi:type="form:FormField">
+          <name>Подразделение</name>
+          <id>255</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Подразделение</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПодразделениеРасширеннаяПодсказка</name>
+            <id>257</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПодразделениеКонтекстноеМеню</name>
+            <id>256</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаПериодОтпуска</name>
+          <id>264</id>
+          <items xsi:type="form:FormField">
+            <name>ДатаНачалаОтпуска</name>
+            <id>258</id>
+            <title>
+              <key>ru</key>
+              <value>Период с</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ДатаНачалаОтпуска</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ДатаНачалаОтпускаРасширеннаяПодсказка</name>
+              <id>260</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДатаНачалаОтпускаКонтекстноеМеню</name>
+              <id>259</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ДатаОкончанияОтпуска</name>
+            <id>261</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ДатаОкончанияОтпуска</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ДатаОкончанияОтпускаРасширеннаяПодсказка</name>
+              <id>263</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ДатаОкончанияОтпускаКонтекстноеМеню</name>
+              <id>262</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа период отпуска</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа период отпуска</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаПериодОтпускаРасширеннаяПодсказка</name>
+            <id>265</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ЗаполнитьпоОстаткамОтпусков</name>
+          <id>281</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ЗаполнитьпоОстаткамОтпусковРасширеннаяПодсказка</name>
+            <id>282</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа списания отпусков</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа списания отпусков</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ГруппаСписанияОтпусковРасширеннаяПодсказка</name>
+          <id>254</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -227,6 +457,7 @@
       </extendedTooltip>
       <type>UsualGroup</type>
       <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
         <showLeftMargin>true</showLeftMargin>
         <throughAlign>Auto</throughAlign>
         <currentRowUse>Auto</currentRowUse>
@@ -590,9 +821,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнееПодразделение</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнееПодразделениеExtendedTooltip</name>
               <id>117</id>
@@ -718,9 +946,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежняяДолжность</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежняяДолжностьExtendedTooltip</name>
               <id>120</id>
@@ -846,9 +1071,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнееКоличествоЗанимаемыхСтавок</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнееКоличествоЗанимаемыхСтавокExtendedTooltip</name>
               <id>123</id>
@@ -976,9 +1198,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнийГрафикРаботы</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнийГрафикРаботыExtendedTooltip</name>
               <id>126</id>
@@ -1104,9 +1323,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнийУчастникПенсионногоФонда</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнийУчастникПенсионногоФондаРасширеннаяПодсказка</name>
               <id>228</id>
@@ -1207,9 +1423,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнийВидУдержанияПФ</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнийВидУдержанияПФРасширеннаяПодсказка</name>
               <id>239</id>
@@ -1324,9 +1537,6 @@
             <userVisible>
               <common>true</common>
             </userVisible>
-            <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Сотрудники.ПрежнийУчаствуетДобровольно</segments>
-            </dataPath>
             <extendedTooltip>
               <name>СотрудникиПрежнийУчаствуетДобровольноРасширеннаяПодсказка</name>
               <id>244</id>
@@ -1412,6 +1622,181 @@
           <type>ColumnGroup</type>
           <extInfo xsi:type="form:ColumnGroupExtInfo">
             <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>СотрудникиГруппаСписаниеОтпусков</name>
+          <id>272</id>
+          <items xsi:type="form:FormGroup">
+            <name>СотрудникиВидыОтпусков</name>
+            <id>277</id>
+            <items xsi:type="form:FormField">
+              <name>СотрудникиВидОтпуска</name>
+              <id>269</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.Сотрудники.ВидОтпуска</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>СотрудникиВидОтпускаРасширеннаяПодсказка</name>
+                <id>271</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>СотрудникиВидОтпускаКонтекстноеМеню</name>
+                <id>270</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Сотрудники виды отпусков</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Сотрудники виды отпусков</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>СотрудникиВидыОтпусковРасширеннаяПодсказка</name>
+              <id>278</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>ColumnGroup</type>
+            <extInfo xsi:type="form:ColumnGroupExtInfo">
+              <group>Vertical</group>
+              <showTitle>true</showTitle>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>КоличествоДней</name>
+            <id>279</id>
+            <items xsi:type="form:FormField">
+              <name>СотрудникиКоличествоДней</name>
+              <id>266</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.Сотрудники.КоличествоДней</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>СотрудникиКоличествоДнейРасширеннаяПодсказка</name>
+                <id>268</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>СотрудникиКоличествоДнейКонтекстноеМеню</name>
+                <id>267</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Количество дней</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Количество дней</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>КоличествоДнейРасширеннаяПодсказка</name>
+              <id>280</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>ColumnGroup</type>
+            <extInfo xsi:type="form:ColumnGroupExtInfo">
+              <group>Vertical</group>
+              <showTitle>true</showTitle>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Сотрудники группа списание отпусков</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Сотрудники группа списание отпусков</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>СотрудникиГруппаСписаниеОтпусковРасширеннаяПодсказка</name>
+            <id>273</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>ColumnGroup</type>
+          <extInfo xsi:type="form:ColumnGroupExtInfo">
             <showTitle>true</showTitle>
           </extInfo>
         </items>
@@ -2999,7 +3384,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетПоДвижениям</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -3028,7 +3412,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ЗаполнениеОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -3056,7 +3439,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетыОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -3120,7 +3502,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.КадровоеПеремещение</types>
     </valueType>
@@ -3135,192 +3517,6 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <savedData>true</savedData>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Сотрудники</segments>
-      </tablePath>
-      <columns>
-        <name>ПрежнееПодразделение</name>
-        <title>
-          <key>ru</key>
-          <value>Прежнее подразделение</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა ქვეგანყოფილება</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>former division</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>CatalogRef.СтруктурныеЕдиницы</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-        <functionalOptions>FunctionalOption.УчетПоНесколькимПодразделениям</functionalOptions>
-      </columns>
-      <columns>
-        <name>ПрежняяДолжность</name>
-        <title>
-          <key>ru</key>
-          <value>Прежняя должность</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა თანამდებობა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>former position</value>
-        </title>
-        <id>2</id>
-        <valueType>
-          <types>CatalogRef.Должности</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПрежнееКоличествоЗанимаемыхСтавок</name>
-        <title>
-          <key>ru</key>
-          <value>Прежн. ставок</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა განაკვეთები</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Still. rates</value>
-        </title>
-        <id>3</id>
-        <valueType>
-          <types>Number</types>
-          <numberQualifiers>
-            <precision>15</precision>
-            <scale>2</scale>
-          </numberQualifiers>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПрежнийГрафикРаботы</name>
-        <title>
-          <key>ru</key>
-          <value>Прежний график</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა გრაფიკი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The former schedule</value>
-        </title>
-        <id>4</id>
-        <valueType>
-          <types>CatalogRef.ГрафикиРаботы</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПрежнийУчастникПенсионногоФонда</name>
-        <title>
-          <key>ru</key>
-          <value>Прежний участник пенсионного фонда</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა საპენსიო ფონდის მონაწილე</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>A former member of the pension fund</value>
-        </title>
-        <id>5</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПрежнийВидУдержанияПФ</name>
-        <title>
-          <key>ru</key>
-          <value>Прежний вид удержания ПФ</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა საპენსიო ფონდის დაკავების ტიპი</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The former type of PF deduction</value>
-        </title>
-        <id>6</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ПрежнийУчаствуетДобровольно</name>
-        <title>
-          <key>ru</key>
-          <value>Прежний участвует добровольно</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>წინა ჩართულია ნებაყოფლობით</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>The former participates voluntarily</value>
-        </title>
-        <id>7</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
   </attributes>
   <attributes>
     <name>ОсновныеРеквизиты</name>
@@ -3336,7 +3532,7 @@
       <key>en</key>
       <value>Key details</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3362,7 +3558,7 @@
       <key>en</key>
       <value>Name of the table</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3388,7 +3584,7 @@
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers>
@@ -3416,7 +3612,7 @@
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -3441,7 +3637,7 @@
       <key>en</key>
       <value>Default currency</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -3466,7 +3662,7 @@
       <key>en</key>
       <value>Разрешено проведение</value>
     </title>
-    <id>9</id>
+    <id>1000007</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3491,7 +3687,7 @@
       <key>en</key>
       <value>Maintain staffing</value>
     </title>
-    <id>11</id>
+    <id>1000008</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3516,7 +3712,7 @@
       <key>en</key>
       <value>Основное подразделение</value>
     </title>
-    <id>12</id>
+    <id>1000009</id>
     <valueType>
       <types>CatalogRef.СтруктурныеЕдиницы</types>
     </valueType>
@@ -3541,7 +3737,7 @@
       <key>en</key>
       <value>Current employee</value>
     </title>
-    <id>7</id>
+    <id>1000010</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3556,7 +3752,7 @@
       <key>ru</key>
       <value>Использовать только регламентированного плана счетов</value>
     </title>
-    <id>13</id>
+    <id>1000011</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3577,7 +3773,7 @@
       <key>ka</key>
       <value>შევსება</value>
     </title>
-    <id>2</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить начисления удержания</value>
@@ -3610,7 +3806,7 @@
       <key>en</key>
       <value>Insert</value>
     </title>
-    <id>1</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить налоги на доходы</value>

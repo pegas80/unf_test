@@ -126,7 +126,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Склад Получатель</v8:content>
+					<v8:content>Склад получатель</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
@@ -214,21 +214,27 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyНаименованияПоставщиков</dataPath>
+			<field>AzRyНаименованияПоставщиков</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyШтрихкодыНоменклатуры</dataPath>
+			<field>AzRyШтрихкодыНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>AzRyПроект</dataPath>
 			<field>AzRyПроект</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>(AzRy) Проект</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>(AzRy) პროექტი</v8:content>
-				</v8:item>
-			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AzRyПартииНоменклатуры</dataPath>
+			<field>AzRyПартииНоменклатуры</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -263,7 +269,6 @@
 	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
 	,ЗапасыНаСкладахОстатки.AzRyПроект КАК AzRyПроект
 	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	
-	
 ПОМЕСТИТЬ ОстаткиОтправителя
 ИЗ
 	РегистрСведений.МинимальныеОстаткиСклада.СрезПоследних(, ) КАК МинимальныеОстаткиСкладаСрезПоследних
@@ -281,21 +286,34 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ОстаткиПолучателя.СтруктурнаяЕдиницаПолучатель,
-	ОстаткиПолучателя.Номенклатура,
+	ОстаткиПолучателя.СтруктурнаяЕдиницаПолучатель КАК СтруктурнаяЕдиницаПолучатель,
+	ОстаткиПолучателя.Номенклатура КАК Номенклатура,
 	ЕСТЬNULL(ОстаткиПолучателя.ОстатокПолучателя, 0) КАК ОстатокПолучателяКон,
 	ЕСТЬNULL(ОстаткиПолучателя.МинимальныйОстатокПолучателя, 0) КАК МинимальныйОстатокПолучателяКон,
-	ОстаткиОтправителя.СтруктурнаяЕдиницаОтправитель,
-	ЕСТЬNULL(ОстаткиОтправителя.ОстатокОтправителя, 0) КАК ОстатокОтправителяКон,
-	ЕСТЬNULL(ОстаткиОтправителя.МинимальныйОстатокОтправителя, 0) КАК МинимальныйОстатокОтправителяКон
+	NULL КАК СтруктурнаяЕдиницаОтправитель,
+	0 КАК ОстатокОтправителяКон,
+	0 КАК МинимальныйОстатокОтправителяКон
 	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
 	,ОстаткиПолучателя.AzRyПроект КАК AzRyПроект
 	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	
-	
 ИЗ
 	ОстаткиПолучателя КАК ОстаткиПолучателя
-		ЛЕВОЕ СОЕДИНЕНИЕ ОстаткиОтправителя КАК ОстаткиОтправителя
-		ПО ОстаткиПолучателя.Номенклатура = ОстаткиОтправителя.Номенклатура</query>
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	ОстаткиОтправителя.Номенклатура,
+	0,
+	0,
+	ОстаткиОтправителя.СтруктурнаяЕдиницаОтправитель,
+	ЕСТЬNULL(ОстаткиОтправителя.ОстатокОтправителя, 0),
+	ЕСТЬNULL(ОстаткиОтправителя.МинимальныйОстатокОтправителя, 0)
+	// +++ { AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:
+	,ОстаткиОтправителя.AzRyПроект КАК AzRyПроект
+	// +++ } AzRy - [01.01.0001] - Jira: - Developer:ადმინი - Comment:	
+ИЗ
+	ОстаткиОтправителя КАК ОстаткиОтправителя</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>ОтклонениеСкладаПолучателя</dataPath>
@@ -526,7 +544,7 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">0:0c44fdea-7b81-45be-87f5-d64456a9d379</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
@@ -557,7 +575,7 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">0:0c44fdea-7b81-45be-87f5-d64456a9d379</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInOverall>DontUse</dcsset:useInOverall>

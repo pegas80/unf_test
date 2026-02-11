@@ -1426,9 +1426,6 @@
           <userVisible>
             <common>true</common>
           </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Запасы.СуммаСкидки</segments>
-          </dataPath>
           <toolTip>
             <key>ru</key>
             <value>Сумма скидки</value>
@@ -1894,6 +1891,46 @@
             <textEdit>true</textEdit>
           </extInfo>
         </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыКонтрагент</name>
+          <id>471</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Запасы.Контрагент</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗапасыКонтрагентРасширеннаяПодсказка</name>
+            <id>473</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыКонтрагентКонтекстноеМеню</name>
+            <id>472</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
         <autoCommandBar>
           <name>ЗапасыКоманднаяПанель</name>
           <id>17</id>
@@ -1918,7 +1955,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Copy</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1943,7 +1979,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Change</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1968,7 +2003,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.Delete</commandName>
               <representation>Picture</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2039,7 +2073,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.SortListAsc</commandName>
               <representation>Auto</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2064,7 +2097,6 @@
                   <horizontalAlign>Left</horizontalAlign>
                 </extInfo>
               </extendedTooltip>
-              <commandName>Form.Item.Запасы.StandardCommand.SortListDesc</commandName>
               <representation>Auto</representation>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -4633,6 +4665,47 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
+  <items xsi:type="form:FormGroup">
+    <name>КомандыОбычные</name>
+    <id>469</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Команды обычные</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ბრძანებები ჩვეულებრივი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>regular commands</value>
+    </title>
+    <extendedTooltip>
+      <name>КомандыОбычныеРасширеннаяПодсказка</name>
+      <id>470</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
@@ -4686,7 +4759,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтправитьПоЭлектроннойПочте</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -4798,7 +4870,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.СтруктураПодчиненности</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -4826,7 +4897,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетПоДвижениям</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -4855,7 +4925,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ЗаполнениеОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -4883,7 +4952,6 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>CommonCommand.ОтчетыОбъекта</commandName>
         <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -4998,7 +5066,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Объект</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DocumentObject.ОтчетОРозничныхПродажах</types>
     </valueType>
@@ -5013,40 +5081,6 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <savedData>true</savedData>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Запасы</segments>
-      </tablePath>
-      <columns>
-        <name>СуммаСкидки</name>
-        <title>
-          <key>ru</key>
-          <value>Сумма скидки</value>
-        </title>
-        <title>
-          <key>ka</key>
-          <value>ფასდაკლების თანხა</value>
-        </title>
-        <title>
-          <key>en</key>
-          <value>Discount amount</value>
-        </title>
-        <id>1</id>
-        <valueType>
-          <types>Number</types>
-          <numberQualifiers>
-            <precision>15</precision>
-            <scale>2</scale>
-          </numberQualifiers>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
   </attributes>
   <attributes>
     <name>ИспользоватьПодключаемоеОборудование</name>
@@ -5062,7 +5096,7 @@
       <key>en</key>
       <value>Использовать подключаемое оборудование</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5087,7 +5121,7 @@
       <key>en</key>
       <value>Company</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -5112,7 +5146,7 @@
       <key>en</key>
       <value>Разрешено проведение</value>
     </title>
-    <id>6</id>
+    <id>1000004</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5137,7 +5171,7 @@
       <key>en</key>
       <value>Document Date</value>
     </title>
-    <id>8</id>
+    <id>1000005</id>
     <valueType>
       <types>Date</types>
       <dateQualifiers>
@@ -5165,7 +5199,7 @@
       <key>en</key>
       <value>Цены и валюта</value>
     </title>
-    <id>9</id>
+    <id>1000006</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -5191,7 +5225,7 @@
       <key>en</key>
       <value>Exchange Rate</value>
     </title>
-    <id>10</id>
+    <id>1000007</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5221,7 +5255,7 @@
       <key>en</key>
       <value>Кратность</value>
     </title>
-    <id>11</id>
+    <id>1000008</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5250,7 +5284,7 @@
       <key>en</key>
       <value>Кратность национальная валюта</value>
     </title>
-    <id>12</id>
+    <id>1000009</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5279,7 +5313,7 @@
       <key>en</key>
       <value>The course of the national currency</value>
     </title>
-    <id>13</id>
+    <id>1000010</id>
     <valueType>
       <types>Number</types>
       <numberQualifiers>
@@ -5309,7 +5343,7 @@
       <key>en</key>
       <value>Учет валютных операций</value>
     </title>
-    <id>14</id>
+    <id>1000011</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5334,7 +5368,7 @@
       <key>en</key>
       <value>Use automatic discounts</value>
     </title>
-    <id>3</id>
+    <id>1000012</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5359,7 +5393,7 @@
       <key>en</key>
       <value>Поддерживаемые типы подключаемого оборудования</value>
     </title>
-    <id>5</id>
+    <id>1000013</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -5385,7 +5419,7 @@
       <key>en</key>
       <value>Orders to use in retail</value>
     </title>
-    <id>15</id>
+    <id>1000014</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -5410,7 +5444,7 @@
       <key>en</key>
       <value>Использовать серийные номера остатки</value>
     </title>
-    <id>16</id>
+    <id>1000015</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -5429,7 +5463,7 @@
       <key>ka</key>
       <value> ГИСМ სტატუსი</value>
     </title>
-    <id>18</id>
+    <id>1000016</id>
     <valueType>
       <types>EnumRef.СтатусыИнформированияГИСМ</types>
     </valueType>
@@ -5454,7 +5488,7 @@
       <key>en</key>
       <value>Статус ГИСМПредставление</value>
     </title>
-    <id>19</id>
+    <id>1000017</id>
     <valueType>
       <types>FormattedString</types>
     </valueType>
@@ -5479,7 +5513,7 @@
       <key>en</key>
       <value>Поиск по штрихкоду</value>
     </title>
-    <id>2</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Поиск по штрихкоду</value>
@@ -5516,7 +5550,7 @@
       <key>en</key>
       <value>Подобрать</value>
     </title>
-    <id>1</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Подобрать</value>
@@ -5549,7 +5583,7 @@
       <key>en</key>
       <value>Заполнить по остаткам на складе</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Команда заполнить по остаткам на складе</value>
@@ -5582,7 +5616,7 @@
       <key>en</key>
       <value>Settings</value>
     </title>
-    <id>5</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Настройка документа</value>
@@ -5619,7 +5653,7 @@
       <key>en</key>
       <value>Weight</value>
     </title>
-    <id>6</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Получить вес</value>
@@ -5656,7 +5690,7 @@
       <key>en</key>
       <value>Загрузить данные из ТСД</value>
     </title>
-    <id>7</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Загрузить данные из ТСД</value>
@@ -5692,7 +5726,7 @@
       <key>en</key>
       <value>Fill the buyer ordered</value>
     </title>
-    <id>3</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Заполнить по заказу покупателя</value>
@@ -5726,7 +5760,7 @@
       <key>en</key>
       <value>Передать в ЕГАИС</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Передача данных о продажах немаркируемой продукции в ЕГАИС</value>
@@ -5762,7 +5796,7 @@
       <key>en</key>
       <value>Fill in the data exchange</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>П м заполнить данными обмена</value>

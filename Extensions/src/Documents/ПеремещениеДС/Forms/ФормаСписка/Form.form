@@ -85,7 +85,7 @@
         <enabled>true</enabled>
         <userVisible/>
         <dataPath xsi:type="form:DataPath">
-          <segments>Список.Ref</segments>
+          <segments>Список.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>СсылкаРасширеннаяПодсказка</name>
@@ -121,7 +121,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Список.Date</segments>
+          <segments>Список.Дата</segments>
         </dataPath>
         <defaultItem>true</defaultItem>
         <extendedTooltip>
@@ -172,7 +172,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Список.Number</segments>
+          <segments>Список.Номер</segments>
         </dataPath>
         <extendedTooltip>
           <name>СписокНомерExtendedTooltip</name>
@@ -199,6 +199,42 @@
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <horizontalStretch>false</horizontalStretch>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>НомерВходящегоДокумента</name>
+        <id>224</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Список.НомерВходящегоДокумента</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>НомерВходящегоДокументаРасширеннаяПодсказка</name>
+          <id>226</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НомерВходящегоДокументаКонтекстноеМеню</name>
+          <id>225</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -259,7 +295,7 @@
           </title>
           <title>
             <key>ka</key>
-            <value>Откуда</value>
+            <value>საიდანაც</value>
           </title>
           <title>
             <key>en</key>
@@ -587,6 +623,18 @@
         <items xsi:type="form:FormField">
           <name>СписокСуммаДокумента</name>
           <id>12</id>
+          <title>
+            <key>en</key>
+            <value>Amount</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>თანხა</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Сумма</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1083,9 +1131,6 @@
           <strikeout>false</strikeout>
         </font>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
-          <picture xsi:type="core:PictureRef">
-            <picture>CommonPicture.РазвернутьОтборы</picture>
-          </picture>
           <hyperlink>true</hyperlink>
           <pictureSize>Proportionally</pictureSize>
           <zoomable>true</zoomable>
@@ -1217,26 +1262,6 @@
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
                 <textEdit>true</textEdit>
-                <choiceList>
-                  <value xsi:type="core:StringValue">
-                    <value>Из кассы на счет</value>
-                  </value>
-                </choiceList>
-                <choiceList>
-                  <value xsi:type="core:StringValue">
-                    <value>Со счета в кассу</value>
-                  </value>
-                </choiceList>
-                <choiceList>
-                  <value xsi:type="core:StringValue">
-                    <value>Между счетами</value>
-                  </value>
-                </choiceList>
-                <choiceList>
-                  <value xsi:type="core:StringValue">
-                    <value>Между кассами</value>
-                  </value>
-                </choiceList>
                 <inputHint>
                   <key>ru</key>
                   <value>Операция</value>
@@ -2844,9 +2869,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка</name>
           <id>167</id>
@@ -2916,9 +2938,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетПоДвижениямРасширеннаяПодсказка</name>
           <id>84</id>
@@ -2945,9 +2964,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка</name>
           <id>82</id>
@@ -2973,9 +2989,6 @@
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
-        </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка</name>
           <id>86</id>
@@ -3129,7 +3142,7 @@
   <showCloseButton>true</showCloseButton>
   <attributes>
     <name>Список</name>
-    <id>1</id>
+    <id>1000001</id>
     <valueType>
       <types>DynamicList</types>
     </valueType>
@@ -3140,13 +3153,13 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>Список.Ref</segments>
-    </notDefaultUseAlwaysAttributes>
-    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.ВалютаДенежныхСредств</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.ВидОперации</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>Список.Ссылка</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.СчетКассаДляОтбора</segments>
@@ -3160,22 +3173,22 @@
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	ДокументПеремещениеДС.Ссылка,
-	ДокументПеремещениеДС.ПометкаУдаления,
-	ДокументПеремещениеДС.Номер,
-	ДокументПеремещениеДС.Дата,
-	ДокументПеремещениеДС.Проведен,
-	ДокументПеремещениеДС.Организация,
-	ДокументПеремещениеДС.Комментарий,
-		ДокументПеремещениеДС.Ссылка.ЗапретРедактированияДокументов КАК ЗапретРедактированияДокументов,
+	ДокументПеремещениеДС.Ссылка КАК Ссылка,
+	ДокументПеремещениеДС.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументПеремещениеДС.Номер КАК Номер,
+	ДокументПеремещениеДС.Дата КАК Дата,
+	ДокументПеремещениеДС.Проведен КАК Проведен,
+	ДокументПеремещениеДС.Организация КАК Организация,
+	ДокументПеремещениеДС.Комментарий КАК Комментарий,
+	ДокументПеремещениеДС.Ссылка.ЗапретРедактированияДокументов КАК ЗапретРедактированияДокументов,
 	ВЫБОР
 		КОГДА ДокументПеремещениеДС.Ссылка ССЫЛКА Документ.ПеремещениеДС
 			ТОГДА ДокументПеремещениеДС.Ссылка.СуммаДокумента
 		ИНАЧЕ ДокументПеремещениеДС.Сумма
 	КОНЕЦ КАК СуммаДокумента,
 	ДокументПеремещениеДС.Валюта КАК ВалютаДенежныхСредств,
-	ДокументПеремещениеДС.Статья,
-	ДокументПеремещениеДС.ТипДенежныхСредств,
+	ДокументПеремещениеДС.Статья КАК Статья,
+	ДокументПеремещениеДС.ТипДенежныхСредств КАК ТипДенежныхСредств,
 	ВЫБОР
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ВзносНаличными)
 			ТОГДА ЗНАЧЕНИЕ(Справочник.БанковскиеСчета.ПустаяСсылка)
@@ -3188,7 +3201,7 @@
 			ТОГДА ЗНАЧЕНИЕ(Справочник.Кассы.ПустаяСсылка)
 		ИНАЧЕ ДокументПеремещениеДС.Касса
 	КОНЕЦ КАК Касса,
-	ДокументПеремещениеДС.ТипДенежныхСредствПолучатель,
+	ДокументПеремещениеДС.ТипДенежныхСредствПолучатель КАК ТипДенежныхСредствПолучатель,
 	ВЫБОР
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ВзносНаличными)
 				ИЛИ ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ПереводСДругогоСчета)
@@ -3200,30 +3213,30 @@
 			ТОГДА ДокументПеремещениеДС.Касса
 		ИНАЧЕ ДокументПеремещениеДС.КассаПолучатель
 	КОНЕЦ КАК КассаПолучатель,
-	ДокументПеремещениеДС.Автор,
-	ДокументПеремещениеДС.ХозяйственнаяОперация,
+	ДокументПеремещениеДС.Автор КАК Автор,
+	ДокументПеремещениеДС.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
 	ВЫБОР
 		КОГДА ДокументПеремещениеДС.ТипДенежныхСредств = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Наличные)
 				И ДокументПеремещениеДС.ТипДенежныхСредствПолучатель = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Наличные)
-			ТОГДА &quot;Между кассами&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.КассаКасса) //&quot;Между кассами&quot;
 		КОГДА ДокументПеремещениеДС.ТипДенежныхСредств = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Наличные)
 				И ДокументПеремещениеДС.ТипДенежныхСредствПолучатель = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Безналичные)
-			ТОГДА &quot;Из кассы на счет&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.КассаБанк) //&quot;Из кассы на счет&quot;
 		КОГДА ДокументПеремещениеДС.ТипДенежныхСредств = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Безналичные)
 				И ДокументПеремещениеДС.ТипДенежныхСредствПолучатель = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Безналичные)
-			ТОГДА &quot;Между счетами&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.БанкБанк) //&quot;Между счетами&quot;
 		КОГДА ДокументПеремещениеДС.ТипДенежныхСредств = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Безналичные)
 				И ДокументПеремещениеДС.ТипДенежныхСредствПолучатель = ЗНАЧЕНИЕ(Перечисление.ТипыДенежныхСредств.Наличные)
-			ТОГДА &quot;Со счета в кассу&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.БанкКасса) //&quot;Со счета в кассу&quot;
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРасходСоСчета.ПереводНаДругойСчет)
 				ИЛИ ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ПереводСДругогоСчета)
-			ТОГДА &quot;Между счетами&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.БанкБанк) //&quot;Между счетами&quot;
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеВКассу.ПолучениеНаличныхВБанке)
 				ИЛИ ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРасходСоСчета.СнятиеНаличных)
-			ТОГДА &quot;Со счета в кассу&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.БанкКасса) //&quot;Со счета в кассу&quot;
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ВзносНаличными)
 				ИЛИ ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРасходИзКассы.ВзносНаличнымиВБанк)
-			ТОГДА &quot;Из кассы на счет&quot;
+			ТОГДА Значение(Перечисление.ВидыОперацийПеремещенияДС.КассаБанк) //&quot;Из кассы на счет&quot;
 	КОНЕЦ КАК ВидОперации,
 	ВЫБОР
 		КОГДА ДокументПеремещениеДС.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеНаСчет.ВзносНаличными)
@@ -3260,7 +3273,8 @@
 				ИЛИ ДокументПеремещениеДС.Ссылка ССЫЛКА Документ.РасходИзКассы
 			ТОГДА &quot;Расход&quot;
 		ИНАЧЕ &quot;Перемещение&quot;
-	КОНЕЦ КАК ТипДвижения
+	КОНЕЦ КАК ТипДвижения,
+	ДокументПеремещениеДС.НомерВходящегоДокумента КАК НомерВходящегоДокумента
 ИЗ
 	ЖурналДокументов.ДокументыПоБанкуИКассе КАК ДокументПеремещениеДС
 ГДЕ
@@ -3293,7 +3307,7 @@
       <key>en</key>
       <value>Данные меток</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <valueType>
       <types>ValueTable</types>
     </valueType>
@@ -3429,7 +3443,7 @@
       <key>en</key>
       <value>Operation</value>
     </title>
-    <id>3</id>
+    <id>1000003</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3458,7 +3472,7 @@
       <key>en</key>
       <value>Author</value>
     </title>
-    <id>4</id>
+    <id>1000004</id>
     <valueType>
       <types>CatalogRef.Пользователи</types>
     </valueType>
@@ -3486,7 +3500,7 @@
       <key>en</key>
       <value>Selection Period</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <valueType>
       <types>StandardPeriod</types>
     </valueType>
@@ -3514,7 +3528,7 @@
       <key>en</key>
       <value>Представление периода</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <valueType>
       <types>String</types>
       <stringQualifiers/>
@@ -3540,7 +3554,7 @@
       <key>en</key>
       <value>Organization</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <valueType>
       <types>CatalogRef.Организации</types>
     </valueType>
@@ -3569,7 +3583,7 @@
       <key>en</key>
       <value>Counterparty</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <valueType>
       <types>CatalogRef.Контрагенты</types>
     </valueType>
@@ -3597,7 +3611,7 @@
       <key>en</key>
       <value>currency selection</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <valueType>
       <types>CatalogRef.Валюты</types>
     </valueType>
@@ -3625,7 +3639,7 @@
       <key>en</key>
       <value>The selection of the account and cash desk</value>
     </title>
-    <id>10</id>
+    <id>1000010</id>
     <valueType>
       <types>CatalogRef.БанковскиеСчета</types>
       <types>CatalogRef.Кассы</types>
@@ -3654,7 +3668,7 @@
       <key>en</key>
       <value>The selection by the recipient and the ticket office</value>
     </title>
-    <id>11</id>
+    <id>1000011</id>
     <valueType>
       <types>CatalogRef.БанковскиеСчета</types>
       <types>CatalogRef.Кассы</types>
@@ -3683,7 +3697,7 @@
       <key>en</key>
       <value>news</value>
     </title>
-    <id>12</id>
+    <id>1000012</id>
     <valueType/>
     <view>
       <common>true</common>
@@ -3702,7 +3716,7 @@
       <key>en</key>
       <value>Функционал запрета редактирования документов</value>
     </title>
-    <id>13</id>
+    <id>1000013</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -3727,7 +3741,7 @@
       <key>en</key>
       <value>Создать по шаблону</value>
     </title>
-    <id>1</id>
+    <id>1000001</id>
     <toolTip>
       <key>ru</key>
       <value>Создать по шаблону</value>
@@ -3763,7 +3777,7 @@
       <key>en</key>
       <value>Go to the sheet</value>
     </title>
-    <id>2</id>
+    <id>1000002</id>
     <toolTip>
       <key>ru</key>
       <value>Ведомость перейти</value>
@@ -3795,7 +3809,7 @@
       <key>en</key>
       <value>between the cash registers</value>
     </title>
-    <id>4</id>
+    <id>1000003</id>
     <toolTip>
       <key>ru</key>
       <value>Перемещение из кассы на счет</value>
@@ -3827,7 +3841,7 @@
       <key>en</key>
       <value>From the cash to the account</value>
     </title>
-    <id>3</id>
+    <id>1000004</id>
     <toolTip>
       <key>ru</key>
       <value>Из кассы на счет</value>
@@ -3859,7 +3873,7 @@
       <key>en</key>
       <value>From the account in cash</value>
     </title>
-    <id>5</id>
+    <id>1000005</id>
     <toolTip>
       <key>ru</key>
       <value>Со счета в кассу</value>
@@ -3891,7 +3905,7 @@
       <key>en</key>
       <value>Between accounts</value>
     </title>
-    <id>6</id>
+    <id>1000006</id>
     <toolTip>
       <key>ru</key>
       <value>Со счета на счет</value>
@@ -3923,7 +3937,7 @@
       <key>en</key>
       <value>at the expense of</value>
     </title>
-    <id>7</id>
+    <id>1000007</id>
     <toolTip>
       <key>ru</key>
       <value>Из кассы на счет</value>
@@ -3955,7 +3969,7 @@
       <key>en</key>
       <value>from the account</value>
     </title>
-    <id>8</id>
+    <id>1000008</id>
     <toolTip>
       <key>ru</key>
       <value>Со счета в кассу</value>
@@ -3987,7 +4001,7 @@
       <key>en</key>
       <value>at the expense of</value>
     </title>
-    <id>9</id>
+    <id>1000009</id>
     <toolTip>
       <key>ru</key>
       <value>Со счета на счет</value>
