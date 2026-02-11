@@ -57,6 +57,20 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>რეგისტრეტორი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Registrar</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
@@ -186,6 +200,27 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СостояниеЗаказа</dataPath>
 			<field>СостояниеЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние заказа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შეკვეთის სტატუსი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Order status</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -194,27 +229,28 @@
 			ТОГДА NULL
 		ИНАЧЕ ЗаказыПоставщикамОстаткиИОбороты.Регистратор
 	КОНЕЦ КАК Регистратор,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодСекунда,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодМинута,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодЧас,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодДень,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодНеделя,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодДекада,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодМесяц,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодКвартал,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодПолугодие,
-	ЗаказыПоставщикамОстаткиИОбороты.ПериодГод,
-	ЗаказыПоставщикамОстаткиИОбороты.Организация,
-	ЗаказыПоставщикамОстаткиИОбороты.ЗаказПоставщику,
-	ЗаказыПоставщикамОстаткиИОбороты.Номенклатура,
-	ЗаказыПоставщикамОстаткиИОбороты.Характеристика,
-	ЗаказыПоставщикамОстаткиИОбороты.КоличествоНачальныйОстаток,
-	ЗаказыПоставщикамОстаткиИОбороты.КоличествоКонечныйОстаток,
-	ЗаказыПоставщикамОстаткиИОбороты.КоличествоОборот,
-	ЗаказыПоставщикамОстаткиИОбороты.КоличествоПриход,
-	ЗаказыПоставщикамОстаткиИОбороты.КоличествоРасход,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодСекунда КАК ПериодСекунда,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодМинута КАК ПериодМинута,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодЧас КАК ПериодЧас,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодДень КАК ПериодДень,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодНеделя КАК ПериодНеделя,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодДекада КАК ПериодДекада,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодМесяц КАК ПериодМесяц,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодКвартал КАК ПериодКвартал,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодПолугодие КАК ПериодПолугодие,
+	ЗаказыПоставщикамОстаткиИОбороты.ПериодГод КАК ПериодГод,
+	ЗаказыПоставщикамОстаткиИОбороты.Организация КАК Организация,
+	ЗаказыПоставщикамОстаткиИОбороты.ЗаказПоставщику КАК ЗаказПоставщику,
+	ЗаказыПоставщикамОстаткиИОбороты.Номенклатура КАК Номенклатура,
+	ЗаказыПоставщикамОстаткиИОбороты.Характеристика КАК Характеристика,
+	ЗаказыПоставщикамОстаткиИОбороты.КоличествоНачальныйОстаток КАК КоличествоНачальныйОстаток,
+	ЗаказыПоставщикамОстаткиИОбороты.КоличествоКонечныйОстаток КАК КоличествоКонечныйОстаток,
+	ЗаказыПоставщикамОстаткиИОбороты.КоличествоОборот КАК КоличествоОборот,
+	ЗаказыПоставщикамОстаткиИОбороты.КоличествоПриход КАК КоличествоПриход,
+	ЗаказыПоставщикамОстаткиИОбороты.КоличествоРасход КАК КоличествоРасход,
 	ЗаказыПоставщикамОстаткиИОбороты.ЗаказПоставщику.Контрагент КАК Контрагент,
-	ЗаказыПоставщикамОстаткиИОбороты.ЗаказПоставщику.СостояниеЗаказа КАК СостояниеЗаказа
+	ЗаказыПоставщикамОстаткиИОбороты.ЗаказПоставщику.СостояниеЗаказа КАК СостояниеЗаказа,
+	ЗаказыПоставщикамОстаткиИОбороты.Проект КАК Проект
 ИЗ
 	РегистрНакопления.ЗаказыПоставщикам.ОстаткиИОбороты(, , Авто, Движения, ) КАК ЗаказыПоставщикамОстаткиИОбороты</query>
 	</dataSet>
@@ -369,22 +405,87 @@
 					<dcsset:field>Номенклатура</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
-					<dcsset:title>Количество</dcsset:title>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>რაოდენობა</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Amount</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>КоличествоНачальныйОстаток</dcsset:field>
-						<dcsset:title>нач. остаток</dcsset:title>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>нач. остаток</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>საწყისი ნაშთი</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Initial balance</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>КоличествоПриход</dcsset:field>
-						<dcsset:title>заказано</dcsset:title>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>заказано</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>შეკვეთილია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Ordered</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>КоличествоРасход</dcsset:field>
-						<dcsset:title>поступило</dcsset:title>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>поступило</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>მიღებულია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Received</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>КоличествоКонечныйОстаток</dcsset:field>
-						<dcsset:title>кон. остаток</dcsset:title>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>кон. остаток</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>საბოლოო ნაშთი</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Final balance</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
 					</dcsset:item>
 					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>

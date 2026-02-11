@@ -201,7 +201,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Выводить КИ от лица организации:</value>
+      <value>ჩვენება CI ორგანიზაციის სახელით:</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -382,7 +382,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Ширина</value>
+      <value>სიგანე</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -537,7 +537,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Формировать прайс-лист по ценам на дату</value>
+      <value>შექმენით ფასების სია თარიღის ფასებზე დაყრდნობით</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -588,7 +588,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Положение текста относительно метки новинка</value>
+      <value>ტექსტის პოზიცია ახალ ეტიკეტთან მიმართებაში</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -658,7 +658,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue">
-      <value>Достаточно</value>
+      <value>საკმარისია</value>
     </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -686,7 +686,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue">
-      <value>Мало</value>
+      <value>არასაკმარისია</value>
     </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -714,7 +714,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue">
-      <value>Много</value>
+      <value>ზედმეტია</value>
     </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -732,6 +732,29 @@
     <synonym>
       <key>en</key>
       <value>To form by the presence of</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="59c1548f-3e4b-4021-94b8-43a2504900a2">
+    <name>ПоказыватьОстаткиПоСкладам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показывать остатки по складам</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნაშთების ჩვენება საწყობის მიხედვით</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Show balances by warehouse</value>
     </synonym>
     <type>
       <types>Boolean</types>
@@ -763,6 +786,18 @@
     <standardAttributes>
       <dataHistory>Use</dataHistory>
       <name>LineNumber</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер Строки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ველის ნომერი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Line Number</value>
+      </synonym>
       <fillValue xsi:type="core:UndefinedValue"/>
       <fullTextSearch>Use</fullTextSearch>
       <minValue xsi:type="core:UndefinedValue"/>
@@ -772,15 +807,15 @@
       <name>Использование</name>
       <synonym>
         <key>ru</key>
-        <value>...</value>
+        <value>Использование</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>...</value>
+        <value>გამოყენება</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>...</value>
+        <value>Usage</value>
       </synonym>
       <type>
         <types>Boolean</types>
@@ -873,7 +908,7 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>Ширина</value>
+        <value>სიგანე</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -1107,6 +1142,73 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="dd351954-7b4f-4237-b6d2-1d966d694256">
+    <producedTypes>
+      <objectType typeId="38eceb41-3fd9-4ad6-8244-96d9e9cd9fd1" valueTypeId="52678c44-7118-4bd2-889c-2c60f9e1e274"/>
+      <rowType typeId="2b7b9bee-c8f3-4ce2-a190-4b6be17a1797" valueTypeId="02edfe7c-6ef6-4f64-b104-f482a93a5054"/>
+    </producedTypes>
+    <name>Склады</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склады</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საწყობები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Warehouses</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="72ef59f0-10a5-4b43-9179-51c26c56d2f8">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საწყობი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Warehouse</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Склад-отправитель по которому производится выгрузка данных</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>გამგზავნი საწყობი, რომლის მიხედვით ხორციელდება მონაცემთა გადმოტვირთვა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Warehouse sending over which the data upload</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Склад</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

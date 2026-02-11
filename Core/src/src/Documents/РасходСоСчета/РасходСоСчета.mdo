@@ -212,6 +212,8 @@
   <basedOn>Document.АвансовыйОтчет</basedOn>
   <basedOn>Document.РасходСоСчета</basedOn>
   <basedOn>Document.КорректировкаПоступления</basedOn>
+  <basedOn>Document.ЗакупкаЛицензий</basedOn>
+  <basedOn>Document.СборкаЗапасов</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -255,7 +257,6 @@
   <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоЭквайрингу</registerRecords>
-  <registerRecords>InformationRegister.ОтчетПоКурсовымРазницам</registerRecords>
   <registerRecords>AccumulationRegister.ОстаткиНалоговыхЛьгот</registerRecords>
   <registerRecords>AccumulationRegister.ОплатаСчетовИЗаказов</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
@@ -459,10 +460,12 @@
     <type>
       <types>DocumentRef.ОтчетКомиссионера</types>
       <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЗакупкаЛицензий</types>
       <types>DocumentRef.НачислениеНалогов</types>
       <types>DocumentRef.ПеремещениеДСПлан</types>
       <types>DocumentRef.КорректировкаПоступления</types>
       <types>DocumentRef.НачисленияПоКредитамИЗаймам</types>
+      <types>DocumentRef.СборкаЗапасов</types>
       <types>DocumentRef.РасходДСПлан</types>
       <types>DocumentRef.ПлатежноеПоручение</types>
       <types>DocumentRef.ОтчетКомитенту</types>
@@ -2031,6 +2034,77 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="0a9f99bd-0757-412f-bbc3-8ffb388729ac">
+    <name>ДополнительноеЗначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительное значение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(დამატებით დანიშნულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Дополнительное значение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4ed12175-1a73-4159-a29e-7dfe8915ac3d">
+    <name>TransactionID</name>
+    <synonym>
+      <key>ru</key>
+      <value>Transaction ID</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>11</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3d2c363a-aa9b-4ebf-b2fe-729db02e86df">
+    <name>СуммаРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма расчетов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიშსწორებათა თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The amount of payments</value>
+    </synonym>
+    <comment>ONESOFT-3523</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="3965ed6d-a811-4d23-8f62-057011295304">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2216,11 +2290,13 @@
         <types>DocumentRef.РасходнаяНакладная</types>
         <types>DocumentRef.ОтчетКомиссионера</types>
         <types>DocumentRef.ПриходнаяНакладная</types>
+        <types>DocumentRef.ЗакупкаЛицензий</types>
         <types>DocumentRef.АктВыполненныхРабот</types>
         <types>DocumentRef.ОтчетОПереработке</types>
         <types>DocumentRef.ПоступлениеВКассу</types>
         <types>DocumentRef.ЗаказПокупателя</types>
         <types>DocumentRef.КорректировкаПоступления</types>
+        <types>DocumentRef.СборкаЗапасов</types>
         <types>DocumentRef.ВозвратДенегОтПФ</types>
         <types>DocumentRef.НачислениеЗарплаты</types>
         <types>DocumentRef.ОтчетПереработчика</types>

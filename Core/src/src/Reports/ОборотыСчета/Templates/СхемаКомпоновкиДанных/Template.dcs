@@ -203,6 +203,10 @@
 					<v8:content>Валюта</v8:content>
 				</v8:item>
 				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ვალუტა</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Currency</v8:content>
 				</v8:item>
@@ -8603,7 +8607,7 @@
 		</template>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Период</dcsat:name>
-			<dcsat:expression>"Обороты за " + ВЫБОР   
+			<dcsat:expression>НСтр("ru = 'Обороты за '; ka = 'ბრუნვები '; en = 'Turnover for '") + ВЫБОР   
 КОГДА &amp;Периодичность = 6 
    ТОГДА Формат(Период, "ДФ=dd.MM.yy")  
    КОГДА &amp;Периодичность = 7
@@ -8611,7 +8615,7 @@
    КОГДА &amp;Периодичность = 8
    ТОГДА Формат(НачалоПериода(Период, "Декада"), "ДФ=dd.MM.yy")  + " - " + Формат(КонецПериода(Период, "Декада"), "ДФ=dd.MM.yy") 
    КОГДА &amp;Периодичность = 9
-   ТОГДА Формат(Период, "ДФ = 'MMMM yy'")
+   ТОГДА Формат(Период, НСтр("ru = 'Л=ru_RU; '; ka = 'Л=ka_GE; '; en = 'Л=en_GB; '") + "ДФ = 'MMMM yy'")
    КОГДА &amp;Периодичность = 10
    ТОГДА 
       ВЫБОР

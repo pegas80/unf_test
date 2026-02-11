@@ -430,6 +430,42 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
+        <name>ЗапасыДокументаПартия</name>
+        <id>136</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ЗапасыДокумента.Партия</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ЗапасыДокументаПартияРасширеннаяПодсказка</name>
+          <id>138</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ЗапасыДокументаПартияКонтекстноеМеню</name>
+          <id>137</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
         <name>ЗапазыДокументаЕдиницаИзмерения</name>
         <id>107</id>
         <visible>true</visible>
@@ -936,6 +972,46 @@
               <segments>Items.РезультатВыбора1.CurrentData.Номенклатура</segments>
             </datapath>
           </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>РезультатВыбора1Партия</name>
+        <id>139</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>РезультатВыбора.Партия</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>РезультатВыбора1ПартияРасширеннаяПодсказка</name>
+          <id>141</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>РезультатВыбора1ПартияКонтекстноеМеню</name>
+          <id>140</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -1511,6 +1587,9 @@
 	ПриходнаяНакладнаяЗапасы.Номенклатура,
 	ПриходнаяНакладнаяЗапасы.ЕдиницаИзмерения,
 	ПриходнаяНакладнаяЗапасы.Характеристика,
+	// Олег Литвиненко 23.05.23 --->
+	ПриходнаяНакладнаяЗапасы.Партия,
+	// Олег Литвиненко &lt;---
 	ПриходнаяНакладнаяЗапасы.Цена,
 	ПриходнаяНакладнаяЗапасы.Сумма,
 	ПриходнаяНакладнаяЗапасы.СтавкаНДС,
@@ -1822,6 +1901,31 @@
           <precision>15</precision>
           <scale>2</scale>
         </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Партия</name>
+      <title>
+        <key>ru</key>
+        <value>Партия</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>პარტია</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Party</value>
+      </title>
+      <id>12</id>
+      <valueType>
+        <types>CatalogRef.ПартииНоменклатуры</types>
       </valueType>
       <view>
         <common>true</common>

@@ -17,6 +17,20 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПериодЧас</dataPath>
 			<field>ПериодЧас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საათი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hour</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:periodNumber>4</dcscom:periodNumber>
 				<dcscom:periodType>Additional</dcscom:periodType>
@@ -133,7 +147,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Документ движения</v8:content>
+					<v8:content>მოძრაობის დოკუმენტი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -253,11 +267,11 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Тип пересорта</v8:content>
+					<v8:content>გადახარისხების ტიპი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>type peresorta</v8:content>
+					<v8:content>Type of sorting</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -271,7 +285,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Документ инвентаризации</v8:content>
+					<v8:content>ინვენტარიზაციის დოკუმენტი</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -293,6 +307,10 @@
 			<dataPath>СчетУчетаЗатратРегл</dataPath>
 			<field>СчетУчетаЗатратРегл</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВЫБОР
@@ -300,21 +318,21 @@
 			ТОГДА NULL
 		ИНАЧЕ ЗапасыОбороты.Регистратор
 	КОНЕЦ КАК Регистратор,
-	ЗапасыОбороты.ПериодСекунда,
-	ЗапасыОбороты.ПериодМинута,
-	ЗапасыОбороты.ПериодЧас,
-	ЗапасыОбороты.ПериодДень,
-	ЗапасыОбороты.ПериодНеделя,
-	ЗапасыОбороты.ПериодДекада,
-	ЗапасыОбороты.ПериодМесяц,
-	ЗапасыОбороты.ПериодКвартал,
-	ЗапасыОбороты.ПериодГод,
-	ЗапасыОбороты.Организация,
-	ЗапасыОбороты.СтруктурнаяЕдиница,
+	ЗапасыОбороты.ПериодСекунда КАК ПериодСекунда,
+	ЗапасыОбороты.ПериодМинута КАК ПериодМинута,
+	ЗапасыОбороты.ПериодЧас КАК ПериодЧас,
+	ЗапасыОбороты.ПериодДень КАК ПериодДень,
+	ЗапасыОбороты.ПериодНеделя КАК ПериодНеделя,
+	ЗапасыОбороты.ПериодДекада КАК ПериодДекада,
+	ЗапасыОбороты.ПериодМесяц КАК ПериодМесяц,
+	ЗапасыОбороты.ПериодКвартал КАК ПериодКвартал,
+	ЗапасыОбороты.ПериодГод КАК ПериодГод,
+	ЗапасыОбороты.Организация КАК Организация,
+	ЗапасыОбороты.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
 	ЗапасыОбороты.СчетУчетаРегл КАК СчетУчета,
 	ЗапасыОбороты.Номенклатура КАК Номенклатура,
 	ЗапасыОбороты.Характеристика КАК Характеристика,
-	ЗапасыОбороты.Партия,
+	ЗапасыОбороты.Партия КАК Партия,
 	ЗапасыОбороты.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
 	ВЫБОР
 		КОГДА ТИПЗНАЧЕНИЯ(ЗапасыОбороты.Регистратор) = ТИП(Документ.ОприходованиеЗапасов)
@@ -328,8 +346,10 @@
 	КОНЕЦ КАК Сумма,
 	ВЫБОР
 		КОГДА ТИПЗНАЧЕНИЯ(ЗапасыОбороты.Регистратор) = ТИП(Документ.ОприходованиеЗапасов)
-			ТОГДА "ИЗЛИШКИ"
-		ИНАЧЕ "НЕДОСТАЧИ"
+			//ТОГДА "ИЗЛИШКИ" 
+			ТОГДА &amp;Излишки
+		//ИНАЧЕ "НЕДОСТАЧИ"
+		ИНАЧЕ &amp;Недостачи
 	КОНЕЦ КАК ТипПересорта,
 	ВЫБОР
 		КОГДА ТИПЗНАЧЕНИЯ(ЗапасыОбороты.Регистратор) = ТИП(Документ.ОприходованиеЗапасов)
@@ -440,7 +460,7 @@
 			</v8:item>
 			<v8:item>
 				<v8:lang>ka</v8:lang>
-				<v8:content>Выводить заголовок</v8:content>
+				<v8:content>სათაურის გამოტანა</v8:content>
 			</v8:item>
 			<v8:item>
 				<v8:lang>en</v8:lang>
@@ -454,6 +474,29 @@
 		<useRestriction>false</useRestriction>
 		<availableAsField>false</availableAsField>
 		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Недостачи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Недостачи</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Излишки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Излишки</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>

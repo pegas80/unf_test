@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ced048c0-329b-4c37-ba16-a07922812213">
+  <producedTypes>
+    <selectionType typeId="d9f18688-44ba-4597-8e9d-4a830dfc1a7b" valueTypeId="d88d41ff-d419-46b4-ba06-ba9df14d6c6a"/>
+    <listType typeId="4fb3bfee-269c-4300-9942-98aa28cb7ee3" valueTypeId="1835c041-f21e-4616-a497-7aa75ec74f2a"/>
+    <managerType typeId="e4de8c97-6dab-4b7e-9d24-bd25c6773d26" valueTypeId="38341bdc-8f00-42dd-90b1-9ebc0b859f00"/>
+    <recordSetType typeId="e40e4ff2-7276-4102-8c67-e598d533fada" valueTypeId="2b7d2c1e-9139-48bb-81cd-1671295ba479"/>
+    <recordKeyType typeId="f46af09f-a37a-47e1-9fb3-bb4d6a8a6cd0" valueTypeId="0a6de80c-6a09-4e76-b749-d8d4788cad78"/>
+    <recordType typeId="e84060b9-5a33-4834-927a-89243854e3fa" valueTypeId="15a938c1-9668-4d3a-893e-39d0c85d05bf"/>
+  </producedTypes>
+  <name>ПродажиВВалюте</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи в валюте</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>გაყიდვები ვალუტაში</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>the sale in currency</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="796ea19f-5d83-45ec-bb16-3ee76dee1d11">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="7d1d24ed-b562-47e8-85b0-0c32e108c73e">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="d3930265-e6ec-4c60-97b5-28384703bee8">
+    <name>СуммаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>В т.ч. НДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მ.შ. დღგ</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Including VAT</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="30604b9b-a86d-44e6-82d8-d83ac514a460">
+    <name>Себестоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თვითღირებულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Cost price</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="924fd325-97fc-4ee9-8b44-7226cb82aabf">
+    <name>СуммаВал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა (ვალუტა)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Сумма вал (shaft)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="f62146c2-5603-4e34-b06b-9129a2e95cfb">
+    <name>СуммаНДСВал</name>
+    <synonym>
+      <key>ru</key>
+      <value>В т.ч. НДС (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მ.შ. დღგ (ვალუტა)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Including VAT (shaft)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="74292d09-5d69-4ff9-953b-afbdea49740b">
+    <name>СебестоимостьВал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თვითღირებულება (ვალუტა)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Cost price (shaft)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="fbf4fdbe-0091-42b1-b993-95eb202d5c0b">
+    <name>ХозяйственнаяОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სამეურნეო ოპერაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Хозяйственная операция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХозяйственныеОперации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="ec4f405a-3281-4ef4-907d-4a39aa02e986">
+    <name>ЭтоПодарок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это подарок</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ეს საჩუქარია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>This is a gift</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="e773cda3-5979-4077-9ebd-9c048ab51763">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნომენკლატურა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Nomenclature</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="862a907e-4bca-4a1c-866f-a9263bd75f16">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მახასიათებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5f8a0104-c334-425a-8bc7-dc16202b20be">
+    <name>Партия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партия</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პარტია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Партия</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПартииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d284c88d-10c5-4ca1-9779-d095af46cdc0">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დოკუმენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Document</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ОтчетКомиссионера</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.АктВыполненныхРабот</types>
+      <types>DocumentRef.ЧекККМ</types>
+      <types>DocumentRef.ОтчетОПереработке</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ПродажаЛицензии</types>
+      <types>DocumentRef.ОтчетОРозничныхПродажах</types>
+      <types>DocumentRef.ОтчетКомитенту</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cff9a6fc-1439-4873-b6f1-4b640630685e">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a389dabd-93d3-4499-95ab-e636c4abf342">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დღგ-ს განაკვეთი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT Rate</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ba6c6dee-3532-4dba-85f8-6ad8519316b2">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="956becff-47c1-4d41-a797-60fb1755eee3">
+    <name>ЗаказПокупателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მყიდველის შეკვეთა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="983c9b33-fc2c-4fbe-8797-531532062d33">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="19f56ecc-2666-4dba-bb6b-d27c5d8f0b17">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პასუხისმგებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Responsible Person</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="04e31a5a-b090-4ea1-8c07-fc20558a8182">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Project</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

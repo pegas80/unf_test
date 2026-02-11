@@ -444,6 +444,10 @@
 				</v8:NumberQualifiers>
 			</valueType>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
 		<item xsi:type="DataSetQuery">
 			<name>Затраты</name>
 			<field xsi:type="DataSetFieldField">
@@ -551,6 +555,10 @@
 					</v8:item>
 				</title>
 			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Запасы.Регистратор КАК Регистратор,
@@ -584,7 +592,8 @@
 	Запасы.Сумма КАК СтоимостьЗатрат,
 	Запасы.Количество КАК КоличествоЗатрат,
 	0 КАК КоличествоПродукции,
-	Запасы.Спецификация КАК Спецификация
+	Запасы.Спецификация КАК Спецификация,
+	Запасы.Проект как Проект
 ИЗ
 	РегистрНакопления.Запасы КАК Запасы
 ГДЕ
@@ -686,6 +695,10 @@
 					</v8:item>
 				</title>
 			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Запасы.Регистратор КАК Регистратор,
@@ -700,7 +713,8 @@
 	Запасы.Сумма КАК СтоимостьЗатрат,
 	Запасы.Сумма КАК СтоимостьЗатратПлан,
 	Запасы.Количество КАК КоличествоЗатрат,
-	0 КАК КоличествоПродукции
+	0 КАК КоличествоПродукции,
+	Запасы.Проект как Проект
 ИЗ
 	РегистрНакопления.Запасы КАК Запасы
 ГДЕ
@@ -886,6 +900,19 @@
 						<v8:FractionDigits>2</v8:FractionDigits>
 						<v8:AllowedSign>Any</v8:AllowedSign>
 					</v8:NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проект</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Проекты</v8:Type>
 				</valueType>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
@@ -1180,6 +1207,19 @@
 				</title>
 				<valueType>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Спецификации</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проект</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Проекты</v8:Type>
 				</valueType>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>

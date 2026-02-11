@@ -115,7 +115,7 @@
   </objectPresentation>
   <objectPresentation>
     <key>ka</key>
-    <value>Виды карт лояльности</value>
+    <value>ლოიალურობის ბარათის სახეობები</value>
   </objectPresentation>
   <objectPresentation>
     <key>en</key>
@@ -127,7 +127,7 @@
   </extendedObjectPresentation>
   <extendedObjectPresentation>
     <key>ka</key>
-    <value>Виды карт лояльности</value>
+    <value>ლოიალურობის ბარათის სახეობები</value>
   </extendedObjectPresentation>
   <extendedObjectPresentation>
     <key>en</key>
@@ -135,11 +135,11 @@
   </extendedObjectPresentation>
   <explanation>
     <key>ru</key>
-    <value>Список видов дисконтных карт</value>
+    <value>Список видов карт лояльности</value>
   </explanation>
   <explanation>
     <key>ka</key>
-    <value>დისკონტური ბარათის სახეობების სია</value>
+    <value>ლოიალურობის ბარათის სახეობების სია</value>
   </explanation>
   <explanation>
     <key>en</key>
@@ -447,6 +447,31 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="ad75a6f3-5ebc-4b63-ae3e-802d8ed0b1ec">
+    <name>СчетВыручкиОтПродажиБалловРегл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет выручки от продажи баллов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქულებით რეალიზაციის შემოსავლის ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Счет выручки от продажи баллов</value>
+    </synonym>
+    <comment>ONESOFT-3554</comment>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="2a9a615d-834d-45f5-a20d-6a83d502e370">
     <producedTypes>
       <objectType typeId="74c11770-3891-4503-8615-3d705e809364" valueTypeId="050c34fc-bc2f-4bcf-a90e-a7d7be82859f"/>
@@ -642,6 +667,143 @@
       <synonym>
         <key>en</key>
         <value>Discount (%)</value>
+      </synonym>
+      <comment>Может стоит сделать скидку процентом</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="b88cb310-2d5b-4255-a657-1f0bf14a303f">
+    <producedTypes>
+      <objectType typeId="56ee75b9-e0c2-44c7-939e-e1e7cf2a74de" valueTypeId="47bcc0fd-2c41-4e3f-b6cb-5973159357b0"/>
+      <rowType typeId="3bb8f2ca-f474-425f-9b10-9675434e317c" valueTypeId="66943c5e-b5b5-4353-a229-fab0c5e7f119"/>
+    </producedTypes>
+    <name>ПорогиНакопительныхСкидок1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пороги накопительных скидок 2</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დამგროვებელი ფასდაკლებების ზღურბლები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Thresholds cumulative discounts</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c54f11fe-70d6-47d1-8d18-ba5d17416925">
+      <name>НижняяГраница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Когда накопили >=</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>როდის დავაგროვეთ >=</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>When accumulated> =</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cb1e130d-e5f1-4613-96c0-5cf7087f164d">
+      <name>Скидка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Скидка (%)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფასდაკლება (%)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Discount (%)</value>
+      </synonym>
+      <comment>Может стоит сделать скидку процентом</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b42443cb-4418-4cd3-850b-e82173fab102">
+      <name>НижняяГраницаЛояльность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Когда накопили >=</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>როდის დავაგროვეთ >=</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>When accumulated> =</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="68fda63b-b53c-4237-87ed-a231a7899349">
+      <name>СкидкаЛояльность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Накопление (баллы)%</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაგროვება (ქულა) %</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Accumulation (points)%</value>
       </synonym>
       <comment>Может стоит сделать скидку процентом</comment>
       <type>

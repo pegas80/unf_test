@@ -860,6 +860,34 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="247252df-5bb3-4f35-afdb-a96b85dc5486">
+    <name>СуммаРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начислено</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დარიცხული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>credited with</value>
+    </synonym>
+    <comment>ONESOFT-3523</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="47173259-b7aa-498c-b5a6-cd81b5184d57">
     <name>ФормаДокумента</name>
     <synonym>
@@ -1318,6 +1346,31 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="64ef4618-ee57-4828-ba5d-867963b91cb3">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ქვეგანყოფილება</value>
+      </synonym>
+      <comment>ONESOFT-3849</comment>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

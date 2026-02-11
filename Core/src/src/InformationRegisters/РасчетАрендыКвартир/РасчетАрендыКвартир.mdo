@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4dd444eb-6878-436e-bfb0-ce7a620e1134">
+  <producedTypes>
+    <selectionType typeId="944b7be1-1c02-4a65-a3b1-353225f9191d" valueTypeId="99f74baf-3d00-4db3-acce-923ca6baac53"/>
+    <listType typeId="26e7c579-06c3-455f-a0c9-d12cbd7783f6" valueTypeId="eb7dddc2-2533-4754-9378-a460c62c812b"/>
+    <managerType typeId="4c51fa66-7337-4030-bbc8-32da4e44895d" valueTypeId="247cd605-ec7a-4d9b-82fb-168a5da4ac0c"/>
+    <recordSetType typeId="7028e23a-92fe-4fc9-bb2e-c13f1cef55fb" valueTypeId="bd4139c1-4b43-495f-82e8-1398a762314f"/>
+    <recordKeyType typeId="fe254c2e-8769-47c0-bbaf-266c6d102d44" valueTypeId="d2c17e45-a23a-4123-a90d-db366f19ba34"/>
+    <recordType typeId="bbe466a9-ddb2-41ed-b256-809af00af2c8" valueTypeId="37467c59-4398-49b7-bda9-32108aa715a9"/>
+    <recordManagerType typeId="2e540a6f-406b-4ea6-9c3a-122fe1147c8c" valueTypeId="f7cefca6-9151-436d-8d83-7073dc9e6126"/>
+  </producedTypes>
+  <name>РасчетАрендыКвартир</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет аренды квартир</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ბინების გაქირავების გაანგარიშება</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Calculation of apartment rentals</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3773b30c-e66f-454b-b641-9ec828897c3e">
+    <name>ПриходнаяНакладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приходная накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8b659831-ab9f-4b0c-af2b-3d666c3c59cc">
+    <name>СуммаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ივსება დოკუმენტის თანხა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="546b6858-2834-4359-85ae-f0a17488808f">
+    <name>СуммаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დღგ</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ივსება დოკუმენტის თანხა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="5963d19e-8192-456f-b100-ba437d9282d6">
+    <name>ПроцентАрендыКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент за аренду квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროცენტი ბინის გასაქირავებლად</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Percentage for renting apartments</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e4b0c191-062e-467e-baf4-3d4f2b1ae6ec">
+    <name>СуммаАрендыЗаКвартиру</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма аренды за квартиру</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ბინის ქირავნობის თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Rental amount for the apartment</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ივსება დოკუმენტის თანხა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="355b75af-bac0-4d56-a56f-5ebf9c198461">
+    <name>РасходнаяНакладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расходная накладная</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გასავლის ზედდებული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Sales Invoice</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

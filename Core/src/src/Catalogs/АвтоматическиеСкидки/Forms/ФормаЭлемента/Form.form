@@ -56,6 +56,63 @@
             <value>Enum.НазначенияАвтоматическихСкидок.EnumValue.Везде</value>
           </value>
         </choiceList>
+        <choiceList>
+          <presentation>
+            <key>ru</key>
+            <value>По виду цен</value>
+          </presentation>
+          <presentation>
+            <key>ka</key>
+            <value>ფასის ტიპის მიხედვით</value>
+          </presentation>
+          <presentation>
+            <key>en</key>
+            <value>ფასის ტიპის მიხედვით</value>
+          </presentation>
+          <value xsi:type="core:ReferenceValue">
+            <value>Enum.НазначенияАвтоматическихСкидок.EnumValue.ПоВидуЦен</value>
+          </value>
+        </choiceList>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВидЦен</name>
+      <id>409</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВидЦен</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ВидЦенРасширеннаяПодсказка</name>
+        <id>411</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ВидЦенКонтекстноеМеню</name>
+        <id>410</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -495,6 +552,12 @@
           <key>ka</key>
           <value>შეავსეთ სია, თუ ფასდაკლების (ფასნამატის) შემოთავაზება ხდება გარკვეული პირობების დაცვისას. მაგალითად, დოკუმენტის თანხა > 3000 ან ერთი საქონლის რაოდენობა >=10. თუ პირობების სია არ არის შევსებული, მაშინ ფასდაკლების (ფასნამატის) შემოთავაზება ხდება პირობების შეუმოწმებლად.</value>
         </title>
+        <title>
+          <key>en</key>
+          <value>Fill out the list if a discount (markup) is provided subject to certain conditions.
+For example, document amount > 3000 or quantity of one product >= 10.
+If the list of conditions is not completed, then the discount (markup) is provided without checking the conditions.</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -725,7 +788,6 @@
         <verticalScrollBar>AutoUse</verticalScrollBar>
         <horizontalLines>true</horizontalLines>
         <verticalLines>true</verticalLines>
-        <autoInsertNewRow>true</autoInsertNewRow>
         <searchOnInput>Auto</searchOnInput>
         <initialListView>Auto</initialListView>
         <horizontalStretch>true</horizontalStretch>
@@ -974,6 +1036,10 @@
                 <dataPath xsi:type="form:DataPath">
                   <segments>Объект.НоменклатураГруппыЦеновыеГруппы.ЗначениеУточнения</segments>
                 </dataPath>
+                <handlers>
+                  <event>OnChange</event>
+                  <name>НоменклатураГруппыЦеновыеГруппыЗначениеУточненияПриИзменении</name>
+                </handlers>
                 <extendedTooltip>
                   <name>НоменклатураГруппыЦеновыеГруппыЗначениеУточненияРасширеннаяПодсказка</name>
                   <id>284</id>
@@ -998,6 +1064,46 @@
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
                   <wrap>true</wrap>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>НоменклатураГруппыЦеновыеГруппыАртикул</name>
+                <id>412</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Объект.НоменклатураГруппыЦеновыеГруппы.Артикул</segments>
+                </dataPath>
+                <extendedTooltip>
+                  <name>НоменклатураГруппыЦеновыеГруппыАртикулРасширеннаяПодсказка</name>
+                  <id>414</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>НоменклатураГруппыЦеновыеГруппыАртикулКонтекстноеМеню</name>
+                  <id>413</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>EnterOnInput</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
                   <typeDomainEnabled>true</typeDomainEnabled>
                   <textEdit>true</textEdit>
                 </extInfo>
@@ -1120,6 +1226,31 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.ДобавитьГруппуНоменклатуры</commandName>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
+                  <name>НоменклатураГруппыЦеновыеГруппыЗаполнитьПоДопРеквизитамХарактеристики</name>
+                  <id>407</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>НоменклатураГруппыЦеновыеГруппыЗаполнитьПоДопРеквизитамХарактеристикиРасширеннаяПодсказка</name>
+                    <id>408</id>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.ЗаполнитьПоДопРеквизитамХарактеристики</commandName>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1329,7 +1460,6 @@
               <verticalScrollBar>AutoUse</verticalScrollBar>
               <horizontalLines>true</horizontalLines>
               <verticalLines>true</verticalLines>
-              <autoInsertNewRow>true</autoInsertNewRow>
               <searchOnInput>Auto</searchOnInput>
               <initialListView>Auto</initialListView>
               <horizontalStretch>true</horizontalStretch>
@@ -3742,6 +3872,32 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗаполнитьПоДопРеквизитамХарактеристики</name>
+    <title>
+      <key>ru</key>
+      <value>Заполнить по доп реквизитам характеристики</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მახასიათებლის დამატებითი რეკვიზიტებით შევსება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>მახასიათებლის დამატებითი რეკვიზიტებით შევსება</value>
+    </title>
+    <id>3</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаполнитьПоДопРеквизитамХарактеристики</name>
+      </handler>
+    </action>
+    <functionalOptions>FunctionalOption.ИспользоватьДополнительныеРеквизитыИСведения</functionalOptions>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

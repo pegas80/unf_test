@@ -19,6 +19,84 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.СинхронизацияЭлектронныхТТН.Form.Форма</defaultForm>
+  <attributes uuid="82e26648-e3db-4180-a33e-169c90b5202c">
+    <name>Услуга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипНоменклатуры</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыНоменклатуры.EnumValue.Услуга</value>
+      </value>
+    </choiceParameters>
+  </attributes>
+  <attributes uuid="3721ae05-5dc5-4f6a-889e-55ebdc001b42">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>DataProcessor.СинхронизацияЭлектронныхТТН.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="303f222a-600a-4851-83aa-4a44bfd13a9d">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ответственное подразделение</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პასუხისმგებელი ქვეგანყოფილება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Ответственное подразделение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5ade6dc9-a883-4886-92ca-8fddced18a63">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
   <tabularSections uuid="83d35227-6ce3-4923-aead-d6bfa040d30c">
     <producedTypes>
       <objectType typeId="77db0185-3555-478a-a5d1-9683a8844287" valueTypeId="477a3fda-49d5-4731-aec0-23cdb4c06383"/>
@@ -1025,6 +1103,40 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
+    <attributes uuid="bd306777-f00c-44f0-9f2e-94eda2065f15">
+      <name>Ордер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ордер</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ორდერი</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d5b5cb3b-85c6-45de-b277-b8c9af39cf15">
+      <name>ПрихОрдер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Прих. ордер</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ორდერის დოკუმენტი</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ПриходныйОрдер</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="4d98ae47-7bf3-4d81-b944-9a575e6b3dea">
     <producedTypes>
@@ -1675,6 +1787,56 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
+    <attributes uuid="155c9962-f351-434c-a370-200b3246666f">
+      <name>TYPE</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип ТТН</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სასაქონლო ზედნადების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>type Waybill</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="28622519-ce15-44e4-a64f-df2626483204">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="28e728cd-8ed9-4e04-925d-e55d99104e45">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="e6207915-0349-4d1f-a39a-8bbb901af4aa">
     <producedTypes>
@@ -1722,6 +1884,54 @@
         <types>DocumentRef.ПриходнаяНакладная</types>
         <types>DocumentRef.ПеремещениеВА</types>
         <types>DocumentRef.ЗаказПокупателя</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="7e50ddaf-33e2-46eb-a6a0-1d9186987dad">
+    <producedTypes>
+      <objectType typeId="24943a3f-e8ba-4691-92a2-919870d1ada1" valueTypeId="481751a9-bbe9-4983-ab33-5f1c54de17d5"/>
+      <rowType typeId="99a139f6-2c53-4507-8a0b-fe9a5ef666c0" valueTypeId="d4e005e3-1187-4bb6-bca0-a6ff32e45aa3"/>
+    </producedTypes>
+    <name>СозданныеОрдеры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Созданные ордеры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შექმნილი დოკუმენტები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>created documents</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="990694c0-d2a6-496f-a912-30b8d3dbe1c5">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Document</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ПриходныйОрдер</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

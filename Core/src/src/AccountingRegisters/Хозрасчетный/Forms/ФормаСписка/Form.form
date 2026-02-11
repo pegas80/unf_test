@@ -2332,6 +2332,7 @@ The income tax</value>
       <queryText>ВЫБРАТЬ
 	ХозрасчетныйДвиженияССубконто.Период,
 	ХозрасчетныйДвиженияССубконто.Регистратор,
+	ТИПЗНАЧЕНИЯ(ХозрасчетныйДвиженияССубконто.Регистратор) КАК ТипРегистратора,
 	ХозрасчетныйДвиженияССубконто.НомерСтроки,
 	ХозрасчетныйДвиженияССубконто.Активность,
 	ХозрасчетныйДвиженияССубконто.СчетДт,
@@ -2389,7 +2390,6 @@ The income tax</value>
 ИЗ
 	РегистрБухгалтерии.Хозрасчетный.ДвиженияССубконто КАК ХозрасчетныйДвиженияССубконто</queryText>
       <mainTable>AccountingRegister.Хозрасчетный.RecordsWithExtDimensions</mainTable>
-      <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>

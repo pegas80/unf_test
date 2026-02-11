@@ -1725,25 +1725,6 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="013b518a-b3bc-4b8a-af37-2f2c3d69f34b">
-    <name>AzRyСчетПенсионногоНалога</name>
-    <synonym>
-      <key>ru</key>
-      <value>(AzRy) Счет пенсионного налога</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>(AzRy) საპენსიო დაკავების ანგარიში</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.ВидыНалогов</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <attributes uuid="90e31549-ea23-42a0-b916-3ca1b4216d2f">
     <name>Проект</name>
     <synonym>
@@ -1786,6 +1767,301 @@
     <maxValue xsi:type="core:StringValue">
       <value>28</value>
     </maxValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d108af00-6b4c-444c-bfbf-a3da31f0a98d">
+    <name>ЧислоМесяцаПоставщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Число месяца поставщик</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:StringValue">
+      <value>0</value>
+    </minValue>
+    <maxValue xsi:type="core:StringValue">
+      <value>28</value>
+    </maxValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="82a35261-ad6d-440e-9df6-164771cff23d">
+    <name>ВидВзаиморасчетаСКонтрагентом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид взаиморасчета с контрагентом</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტთან ანგარიშსწორების სახეობა</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидВзаиморасчетаСКонтрагентом</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>53767a0e-c763-4bec-9d1b-f39ddb2ffc10.7d70f479-68f1-48e4-8ef5-dc4841907650</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="320b8c78-70b8-47d6-a84a-a31c97ec1513">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ответственное подразделение, принявшее заказ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პასუხისმგებელი ქვეგანყოფილება, რომელმაც მიიღი შეკვეთა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Responsible department, took orders</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.СтруктурныеЕдиницы.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="db4e2989-ae5d-4222-9ba4-2e3429bb812d">
+    <name>РасчетАрендыКвартир</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет аренды квартир</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ბინების გაქირავების გაანგარიშება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Calculation of apartment rentals</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d39935a9-e514-4a8e-93d1-199e05546bed">
+    <name>ВладелецКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ბინის მფლობელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Apartment owner</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aa216de8-662e-4469-929b-2f206ec9d05e">
+    <name>ДоговорВладельцаКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор с владельцем квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ხელშეკრულება ბინის მფლობელთან</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Agreement with the apartment owner</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Договор контрагента, в рамках которого оформляется документ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კონტრაგენტის ხელშეკრულება, რომელზეც ფორმდება დოკუმენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Договор контрагента, в рамках которого оформляется документ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Catalog.ДоговорыКонтрагентов.Attribute.ВладелецКвартиры</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ДоговорыКонтрагентов.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9fd09b08-9177-4dd6-93bb-b5a9d2b899fd">
+    <name>ПроцентАрендыКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент за аренду квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროცენტი ბინის გასაქირავებლად</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Percentage for renting apartments</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3340e3fc-26be-4b5b-a710-53a4e5c15c88">
+    <name>НоменклатураАрендыКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура аренды квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ბინის გაქირავების ნომენკლატურა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Apartment rental nomenclature</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f64988e4-bfff-4b6f-89b0-31e3fd1fba30">
+    <name>ВидОплатыУслуг</name>
+    <synonym>
+      <key>ka</key>
+      <value>მომსახურების ანაზღაურების სახე</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид оплаты услуг</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОплатУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>a0b9cc4b-07d4-46bb-a0d3-94960dcec152.6cb60479-56e1-492b-9f6c-a664046e579a</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="11071645-430c-4606-922c-a8f5db4e15fa">
+    <name>УслугаИП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга ИП</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ინდ. მეწარმის მომსახურება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>ინდ. მეწარმის მომსახურება</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Контрагент является поставщиком</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კონტრაგენტი არის მომწოდებელი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The counterparty is a supplier</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="013b518a-b3bc-4b8a-af37-2f2c3d69f34b">
+    <name>AzRyСчетПенсионногоНалога</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Счет пенсионного налога</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) საპენსიო დაკავების ანგარიში</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -1924,50 +2200,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="d108af00-6b4c-444c-bfbf-a3da31f0a98d">
-    <name>ЧислоМесяцаПоставщик</name>
-    <synonym>
-      <key>ru</key>
-      <value>Число месяца поставщик</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>10</precision>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:StringValue">
-      <value>0</value>
-    </minValue>
-    <maxValue xsi:type="core:StringValue">
-      <value>28</value>
-    </maxValue>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="82a35261-ad6d-440e-9df6-164771cff23d">
-    <name>ВидВзаиморасчетаСКонтрагентом</name>
-    <synonym>
-      <key>ru</key>
-      <value>Вид взаиморасчета с контрагентом</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>კონტრაგენტთან ანგარიშსწორების სახეობა</value>
-    </synonym>
-    <type>
-      <types>EnumRef.ВидВзаиморасчетаСКонтрагентом</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:ReferenceValue">
-      <value>53767a0e-c763-4bec-9d1b-f39ddb2ffc10.7d70f479-68f1-48e4-8ef5-dc4841907650</value>
-    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>

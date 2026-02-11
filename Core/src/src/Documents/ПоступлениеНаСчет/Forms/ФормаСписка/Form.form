@@ -110,6 +110,31 @@
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
+          <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанк</name>
+          <id>270</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанкРасширеннаяПодсказка</name>
+            <id>271</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПоступлениеВозвратКредитаКонтрагентомБанк</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ФормаПоступлениеВозвратЗаймаСотрудникомБанк</name>
           <id>219</id>
           <visible>true</visible>
@@ -4514,6 +4539,32 @@
     </action>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
+  <formCommands>
+    <name>ПоступлениеВозвратКредитаКонтрагентомБанк</name>
+    <title>
+      <key>ru</key>
+      <value>Возврат кредита контрагентом</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კონტრაგენტის მიერ სესხის დაბრუნება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Return of the loan by counterparty</value>
+    </title>
+    <id>18</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПоступлениеВозвратКредитаКонтрагентомБанк</name>
+      </handler>
+    </action>
+    <functionalOptions>FunctionalOption.КредитыИЗаймы</functionalOptions>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar>
@@ -4521,6 +4572,10 @@
         <command>CommonCommand.ИсторияИзменений</command>
         <group>FormCommandBarImportant</group>
         <index>0</index>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>Document.СчетФактура.StandardCommand.CreateBasedOn</command>
         <userVisible/>
       </cmiFragmentRecord>
     </commandBar>

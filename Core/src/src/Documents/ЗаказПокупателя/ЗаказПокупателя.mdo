@@ -18,7 +18,7 @@
   </synonym>
   <synonym>
     <key>en</key>
-    <value>Заказ покупателя</value>
+    <value>Sales order</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Document.ЗаказПокупателя.StandardAttribute.Number</inputByString>
@@ -272,6 +272,7 @@
   <registerRecords>AccumulationRegister.Продажи</registerRecords>
   <registerRecords>AccumulationRegister.ОплатаСчетовИЗаказов</registerRecords>
   <registerRecords>AccumulationRegister.Усушкa_СобранныеPаказы</registerRecords>
+  <registerRecords>AccumulationRegister.АкционныеНоменклатуры</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ПлатежныйКалендарь</registerRecords>
@@ -279,14 +280,17 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
   <registerRecords>AccumulationRegister.ВыполнениеДоговоровОбслуживания</registerRecords>
+  <registerRecords>AccumulationRegister.ПроданныеИВозвращенныеТовары</registerRecords>
   <registerRecords>AccumulationRegister.ПотребностьВЗапасах</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.РезервированиеЗапасов</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
   <registerRecords>AccumulationRegister.ВыпускПродукции</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccumulationRegister.РазмещениеЗаказов</registerRecords>
+  <registerRecords>AccumulationRegister.ЗаказыИПеремешения</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыПринятые</registerRecords>
   <registerRecords>AccumulationRegister.ГрафикДвиженияЗапасов</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПенсионнымФондом</registerRecords>
@@ -299,6 +303,8 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетодЭквайринг</registerRecords>
+  <registerRecords>AccumulationRegister.ПродажиВВалюте</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
   <registerRecords>InformationRegister.Пробег</registerRecords>
   <registerRecords>AccumulationRegister.АвансыОтправленныхФактур</registerRecords>
@@ -575,11 +581,11 @@
     <name>ВидЗаказа</name>
     <synonym>
       <key>ru</key>
-      <value>Вид заказа</value>
+      <value>Вид и состояние</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>შეკვეთის ტიპი</value>
+      <value>ტიპი და მდგომარეობა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2503,6 +2509,10 @@
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Контрагент</name>
+      <field>Document.ЗаказПокупателя.Attribute.Контрагент</field>
+    </choiceParameterLinks>
     <fillValue xsi:type="core:ReferenceValue">
       <value>Catalog.Проекты.EmptyRef</value>
     </fillValue>
@@ -4205,6 +4215,94 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="f3086cd9-6a0c-4410-a9a7-1652cdb3f157">
+    <name>МногосСкладныйРежим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Многос складный режим</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მრავალსაწყობიანი რეჟიმი</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a643b3c8-816d-4b9a-952e-5564ae0fe6b9">
+    <name>ЭтоПодарок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это подарок</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საჩუქარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>This is a gift</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="74ca3a00-975d-4cdd-8798-bdac0c3301a5">
+    <name>ОтключитьКонтрольЛимитаЗадолжностиПокупателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отключить контроль лимита задолжности покупателя</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მყიდველის დავალიანების ლიმიტის კონტროლის გამორთვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Disable control limit for customer debts</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="024b10ae-3b20-4c8b-8b26-7633bbf9c130">
+    <name>ОтключитьКонтрольЗадолжностиПокупателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отключить контроль задолжности покупателя</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მყიდველის დავალიანების  კონტროლის გამორთვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Disable control  for customer debts</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="ebb83fc7-27e0-4a96-8ec9-174b79894203">
     <name>ФормаДокумента</name>
     <synonym>
@@ -5747,6 +5845,168 @@
         <field>Document.ЗаказПокупателя.TabularSection.Запасы.Attribute.Номенклатура</field>
       </choiceParameterLinks>
       <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b85c9463-6853-4be7-8c0b-f991ff264fe4">
+      <name>СтруктурнаяЕдиницаПеремешения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад (перемешения)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საწყობი (გადაადგილების)</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Склад, на котором можно зарезервировать товары под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>საწყობი, სადაც შეიძლება საქონლის დარეზერვირება შეკვეთით</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Склад</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="65ae87ea-39e6-4b7c-8c2b-a550ce03caab">
+      <name>ДатаПроизводства</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата производства</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Дата производства</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Дата производства</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5be23dd7-cedf-45f5-9cd7-3d1e2fecb5f1">
+      <name>СвободныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6c05b230-daec-43f2-a1ba-df3b5ebd2e20">
+      <name>ОжидаемыеПоставки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d66cabb4-1a61-4b01-a4b3-34e901af9260">
+      <name>ОжидаемыеСвободныеОстатки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -7944,6 +8204,111 @@
       <type>
         <types>CatalogRef.НаправленияДеятельности</types>
       </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="32cf25a6-09a1-430a-bdb2-d8d1d9788319">
+      <name>СвободныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Своб.Остаток</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9f44f981-41f1-4bf1-87ce-06bee80b90e2">
+      <name>ОжидаемыеПоставки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Ожид.поставки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5f1b97e5-1a43-462c-997e-b24bedfdba07">
+      <name>ОжидаемыеСвободныеОстатки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Ожид.Своб.Ост</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество запасов, резервируемое на складе под заказ</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მარაგების რაოდენობა, რომლის დარეზერვება შეკვეთისთვის ხდება საწყობში</value>
+      </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
@@ -10494,6 +10859,21 @@
     <synonym>
       <key>en</key>
       <value>Invoice Eng</value>
+    </synonym>
+  </templates>
+  <templates uuid="2da5512f-2235-4fd8-98c5-f8ffa1dd2a86">
+    <name>ПФ_MXL_InvoiceGeoNew</name>
+    <synonym>
+      <key>ru</key>
+      <value>Invoice geo new - order</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Invoice geo new - order</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Invoice geo new - order</value>
     </synonym>
   </templates>
   <commands uuid="33869677-42fb-46c2-9751-4996b4a74962">

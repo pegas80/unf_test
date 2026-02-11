@@ -14,24 +14,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЗарезервированоНаСкладе</dataPath>
-			<field>ЗарезервированоНаСкладе</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Зарезервировано на складе</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>დარეზერვებულია საწყობში</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Reserved stock</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ИсточникОбеспечения</dataPath>
 			<field>ИсточникОбеспечения</field>
 			<useRestriction>
@@ -317,7 +299,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Не оплаченные</v8:content>
+						<v8:content>გადაუხდელი</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -334,7 +316,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Оплаченные частично</v8:content>
+						<v8:content>ნაწილობრივ გადახდილი</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -351,7 +333,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Оплаченные полностью</v8:content>
+						<v8:content>სრულად გადახდილი</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -396,7 +378,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Не отгруженные</v8:content>
+						<v8:content>არაა გადატვირთული</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -413,7 +395,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Отгруженные частично</v8:content>
+						<v8:content>ნაწილობრივ გადატვირთული</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -430,7 +412,7 @@
 					</v8:item>
 					<v8:item>
 						<v8:lang>ka</v8:lang>
-						<v8:content>Отгруженные полностью</v8:content>
+						<v8:content>გადატვირთულია სრულად</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -482,6 +464,19 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Проект</dataPath>
 			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезервСтарый</dataPath>
+			<field>РезервСтарый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резерв старый</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -498,7 +493,7 @@
 			ТОГДА ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток = 0
 		ИНАЧЕ ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток
 	КОНЕЦ КАК ОсталосьОтгрузитьЧастичноВыполнено,
-	ЕСТЬNULL(ЗапасыОстатки.КоличествоОстаток, 0) КАК ЗарезервированоНаСкладе,
+	ЕСТЬNULL(ЗапасыОстатки.КоличествоОстаток, 0) КАК РезервСтарый,
 	ЕСТЬNULL(РазмещениеЗаказовОстатки.КоличествоОстаток, 0) КАК РазмещеноВЗаказах,
 	ЗаказыПокупателейОстаткиИОбороты.КоличествоКонечныйОстаток - ЕСТЬNULL(ЗапасыОстатки.КоличествоОстаток, 0) - ЕСТЬNULL(РазмещениеЗаказовОстатки.КоличествоОстаток, 0) КАК ОсталосьОбеспечить,
 	ЕСТЬNULL(ОплатаСчетовИЗаказовОбороты.СуммаОборот, 0) КАК СуммаДокумента,
@@ -517,7 +512,8 @@
 		КОГДА ЕСТЬNULL(ОплатаСчетовИЗаказовОбороты.СуммаОборот, 0) - ЕСТЬNULL(ОплатаСчетовИЗаказовОбороты.СуммаАвансаОборот, 0) - ЕСТЬNULL(ОплатаСчетовИЗаказовОбороты.СуммаОплатыОборот, 0) &lt;= 0
 			ТОГДА "სრულად გადახდილი"
 		ИНАЧЕ "ნაწილობრივ გადახდილი"
-	КОНЕЦ КАК СостояниеОплаты
+	КОНЕЦ КАК СостояниеОплаты,
+	ЗапасыОстатки.Проект КАК Проект
 ИЗ
 	РегистрНакопления.ЗаказыПокупателей.ОстаткиИОбороты(, , , , ) КАК ЗаказыПокупателейОстаткиИОбороты
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(, НЕ ЗаказПокупателя = ЗНАЧЕНИЕ(Документ.ЗаказПокупателя.ПустаяСсылка)) КАК ЗапасыОстатки
@@ -550,9 +546,131 @@
 				ИНАЧЕ "Оплаченные частично"
 			КОНЕЦ)</query>
 	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>РезервыТоваров</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезервНовый</dataPath>
+			<field>РезервНовый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резерв новый</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РезервированиеЗапасовОстатки.Организация КАК Организация,
+	РезервированиеЗапасовОстатки.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	РезервированиеЗапасовОстатки.Документ КАК ЗаказПокупателя,
+	РезервированиеЗапасовОстатки.Характеристика КАК Характеристика,
+	РезервированиеЗапасовОстатки.Номенклатура КАК Номенклатура,
+	РезервированиеЗапасовОстатки.КоличествоОстаток КАК РезервНовый,
+	РезервированиеЗапасовОстатки.Проект КАК Проект
+ИЗ
+	РегистрНакопления.РезервированиеЗапасов.Остатки(
+			,
+			ИСТИНА В
+				(ВЫБРАТЬ
+					НовоеРезервирование.Значение
+				ИЗ
+					Константа.ФункциональнаяОпцияРезервированиеЗапасов_new КАК НовоеРезервирование
+				ГДЕ
+					НовоеРезервирование.Значение = ИСТИНА)) КАК РезервированиеЗапасовОстатки</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>РезервыТоваров</destinationDataSet>
+		<sourceExpression>ЗаказПокупателя</sourceExpression>
+		<destinationExpression>ЗаказПокупателя</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>РезервыТоваров</destinationDataSet>
+		<sourceExpression>Организация</sourceExpression>
+		<destinationExpression>Организация</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>РезервыТоваров</destinationDataSet>
+		<sourceExpression>Номенклатура</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>РезервыТоваров</destinationDataSet>
+		<sourceExpression>Характеристика</sourceExpression>
+		<destinationExpression>Характеристика</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ЗарезервированоНаСкладе</dataPath>
+		<expression>ISNULL(РезервСтарый,0) + ISNULL(РезервНовый,0)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Зарезервировано на складе</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
 	<totalField>
 		<dataPath>ЗарезервированоНаСкладе</dataPath>
-		<expression>Сумма(ЗарезервированоНаСкладе)</expression>
+		<expression>Сумма(РезервСтарый) + Сумма(РезервНовый)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>Оплачено</dataPath>
@@ -634,6 +752,14 @@
 	<totalField>
 		<dataPath>ОсталосьОтгрузитьЧастичноВыполнено</dataPath>
 		<expression>Сумма(ОсталосьОтгрузитьЧастичноВыполнено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезервНовый</dataPath>
+		<expression>Сумма(РезервНовый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезервСтарый</dataPath>
+		<expression>Сумма(РезервСтарый)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>

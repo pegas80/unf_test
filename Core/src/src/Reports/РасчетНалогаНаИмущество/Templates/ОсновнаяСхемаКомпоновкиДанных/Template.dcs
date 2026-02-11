@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнеоборотныйАктив</dataPath>
+			<field>ВнеоборотныйАктив</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имущество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ძირითადი საშუალების დასახელება</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ძირითადი საშუალების დასახელება</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвентарныйНомер</dataPath>
+			<field>ИнвентарныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентарный номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ინვენტარიზაციის ნომერი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory number</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачальнаяСтоимость</dataPath>
+			<field>НачальнаяСтоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальная стоимость</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საწყისი ღირებულება</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>The initial cost</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособАмортизации</dataPath>
+			<field>СпособАмортизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ амортизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაციის მეთოდი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>depreciation method</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетАмортизации</dataPath>
+			<field>СчетАмортизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет амортизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაციის ანგარიში</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>depreciation expense</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчета</dataPath>
+			<field>СчетУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>აღრიცხვის ანგარიში</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>expense account</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчетаРегл</dataPath>
+			<field>СчетУчетаРегл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокИспользованияДляВычисленияАмортизации</dataPath>
+			<field>СрокИспользованияДляВычисленияАмортизации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнеоборотныйАктивТипВнеоборотныеАктивы</dataPath>
+			<field>ВнеоборотныйАктивТипВнеоборотныеАктивы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип внеоборотные активы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ძირითადი საშუალების სახეობა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ძირითადი საშუალების სახეობა</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетЗатратРегл</dataPath>
+			<field>СчетЗатратРегл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВВодаВЕксплуатацию</dataPath>
+			<field>ДатаВВодаВЕксплуатацию</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата в вода в експлуатацию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ექსპლუატაციაში შესვლის თარიღი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ექსპლუატაციაში შესვლის თარიღი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОстаточная2</dataPath>
+			<field>СтоимостьОстаточная2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость остаточная 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ნარჩენი ღირებულება 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ნარჩენი ღირებულება 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияНачальныйОстаток1</dataPath>
+			<field>АмортизацияНачальныйОстаток1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация начальный остаток 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია საწყისი ნაშთი 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია საწყისი ნაშთი 1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Амортизация</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОборот1</dataPath>
+			<field>СтоимостьОборот1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость оборот1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОстаточная1</dataPath>
+			<field>СтоимостьОстаточная1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость остаточная1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ნარჩენი ღირებულება 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ნარჩენი ღირებულება 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияНачальныйОстаток2</dataPath>
+			<field>АмортизацияНачальныйОстаток2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация начальный остаток 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია საწყისი ნაშთი 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია საწყისი ნაშთი 2</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Амортизация2</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОборот2</dataPath>
+			<field>СтоимостьОборот2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость оборот 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება ბრუნვა 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება ბრუნვა 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияРасход1</dataPath>
+			<field>АмортизацияРасход1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация расход 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია გასავალი 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია გასავალი 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьПриход1</dataPath>
+			<field>СтоимостьПриход1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость приход 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება შემოსავალი 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება შემოსავალი 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНачальныйОстаток1</dataPath>
+			<field>СтоимостьНачальныйОстаток1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость начальный остаток 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება პერიოდის დასაწყისისთვის 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება პერიოდის დასაწყისისთვის 1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКонечныйОстаток1</dataPath>
+			<field>СтоимостьКонечныйОстаток1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость конечный остаток 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება პერიოდის ბოლოსთვის 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება პერიოდის ბოლოსთვის 1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьРасход1</dataPath>
+			<field>СтоимостьРасход1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость расход1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияОборот1</dataPath>
+			<field>АмортизацияОборот1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация оборот1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияКонечныйОстаток1</dataPath>
+			<field>АмортизацияКонечныйОстаток1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация конечный остаток 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდის ბოლოსთვის 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდის ბოლოსთვის 1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Амортизация</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьИзменение1</dataPath>
+			<field>СтоимостьИзменение1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость изменение 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულების ცვლილება 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულების ცვლილება 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияПриход1</dataPath>
+			<field>АмортизацияПриход1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация за период 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდში 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდში 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год1</dataPath>
+			<field>Год1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>წელი 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>წელი 1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНачальныйОстаток2</dataPath>
+			<field>СтоимостьНачальныйОстаток2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость начальный остаток 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება პერიოდის დასაწყისისთვის 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება პერიოდის დასაწყისისთვის 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКонечныйОстаток2</dataPath>
+			<field>СтоимостьКонечныйОстаток2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость конечный остаток2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება პერიოდის ბოლოსთვის 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება პერიოდის ბოლოსთვის 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияРасход2</dataPath>
+			<field>АмортизацияРасход2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация расход 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია გასავალი 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია გასავალი 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьПриход2</dataPath>
+			<field>СтоимостьПриход2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость приход 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება შემოსავალი 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება შემოსავალი 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьРасход2</dataPath>
+			<field>СтоимостьРасход2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость расход 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულება გასავალი 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულება გასავალი 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияОборот2</dataPath>
+			<field>АмортизацияОборот2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация оборот 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია ბრუნვა 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია ბრუნვა 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияКонечныйОстаток2</dataPath>
+			<field>АмортизацияКонечныйОстаток2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация конечный остаток 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდის ბოლოსთვის 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდის ბოლოსთვის 2</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Амортизация2</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьИзменение2</dataPath>
+			<field>СтоимостьИзменение2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость изменение 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ღირებულების ცვლილება 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ღირებულების ცვლილება 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияПриход2</dataPath>
+			<field>АмортизацияПриход2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация за период 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდში 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ამორტიზაცია პერიოდში 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Год2</dataPath>
+			<field>Год2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>წელი 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>წელი 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СредняяБалансоваяСтоимость1</dataPath>
+			<field>СредняяБалансоваяСтоимость1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя балансовая стоимость 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საშუალო საბალანსო ღირებულება 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>საშუალო საბალანსო ღირებულება 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СредняяБалансоваяСтоимость2</dataPath>
+			<field>СредняяБалансоваяСтоимость2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя балансовая стоимость 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საშუალო საბალანსო ღირებულება 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>საშუალო საბალანსო ღირებულება 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГодовойПроцентАмортизацииДляУменьшенногоОстатка</dataPath>
+			<field>ГодовойПроцентАмортизацииДляУменьшенногоОстатка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Годовой процент амортизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ცვეთის %</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ცვეთის %</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКуплено</dataPath>
+			<field>КоличествоКуплено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество куплено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შესყიდული რაოდენობა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>შესყიდული რაოდენობა</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СнятСУчетаКоличество</dataPath>
+			<field>СнятСУчетаКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снят с учета количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>აღრიცხვიდან მოხსნილი რაოდენობა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>აღრიცხვიდან მოხსნილი რაოდენობა</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСнятияСУчета</dataPath>
+			<field>ДатаСнятияСУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата снятия с учета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>აღრიცხვიდან მოხსნის თარიღი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>აღრიცხვიდან მოხსნის თარიღი</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НалогНаИмущество2</dataPath>
+			<field>НалогНаИмущество2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налог на имущество 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გადასახადი ქონებაზე 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>გადასახადი ქონებაზე 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НалогНаИмущество1</dataPath>
+			<field>НалогНаИмущество1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налог на имущество 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>გადასახადი ქონებაზე 1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>გადასახადი ქონებაზე 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетУчета_Код_Наименование</dataPath>
+			<field>СчетУчета_Код_Наименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет учета код наименование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>ბუღალტრული ანგარიში( სრულად) (ანგარიში + დასახელება)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ბუღალტრული ანგარიში( სრულად) (ანგარიში + დასახელება)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизацияВсего</dataPath>
+			<field>АмортизацияВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация всего</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>სულ ამორტიზაცია</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>სულ ამორტიზაცია</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзменениеВсего</dataPath>
+			<field>ИзменениеВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение всего</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>სულ ცვლილება</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>სულ ცვლილება</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстаточнаяТекущий</dataPath>
+			<field>ОстаточнаяТекущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаточная текущий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მიმდინარე ნარჩენი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>მიმდინარე ნარჩენი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийКоличественныйОстаток</dataPath>
+			<field>ТекущийКоличественныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий количественный остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მიმდინარე რაოდენობრივი ნაშთი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>მიმდინარე რაოდენობრივი ნაშთი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Адрес</dataPath>
+			<field>Адрес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>რაიონი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>რაიონი</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПараметрыВнеоборотныхАктивов.Организация КАК Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
+	МАКСИМУМ(ПараметрыВнеоборотныхАктивов.Период) КАК Период
+ПОМЕСТИТЬ ВТ
+ИЗ
+	РегистрСведений.ПараметрыВнеоборотныхАктивов КАК ПараметрыВнеоборотныхАктивов
+ГДЕ
+	ПараметрыВнеоборотныхАктивов.Период &lt;= ДАТАВРЕМЯ(1, 1, 1)
+
+СГРУППИРОВАТЬ ПО
+	ПараметрыВнеоборотныхАктивов.Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПараметрыВнеоборотныхАктивов.Организация КАК Организация,
+	ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
+	ПараметрыВнеоборотныхАктивов.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ПараметрыВнеоборотныхАктивов.Адрес КАК Адрес,
+	ПараметрыВнеоборотныхАктивов.СрокИспользованияДляВычисленияАмортизации КАК СрокИспользованияДляВычисленияАмортизации,
+	ПараметрыВнеоборотныхАктивов.СчетЗатратРегл КАК СчетЗатратРегл,
+	ПараметрыВнеоборотныхАктивов.Период КАК ДатаВВодаВЕксплуатацию,
+	ПараметрыВнеоборотныхАктивов.ГодовойПроцентАмортизацииДляУменьшенногоОстатка КАК ГодовойПроцентАмортизацииДляУменьшенногоОстатка
+ПОМЕСТИТЬ Вт2
+ИЗ
+	ВТ КАК ВТ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыВнеоборотныхАктивов КАК ПараметрыВнеоборотныхАктивов
+		ПО ВТ.Организация = ПараметрыВнеоборотныхАктивов.Организация
+			И ВТ.ВнеоборотныйАктив = ПараметрыВнеоборотныхАктивов.ВнеоборотныйАктив
+			И ВТ.Период = ПараметрыВнеоборотныхАктивов.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_Год1.Организация КАК Организация,
+	ВТ_Год1.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
+	СУММА(ВТ_Год1.СтоимостьНачальныйОстаток) КАК СтоимостьНачальныйОстаток1,
+	СУММА(ВТ_Год1.СтоимостьКонечныйОстаток) КАК СтоимостьКонечныйОстаток1,
+	СУММА(ВТ_Год1.СтоимостьОборот) КАК СтоимостьОборот1,
+	СУММА(ВТ_Год1.СтоимостьПриход) КАК СтоимостьПриход1,
+	СУММА(ВТ_Год1.СтоимостьРасход) КАК СтоимостьРасход1,
+	СУММА(ВТ_Год1.АмортизацияНачальныйОстаток) КАК АмортизацияНачальныйОстаток1,
+	СУММА(ВТ_Год1.АмортизацияКонечныйОстаток) КАК АмортизацияКонечныйОстаток1,
+	СУММА(ВТ_Год1.АмортизацияОборот) КАК АмортизацияОборот1,
+	СУММА(ВТ_Год1.АмортизацияПриход) КАК АмортизацияПриход1,
+	СУММА(ВТ_Год1.АмортизацияРасход) КАК АмортизацияРасход1,
+	СУММА(ВТ_Год1.СтоимостьПриход - ВТ_Год1.СтоимостьРасход) КАК СтоимостьИзменение1,
+	СУММА(ВТ_Год1.СтоимостьКонечныйОстаток - ВТ_Год1.АмортизацияКонечныйОстаток) КАК СтоимостьОстаточная1
+ПОМЕСТИТЬ ВТ_Год1
+ИЗ
+	РегистрНакопления.ВнеоборотныеАктивы.ОстаткиИОбороты(, , МЕСЯЦ, , ) КАК ВТ_Год1
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Год1.Организация,
+	ВТ_Год1.ВнеоборотныйАктив
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_Год2.Организация КАК Организация,
+	ВТ_Год2.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
+	СУММА(0) КАК СтоимостьНачальныйОстаток2,
+	СУММА(ВТ_Год2.СтоимостьКонечныйОстаток) КАК СтоимостьКонечныйОстаток2,
+	СУММА(ВТ_Год2.СтоимостьОборот) КАК СтоимостьОборот2,
+	СУММА(ВТ_Год2.СтоимостьПриход) КАК СтоимостьПриход2,
+	СУММА(ВТ_Год2.СтоимостьРасход) КАК СтоимостьРасход2,
+	СУММА(ВТ_Год2.АмортизацияНачальныйОстаток) КАК АмортизацияНачальныйОстаток2,
+	СУММА(ВТ_Год2.АмортизацияКонечныйОстаток) КАК АмортизацияКонечныйОстаток2,
+	СУММА(ВТ_Год2.АмортизацияОборот) КАК АмортизацияОборот2,
+	СУММА(ВТ_Год2.АмортизацияПриход) КАК АмортизацияПриход2,
+	СУММА(ВТ_Год2.АмортизацияРасход) КАК АмортизацияРасход2,
+	СУММА(ВТ_Год2.СтоимостьПриход - ВТ_Год2.СтоимостьРасход) КАК СтоимостьИзменение2,
+	СУММА(ВТ_Год2.СтоимостьКонечныйОстаток - ВТ_Год2.АмортизацияКонечныйОстаток) КАК СтоимостьОстаточная2
+ПОМЕСТИТЬ ВТ_Год2
+ИЗ
+	РегистрНакопления.ВнеоборотныеАктивы.ОстаткиИОбороты(, , ГОД, , ) КАК ВТ_Год2
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Год2.Организация,
+	ВТ_Год2.ВнеоборотныйАктив
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВТ_Год2.Организация, ВТ_Год1.Организация) КАК Организация,
+	ЕСТЬNULL(ВТ_Год2.ВнеоборотныйАктив, ВТ_Год1.ВнеоборотныйАктив) КАК ВнеоборотныйАктив,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьНачальныйОстаток1, 0) КАК СтоимостьНачальныйОстаток1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьКонечныйОстаток1, 0) КАК СтоимостьКонечныйОстаток1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьОборот1, 0) КАК СтоимостьОборот1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьПриход1, 0) КАК СтоимостьПриход1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьРасход1, 0) КАК СтоимостьРасход1,
+	ЕСТЬNULL(ВТ_Год1.АмортизацияНачальныйОстаток1, 0) КАК АмортизацияНачальныйОстаток1,
+	ЕСТЬNULL(ВТ_Год1.АмортизацияКонечныйОстаток1, 0) КАК АмортизацияКонечныйОстаток1,
+	ЕСТЬNULL(ВТ_Год1.АмортизацияОборот1, 0) КАК АмортизацияОборот1,
+	ЕСТЬNULL(ВТ_Год1.АмортизацияПриход1, 0) КАК АмортизацияПриход1,
+	ЕСТЬNULL(ВТ_Год1.АмортизацияРасход1, 0) КАК АмортизацияРасход1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьИзменение1, 0) КАК СтоимостьИзменение1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьОстаточная1, 0) КАК СтоимостьОстаточная1,
+	&amp;Год1 КАК Год1,
+	ЕСТЬNULL(ВТ_Год1.СтоимостьОстаточная1, 0) КАК СтоимостьНачальныйОстаток2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьКонечныйОстаток2, 0) КАК СтоимостьКонечныйОстаток2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьОборот2, 0) КАК СтоимостьОборот2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьПриход2, 0) КАК СтоимостьПриход2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьРасход2, 0) КАК СтоимостьРасход2,
+	ЕСТЬNULL(ВТ_Год2.АмортизацияНачальныйОстаток2, 0) КАК АмортизацияНачальныйОстаток2,
+	ЕСТЬNULL(ВТ_Год2.АмортизацияКонечныйОстаток2, 0) КАК АмортизацияКонечныйОстаток2,
+	ЕСТЬNULL(ВТ_Год2.АмортизацияОборот2, 0) КАК АмортизацияОборот2,
+	ЕСТЬNULL(ВТ_Год2.АмортизацияПриход2, 0) КАК АмортизацияПриход2,
+	ЕСТЬNULL(ВТ_Год2.АмортизацияРасход2, 0) КАК АмортизацияРасход2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьИзменение2, 0) КАК СтоимостьИзменение2,
+	ЕСТЬNULL(ВТ_Год2.СтоимостьОстаточная2, 0) КАК СтоимостьОстаточная2,
+	&amp;Год2 КАК Год2
+ПОМЕСТИТЬ ВТ_1_2
+ИЗ
+	ВТ_Год1 КАК ВТ_Год1
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_Год2 КАК ВТ_Год2
+		ПО ВТ_Год1.Организация = ВТ_Год2.Организация
+			И ВТ_Год1.ВнеоборотныйАктив = ВТ_Год2.ВнеоборотныйАктив
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_1_2.Организация КАК Организация,
+	ВТ_1_2.ВнеоборотныйАктив КАК ВнеоборотныйАктив,
+	ВТ_1_2.ВнеоборотныйАктив.СчетУчетаРегл КАК СчетУчета,
+	ВТ_1_2.ВнеоборотныйАктив.СчетАмортизацииРегл КАК СчетАмортизации,
+	ВТ_1_2.ВнеоборотныйАктив.Код КАК ИнвентарныйНомер,
+	ВТ_1_2.ВнеоборотныйАктив.СпособАмортизации КАК СпособАмортизации,
+	ВТ_1_2.ВнеоборотныйАктив.НачальнаяСтоимость КАК НачальнаяСтоимость,
+	ВТ.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ВТ.Адрес КАК Адрес,
+	ВТ.СрокИспользованияДляВычисленияАмортизации КАК СрокИспользованияДляВычисленияАмортизации,
+	ВТ.ВнеоборотныйАктив.ТипВнеоборотныеАктивы КАК ВнеоборотныйАктивТипВнеоборотныеАктивы,
+	ВТ.СчетЗатратРегл КАК СчетЗатратРегл,
+	ВТ.ДатаВВодаВЕксплуатацию КАК ДатаВВодаВЕксплуатацию,
+	ВТ_1_2.СтоимостьНачальныйОстаток1 КАК СтоимостьНачальныйОстаток1,
+	ВТ_1_2.СтоимостьКонечныйОстаток1 КАК СтоимостьКонечныйОстаток1,
+	ВТ_1_2.СтоимостьОборот1 КАК СтоимостьОборот1,
+	ВТ_1_2.СтоимостьПриход1 КАК СтоимостьПриход1,
+	ВТ_1_2.СтоимостьРасход1 КАК СтоимостьРасход1,
+	ВТ_1_2.АмортизацияНачальныйОстаток1 КАК АмортизацияНачальныйОстаток1,
+	ВТ_1_2.АмортизацияКонечныйОстаток1 КАК АмортизацияКонечныйОстаток1,
+	ВТ_1_2.АмортизацияОборот1 КАК АмортизацияОборот1,
+	ВТ_1_2.АмортизацияПриход1 КАК АмортизацияПриход1,
+	ВТ_1_2.АмортизацияРасход1 КАК АмортизацияРасход1,
+	ВТ_1_2.СтоимостьИзменение1 КАК СтоимостьИзменение1,
+	ВТ_1_2.СтоимостьОстаточная1 КАК СтоимостьОстаточная1,
+	ВТ_1_2.Год1 КАК Год1,
+	ВТ_1_2.СтоимостьНачальныйОстаток2 КАК СтоимостьНачальныйОстаток2,
+	ВТ_1_2.СтоимостьКонечныйОстаток2 КАК СтоимостьКонечныйОстаток2,
+	ВТ_1_2.СтоимостьОборот2 КАК СтоимостьОборот2,
+	ВТ_1_2.СтоимостьПриход2 КАК СтоимостьПриход2,
+	ВТ_1_2.СтоимостьРасход2 КАК СтоимостьРасход2,
+	ВТ_1_2.АмортизацияНачальныйОстаток2 КАК АмортизацияНачальныйОстаток2,
+	ВТ_1_2.АмортизацияКонечныйОстаток2 КАК АмортизацияКонечныйОстаток2,
+	ВТ_1_2.АмортизацияОборот2 КАК АмортизацияОборот2,
+	ВТ_1_2.АмортизацияПриход2 КАК АмортизацияПриход2,
+	ВТ_1_2.АмортизацияРасход2 КАК АмортизацияРасход2,
+	ВТ_1_2.СтоимостьИзменение2 КАК СтоимостьИзменение2,
+	ВТ_1_2.СтоимостьОстаточная2 КАК СтоимостьОстаточная2,
+	ВТ_1_2.Год2 КАК Год2,
+	ВЫБОР
+		КОГДА ВТ_1_2.СтоимостьНачальныйОстаток1 = 0
+			ТОГДА ВЫРАЗИТЬ((ВТ_1_2.СтоимостьИзменение1 + ВТ_1_2.СтоимостьОстаточная1) / 2 КАК ЧИСЛО(18, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ВТ_1_2.СтоимостьНачальныйОстаток1 + ВТ_1_2.СтоимостьОстаточная1) / 2 КАК ЧИСЛО(18, 2))
+	КОНЕЦ КАК СредняяБалансоваяСтоимость1,
+	ВЫБОР
+		КОГДА ВТ_1_2.СтоимостьНачальныйОстаток2 = 0
+			ТОГДА ВЫРАЗИТЬ((ВТ_1_2.СтоимостьИзменение2 + ВТ_1_2.СтоимостьОстаточная2) / 2 КАК ЧИСЛО(18, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ВТ_1_2.СтоимостьНачальныйОстаток2 + ВТ_1_2.СтоимостьОстаточная2) / 2 КАК ЧИСЛО(18, 2))
+	КОНЕЦ КАК СредняяБалансоваяСтоимость2,
+	ВТ.ГодовойПроцентАмортизацииДляУменьшенногоОстатка КАК ГодовойПроцентАмортизацииДляУменьшенногоОстатка,
+	1 КАК КоличествоКуплено,
+	ВЫБОР
+		КОГДА СостоянияВнеоборотныхАктивовСрезПоследних.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияВнеоборотныхАктивов.СнятСУчета)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК СнятСУчетаКоличество,
+	ВЫБОР
+		КОГДА СостоянияВнеоборотныхАктивовСрезПоследних.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияВнеоборотныхАктивов.СнятСУчета)
+			ТОГДА НАЧАЛОПЕРИОДА(СостоянияВнеоборотныхАктивовСрезПоследних.Период, ДЕНЬ)
+		ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+	КОНЕЦ КАК ДатаСнятияСУчета,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ВТ_1_2.СтоимостьНачальныйОстаток1 = 0
+				ТОГДА ВЫРАЗИТЬ((ВТ_1_2.СтоимостьИзменение1 + ВТ_1_2.СтоимостьОстаточная1) / 2 КАК ЧИСЛО(18, 2))
+			ИНАЧЕ ВЫРАЗИТЬ((ВТ_1_2.СтоимостьНачальныйОстаток1 + ВТ_1_2.СтоимостьОстаточная1) / 2 КАК ЧИСЛО(18, 2))
+		КОНЕЦ * ВТ_1_2.ВнеоборотныйАктив.ПроцентНалогаИмущества / 100 КАК ЧИСЛО(18, 2)) КАК НалогНаИмущество1,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ВТ_1_2.СтоимостьНачальныйОстаток2 = 0
+				ТОГДА ВЫРАЗИТЬ((ВТ_1_2.СтоимостьИзменение2 + ВТ_1_2.СтоимостьОстаточная2) / 2 КАК ЧИСЛО(18, 2))
+			ИНАЧЕ ВЫРАЗИТЬ((ВТ_1_2.СтоимостьНачальныйОстаток2 + ВТ_1_2.СтоимостьОстаточная2) / 2 КАК ЧИСЛО(18, 2))
+		КОНЕЦ * ВТ_1_2.ВнеоборотныйАктив.ПроцентНалогаИмущества / 100 КАК ЧИСЛО(18, 2)) КАК НалогНаИмущество2,
+	ВТ_1_2.ВнеоборотныйАктив.СчетУчетаРегл.Код + ", " + ВТ_1_2.ВнеоборотныйАктив.СчетУчетаРегл.Наименование КАК СчетУчета_Код_Наименование,
+	ВТ_1_2.АмортизацияПриход1 + ВТ_1_2.АмортизацияПриход2 КАК АмортизацияВсего,
+	ВТ_1_2.СтоимостьИзменение1 + ВТ_1_2.СтоимостьИзменение2 КАК ИзменениеВсего,
+	ВТ_1_2.СтоимостьОстаточная2 КАК ОстаточнаяТекущий,
+	ВЫБОР
+		КОГДА СостоянияВнеоборотныхАктивовСрезПоследних.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияВнеоборотныхАктивов.СнятСУчета)
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК ТекущийКоличественныйОстаток
+ИЗ
+	ВТ_1_2 КАК ВТ_1_2
+		ЛЕВОЕ СОЕДИНЕНИЕ Вт2 КАК ВТ
+		ПО ВТ_1_2.Организация = ВТ.Организация
+			И ВТ_1_2.ВнеоборотныйАктив = ВТ.ВнеоборотныйАктив
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияВнеоборотныхАктивов.СрезПоследних(ДАТАВРЕМЯ(2222, 2, 2), ) КАК СостоянияВнеоборотныхАктивовСрезПоследних
+		ПО ВТ_1_2.Организация = СостоянияВнеоборотныхАктивовСрезПоследних.Организация
+			И ВТ_1_2.ВнеоборотныйАктив = СостоянияВнеоборотныхАктивовСрезПоследних.ВнеоборотныйАктив</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>წელი1</dataPath>
+		<expression>Год1</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>წელი2</dataPath>
+		<expression>Год2</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>სულ</dataPath>
+		<expression>"სულ"</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>საწყისი</dataPath>
+		<expression/>
+	</calculatedField>
+	<totalField>
+		<dataPath>АмортизацияКонечныйОстаток1</dataPath>
+		<expression>Сумма(АмортизацияКонечныйОстаток1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияКонечныйОстаток2</dataPath>
+		<expression>Сумма(АмортизацияКонечныйОстаток2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияНачальныйОстаток1</dataPath>
+		<expression>Сумма(АмортизацияНачальныйОстаток1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияНачальныйОстаток2</dataPath>
+		<expression>Сумма(АмортизацияНачальныйОстаток2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияОборот1</dataPath>
+		<expression>Сумма(АмортизацияОборот1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияОборот2</dataPath>
+		<expression>Сумма(АмортизацияОборот2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияПриход1</dataPath>
+		<expression>Сумма(АмортизацияПриход1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияПриход2</dataPath>
+		<expression>Сумма(АмортизацияПриход2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияРасход1</dataPath>
+		<expression>Сумма(АмортизацияРасход1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияРасход2</dataPath>
+		<expression>Сумма(АмортизацияРасход2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьИзменение1</dataPath>
+		<expression>Сумма(СтоимостьИзменение1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьИзменение2</dataPath>
+		<expression>Сумма(СтоимостьИзменение2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьКонечныйОстаток1</dataPath>
+		<expression>Сумма(СтоимостьКонечныйОстаток1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьКонечныйОстаток2</dataPath>
+		<expression>Сумма(СтоимостьКонечныйОстаток2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНачальныйОстаток1</dataPath>
+		<expression>Сумма(СтоимостьНачальныйОстаток1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНачальныйОстаток2</dataPath>
+		<expression>Сумма(СтоимостьНачальныйОстаток2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьОборот1</dataPath>
+		<expression>Сумма(СтоимостьОборот1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьОборот2</dataPath>
+		<expression>Сумма(СтоимостьОборот2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьОстаточная1</dataPath>
+		<expression>Сумма(СтоимостьОстаточная1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьОстаточная2</dataPath>
+		<expression>Сумма(СтоимостьОстаточная2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьПриход1</dataPath>
+		<expression>Сумма(СтоимостьПриход1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьПриход2</dataPath>
+		<expression>Сумма(СтоимостьПриход2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьРасход1</dataPath>
+		<expression>Сумма(СтоимостьРасход1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьРасход2</dataPath>
+		<expression>Сумма(СтоимостьРасход2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяБалансоваяСтоимость1</dataPath>
+		<expression>Сумма(СредняяБалансоваяСтоимость1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяБалансоваяСтоимость2</dataPath>
+		<expression>Сумма(СредняяБалансоваяСтоимость2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АмортизацияВсего</dataPath>
+		<expression>Сумма(АмортизацияВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИзменениеВсего</dataPath>
+		<expression>Сумма(ИзменениеВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстаточнаяТекущий</dataPath>
+		<expression>Сумма(ОстаточнаяТекущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКуплено</dataPath>
+		<expression>Сумма(КоличествоКуплено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СнятСУчетаКоличество</dataPath>
+		<expression>Сумма(СнятСУчетаКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТекущийКоличественныйОстаток</dataPath>
+		<expression>Сумма(ТекущийКоличественныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаСнятияСУчета</dataPath>
+		<expression>Максимум(ДатаСнятияСУчета)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НалогНаИмущество1</dataPath>
+		<expression>Сумма(НалогНаИмущество1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НалогНаИмущество2</dataPath>
+		<expression>Сумма(НалогНаИмущество2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачальнаяСтоимость</dataPath>
+		<expression>Сумма(НачальнаяСтоимость)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>პერიოდის დასაწყისი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Beginning of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДАТАВРЕМЯ(1,1,1)</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>პერიოდის დასასრული</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДАТАВРЕМЯ(2100,1,1)</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Год1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год 1</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>წელი 1</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>წელი 1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Год2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год 2</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>წელი 2</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>წელი 2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>4</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>РасчетНалогаНаИмущество</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчет налога на имущество</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>ქონების გადასახადის გაანგარიშება</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>ქონების გადასახადის გაანგარიშება</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год 1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>წელი 1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>წელი 1</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость и Амортизация</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьНачальныйОстаток1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьИзменение1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьКонечныйОстаток1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьОстаточная1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СредняяБалансоваяСтоимость1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НалогНаИмущество1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияНачальныйОстаток1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияПриход1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияКонечныйОстаток1</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год 2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>წელი 2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>წელი 2</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость и Амортизация</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьНачальныйОстаток2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьИзменение2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьКонечныйОстаток2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьОстаточная2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СредняяБалансоваяСтоимость2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НалогНаИмущество2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияНачальныйОстаток2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияПриход2</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияКонечныйОстаток2</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>სულ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>სულ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость и амортизация</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>АмортизацияВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИзменениеВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОстаточнаяТекущий</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительная информация</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ka</v8:lang>
+								<v8:content>დამატებითი ინფორმაცია</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>დამატებითი ინფორმაცია</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоКуплено</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДатаСнятияСУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СнятСУчетаКоличество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТекущийКоличественныйОстаток</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НачальнаяСтоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>10ed9bc8-51bf-4ca2-beec-8f0c4bdd9d74</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВнеоборотныйАктив</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВнеоборотныеАктивы.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>5e3171db-2ac0-4882-8f3d-a565e7f517ae</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ee4841ba-9e0d-44a2-84ff-8416b10ccc4d</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>391fdf3f-ef81-4511-ad28-6c6b8d9e49a0</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>37f0d752-9517-489b-9261-fce78a49cd4e</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Год1</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>d41afe42-8b5b-44c2-9cb6-1ef378cf992b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Год2</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>ea8b10d9-e89f-4d3d-886b-3bd807b91177</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВнеоборотныйАктив</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f50ef2fb-84f2-43c8-95f0-985c29b842f1</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лист Основних Средств</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ka</v8:lang>
+							<v8:content>ძირითადი საშუალებების უწყისი</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>amortization</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СчетУчета_Код_Наименование</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ИнвентарныйНомер</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВнеоборотныйАктив</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВнеоборотныйАктив.КадастровыйКод</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ГодовойПроцентАмортизацииДляУменьшенногоОстатка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Адрес</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВнеоборотныйАктив.ДатаПокупки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВнеоборотныйАктив.ПроцентНалогаИмущества</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>საწყისი</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НачальнаяСтоимость</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>წელი1</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость и Амортизация</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьНачальныйОстаток1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьИзменение1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьКонечныйОстаток1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьОстаточная1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СредняяБалансоваяСтоимость1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>НалогНаИмущество1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияНачальныйОстаток1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияПриход1</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияКонечныйОстаток1</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>წელი2</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость и Амортизация</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьНачальныйОстаток2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьИзменение2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьКонечныйОстаток2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьОстаточная2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СредняяБалансоваяСтоимость2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>НалогНаИмущество2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияНачальныйОстаток2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияПриход2</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияКонечныйОстаток2</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>სულ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость и амортизация</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ძირითადი საშუალების ღირებულება და ამორტიზაცია</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АмортизацияВсего</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ИзменениеВсего</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОстаточнаяТекущий</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительная информация</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ka</v8:lang>
+									<v8:content>დამატებითი ინფორმაცია</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>დამატებითი ინფორმაცია</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоКуплено</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаСнятияСУчета</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СнятСУчетаКоличество</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ТекущийКоличественныйОстаток</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СчетУчета_Код_Наименование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИнвентарныйНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВнеоборотныйАктив</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВнеоборотныйАктив.КадастровыйКод</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВнеоборотныйАктив.ГодовойПроцентАмортизацииДляУменьшенногоОстатка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Адрес</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВнеоборотныйАктив.ДатаПокупки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВнеоборотныйАктив.ПроцентНалогаИмущества</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипЗаголовкаПолей</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionFieldsTitleType">Short</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>3284a334-8e23-4ddb-b23c-f5d9cdea43d9</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

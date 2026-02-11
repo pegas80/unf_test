@@ -206,7 +206,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>ka</v8:lang>
-					<v8:content>Прибыль (убыток)</v8:content>
+					<v8:content>მოგება (ზარალი)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -224,6 +224,13 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СчетУчетаРегл</dataPath>
 			<field>СчетУчетаРегл</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -253,6 +260,7 @@
 	ДоходыИРасходыОбороты.ПериодПолугодие,
 	ДоходыИРасходыОбороты.ПериодГод,
 	ДоходыИРасходыОбороты.СчетУчетаРегл,
+	ДоходыИРасходыОбороты.Проект,
 	0 КАК ОперационнаяПрибыльУбыток,
 	ВЫБОР
 		КОГДА ДоходыИРасходыОбороты.Аналитика = НЕОПРЕДЕЛЕНО
@@ -677,6 +685,24 @@
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Проект</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
 					</dcsset:item>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>ddaa476c-d93f-4923-a16c-b5a95979dafe</dcsset:userSettingID>

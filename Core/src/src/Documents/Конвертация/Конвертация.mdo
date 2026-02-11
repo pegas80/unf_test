@@ -27,13 +27,14 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
   <numberType>String</numberType>
-  <numberLength>9</numberLength>
+  <numberLength>11</numberLength>
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.Конвертация.Form.ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.Конвертация.Form.ФормаСписка</defaultListForm>
   <defaultChoiceForm>Document.Конвертация.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
   <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>InformationRegister.ОтчетПоКурсовымРазницам</registerRecords>
@@ -129,7 +130,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Отправитель</value>
+      <value>გამგზავნი</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -174,7 +175,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Получатель</value>
+      <value>მიმღები</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -566,7 +567,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Кросс курс</value>
+      <value>კროს კურსი</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -590,6 +591,10 @@
     <synonym>
       <key>ru</key>
       <value>Коммерческий курс</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კომერციული კურსი</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -630,6 +635,148 @@
     <fillValue xsi:type="core:ReferenceValue">
       <value>bfa26a81-a6e2-4059-b75f-ff99d645a733.7c773388-5391-46ca-ace6-a596b1b424c1</value>
     </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="77d2db51-4547-48b8-bebd-4b02c75b191c">
+    <name>ID</name>
+    <synonym>
+      <key>ru</key>
+      <value>ID გაცვლის</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ID გაცვლის</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>ID გაცვლის</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>512</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="73ae1fb3-8051-45ca-8670-28da67cc2c20">
+    <name>НазначениеПлатежа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение платежа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადახდის დანიშნულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Purpose of payment</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Текст назначения платежа. Отображается в соответствующем поле печатной формы документа
+</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გადახდის დანიშნულების ტექსტი. აისახება ბეჭდური დოკუმენტის შესაბამის ველში</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4c4129ff-91b8-4851-957b-9a1b0cc0f933">
+    <name>КурсОтправительНацБанк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нац Банк</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ეროვნული ბანკი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Нац Банк</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a5e5a030-bbaa-4728-8766-1561f37f61fc">
+    <name>КурсПолучательНацБанк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нац Банк</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ეროვნული ბანკი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Нац Банк</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cbf4cfd5-86f0-4f04-b6ef-d7ca7c00cf64">
+    <name>TransactionID</name>
+    <synonym>
+      <key>ru</key>
+      <value>Transaction ID</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Transaction ID</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Transaction ID</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>11</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -726,6 +873,7 @@
       </synonym>
       <type>
         <types>DocumentRef.РасходСоСчета</types>
+        <types>DocumentRef.Конвертация</types>
         <types>DocumentRef.РасходИзКассы</types>
       </type>
       <toolTip>

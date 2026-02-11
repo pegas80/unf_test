@@ -209,6 +209,8 @@
   <basedOn>Document.НачислениеНалогов</basedOn>
   <basedOn>Document.ДоговорКредитаИЗайма</basedOn>
   <basedOn>Document.АвансовыйОтчет</basedOn>
+  <basedOn>Document.ЗакупкаЛицензий</basedOn>
+  <basedOn>Document.СборкаЗапасов</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -656,9 +658,11 @@
     <type>
       <types>DocumentRef.ОтчетКомиссионера</types>
       <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЗакупкаЛицензий</types>
       <types>DocumentRef.НачислениеНалогов</types>
       <types>DocumentRef.ПеремещениеДСПлан</types>
       <types>DocumentRef.НачисленияПоКредитамИЗаймам</types>
+      <types>DocumentRef.СборкаЗапасов</types>
       <types>DocumentRef.РасходДСПлан</types>
       <types>DocumentRef.ОтчетКомитенту</types>
       <types>DocumentRef.ЗаказПоставщику</types>
@@ -2083,6 +2087,57 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="34ea5b2f-3f86-4e33-b0fa-7b8830575272">
+    <name>НомерВходящегоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер входящего документа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შემომავალი დოკუმენტის №</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="578f3015-aba8-49aa-8162-3902bc5d9ef4">
+    <name>СуммаРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма расчетов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიშსწორებათა თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The amount of payments</value>
+    </synonym>
+    <comment>ONESOFT-3523</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="dd186e42-be6f-4ff0-90ff-c681fdf1fa14">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2268,10 +2323,12 @@
         <types>DocumentRef.РасходнаяНакладная</types>
         <types>DocumentRef.ОтчетКомиссионера</types>
         <types>DocumentRef.ПриходнаяНакладная</types>
+        <types>DocumentRef.ЗакупкаЛицензий</types>
         <types>DocumentRef.АктВыполненныхРабот</types>
         <types>DocumentRef.ОтчетОПереработке</types>
         <types>DocumentRef.ПоступлениеВКассу</types>
         <types>DocumentRef.ЗаказПокупателя</types>
+        <types>DocumentRef.СборкаЗапасов</types>
         <types>DocumentRef.ВозвратДенегОтПФ</types>
         <types>DocumentRef.НачислениеЗарплаты</types>
         <types>DocumentRef.ОтчетПереработчика</types>

@@ -16,7 +16,7 @@
       </title>
       <title>
         <key>en</key>
-        <value>Сумма</value>
+        <value>Amount</value>
       </title>
       <titleTextColor xsi:type="core:ColorRef">
         <color>Style.FormTextColor</color>
@@ -2415,24 +2415,111 @@
         </font>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
-      <items xsi:type="form:FormField">
-        <name>ЭквайринговыйТерминал</name>
-        <id>233</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаТерминал</name>
+        <id>474</id>
+        <items xsi:type="form:FormField">
+          <name>ЭквайринговыйТерминал</name>
+          <id>233</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ЭквайринговыйТерминал</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЭквайринговыйТерминалПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ЭквайринговыйТерминалРасширеннаяПодсказка</name>
+            <id>235</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЭквайринговыйТерминалКонтекстноеМеню</name>
+            <id>234</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <choiceParameterLinks>
+              <name>Отбор.Касса</name>
+              <datapath xsi:type="form:DataPath">
+                <segments>КассаККМ</segments>
+              </datapath>
+            </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияСтатусТерминала</name>
+          <id>476</id>
+          <title>
+            <key>ru</key>
+            <value>Декорация статус терминала</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияСтатусТерминалаРасширеннаяПодсказка</name>
+            <id>478</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияСтатусТерминалаКонтекстноеМеню</name>
+            <id>477</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <fileDragMode>AsFileRef</fileDragMode>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.ЭквайринговыйТерминал</segments>
-        </dataPath>
-        <handlers>
-          <event>OnChange</event>
-          <name>ЭквайринговыйТерминалПриИзменении</name>
-        </handlers>
+        <title>
+          <key>ru</key>
+          <value>Группа терминал</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа терминал</value>
+        </toolTip>
         <extendedTooltip>
-          <name>ЭквайринговыйТерминалРасширеннаяПодсказка</name>
-          <id>235</id>
+          <name>ГруппаТерминалРасширеннаяПодсказка</name>
+          <id>475</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -2440,30 +2527,14 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ЭквайринговыйТерминалКонтекстноеМеню</name>
-          <id>234</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <autoMarkIncomplete>true</autoMarkIncomplete>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <choiceParameterLinks>
-            <name>Отбор.Касса</name>
-            <datapath xsi:type="form:DataPath">
-              <segments>КассаККМ</segments>
-            </datapath>
-          </choiceParameterLinks>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -2572,6 +2643,10 @@
               <items xsi:type="form:FormField">
                 <name>СООплатаКартой</name>
                 <id>400</id>
+                <title>
+                  <key>en</key>
+                  <value>Amount</value>
+                </title>
                 <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
@@ -3676,24 +3751,111 @@
         </font>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
-      <items xsi:type="form:FormField">
-        <name>ЭквайринговыйТерминал1</name>
-        <id>393</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаТерминал1</name>
+        <id>469</id>
+        <items xsi:type="form:FormField">
+          <name>ЭквайринговыйТерминал1</name>
+          <id>393</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.ЭквайринговыйТерминал</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ЭквайринговыйТерминалПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ЭквайринговыйТерминал1РасширеннаяПодсказка</name>
+            <id>395</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЭквайринговыйТерминал1КонтекстноеМеню</name>
+            <id>394</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <choiceParameterLinks>
+              <name>Отбор.Касса</name>
+              <datapath xsi:type="form:DataPath">
+                <segments>КассаККМ</segments>
+              </datapath>
+            </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияСтатусТерминала1</name>
+          <id>471</id>
+          <title>
+            <key>ru</key>
+            <value>Декорация статус терминала1</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияСтатусТерминала1РасширеннаяПодсказка</name>
+            <id>473</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияСтатусТерминала1КонтекстноеМеню</name>
+            <id>472</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <fileDragMode>AsFileRef</fileDragMode>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
-        <dataPath xsi:type="form:DataPath">
-          <segments>Объект.ЭквайринговыйТерминал</segments>
-        </dataPath>
-        <handlers>
-          <event>OnChange</event>
-          <name>ЭквайринговыйТерминалПриИзменении</name>
-        </handlers>
+        <title>
+          <key>ru</key>
+          <value>Группа терминал1</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа терминал1</value>
+        </toolTip>
         <extendedTooltip>
-          <name>ЭквайринговыйТерминал1РасширеннаяПодсказка</name>
-          <id>395</id>
+          <name>ГруппаТерминал1РасширеннаяПодсказка</name>
+          <id>470</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -3701,30 +3863,14 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <contextMenu>
-          <name>ЭквайринговыйТерминал1КонтекстноеМеню</name>
-          <id>394</id>
-          <autoFill>true</autoFill>
-        </contextMenu>
-        <type>InputField</type>
-        <editMode>Enter</editMode>
-        <showInHeader>true</showInHeader>
-        <headerHorizontalAlign>Left</headerHorizontalAlign>
-        <showInFooter>true</showInFooter>
-        <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <wrap>true</wrap>
-          <autoMarkIncomplete>true</autoMarkIncomplete>
-          <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
-          <textEdit>true</textEdit>
-          <choiceParameterLinks>
-            <name>Отбор.Касса</name>
-            <datapath xsi:type="form:DataPath">
-              <segments>КассаККМ</segments>
-            </datapath>
-          </choiceParameterLinks>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -5117,7 +5263,7 @@
         </title>
         <title>
           <key>ka</key>
-          <value>Группа адрес ЭП</value>
+          <value>ელფოსტის მისამართების ჯგუფი</value>
         </title>
         <title>
           <key>en</key>
@@ -5129,7 +5275,7 @@
         </toolTip>
         <toolTip>
           <key>ka</key>
-          <value>Группа адрес ЭП</value>
+          <value>ელფოსტის მისამართების ჯგუფი</value>
         </toolTip>
         <toolTip>
           <key>en</key>
@@ -5359,6 +5505,10 @@
       <items xsi:type="form:FormField">
         <name>ПринимаемаяСуммаСО</name>
         <id>410</id>
+        <title>
+          <key>en</key>
+          <value>Amount received</value>
+        </title>
         <titleTextColor xsi:type="core:ColorRef">
           <color>Style.FormTextColor</color>
         </titleTextColor>
@@ -6299,7 +6449,7 @@
     </title>
     <id>20</id>
     <valueType>
-      <types>CatalogRef.ПодключаемоеОборудование</types>
+      <types>CatalogRef.ЭквайринговыеТерминалы</types>
     </valueType>
     <view>
       <common>true</common>
@@ -7265,6 +7415,10 @@
       <key>ka</key>
       <value>0</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>0</value>
+    </title>
     <id>5</id>
     <use>
       <common>true</common>
@@ -7288,7 +7442,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>one</value>
+      <value>1</value>
     </title>
     <id>6</id>
     <use>
@@ -7309,6 +7463,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>2</value>
     </title>
     <id>7</id>
@@ -7332,6 +7490,10 @@
       <key>ka</key>
       <value>3</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>3</value>
+    </title>
     <id>8</id>
     <use>
       <common>true</common>
@@ -7351,6 +7513,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>4</value>
     </title>
     <id>9</id>
@@ -7374,6 +7540,10 @@
       <key>ka</key>
       <value>5</value>
     </title>
+    <title>
+      <key>en</key>
+      <value>5</value>
+    </title>
     <id>10</id>
     <use>
       <common>true</common>
@@ -7393,6 +7563,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>6</value>
     </title>
     <id>11</id>
@@ -7418,7 +7592,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>one</value>
+      <value>1</value>
     </title>
     <id>12</id>
     <use>
@@ -7439,6 +7613,10 @@
     </title>
     <title>
       <key>ka</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>en</key>
       <value>8</value>
     </title>
     <id>13</id>
@@ -7464,7 +7642,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>nine</value>
+      <value>9</value>
     </title>
     <id>14</id>
     <use>
@@ -7489,7 +7667,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>FROM</value>
+      <value>C</value>
     </title>
     <id>15</id>
     <toolTip>

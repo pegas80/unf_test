@@ -267,6 +267,7 @@
   <registerRecords>AccumulationRegister.ЗапасыКПоступлениюНаСклады</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
@@ -277,6 +278,7 @@
   <registerRecords>AccumulationRegister.РасчетыСПоставщиками</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
   <registerRecords>AccumulationRegister.ЗакупкиДляКУДиР</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -1522,6 +1524,55 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="5ecf2def-1f62-4f81-a6e7-8b803592361f">
+    <name>ВидНалогаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид налога НДС</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადასახადის ტიპი დღგ</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>VAT Type</value>
+    </synonym>
+    <comment>ONESOFT-3200 Малышев</comment>
+    <type>
+      <types>CatalogRef.ВидыНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="16b255d3-3c91-4e46-a802-6787c18bcf63">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Project</value>
+    </synonym>
+    <comment>ONESOFT-3414</comment>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="3cb84423-1a5c-41f2-8c4d-79055c0c0691">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2111,7 +2162,6 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillChecking>ShowError</fillChecking>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -2665,6 +2715,29 @@
         <name>СтранаПроисхождения</name>
         <field>0:ea0636e4-0a1e-4833-8dc3-a6b6f2ed83fa/0:ee98b30c-1cb9-43a7-8aae-ca2e4c21479d</field>
       </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="40e8ab35-41b5-45b5-80c5-6250dc800f32">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3414</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -3574,6 +3647,29 @@
       </synonym>
       <type>
         <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b45169e2-6151-41cb-bdb0-183b9830fb35">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3414</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

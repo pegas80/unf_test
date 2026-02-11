@@ -285,10 +285,12 @@
   <registerRecords>AccumulationRegister.СебестоимостьЗакупки</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.ПотребностьВЗапасах</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
+  <registerRecords>AccumulationRegister.БалыЛояльности</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыПереданные</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
@@ -303,9 +305,12 @@
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПоставщиками</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
+  <registerRecords>AccumulationRegister.ПродажиВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.ЗакупкиДляКУДиР</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <registerRecords>AccumulationRegister.ЦеныВозвратаНоменклатурDgFIFO</registerRecords>
   <registerRecords>AccumulationRegister.ВнеоборотныеАктивы</registerRecords>
+  <registerRecords>AccumulationRegister.ЗаявкиНаВозврат</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -1629,11 +1634,11 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Идентификатор чека штрих М</value>
+      <value>იდენთიფიკატორი საკასო ჩეკის M</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Идентификатор чека штрих М</value>
+      <value>ID check bar M</value>
     </synonym>
     <type>
       <types>UUID</types>
@@ -1896,6 +1901,10 @@
       <key>ka</key>
       <value>საგადასახადო დოკუმენტის ნომერი</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Tax document number</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -1917,6 +1926,10 @@
     <synonym>
       <key>ka</key>
       <value>საგადასახადო დოკუმენტის ID</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Tax document ID</value>
     </synonym>
     <type>
       <types>String</types>
@@ -2030,6 +2043,10 @@
       <key>ka</key>
       <value>მომოწოდებლისადმი არსებული  დავალიანების  კონტროლის გამორთვა</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Disabling the control of the existing debt to the supplier</value>
+    </synonym>
     <type>
       <types>Boolean</types>
     </type>
@@ -2070,6 +2087,279 @@
     </synonym>
     <type>
       <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="37d58af3-6443-4c95-a8f7-1df860fa0980">
+    <name>ОтключитьКонтрольНоменклатурыПриВозврате</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отключить контроль номенклатуры при возврате</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნომენკალტურის დაბრუნების კონტროლის გათიშვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Disable nomenclature return control</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a6cda9e6-bb52-40e5-9900-4a79152e6622">
+    <name>ДокументАрендыКвартиры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ аренды квартиры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Документ аренды квартиры</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Документ аренды квартиры</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fb913360-1427-4534-b861-55fd39fec27f">
+    <name>ВидИспользованияБалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Балы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქულები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Балы</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>EnumRef.ВидыИспользованияБалов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыИспользованияБалов.EnumValue.НакоплениеИРасход</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5772b92b-e352-4dfa-8da3-1df04d086e63">
+    <name>КартаЛояльности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Карта лояльности</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ლოიალურობის ბარათი</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>CatalogRef.КартыЛояльности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ВладелецКарты</name>
+      <field>Document.ПриходнаяНакладная.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="959de68a-8051-4c31-9db4-5fd79dc39e57">
+    <name>ВсегоИспользованоБаллов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Всего использовано баллов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სულ გამოყენებული ქულები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Всего использовано баллов</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="77fa8152-4775-4ea3-a800-0aefc6dc3cfc">
+    <name>ОбщаяСуммаКОплате</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общая сумма к оплате</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანხა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Общая сумма к оплате</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ab243bbe-a18c-4859-9d56-33567891258e">
+    <name>СуммаНДСБаллов</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС использовано баллов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყენებული ქულების დღგ</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c7ed436c-661e-4e10-b175-1e38448386a1">
+    <name>СуммаНДСЛояльности</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС с лояльности</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დღგ ლოიალურობის</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1de2fcdf-0f75-4cd6-831c-6e2fca55300f">
+    <name>СуммаНДСНакопленныхБаллов</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС накопленных баллов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაგროვებული ქულების დღგ</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b180ea92-201d-4f3e-a179-bc26efad2439">
+    <name>КоличествоНакопленныхБаллов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накоплено баллов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>აგროვებული ქულა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Accumulated points</value>
+    </synonym>
+    <comment>ONESOFT-3619</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a9b39d00-aa21-4111-a7b9-6395734b5ab7">
+    <name>ПроцентНакопленияБалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент накопления балов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -3450,6 +3740,171 @@
       <createOnInput>Use</createOnInput>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="5686e62e-1204-44cc-a505-8e2211a14e04">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности, дней </value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვარგისიანობის ვადა, დღის.</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3f24cca4-1690-4ee1-b33e-dab16dd79960">
+      <name>СуммаНДСБаллов</name>
+      <synonym>
+        <key>ru</key>
+        <value>НДС использовано баллов</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაგროვებული ქულების დღგ</value>
+      </synonym>
+      <comment>ONESOFT-3556</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="446c7f52-2707-4473-91a6-3bb3f93d8350">
+      <name>СуммаНДСЛояльности</name>
+      <synonym>
+        <key>ru</key>
+        <value>НДС лояльности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაგროვებული ქულების დღგ</value>
+      </synonym>
+      <comment>ONESOFT-3556</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="913027a9-9c6c-4fc1-9e27-15b55cb281df">
+      <name>СуммаНДСНакопленныхБаллов</name>
+      <synonym>
+        <key>ru</key>
+        <value>НДС накопленных баллов</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დაგროვებული ქულების დღგ</value>
+      </synonym>
+      <comment>ONESOFT-3556</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7d5111f2-1e54-4592-9cfb-7a060ac6e9cb">
+      <name>КоличествоНакопленныхБаллов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Накопленные баллы</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>აგროვებული ქულა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Accumulated points</value>
+      </synonym>
+      <comment>ONESOFT-3556</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="118ad121-833c-416f-8848-70b047c05909">
+      <name>БалыРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Балы расход</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გახარჯული ქულები</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c7fd17d3-f0cc-4680-9ac0-20c3eace220a">
+      <name>ПроцентСкидкаЛояльности</name>
+      <synonym>
+        <key>ru</key>
+        <value>% Лояльности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ლოიალურობის %</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>% Лояльности</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="d600102f-6949-4281-9f93-14137bf28404">
     <producedTypes>
@@ -3632,7 +4087,7 @@
       <type>
         <types>Number</types>
         <numberQualifiers>
-          <precision>22</precision>
+          <precision>18</precision>
           <scale>9</scale>
           <nonNegative>true</nonNegative>
         </numberQualifiers>
@@ -6537,6 +6992,21 @@
     </synonym>
     <comment>// Kuzmich, 07.03.2019, Информация о прибыли в форму списка Приходная накладная</comment>
     <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="3a9b90af-1dfe-46b1-b346-638e4db5c375">
+    <name>ПФ_MXL_НакладнаяГоризонтально</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная (ландшафт)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ზედნადები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Накладная</value>
+    </synonym>
   </templates>
   <commands uuid="c07e06cb-26e8-4ead-be64-139aa90b9c0a">
     <name>КомандаРасходнаяНакладнаяПродажаСоздатьНаОсновании</name>

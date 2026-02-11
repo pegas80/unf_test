@@ -417,8 +417,56 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
+        <name>НазначениеПлатежа</name>
+        <id>117</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Список.НазначениеПлатежа</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>НазначениеПлатежаРасширеннаяПодсказка</name>
+          <id>119</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НазначениеПлатежаКонтекстноеМеню</name>
+          <id>118</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
         <name>Выгружен</name>
         <id>49</id>
+        <title>
+          <key>ru</key>
+          <value>Выгружен</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ჩამოტვირთულია</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Downloaded</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -452,6 +500,18 @@
       <items xsi:type="form:FormField">
         <name>СтатусДокументаВИнтернетБанке</name>
         <id>43</id>
+        <title>
+          <key>ru</key>
+          <value>Статус Документа В Интернет Банке</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>დოკუმენტის სტატუსი ინტერნეტ ბანკში</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Document Status in the Internet Bank</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -488,6 +548,18 @@
       <items xsi:type="form:FormField">
         <name>УИДДокументаВБанке</name>
         <id>46</id>
+        <title>
+          <key>ru</key>
+          <value>УИД Документа В Банке</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>დოკუმენტის უნიკალური კოდი ბანკში</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Unique code of the document in the bank</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -509,6 +581,42 @@
         <contextMenu>
           <name>УИДДокументаВБанкеКонтекстноеМеню</name>
           <id>47</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>TransactionID</name>
+        <id>120</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Список.TransactionID</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>TransactionIDРасширеннаяПодсказка</name>
+          <id>122</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>TransactionIDКонтекстноеМеню</name>
+          <id>121</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>LabelField</type>
@@ -673,6 +781,18 @@
                 <segments>ОтборАвтор</segments>
               </dataPath>
               <titleLocation>None</titleLocation>
+              <toolTip>
+                <key>ru</key>
+                <value>Автор</value>
+              </toolTip>
+              <toolTip>
+                <key>ka</key>
+                <value>ავტორი</value>
+              </toolTip>
+              <toolTip>
+                <key>en</key>
+                <value>Author</value>
+              </toolTip>
               <extendedTooltip>
                 <name>ОтборАвторРасширеннаяПодсказка</name>
                 <id>116</id>
@@ -994,6 +1114,7 @@
 	ДокументКонвертация.ЗапретРедактированияДокументов,
 	ЕСТЬNULL(СтатусыДокументовBOGСрезПоследних.СтатусДокументаВИнтернетБанке, ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовВИнтернетБанке.ПрисутствуетТолькоВТекущейБазе)) КАК СтатусДокументаВИнтернетБанке,
 	ЕСТЬNULL(УИДДокументовВИнтернетБанке.УИДДокументаВБанке, &quot;&quot;) КАК УИДДокументаВБанке,
+	ДокументКонвертация.TransactionID,
 	ВЫБОР
 		КОГДА ЕСТЬNULL(УИДДокументовВИнтернетБанке.Выгружен, ЛОЖЬ) = ЛОЖЬ
 				И ЕСТЬNULL(УИДДокументовВИнтернетБанке.УИДДокументаВБанке, &quot;&quot;) &lt;> &quot;&quot;
@@ -1002,7 +1123,8 @@
 			ТОГДА ЛОЖЬ
 		ИНАЧЕ УИДДокументовВИнтернетБанке.Выгружен
 	КОНЕЦ КАК Выгружен,
-	ИспользоватьЗагрузкуИзБанка.Значение КАК ИспользоватьИнтернетБанк
+	ИспользоватьЗагрузкуИзБанка.Значение КАК ИспользоватьИнтернетБанк,
+	ДокументКонвертация.НазначениеПлатежа
 ИЗ
 	Документ.Конвертация КАК ДокументКонвертация
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыДокументовВИнтернетБанке.СрезПоследних КАК СтатусыДокументовBOGСрезПоследних

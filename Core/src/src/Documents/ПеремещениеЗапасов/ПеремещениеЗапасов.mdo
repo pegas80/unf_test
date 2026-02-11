@@ -247,13 +247,17 @@
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКПоступлениюНаСклады</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.РезервированиеЗапасов</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
+  <registerRecords>AccumulationRegister.ЗаказыИПеремешения</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыПринятые</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>InformationRegister.СерийныеНомераГарантии</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <registerRecords>AccumulationRegister.ВнеоборотныеАктивы</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -627,6 +631,7 @@
     <type>
       <types>DocumentRef.ПеремещениеЗапасов</types>
       <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
       <types>DocumentRef.ЗаказНаПроизводство</types>
       <types>DocumentRef.СборкаЗапасов</types>
       <types>DocumentRef.ПеремещениеПоЯчейкам</types>
@@ -1258,7 +1263,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Удалить главный бухгалтер</value>
+      <value>წაშალეთ მთავარი ბუღალტერი</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1281,7 +1286,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Удалить отпустил</value>
+      <value>გამოშვებული წაშლა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1304,7 +1309,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Удалить отпустил должность</value>
+      <value>გათავისუფლებული პოზიციის წაშლა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1327,7 +1332,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Удалить руководитель</value>
+      <value>ხელმძღვანელის ამოღბა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1350,7 +1355,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Удалить руководитель должность</value>
+      <value>ხელმძღვანელის მოხსნა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1480,7 +1485,7 @@ Recipient cell</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>დანახარჯების ანგარიში (регл)</value>
+      <value>დანახარჯების ანგარიში (რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1577,8 +1582,7 @@ Recipient cell</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>
-Through transit warehouse</value>
+      <value>Through transit warehouse</value>
     </synonym>
     <type>
       <types>Boolean</types>
@@ -1713,7 +1717,7 @@ Through transit warehouse</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Номер СФ</value>
+      <value>SF Number</value>
     </synonym>
     <type>
       <types>String</types>
@@ -1763,6 +1767,10 @@ Through transit warehouse</value>
       <key>ka</key>
       <value>საგადასახადო დოკუმენტის ნომერი</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>TAX Document number</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -1784,6 +1792,10 @@ Through transit warehouse</value>
     <synonym>
       <key>ka</key>
       <value>საგადასახადო დოკუმენტის ID</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>TAX Document ID</value>
     </synonym>
     <type>
       <types>String</types>
@@ -1830,6 +1842,10 @@ Through transit warehouse</value>
     <synonym>
       <key>ru</key>
       <value>Положение ячейки в перемещении запасов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>უჯრედის პოზიცია მარაგების გადაადგილებაში</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1915,15 +1931,15 @@ Through transit warehouse</value>
     <name>ПроектОтправитель</name>
     <synonym>
       <key>ru</key>
-      <value>Проект</value>
+      <value>Проект отправитель</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>პროექტი</value>
+      <value>პროექტი გამგზავნი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Project</value>
+      <value>From Project</value>
     </synonym>
     <type>
       <types>CatalogRef.Проекты</types>
@@ -1938,15 +1954,15 @@ Through transit warehouse</value>
     <name>ПроектПолучатель</name>
     <synonym>
       <key>ru</key>
-      <value>Проект</value>
+      <value>Проект получатель</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>პროექტი</value>
+      <value>პროექტი მიმღები</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Project</value>
+      <value>To Project</value>
     </synonym>
     <type>
       <types>CatalogRef.Проекты</types>
@@ -2700,15 +2716,15 @@ Warehouse Cell</value>
       <name>ПроектОтправитель</name>
       <synonym>
         <key>ru</key>
-        <value>Отправитель</value>
+        <value>Проект отправитель</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>Отправитель</value>
+        <value>გამგზავნი პროექტი</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Отправитель</value>
+        <value>Project From</value>
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
@@ -2722,15 +2738,15 @@ Warehouse Cell</value>
       <name>ПроектПолучатель</name>
       <synonym>
         <key>ru</key>
-        <value>Получатель</value>
+        <value>Проект получатель</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>Получатель</value>
+        <value>მიმღები პროექტი</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Получатель</value>
+        <value>Project to</value>
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
@@ -2807,6 +2823,129 @@ Warehouse Cell</value>
         <name>Отбор.Владелец</name>
         <field>Document.ПеремещениеЗапасов.Attribute.СтруктурнаяЕдиницаПолучатель</field>
       </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="14b59c23-7466-4e58-aa06-7042dc3c2916">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვარგისიანობის ვადა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Best before date</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="153a3389-854d-4c75-8b17-5f22138e1ab8">
+      <name>ЗапасыСтруктурнаяЕдиницаПолучатель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получатель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მიმღები</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Recipient</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Получатель</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მიმღები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Recipient</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>Document.ПеремещениеЗапасов.Attribute.ВидОперации</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9f6beb83-3592-4670-9026-a0f469c35126">
+      <name>ЗапасыСтруктурнаяЕдиницаОтправитель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отправитель</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გამგზავნი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Получатель</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>მიმღები</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Recipient</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ВидОперации</name>
+        <field>Document.ПеремещениеЗапасов.Attribute.ВидОперации</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a1b2eee0-6638-4d5e-8827-73e57f48aa13">
+      <name>ЦенаПродажи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена продажи</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სარეალიზაციო ფასი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Sale Price</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -3069,7 +3208,7 @@ Warehouse Cell</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Требование-накладная (М-11)</value>
+      <value>Requirement-invoice (M-11)</value>
     </synonym>
   </templates>
   <templates uuid="9f01e45a-5eff-4a54-a24c-270191e5cd14">
@@ -3084,7 +3223,7 @@ Warehouse Cell</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Накладная на перемещение запасов (ТОРГ-13)</value>
+      <value>Invoice for moving inventory (TORG-13)</value>
     </synonym>
   </templates>
   <templates uuid="7ef98344-5172-417c-974b-5d85dd2e8209">
@@ -3099,7 +3238,7 @@ Warehouse Cell</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Накладная на передачу готовой продукции в места хранения (МХ-18)</value>
+      <value>Invoice for transfer of finished products to storage locations (MX-18)</value>
     </synonym>
   </templates>
   <templates uuid="3aded70f-bef7-42f7-b49d-000983aa9c5b">
@@ -3125,11 +3264,11 @@ Warehouse Cell</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>(Не используется) Бланк товарного наполнения</value>
+      <value>(არ გამოიყენება) პროდუქტის შევსების ფორმა</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>(Не используется) Бланк товарного наполнения</value>
+      <value>(Not used) Product filling form</value>
     </synonym>
   </templates>
   <templates uuid="3f0b1ba0-f0cf-47ee-99b3-3d1d0af77a45">
@@ -3153,6 +3292,14 @@ Warehouse Cell</value>
       <key>ru</key>
       <value>Загрузка из файла</value>
     </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ფაილიდან ჩატვირთვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Loading from file</value>
+    </synonym>
   </templates>
   <templates uuid="01218291-7ada-4001-aa68-e1a58898e16e">
     <name>ОбразецЗагрузкиДанных_xlsx</name>
@@ -3163,6 +3310,10 @@ Warehouse Cell</value>
     <synonym>
       <key>ka</key>
       <value>მონაცემთა ჩატვირთვის ნიმუში xlsx</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Sample xlsx data download</value>
     </synonym>
     <templateType>BinaryData</templateType>
   </templates>
@@ -3176,6 +3327,10 @@ Warehouse Cell</value>
       <key>ka</key>
       <value>მონაცემთა ჩატვირთვის ნიმუში mxl</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>mxl data download sample</value>
+    </synonym>
   </templates>
   <templates uuid="67461a27-eded-4b62-b68b-d723064e6331">
     <name>ОбразецЗагрузкиДанных_csv</name>
@@ -3187,7 +3342,26 @@ Warehouse Cell</value>
       <key>ka</key>
       <value>მონაცემთა ჩატვირთვის ნიმუში csv</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Sample csv data download</value>
+    </synonym>
     <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="67824dba-0f35-4221-afb9-3ca51572f7f5">
+    <name>СписаниеМатериаловПроекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание материалов проекта</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტზე გახარჯული მსასალების ჩამოწერა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Write-off of project materials</value>
+    </synonym>
   </templates>
   <commands uuid="c50049bd-6eeb-4477-80c8-d9f8ba1fbeda">
     <name>СоздатьИзСписка</name>

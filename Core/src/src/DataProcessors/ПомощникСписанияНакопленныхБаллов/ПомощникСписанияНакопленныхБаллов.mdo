@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec9ccede-c4db-48ec-8c0b-3229c526eaed">
+  <producedTypes>
+    <objectType typeId="521ce000-3bdc-414c-99c0-18462138f61f" valueTypeId="bde8a651-38e0-4192-9fb6-2dc0a3d84165"/>
+    <managerType typeId="b3d6d1fc-71b0-4400-bff4-8e46fb799e75" valueTypeId="67017567-f6df-4a97-94d3-77c1d2c1d60e"/>
+  </producedTypes>
+  <name>ПомощникСписанияНакопленныхБаллов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Помощник списания накопленных/неиспользованных баллов</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>დაგროვებული (გამოუყენებელი) ლოიალურობის ქულების ჩამოწერა</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПомощникСписанияНакопленныхБаллов.Form.Форма</defaultForm>
+  <tabularSections uuid="009f2f6d-c857-4e06-8604-aac085640a3d">
+    <producedTypes>
+      <objectType typeId="165fd41b-db4c-4432-baeb-020bf735530d" valueTypeId="a0b45ece-475d-4f6a-b5e1-ad188308540f"/>
+      <rowType typeId="e5c5de83-0164-4d3a-837c-2c6a5f4205aa" valueTypeId="0d5615dd-dca9-4426-a418-81d8182f8ae9"/>
+    </producedTypes>
+    <name>КартыЛояльности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Карты лояльности</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="1ff117e1-ce66-4671-b223-a443f1f37d06">
+      <name>Создать</name>
+      <synonym>
+        <key>ru</key>
+        <value>Создать</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შექმნა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Create</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="65615d04-3f30-4c6b-80c9-0ea2b052dc3f">
+      <name>Дата</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Date</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1fa3d8ff-9b92-49f6-bd1a-36f36266d100">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კონტრაგენტი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="275e8ac5-d2ba-4486-bd71-ebdff6822151">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ხელშეკრულება</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.ПомощникСписанияНакопленныхБаллов.TabularSection.КартыЛояльности.Attribute.Контрагент</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="29c7d327-d7c9-4a70-9534-a7fdb6b16b76">
+      <name>КартаЛояльности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Карта лояльности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ლოიალურობის ბარათი</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КартыЛояльности</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="462aeebb-5411-4df1-bce1-7722f0fed4ed">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ქილების რაოდენობა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a0ea4017-557b-4e78-a251-88b9447317fe">
+      <name>СуммаНДС</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДС</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დღგ_ს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>VAT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="efb54739-3e65-44c9-b045-a5157b2597da">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დოკუმენტი</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.СписаниеБалловЛояльности</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9c1913fa-bdbe-4e0d-80e5-1252e6b3f4c8">
+      <name>Всего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სულ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Total</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="d6aacd2f-ef68-49ab-9667-b6bccd1f4ceb">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="5bd3f81e-098a-4abd-9dfe-e193f5492bd8">
+    <name>СКДОтбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКДОтбора</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

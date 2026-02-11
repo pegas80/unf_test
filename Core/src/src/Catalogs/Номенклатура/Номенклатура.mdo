@@ -18,7 +18,7 @@
   </synonym>
   <synonym>
     <key>en</key>
-    <value>Nomenclature</value>
+    <value>Items</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Catalog.Номенклатура.StandardAttribute.Description</inputByString>
@@ -378,7 +378,7 @@
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
   <codeLength>13</codeLength>
-  <descriptionLength>100</descriptionLength>
+  <descriptionLength>150</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
   <autonumbering>true</autonumbering>
@@ -1041,12 +1041,6 @@
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <choiceParameters>
-      <name>Отбор.Ссылка</name>
-      <value xsi:type="core:ReferenceValue">
-        <value>Enum.МетодОценкиЗапасов.EnumValue.ПоСредней</value>
-      </value>
-    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>Enum.МетодОценкиЗапасов.EnumValue.ПоСредней</value>
     </fillValue>
@@ -2147,7 +2141,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Объем (м3)</value>
+      <value>მოცულობა, (მ3)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2170,7 +2164,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Длина (см3)</value>
+      <value>სიგრძე (სმ3)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2198,7 +2192,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Ширина (см3)</value>
+      <value>სიგანე (სმ3)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2226,7 +2220,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Высота (см3)</value>
+      <value>სიმაღლე (სმ3)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2279,6 +2273,10 @@
       <value>Счет учета запасов (регл)</value>
     </synonym>
     <synonym>
+      <key>ka</key>
+      <value>აღრიცხვის ანგარიში (რეგლ)</value>
+    </synonym>
+    <synonym>
       <key>en</key>
       <value>inventory accounting expense (Regla)</value>
     </synonym>
@@ -2301,7 +2299,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Счет учета затрат (регл)</value>
+      <value>ხარჯის ანგარიში (რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2444,11 +2442,11 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Использовать проект</value>
+      <value>გამოიყენეთ პროექტი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Использовать проект</value>
+      <value>Use project</value>
     </synonym>
     <type>
       <types>Boolean</types>
@@ -2467,11 +2465,11 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Проект</value>
+      <value>პროექტი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Проект</value>
+      <value>Project</value>
     </synonym>
     <type>
       <types>CatalogRef.Проекты</types>
@@ -2487,6 +2485,14 @@
     <synonym>
       <key>ru</key>
       <value>Направление для чека ККМ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მიმართულება KKM ჩეკისთვის</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Direction for KKM check</value>
     </synonym>
     <type>
       <types>EnumRef.ВидыЧековДляНоменклатурыККМ</types>
@@ -2536,6 +2542,283 @@
     </synonym>
     <type>
       <types>CatalogRef.СписаниеНаПотери</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3b7ea8f7-3890-4b83-9215-6e04aea54a22">
+    <name>ВерхняяГраницаОстатков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Верхняя граница остатков</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ნაშთის ზედა ზღვარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>The upper limit of residues</value>
+    </synonym>
+    <comment>Используется в прайс-листе при выводе остатков в виде представления</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ec76ad7f-1a2a-4166-84a4-d69ec7ed9ead">
+    <name>СрокГодности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок годности</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გამოყენების ვადა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>SHELFLIFE</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2cc9ece3-fa6d-4bad-8410-9c5de35d72bc">
+    <name>Весовой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Весовой</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>წონითი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Weighted</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ae3d4986-046a-4194-9542-e3bb4471254c">
+    <name>СтавкаЛицензии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка лицензии</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ლიცენზიის განაკვეთი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>License rate</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкаЛицензии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6ff18d6b-baa4-476a-b591-cb02d5217cb6">
+    <name>КоэффициентРазборки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент разборки</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კოეფიციენტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Coefficient</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Коэффициент пересчета в базовую единицу измерения номенклатурной позиции</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ნომენკლატურული პოზიციის საბაზო საზომ ერთეულში გადათვლის კოეფიციენტი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The conversion factor to the base unit nomenclature position</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:NumberValue">
+      <value>1</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolder</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="082749e8-f9b9-4427-a75a-e078f779819b">
+    <name>ВключенВрегистр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Включен в регистр</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რეგისტრში გათვალისწინება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Included in the register</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>ნომენკლატურას, რომელსაც  მონიშნული ექნება ეს ღილაკი,მარაგების მოძრაობის ინფორმაცია გატარდება  &quot;პროდუქციის ვადების კონტროლი&quot;-ს რეგისტრში.</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ნომენკლატურას, რომელსაც  მონიშნული ექნება ეს ღილაკი,მარაგების მოძრაობის ინფორმაცია გატარდება  &quot;პროდუქციის ვადების კონტროლი&quot;-ს რეგისტრში.</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>ნომენკლატურას, რომელსაც  მონიშნული ექნება ეს ღილაკი,მარაგების მოძრაობის ინფორმაცია გატარდება  &quot;პროდუქციის ვადების კონტროლი&quot;-ს რეგისტრში.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1f6faaab-f7fa-4ec7-a343-0c1eb60604f4">
+    <name>СтруктурнаяЕдиницаНаКарточкеНоменклатури</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица на карточке номенклатури</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სტრუქტურული ერთეული ნომენკლატურის ბარათზე</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Structural unit on the nomenclature card</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="07f7e27c-a948-4e1a-a88a-48c93ed2b83e">
+    <name>ЕдиницаИзмеренияСчетФактури</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения счет фактуры</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიშფაქტურის ზომის ერთეული</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Unit of measurement invoice</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6e45d11e-6e72-4d77-bc8f-ebf03ba23c82">
+    <name>НужнаПроверит</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нужна проверит</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>აუცილებლად შესადარებელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Need to check</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7f5f723e-2773-4050-b040-98a5796568b9">
+    <name>Отклонение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отклонение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გადახრა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Deviation</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -2684,76 +2967,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="3b7ea8f7-3890-4b83-9215-6e04aea54a22">
-    <name>ВерхняяГраницаОстатков</name>
-    <synonym>
-      <key>ru</key>
-      <value>Верхняя граница остатков</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>ნაშთის ზედა ზღვარი</value>
-    </synonym>
-    <synonym>
-      <key>en</key>
-      <value>The upper limit of residues</value>
-    </synonym>
-    <comment>Используется в прайс-листе при выводе остатков в виде представления</comment>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>15</precision>
-        <scale>2</scale>
-        <nonNegative>true</nonNegative>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="ec76ad7f-1a2a-4166-84a4-d69ec7ed9ead">
-    <name>СрокГодности</name>
-    <synonym>
-      <key>ru</key>
-      <value>Срок годности</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>SHELFLIFE</value>
-    </synonym>
-    <synonym>
-      <key>en</key>
-      <value>SHELFLIFE</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>15</precision>
-      </numberQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="2cc9ece3-fa6d-4bad-8410-9c5de35d72bc">
-    <name>Весовой</name>
-    <synonym>
-      <key>ru</key>
-      <value>Весовой</value>
-    </synonym>
-    <type>
-      <types>Boolean</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>

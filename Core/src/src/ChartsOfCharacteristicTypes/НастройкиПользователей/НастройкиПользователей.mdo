@@ -51,6 +51,7 @@
     <types>CatalogRef.БанковскиеСчета</types>
     <types>CatalogRef.ПриоритетСкладов</types>
     <types>CatalogRef.ДоступныеСклады</types>
+    <types>CatalogRef.Файлы</types>
     <types>CatalogRef.СостоянияЗаказовПоставщикам</types>
     <types>CatalogRef.КатегорииНоменклатуры</types>
     <types>CatalogRef.СтавкиНДС</types>
@@ -63,9 +64,11 @@
     <types>CatalogRef.ДопустимыеВидыЦен</types>
     <types>EnumRef.ОсновнаяФормаПрайсЛиста</types>
     <types>EnumRef.ПериодыВыгрузкиВМобильноеПриложение</types>
+    <types>CatalogRef.Проекты</types>
     <types>CatalogRef.ДопустимыеУчтенныеЗаписи</types>
     <types>EnumRef.ДаНет</types>
     <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+    <types>EnumRef.ТипыАутентификацииBOG</types>
     <types>CatalogRef.СостоянияЗаказовПокупателей</types>
     <types>CatalogRef.Сотрудники</types>
     <types>EnumRef.ПоложениеРеквизитаНаФорме</types>
@@ -86,6 +89,107 @@
   <autonumbering>true</autonumbering>
   <defaultPresentation>AsDescription</defaultPresentation>
   <predefined>
+    <items id="aa1f2773-709a-4704-85f4-8faf23ebbe65">
+      <name>BOG</name>
+      <description>BOG</description>
+      <isFolder>true</isFolder>
+      <code>00123</code>
+      <type/>
+      <content id="5dfb8152-6f60-468d-853d-b82d1c3e5a46">
+        <name>clientIdBOG</name>
+        <description>clientId BOG</description>
+        <code>00089</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="a46582ee-e414-42d7-a729-9a012d566238">
+        <name>secretIdBOG</name>
+        <description>secretId BOG</description>
+        <code>00090</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="1f478063-8301-4b3a-be94-0aab2869f743">
+        <name>ТипАутентификацииBOG</name>
+        <description>ავთენტიპიკაციის ტიპი BOG</description>
+        <code>00125</code>
+        <type>
+          <types>EnumRef.ТипыАутентификацииBOG</types>
+        </type>
+      </content>
+      <content id="a48e6c6a-9764-45f3-9a53-4c2a05441a77">
+        <name>IDПользователяАппликацииBoG</name>
+        <description>კლიენტის აპლიკაციის id</description>
+        <code>00059</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="5a8c9637-fbf7-4601-9233-e1a432719ffb">
+        <name>ИспользоватьТестовыйРежимBOG</name>
+        <description>სატესტო რეჟიმის გამოყენება BOG</description>
+        <code>00122</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+    </items>
+    <items id="6fb97338-62ab-4c80-bdbf-8fb1878198e0">
+      <name>ИнтеграцияСБанкомProCredit</name>
+      <description>ProCredit</description>
+      <isFolder>true</isFolder>
+      <code>00128</code>
+      <type/>
+      <content id="032f6c7e-4b46-4b53-8544-11fce222dc84">
+        <name>ProCredit_РаботаЧерезСервер</name>
+        <description>ProCredit ბანკთან მუშაობა სერვერის გავლით</description>
+        <code>00129</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="ab6cb141-3bb8-48f9-aa1b-0265dfe2719d">
+        <name>ProCredit_Login</name>
+        <description>ProCredit მომხმარებელი</description>
+        <code>00130</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="6a3ac069-3834-4100-a52a-f9f352e5a70e">
+        <name>ProCredit_Password</name>
+        <description>ProCredit პაროლი</description>
+        <code>00131</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
+        </type>
+      </content>
+      <content id="14daced1-a776-4e3d-8a87-e146da10f4c2">
+        <name>ProCredit_ТестовыйРежим</name>
+        <description>ProCredit სატესტო რეჟიმი</description>
+        <code>00132</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+    </items>
     <items id="f6562d33-9307-4696-96cc-ca314d8ce70a">
       <name>ЗагрузкаДанныхИзВнешнихИсточников</name>
       <description>Загрузка данных из внешних источников</description>
@@ -257,6 +361,14 @@
           <types>EnumRef.СпособВыводаОстатковВПодборе</types>
         </type>
       </content>
+      <content id="9f69d3f5-5870-4864-8d10-d294088adbe5">
+        <name>НеПоказыватьНулевыеОстатки</name>
+        <description>არ აჩვენოს მარაგები ნაშთის გარეშე</description>
+        <code>00137</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
       <content id="7c0d21e8-ff6a-4b3c-897b-83b6a2370729">
         <name>ИспользоватьНовыйМеханизмПодбора</name>
         <description>ახალი შესარჩევი ძრავის გამოყენება</description>
@@ -280,28 +392,6 @@
       <isFolder>true</isFolder>
       <code>00001</code>
       <type/>
-      <content id="5dfb8152-6f60-468d-853d-b82d1c3e5a46">
-        <name>clientIdBOG</name>
-        <description>clientId BOG</description>
-        <code>00089</code>
-        <type>
-          <types>String</types>
-          <stringQualifiers>
-            <length>100</length>
-          </stringQualifiers>
-        </type>
-      </content>
-      <content id="a46582ee-e414-42d7-a729-9a012d566238">
-        <name>secretIdBOG</name>
-        <description>secretId BOG</description>
-        <code>00090</code>
-        <type>
-          <types>String</types>
-          <stringQualifiers>
-            <length>100</length>
-          </stringQualifiers>
-        </type>
-      </content>
       <content id="72aa6cb0-dbc6-4b8d-bff4-d3d27e409958">
         <name>TBC_Login</name>
         <description>TBC მომხმარებელი</description>
@@ -311,6 +401,14 @@
           <stringQualifiers>
             <length>100</length>
           </stringQualifiers>
+        </type>
+      </content>
+      <content id="9f21f3cf-c852-4eda-be57-93e7effe697d">
+        <name>TBC_РаботаЧерезСервер</name>
+        <description>TBC მუშაობა სერვერის საშუალებით</description>
+        <code>00126</code>
+        <type>
+          <types>Boolean</types>
         </type>
       </content>
       <content id="57eae84d-018f-4378-b5aa-45f1c13462d8">
@@ -332,20 +430,31 @@
           <types>Boolean</types>
         </type>
       </content>
-      <content id="9437f45a-028f-4ae3-87bf-1150a4233aca">
-        <name>ДоступныеСклады</name>
-        <description>Доступные склады</description>
-        <code>00082</code>
+      <content id="ae68e9e5-f672-4588-8d2b-c77b29956f2e">
+        <name>TBC_Сертификат</name>
+        <description>TBC სერტიფიკატი</description>
+        <code>00095</code>
         <type>
-          <types>CatalogRef.ДоступныеСклады</types>
+          <types>CatalogRef.Файлы</types>
         </type>
       </content>
-      <content id="4ee023df-9ec9-4a00-8d03-639b6f346f86">
-        <name>ОсновнойБанковскийСчет</name>
-        <description>Основной банковский счет</description>
-        <code>00078</code>
+      <content id="a4f18edc-a6d1-4e40-a64b-b79a6a3d01b9">
+        <name>TBC_ИспользоватьСертификат</name>
+        <description>TBC სერტიფიკატის გამოყენება</description>
+        <code>00097</code>
         <type>
-          <types>CatalogRef.БанковскиеСчета</types>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="42619102-3098-4b53-adfe-248d44d4120d">
+        <name>TBC_ПарольСертификата</name>
+        <description>TBC სერტიფიკატის პაროლი</description>
+        <code>00096</code>
+        <type>
+          <types>String</types>
+          <stringQualifiers>
+            <length>100</length>
+          </stringQualifiers>
         </type>
       </content>
       <content id="498115df-21af-4ff5-804f-662b98cc1abe">
@@ -354,6 +463,14 @@
         <code>00032</code>
         <type>
           <types>EnumRef.ДаНет</types>
+        </type>
+      </content>
+      <content id="9cd32b0c-3f08-42a0-96bd-b947c96334b2">
+        <name>ЗапретРедактированияСозданияИУдаленияЦенПрошлойДатой</name>
+        <description>გასული თარიღით ფასების რედაქტირების, შექმნის და წაშლის აკრძალვა</description>
+        <code>00120</code>
+        <type>
+          <types>Boolean</types>
         </type>
       </content>
       <content id="aac2b4bf-84d8-46c4-8e6c-dbfbf15157c5">
@@ -372,15 +489,12 @@
           <types>CatalogRef.НедоступныеГруппыНоменклатуры</types>
         </type>
       </content>
-      <content id="a48e6c6a-9764-45f3-9a53-4c2a05441a77">
-        <name>IDПользователяАппликацииBoG</name>
-        <description>კლიენტის აპლიკაციის id</description>
-        <code>00059</code>
+      <content id="0cf14d44-6211-447a-b573-61482d49e246">
+        <name>ЗапретРедактированияГруппыВСправочникеКонтрагенты</name>
+        <description>კონტრაგენტის ცნობარში ჯგუფის რედაქტირების აკრძალვა</description>
+        <code>00127</code>
         <type>
-          <types>String</types>
-          <stringQualifiers>
-            <length>100</length>
-          </stringQualifiers>
+          <types>Boolean</types>
         </type>
       </content>
       <content id="f90e0ddc-c8f9-45f8-bca9-0fff5b5c4b07">
@@ -483,6 +597,14 @@
         <name>ПравоРедактированиеСтоимостьДоставки</name>
         <description>მყიდველთა შეკვეთის დოკუმენტში მიწოდების ღირებულების რედაქტირების უფლება</description>
         <code>00085</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="f73f57d4-e3a2-4cbb-aca1-cf923b68b114">
+        <name>ЗапретИзмененияЛимитаВДоговореКонтрагента</name>
+        <description>მყიდველის დავალიანების ლიმიტის ცვლილების აკრძალვა კონტრაგენტის ხელშეკრულებაში</description>
+        <code>00121</code>
         <type>
           <types>Boolean</types>
         </type>
@@ -719,6 +841,30 @@
           <types>CatalogRef.Организации</types>
         </type>
       </content>
+      <content id="546b8c84-d5ef-4252-b3bb-e00410dc1f81">
+        <name>ОсновнойПроект</name>
+        <description>ძირითადი პროექტი</description>
+        <code>00135</code>
+        <type>
+          <types>CatalogRef.Проекты</types>
+        </type>
+      </content>
+      <content id="4ee023df-9ec9-4a00-8d03-639b6f346f86">
+        <name>ОсновнойБанковскийСчет</name>
+        <description>ძირითადი საბანკო ანგარიში</description>
+        <code>00078</code>
+        <type>
+          <types>CatalogRef.БанковскиеСчета</types>
+        </type>
+      </content>
+      <content id="9437f45a-028f-4ae3-87bf-1150a4233aca">
+        <name>ДоступныеСклады</name>
+        <description>ხელმისაწვდომი საწყობები</description>
+        <code>00082</code>
+        <type>
+          <types>CatalogRef.ДоступныеСклады</types>
+        </type>
+      </content>
     </items>
     <items id="ec394411-2678-42dd-b5cb-44b4042b18cc">
       <name>ПрайсЛист</name>
@@ -765,10 +911,34 @@
       <isFolder>true</isFolder>
       <code>00079</code>
       <type/>
-      <content id="859cb617-0a11-49f1-8ca9-aab67a153365">
-        <name>ЗапретРедактированиеПроведенногоЗаписаногоДокументаПриходнаяНакладная</name>
-        <description>გატარებული (ჩაწერილი) შემოსავლის ზედდებულის რედაქტირების აკრძალვა</description>
-        <code>00094</code>
+      <content id="2cc1827d-c649-4511-ad5f-e9cfee0fecbc">
+        <name>ЗапретРедактированияОтчетов</name>
+        <description>ანგარიშგებებში აწყობის ღილაკის და ანგარიშგების ვარიანტების ჩანართის დამალვა</description>
+        <code>00139</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="a9563191-e19d-4b08-a2d4-1fc432b8ee02">
+        <name>ЗапретВыгрузкиДокументовВБанк</name>
+        <description>ბანკში დოკუმენტების ატვირთვის აკრძალვა</description>
+        <code>00143</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="c1e50ac4-4e88-40f1-92ca-a063d0eeba4b">
+        <name>ЗапретРедактированияРасходныхНакладныхПоСтатусеТТН</name>
+        <description>გასავლის ზედდებულების რედაქტირების აკრძალვა ზედნადების სტატუსის მიხედვით(აქტიური ან დასრულებული)</description>
+        <code>00141</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="a2204480-ba53-4b57-92c2-68ce1aefe19f">
+        <name>ПравоРедактированияРасхаднойНакладнойВоВремяИспользованияЗапретаРедактированияДокументов</name>
+        <description>გასავლის ზედდებულის რედაქტირების უფლება აკრძალვის თარიღების გამოყენებისას</description>
+        <code>00142</code>
         <type>
           <types>Boolean</types>
         </type>
@@ -789,10 +959,34 @@
           <types>Boolean</types>
         </type>
       </content>
+      <content id="0065cfe9-1abc-42c6-9b01-73157fd272af">
+        <name>ЗапретРедактированияПроведенныхДокументовСервиса</name>
+        <description>გატარებული სერვისის დოკუმენტების რედაქტირების აკრძალვა</description>
+        <code>00134</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
       <content id="b04d7355-a1cf-46d5-9d95-cc3f3b215a51">
         <name>ЗапретРедактированияПроведенныхДокументовСборкаЗапасов</name>
         <description>გატარებული წარმოების დოკუმენტის რედაქტირების აკრძალვა</description>
         <code>00093</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="77d35966-9328-4777-868d-34c142c19f27">
+        <name>ЗапретРредактированияРодителяКонтрагента</name>
+        <description>კონტრაგენტის ჯგუფებს შორის გადაადგილების აკრძალვა</description>
+        <code>00138</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="17dbc632-598e-477b-8eb4-45e0eb220259">
+        <name>МногосСкладныйРежимЗаказа</name>
+        <description>მრავალსაწყობიანი რეჟიმი მყიდველის შეკვეთაში</description>
+        <code>00124</code>
         <type>
           <types>Boolean</types>
         </type>
@@ -805,10 +999,50 @@
           <types>Boolean</types>
         </type>
       </content>
+      <content id="fda8a8f3-6552-4616-9224-3846700a6cd3">
+        <name>ПравоРедактированияВозвратаВПриходнойНакладной</name>
+        <description>რედაქტირების უფლება შემოსავლის ზედდებულში, ნომენკალტურის უკან დაბრუნებისას</description>
+        <code>00136</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
       <content id="3f2b7e68-a36a-487f-9fc8-1a8d8dc7d866">
         <name>ФильтрСкладскихДокументовПоОсновномуСкладу</name>
         <description>საწყობის დოკუმენტაციის გაფილტვრა ძირითადი საწყობის მიხედვით</description>
         <code>00081</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="859cb617-0a11-49f1-8ca9-aab67a153365">
+        <name>ЗапретРедактированияДокументаПриходнаяНакладнаяСозданнымДругимПользователем</name>
+        <description>სხვა მომხმარებლის მიერ შექმნილი შემოსავლის ზედდებულის რედაქტირების აკრძალვა</description>
+        <code>00094</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="ce40ec25-b38e-4b44-b6b4-7f21adc9428b">
+        <name>ЗапретПривышенияЗакупочнойЦены</name>
+        <description>შესასყიდი ფასის ბლოკირების შესაძლებლობა კონკრეტულ მომწოდებელსა და პოზიციაზე</description>
+        <code>00133</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="7393c9eb-c138-426a-ae0f-0a9a47ae8a5c">
+        <name>ПравоРедактированияПеремещениеЗапасовВоВремяИспользованияЗапретаРедактированияДокументов</name>
+        <description>ჩაწერილი მარაგის გადაადგილების დოკუმენტების რედაქტირების უფლება აკრძალვის თარიღების გამოყენებისას</description>
+        <code>00140</code>
+        <type>
+          <types>Boolean</types>
+        </type>
+      </content>
+      <content id="0893504f-a95c-45ad-993d-1e9ae77b2e33">
+        <name>ИспользоватьBackOrderВПеремещениеЗапасов</name>
+        <description>back order -ის გამოყენება  მარაგების გადაადგილებაში</description>
+        <code>00144</code>
         <type>
           <types>Boolean</types>
         </type>

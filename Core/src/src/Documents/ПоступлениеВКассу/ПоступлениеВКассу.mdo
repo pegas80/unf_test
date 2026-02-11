@@ -209,6 +209,7 @@
   <basedOn>Document.ОтчетОРозничныхПродажах</basedOn>
   <basedOn>Document.ДоговорКредитаИЗайма</basedOn>
   <basedOn>Document.ПриемИПередачаВРемонт</basedOn>
+  <basedOn>Document.ПродажаЛицензии</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -262,6 +263,7 @@
   <registerRecords>AccumulationRegister.ПлатежныйКалендарь</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.Декларация</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПрочимиКонтрагентами</registerRecords>
@@ -2086,6 +2088,28 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="c880a6bd-6b18-4390-a312-112686d73256">
+    <name>НомерВходящегоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер входящего документа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შემომავალი დოკუმენტის №</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="bbd98b48-45dc-4d87-b030-cfe81e5fcfc9">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2277,6 +2301,8 @@
         <types>DocumentRef.АвансовыйОтчет</types>
         <types>DocumentRef.ПоступлениеВКассу</types>
         <types>DocumentRef.ЗаказПокупателя</types>
+        <types>DocumentRef.ПродажаЛицензии</types>
+        <types>DocumentRef.СборкаЗапасов</types>
         <types>DocumentRef.ПриемИПередачаВРемонт</types>
         <types>DocumentRef.ОтчетПереработчика</types>
         <types>DocumentRef.ОтчетКомитенту</types>
@@ -2734,6 +2760,127 @@
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d220439c-a2b5-45bc-90f3-5f4b8266328b">
+      <name>ВидУдержанияНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Вид удержания НДФЛ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="451b4067-879d-45a4-813e-aa4f5b0dd42a">
+      <name>СуммаНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма НДФЛ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма налога на добавленную стоимость по данной строке</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დამატებით ღირებულებაზე გადასახადის ოდენობა მოცემული სტრიქონის მიხედვით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Сумма налога на добавленную стоимость по данной строке</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9e3d4bb9-af23-4b0d-9ee9-6d667363139f">
+      <name>ВидУдержанияПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიო ფონდის დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Вид удержания ПФ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4005ffc8-e04e-4e42-91c2-5fad91518f23">
+      <name>СуммаПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიო თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Сумма ПФ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

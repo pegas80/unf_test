@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ec5ec90-74cf-4934-b309-371201edb871">
+  <producedTypes>
+    <selectionType typeId="ee4bcc16-082b-413b-84e1-599c5e42072b" valueTypeId="7e92046d-0517-454d-8dc0-07a6f08c54ee"/>
+    <listType typeId="ddc020ca-0c24-4d5f-b84e-e8f5fa606666" valueTypeId="aab34ecf-7978-4db5-b58b-a75a87516f65"/>
+    <managerType typeId="dcb88476-5361-493c-b8be-86a244c4cd90" valueTypeId="407f3a9f-f660-44b1-9447-1d7c313627bb"/>
+    <recordSetType typeId="5da2b717-1512-47bc-9a8e-ebfb28675dfa" valueTypeId="64f6fa0b-185b-47f3-ae2c-eb6051e6694b"/>
+    <recordKeyType typeId="d0c0068a-ee6d-4444-9ca2-adc2e7ebd0aa" valueTypeId="feb7f341-0252-4027-8eef-9110f94a9508"/>
+    <recordType typeId="2572c71d-663a-4412-9000-5457f4fa7363" valueTypeId="f68b0896-1092-4886-acd0-736dad0e0b8d"/>
+  </producedTypes>
+  <name>ОдноразовыеНачисленияУдержанияОтпуска</name>
+  <synonym>
+    <key>ru</key>
+    <value>Одноразовые начисления удержания отпуска</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>Одноразовые начисления удержания отпуска</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Одноразовые начисления удержания отпуска</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="55d2fd37-bd67-49ea-9338-15c879505a89">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="cc5fe184-ba5a-4f12-8f76-9e3cd1bb8b5e">
+    <name>СуммаВал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма вал</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="ac5f1516-497c-482d-bb1d-baaa1be6e94f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ორგანიზაცია</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Organization</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e42cbacf-342a-4441-9064-dd696028e96e">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="42b5b8b5-e62d-4e0b-b9d3-8215d6361199">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a525ab41-da9f-45d7-a602-731ec82cb6de">
+    <name>ВидНачисленияУдержания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид начисления</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დარიცხვის ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type of calculation</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Начисление или удержание</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დარიცხვა ან დაკავება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Начисление или удержание</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Ссылка</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Catalog.ВидыНачисленийИУдержаний.СдельнаяОплата</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Catalog.ВидыНачисленийИУдержаний.СдельнаяОплатаПроцент</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Catalog.ВидыНачисленийИУдержаний.ФиксированнаяСумма</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Catalog.ВидыНачисленийИУдержаний.ФиксированныйПроцент</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d07192a8-6c17-4a89-a0ae-04caafb2d5eb">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

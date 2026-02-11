@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1b6e2678-97e3-4816-b27e-c05abf2b82cf">
+  <producedTypes>
+    <selectionType typeId="46999398-12fe-4d59-acf3-cd0face1dc77" valueTypeId="57c81d41-e084-4ec2-8e0e-b5ece1ee9d72"/>
+    <listType typeId="c22fa003-cb3e-425c-8b47-abd3209ab9e2" valueTypeId="15629d34-c854-424c-bc8a-2f70cda6ab0e"/>
+    <managerType typeId="c082b28b-8403-4c92-8ba8-fb795f1fd1ae" valueTypeId="8dbd3a6d-55d8-4422-a080-ccf3cf93f5a2"/>
+    <recordSetType typeId="9e4d0167-c928-4153-b7d7-a0129595ebca" valueTypeId="ba7a177a-77d3-47aa-87d5-d55e366b36e6"/>
+    <recordKeyType typeId="c62494e7-1291-450c-a64e-85b9e3c38ec2" valueTypeId="a7e51de9-a530-467b-bca0-1f7533859016"/>
+    <recordType typeId="ac2dad59-8cc7-45ea-a35e-e47bd2135ddb" valueTypeId="e6d723d2-33d7-4446-a326-4f4ebe2e7c37"/>
+    <recordManagerType typeId="02fd4a07-5627-4f86-88fe-822082eb3c2c" valueTypeId="ca58ecb9-2f27-4bd7-96e0-d8fe22c5acbc"/>
+  </producedTypes>
+  <name>РыночныеЦеныВА</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рыночные цены ВА</value>
+  </synonym>
+  <synonym>
+    <key>ka</key>
+    <value>ქონების საბაზრო ღირებულება</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>The market price of fixed asset</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.РыночныеЦеныВА.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.РыночныеЦеныВА.Form.РыночныеЦены</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="940ae146-7a50-47f9-9f18-753e74d7fe5f">
+    <name>Цена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Цена</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საბაზრო ფასი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Market price</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e65760c6-fa4e-4aa8-9dd7-7da23b2e26a6">
+    <name>Имущество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имущество</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქონება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>fixed asset</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнеоборотныеАктивы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1d1caee7-393f-40b3-99bc-27fd49ed344f">
+    <name>РыночныеЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рыночные цены</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საბაზრო ღირებულებები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Market price</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="65f5c4ec-ae6c-43ff-81d7-c3e6b2922922">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="dd27b4fa-eff0-4a12-a8cc-3d60b8c04bd5">
+    <name>ОткрытьРыночныеЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рыночные цены</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საბაზრო ფასები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Market prices</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>CatalogRef.ВнеоборотныеАктивы</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

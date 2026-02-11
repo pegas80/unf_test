@@ -219,6 +219,18 @@
           <items xsi:type="form:FormField">
             <name>НаименованиеКонтакт_0</name>
             <id>319</id>
+            <title>
+              <key>ru</key>
+              <value>Наименование</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>საკონტაქტოს სახელი გვარი</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>contact name surname</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -532,6 +544,18 @@
         <items xsi:type="form:FormField">
           <name>НаименованиеПолное</name>
           <id>24</id>
+          <title>
+            <key>ru</key>
+            <value>НаименованиеПолное</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>იურიდიული დასახელება</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>legal name</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -792,6 +816,48 @@
                 <value>Enum.ВидыКонтрагентов.EnumValue.ГосударственныйОрган</value>
               </value>
             </choiceList>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>Регион</name>
+          <id>1604</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Регион</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>РегионРасширеннаяПодсказка</name>
+            <id>1606</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>РегионКонтекстноеМеню</name>
+            <id>1605</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>27</width>
+            <maxWidth>35</maxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <openButton>false</openButton>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
@@ -2064,6 +2130,18 @@
         <items xsi:type="form:FormField">
           <name>СоздатьКартуЛояльности</name>
           <id>1558</id>
+          <title>
+            <key>ru</key>
+            <value>СоздатьКартуЛояльности</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>შექმენით ლოიალობის ბარათი</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Create a Loyalty Card</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2137,6 +2215,469 @@
             <textEdit>true</textEdit>
           </extInfo>
         </items>
+        <items xsi:type="form:Table">
+          <name>КартыЛояльностиКонтрагента</name>
+          <id>1567</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>КартыЛояльностиКонтрагента</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаВидКарты</name>
+            <id>1601</id>
+            <title>
+              <key>ru</key>
+              <value>ВидКарты</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ბარათის ტიპი</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Card Type</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.ВидКарты</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаВидКартыРасширеннаяПодсказка</name>
+              <id>1603</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаВидКартыКонтекстноеМеню</name>
+              <id>1602</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаДатаНачала</name>
+            <id>1580</id>
+            <title>
+              <key>ru</key>
+              <value>ДатаНачала</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>დაწყების თარიღი</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Start date</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.ДатаНачала</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаДатаНачалаРасширеннаяПодсказка</name>
+              <id>1582</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаДатаНачалаКонтекстноеМеню</name>
+              <id>1581</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаДатаОкончания</name>
+            <id>1583</id>
+            <title>
+              <key>ru</key>
+              <value>ДатаОкончания</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>დასრულების თარიღი</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>DateEnds</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.ДатаОкончания</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаДатаОкончанияРасширеннаяПодсказка</name>
+              <id>1585</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаДатаОкончанияКонтекстноеМеню</name>
+              <id>1584</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаНаименование</name>
+            <id>1592</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.Наименование</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаНаименованиеРасширеннаяПодсказка</name>
+              <id>1594</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаНаименованиеКонтекстноеМеню</name>
+              <id>1593</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаКодКартыШтрихкод</name>
+            <id>1586</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.КодКартыШтрихкод</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаКодКартыШтрихкодРасширеннаяПодсказка</name>
+              <id>1588</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаКодКартыШтрихкодКонтекстноеМеню</name>
+              <id>1587</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаСсылка</name>
+            <id>1595</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.Ссылка</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаСсылкаРасширеннаяПодсказка</name>
+              <id>1597</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаСсылкаКонтекстноеМеню</name>
+              <id>1596</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаСтандартнаяКартинка</name>
+            <id>1598</id>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.DefaultPicture</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаСтандартнаяКартинкаРасширеннаяПодсказка</name>
+              <id>1600</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаСтандартнаяКартинкаКонтекстноеМеню</name>
+              <id>1599</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КартыЛояльностиКонтрагентаКомментарий</name>
+            <id>1589</id>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>КартыЛояльностиКонтрагента.Комментарий</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаКомментарийРасширеннаяПодсказка</name>
+              <id>1591</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаКомментарийКонтекстноеМеню</name>
+              <id>1590</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+            </extInfo>
+          </items>
+          <commandBarLocation>None</commandBarLocation>
+          <autoCommandBar>
+            <name>КартыЛояльностиКонтрагентаКоманднаяПанель</name>
+            <id>1569</id>
+            <horizontalAlign>Left</horizontalAlign>
+            <autoFill>true</autoFill>
+          </autoCommandBar>
+          <searchStringAddition>
+            <name>КартыЛояльностиКонтрагентаСтрокаПоиска</name>
+            <id>1571</id>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаСтрокаПоискаРасширеннаяПодсказка</name>
+              <id>1573</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаСтрокаПоискаКонтекстноеМеню</name>
+              <id>1572</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <source>КартыЛояльностиКонтрагента</source>
+            <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchStringAddition>
+          <viewStatusAddition>
+            <name>КартыЛояльностиКонтрагентаСостояниеПросмотра</name>
+            <id>1574</id>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаСостояниеПросмотраРасширеннаяПодсказка</name>
+              <id>1576</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаСостояниеПросмотраКонтекстноеМеню</name>
+              <id>1575</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>ViewStatusAddition</type>
+            <source>КартыЛояльностиКонтрагента</source>
+            <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </viewStatusAddition>
+          <searchControlAddition>
+            <name>КартыЛояльностиКонтрагентаУправлениеПоиском</name>
+            <id>1577</id>
+            <extendedTooltip>
+              <name>КартыЛояльностиКонтрагентаУправлениеПоискомРасширеннаяПодсказка</name>
+              <id>1579</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартыЛояльностиКонтрагентаУправлениеПоискомКонтекстноеМеню</name>
+              <id>1578</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>SearchControlAddition</type>
+            <source>КартыЛояльностиКонтрагента</source>
+            <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchControlAddition>
+          <extendedTooltip>
+            <name>КартыЛояльностиКонтрагентаРасширеннаяПодсказка</name>
+            <id>1570</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>КартыЛояльностиКонтрагентаКонтекстноеМеню</name>
+            <id>1568</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <representation>HierarchicalList</representation>
+          <readOnly>true</readOnly>
+          <changeRowSet>true</changeRowSet>
+          <changeRowOrder>true</changeRowOrder>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <autoMaxRowsCount>true</autoMaxRowsCount>
+          <selectionMode>MultiRow</selectionMode>
+          <header>true</header>
+          <headerHeight>1</headerHeight>
+          <footerHeight>1</footerHeight>
+          <horizontalScrollBar>AutoUse</horizontalScrollBar>
+          <verticalScrollBar>AutoUse</verticalScrollBar>
+          <horizontalLines>true</horizontalLines>
+          <verticalLines>true</verticalLines>
+          <useAlternationRowColor>true</useAlternationRowColor>
+          <searchOnInput>Auto</searchOnInput>
+          <initialListView>Auto</initialListView>
+          <horizontalStretch>true</horizontalStretch>
+          <verticalStretch>true</verticalStretch>
+          <enableStartDrag>true</enableStartDrag>
+          <fileDragMode>AsFileRef</fileDragMode>
+          <rowPictureDataPath xsi:type="form:DataPath">
+            <segments>КартыЛояльностиКонтрагента.DefaultPicture</segments>
+          </rowPictureDataPath>
+          <extInfo xsi:type="form:DynamicListTableExtInfo">
+            <autoRefreshPeriod>60</autoRefreshPeriod>
+            <period>
+              <startDate>0001-01-01T00:00:00</startDate>
+              <endDate>0001-01-01T00:00:00</endDate>
+            </period>
+            <topLevelParent xsi:type="core:UndefinedValue"/>
+            <showRoot>true</showRoot>
+            <allowGettingCurrentRowURL>true</allowGettingCurrentRowURL>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -2145,6 +2686,14 @@
         <title>
           <key>ru</key>
           <value>Карты лояльности</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ლოიალობის ბარათები</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Loyalty cards</value>
         </title>
         <toolTip>
           <key>ru</key>
@@ -3943,6 +4492,18 @@
           <items xsi:type="form:Button">
             <name>УстановитьОсновноеТранспортноеСредство</name>
             <id>1554</id>
+            <title>
+              <key>ru</key>
+              <value>ОсновноеТранспортноеСредство</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ძირითადი სატრანსპორტო საშვალება</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Main Vehicle</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -4017,6 +4578,18 @@
             <items xsi:type="form:FormField">
               <name>ТранспортныеСредства1ТранпсортноеСедство</name>
               <id>1544</id>
+              <title>
+                <key>ru</key>
+                <value>ТранпсортноеСедство</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>სატრანსპორტო საშუალება</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Vehicle</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -6295,6 +6868,64 @@
     <edit>
       <common>true</common>
     </edit>
+  </attributes>
+  <attributes>
+    <name>ЗапретРедактированияГруппыВСправочникеКонтрагенты</name>
+    <title>
+      <key>ka</key>
+      <value>Запрет редактирования группы в справочнике контрагенты</value>
+    </title>
+    <id>117</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>КартыЛояльностиКонтрагента</name>
+    <title>
+      <key>ru</key>
+      <value>Карты лояльности контрагента</value>
+    </title>
+    <id>118</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>КартыЛояльностиКонтрагента.Ссылка</segments>
+    </notDefaultUseAlwaysAttributes>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	КартыЛояльности.КодКартыШтрихкод КАК КодКартыШтрихкод,
+	КартыЛояльности.Ссылка КАК Ссылка,
+	КартыЛояльности.Наименование КАК Наименование,
+	КартыЛояльности.Комментарий КАК Комментарий,
+	КартыЛояльности.ДатаНачала КАК ДатаНачала,
+	КартыЛояльности.ДатаОкончания КАК ДатаОкончания,
+	КартыЛояльности.Владелец КАК ВидКарты
+ИЗ
+	Справочник.КартыЛояльности КАК КартыЛояльности
+ГДЕ
+	КартыЛояльности.ВладелецКарты = &amp;ВладелецКарты
+	И НЕ КартыЛояльности.ПометкаУдаления</queryText>
+      <mainTable>Catalog.КартыЛояльности</mainTable>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
   </attributes>
   <formCommands>
     <name>ЗаполнитьРеквизитыПоДаннымЕГР</name>

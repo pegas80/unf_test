@@ -1050,7 +1050,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>КПП</value>
+      <value>აამკ</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1114,7 +1114,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>ОКПО</value>
+      <value>სოსრკ</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1766,7 +1766,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Статья ДДС (по умолчанию)</value>
+      <value>ფსმ მუხლი (ნაგულისხმევი)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1789,7 +1789,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Подписывает документы со стороны контрагента</value>
+      <value>ხელს აწერს დოკუმენტებს კონტრაგენტის სახელით</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -2078,8 +2078,99 @@
       <key>ka</key>
       <value>ძირითადი სატრანსპორტო საშუალება</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Basic transport service</value>
+    </synonym>
     <type>
       <types>CatalogRef.ТранспортныеСредства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="54979fac-b2f0-4c55-b359-3800a84376e0">
+    <name>ЮрФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Юр. / физ. лицо</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>იურიდ. / ფიზ. პირი</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ЮридическоеФизическоеЛицо</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Контрагент может быть юридическим или физическим лицом.
+</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კონტრაგენტი შეიძლება იყოს იურიდიული ან ფიზიკური პირი.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>Use</quickChoice>
+    <createOnInput>DontUse</createOnInput>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ЮридическоеФизическоеЛицо.EnumValue.ЮридическоеЛицо</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="458d6d7c-5c88-45b8-888f-4d270608a318">
+    <name>ПересчитатьКоличество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пересчитать количество </value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რაოდენობის გადათვლა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Recalculate quantity</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>დამატებითი ზომის ერთეულიდან ძირითად ზომის ერთეულში გაყიდული პროდუქციის  რაოდენობის გადათვლა rs.ge-ზე ასატვირთ ზედანდების დოკუმენტში.</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დამატებითი ზომის ერთეულიდან ძირითად ზომის ერთეულში გაყიდული პროდუქციის  რაოდენობის გადათვლა rs.ge-ზე ასატვირთ ზედანდების დოკუმენტში.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="eb5f6678-4158-4ee5-8fcb-5d1c6c1cc651">
+    <name>Регион</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регион</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>რეგიონი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Region</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Регион</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -2132,66 +2223,6 @@
     <fillValue xsi:type="core:ReferenceValue">
       <value>Catalog.ФизическиеЛица.EmptyRef</value>
     </fillValue>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="54979fac-b2f0-4c55-b359-3800a84376e0">
-    <name>ЮрФизЛицо</name>
-    <synonym>
-      <key>ru</key>
-      <value>Юр. / физ. лицо</value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>იურიდ. / ფიზ. პირი</value>
-    </synonym>
-    <type>
-      <types>EnumRef.ЮридическоеФизическоеЛицо</types>
-    </type>
-    <toolTip>
-      <key>ru</key>
-      <value>Контрагент может быть юридическим или физическим лицом.
-</value>
-    </toolTip>
-    <toolTip>
-      <key>ka</key>
-      <value>კონტრაგენტი შეიძლება იყოს იურიდიული ან ფიზიკური პირი.</value>
-    </toolTip>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
-    <quickChoice>Use</quickChoice>
-    <createOnInput>DontUse</createOnInput>
-    <fillValue xsi:type="core:ReferenceValue">
-      <value>Enum.ЮридическоеФизическоеЛицо.EnumValue.ЮридическоеЛицо</value>
-    </fillValue>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="458d6d7c-5c88-45b8-888f-4d270608a318">
-    <name>ПересчитатьКоличество</name>
-    <synonym>
-      <key>ru</key>
-      <value>Пересчитать количество </value>
-    </synonym>
-    <synonym>
-      <key>ka</key>
-      <value>რაოდენობის გადათვლა</value>
-    </synonym>
-    <type>
-      <types>Boolean</types>
-    </type>
-    <toolTip>
-      <key>ru</key>
-      <value>დამატებითი ზომის ერთეულიდან ძირითად ზომის ერთეულში გაყიდული პროდუქციის  რაოდენობის გადათვლა rs.ge-ზე ასატვირთ ზედანდების დოკუმენტში.</value>
-    </toolTip>
-    <toolTip>
-      <key>ka</key>
-      <value>დამატებითი ზომის ერთეულიდან ძირითად ზომის ერთეულში გაყიდული პროდუქციის  რაოდენობის გადათვლა rs.ge-ზე ასატვირთ ზედანდების დოკუმენტში.</value>
-    </toolTip>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>

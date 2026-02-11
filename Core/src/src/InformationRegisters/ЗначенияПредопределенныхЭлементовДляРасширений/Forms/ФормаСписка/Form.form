@@ -251,9 +251,22 @@
     </edit>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Настройка КАК Настройка,
+	ВЫБОР
+		КОГДА РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Настройка.ИмяПредопределенныхДанных = &quot;Shopify_Token&quot;
+				ИЛИ РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Настройка.ИмяПредопределенныхДанных = &quot;WordPress_Consumer_key&quot;
+				ИЛИ РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Настройка.ИмяПредопределенныхДанных = &quot;WordPress_Consumer_secret&quot;
+			ТОГДА &quot;**********&quot;
+		ИНАЧЕ РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Значение
+	КОНЕЦ КАК Значение,
+	РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений.Настройка.Родитель КАК Родитель
+ИЗ
+	РегистрСведений.ЗначенияПредопределенныхЭлементовДляРасширений КАК РегистрСведенийЗначенияПредопределенныхЭлементовДляРасширений</queryText>
       <mainTable>InformationRegister.ЗначенияПредопределенныхЭлементовДляРасширений</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
     </extInfo>

@@ -238,9 +238,11 @@
   <registerRecords>AccumulationRegister.ОплатаСчетовИЗаказов</registerRecords>
   <registerRecords>InformationRegister.СостоянияВнеоборотныхАктивов</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПодотчетниками</registerRecords>
+  <registerRecords>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</registerRecords>
   <registerRecords>AccumulationRegister.ВыработкаВнеоборотныхАктивов</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
@@ -255,6 +257,7 @@
   <registerRecords>AccumulationRegister.РасчетыСПоставщиками</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
   <registerRecords>AccumulationRegister.ЗакупкиДляКУДиР</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоКредитамИЗаймам</registerRecords>
   <registerRecords>AccumulationRegister.ВнеоборотныеАктивы</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыНераспределенные</registerRecords>
@@ -961,7 +964,7 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>დანახარჯების ანგარიში (регл)</value>
+        <value>დანახარჯების ანგარიში (რეგლ)</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -1083,6 +1086,14 @@
         <key>ru</key>
         <value>Дата ввода в эксплуатацию</value>
       </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ექსპლუატაციაში შესვლის თარიღი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Date of entry into service</value>
+      </synonym>
       <type>
         <types>Date</types>
         <dateQualifiers>
@@ -1100,11 +1111,42 @@
         <key>ru</key>
         <value>Количество месяце в эксплуатации</value>
       </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ექსპლუატაციის თვეების რაოდენობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Months in use</value>
+      </synonym>
       <type>
         <types>Number</types>
         <numberQualifiers>
           <precision>15</precision>
         </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="76e5294e-c9d2-4ca7-a011-4f44da366cbf">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3095</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -1646,6 +1688,27 @@
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e6326f50-0f34-4db9-acc6-f8bf4a09b697">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности, дней </value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვარგისიანობის ვადა, დღის.</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -2246,6 +2309,51 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b4114920-d889-4c96-85d9-35abe03f6fdf">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Позиция номенклатуры, стоимость которой отражается данным документом и будет отнесена на стоимость запасов</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის პოზიცია, რომლის ღირებულება აისახება წინამდებარე დოკუმენტით და მიკუთვნებული იქნება მარაგების ღირებულებისადმი</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Позиция номенклатуры, стоимость которой отражается данным документом и будет отнесена на стоимость запасов</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипНоменклатуры</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНоменклатуры.EnumValue.Услуга</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНоменклатуры.EnumValue.Работа</value>
+          </values>
+        </value>
+      </choiceParameters>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -3567,7 +3675,7 @@
     </toolTip>
     <toolTip>
       <key>ka</key>
-      <value>საწყისი ნაშთები - მყიდველები და დამკვეთები</value>
+      <value>საწყისი ნაშთები - მყიდველები და მომწოდებლები</value>
     </toolTip>
     <toolTip>
       <key>en</key>
@@ -4803,6 +4911,29 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="f364cce3-dded-4d20-b5b6-3142e171f368">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3095</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="9aa5cc51-1b4a-4894-9e96-98ea70bba194">
     <producedTypes>
@@ -5783,7 +5914,7 @@
     <name>КредитыИЗайми</name>
     <synonym>
       <key>ru</key>
-      <value>Кредиты и займи</value>
+      <value>Кредиты и займы</value>
     </synonym>
     <synonym>
       <key>ka</key>
@@ -5865,6 +5996,10 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>ДоговорКредитаЗайма</name>
+        <field>Document.ВводНачальныхОстатков.TabularSection.КредитыИЗайми.Attribute.ДоговорКредитаЗайма</field>
+      </choiceParameterLinks>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -5900,6 +6035,10 @@
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>ДоговорКредитаЗайма</name>
+        <field>Document.ВводНачальныхОстатков.TabularSection.КредитыИЗайми.Attribute.ДоговорКредитаЗайма</field>
+      </choiceParameterLinks>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
@@ -6001,6 +6140,29 @@
           <precision>15</precision>
           <scale>2</scale>
         </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5eaa72fe-5153-445d-b43c-c01d7e47ae04">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3095</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

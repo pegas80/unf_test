@@ -17,6 +17,20 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПериодЧас</dataPath>
 			<field>ПериодЧас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>საათი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hour</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:periodNumber>4</dcscom:periodNumber>
 				<dcscom:periodType>Additional</dcscom:periodType>
@@ -49,6 +63,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПериодСекунда</dataPath>
 			<field>ПериодСекунда</field>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
 			<role>
 				<dcscom:periodNumber>2</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
@@ -304,6 +321,10 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>მარაგის მაქსიმალური ზღვარი</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Maximum Stock Level</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -317,6 +338,10 @@
 				<v8:item>
 					<v8:lang>ka</v8:lang>
 					<v8:content>მარაგის მინიმალური ზღვარი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minimum Stock Level</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -336,7 +361,37 @@
 					<v8:lang>ka</v8:lang>
 					<v8:content>მარაგების საშუალო ბრუნვა (თვეების ჭრილში)</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Average inventory turnover (by month)</v8:content>
+				</v8:item>
 			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>შტრიხკოდი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Code</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>Номенклатура</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоступления</dataPath>
+			<field>ДокументПоступления</field>
 		</field>
 		<item xsi:type="DataSetQuery">
 			<name>НаборДанных1</name>
@@ -616,10 +671,16 @@
 			<field xsi:type="DataSetFieldField">
 				<dataPath>СчетУчетаРегл</dataPath>
 				<field>СчетУчетаРегл</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>СчетУчетаЗатратРегл</dataPath>
 				<field>СчетУчетаЗатратРегл</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МаксимальныйУровеньЗапаса</dataPath>
@@ -652,6 +713,9 @@
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Проект</dataPath>
 				<field>Проект</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>СреднийОборотЗапасовРазрезеМесяцев</dataPath>
@@ -662,6 +726,17 @@
 						<v8:content>Средний оборот запасов разрезе месяцев</v8:content>
 					</v8:item>
 				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Штрихкод</dataPath>
+				<field>Штрихкод</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументПоступления</dataPath>
+				<field>ДокументПоступления</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -700,6 +775,7 @@
 	ЗапасыОстаткиИОбороты.СуммаПриход КАК СуммаПриход,
 	ЗапасыОстаткиИОбороты.СуммаРасход КАК СуммаРасход,
 	ЗапасыОстаткиИОбороты.Номенклатура.ЕдиницаИзмерения КАК НоменклатураЕдиницаИзмерения,
+	ЗапасыОстаткиИОбороты.Номенклатура.ОсновнойШтрихКод КАК Штрихкод,
 	ВЫБОР
 		КОГДА ЗапасыОстаткиИОбороты.Партия &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка)
 				И ЗапасыОстаткиИОбороты.Партия.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыПартий.СобственныеЗапасы)
@@ -715,7 +791,11 @@
 		КОГДА РАЗНОСТЬДАТ(&amp;ДатаНач, ДОБАВИТЬКДАТЕ(&amp;ДатаКон, СЕКУНДА, 1), МЕСЯЦ) = 0
 			ТОГДА 0
 		ИНАЧЕ ЗапасыОстаткиИОбороты.КоличествоРасход / РАЗНОСТЬДАТ(&amp;ДатаНач, ДОБАВИТЬКДАТЕ(&amp;ДатаКон, СЕКУНДА, 1), МЕСЯЦ)
-	КОНЕЦ КАК СреднийОборотЗапасовРазрезеМесяцев
+	КОНЕЦ КАК СреднийОборотЗапасовРазрезеМесяцев,
+	ЗапасыОстаткиИОбороты.Проект КАК Проект,
+	ЗапасыОстаткиИОбороты.СчетУчетаРегл КАК СчетУчетаРегл,
+	ЗапасыОстаткиИОбороты.СчетУчетаЗатратРегл КАК СчетУчетаЗатратРегл,
+	ЗапасыОстаткиИОбороты.ДокументПоступления КАК ДокументПоступления
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
 			,
@@ -846,6 +926,10 @@
 				<dataPath>Проект</dataPath>
 				<field>Проект</field>
 			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументПоступления</dataPath>
+				<field>ДокументПоступления</field>
+			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Номенклатура.Ссылка КАК Номенклатура,
@@ -883,8 +967,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	ЗапасыОстаткиИОбороты.Организация,
-	ЗапасыОстаткиИОбороты.СтруктурнаяЕдиница
+	ЗапасыОстаткиИОбороты.Организация КАК Организация,
+	ЗапасыОстаткиИОбороты.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница
 ПОМЕСТИТЬ ВременнаяТаблицаДанныеПоСкладам
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
@@ -906,15 +990,15 @@
 	ВременнаяТаблицаНоменклатураХарактеристики.Характеристика КАК Характеристика,
 	ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка) КАК Партия,
 	"Собственные" КАК Статус,
-	УправлениеЗапасами.МинимальныйУровеньЗапаса,
-	УправлениеЗапасами.МаксимальныйУровеньЗапаса
+	УправлениеЗапасами.МинимальныйУровеньЗапаса КАК МинимальныйУровеньЗапаса,
+	УправлениеЗапасами.МаксимальныйУровеньЗапаса КАК МаксимальныйУровеньЗапаса
 ИЗ
 	ВременнаяТаблицаНоменклатураХарактеристики КАК ВременнаяТаблицаНоменклатураХарактеристики
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВременнаяТаблицаДанныеПоСкладам КАК ВременнаяТаблицаДанныеПоСкладам
 		ПО (ИСТИНА)
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.УправлениеЗапасами КАК УправлениеЗапасами
-		ПО УправлениеЗапасами.Номенклатура = ВременнаяТаблицаНоменклатураХарактеристики.Номенклатура
-			И УправлениеЗапасами.Характеристика = ВременнаяТаблицаНоменклатураХарактеристики.Характеристика</query>
+		ПО (УправлениеЗапасами.Номенклатура = ВременнаяТаблицаНоменклатураХарактеристики.Номенклатура)
+			И (УправлениеЗапасами.Характеристика = ВременнаяТаблицаНоменклатураХарактеристики.Характеристика)</query>
 		</item>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
@@ -929,6 +1013,20 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Поставщик</dataPath>
 			<field>Поставщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მომწოდებელი</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Supplier</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -1014,10 +1112,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СчетУчетаРегл</dataPath>
 			<field>СчетУчетаРегл</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СчетУчетаЗатратРегл</dataPath>
 			<field>СчетУчетаЗатратРегл</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>МаксимальныйУровеньЗапаса</dataPath>
@@ -1042,6 +1146,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Проект</dataPath>
 			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоступления</dataPath>
+			<field>ДокументПоступления</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -1094,15 +1208,19 @@
 	ЗапасыОстаткиИОбороты.Номенклатура КАК Номенклатура,
 	ЗапасыОстаткиИОбороты.Характеристика КАК Характеристика,
 	Поставщики.Поставщик КАК Поставщик,
-	ЗапасыОстаткиИОбороты.Партия,
+	ЗапасыОстаткиИОбороты.Партия КАК Партия,
 	ВЫБОР
 		КОГДА ЗапасыОстаткиИОбороты.Партия &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка)
 				И ЗапасыОстаткиИОбороты.Партия.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыПартий.СобственныеЗапасы)
 			ТОГДА "Принятые"
 		ИНАЧЕ "Собственные"
 	КОНЕЦ КАК Статус,
-	УправлениеЗапасами.МинимальныйУровеньЗапаса,
-	УправлениеЗапасами.МаксимальныйУровеньЗапаса
+	УправлениеЗапасами.МинимальныйУровеньЗапаса КАК МинимальныйУровеньЗапаса,
+	УправлениеЗапасами.МаксимальныйУровеньЗапаса КАК МаксимальныйУровеньЗапаса,
+	ЗапасыОстаткиИОбороты.Проект КАК Проект,
+	ЗапасыОстаткиИОбороты.СчетУчетаРегл КАК СчетУчетаРегл,
+	ЗапасыОстаткиИОбороты.СчетУчетаЗатратРегл КАК СчетУчетаЗатратРегл,
+	ЗапасыОстаткиИОбороты.ДокументПоступления КАК ДокументПоступления
 ИЗ
 	РегистрНакопления.Запасы.ОстаткиИОбороты(
 			,
@@ -1131,6 +1249,30 @@
 		<destinationDataSet>НаборДанных2</destinationDataSet>
 		<sourceExpression>Характеристика</sourceExpression>
 		<destinationExpression>Характеристика</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных3</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Проект</sourceExpression>
+		<destinationExpression>Проект</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных3</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>СчетУчетаРегл</sourceExpression>
+		<destinationExpression>СчетУчетаРегл</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных3</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>СчетУчетаЗатратРегл</sourceExpression>
+		<destinationExpression>СчетУчетаЗатратРегл</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных3</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>ДокументПоступления</sourceExpression>
+		<destinationExpression>ДокументПоступления</destinationExpression>
 	</dataSetLink>
 	<calculatedField>
 		<dataPath>СтоимостьЕд</dataPath>
@@ -1463,6 +1605,14 @@
 				<v8:lang>ru</v8:lang>
 				<v8:content>Дата кон</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>დასრ. თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End date</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -1480,6 +1630,14 @@
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Дата нач</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ka</v8:lang>
+				<v8:content>დაწყ. თარიღი</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Start Date</v8:content>
 			</v8:item>
 		</title>
 		<valueType>

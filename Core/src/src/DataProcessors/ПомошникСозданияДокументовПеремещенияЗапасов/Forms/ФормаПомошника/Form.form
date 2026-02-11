@@ -561,6 +561,52 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
+        <name>ТаблицаЗапасовПартия</name>
+        <id>62</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ТаблицаЗапасов.Партия</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ТаблицаЗапасовПартияРасширеннаяПодсказка</name>
+          <id>64</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаЗапасовПартияКонтекстноеМеню</name>
+          <id>63</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Отбор.Владелец</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>Items.ТаблицаЗапасов.CurrentData.Номенклатура</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
         <name>ТаблицаЗапасовОстаток</name>
         <id>42</id>
         <visible>true</visible>
@@ -1185,6 +1231,28 @@
       <edit>
         <common>true</common>
       </edit>
+    </columns>
+    <columns>
+      <name>Партия</name>
+      <title>
+        <key>ru</key>
+        <value>Партия</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>პარტია</value>
+      </title>
+      <id>8</id>
+      <valueType>
+        <types>CatalogRef.ПартииНоменклатуры</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+      <functionalOptions>FunctionalOption.ИспользоватьПартии</functionalOptions>
     </columns>
   </attributes>
   <attributes>

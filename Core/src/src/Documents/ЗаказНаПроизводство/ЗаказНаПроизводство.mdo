@@ -268,6 +268,7 @@
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>AccumulationRegister.ЗаказыНаПроизводство</registerRecords>
   <registerRecords>AccumulationRegister.ПотребностьВЗапасах</registerRecords>
+  <registerRecords>AccumulationRegister.РезервированиеЗапасов</registerRecords>
   <registerRecords>AccumulationRegister.ВыпускПродукции</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccumulationRegister.РазмещениеЗаказов</registerRecords>
@@ -1036,6 +1037,44 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="5ae4ba05-853c-438b-823a-a15d072aded9">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროექტი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Project</value>
+    </synonym>
+    <comment>ONESOFT-3279</comment>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Проект, в рамках которого открывается заказ</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პროექტი, რომლის ფარგლებშიც იხსნება შეკვეთა</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Контрагент</name>
+      <field>0:1371d910-ad1b-48fe-ae24-803656eb6c75</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Проекты.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="98ba2ae6-d840-4cbc-83d2-51be79de6b49">
     <name>ФормаДокумента</name>
     <synonym>
@@ -1492,6 +1531,29 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="b9f751f6-7ca8-452a-9995-247e30ac79d2">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3279</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
   <tabularSections uuid="5a2325ee-87b8-43cb-b9c3-6068c1f908e3">
     <producedTypes>
@@ -1898,6 +1960,29 @@
         <name>Отбор.Владелец</name>
         <field>Document.ЗаказНаПроизводство.TabularSection.Запасы.Attribute.Номенклатура</field>
       </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f4f45b04-b7b6-4e9e-89e1-e6cf398f75d7">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <comment>ONESOFT-3279</comment>
+      <type>
+        <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

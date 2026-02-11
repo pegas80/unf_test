@@ -110,6 +110,31 @@
           <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
+          <name>ФормаВозвратКредитаКонтрагентомКасса</name>
+          <id>247</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ФормаВозвратКредитаКонтрагентомКассаРасширеннаяПодсказка</name>
+            <id>248</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПоступлениеВозвратКредитаКонтрагентомКасса</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ФормаПоступлениеВозвратЗаймаСотрудникомКасса</name>
           <id>207</id>
           <visible>true</visible>
@@ -1101,6 +1126,42 @@
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <horizontalStretch>false</horizontalStretch>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НомерВходящегоДокумента</name>
+          <id>244</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Список.НомерВходящегоДокумента</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НомерВходящегоДокументаРасширеннаяПодсказка</name>
+            <id>246</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НомерВходящегоДокументаКонтекстноеМеню</name>
+            <id>245</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
@@ -4246,6 +4307,32 @@
     </action>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
+  <formCommands>
+    <name>ПоступлениеВозвратКредитаКонтрагентомКасса</name>
+    <title>
+      <key>ru</key>
+      <value>Возврат кредита контрагентом</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კონტრაგენტის მიერ სესხის დაბრუნება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Return of the loan by counterparty</value>
+    </title>
+    <id>3</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПоступлениеВозвратКредитаКонтрагентомКасса</name>
+      </handler>
+    </action>
+    <functionalOptions>FunctionalOption.КредитыИЗаймы</functionalOptions>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
   <commandInterface>
     <navigationPanel/>
     <commandBar>
@@ -4263,6 +4350,10 @@
         <command>CommonCommand.ИсторияИзменений</command>
         <group>FormCommandBarImportant</group>
         <index>0</index>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>Document.СчетФактура.StandardCommand.CreateBasedOn</command>
         <userVisible/>
       </cmiFragmentRecord>
     </commandBar>

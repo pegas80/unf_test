@@ -57,7 +57,7 @@
       <enabled>true</enabled>
       <userVisible/>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Ref</segments>
+        <segments>Список.Ссылка</segments>
       </dataPath>
       <extendedTooltip>
         <name>СсылкаРасширеннаяПодсказка</name>
@@ -93,7 +93,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Date</segments>
+        <segments>Список.Дата</segments>
       </dataPath>
       <defaultItem>true</defaultItem>
       <extendedTooltip>
@@ -130,7 +130,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Number</segments>
+        <segments>Список.Номер</segments>
       </dataPath>
       <extendedTooltip>
         <name>НомерРасширеннаяПодсказка</name>
@@ -156,6 +156,39 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>გაფორმებულია</name>
+      <id>38</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.გაფორმებულია</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>გაფორმებულიაРасширеннаяПодсказка</name>
+        <id>40</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>გაფორმებულიაКонтекстноеМеню</name>
+        <id>39</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
     </items>
     <items xsi:type="form:FormField">
       <name>СтруктурнаяЕдиница</name>
@@ -464,9 +497,58 @@
     </edit>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	ДокументВнутреннийЗаказ.Ссылка КАК Ссылка,
+	ДокументВнутреннийЗаказ.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументВнутреннийЗаказ.Номер КАК Номер,
+	ДокументВнутреннийЗаказ.Дата КАК Дата,
+	ДокументВнутреннийЗаказ.Проведен КАК Проведен,
+	ДокументВнутреннийЗаказ.Организация КАК Организация,
+	ДокументВнутреннийЗаказ.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ДокументВнутреннийЗаказ.СтруктурнаяЕдиницаОтправитель КАК СтруктурнаяЕдиницаОтправитель,
+	ДокументВнутреннийЗаказ.Комментарий КАК Комментарий,
+	ДокументВнутреннийЗаказ.Автор КАК Автор,
+	ДокументВнутреннийЗаказ.ДокументВизита КАК ДокументВизита,
+	ДокументВнутреннийЗаказ.Ответственный КАК Ответственный,
+	ДокументВнутреннийЗаказ.Статус КАК Статус,
+	ДокументВнутреннийЗаказ.Проект КАК Проект,
+	ДокументВнутреннийЗаказ.БуферВремени КАК БуферВремени,
+	ДокументВнутреннийЗаказ.ЗапретРедактированияДокументов КАК ЗапретРедактированияДокументов,
+	ДокументВнутреннийЗаказ.Запасы.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Номенклатура КАК Номенклатура,
+		Характеристика КАК Характеристика,
+		Партия КАК Партия,
+		Количество КАК Количество,
+		УтвержденноеКоличество КАК УтвержденноеКоличество,
+		ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+		Комментарий КАК Комментарий,
+		Проект КАК Проект
+	) КАК Запасы,
+	ДокументВнутреннийЗаказ.МоментВремени КАК МоментВремени,
+	ВЫБОР
+		КОГДА ДокументыПеремещения.СсылкаВнутреннийЗаказ ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ДокументыПеремещения.Проведен
+	КОНЕЦ КАК გაფორმებულია
+ИЗ
+	Документ.ВнутреннийЗаказ КАК ДокументВнутреннийЗаказ
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ВЫРАЗИТЬ(ПеремещениеЗапасов.ДокументОснование КАК Документ.ВнутреннийЗаказ) КАК СсылкаВнутреннийЗаказ,
+			МАКСИМУМ(ПеремещениеЗапасов.Проведен) КАК Проведен
+		ИЗ
+			Документ.ПеремещениеЗапасов КАК ПеремещениеЗапасов
+		ГДЕ
+			ПеремещениеЗапасов.ДокументОснование ССЫЛКА Документ.ВнутреннийЗаказ
+		
+		СГРУППИРОВАТЬ ПО
+			ВЫРАЗИТЬ(ПеремещениеЗапасов.ДокументОснование КАК Документ.ВнутреннийЗаказ)) КАК ДокументыПеремещения
+		ПО ДокументВнутреннийЗаказ.Ссылка = ДокументыПеремещения.СсылкаВнутреннийЗаказ</queryText>
       <mainTable>Document.ВнутреннийЗаказ</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
     </extInfo>

@@ -285,6 +285,37 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦен</dataPath>
+			<field>ВидЦен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокПоСкладу</dataPath>
+			<field>ОстатокПоСкладу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток по складу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РСЦены.Номенклатура КАК НоменклатураСсылка,
@@ -457,8 +488,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ШтрихкодыНоменклатуры.Номенклатура,
-	ШтрихкодыНоменклатуры.Характеристика,
+	ШтрихкодыНоменклатуры.Номенклатура КАК Номенклатура,
+	ШтрихкодыНоменклатуры.Характеристика КАК Характеристика,
 	ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "") КАК Штрихкод
 ПОМЕСТИТЬ ВТ_штрихкоди
 ИЗ
@@ -477,6 +508,53 @@
 	ШтрихкодыНоменклатуры.Номенклатура,
 	ШтрихкодыНоменклатуры.Характеристика,
 	ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОстаткиЗапасов.Номенклатура КАК СкладНоменклатура,
+	ОстаткиЗапасов.Характеристика КАК СкладХарактеристика,
+	ОстаткиЗапасов.СтруктурнаяЕдиница КАК Склад,
+	ЕСТЬNULL(ОстаткиЗапасов.КоличествоОстаток, 0) - ЕСТЬNULL(РезервыЗапасов.КоличествоОстаток, 0) КАК СвободныйОстаток
+ПОМЕСТИТЬ втОстаткиПоСкладу
+ИЗ
+	РегистрНакопления.ЗапасыНаСкладах.Остатки(
+			,
+			(Номенклатура, Характеристика) В
+					(ВЫБРАТЬ
+						Т.Ссылка,
+						Т.Характеристика
+					ИЗ
+						ВсяНоменклатура КАК Т
+					СГРУППИРОВАТЬ ПО
+						Т.Ссылка,
+						Т.Характеристика)
+				И (&amp;ОтборПоСкладу
+						И СтруктурнаяЕдиница В (&amp;Склады)
+					ИЛИ НЕ &amp;ОтборПоСкладу)) КАК ОстаткиЗапасов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(
+				,
+				ЗаказПокупателя &lt;&gt; ЗНАЧЕНИЕ(Документ.ЗаказПокупателя.ПустаяССылка)
+					И (Номенклатура, Характеристика) В
+						(ВЫБРАТЬ
+							Т.Ссылка,
+							Т.Характеристика
+						ИЗ
+							ВсяНоменклатура КАК Т
+						СГРУППИРОВАТЬ ПО
+							Т.Ссылка,
+							Т.Характеристика)
+					И (&amp;ОтборПоСкладу
+							И СтруктурнаяЕдиница В (&amp;Склады)
+						ИЛИ НЕ &amp;ОтборПоСкладу)) КАК РезервыЗапасов
+		ПО ОстаткиЗапасов.Организация = РезервыЗапасов.Организация
+			И ОстаткиЗапасов.Номенклатура = РезервыЗапасов.Номенклатура
+			И ОстаткиЗапасов.Характеристика = РезервыЗапасов.Характеристика
+			И ОстаткиЗапасов.СтруктурнаяЕдиница = РезервыЗапасов.СтруктурнаяЕдиница
+
+ИНДЕКСИРОВАТЬ ПО
+	СкладНоменклатура,
+	СкладХарактеристика
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -510,16 +588,27 @@
 	ВсяНоменклатура.ВерхняяГраницаОстатков КАК ВерхняяГраницаОстатков,
 	ЕстьЗаписиСЦенами.ЕстьЗаписи КАК ЕстьЗаписи,
 	ЕСТЬNULL(ОстаткиЗапасов.КоличествоОстаток, 0) - ЕСТЬNULL(РезервыЗапасов.КоличествоОстаток, 0) КАК СвободныйОстаток,
-	ВТ_штрихкоди.Штрихкод
+	ВТ_штрихкоди.Штрихкод КАК Штрихкод,
+	ЕСТЬNULL(втОстаткиПоСкладу.СвободныйОстаток, 0) КАК ОстатокПоСкладу,
+	втОстаткиПоСкладу.Склад КАК Склад
 ИЗ
 	ВсяНоменклатура КАК ВсяНоменклатура
 		ЛЕВОЕ СОЕДИНЕНИЕ ЕстьЗаписиСЦенами КАК ЕстьЗаписиСЦенами
 		ПО ВсяНоменклатура.Ссылка = ЕстьЗаписиСЦенами.НоменклатураСсылка
 			И ВсяНоменклатура.Характеристика = ЕстьЗаписиСЦенами.Характеристика
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗапасыНаСкладах.Остатки КАК ОстаткиЗапасов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗапасыНаСкладах.Остатки(
+				,
+				&amp;ОтборПоСкладу
+						И СтруктурнаяЕдиница В (&amp;Склады)
+					ИЛИ НЕ &amp;ОтборПоСкладу) КАК ОстаткиЗапасов
 		ПО ВсяНоменклатура.Ссылка = ОстаткиЗапасов.Номенклатура
 			И ВсяНоменклатура.Характеристика = ОстаткиЗапасов.Характеристика
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(, ЗаказПокупателя &lt;&gt; ЗНАЧЕНИЕ(Документ.ЗаказПокупателя.ПустаяССылка)) КАК РезервыЗапасов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Запасы.Остатки(
+				,
+				ЗаказПокупателя &lt;&gt; ЗНАЧЕНИЕ(Документ.ЗаказПокупателя.ПустаяССылка)
+					И (&amp;ОтборПоСкладу
+							И СтруктурнаяЕдиница В (&amp;Склады)
+						ИЛИ НЕ &amp;ОтборПоСкладу)) КАК РезервыЗапасов
 		ПО ВсяНоменклатура.Ссылка = РезервыЗапасов.Номенклатура
 			И ВсяНоменклатура.Характеристика = РезервыЗапасов.Характеристика
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИсключенияПрайсЛистов КАК ИсключенияПрайсЛистов
@@ -534,6 +623,9 @@
 					ТОГДА ЛОЖЬ
 				ИНАЧЕ ЕСТЬNULL(ВсяНоменклатура.Характеристика, ЗНАЧЕНИЕ(справочник.ХарактеристикиНоменклатуры.пустаяСсылка)) = ЕСТЬNULL(ВТ_штрихкоди.Характеристика, ЗНАЧЕНИЕ(справочник.ХарактеристикиНоменклатуры.пустаяСсылка))
 			КОНЕЦ)
+		ЛЕВОЕ СОЕДИНЕНИЕ втОстаткиПоСкладу КАК втОстаткиПоСкладу
+		ПО ВсяНоменклатура.Ссылка = втОстаткиПоСкладу.СкладНоменклатура
+			И ВсяНоменклатура.Характеристика = втОстаткиПоСкладу.СкладХарактеристика
 ГДЕ
 	ЕстьЗаписиСЦенами.ЕстьЗаписи
 
@@ -567,8 +659,14 @@
 		ИНАЧЕ ИСТИНА
 	КОНЕЦ,
 	ВЫРАЗИТЬ(ВсяНоменклатура.Характеристика.НаименованиеДляПечати КАК СТРОКА(1000)),
-	ЕСТЬNULL(ОстаткиЗапасов.КоличествоОстаток, 0) - ЕСТЬNULL(РезервыЗапасов.КоличествоОстаток, 0)</query>
+	ЕСТЬNULL(ОстаткиЗапасов.КоличествоОстаток, 0) - ЕСТЬNULL(РезервыЗапасов.КоличествоОстаток, 0),
+	втОстаткиПоСкладу.Склад,
+	ЕСТЬNULL(втОстаткиПоСкладу.СвободныйОстаток, 0)</query>
 	</dataSet>
+	<totalField>
+		<dataPath>ОстатокПоСкладу</dataPath>
+		<expression>Сумма(ОстатокПоСкладу)</expression>
+	</totalField>
 	<parameter>
 		<name>МассивПапок</name>
 		<title xsi:type="v8:LocalStringType">
@@ -686,12 +784,45 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
+	<parameter>
+		<name>ОтборПоСкладу</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор по складу</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Склады</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склады</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокПоСкладу</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -904,6 +1035,23 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Склад</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
 				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>

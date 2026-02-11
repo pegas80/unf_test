@@ -210,6 +210,7 @@
   <basedOn>Document.ДоговорКредитаИЗайма</basedOn>
   <basedOn>Document.ПриемИПередачаВРемонт</basedOn>
   <basedOn>Document.КорректировкаПоступления</basedOn>
+  <basedOn>Document.ПродажаЛицензии</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
@@ -498,6 +499,7 @@
       <types>DocumentRef.ПеремещениеДСПлан</types>
       <types>DocumentRef.ПоступлениеДСПлан</types>
       <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.ПродажаЛицензии</types>
       <types>DocumentRef.НачисленияПоКредитамИЗаймам</types>
       <types>DocumentRef.СчетНаОплату</types>
       <types>DocumentRef.ПриемИПередачаВРемонт</types>
@@ -2095,6 +2097,123 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="15d75a84-1eb4-4d04-b139-095da3e43774">
+    <name>РасчетСКурьером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет с курьером</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კურიერთან ანგარიშსწორება</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="60a9bbf8-d236-4557-a730-8e39a1b12e30">
+    <name>ПриходнаяНакладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приходная накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9cdb9865-c8d3-40d9-b4b2-4600371d5995">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შეკვეთა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Order</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Заказ, в рамках которого осуществляется оплата</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>შეკვეთა, რომლის ფარგლებში ხორციელდება გადახდა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>The order in which payment is made</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Корреспонденция</name>
+      <field>0:6d574719-c419-4afb-b90d-0a6be67ce87a</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Document.ЗаказПокупателя.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4492e45c-6d9b-4493-977a-5bf1bf876ec7">
+    <name>ДополнительноеЗначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительное значение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დამატებითი დანიშნულება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Дополнительное значение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5d570baa-0741-4e2d-bf48-46fa5edca87b">
+    <name>TransactionID</name>
+    <synonym>
+      <key>ru</key>
+      <value>Transaction ID</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>11</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="2bd664e7-4d48-4123-a15a-69749a1646f4">
     <name>ФормаДокумента</name>
     <synonym>
@@ -2303,8 +2422,9 @@
         <types>DocumentRef.АвансовыйОтчет</types>
         <types>DocumentRef.ЗаказПокупателя</types>
         <types>DocumentRef.КорректировкаПоступления</types>
+        <types>DocumentRef.ПродажаЛицензии</types>
+        <types>DocumentRef.СборкаЗапасов</types>
         <types>DocumentRef.ПриемИПередачаВРемонт</types>
-        <types>DocumentRef.ОтчетОРозничныхПродажах</types>
         <types>DocumentRef.ОтчетПереработчика</types>
         <types>DocumentRef.ОтчетКомитенту</types>
         <types>DocumentRef.РасходИзКассы</types>
@@ -3807,5 +3927,89 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="2bf517f9-7b0c-4b3e-8fe6-cd9339df883c">
+      <name>СуммаРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма расчета</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ანგარიშსწორების თანხა</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
+  <templates uuid="81da7d64-302e-44d8-ae6a-41ec45aa8a76">
+    <name>ЗагрузкаИзФайлаРасшифровкаПлатежаОтАгента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка из файла расшифровка платежа от агента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ჩატვირთვა ფაილ მარაგებიდან</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Загрузка из файла расшифровка платежа от агента</value>
+    </synonym>
+  </templates>
+  <templates uuid="9d48c83d-c9b0-4e25-b75b-2f11ea5aefbe">
+    <name>ОбразецЗагрузкиДанных_csv</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец загрузки данных csv</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის ნიმუში csv</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Образец загрузки данных csv</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="527ee67e-808f-46bb-bb80-59c121bd3610">
+    <name>ОбразецЗагрузкиДанных_mxl</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец загрузки данных mxl</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის ნიმუში mxl</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Образец загрузки данных mxl</value>
+    </synonym>
+  </templates>
+  <templates uuid="7a11bdb2-fe59-4617-9dde-3152bf14d7b2">
+    <name>ОбразецЗагрузкиДанных_xlsx</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец загрузки данных xlsx</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მონაცემთა ჩატვირთვის ნიმუში xlsx</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Образец загрузки данных xlsx</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
 </mdclass:Document>

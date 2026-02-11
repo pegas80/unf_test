@@ -114,6 +114,13 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗапасыОстатки.Номенклатура КАК Номенклатура,
@@ -121,14 +128,16 @@
 	ЗапасыОстатки.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
 	ЗапасыОстатки.Номенклатура.Проект КАК Проект,
 	ЗапасыОстатки.КоличествоОстаток КАК Количество,
-	ЗапасыОстатки.СуммаОстаток КАК Себистоимость
+	ЗапасыОстатки.СуммаОстаток КАК Себистоимость,
+	ЗапасыОстатки.Партия КАК Партия
 {ВЫБРАТЬ
 	Номенклатура.*,
 	Характеристика.*,
 	СтруктурнаяЕдиница.*,
 	Проект.*,
 	Количество,
-	Себистоимость}
+	Себистоимость,
+	Партия.*}
 ИЗ
 	РегистрНакопления.Запасы.Остатки(
 			&amp;НаДату,
@@ -227,6 +236,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Себистоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>

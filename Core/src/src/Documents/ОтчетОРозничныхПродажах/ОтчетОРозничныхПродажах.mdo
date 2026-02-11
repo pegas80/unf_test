@@ -170,7 +170,7 @@
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
-  <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
+  <registerRecords>AccumulationRegister.БалыЛояльности</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыПринятые</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
@@ -179,6 +179,8 @@
   <registerRecords>AccumulationRegister.ЗаказыПокупателей</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетодЭквайринг</registerRecords>
+  <registerRecords>AccumulationRegister.ПродажиВВалюте</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="a14a2af4-03d2-4057-ae2d-0aecc42430be">
@@ -2385,6 +2387,29 @@
       </synonym>
       <type>
         <types>DocumentRef.ЗаказПокупателя</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b67ed7ea-3cb4-4155-907f-96b0b53a589b">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მყიდველი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Customer</value>
+      </synonym>
+      <comment>ONESOFT-3538</comment>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

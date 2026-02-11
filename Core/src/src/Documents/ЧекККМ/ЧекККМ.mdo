@@ -124,6 +124,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
+  <basedOn>Document.СборкаЗапасов</basedOn>
   <createOnInput>Use</createOnInput>
   <help>
     <pages>
@@ -166,12 +167,16 @@
   <registerRecords>AccumulationRegister.ОплатаПлатежнымиКартами</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.РезервированиеЗапасов</registerRecords>
+  <registerRecords>AccumulationRegister.БалыЛояльности</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>InformationRegister.СерийныеНомераГарантии</registerRecords>
   <registerRecords>AccumulationRegister.ПредоставленныеАвтоматическиеСкидки</registerRecords>
   <registerRecords>AccumulationRegister.ЗаказыПокупателей</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <registerRecords>AccumulationRegister.ПродажиВВалюте</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="58a261bc-c413-4cfd-b9a7-a7385d1f69eb">
@@ -549,7 +554,7 @@
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Идентификатор чека штрих М</value>
+      <value>ID check bar M</value>
     </synonym>
     <type>
       <types>UUID</types>
@@ -698,7 +703,7 @@
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Контактное лицо подписант</value>
+      <value>Signatory contact person</value>
     </synonym>
     <type>
       <types>CatalogRef.КонтактныеЛица</types>
@@ -782,7 +787,7 @@
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Тип налогообложения продажи товаров и услуг налогом на добавленную стоимость</value>
+      <value>Type of taxation of sales of goods and services with value added tax</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -1482,7 +1487,7 @@
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Хозяйственная операция</value>
+      <value>Business transaction</value>
     </synonym>
     <type>
       <types>CatalogRef.ХозяйственныеОперации</types>
@@ -1545,6 +1550,10 @@
       <key>ka</key>
       <value>ბარათებით გადახდის თანხა</value>
     </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Amount of payment by payment cards</value>
+    </synonym>
     <type>
       <types>Number</types>
       <numberQualifiers>
@@ -1567,6 +1576,10 @@
     <synonym>
       <key>ka</key>
       <value>რიგის ნომერი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Queue number</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -2067,7 +2080,7 @@
       </toolTip>
       <toolTip>
         <key>en</key>
-        <value>При необходимости в данном поле указывается характеристика номенклатуры</value>
+        <value>If necessary, this field indicates the characteristics of the item</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -2344,7 +2357,7 @@
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Сумма</value>
+        <value>Sum</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -2555,7 +2568,7 @@
       </toolTip>
       <toolTip>
         <key>en</key>
-        <value>Сумма всех автоматических скидок для строки чека, рассчитанная в соответствии с правилами взаимного влияния.</value>
+        <value>The sum of all automatic discounts for the receipt line, calculated in accordance with the cross-impact rules.</value>
       </toolTip>
       <markNegatives>true</markNegatives>
       <minValue xsi:type="core:UndefinedValue"/>
@@ -2594,7 +2607,7 @@
       </toolTip>
       <toolTip>
         <key>en</key>
-        <value>Идентификатор связи строки табличной части Товары и строки табличной части Скидки (наценки). Формируется автоматически, пользователем не редактируется.</value>
+        <value>Identifier of the connection between a row in the Products tabular section and rows in the Discounts (markups) tabular section. It is generated automatically and cannot be edited by the user.</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -2768,6 +2781,54 @@
       </synonym>
       <type>
         <types>EnumRef.СпособыОкругления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="61ce30fa-1b63-4880-8df0-8bf522aeb111">
+      <name>ПроцентСкидкиУноШуз</name>
+      <synonym>
+        <key>ru</key>
+        <value>% скидки уно шуз</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფასდაკლების % უნო შუზ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Discount % Uno Shuz</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c7c17036-887a-4056-a7cf-48257aa336d9">
+      <name>СуммаСкидкиУноШуз</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма скидки уно шуз</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ფასდაკლების თანხა - უნო შუზ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -3184,7 +3245,7 @@
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Акцизные марки</value>
+      <value>Excise stamps</value>
     </synonym>
     <standardAttributes>
       <dataHistory>Use</dataHistory>
@@ -3286,7 +3347,7 @@
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Серии принимаемых товаров</value>
+      <value>Series of accepted products</value>
     </toolTip>
     <standardAttributes>
       <dataHistory>Use</dataHistory>
@@ -3323,7 +3384,7 @@
       </toolTip>
       <toolTip>
         <key>en</key>
-        <value>Серия товаров</value>
+        <value>Product series</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -3343,7 +3404,7 @@
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Ключ связи</value>
+        <value>Communication key</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -3394,9 +3455,32 @@
       <key>ru</key>
       <value>Отчет итоги смены</value>
     </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ცვლის შედეგების ანგარიში</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Shift results report</value>
+    </synonym>
   </templates>
   <templates uuid="69b2ff5a-fd3e-4e07-a3b5-6fc28a013066">
     <name>ПФ_MXL_Чек_Отделы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товарный чек</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>სასაქონლო ჩეკი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Sales receipt</value>
+    </synonym>
+  </templates>
+  <templates uuid="c4cbb14f-c260-4d82-8639-9211277e207f">
+    <name>ПФ_MXL_Чек1</name>
     <synonym>
       <key>ru</key>
       <value>Товарный чек</value>

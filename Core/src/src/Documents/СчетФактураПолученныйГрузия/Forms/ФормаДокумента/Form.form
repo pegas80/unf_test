@@ -57,6 +57,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Объект.Date</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ДатаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ДатаРасширеннаяПодсказка</name>
             <id>234</id>
@@ -5116,6 +5120,23 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ДатаИзмененаПользователем</name>
+    <title>
+      <key>ru</key>
+      <value>Дата изменена пользователем</value>
+    </title>
+    <id>30</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ЗаполнитьИзДокументов</name>
     <title>
@@ -5378,6 +5399,14 @@
     <handlers>
       <event>BeforeWrite</event>
       <name>ПередЗаписью</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWriteAtServer</event>
+      <name>ПередЗаписьюНаСервере</name>
+    </handlers>
+    <handlers>
+      <event>OnWriteAtServer</event>
+      <name>ПриЗаписиНаСервере</name>
     </handlers>
     <repostOnWrite>true</repostOnWrite>
   </extInfo>

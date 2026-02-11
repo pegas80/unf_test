@@ -854,17 +854,19 @@
         </items>
         <items xsi:type="form:FormField">
           <name>Курс</name>
-          <id>1933</id>
+          <id>2318</id>
           <visible>true</visible>
           <enabled>true</enabled>
-          <userVisible/>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
           <dataPath xsi:type="form:DataPath">
             <segments>Курс</segments>
           </dataPath>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
             <name>КурсРасширеннаяПодсказка</name>
-            <id>1935</id>
+            <id>2320</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -874,17 +876,16 @@
           </extendedTooltip>
           <contextMenu>
             <name>КурсКонтекстноеМеню</name>
-            <id>1934</id>
+            <id>2319</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
-          <horizontalAlign>Left</horizontalAlign>
           <editMode>Enter</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:LabelFieldExtInfo">
-            <maxWidth>7</maxWidth>
+            <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
           </extInfo>
         </items>
@@ -4552,6 +4553,50 @@
                 <contextMenu>
                   <name>ТаблицаДолговСуммаПФКонтекстноеМеню</name>
                   <id>2304</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>EnterOnInput</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>ТаблицаДолговСтатьяДДС</name>
+                <id>2309</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>ТаблицаДолгов.СтатьяДДС</segments>
+                </dataPath>
+                <handlers>
+                  <event>OnChange</event>
+                  <name>ТаблицаДолговСтатьяПриИзменении</name>
+                </handlers>
+                <extendedTooltip>
+                  <name>ТаблицаДолговСтатьяДДСРасширеннаяПодсказка</name>
+                  <id>2311</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ТаблицаДолговСтатьяДДСКонтекстноеМеню</name>
+                  <id>2310</id>
                   <autoFill>true</autoFill>
                 </contextMenu>
                 <type>InputField</type>
@@ -10564,6 +10609,78 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
+        <name>ВыплатаЗаработнойПлатыВедомостьСуммаРасчетов</name>
+        <id>2321</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.ВыплатаЗаработнойПлаты.Ведомость.СуммаРасчетов</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ВыплатаЗаработнойПлатыВедомостьСуммаРасчетовРасширеннаяПодсказка</name>
+          <id>2323</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВыплатаЗаработнойПлатыВедомостьСуммаРасчетовКонтекстноеМеню</name>
+          <id>2322</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ВыплатаЗаработнойПлатыВедомостьВалютаРасчетов</name>
+        <id>2324</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.ВыплатаЗаработнойПлаты.Ведомость.ВалютаРасчетов</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ВыплатаЗаработнойПлатыВедомостьВалютаРасчетовРасширеннаяПодсказка</name>
+          <id>2326</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВыплатаЗаработнойПлатыВедомостьВалютаРасчетовКонтекстноеМеню</name>
+          <id>2325</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
         <name>ВыплатаЗаработнойПлатыВедомостьВидОперации</name>
         <id>2259</id>
         <visible>true</visible>
@@ -13047,6 +13164,46 @@
         <key>en</key>
         <value>Комментарий</value>
       </inputHint>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>НомерВходящегоДокумента</name>
+    <id>2306</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.НомерВходящегоДокумента</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>НомерВходящегоДокументаРасширеннаяПодсказка</name>
+      <id>2308</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>НомерВходящегоДокументаКонтекстноеМеню</name>
+      <id>2307</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
     </extInfo>
   </items>
   <items xsi:type="form:FormGroup">
@@ -16296,6 +16453,31 @@
           <precision>15</precision>
           <scale>2</scale>
         </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СтатьяДДС</name>
+      <title>
+        <key>ru</key>
+        <value>Статья ДДС</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მუხლი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Article</value>
+      </title>
+      <id>35</id>
+      <valueType>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
       </valueType>
       <view>
         <common>true</common>

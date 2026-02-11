@@ -15,7 +15,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка</name>
@@ -87,7 +87,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка</name>
@@ -115,7 +115,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетПоДвижениямРасширеннаяПодсказка</name>
@@ -144,7 +144,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка</name>
@@ -172,7 +172,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка</name>
@@ -200,7 +200,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Items.Список.CurrentData.Ref</segments>
+          <segments>Items.Список.CurrentData.Ссылка</segments>
         </dataPath>
         <extendedTooltip>
           <name>ОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка</name>
@@ -421,7 +421,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Date</segments>
+        <segments>Список.Дата</segments>
       </dataPath>
       <defaultItem>true</defaultItem>
       <extendedTooltip>
@@ -471,7 +471,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Number</segments>
+        <segments>Список.Номер</segments>
       </dataPath>
       <extendedTooltip>
         <name>НомерРасширеннаяПодсказка</name>
@@ -654,6 +654,58 @@
       <extInfo xsi:type="form:ColumnGroupExtInfo">
         <group>InCell</group>
         <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Договор</name>
+      <id>100</id>
+      <title>
+        <key>ru</key>
+        <value>Договор</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ხელშეკრულება</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Agreement</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.Договор</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ДоговорРасширеннаяПодсказка</name>
+        <id>102</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ДоговорКонтекстноеМеню</name>
+        <id>101</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
@@ -1289,9 +1341,78 @@
     </edit>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	ДокументДоговорКредитаИЗайма.Ссылка КАК Ссылка,
+	ДокументДоговорКредитаИЗайма.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументДоговорКредитаИЗайма.Номер КАК Номер,
+	ДокументДоговорКредитаИЗайма.Дата КАК Дата,
+	ДокументДоговорКредитаИЗайма.Проведен КАК Проведен,
+	ДокументДоговорКредитаИЗайма.Организация КАК Организация,
+	ДокументДоговорКредитаИЗайма.ВидДоговора КАК ВидДоговора,
+	ДокументДоговорКредитаИЗайма.Сотрудник КАК Сотрудник,
+	ДокументДоговорКредитаИЗайма.Контрагент КАК Контрагент,
+	ЕСТЬNULL(ДокументДоговорКредитаИЗайма.ДокументРеализации.Договор, ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)) КАК Договор,
+	ДокументДоговорКредитаИЗайма.ДокументРеализации КАК ДокументРеализации,
+	ДокументДоговорКредитаИЗайма.СуммаДокумента КАК СуммаДокумента,
+	ДокументДоговорКредитаИЗайма.ПроцентнаяСтавкаГодовая КАК ПроцентнаяСтавкаГодовая,
+	ДокументДоговорКредитаИЗайма.ВалютаРасчетов КАК ВалютаРасчетов,
+	ДокументДоговорКредитаИЗайма.ПогашатьИзЗаработнойПлаты КАК ПогашатьИзЗаработнойПлаты,
+	ДокументДоговорКредитаИЗайма.ВариантПогашения КАК ВариантПогашения,
+	ДокументДоговорКредитаИЗайма.РазмерПлатежа КАК РазмерПлатежа,
+	ДокументДоговорКредитаИЗайма.ДатаПредоставления КАК ДатаПредоставления,
+	ДокументДоговорКредитаИЗайма.ДатаОкончания КАК ДатаОкончания,
+	ДокументДоговорКредитаИЗайма.ДатаНачалаПогашения КАК ДатаНачалаПогашения,
+	ДокументДоговорКредитаИЗайма.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	ДокументДоговорКредитаИЗайма.СчетУчета КАК СчетУчета,
+	ДокументДоговорКредитаИЗайма.СчетУчетаПроцентов КАК СчетУчетаПроцентов,
+	ДокументДоговорКредитаИЗайма.СчетУчетаКомиссии КАК СчетУчетаКомиссии,
+	ДокументДоговорКредитаИЗайма.СчетЗатрат КАК СчетЗатрат,
+	ДокументДоговорКредитаИЗайма.ТипКомиссии КАК ТипКомиссии,
+	ДокументДоговорКредитаИЗайма.РазмерКомиссии КАК РазмерКомиссии,
+	ДокументДоговорКредитаИЗайма.ВидПлатежей КАК ВидПлатежей,
+	ДокументДоговорКредитаИЗайма.Автор КАК Автор,
+	ДокументДоговорКредитаИЗайма.Комментарий КАК Комментарий,
+	ДокументДоговорКредитаИЗайма.СтруктурнаяЕдиница КАК СтруктурнаяЕдиница,
+	ДокументДоговорКредитаИЗайма.Заказ КАК Заказ,
+	ДокументДоговорКредитаИЗайма.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	ДокументДоговорКредитаИЗайма.УдержаниеОсновнойДолг КАК УдержаниеОсновнойДолг,
+	ДокументДоговорКредитаИЗайма.УдержаниеПроценты КАК УдержаниеПроценты,
+	ДокументДоговорКредитаИЗайма.ВГоду360Дней КАК ВГоду360Дней,
+	ДокументДоговорКредитаИЗайма.СчетУчетаРегл КАК СчетУчетаРегл,
+	ДокументДоговорКредитаИЗайма.СчетУчетаПроцентовРегл КАК СчетУчетаПроцентовРегл,
+	ДокументДоговорКредитаИЗайма.СчетУчетаКомиссииРегл КАК СчетУчетаКомиссииРегл,
+	ДокументДоговорКредитаИЗайма.СчетЗатратРегл КАК СчетЗатратРегл,
+	ДокументДоговорКредитаИЗайма.СуммаВключаетНДФЛ КАК СуммаВключаетНДФЛ,
+	ДокументДоговорКредитаИЗайма.ВидНачисленияУдержанияНДФЛ КАК ВидНачисленияУдержанияНДФЛ,
+	ДокументДоговорКредитаИЗайма.ТипРаспределенияДоходов КАК ТипРаспределенияДоходов,
+	ДокументДоговорКредитаИЗайма.КатегорияПолучателейДохода КАК КатегорияПолучателейДохода,
+	ДокументДоговорКредитаИЗайма.ВидВыдачиНДФЛ КАК ВидВыдачиНДФЛ,
+	ДокументДоговорКредитаИЗайма.ЗапретРедактированияДокументов КАК ЗапретРедактированияДокументов,
+	ДокументДоговорКредитаИЗайма.ГрафикПлатежейИНачислений.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Период КАК Период,
+		СуммаОсновногоДолга КАК СуммаОсновногоДолга,
+		СуммаПроцентов КАК СуммаПроцентов,
+		СуммаКомиссии КАК СуммаКомиссии,
+		СуммаПлатежа КАК СуммаПлатежа,
+		Комментарий КАК Комментарий,
+		Проект КАК Проект
+	) КАК ГрафикПлатежейИНачислений,
+	ДокументДоговорКредитаИЗайма.ДополнительныеРеквизиты.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Свойство КАК Свойство,
+		Значение КАК Значение,
+		ТекстоваяСтрока КАК ТекстоваяСтрока
+	) КАК ДополнительныеРеквизиты,
+	ДокументДоговорКредитаИЗайма.МоментВремени КАК МоментВремени
+ИЗ
+	Документ.ДоговорКредитаИЗайма КАК ДокументДоговорКредитаИЗайма</queryText>
       <mainTable>Document.ДоговорКредитаИЗайма</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
       <autoSaveUserSettings>true</autoSaveUserSettings>
       <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
     </extInfo>

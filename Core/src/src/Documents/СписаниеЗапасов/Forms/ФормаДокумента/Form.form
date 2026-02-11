@@ -320,11 +320,35 @@
     <items xsi:type="form:Decoration">
       <name>ДекорацияОтступ</name>
       <id>150</id>
+      <title>
+        <key>en</key>
+        <value>(write-off from warehouse)</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>(ჩამოწერა საწყობიდან)</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>(списание со склада)</value>
+      </title>
       <visible>true</visible>
       <enabled>false</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
+      <toolTip>
+        <key>ru</key>
+        <value>(списание со склада)</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>(ჩამოწერა საწყობიდან)</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>(write-off from warehouse)</value>
+      </toolTip>
       <extendedTooltip>
         <name>ДекорацияОтступРасширеннаяПодсказка</name>
         <id>152</id>
@@ -1285,6 +1309,46 @@
                 <segments>Items.Запасы.CurrentData.Характеристика</segments>
               </datapath>
             </choiceParameterLinks>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ЗапасыКоличествоНаСкладе</name>
+          <id>226</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Запасы.КоличествоНаСкладе</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ЗапасыКоличествоНаСкладеРасширеннаяПодсказка</name>
+            <id>228</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ЗапасыКоличествоНаСкладеКонтекстноеМеню</name>
+            <id>227</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <autoCommandBar>
@@ -2931,6 +2995,31 @@ Commentary</value>
           <common>true</common>
         </edit>
       </columns>
+      <columns>
+        <name>КоличествоНаСкладе</name>
+        <title>
+          <key>ru</key>
+          <value>Количество на складе</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>რაოდენობა საწყობში</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>16</precision>
+            <scale>2</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -3365,7 +3454,7 @@ Order warehouse</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Получить вес</value>
+      <value>Get weight</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -3431,7 +3520,11 @@ Order warehouse</value>
     </title>
     <title>
       <key>ka</key>
-      <value>Копировать строки </value>
+      <value>სტრიქონის კოპირება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Copy rows</value>
     </title>
     <id>6</id>
     <toolTip>
@@ -3469,7 +3562,11 @@ Order warehouse</value>
     </title>
     <title>
       <key>ka</key>
-      <value>Вставить строки </value>
+      <value>სტრიქონის ჩასმა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Insert rows</value>
     </title>
     <id>7</id>
     <toolTip>
@@ -3564,7 +3661,7 @@ Order warehouse</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Передать данные в ЕГАИС</value>
+      <value>Transfer data to EGAIS</value>
     </toolTip>
     <use>
       <common>true</common>

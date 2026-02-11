@@ -142,6 +142,19 @@
               <value>Enum.ТипыНоменклатуры.EnumValue.ВидРабот</value>
             </value>
           </choiceList>
+          <choiceList>
+            <presentation>
+              <key>ru</key>
+              <value>Лицензия</value>
+            </presentation>
+            <presentation>
+              <key>ka</key>
+              <value>ლიცენზია</value>
+            </presentation>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.ТипыНоменклатуры.EnumValue.Лицензия</value>
+            </value>
+          </choiceList>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -671,6 +684,87 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
+          <name>ГруппаСтавкаЛицензии</name>
+          <id>882</id>
+          <items xsi:type="form:FormField">
+            <name>СтавкаЛицензии</name>
+            <id>884</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.СтавкаЛицензии</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СтавкаЛицензииРасширеннаяПодсказка</name>
+              <id>886</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СтавкаЛицензииКонтекстноеМеню</name>
+              <id>885</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <maxWidth>21</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа ставка лицензии</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი ლიცენზიის განაკვეთი</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа ставка лицензии</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаСтавкаЛицензииРасширеннаяПодсказка</name>
+            <id>883</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <behavior>Auto</behavior>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
           <name>ГруппаОбъемИВес</name>
           <id>832</id>
           <items xsi:type="form:FormField">
@@ -1107,6 +1201,118 @@
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>Vertical</group>
         <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСобр</name>
+      <id>895</id>
+      <items xsi:type="form:FormField">
+        <name>НужнаПроверит</name>
+        <id>897</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.НужнаПроверит</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>НужнаПроверитРасширеннаяПодсказка</name>
+          <id>899</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НужнаПроверитКонтекстноеМеню</name>
+          <id>898</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Отклонение</name>
+        <id>900</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.Отклонение</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ОтклонениеРасширеннаяПодсказка</name>
+          <id>902</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ОтклонениеКонтекстноеМеню</name>
+          <id>901</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible/>
+      <title>
+        <key>ru</key>
+        <value>Группа собр</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯგუფი აგროვება</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа собр</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ГруппаСобрРасширеннаяПодсказка</name>
+        <id>896</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>HorizontalIfPossible</group>
+        <behavior>Auto</behavior>
+        <representation>WeakSeparation</representation>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
         <throughAlign>Auto</throughAlign>
@@ -3858,59 +4064,6 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
-          <name>СрокГодности</name>
-          <id>862</id>
-          <title>
-            <key>ru</key>
-            <value>Срок годности, дней</value>
-          </title>
-          <title>
-            <key>ka</key>
-            <value>ვარგისიანობის ვადა, დღის</value>
-          </title>
-          <title>
-            <key>en</key>
-            <value>Shelflife, days</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <dataPath xsi:type="form:DataPath">
-            <segments>Объект.СрокГодности</segments>
-          </dataPath>
-          <extendedTooltip>
-            <name>СрокГодностиРасширеннаяПодсказка</name>
-            <id>864</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>СрокГодностиКонтекстноеМеню</name>
-            <id>863</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>InputField</type>
-          <editMode>Enter</editMode>
-          <showInHeader>true</showInHeader>
-          <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <choiceButton>true</choiceButton>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
-          </extInfo>
-        </items>
-        <items xsi:type="form:FormField">
           <name>Ячейка</name>
           <id>45</id>
           <title>
@@ -3959,6 +4112,138 @@
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаСрокГодности</name>
+          <id>887</id>
+          <items xsi:type="form:FormField">
+            <name>СрокГодности</name>
+            <id>862</id>
+            <title>
+              <key>ru</key>
+              <value>Срок годности, дней</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>ვარგისიანობის ვადა, დღის</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Shelflife, days</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.СрокГодности</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СрокГодностиРасширеннаяПодсказка</name>
+              <id>864</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СрокГодностиКонтекстноеМеню</name>
+              <id>863</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <choiceButton>true</choiceButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ВключенВрегистр</name>
+            <id>889</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.ВключенВрегистр</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ВключенВрегистрРасширеннаяПодсказка</name>
+              <id>891</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ВключенВрегистрКонтекстноеМеню</name>
+              <id>890</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа срок годности</value>
+          </title>
+          <title>
+            <key>ka</key>
+            <value>ჯგუფი ვარგისიანობის ვადა</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Group expiration date</value>
+          </title>
+          <toolTip>
+            <key>ka</key>
+            <value>Группа срок годности</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаСрокГодностиРасширеннаяПодсказка</name>
+            <id>888</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <behavior>Auto</behavior>
+            <representation>WeakSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <showTitle>true</showTitle>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -4402,6 +4687,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.Неактивен</segments>
         </dataPath>
+        <titleLocation>Right</titleLocation>
         <extendedTooltip>
           <name>НеактивенРасширеннаяПодсказка</name>
           <id>850</id>
@@ -4435,6 +4721,7 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.ВыгружатьВВесы</segments>
         </dataPath>
+        <titleLocation>Right</titleLocation>
         <extendedTooltip>
           <name>ВыгружатьВВесыРасширеннаяПодсказка</name>
           <id>861</id>
@@ -4448,6 +4735,38 @@
         <contextMenu>
           <name>ВыгружатьВВесыКонтекстноеМеню</name>
           <id>860</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ЕдиницаИзмеренияСчетФактури</name>
+        <id>892</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible/>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.ЕдиницаИзмеренияСчетФактури</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <extendedTooltip>
+          <name>ЕдиницаИзмеренияСчетФактуриРасширеннаяПодсказка</name>
+          <id>894</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ЕдиницаИзмеренияСчетФактуриКонтекстноеМеню</name>
+          <id>893</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>CheckBoxField</type>
@@ -8585,6 +8904,40 @@
       <value>Учет по проектам</value>
     </title>
     <id>60</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СтруктурныеЕдиницаНаКарточкеНоменклатури</name>
+    <title>
+      <key>ru</key>
+      <value>Структурные единица на карточке номенклатури</value>
+    </title>
+    <id>61</id>
+    <valueType>
+      <types>ConstantsSet</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>АвтоматичесткоеУстановлениеИспользоватьПартии</name>
+    <title>
+      <key>ru</key>
+      <value>Автоматичесткое установление использовать партии</value>
+    </title>
+    <id>62</id>
     <valueType>
       <types>Boolean</types>
     </valueType>

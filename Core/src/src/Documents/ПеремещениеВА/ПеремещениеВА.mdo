@@ -35,6 +35,7 @@
   <defaultListForm>Document.ПеремещениеВА.Form.ФормаСписка</defaultListForm>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>InformationRegister.ПараметрыВнеоборотныхАктивов</registerRecords>
+  <registerRecords>InformationRegister.СостоянияВнеоборотныхАктивов</registerRecords>
   <registerRecords>InformationRegister.УчетПоПроектамВнеоборотныхАктивов</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
@@ -286,6 +287,25 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="b7ef4564-07fc-4938-8d13-5f8f04424622">
+    <name>ОбщаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общая стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="1a7e5c9e-0454-4c68-914f-5c0717d673d5">
     <name>ФормаСписка</name>
     <synonym>
@@ -520,6 +540,10 @@
         <value>Объем продукции работ для вычисления амортизации</value>
       </synonym>
       <synonym>
+        <key>ka</key>
+        <value>სამუშაოს მოცულობა ამორტიზაციის გამოსათვლელად</value>
+      </synonym>
+      <synonym>
         <key>en</key>
         <value>The volume of production of works to calculate depreciation</value>
       </synonym>
@@ -540,6 +564,10 @@
       <synonym>
         <key>ru</key>
         <value>Первоначальная стоимость</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საწყისი ღირებულება</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -586,6 +614,10 @@
         <value>Срок использования для вычисления амортизации</value>
       </synonym>
       <synonym>
+        <key>ka</key>
+        <value>გამოყენების ვადა ამორტიზაციის გამოსათვლელად</value>
+      </synonym>
+      <synonym>
         <key>en</key>
         <value>use time to calculate the depreciation</value>
       </synonym>
@@ -606,6 +638,10 @@
       <synonym>
         <key>ru</key>
         <value>Счет затрат</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ხარჯის ანგარიში</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -665,6 +701,10 @@
         <value>Счет затрат регл</value>
       </synonym>
       <synonym>
+        <key>ka</key>
+        <value>ხარჯის ანგარიში (რეგლ)</value>
+      </synonym>
+      <synonym>
         <key>en</key>
         <value>cost expense of Regla</value>
       </synonym>
@@ -682,6 +722,10 @@
       <synonym>
         <key>ru</key>
         <value>Стоимость для вычисления амортизации</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ამორტიზაციის გამოანგარიშების ღირებულება</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -759,11 +803,11 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>Проект</value>
+        <value>პროექტი</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Проект</value>
+        <value>Project</value>
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
@@ -781,11 +825,11 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>Проект получатель</value>
+        <value>პროექტი მიმღები</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Проект получатель</value>
+        <value>Project recipient</value>
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
@@ -795,5 +839,119 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
+    <attributes uuid="fd6ec83f-48c2-4551-a95a-7aacf5c12cc9">
+      <name>ОтветственноеЛицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответственное лицо</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პასუხისმგებელი პირი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Responsible person</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8f3197a3-49de-4b1e-ab88-6589fb05e75f">
+      <name>РыночнаяЦена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рыночная цена</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საბაზრო ღირებულება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Market price</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="81735b6e-a8d7-46a0-a31e-b2472f737ff3">
+      <name>Амортизация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Начислять амортизацию</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ამორტიზაციის დარიცხვა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>depreciate</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5dfd8205-4d7c-40d4-89a5-cc5ac7aabf89">
+      <name>ВидОперации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид операции</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ოპერაციის ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Type of operation</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ВидыОперацийПеремещенияВА</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
   </tabularSections>
+  <templates uuid="9b77a0b1-a29a-4e7f-ac1d-a382ee6cdf62">
+    <name>ПФ_MXL_АктПриемаПередачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акт приема-передачи</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მიღება ჩაბარების აქტი</value>
+    </synonym>
+  </templates>
+  <templates uuid="34fec286-97fc-4ffc-b828-b0575f56b832">
+    <name>ПФ_MXL_АктПриемаПередачиВозврат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акт приема-передачи Возврат</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მიღება ჩაბარების აქტი დაბრუნება</value>
+    </synonym>
+  </templates>
 </mdclass:Document>

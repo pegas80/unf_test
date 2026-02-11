@@ -555,6 +555,10 @@
       <key>ru</key>
       <value>Резервирование</value>
     </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>დაჯავშნა</value>
+    </synonym>
     <type>
       <types>Boolean</types>
     </type>
@@ -632,7 +636,7 @@
     <name>СчетУчета</name>
     <synonym>
       <key>ru</key>
-      <value>Счет учета</value>
+      <value>Счет учета (не использовать)</value>
     </synonym>
     <synonym>
       <key>ka</key>
@@ -642,6 +646,7 @@
       <key>en</key>
       <value>expense account</value>
     </synonym>
+    <comment>- устаревшее измерение - не заполнять</comment>
     <type>
       <types>ChartOfAccountsRef.Управленческий</types>
     </type>
@@ -776,6 +781,7 @@
       <key>en</key>
       <value>cost accounting expense (Regla)</value>
     </synonym>
+    <comment>- устаревшее измерение - не заполнять</comment>
     <type>
       <types>ChartOfAccountsRef.Хозрасчетный</types>
     </type>
@@ -992,6 +998,25 @@
     </synonym>
     <type>
       <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="70263611-0d22-432b-a694-2524cf8c6e49">
+    <name>ДокументПоступления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ поступления</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>მისაღები დოკუმენტი</value>
+    </synonym>
+    <comment>ONESOFT-3602</comment>
+    <type>
+      <types>DefinedType.ДокументПоступленияДляFIFO</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>

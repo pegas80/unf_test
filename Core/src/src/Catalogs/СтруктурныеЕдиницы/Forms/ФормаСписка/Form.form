@@ -242,6 +242,42 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>ხელმოწერა</name>
+      <id>59</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.ხელმოწერა</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ხელმოწერაРасширеннаяПодсказка</name>
+        <id>61</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ხელმოწერაКонтекстноеМеню</name>
+        <id>60</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>МОЛ</name>
       <id>14</id>
       <visible>true</visible>
@@ -379,42 +415,6 @@
       <contextMenu>
         <name>СсылкаКонтекстноеМеню</name>
         <id>17</id>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>LabelField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:LabelFieldExtInfo">
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-      </extInfo>
-    </items>
-    <items xsi:type="form:FormField">
-      <name>AzRyТекущийОтветственный</name>
-      <id>59</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Список.AzRyТекущийОтветственный</segments>
-      </dataPath>
-      <extendedTooltip>
-        <name>AzRyТекущийОтветственныйРасширеннаяПодсказка</name>
-        <id>61</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <contextMenu>
-        <name>AzRyТекущийОтветственныйКонтекстноеМеню</name>
-        <id>60</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
@@ -792,7 +792,7 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <queryText>ВЫБРАТЬ
+      <queryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	СправочникСтруктурныеЕдиницы.Ссылка,
 	СправочникСтруктурныеЕдиницы.ПометкаУдаления,
 	СправочникСтруктурныеЕдиницы.Родитель,
@@ -802,7 +802,7 @@
 	СправочникСтруктурныеЕдиницы.ОрдерныйСклад,
 	СправочникСтруктурныеЕдиницы.Организация,
 	СправочникСтруктурныеЕдиницы.МОЛ,
-	СправочникСтруктурныеЕдиницы.ПодписьМОЛ КАК Подпись,
+	СправочникСтруктурныеЕдиницы.ПодписьМОЛ КАК ხელმოწერა,
 	СправочникСтруктурныеЕдиницы.РозничныйВидЦен,
 	СправочникСтруктурныеЕдиницы.СчетУчетаВРознице,
 	СправочникСтруктурныеЕдиницы.СчетУчетаНаценки,
@@ -852,9 +852,6 @@
 			ТОГДА ИСТИНА
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК ЭтоОсновной
-	// +++ { AzRy - [23.10.2024] - Jira: - Developer:გიორგი მამულაშვილი - Comment:
-	, СправочникСтруктурныеЕдиницы.AzRyТекущийОтветственный КАК AzRyТекущийОтветственный
-	// +++ } AzRy - [23.10.2024] - Jira: - Developer:გიორგი მამულაშვილი - Comment:	
 ИЗ
 	Справочник.СтруктурныеЕдиницы КАК СправочникСтруктурныеЕдиницы</queryText>
       <mainTable>Catalog.СтруктурныеЕдиницы</mainTable>

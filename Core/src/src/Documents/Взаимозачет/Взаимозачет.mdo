@@ -231,11 +231,16 @@
   <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
   <registerRecords>AccumulationRegister.ОплатаСчетовИЗаказов</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыНДФЛ</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыКассовыйМетод</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
+  <registerRecords>AccumulationRegister.Декларация</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыПоНалогам</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыСПенсионнымФондом</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПрочимиКонтрагентами</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыСПерсоналом</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
   <registerRecords>AccumulationRegister.РасчетыСПоставщиками</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходыОтложенные</registerRecords>
@@ -431,7 +436,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Контрагент-получатель</value>
+      <value>კონტრაგენტი-მიმღები</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1023,7 +1028,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Подпись руководителя</value>
+      <value>მმართველის ხელმოწერა</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1046,11 +1051,11 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Контактное лицо подписант</value>
+      <value>ხელმომწერის საკონტაქტო პირი</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>Контактное лицо подписант</value>
+      <value>Contact person signatory</value>
     </synonym>
     <type>
       <types>CatalogRef.КонтактныеЛица</types>
@@ -1073,7 +1078,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Корреспонденция (прочие)</value>
+      <value>კორესპონდენცია (სხვა)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1160,7 +1165,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Корреспонденция (прочие регл)</value>
+      <value>კორესპონდენცია (სხვა რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1187,6 +1192,194 @@
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Управленческий.РасчетыСРазнымиКредиторами</value>
     </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1e5b6c45-94d2-4870-b5b5-51eb704b10a1">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>თანამშრომელი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Исполнитель, по которому оформляется документ. Выбирается из справочника &quot;Сотрудники&quot; или &quot;Бригады&quot;</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>შემსრულებელი, რომელზეც ფორმდება დოკუმენტი. აირჩევა ცნობარ &quot;თანამშრომლებიდან&quot; ან &quot;ბრიგადებიდან&quot;</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Сотрудники.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cdf150d8-7493-4a07-8e02-66501f086de4">
+    <name>ВидУдержанияНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type of personal income tax withholding</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="eae848e4-e93c-4b37-9096-830e9c0f3cdc">
+    <name>ВидУдержанияПФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид удержания ПФ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საპენსიო ფონდის დაკავების ტიპი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type of pension fund withholding</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Тип</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="87d8cb9f-9d87-4616-8a4a-c55bd4e297e7">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ქვეგანყოფილება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Subdivision</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктурныеЕдиницы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>В данном поле указывается подразделение, по которому рассчитывается зарплата</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ამ ველში მიეთითება ის ქვეგანყოფილება, რომლის მიხედვით წარმოებს ხელფასის გათვლა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>This field indicates the unit is used to calculate the salary</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипСтруктурнойЕдиницы</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+      </value>
+    </choiceParameters>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.СтруктурныеЕдиницы.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b3284951-443e-4d50-8511-604aa0ccb065">
+    <name>ВидВыдачиНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид выдачи НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საშემოსავლოს განაცემის სახე</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Type issuing PIT</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d706805d-f2a7-4739-b2d5-8d5e59a18051">
+    <name>КатегорияПолучателейДоходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория получателей доходов</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შემოსავლის მიმღებთა კატეგორიები</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Category income recipients</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -2151,6 +2344,451 @@
         <name>Отбор.Договор</name>
         <field>Document.Взаимозачет.TabularSection.Кредитор.Attribute.Договор</field>
       </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="75073dae-5b2d-4aa4-83ed-797c675a88db">
+    <producedTypes>
+      <objectType typeId="b999a964-a32f-4029-be28-db98683214f3" valueTypeId="99720485-1db4-45d7-984c-af2a7dddab8c"/>
+      <rowType typeId="3b09af00-3aeb-4c30-91fd-4ead1bcfeb7c" valueTypeId="84aeba5f-17e7-4182-9c38-54bdd386f378"/>
+    </producedTypes>
+    <name>РасчетыСПерсоналом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчеты с персоналом</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ანგარიშსწორებები პერსონალთან</value>
+    </synonym>
+    <comment>Расчеты с персоналом</comment>
+    <toolTip>
+      <key>ru</key>
+      <value>Начальные остатки по расчетам с персоналом по заработной плате</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>საწყისი ნაშთები - პერსონალთან სახელფასო ანგარიშსწორება</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:NumberValue">
+        <value>0</value>
+      </fillValue>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4c529177-6231-429d-97f1-5807c385daaa">
+      <name>СтруктурнаяЕдиница</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ქვეგანყოფილება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Department</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Подразделение, в котором начислена зарплата</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ქვეგანყოფილება, სადაც დარიცხულია ხელფასი</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="84229d24-ece4-4245-bad0-71389fde8d91">
+      <name>СуммаВал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма (вал.)</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა (ვალუტა)</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Amount (currency)</value>
+      </synonym>
+      <comment>Сумма (вал.)</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма в валюте расчетов</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>თანხა ანგარიშსწორების ვალუტაში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="773e152b-35ec-436c-bd82-51337bdff38d">
+      <name>Валюта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Валюта</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვალუტა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Currency</value>
+      </synonym>
+      <comment>Валюта</comment>
+      <type>
+        <types>CatalogRef.Валюты</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Валюта расчетов с персоналом</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>პერსონალთან ანგარიშსწორების ვალუტა</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="95e6df29-899e-48da-8662-933a0cc2a6a8">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <comment>Сумма</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма расчетов в валюте управленческого учета</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ანგარიშსწორებათა თანხა მმართველობითი აღრიცხვის ვალუტაში</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bc67a4ad-6599-4b0b-969a-67501061661a">
+      <name>ПериодРегистрации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Период регистрации</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რეგისტრაციის პერიოდი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Registration period</value>
+      </synonym>
+      <comment>Период регистрации</comment>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Период, в котором начислена зарплата</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>პერიოდი, რომელშიც დარიცხულია ხელფასი</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="76510761-d2a9-4c26-9f3b-974981eb8651">
+      <name>Курс</name>
+      <synonym>
+        <key>ru</key>
+        <value>Курс</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კურსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Exchange rate</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>4</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Курс валюты расчетов с контрагентом</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>კონტრაგენტთან ანგარიშსწორების ვალუტის კურსი</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b3c441f8-a7b5-466b-aaa3-3fede77fdf9f">
+      <name>Кратность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Кратность</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ჯერადობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Multiplier</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Кратность валюты расчетов с контрагентом</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>კონტრაგენტთან ანგარიშსწორების ვალუტის ჯერადობა</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="21170c28-a91e-41de-b20a-a4b89ac55524">
+      <name>ВидУдержанияНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Type of personal income tax</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.Налог</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9d32fa0b-cbec-4ed8-8104-2dc922702bd6">
+      <name>СуммаНДФЛ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма НДФЛ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საშემოსავლოს თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Personal income tax amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма налога на добавленную стоимость по данной строке</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დამატებით ღირებულებაზე გადასახადის ოდენობა მოცემული სტრიქონის მიხედვით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Сумма налога на добавленную стоимость по данной строке</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="48f123d1-93e3-4269-bda2-2be07598e728">
+      <name>ВидУдержанияПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид удержания ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიო ფონდის დაკავების ტიპი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Type of pension fund</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыНачисленийИУдержаний</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Тип</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНачисленийИУдержаний.EnumValue.УдержаниеПФ</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cc543a0c-5d82-4227-9598-33358e749116">
+      <name>СуммаПФ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма ПФ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>საპენსიო თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Pension fund amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6a480424-354b-44a8-8205-8b2ce8425efb">
+      <name>Всего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სულ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Total</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле, автоматически заполняемое суммарной стоимостью услуг согласно настройкам цен и валют</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ველი, რომელიც ფასების და ვალუტის გამართვების შესაბამისად, ავტომატურად ივსება მომსახურებების ჯამური ღირებულებით</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Поле, автоматически заполняемое суммарной стоимостью услуг согласно настройкам цен и валют</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

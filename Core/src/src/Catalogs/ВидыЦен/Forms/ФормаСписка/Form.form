@@ -44,7 +44,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Список.Description</segments>
+              <segments>Список.Наименование</segments>
             </dataPath>
             <defaultItem>true</defaultItem>
             <extendedTooltip>
@@ -199,6 +199,10 @@
               <key>ka</key>
               <value>ტიპი (ავტოანგარიშსწორება)</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>Type (autocalculation)</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -298,6 +302,10 @@
             <key>ka</key>
             <value>შეიც. დღგ-ს</value>
           </title>
+          <title>
+            <key>en</key>
+            <value>On VAT</value>
+          </title>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -332,8 +340,16 @@
           <name>СформироватьЦены</name>
           <id>66</id>
           <title>
+            <key>ru</key>
+            <value>Сформировать Цены</value>
+          </title>
+          <title>
             <key>ka</key>
             <value>ფასის ფორმირება</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Generate Prices</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -343,6 +359,18 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Список.ФормированиеЦен</segments>
           </dataPath>
+          <toolTip>
+            <key>ru</key>
+            <value>Цено образование</value>
+          </toolTip>
+          <toolTip>
+            <key>ka</key>
+            <value>ფასების ფორმირება</value>
+          </toolTip>
+          <toolTip>
+            <key>en</key>
+            <value>Price formation</value>
+          </toolTip>
           <extendedTooltip>
             <name>СформироватьЦеныРасширеннаяПодсказка</name>
             <id>68</id>
@@ -527,7 +555,7 @@
           <enabled>true</enabled>
           <userVisible/>
           <dataPath xsi:type="form:DataPath">
-            <segments>Список.Code</segments>
+            <segments>Список.Код</segments>
           </dataPath>
           <extendedTooltip>
             <name>КодExtendedTooltip</name>
@@ -768,6 +796,10 @@
           <title>
             <key>ka</key>
             <value>დაფიქსირდა ცვლილებები, რომლებიც გავლენას ახდენს ამ სვეტის მიხედვით ფასების გამოთვლაზე. უახლოეს დროს მოხდება ფასების ავტომატური აქტუალიზება პრაის-ლისტის ამ სვეტის მიხედვით.</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Changes have been recorded that affect the calculation of prices for this column. In the near future, prices for this price list column will be automatically updated.</value>
           </title>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -1189,7 +1221,11 @@
         </title>
         <title>
           <key>ka</key>
-          <value>Фильтр по прайс-листам</value>
+          <value>ფილტრი პრაისლისტის მიხედვით</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Filter by price lists</value>
         </title>
         <toolTip>
           <key>ru</key>
@@ -1528,13 +1564,13 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>Список.Ref</segments>
-    </notDefaultUseAlwaysAttributes>
-    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.Авто</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.КоличествоПопытокСлужебный</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>Список.Ссылка</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>Список.ТипВидаЦен</segments>
@@ -1542,35 +1578,35 @@
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	СправочникВидыЦен.Ссылка,
-	СправочникВидыЦен.ПометкаУдаления,
-	СправочникВидыЦен.Код,
-	СправочникВидыЦен.Наименование,
-	СправочникВидыЦен.ВалютаЦены,
-	СправочникВидыЦен.ЦенаВключаетНДС,
-	СправочникВидыЦен.ПорядокОкругления,
-	СправочникВидыЦен.ОкруглятьВБольшуюСторону,
-	СправочникВидыЦен.ФорматЦены,
-	СправочникВидыЦен.БазовыйВидЦен,
-	СправочникВидыЦен.Процент,
-	СправочникВидыЦен.Комментарий,
-	СправочникВидыЦен.Формула,
-	СправочникВидыЦен.ИдентификаторФормул,
-	СправочникВидыЦен.Предопределенный,
-	СправочникВидыЦен.ИмяПредопределенныхДанных,
+	СправочникВидыЦен.Ссылка КАК Ссылка,
+	СправочникВидыЦен.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникВидыЦен.Код КАК Код,
+	СправочникВидыЦен.Наименование КАК Наименование,
+	СправочникВидыЦен.ВалютаЦены КАК ВалютаЦены,
+	СправочникВидыЦен.ЦенаВключаетНДС КАК ЦенаВключаетНДС,
+	СправочникВидыЦен.ПорядокОкругления КАК ПорядокОкругления,
+	СправочникВидыЦен.ОкруглятьВБольшуюСторону КАК ОкруглятьВБольшуюСторону,
+	СправочникВидыЦен.ФорматЦены КАК ФорматЦены,
+	СправочникВидыЦен.БазовыйВидЦен КАК БазовыйВидЦен,
+	СправочникВидыЦен.Процент КАК Процент,
+	СправочникВидыЦен.Комментарий КАК Комментарий,
+	СправочникВидыЦен.Формула КАК Формула,
+	СправочникВидыЦен.ИдентификаторФормул КАК ИдентификаторФормул,
+	СправочникВидыЦен.Предопределенный КАК Предопределенный,
+	СправочникВидыЦен.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
 	ВЫБОР
 		КОГДА СправочникВидыЦен.ТипВидаЦен = ЗНАЧЕНИЕ(Перечисление.ТипыВидовЦен.Статический)
-			ТОГДА &quot;Статическая&quot;
+			ТОГДА &quot;სტატისტიკური&quot;
 		КОГДА СправочникВидыЦен.ТипВидаЦен = ЗНАЧЕНИЕ(Перечисление.ТипыВидовЦен.ДинамическийПроцент)
-			ТОГДА &quot;Процент&quot;
+			ТОГДА &quot;პროცენტი&quot;
 		КОГДА СправочникВидыЦен.ТипВидаЦен = ЗНАЧЕНИЕ(Перечисление.ТипыВидовЦен.ДинамическийФормула)
-			ТОГДА &quot;Формула&quot;
+			ТОГДА &quot;ფორმულა&quot;
 	КОНЕЦ КАК ПредставлениеТипаВидаЦен,
 	СправочникВидыЦен.ТипВидаЦен КАК ТипВидаЦен,
 	СправочникВидыЦен.РассчитыватьАвтоматически КАК Авто,
 	НЕ СправочникВидыЦен.ЦеныАктуальны КАК ПоказатьПредупреждение,
-	СправочникВидыЦен.КоличествоПопытокСлужебный,
-	&quot;Сформировать цены&quot; КАК ФормированиеЦен
+	СправочникВидыЦен.КоличествоПопытокСлужебный КАК КоличествоПопытокСлужебный,
+	&quot;ფასების ფორმირება&quot; КАК ФормированиеЦен
 ИЗ
 	Справочник.ВидыЦен КАК СправочникВидыЦен</queryText>
       <mainTable>Catalog.ВидыЦен</mainTable>

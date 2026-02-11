@@ -167,6 +167,10 @@
             <segments>Объект.Date</segments>
           </dataPath>
           <titleLocation>Left</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ДатаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ДатаExtendedTooltip</name>
             <id>241</id>
@@ -1471,6 +1475,31 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
+            <items xsi:type="form:Button">
+              <name>ДокументыОснованияДобавитьПриходнаяНакрадная</name>
+              <id>419</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ДокументыОснованияДобавитьПриходнаяНакраднаяРасширеннаяПодсказка</name>
+                <id>420</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ДобавитьПриходнаяНакрадная</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1514,6 +1543,10 @@
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
         </autoCommandBar>
+        <handlers>
+          <event>AfterDeleteRow</event>
+          <name>ДокументыОснованияПослеУдаления</name>
+        </handlers>
         <searchStringAddition>
           <name>ДокументыОснованияСтрокаПоиска</name>
           <id>302</id>
@@ -4275,6 +4308,23 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ДатаИзмененаПользователем</name>
+    <title>
+      <key>ru</key>
+      <value>Дата изменена пользователем</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ЗаполнитьИзДокументов</name>
     <title>
@@ -4548,6 +4598,35 @@
     </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
+  <formCommands>
+    <name>ДобавитьПриходнаяНакрадная</name>
+    <title>
+      <key>ru</key>
+      <value>Приходная накрадная</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შემოსავლის ზედდებული</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Приходная накрадная</value>
+    </title>
+    <id>10</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить приходная накрадная</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьПриходнаяНакрадная</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
   <parameters>
     <name>User_ID</name>
     <valueType>
@@ -4686,6 +4765,10 @@
     <handlers>
       <event>BeforeWrite</event>
       <name>ПередЗаписью</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWriteAtServer</event>
+      <name>ПередЗаписьюНаСервере</name>
     </handlers>
     <repostOnWrite>true</repostOnWrite>
   </extInfo>

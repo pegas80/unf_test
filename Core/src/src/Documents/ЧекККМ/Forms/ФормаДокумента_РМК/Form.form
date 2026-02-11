@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Рабочее место кассира</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>მოლარის სამუშაო ადგილი</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Cashier workplace</value>
+  </title>
   <items xsi:type="form:FormField">
     <name>Консультант</name>
     <id>2409</id>
+    <title>
+      <key>ka</key>
+      <value>კონსულტანტი</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Consultant</value>
+    </title>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -134,21 +154,88 @@
         <items xsi:type="form:FormGroup">
           <name>КоманднаяПанельЧекККМПанель</name>
           <id>2358</id>
-          <items xsi:type="form:Button">
-            <name>ЗапасыПодбор</name>
-            <id>477</id>
-            <title>
-              <key>ka</key>
-              <value>შერჩევა</value>
-            </title>
+          <items xsi:type="form:FormGroup">
+            <name>ПодменюПодбор</name>
+            <id>2418</id>
+            <items xsi:type="form:Button">
+              <name>ЗапасыПодбор</name>
+              <id>477</id>
+              <title>
+                <key>ka</key>
+                <value>შერჩევა</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ЗапасыПодборРасширеннаяПодсказка</name>
+                <id>478</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.Подбор</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+              <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+            </items>
+            <items xsi:type="form:Button">
+              <name>ЗапасыПодборНовый</name>
+              <id>2422</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ЗапасыПодборНовыйРасширеннаяПодсказка</name>
+                <id>2423</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ЗапасыПодборНовый</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Подбор</value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>შერჩევა</value>
+            </title>
+            <title>
+              <key>en</key>
+              <value>Selection</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Подменю подбор</value>
+            </toolTip>
             <extendedTooltip>
-              <name>ЗапасыПодборРасширеннаяПодсказка</name>
-              <id>478</id>
+              <name>ПодменюПодборРасширеннаяПодсказка</name>
+              <id>2419</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -156,13 +243,10 @@
                 <horizontalAlign>Left</horizontalAlign>
               </extInfo>
             </extendedTooltip>
-            <commandName>Form.Command.Подбор</commandName>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
-            <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+            <type>Popup</type>
+            <extInfo xsi:type="form:PopupGroupExtInfo">
+              <representation>Auto</representation>
+            </extInfo>
           </items>
           <items xsi:type="form:Button">
             <name>ПечатьКопииНаФискальномРегистраторе1</name>
@@ -514,6 +598,10 @@
           <items xsi:type="form:Button">
             <name>Удалить</name>
             <id>1553</id>
+            <title>
+              <key>en</key>
+              <value>Delete</value>
+            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -543,6 +631,10 @@
             <items xsi:type="form:Button">
               <name>Добавить</name>
               <id>1555</id>
+              <title>
+                <key>en</key>
+                <value>Addition</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -569,6 +661,10 @@
             <items xsi:type="form:Button">
               <name>Скопировать</name>
               <id>1557</id>
+              <title>
+                <key>en</key>
+                <value>Copying</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -1141,6 +1237,14 @@
                       <items xsi:type="form:FormField">
                         <name>ЗапасыКоличество</name>
                         <id>1505</id>
+                        <title>
+                          <key>ka</key>
+                          <value>რაოდენობა</value>
+                        </title>
+                        <title>
+                          <key>en</key>
+                          <value>Quantity</value>
+                        </title>
                         <visible>true</visible>
                         <enabled>true</enabled>
                         <userVisible>
@@ -1682,6 +1786,10 @@
                       <items xsi:type="form:FormField">
                         <name>ЗапасыСумма</name>
                         <id>1524</id>
+                        <title>
+                          <key>en</key>
+                          <value>Amount</value>
+                        </title>
                         <visible>true</visible>
                         <enabled>true</enabled>
                         <userVisible>
@@ -1965,6 +2073,14 @@
                       <items xsi:type="form:FormField">
                         <name>ЗапасыКонсультант</name>
                         <id>2412</id>
+                        <title>
+                          <key>ka</key>
+                          <value>კონსულტანტი</value>
+                        </title>
+                        <title>
+                          <key>en</key>
+                          <value>Сonsultant</value>
+                        </title>
                         <visible>true</visible>
                         <enabled>true</enabled>
                         <userVisible>
@@ -2891,6 +3007,10 @@
                     <items xsi:type="form:Button">
                       <name>ПокзатьпродажиСмены</name>
                       <id>2403</id>
+                      <title>
+                        <key>en</key>
+                        <value>How shift sales</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -2965,11 +3085,11 @@
                     </toolTip>
                     <toolTip>
                       <key>ka</key>
-                      <value>ჯგუფი XZОтчеты</value>
+                      <value>ჯგუფი XZ ანგარიშგებები</value>
                     </toolTip>
                     <toolTip>
                       <key>en</key>
-                      <value>Group XZOtchety</value>
+                      <value>Group XZ reports</value>
                     </toolTip>
                     <extendedTooltip>
                       <name>ГруппаXZОтчетыРасширеннаяПодсказка</name>
@@ -3315,6 +3435,10 @@
                     <items xsi:type="form:Button">
                       <name>Обновить</name>
                       <id>1785</id>
+                      <title>
+                        <key>en</key>
+                        <value>Update</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -3367,6 +3491,10 @@
                     <items xsi:type="form:Button">
                       <name>ИзменитьФорму</name>
                       <id>1622</id>
+                      <title>
+                        <key>en</key>
+                        <value>Shape change</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -3393,6 +3521,10 @@
                     <items xsi:type="form:Button">
                       <name>НастройкаСписка</name>
                       <id>2396</id>
+                      <title>
+                        <key>en</key>
+                        <value>Making a list</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -3418,6 +3550,10 @@
                     <items xsi:type="form:Button">
                       <name>ВывестиСписок</name>
                       <id>1968</id>
+                      <title>
+                        <key>en</key>
+                        <value>Display in list</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -3443,6 +3579,10 @@
                     <items xsi:type="form:Button">
                       <name>Справка</name>
                       <id>1901</id>
+                      <title>
+                        <key>en</key>
+                        <value>Notice</value>
+                      </title>
                       <visible>true</visible>
                       <enabled>true</enabled>
                       <userVisible>
@@ -3744,7 +3884,7 @@
                     </title>
                     <title>
                       <key>en</key>
-                      <value>check number</value>
+                      <value>Check number</value>
                     </title>
                     <visible>true</visible>
                     <enabled>true</enabled>
@@ -3802,6 +3942,10 @@
                       <key>ka</key>
                       <value>თანხა</value>
                     </title>
+                    <title>
+                      <key>en</key>
+                      <value>Amount</value>
+                    </title>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -3844,6 +3988,10 @@
                     <title>
                       <key>ka</key>
                       <value>თარიღი</value>
+                    </title>
+                    <title>
+                      <key>en</key>
+                      <value>Date</value>
                     </title>
                     <visible>true</visible>
                     <enabled>true</enabled>
@@ -4670,11 +4818,11 @@
                   </toolTip>
                   <toolTip>
                     <key>ka</key>
-                    <value>ჯგუფი XZОтчеты</value>
+                    <value>ჯგუფი XZ ანგარიშგებები</value>
                   </toolTip>
                   <toolTip>
                     <key>en</key>
-                    <value>Group XZOtchety</value>
+                    <value>Group XZ reports</value>
                   </toolTip>
                   <extendedTooltip>
                     <name>ГруппаКассаИXZОтчетыРасширеннаяПодсказка</name>
@@ -6409,7 +6557,11 @@
               </title>
               <title>
                 <key>ka</key>
-                <value>ფასდაკლება:</value>
+                <value>  ფასდაკლება:</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>  Discount:</value>
               </title>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -6568,7 +6720,11 @@
               </title>
               <title>
                 <key>ka</key>
-                <value>გადახდისთვის</value>
+                <value>  გადახდისთვის</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>  For payment:</value>
               </title>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -6809,6 +6965,11 @@
           <title>
             <key>ka</key>
             <value>გადახდა
+(Ctrl+Enter)</value>
+          </title>
+          <title>
+            <key>en</key>
+            <value>Pay
 (Ctrl+Enter)</value>
           </title>
           <visible>true</visible>
@@ -8736,7 +8897,7 @@
         </toolTip>
         <toolTip>
           <key>ka</key>
-          <value>ჩეკები ККМИღილაკები</value>
+          <value>ჩეკები მსა ღილაკები</value>
         </toolTip>
         <toolTip>
           <key>en</key>
@@ -16567,6 +16728,14 @@
       <key>ru</key>
       <value>Тз запасы в памяти</value>
     </title>
+    <title>
+      <key>ka</key>
+      <value>Tk რეზერვები მეხსიერებაში</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Tk reserves in memory</value>
+    </title>
     <id>115</id>
     <valueType>
       <types>ValueTable</types>
@@ -16817,6 +16986,14 @@
       <title>
         <key>ru</key>
         <value>Всего</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯამი</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Sum</value>
       </title>
       <id>13</id>
       <valueType>
@@ -17094,7 +17271,40 @@
       <key>ru</key>
       <value>Использовать разные принтеры чеков для отделов</value>
     </title>
+    <title>
+      <key>ka</key>
+      <value>გამოიყენეთ სხვადასხვა ქვითრის პრინტერები განყოფილებებისთვის</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Use different receipt printers for departments</value>
+    </title>
     <id>116</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>АвтоматическиеСкидкиСразу</name>
+    <title>
+      <key>ru</key>
+      <value>Применение автоматических скидок при добавлении номенклатуры</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ავტომატური ფასდაკლებების გამოყენება ნომენკლატურის დამატების დროს</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>ავტომატური ფასდაკლებების გამოყენება ნომენკლატურის დამატების დროს</value>
+    </title>
+    <id>73</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -17185,7 +17395,7 @@
     </title>
     <title>
       <key>en</key>
-      <value>Поиск по штрихкоду</value>
+      <value>Search by barcode</value>
     </title>
     <id>5</id>
     <toolTip>
@@ -17580,6 +17790,10 @@
       <key>ka</key>
       <value>გადახდის
 მიღება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Pay</value>
     </title>
     <id>18</id>
     <toolTip>
@@ -18644,7 +18858,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>Выполнить сверку итогов на эквайринговом терминале</value>
+      <value>შედეგების შეჯერება შემსყიდველ ტერმინალში</value>
     </title>
     <title>
       <key>en</key>
@@ -18780,6 +18994,10 @@
 
 </value>
     </title>
+    <title>
+      <key>en</key>
+      <value>Creating sales invoice</value>
+    </title>
     <id>44</id>
     <toolTip>
       <key>ru</key>
@@ -18794,6 +19012,44 @@
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗапасыПодборНовый</name>
+    <title>
+      <key>ru</key>
+      <value>Подобрать (New)</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შერჩევა (New)</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Selection (New)</value>
+    </title>
+    <id>46</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Подобрать</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>შერჩევა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Подобрать</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗапасыПодборНовый</name>
+      </handler>
+    </action>
+    <modifiesStoredData>true</modifiesStoredData>
+    <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel>

@@ -98,6 +98,10 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>DataProcessor.ПомощникЗагрузкиБанковскойВыписки.Attribute.Организация</field>
+    </choiceParameterLinks>
   </attributes>
   <attributes uuid="3bdd974a-c31c-4108-a5de-8c5e19216fee">
     <name>ТипОбменаСИнтернетБанком</name>
@@ -172,6 +176,131 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
   </attributes>
+  <attributes uuid="970fb83c-cd88-4e30-a6b9-7cf636bf285b">
+    <name>СоздаватьДокументыАвнса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать документы авнса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e43b38f5-af45-432d-80aa-fff8c9a9841e">
+    <name>СоздаватьДокументыЗарплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать документы зарплаты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3747efda-fcc6-4f23-be38-9b8ad5ffde49">
+    <name>СоздаватьНеНайденныхКонтрагентов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать не найденных контрагентов</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="51c7b348-38be-4af3-a5f0-2f04a75c1ad5">
+    <name>СоздаватьБанковскиеСчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать банковские счета</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cad0c2f6-8619-4d2f-a445-1fbb970b729a">
+    <name>ПроводитьСозданныеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проводить созданные документы</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>შექმნილი დოკუმენტების გატარება</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1bd9d5c1-0529-49a9-aa0e-8274a83c3f0f">
+    <name>ЗаполнятьКоммиссиюВДокументеBOG</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнять коммиссию в документе</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Заполнять коммиссию в документе</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4b48ca83-9028-4d03-b7f9-93a2936e29cf">
+    <name>ЗаполнятьКоммиссиюВДокументеTBC</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнять коммиссию в документе</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Заполнять коммиссию в документе</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a1d33e5d-7300-46c3-a491-c89bad5da2c9">
+    <name>ДатаНачалаИспользованияНовыхIDПеремещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>Дата начала</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
   <tabularSections uuid="042d5fde-aa8b-4d2d-b91a-fa92caf2375e">
     <producedTypes>
       <objectType typeId="197cf75a-1f38-4f11-bc5d-9879a1dbdc70" valueTypeId="2afe5c1e-e880-4c94-b9d1-4b4eee891d83"/>
@@ -238,9 +367,7 @@
       </synonym>
       <type>
         <types>String</types>
-        <stringQualifiers>
-          <length>128</length>
-        </stringQualifiers>
+        <stringQualifiers/>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -262,9 +389,7 @@
       </synonym>
       <type>
         <types>String</types>
-        <stringQualifiers>
-          <length>128</length>
-        </stringQualifiers>
+        <stringQualifiers/>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -472,7 +597,7 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ოპ. კოდი</value>
+        <value>ოპერაციის ტიპი</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -493,6 +618,10 @@
       <synonym>
         <key>ru</key>
         <value>Ключ</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>გასაღები</value>
       </synonym>
       <synonym>
         <key>en</key>
@@ -547,6 +676,10 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.ТипОбменаСИнтернетБанком</name>
+        <field>DataProcessor.ПомощникЗагрузкиБанковскойВыписки.Attribute.ТипОбменаСИнтернетБанком</field>
+      </choiceParameterLinks>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="1f9887ab-8dc1-42f4-8795-acda9b1bd5cc">
@@ -565,6 +698,7 @@
       </synonym>
       <type>
         <types>DocumentRef.РасходСоСчета</types>
+        <types>DocumentRef.Конвертация</types>
         <types>DocumentRef.ПеремещениеДС</types>
         <types>DocumentRef.ПоступлениеНаСчет</types>
       </type>
@@ -867,15 +1001,11 @@
       <name>Подотчетник1С</name>
       <synonym>
         <key>ru</key>
-        <value>Подотчетник 1С</value>
+        <value>Сотрудник 1С</value>
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>ანგარიშვალდებული 1С</value>
-      </synonym>
-      <synonym>
-        <key>en</key>
-        <value>Podotchetnik 1C</value>
+        <value>თანამშრომელი 1С</value>
       </synonym>
       <type>
         <types>CatalogRef.Сотрудники</types>
@@ -938,6 +1068,213 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:StringValue"/>
     </attributes>
+    <attributes uuid="1bfde23a-a06a-4f12-bd0b-eef250fdc4c7">
+      <name>ДокументПроведен</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ проведен</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ee8ffffd-3635-44ea-a35e-62b154607ab6">
+      <name>ДополнительноеЗначение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дополнительное значение</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>დამატებით დანიშნულება</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Дополнительное значение</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="3f59fa66-e88b-487f-9d88-07fc41612020">
+      <name>ID_Новый</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID გაცვლის</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ID გაცვლის</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID გაცვლის</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>512</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="9800af7e-3b7a-4de5-8d57-eabd8fbdb5f3">
+      <name>Курс</name>
+      <synonym>
+        <key>ru</key>
+        <value>Курс</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კურსი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Rate</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a4372143-1bfb-432b-b877-4183621f8d04">
+      <name>СуммаКонвертации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма конвертации</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კონვერტაციის თანხა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Conversion amount</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="cd0c5c43-0c6a-4cca-a66e-42c6a18ba66b">
+      <name>СуммаДтНацВал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма дт нац вал</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა დტ ეროვნული ვალ</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Amount dt national curr</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2d2e1d19-f3d7-4caa-8ada-7b9b5a11cf33">
+      <name>СуммаКтНацВал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма кт нац вал</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>თანხა კტ ეროვნული ვალუტა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Amount ct national curr</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f5c1b589-cc7f-432b-bca6-528e38606d2c">
+      <name>TransactionID</name>
+      <synonym>
+        <key>ru</key>
+        <value>Transaction ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>Transaction ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Transaction ID</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="6dccb834-6941-4c6f-bf7c-fb881f696bef">
+      <name>Валюта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Валюта</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვალუტა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Currancy</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
   </tabularSections>
   <forms uuid="ee2315b6-a42f-4696-ad87-303eae5a11a5">
     <name>Форма</name>
@@ -948,6 +1285,15 @@
     <synonym>
       <key>en</key>
       <value>The form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="67101263-c502-4346-81fe-d1f181a9fef6">
+    <name>ФормаВариантаЗагрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма варианта загрузки</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

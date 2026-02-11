@@ -1238,6 +1238,31 @@
             <representation>Compact</representation>
           </extInfo>
         </items>
+        <items xsi:type="form:Button">
+          <name>СписокОтобранныеАвансыИДолгиЗаполнитьАвтоматически</name>
+          <id>212</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СписокОтобранныеАвансыИДолгиЗаполнитьАвтоматическиРасширеннаяПодсказка</name>
+            <id>213</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ЗаполнитьАвтоматически</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
         <horizontalAlign>Left</horizontalAlign>
         <autoFill>true</autoFill>
       </autoCommandBar>
@@ -2566,6 +2591,27 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>СуммаУчетаПолучатель</name>
+    <title>
+      <key>ru</key>
+      <value>Сумма учета получатель</value>
+    </title>
+    <id>24</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ОК</name>
     <title>
@@ -2676,6 +2722,43 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>Обновить</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗаполнитьАвтоматически</name>
+    <title>
+      <key>ru</key>
+      <value>Заполнить</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შევსება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Insert</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполнить автоматически</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ავტომატური შევსება</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>fill in automatically</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаполнитьАвтоматически</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>

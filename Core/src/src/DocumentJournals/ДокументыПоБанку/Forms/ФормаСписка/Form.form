@@ -113,6 +113,31 @@
             <representationInContextMenu>Auto</representationInContextMenu>
           </items>
           <items xsi:type="form:Button">
+            <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанк</name>
+            <id>995</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ФормаПоступлениеВозвратКредитаКонтрагентомБанкРасширеннаяПодсказка</name>
+              <id>996</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ПоступлениеВозвратКредитаКонтрагентомБанк</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
             <name>ФормаПоступлениеВозвратЗаймаСотрудникомБанк</name>
             <id>900</id>
             <visible>true</visible>
@@ -715,6 +740,31 @@
               </extInfo>
             </extendedTooltip>
             <commandName>Form.Command.РасходВозвратКредитаБанк</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>ФормаВыдачаКредитаБанк</name>
+            <id>993</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ФормаВыдачаКредитаБанкРасширеннаяПодсказка</name>
+              <id>994</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.РасходВыдачаКредитаБанк</commandName>
             <representation>Auto</representation>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -2232,6 +2282,42 @@
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
+              <name>Ссылка</name>
+              <id>997</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>БанковскиеВыписки.Ref</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>СсылкаРасширеннаяПодсказка</name>
+                <id>999</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>СсылкаКонтекстноеМеню</name>
+                <id>998</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>LabelField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:LabelFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
               <name>СписокАвтор</name>
               <id>669</id>
               <visible>true</visible>
@@ -3582,6 +3668,7 @@
                       <picture>CommonPicture.РазделАдминистрирование</picture>
                     </picture>
                     <hyperlink>true</hyperlink>
+                    <pictureSize>Proportionally</pictureSize>
                   </extInfo>
                 </items>
                 <visible>true</visible>
@@ -6789,10 +6876,6 @@
     </title>
     <id>15</id>
     <toolTip>
-      <key>ru</key>
-      <value>Расход выдача займа банк</value>
-    </toolTip>
-    <toolTip>
       <key>ka</key>
       <value>ხარჯი სესხის გაცემა ბანკი</value>
     </toolTip>
@@ -7154,7 +7237,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>От курьерской компании или почты</value>
+      <value>საკურიერო კომპანიიდან ან ფოსტიდან</value>
     </title>
     <title>
       <key>en</key>
@@ -7181,6 +7264,58 @@
         <name>ПоступлениеОтКурьерскойКомпанииПочты</name>
       </handler>
     </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>РасходВыдачаКредитаБанк</name>
+    <title>
+      <key>ru</key>
+      <value>Выдача кредита контрагенту</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კონტრაგენტზე სესხის გაცემა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Loan to a counterparty</value>
+    </title>
+    <id>27</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РасходВыдачаКредитаБанк</name>
+      </handler>
+    </action>
+    <functionalOptions>FunctionalOption.КредитыИЗаймы</functionalOptions>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПоступлениеВозвратКредитаКонтрагентомБанк</name>
+    <title>
+      <key>ru</key>
+      <value>Возврат кредита контрагентом</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კონტრაგენტის მიერ სესხის დაბრუნება</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Return of the loan by counterparty</value>
+    </title>
+    <id>28</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПоступлениеВозвратКредитаКонтрагентомБанк</name>
+      </handler>
+    </action>
+    <functionalOptions>FunctionalOption.КредитыИЗаймы</functionalOptions>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <commandInterface>

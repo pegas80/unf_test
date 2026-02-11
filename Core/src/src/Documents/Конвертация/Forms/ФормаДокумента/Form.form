@@ -504,6 +504,47 @@
               <textEdit>true</textEdit>
             </extInfo>
           </items>
+          <items xsi:type="form:FormField">
+            <name>КурсОтправительНацБанк</name>
+            <id>151</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.КурсОтправительНацБанк</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КурсОтправительНацБанкРасширеннаяПодсказка</name>
+              <id>153</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КурсОтправительНацБанкКонтекстноеМеню</name>
+              <id>152</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -550,6 +591,10 @@
             <dataPath xsi:type="form:DataPath">
               <segments>Объект.СуммаПолучено</segments>
             </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>СуммаПолученоПриИзменении</name>
+            </handlers>
             <extendedTooltip>
               <name>СуммаПолученоРасширеннаяПодсказка</name>
               <id>55</id>
@@ -663,6 +708,47 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>КурсПолучательНацБанк</name>
+            <id>154</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Объект.КурсПолучательНацБанк</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>КурсПолучательНацБанкРасширеннаяПодсказка</name>
+              <id>156</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КурсПолучательНацБанкКонтекстноеМеню</name>
+              <id>155</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
             <editMode>Enter</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -829,8 +915,10 @@
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>11</width>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
             <wrap>true</wrap>
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
@@ -1037,6 +1125,46 @@
         <contextMenu>
           <name>ПроектКонтекстноеМеню</name>
           <id>123</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>TransactionID</name>
+        <id>160</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Объект.TransactionID</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>TransactionIDРасширеннаяПодсказка</name>
+          <id>162</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>TransactionIDКонтекстноеМеню</name>
+          <id>161</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <type>InputField</type>
@@ -1312,7 +1440,7 @@
         </title>
         <title>
           <key>ka</key>
-          <value>Данные банка</value>
+          <value>ბანკის მონაცემები</value>
         </title>
         <toolTip>
           <key>ru</key>
@@ -1899,6 +2027,46 @@
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
   </items>
+  <items xsi:type="form:FormField">
+    <name>НазначениеПлатежа</name>
+    <id>157</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.НазначениеПлатежа</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>НазначениеПлатежаРасширеннаяПодсказка</name>
+      <id>159</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>НазначениеПлатежаКонтекстноеМеню</name>
+      <id>158</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+    </extInfo>
+  </items>
   <items xsi:type="form:FormGroup">
     <name>ГруппаДополнительно</name>
     <id>96</id>
@@ -2132,7 +2300,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>Номер документа</value>
+      <value>დოკუმენტის ნომერი</value>
     </title>
     <id>7</id>
     <valueType>
@@ -2154,7 +2322,7 @@
     </title>
     <title>
       <key>ka</key>
-      <value>Статус докуммента</value>
+      <value>დოკუმენტის სტატუსი</value>
     </title>
     <id>8</id>
     <valueType>
@@ -2210,6 +2378,10 @@
     <title>
       <key>ru</key>
       <value>Обновить информацию в по интернет банку</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>განაახლეთ ინფორმაცია ინტერნეტბანკის მიხედვით</value>
     </title>
     <id>1</id>
     <toolTip>

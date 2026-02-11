@@ -16,6 +16,8 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.РетроБонуси.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.РетроБонуси.Form.ФормаСписка</defaultListForm>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Active</name>
@@ -49,7 +51,7 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
-  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
   <mainFilterOnPeriod>true</mainFilterOnPeriod>
   <dataLockControlMode>Managed</dataLockControlMode>
   <resources uuid="852270cc-ab11-49ea-90bc-22360b7d11e8">
@@ -82,9 +84,10 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <choiceParameterLinks>
       <name>Отбор.Владелец</name>
-      <field>0:d4d4fede-5ced-46bd-8746-105ea486eb93</field>
+      <field>InformationRegister.РетроБонуси.Dimension.Контрагент</field>
     </choiceParameterLinks>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -150,16 +153,17 @@
     <name>Процент</name>
     <synonym>
       <key>ru</key>
-      <value>Процент</value>
+      <value>Процент ретробонуса</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>პროცენტი</value>
+      <value>რეტრობონუსის %</value>
     </synonym>
     <type>
       <types>Number</types>
       <numberQualifiers>
         <precision>10</precision>
+        <scale>2</scale>
         <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
@@ -191,6 +195,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:StringValue"/>
@@ -209,6 +214,7 @@
       <types>Number</types>
       <numberQualifiers>
         <precision>10</precision>
+        <scale>2</scale>
         <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
@@ -234,17 +240,19 @@
         <length>100</length>
       </stringQualifiers>
     </type>
+    <passwordMode>true</passwordMode>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
   </resources>
   <resources uuid="07c7f41e-5535-4e73-9161-3fccc8de8723">
-    <name>АктивностьСправочника</name>
+    <name>АктивностьРетроБонуса</name>
     <synonym>
       <key>ru</key>
-      <value>Активность справочника</value>
+      <value>Активность ретро бонуса</value>
     </synonym>
     <synonym>
       <key>ka</key>
@@ -276,6 +284,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
@@ -296,9 +305,41 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
     <mainFilter>true</mainFilter>
   </dimensions>
+  <forms uuid="6b68a8a9-c3e8-4d2f-80ed-6f0bb7e15c63">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="165ad4db-1aaf-48fb-86c7-5bffabf170bc">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7a6c97c2-03c9-403f-9cdb-b27d3e77f853">
+    <name>ФормаЗагрузкеИзТабличногоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма загрузке из табличного документа</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>ცხრილური დოკუმენტიდან ჩატვირთვა</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:InformationRegister>

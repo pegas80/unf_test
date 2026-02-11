@@ -18,8 +18,7 @@
   </synonym>
   <synonym>
     <key>en</key>
-    <value>
-Write-off stocks</value>
+    <value>Write-off stocks</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Document.СписаниеЗапасов.StandardAttribute.Number</inputByString>
@@ -207,8 +206,7 @@ Write-off stocks</value>
   </listPresentation>
   <listPresentation>
     <key>en</key>
-    <value>
-Write-off of stocks</value>
+    <value>Write-off of stocks</value>
   </listPresentation>
   <explanation>
     <key>ru</key>
@@ -237,12 +235,14 @@ Write-off of stocks</value>
   <registerRecords>AccumulationRegister.ЗапасыВРазрезеГТД</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>InformationRegister.СерийныеНомераГарантии</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="54061a7b-b591-4e85-b8ee-bfdb8a04099c">
@@ -272,7 +272,7 @@ Write-off of stocks</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Организация, в рамках которой списываются запасы</value>
+      <value>Organization within which inventories are written off</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -311,7 +311,7 @@ Write-off of stocks</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Склад или производственное подразделение</value>
+      <value>Warehouse or production unit</value>
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -500,8 +500,7 @@ Warehouse Cell</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>
-Commentary</value>
+      <value>Commentary</value>
     </synonym>
     <type>
       <types>String</types>
@@ -683,7 +682,7 @@ Commentary</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Корреспонденция (регл)</value>
+      <value>კორესპონდენცია (რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -707,6 +706,20 @@ Commentary</value>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипСчета</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСчетов.EnumValue.ГруппаСчетов</value>
+        </values>
+      </value>
+    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Хозрасчетный.EmptyRef</value>
     </fillValue>
@@ -721,7 +734,7 @@ Commentary</value>
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Подразделение</value>
+      <value>ქვეგანყოფილება</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -953,7 +966,7 @@ Selection Form</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Списываемые запасы</value>
+      <value>Write-off inventories</value>
     </toolTip>
     <standardAttributes>
       <dataHistory>Use</dataHistory>
@@ -1424,7 +1437,7 @@ Communication key</value>
     </toolTip>
     <toolTip>
       <key>en</key>
-      <value>Серии принимаемых товаров</value>
+      <value>Series of accepted products</value>
     </toolTip>
     <standardAttributes>
       <dataHistory>Use</dataHistory>
@@ -1461,7 +1474,7 @@ Communication key</value>
       </toolTip>
       <toolTip>
         <key>en</key>
-        <value>Серия товаров</value>
+        <value>Product series</value>
       </toolTip>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -1670,8 +1683,7 @@ Communication key</value>
     </synonym>
     <synonym>
       <key>en</key>
-      <value>
-Write-off stocks</value>
+      <value>Write-off stocks</value>
     </synonym>
     <group>FormNavigationPanelSeeAlso</group>
     <parameterUseMode>Multiple</parameterUseMode>

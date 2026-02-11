@@ -175,6 +175,18 @@
 При вводе начальных остатков эти документы также должны быть введены.
 При установке этого флага документы расчетов с контрагентами будут сформированы автоматически.</value>
             </title>
+            <title>
+              <key>en</key>
+              <value>&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>In the configuration, mutual settlements with counterparties are always carried out according to settlement documents.&lt;/>&lt;/>&lt;/>&lt;/>
+&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>When entering opening balances, these documents must also be entered.&lt;/>&lt;/>&lt;/>&lt;/>
+&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>When this flag is selected, settlement documents with counterparties will be generated automatically.&lt;/>&lt;/>&lt;/>&lt;/></value>
+            </title>
+            <title>
+              <key>ka</key>
+              <value>&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>კონფიგურაციაში, კონტრაგენტებთან ურთიერთშეთანხმება ყოველთვის ხორციელდება ანგარიშსწორების დოკუმენტების მიხედვით.&lt;/>&lt;/>&lt;/>&lt;/>
+&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>&lt;bgcolor #ffffff>საწყისი&lt;/> ნაშთების შეყვანისას ეს დოკუმენტებიც უნდა იყოს შეტანილი.&lt;/>&lt;/>&lt;/>&lt;/>
+&lt;font Almarai>&lt;fontsize 8>&lt;bgcolor #ffffff>&lt;color #333333>ამ &lt;bgcolor #ffffff>ალმის&lt;/> არჩევისას, კონტრაგენტებთან ანგარიშსწორების დოკუმენტები ავტომატურად დაგენერირდება.&lt;/>&lt;/>&lt;/>&lt;/></value>
+            </title>
             <formatted>true</formatted>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -767,6 +779,46 @@
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
+              <name>ВнеоборотныеАктивыПроект</name>
+              <id>894</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.ВнеоборотныеАктивы.Проект</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>ВнеоборотныеАктивыПроектРасширеннаяПодсказка</name>
+                <id>896</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ВнеоборотныеАктивыПроектКонтекстноеМеню</name>
+                <id>895</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
               <name>ВнеоборотныеАктивыТекущееСостояниеВнеоборотногоАктива</name>
               <id>32</id>
               <title>
@@ -822,6 +874,18 @@
             <items xsi:type="form:FormField">
               <name>ВнеоборотныеАктивыДатаВводаВЭксплуатацию</name>
               <id>855</id>
+              <title>
+                <key>ru</key>
+                <value>Дата Ввода В Эксплуатацию</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ექსპლუატაციაში შესვლის თარიღი</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Date of Entry into Operation</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -910,6 +974,18 @@
             <items xsi:type="form:FormField">
               <name>ВнеоборотныеАктивыКоличествоМесяцевВЭксплуатации</name>
               <id>858</id>
+              <title>
+                <key>ru</key>
+                <value>Количество Месяцев В Эксплуатации</value>
+              </title>
+              <title>
+                <key>ka</key>
+                <value>ფუნქციონირების თვეების რაოდენობა</value>
+              </title>
+              <title>
+                <key>en</key>
+                <value>Number of Months in Operation</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -1608,7 +1684,7 @@
           </title>
           <title>
             <key>ka</key>
-            <value>გარებრუნვის აქტივები</value>
+            <value>ძირითადი საშუალებები</value>
           </title>
           <title>
             <key>en</key>
@@ -1943,6 +2019,46 @@
               <extInfo xsi:type="form:InputFieldExtInfo">
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>ЗапасыСрокГодности</name>
+              <id>882</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.Запасы.СрокГодности</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>ЗапасыСрокГодностиРасширеннаяПодсказка</name>
+                <id>884</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ЗапасыСрокГодностиКонтекстноеМеню</name>
+                <id>883</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
                 <textEdit>true</textEdit>
@@ -2822,6 +2938,50 @@
               <contextMenu>
                 <name>ПрямыеЗатратыПроектКонтекстноеМеню</name>
                 <id>868</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>ПрямыеЗатратыНоменклатура</name>
+              <id>888</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.ПрямыеЗатраты.Номенклатура</segments>
+              </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>ПрямыеЗатратыНоменклатураПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>ПрямыеЗатратыНоменклатураРасширеннаяПодсказка</name>
+                <id>890</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ПрямыеЗатратыНоменклатураКонтекстноеМеню</name>
+                <id>889</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -7840,6 +8000,46 @@
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
+              <name>РасчетыСПерсоналомПроект</name>
+              <id>891</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.РасчетыСПерсоналом.Проект</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>РасчетыСПерсоналомПроектРасширеннаяПодсказка</name>
+                <id>893</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>РасчетыСПерсоналомПроектКонтекстноеМеню</name>
+                <id>892</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
               <name>РасчетыСПерсоналомСтруктурнаяЕдиница</name>
               <id>206</id>
               <visible>true</visible>
@@ -10285,6 +10485,89 @@
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
+              <name>КредитыИЗаймиВидДоговора</name>
+              <id>885</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.КредитыИЗайми.ВидДоговора</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>КредитыИЗаймиВидДоговораРасширеннаяПодсказка</name>
+                <id>887</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>КредитыИЗаймиВидДоговораКонтекстноеМеню</name>
+                <id>886</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>LabelField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:LabelFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <font xsi:type="core:FontRef">
+                  <font>Style.NormalTextFont</font>
+                  <bold>false</bold>
+                  <italic>true</italic>
+                  <underline>false</underline>
+                  <strikeout>false</strikeout>
+                </font>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>КредитыИЗаймиПроект</name>
+              <id>897</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Объект.КредитыИЗайми.Проект</segments>
+              </dataPath>
+              <extendedTooltip>
+                <name>КредитыИЗаймиПроектРасширеннаяПодсказка</name>
+                <id>899</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>КредитыИЗаймиПроектКонтекстноеМеню</name>
+                <id>898</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
               <name>КредитыИЗаймиКонтрагент</name>
               <id>829</id>
               <visible>true</visible>
@@ -10459,6 +10742,10 @@
               <dataPath xsi:type="form:DataPath">
                 <segments>Объект.КредитыИЗайми.Проценты</segments>
               </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>КредитыИЗаймиПроцентыПриИзменении</name>
+              </handlers>
               <extendedTooltip>
                 <name>КредитыИЗаймиПроцентыРасширеннаяПодсказка</name>
                 <id>843</id>
@@ -11231,6 +11518,36 @@
     <savedData>true</savedData>
     <additionalColumns>
       <tablePath xsi:type="form:DataPath">
+        <segments>Объект.КредитыИЗайми</segments>
+      </tablePath>
+      <columns>
+        <name>ВидДоговора</name>
+        <title>
+          <key>ru</key>
+          <value>Вид договора</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>ხელშეკრულების ტიპი</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Type of contract</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>EnumRef.ВидыДоговоровКредитаИЗайма</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
         <segments>Объект.РасчетыСПокупателями</segments>
       </tablePath>
       <columns>
@@ -11930,8 +12247,12 @@
       <value>Использовать только регламентированный план счетов</value>
     </title>
     <title>
+      <key>ka</key>
+      <value>გამოიყენეთ მხოლოდ რეგულირებული ანგარიშები</value>
+    </title>
+    <title>
       <key>en</key>
-      <value>Использовать только регламентированный план счетов</value>
+      <value>Use only the regulated chart of accounts</value>
     </title>
     <id>16</id>
     <valueType>
@@ -11949,6 +12270,14 @@
     <title>
       <key>ru</key>
       <value>Национальная валюта</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ეროვნული ვალუტა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>National currency</value>
     </title>
     <id>17</id>
     <valueType>

@@ -237,12 +237,14 @@
   <registerRecords>AccumulationRegister.ЗапасыВРазрезеГТД</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыКРасходуСоСкладов</registerRecords>
   <registerRecords>AccumulationRegister.ЗапасыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.ЗапасыВВалюте</registerRecords>
   <registerRecords>AccumulationRegister.СерийныеНомера</registerRecords>
   <registerRecords>AccountingRegister.Управленческий</registerRecords>
   <registerRecords>AccumulationRegister.Запасы</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>InformationRegister.СерийныеНомераГарантии</registerRecords>
   <registerRecords>AccumulationRegister.ДоходыИРасходы</registerRecords>
+  <registerRecords>AccumulationRegister.КонтрольСроковГодностиТовара</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="097bb8f6-1f37-4cde-a7b6-f15272ee9511">
@@ -679,7 +681,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Приходовать товары по себестоимости списания</value>
+      <value>საქონლის მიღება ჩამოწერის თვითღირებულებით</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -867,7 +869,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>ჩამოწერის კორესპონდენცია (регл)</value>
+      <value>ჩამოწერის კორესპონდენცია (რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -916,7 +918,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>შემოსავალში აყვანის კორესპონდენცია (регл)</value>
+      <value>შემოსავალში აყვანის კორესპონდენცია (რეგლ)</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -965,7 +967,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>Подразделение</value>
+      <value>ქვეგანყოფილება</value>
     </synonym>
     <synonym>
       <key>en</key>
@@ -1769,14 +1771,39 @@
       </synonym>
       <synonym>
         <key>ka</key>
-        <value>პროექტი</value>
+        <value>პროექტი მიმღები</value>
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Project</value>
+        <value>Project to</value>
       </synonym>
       <type>
         <types>CatalogRef.Проекты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5e83bfde-846e-4dfb-af0a-c4a8e58758b4">
+      <name>СрокГодности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Срок годности</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ვარგისიანობის ვადა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Expiration date</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -1869,7 +1896,7 @@
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Ключ связи</value>
+        <value>Link Key</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -1969,7 +1996,7 @@
       </synonym>
       <synonym>
         <key>en</key>
-        <value>Ключ связи</value>
+        <value>Link Key</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -1992,7 +2019,7 @@
     </synonym>
     <synonym>
       <key>ka</key>
-      <value>ПФ MXL Акт о пересортице товаров</value>
+      <value>ПФ MXL აქტი საქონლის გადახარისხების შესახებ</value>
     </synonym>
     <synonym>
       <key>en</key>

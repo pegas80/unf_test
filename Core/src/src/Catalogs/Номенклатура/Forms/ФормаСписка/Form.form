@@ -2598,6 +2598,10 @@
             <items xsi:type="form:FormField">
               <name>НаименованиеПолное</name>
               <id>1179</id>
+              <title>
+                <key>ka</key>
+                <value>დასაბეჭდი სახელწოდება</value>
+              </title>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible/>
@@ -7151,6 +7155,44 @@
                 <showInFooter>true</showInFooter>
                 <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
               </items>
+              <items xsi:type="form:FormField">
+                <name>ОтборТипЛицензия</name>
+                <id>1198</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>ОтборТипЛицензия</segments>
+                </dataPath>
+                <titleLocation>Right</titleLocation>
+                <handlers>
+                  <event>OnChange</event>
+                  <name>ОтборТипПриИзменении</name>
+                </handlers>
+                <extendedTooltip>
+                  <name>ОтборТипЛицензияРасширеннаяПодсказка</name>
+                  <id>1200</id>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ОтборТипЛицензияКонтекстноеМеню</name>
+                  <id>1199</id>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>CheckBoxField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+              </items>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -10744,6 +10786,31 @@
     <settingsSavedData xsi:type="form:DataPath">
       <segments>ПоказыватьВсеПодчиненные</segments>
     </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>ОтборТипЛицензия</name>
+    <title>
+      <key>ru</key>
+      <value>Лицензия</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ლიცენზია</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>ლიცენზია</value>
+    </title>
+    <id>77</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>ИзменитьВыделенные</name>

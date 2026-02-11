@@ -81,6 +81,8 @@
     <multipleValuesOrderField>-1</multipleValuesOrderField>
   </characteristics>
   <basedOn>Catalog.Сотрудники</basedOn>
+  <basedOn>Document.РасходнаяНакладная</basedOn>
+  <basedOn>Document.ЗаказПокупателя</basedOn>
   <createOnInput>Use</createOnInput>
   <help>
     <pages>
@@ -124,7 +126,10 @@
   <realTimePosting>Deny</realTimePosting>
   <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
   <registerRecords>AccountingRegister.AzRyХозрасчетныйUSD</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыСПокупателями</registerRecords>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>InformationRegister.ГрафикПогашенияКредитовИЗаймов</registerRecords>
+  <registerRecords>AccumulationRegister.РасчетыПоКредитамИЗаймам</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="1cadd3ea-0270-492e-97a1-00dffa8ba7cf">
@@ -237,12 +242,34 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
-    <choiceParameters>
-      <name>Отбор.ПрочиеОтношения</name>
-      <value xsi:type="core:BooleanValue">
-        <value>true</value>
-      </value>
-    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c8244fde-adff-4048-9599-35811f27b554">
+    <name>ДокументРеализации</name>
+    <synonym>
+      <key>ru</key>
+      <value>По накладной</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>გაყიდვის დოკუმენტი</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Контрагент</name>
+      <field>Document.ДоговорКредитаИЗайма.Attribute.Контрагент</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Отбор.Организация</name>
+      <field>Document.ДоговорКредитаИЗайма.Attribute.Организация</field>
+    </choiceParameterLinks>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -1050,20 +1077,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
-    <choiceParameters>
-      <name>Отбор.ТипСчета</name>
-      <value xsi:type="core:FixedArrayValue">
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПроцентыПоКредитам</value>
-        </values>
-      </value>
-    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Управленческий.РасчетыПоКраткосрочнымКредитамИЗаймам</value>
     </fillValue>
@@ -1090,23 +1103,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
-    <choiceParameters>
-      <name>Отбор.ТипСчета</name>
-      <value xsi:type="core:FixedArrayValue">
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПроцентыПоКредитам</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПроцентыПоКредитам</value>
-        </values>
-      </value>
-    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Управленческий.РасчетыПоКраткосрочнымКредитамИЗаймам</value>
     </fillValue>
@@ -1133,20 +1129,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
-    <choiceParameters>
-      <name>Отбор.ТипСчета</name>
-      <value xsi:type="core:FixedArrayValue">
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПроцентыПоКредитам</value>
-        </values>
-      </value>
-    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Управленческий.РасчетыПоКраткосрочнымКредитамИЗаймам</value>
     </fillValue>
@@ -1169,38 +1151,6 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
-    <choiceParameters>
-      <name>Отбор.ТипСчета</name>
-      <value xsi:type="core:FixedArrayValue">
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПроцентыПоКредитам</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ДолгосрочныеОбязательства</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.КредитыИЗаймы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.Расходы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПрочиеРасходы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.НезавершенноеПроизводство</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.КосвенныеЗатраты</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.ПрочиеДоходы</value>
-        </values>
-        <values xsi:type="core:ReferenceValue">
-          <value>Enum.ТипыСчетов.EnumValue.Доходы</value>
-        </values>
-      </value>
-    </choiceParameters>
     <fillValue xsi:type="core:ReferenceValue">
       <value>ChartOfAccounts.Управленческий.ПроцентыПоКредитам</value>
     </fillValue>
@@ -1319,6 +1269,29 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6f1b246f-a091-4d23-a958-8ceb4cda2bcb">
+    <name>НачислитьПроценты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начислить проценты</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>პროცენტის დარიცხვა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Accrue interest</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -1567,6 +1540,28 @@
       <type>
         <types>String</types>
         <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="826f21ca-78f3-4ab5-a18e-79684cdf884c">
+      <name>Проект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Проект</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პროექტი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Project</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Проекты</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

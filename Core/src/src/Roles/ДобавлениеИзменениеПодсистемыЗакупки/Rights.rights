@@ -407,14 +407,27 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ДополнительныеРасходы","Чтение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ДополнительныеРасходы","Добавление","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ДополнительныеРасходы","Изменение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -470,6 +483,14 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениямРасширенный( "РегистрСведений.ЦеныНоменклатуры","Чтение","",
+"ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК Т1
+ПО Т.ВидЦен = Т1.Ссылка",
+"",
+"ВидыЦен","Т1.Ссылка","",
+"","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -575,14 +596,26 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.СписаниеТопливаЗапасов","Чтение","",
+"СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.СписаниеТопливаЗапасов","Добавление","",
+"СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.СписаниеТопливаЗапасов","Изменение","",
+"СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Delete</name>
@@ -1337,6 +1370,21 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.БалыЛояльности</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ПрайсЛисты.TabularSection.ПредставлениеНоменклатуры.Attribute.ПараметрРасшифровки</name>
 		<right>
 			<name>View</name>
@@ -1388,6 +1436,10 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям( "Документ.ЗаказПокупателя","Чтение","",
+"ГруппыКонтрагентов","Контрагент", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -2024,14 +2076,26 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ПриходнаяНакладная","Чтение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ПриходнаяНакладная","Добавление","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.ПриходнаяНакладная","Изменение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -2553,6 +2617,33 @@
 		</right>
 	</object>
 	<object>
+		<name>Configuration.УправлениеНебольшойФирмой</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ПрайсЛистыПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи.Attribute.Отпечаток</name>
 		<right>
 			<name>View</name>
@@ -2575,14 +2666,26 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.РасходнаяНакладная","Чтение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.РасходнаяНакладная","Добавление","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям("Документ.РасходнаяНакладная","Изменение","",
+"ГруппыКонтрагентов","Контрагент", "СтруктурныеЕдиницы","СтруктурнаяЕдиница", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -2830,6 +2933,17 @@
 	</object>
 	<object>
 		<name>Subsystem.ЗапасыИЗакупки.Subsystem.Планирование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ЗапасыПоПроектам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
