@@ -1633,6 +1633,8 @@
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
   <roles>Role.ЧтениеФизическихЛиц</roles>
   <roles>Role.ЧтениеЭД</roles>
+  <roles>Role.ИспользованиеОтчетовРаботыСЦенами</roles>
+  <roles>Role.ЗапретДоступаКСправочникуСотрудники</roles>
   <roles>Role.AzRyДобавлениеИзменениеAzRyСправочников</roles>
   <roles>Role.AzRyУдаление</roles>
   <roles>Role.AzRyДобавлениеИзменениеПодсистемыРозничныеПродажи</roles>
@@ -3556,6 +3558,7 @@
   <functionalOptions>FunctionalOption.РасчетАрендыКвартир</functionalOptions>
   <functionalOptions>FunctionalOption.РезервированиеЗапасов_new</functionalOptions>
   <functionalOptions>FunctionalOption.ФункциональнаяОпцияУчетЛицензий</functionalOptions>
+  <functionalOptions>FunctionalOption.ФункциональнаяОпцияИспользованиеШтрихкодовВВнеоборотныхАктивах</functionalOptions>
   <functionalOptionsParameters>FunctionalOptionsParameter.Организация</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.Пользователь</functionalOptionsParameters>
   <functionalOptionsParameters>FunctionalOptionsParameter.ТипВерсионируемогоОбъекта</functionalOptionsParameters>
@@ -4385,6 +4388,9 @@
   <constants>Constant.УчетЛицензий</constants>
   <constants>Constant.СозданиеДокументаЧекКкмНаОснованииДокументаСборкаЗапасов</constants>
   <constants>Constant.РассчитыватьРучнуюСкидкуСоСкидочнойЦены</constants>
+  <constants>Constant.ПереоценкаВозвратаАванса</constants>
+  <constants>Constant.ОтключениеУсредненияСебестоимостиВЗакритииМесяца</constants>
+  <constants>Constant.ИспользованиеШтрихкодовВВнеоборотныхАктивах</constants>
   <constants>Constant.AzRyПенсионныйНалогПроцент</constants>
   <constants>Constant.AzRyJiraНаименованиеИнтернетРесурса</constants>
   <constants>Constant.AzRyПроверкаЗаполнениеТаблицыФактурыАвансовОтключена</constants>
@@ -4643,6 +4649,8 @@
   <commonForms>CommonForm.КонтролироватьОстаткиПриПроведении</commonForms>
   <commonForms>CommonForm.ФормаНастройкиTransLinkRESTAPIЭквайринговыеТерминалы</commonForms>
   <commonForms>CommonForm.ФормаНастройкиTransLinkRESTAPIсинхЭквайринговыеТерминалы</commonForms>
+  <commonForms>CommonForm.ФормаПодбораВА</commonForms>
+  <commonForms>CommonForm.Форма_ОтключениеУсредненияСебестоимостиВЗакритииМесяца</commonForms>
   <catalogs>Catalog.АвансовыйОтчетПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.АвтоматическиеСкидки</catalogs>
   <catalogs>Catalog.АктВыполненныхРаботПрисоединенныеФайлы</catalogs>
@@ -4961,6 +4969,7 @@
   <catalogs>Catalog.КадастровыеКоды</catalogs>
   <catalogs>Catalog.Регион</catalogs>
   <catalogs>Catalog.ВидыОплатУслуг</catalogs>
+  <catalogs>Catalog.ИнвентаризацияОсновныхСредствПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.AzRyНаименованияПоставщиков</catalogs>
   <catalogs>Catalog.AzRytmpНоменклатурныеГруппы</catalogs>
   <catalogs>Catalog.AzRyСпецификацииПриоритет</catalogs>
@@ -5139,6 +5148,7 @@
   <documents>Document.ОтпускаСотрудников</documents>
   <documents>Document.ДругиеВидыОтсутствия</documents>
   <documents>Document.СписаниеБалловЛояльности</documents>
+  <documents>Document.ИнвентаризацияОсновныхСредств</documents>
   <documents>Document.AzRyКонвертацияВалюты</documents>
   <documents>Document.AzRyВременноеПередачаЗапасов</documents>
   <documents>Document.AzRyИнвентаризацияИмущество</documents>
@@ -5617,6 +5627,8 @@
   <enums>Enum.AzRyTempoObjects</enums>
   <enums>Enum.AzRyВидыОперацийПередачаИмуществаСотруднику</enums>
   <enums>Enum.AzRyСтатусНапоминания</enums>
+  <enums>Enum.ВременноеХранилищеДенежныхСредств</enums>
+  <enums>Enum.СпособУчетаСчетовФактур</enums>
   <reports>Report.АнализДоступности</reports>
   <reports>Report.АвтоматическиеСкидки</reports>
   <reports>Report.ABCXYZАнализПродаж</reports>
@@ -5862,6 +5874,7 @@
   <reports>Report.AzRyОборотноСальдоваяВедомостьРеглUSD</reports>
   <reports>Report.AzRyКарточкаСчетаUSD</reports>
   <reports>Report.AzRyИсторияЗарплатыСотрудника</reports>
+  <reports>Report.ИзлишкиИНедостачиОсновныхСредств</reports>
   <dataProcessors>DataProcessor.Marani_ЗаполнитьТабельПоДаннымТурникета</dataProcessors>
   <dataProcessors>DataProcessor.БазовыеФункцииИнтернетПоддержки</dataProcessors>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
@@ -6066,6 +6079,7 @@
   <dataProcessors>DataProcessor.AzRyРасходСоСчета_заменаДатыДокумента</dataProcessors>
   <dataProcessors>DataProcessor.AzRyПоискИЗаменаЗначений_8_3</dataProcessors>
   <dataProcessors>DataProcessor.AzRyИзменениеДатыДокументов</dataProcessors>
+  <dataProcessors>DataProcessor.ГрупповаяВыгрузкаСчетовФактур</dataProcessors>
   <informationRegisters>InformationRegister.УдалитьАдресныйКлассификатор</informationRegisters>
   <informationRegisters>InformationRegister.АктивированныеАгентыРезервногоКопирования</informationRegisters>
   <informationRegisters>InformationRegister.АдресныеОбъекты</informationRegisters>
@@ -6494,6 +6508,7 @@
   <informationRegisters>InformationRegister.AzRyШтрихкодыВнеоборотныеАктивы</informationRegisters>
   <informationRegisters>InformationRegister.AzRyНоменклатураЯчейка</informationRegisters>
   <informationRegisters>InformationRegister.AzRyНапоминанияПользователя</informationRegisters>
+  <informationRegisters>InformationRegister.ШтрихкодыВА</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВнеоборотныеАктивы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыполнениеДоговоровОбслуживания</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыработкаВнеоборотныхАктивов</accumulationRegisters>

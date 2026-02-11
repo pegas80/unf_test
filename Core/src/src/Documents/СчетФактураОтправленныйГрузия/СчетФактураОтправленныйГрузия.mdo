@@ -187,6 +187,7 @@
   </standardAttributes>
   <basedOn>Document.ПоступлениеВКассу</basedOn>
   <basedOn>Document.ПоступлениеНаСчет</basedOn>
+  <basedOn>Document.РасходСоСчета</basedOn>
   <createOnInput>Use</createOnInput>
   <includeHelpInContents>true</includeHelpInContents>
   <dataLockControlMode>Managed</dataLockControlMode>
@@ -924,6 +925,43 @@
     <type>
       <types>Boolean</types>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7ae498a2-6a26-4dd1-94f8-e6cef2fba157">
+    <name>ДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основание</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>საფუძველი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Base document</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходСоСчета</types>
+      <types>DocumentRef.ПоступлениеВКассу</types>
+      <types>DocumentRef.ПоступлениеНаСчет</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Документ-основание</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დოკუმენტი-საფუძველი</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Документ-основание</value>
+    </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
@@ -1747,6 +1785,7 @@
         <value>Document</value>
       </synonym>
       <type>
+        <types>DocumentRef.РасходСоСчета</types>
         <types>DocumentRef.ПоступлениеВКассу</types>
         <types>DocumentRef.Взаимозачет</types>
         <types>DocumentRef.ПоступлениеНаСчет</types>
@@ -1856,6 +1895,137 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="9b5d9d08-576b-4e77-919e-6a705f6e40d5">
+      <name>ID</name>
+      <synonym>
+        <key>ru</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ID</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>ID</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="849d832c-34f6-473c-b7f8-810c1bc6fd8e">
+    <producedTypes>
+      <objectType typeId="55662773-303e-49d6-911b-fa5b4137de1a" valueTypeId="29fa6a78-ec4a-449d-82bb-8d80e803396d"/>
+      <rowType typeId="959f8a76-7940-4ed1-aebf-ef98dd9a45ec" valueTypeId="018b96b1-0285-40fd-ba56-ff7c07c02676"/>
+    </producedTypes>
+    <name>IDНоменклатур</name>
+    <synonym>
+      <key>ru</key>
+      <value>IDНоменклатур</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="824f7ce5-e764-40ed-86b7-19e7a04c3b78">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ნომენკლატურა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Позиция номенклатуры, для которой выписывается счет-фактура</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის პოზიცია, რომლისთვის იწერება ანგარიშფაქტურა</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Position nomenclature, for which the invoice</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипНоменклатуры</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНоменклатуры.EnumValue.Услуга</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНоменклатуры.EnumValue.Запас</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ТипыНоменклатуры.EnumValue.Работа</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="55c87552-551e-45ad-9da6-f1fff1cd1e2b">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ед.</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>ერთეული</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Unit</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлассификаторЕдиницИзмерения</types>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Единица измерения номенклатурной позиции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის პოზიციის საზომი ერთეული</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Unit of Measurement for Item</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.СчетФактураОтправленныйГрузия.TabularSection.Запасы.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="94da9205-1914-459b-94f4-e76bb1d65157">
       <name>ID</name>
       <synonym>
         <key>ru</key>

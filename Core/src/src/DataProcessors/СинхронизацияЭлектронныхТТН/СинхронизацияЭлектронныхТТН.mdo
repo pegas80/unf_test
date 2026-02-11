@@ -20,10 +20,10 @@
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.СинхронизацияЭлектронныхТТН.Form.Форма</defaultForm>
   <attributes uuid="82e26648-e3db-4180-a33e-169c90b5202c">
-    <name>Услуга</name>
+    <name>Услуга2</name>
     <synonym>
       <key>ru</key>
-      <value>Услуга</value>
+      <value>Услуга2</value>
     </synonym>
     <type>
       <types>CatalogRef.Номенклатура</types>
@@ -38,10 +38,10 @@
     </choiceParameters>
   </attributes>
   <attributes uuid="3721ae05-5dc5-4f6a-889e-55ebdc001b42">
-    <name>Договор</name>
+    <name>Договор2</name>
     <synonym>
       <key>ru</key>
-      <value>Договор</value>
+      <value>Договор2</value>
     </synonym>
     <type>
       <types>CatalogRef.ДоговорыКонтрагентов</types>
@@ -54,10 +54,10 @@
     </choiceParameterLinks>
   </attributes>
   <attributes uuid="303f222a-600a-4851-83aa-4a44bfd13a9d">
-    <name>Подразделение</name>
+    <name>Подразделение2</name>
     <synonym>
       <key>ru</key>
-      <value>Подразделение</value>
+      <value>Подразделение2</value>
     </synonym>
     <synonym>
       <key>ka</key>
@@ -1135,6 +1135,81 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="78550545-ed65-4486-8fab-3a55bbfec8d7">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Услуга</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>სერვისი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Услуга</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Наименование номенклатурной позиции</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>ნომენკლატურის პოზიციის დასახელება</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Наименование номенклатурной позиции</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипНоменклатуры</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыНоменклатуры.EnumValue.Услуга</value>
+        </value>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="776f1aeb-8819-4830-af31-46e44c838b25">
+      <name>Подразделение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтруктурныеЕдиницы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ТипСтруктурнойЕдиницы</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ТипыСтруктурныхЕдиниц.EnumValue.Подразделение</value>
+        </value>
+      </choiceParameters>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8a8c37f6-4a3d-48af-8626-a2f2b30a3ccb">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>DataProcessor.СинхронизацияЭлектронныхТТН.TabularSection.ТоварныеНакладныеНаПортале.Attribute.Контрагент</field>
+      </choiceParameterLinks>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
   </tabularSections>
