@@ -2226,6 +2226,40 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="89cb84cb-9e1e-453c-8713-90ca48083f56">
+    <name>AzRyОрганизацияПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация контрагента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>კონტრაგენტის ორგანიზაცია</value>
+    </synonym>
+    <comment>Организация контрагента по умолчанию</comment>
+    <type>
+      <types>CatalogRef.AzRyКонтрагентОрганизации</types>
+    </type>
+    <toolTip>
+      <key>ka</key>
+      <value>ხელშეკრულება სტანდარტულად, დოკუმენტებში ჩასასმელად.</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>default contract to insert into documents.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Catalog.Контрагенты.StandardAttribute.Ref</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ДоговорыКонтрагентов.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="6e26302a-be08-4110-bcea-eabab34188fc">
     <producedTypes>
       <objectType typeId="5376f466-07d6-4168-a3e8-1d1b647b2420" valueTypeId="4f7b68d6-3797-40d6-b83c-23940dcf7ad7"/>
@@ -2910,6 +2944,333 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
   </tabularSections>
+  <tabularSections uuid="bdad0c95-0a6d-4755-a02b-e7b01def2cc9">
+    <producedTypes>
+      <objectType typeId="10405bb2-f304-4a46-880e-36d89edac1c9" valueTypeId="790b9906-61d8-4c12-a418-3f75454adcbe"/>
+      <rowType typeId="83f7fe84-3137-4437-810f-df86a498d5a5" valueTypeId="9acb0767-1d0d-4805-9b06-43a5fd215506"/>
+    </producedTypes>
+    <name>AzRyKYCАнкетаКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Анкета KYC клиента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) კლიენტის KYC კითხვარი</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>(AzRy) Client KYC Questionnaire</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="db6504ac-39b9-4ffe-b0cb-6e2ddd912856">
+      <name>Вопрос</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вопрос анкеты</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შეკითხვა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Question</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyВопросыKYCАнкетыКлиента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="969c130d-b763-4d98-b044-7238fd2376c3">
+      <name>Ответ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответ клиента</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პასუხი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Answer</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyДаНет</types>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>500</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="82020433-f8a7-4e23-b34a-13fe6dd56f97">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კომენტარი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Comment</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="fa81535a-911f-42fb-92a8-88eb7a2103db">
+    <producedTypes>
+      <objectType typeId="bf963c4e-5d72-412e-8103-d6203a4a9f42" valueTypeId="09c28e30-2f68-40f6-86fa-edf8867a06cc"/>
+      <rowType typeId="e724f587-8b28-4fec-b859-0077d69fd034" valueTypeId="b2ecbac9-dcd8-42a3-afc7-295237a24952"/>
+    </producedTypes>
+    <name>AzRyОценкаРискаКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Оценка риска клиента (KYC)</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) კლიენტის რისკის შეფასება</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>(AzRy) Client Risk Assessment</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="f3b8cc7b-e7df-41a9-8a4a-c3d0ae1cae2b">
+      <name>Вопрос</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вопрос анкеты</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შეკითხვა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Question</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyKYCВопросыКлиента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b5a4c161-918e-4341-ae1c-a9c60289f4b4">
+      <name>Ответ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответ клиента</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>პასუხი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Answer</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyДаНет</types>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>500</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b5f0385a-e18f-49ac-b01f-ac85c3a27a23">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>კომენტარი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Comment</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="5ab7326e-1d26-42b8-84ec-ce160831942c">
+    <producedTypes>
+      <objectType typeId="d0f2a76e-7593-4f09-9d8a-2e77c83beb2a" valueTypeId="9c5cca7c-2927-4b50-a32d-db345e369ca5"/>
+      <rowType typeId="eea6ec00-d278-4a40-9dd0-9a589df43311" valueTypeId="9aa7e807-74d7-4bb7-bc16-b687e83b9d6a"/>
+    </producedTypes>
+    <name>AzRyРискМатрицаКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Матрица оценки риска клиента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) კლიენტის რისკის მატრიცა</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>(AzRy) Client Risk Matrix</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="7aeab778-b059-411e-8171-c588b1c39063">
+      <name>ФакторРиска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Фактор риска</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>რისკის ფაქტორი</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Risk Factor</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyФакторыРискаКлиента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e96ddf40-07c2-4d7b-a231-df498affa9ef">
+      <name>ВероятностьРиска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вероятность возникновения риска</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მოხდენის ალბათობა</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Risk Probability</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyДаНет</types>
+        <types>Boolean</types>
+        <types>EnumRef.AzRyУровеньРискаКлиента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4a3c4948-8048-429d-b0f9-ce88f0c2c947">
+      <name>УровеньРиска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Уровень риска</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>შედეგი / რისკის დონე</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Risk Level</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyУровеньРискаКлиента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e0ad8fa9-340f-4db3-a396-99b41e6da556">
+      <name>МитигирующиеМеры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Митигирующие мероприятия</value>
+      </synonym>
+      <synonym>
+        <key>ka</key>
+        <value>მიტიგაციის ღონისძიებები</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Mitigation Measures</value>
+      </synonym>
+      <type>
+        <types>EnumRef.AzRyМитигирующиеМерыРиска</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
   <forms uuid="60ed6a71-d1c5-46b8-afad-f14ec02ee893">
     <name>ФормаЭлемента</name>
     <synonym>
@@ -3052,6 +3413,19 @@
     <synonym>
       <key>en</key>
       <value>Essential elements of state bodies</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="258e2d2b-c933-454e-bca2-b8f63ca139e1">
+    <name>AzRyФормаВводаДанныхКонтрагента_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>(AzRy) Форма ввода данных контрагента</value>
+    </synonym>
+    <synonym>
+      <key>ka</key>
+      <value>(AzRy) კონტრაგენტის მონაცემების შეყვანის ფორმა</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
