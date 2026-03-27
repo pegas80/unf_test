@@ -738,6 +738,31 @@
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
+    <items xsi:type="form:Button">
+      <name>ФормаРасшAzRy_ЗагрузитьИзФайла</name>
+      <id>370</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаРасшAzRy_ЗагрузитьИзФайлаРасширеннаяПодсказка</name>
+        <id>371</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.РасшAzRy_ЗагрузитьИзФайла</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <items xsi:type="form:FormGroup">
       <name>ГруппаВажныеКоманды</name>
       <id>91</id>
@@ -4616,6 +4641,48 @@
       <common>true</common>
     </use>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>РасшAzRy_ЗагрузитьИзФайла</name>
+    <title>
+      <key>ru</key>
+      <value>(AzRy) Загрузить из Excel</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>(AzRy) ექსელიდან ჩატვირთვა</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>(AzRy) Import from Excel</value>
+    </title>
+    <id>1000000</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Загрузить из Excel</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ექსელიდან ჩატვირთვა</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Import from Excel</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ФорматExcel</picture>
+    </picture>
+    <action xsi:type="form:FormExtensionCommandHandlerContainer">
+      <handlers>
+        <name>РасшAzRy_ЗагрузитьИзExcel</name>
+        <callType>Override</callType>
+      </handlers>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>
