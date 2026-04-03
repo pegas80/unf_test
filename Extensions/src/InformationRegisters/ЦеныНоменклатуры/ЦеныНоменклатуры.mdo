@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="795b573c-e6d2-4423-a2a8-12de077a1901">
+  <producedTypes>
+    <selectionType typeId="e0c48167-332d-4f53-9db6-26ffd5a9e8d7" valueTypeId="e129d66d-305c-414c-a450-2f50544880e2"/>
+    <listType typeId="496c7f4d-8677-4ea5-9a69-0e51dafe62dd" valueTypeId="d357bf50-02a0-4bd5-831a-4ac01cd3fba5"/>
+    <managerType typeId="8734fa9e-a0cc-4b44-806d-eed5d3d91c00" valueTypeId="2b140fe9-3b8b-483d-9c80-224caa93911b"/>
+    <recordSetType typeId="c0d5d86c-b4c3-46c1-8be2-47b47a8938d8" valueTypeId="efb0b797-c6bf-4461-a70c-42a651cd8741"/>
+    <recordKeyType typeId="0e870785-02ff-40a7-bfd4-c9546ce5914e" valueTypeId="c7069e99-444c-4d19-b4fe-ec6677a201ac"/>
+    <recordType typeId="62bdf2a4-a1e0-41d3-b037-736f95ba252b" valueTypeId="13f0d5b6-fa3d-4de1-8a3c-f1a19b336352"/>
+    <recordManagerType typeId="573aa821-0afe-4c15-ac81-e07b6e609975" valueTypeId="fb900bf7-613c-4633-bb24-4a3b39e0e0cd"/>
+  </producedTypes>
+  <name>ЦеныНоменклатуры</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <resources uuid="df37dedd-a742-42ff-a995-a90eb0608204">
+    <name>Цена</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>5</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="147a232b-be04-4c93-88e1-8575b7222a41">
+    <name>Актуальность</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="72e3c26c-a52f-4448-96c9-fe75f3b6402c">
+    <name>ЕдиницаИзмерения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </resources>
+  <dimensions uuid="8901e9ef-ebf6-4951-9acf-4fb3401d6d19">
+    <name>ВидЦен</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ВидыЦен</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="534751b5-11d2-40cb-ad36-4888eeff9c99">
+    <name>Номенклатура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Номенклатура</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="93d3a505-45cf-4298-b30f-85ac9cea4fcf">
+    <name>Характеристика</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ХарактеристикиНоменклатуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+</mdclass:InformationRegister>

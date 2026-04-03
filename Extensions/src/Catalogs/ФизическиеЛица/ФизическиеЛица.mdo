@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="0b7ce790-11f8-4b6b-9ecd-67e6a9c3da4b">
+  <producedTypes>
+    <objectType typeId="60abab65-7b8f-4de1-b62e-e96d7c43c394" valueTypeId="94e2dda4-e2d7-4cc1-a12b-d38c27a1ebf4"/>
+    <refType typeId="82062024-b608-4e13-9b25-62905e2ce60c" valueTypeId="a463c3d5-ffa7-4d51-bf5b-a1823963900c"/>
+    <selectionType typeId="d263e2b2-e31d-4bba-be30-3010af20bd31" valueTypeId="982bda48-fd90-4c90-84f2-ae0c6e06404a"/>
+    <listType typeId="f5749d8b-04c7-44df-9e89-a13040b294f2" valueTypeId="0bc6def9-f08c-4ac7-b8d4-366174f5d03c"/>
+    <managerType typeId="9a5c6814-2f6a-4d43-86fc-4c3d70e9b495" valueTypeId="bb970825-98a8-4894-8a27-0e579c753387"/>
+  </producedTypes>
+  <name>ФизическиеЛица</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <objectModule>Extended</objectModule>
+  </extension>
+  <attributes uuid="dc4a7bed-9e46-4d0a-ac06-c8f14c29701f">
+    <name>Пол</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ПолФизическогоЛица</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="9fdff4a3-0d51-4a0a-b45d-228e86a4fc03">
+    <name>Гражданство</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.СтраныМира</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="8447525b-6d0b-4739-9f8a-baebb7e6ae20">
+    <name>ДатаРождения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="bfac7833-e1c7-4373-b23a-f9ebd60ac5b7">
+    <name>ИНН</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>12</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="cb4f8c52-b44e-4dc5-b26a-1b1075d43012">
+    <name>СтраховойНомерПФР</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>14</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+</mdclass:Catalog>

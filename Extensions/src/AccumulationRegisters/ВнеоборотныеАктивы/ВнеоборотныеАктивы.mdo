@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="eae7d9ea-b181-4e5f-934e-87efb993ccec">
+  <producedTypes>
+    <selectionType typeId="8b0added-1070-4551-ada9-3a20ab16f5a3" valueTypeId="487f8598-0b22-4b0d-8c14-7a6e39798ecb"/>
+    <listType typeId="dc79efc8-49d3-42ac-99b3-adcb7eb7174b" valueTypeId="86d1aae6-8943-4c2a-b6c9-c5cf5dcb35d2"/>
+    <managerType typeId="35f29ead-5a2d-4467-8fe2-0fc60dc84b0d" valueTypeId="5e49bae9-ec5a-4e58-adc7-00c2191541b8"/>
+    <recordSetType typeId="52997f1e-8803-4689-ba27-8aab303660ed" valueTypeId="d9337d53-00b0-491e-81de-6222f541a494"/>
+    <recordKeyType typeId="96ea8bf0-c949-4b4d-aecb-6913f112ec98" valueTypeId="e674c6dd-32e1-478a-b9da-27c02a0b40e8"/>
+    <recordType typeId="9cab305f-d27a-480c-917e-59b19269add0" valueTypeId="ddecac10-58eb-46de-866e-8a8e8f4b9286"/>
+  </producedTypes>
+  <name>ВнеоборотныеАктивы</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:AccumulationRegisterExtension">
+    <registerType>Checked</registerType>
+  </extension>
+  <resources uuid="397cacb0-bec5-4ba6-bbd2-69bf079b82a1">
+    <name>Стоимость</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="ab78b0a5-3ff4-436f-b4da-19eeb57e625f">
+    <name>Амортизация</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <resources uuid="0e96925e-fcf0-4b7c-9799-c2150e9c9eab">
+    <name>КоличествоМесяцеВЭксплуатации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>15</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+  </resources>
+  <attributes uuid="d9348d42-5411-44ee-9712-d5a0d7a033b1">
+    <name>СодержаниеПроводки</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <dimensions uuid="ba15bdfe-85b3-4e1b-b834-48e73a1cf4f2">
+    <name>Организация</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Организации</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="4e22a223-f6ec-4a04-bf05-59b53709cbc6">
+    <name>ВнеоборотныйАктив</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ВнеоборотныеАктивы</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+  <dimensions uuid="1cd5c2bd-2646-44a2-8bbd-475c4e1d2cb5">
+    <name>СчетУчетаРегл</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>ChartOfAccountsRef.Хозрасчетный</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </dimensions>
+</mdclass:AccumulationRegister>

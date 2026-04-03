@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="aceac543-535d-423a-a83a-8cd10e3ac6ff">
+  <producedTypes>
+    <objectType typeId="4a7592a1-abca-4d27-949d-9323cf2effae" valueTypeId="bc6548ba-e884-4b48-9fe0-b58186d5144e"/>
+    <refType typeId="6d49659d-0c9b-4d93-b048-131818d626c6" valueTypeId="3b07ecf3-45c5-480c-ad2e-e1c07ebe6a59"/>
+    <selectionType typeId="5fc6ff41-6063-4a68-ac1e-c6634a17fa74" valueTypeId="066a2a4d-04f3-4ae8-be9e-4a684a12b1d9"/>
+    <listType typeId="7d674636-cb50-47e9-a46d-b42e792da3ed" valueTypeId="57dc876d-5a60-4bd5-863b-53c4c20ef86d"/>
+    <managerType typeId="e16ad25c-e795-4b46-82dd-aac79d539216" valueTypeId="8afaed89-1903-45ca-be2b-cfd6cd81ba3a"/>
+    <extDimensionTypes typeId="f7417b19-ec98-4a9e-a994-6595b034f082" valueTypeId="cbac38a0-f8d8-4056-9337-5ff18537aff2"/>
+    <extDimensionTypesRow typeId="cd9c517d-e073-4f99-86d6-25a0698ba709" valueTypeId="1d59787a-78bf-4b2a-9492-80e242c8843d"/>
+  </producedTypes>
+  <name>Управленческий</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ChartOfAccountsExtension">
+    <codeLength>Checked</codeLength>
+    <descriptionLength>Checked</descriptionLength>
+    <predefined>Extended</predefined>
+    <orderLength>Checked</orderLength>
+  </extension>
+  <codeLength>8</codeLength>
+  <descriptionLength>120</descriptionLength>
+  <predefined>
+    <items id="7ed65262-d2ea-446a-8eec-7baae8c92725">
+      <name>ПрочиеДоходыИРасходы</name>
+      <description>Прочие доходы и расходы</description>
+      <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+        <state>AdoptedCheck</state>
+      </extension>
+      <code>91      </code>
+      <accountType>ActivePassive</accountType>
+      <order> 91     </order>
+      <childItems id="3d5ba957-49ae-4fc1-8390-a2704a68f6b8">
+        <name>ПрочиеРасходы</name>
+        <description>Прочие расходы</description>
+        <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+          <state>AdoptedCheck</state>
+        </extension>
+        <code>91.02   </code>
+        <order> 91.02  </order>
+      </childItems>
+      <childItems id="b61a704c-7120-4a08-bbd4-528143b809ef">
+        <name>ПрочиеДоходы</name>
+        <description>Прочие доходы</description>
+        <extension xsi:type="mdclassExtension:PredefinedItemExtension">
+          <state>AdoptedCheck</state>
+        </extension>
+        <code>91.01   </code>
+        <accountType>Passive</accountType>
+        <order> 91.01  </order>
+      </childItems>
+    </items>
+  </predefined>
+  <orderLength>9</orderLength>
+  <attributes uuid="e44ea638-a36b-404e-9474-7e7f345bf595">
+    <name>ТипСчета</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ТипыСчетов</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="0738cbcf-40fd-4e5d-98f6-ac544f405123">
+    <name>СчетЗакрытия</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>ChartOfAccountsRef.Управленческий</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="d4eb6a27-78a6-4cd2-bb9b-5503e2ae53a5">
+    <name>СпособРаспределения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.БазыРаспределенияРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <attributes uuid="dba667b0-5efc-49e7-b2a8-28453ef37ec5">
+    <name>AzRyMapping</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.AzRyMapping</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </attributes>
+  <accountingFlags uuid="68705bd8-d421-48e5-b654-8dc12ae4e9b2">
+    <name>Валютный</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+  </accountingFlags>
+  <forms uuid="5fbffb99-e178-410b-b707-00987602e763">
+    <name>ФормаСчета</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFormExtension">
+      <form>Extended</form>
+    </extension>
+  </forms>
+</mdclass:ChartOfAccounts>
